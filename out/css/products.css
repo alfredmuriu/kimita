@@ -1,0 +1,716 @@
+/* ===================================================================
+ * # PRODUCTS PAGE
+ *
+ *
+ * ------------------------------------------------------------------- */
+/* ===================================================================
+ * # SITE HEADER
+ *
+ *
+ * ------------------------------------------------------------------- */
+
+.s-header {
+    --header-height  : 80px;
+    --logo-width     : 170px;
+    z-index          : 100;
+    background-color : transparent;
+    height           : var(--header-height);
+    width            : 100%;
+    position         : absolute;
+    top              : var(--vspace-0_5);
+    left             : 0;
+}
+
+.s-header.offset {
+    transform           : translateY(-100%);
+    transition-property : transform, background-color;
+    transition-duration : .5s;
+}
+
+.s-header.scrolling {
+    transform : translateY(0);
+}
+
+.s-header.sticky {
+    opacity          : 0;
+    visibility       : hidden;
+    background-color : var(--color-gray-19);
+    position         : fixed;
+    top              : 0;
+    left             : 0;
+}
+
+.s-header.sticky .s-header__inner {
+    max-width : var(--width-grid-max);
+}
+
+.s-header.sticky.scrolling {
+    opacity    : 1;
+    visibility : visible;
+}
+
+.s-header__inner {
+    max-width   : 1400px;
+    height      : var(--header-height);
+    align-items : center;
+    padding     : 0 var(--gutter);
+}
+
+.s-header__block {
+    z-index : 101;
+}
+
+/* --------------------------------------------------------------------
+ * ## logo
+ * -------------------------------------------------------------------- */
+.s-header__logo {
+    z-index     : 3;
+    line-height : 1;
+    transform   : translate(4px, 0);
+}
+
+.s-header__logo a {
+    display : block;
+    margin  : 0;
+    padding : 0;
+    outline : 0;
+    border  : none;
+}
+
+.s-header__logo img {
+    width          : var(--logo-width);
+    margin         : 0;
+    vertical-align : bottom;
+}
+/* --------------------------------------------------------------------
+ * ## main navigation
+ * -------------------------------------------------------------------- */
+.s-header__nav {
+    margin-left     : var(--vspace-1);
+    display         : flex;
+    flex            : 1 1 0%;
+    align-items     : center;
+    justify-content : space-between;
+}
+
+.s-header__menu-links {
+    list-style : none;
+    display    : inline-flex;
+    flex-flow  : row nowrap;
+    margin     : 0 4rem 0 0;
+    padding    : 0;
+}
+
+.s-header__menu-links li {
+    padding-left : 0;
+}
+
+.s-header__menu-links a {
+    display             : block;
+    font-family         : var(--font-2);
+    font-size           : 1.4rem;
+    font-weight         : 400;
+    line-height         : var(--vspace-1);
+    color               : rgba(255, 255, 255, 0.6);
+    padding             : 0 1.2rem;
+    transition-property : color, background-color;
+}
+
+.s-header__menu-links .current a {
+    color : white;
+}
+
+/* --------------------------------------------------------------------
+ * ## header social
+ * -------------------------------------------------------------------- */
+.s-header__social {
+    list-style  : none;
+    display     : flex;
+    line-height : 1;
+    margin      : 0;
+}
+
+.s-header__social li {
+    padding-left : 0;
+    margin-right : .8rem;
+}
+
+.s-header__social a {
+    display: flex;
+    align-items: center;
+}
+
+.s-header__social a svg {
+    margin-right: 8px; /* space between icon and text */
+}
+
+.s-header__social svg {
+    height : var(--vspace-0_75);
+    width  : var(--vspace-0_75);
+}
+
+.s-header__social svg path {
+    fill : white;
+}
+
+/* --------------------------------------------------------------------
+ * ## mobile menu toggle
+ * -------------------------------------------------------------------- */
+.s-header__menu-toggle {
+    display  : none;
+    width    : 6.8rem;
+    height   : var(--header-height);
+    position : absolute;
+    top      : 0;
+    right    : 2.2rem;
+}
+
+.s-header__menu-toggle span {
+    display          : block;
+    background-color : white;
+    width            : 22px;
+    height           : 2px;
+    margin-top       : -1px;
+    font             : 0/0 a;
+    text-shadow      : none;
+    color            : transparent;
+    transition       : background-color 0.2s ease-in-out;
+    position         : absolute;
+    right            : 23px;
+    top              : 50%;
+    bottom           : auto;
+    left             : auto;
+}
+
+.s-header__menu-toggle span::before,
+.s-header__menu-toggle span::after {
+    content             : "";
+    width               : 100%;
+    height              : 100%;
+    background-color    : inherit;
+    transition-duration : 0.2s, 0.2s;
+    transition-delay    : 0.2s, 0s;
+    position            : absolute;
+    left                : 0;
+}
+
+.s-header__menu-toggle span::before {
+    top                 : -8px;
+    transition-property : top, transform;
+}
+
+.s-header__menu-toggle span::after {
+    bottom              : -8px;
+    transition-property : bottom, transform;
+}
+
+/* is clicked 
+ */
+.s-header__menu-toggle.is-clicked span {
+    background-color : rgba(255, 255, 255, 0);
+}
+
+.s-header__menu-toggle.is-clicked span::before,
+.s-header__menu-toggle.is-clicked span::after {
+    background-color : white;
+    transition-delay : 0s, 0.2s;
+}
+
+.s-header__menu-toggle.is-clicked span::before {
+    top       : 0;
+    transform : rotate(45deg);
+}
+
+.s-header__menu-toggle.is-clicked span::after {
+    bottom    : 0;
+    transform : rotate(-45deg);
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * site-header
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 1600px) {
+    .s-header__inner {
+        max-width : var(--width-grid-max);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .s-header__inner {
+        max-width : 900px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .s-header {
+        --logo-width : 36px;
+        top          : var(--vspace-0_25);
+    }
+
+    .s-header__inner {
+        max-width : none;
+        width     : 100%;
+        margin    : 0;
+        padding   : 0;
+    }
+
+    .s-header__block {
+        width            : 100%;
+        height           : var(--header-height);
+        background-color : transparent;
+    }
+
+    .s-header__logo {
+        position  : absolute;
+        left      : 0;
+        top       : 50%;
+        transform : translate(4rem, -50%);
+    }
+
+    .s-header__nav {
+        transform        : scaleY(0);
+        transform-origin : center top;
+        display          : block;
+        background-color : var(--color-gray-19);
+        width            : 100%;
+        padding-top      : calc(var(--header-height) + var(--vspace-1_25));
+        padding-right    : 4.4rem;
+        padding-left     : 4.4rem;
+        padding-bottom   : 4rem;
+        margin           : 0;
+        position         : absolute;
+        top              : calc(var(--vspace-0_5) * -1);
+        left             : 0;
+    }
+
+    .s-header__nav a {
+        display     : inline-block;
+        font-size   : calc(var(--text-size) * 0.9444);
+        line-height : 1;
+        padding     : var(--vspace-0_5) 0;
+    }
+
+    .s-header__menu-links,
+    .s-header__social {
+        margin     : 0;
+        transform  : translateY(-2rem);
+        opacity    : 0;
+        visibility : hidden;
+    }
+
+    .s-header__menu-links {
+        display       : block;
+        margin-bottom : var(--vspace-1);
+    }
+
+    .s-header__menu-toggle {
+        display : block;
+    }
+
+    .menu-is-open .s-header {
+        height : auto;
+    }
+
+    .menu-is-open .s-header__nav {
+        transform        : scaleY(1);
+        transition       : transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay : 0s;
+    }
+
+    .menu-is-open .s-header__menu-links,
+    .menu-is-open .s-header__social {
+        transform        : translateY(0);
+        opacity          : 1;
+        visibility       : visible;
+        transition       : all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay : .4s;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .s-header.sticky {
+        --header-height : 76px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .s-header__logo {
+        transform : translate(7vw, -50%);
+    }
+
+    .s-header__nav {
+        padding-right : 7vw;
+        padding-left  : 7vw;
+    }
+
+    .s-header__menu-toggle {
+        right : 0.8rem;
+    }
+}
+/* ===================================================================
+ * # FOOTER
+ *
+ *
+ * ------------------------------------------------------------------- */
+.s-footer {
+    background-color : var(--color-gray-2);
+    padding-top      : calc(5.5 * var(--space));
+    padding-bottom   : var(--vspace-3);
+    margin-top       : auto;
+    position         : relative;
+}
+
+.s-footer h6 {
+    margin-top : 0;
+}
+
+.s-footer__btns {
+    margin-top  : var(--vspace-3_5);
+    align-items : flex-start;
+}
+
+.s-footer .contact-list {
+    list-style  : none;
+    margin-left : 0;
+}
+
+.s-footer .contact-list a {
+    color : var(--color-text);
+}
+
+.s-footer .contact-list a:focus,
+.s-footer .contact-list a:hover {
+    color : var(--color-1);
+}
+
+.s-footer .contact-list li {
+    padding-left : 0;
+}
+
+.s-footer__bottom {
+    border-top  : 1px solid var(--color-gray-10);
+    margin-top  : var(--vspace-2);
+    padding-top : var(--vspace-1);
+}
+
+.s-footer__bottom-left {
+    padding-right : 4.4rem;
+}
+
+.s-footer__bottom-right {
+    padding-left : 4.4rem;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## contact btn
+ * ------------------------------------------------------------------- */
+.s-footer__contact-btn {
+    --color-btn-primary       : var(--color-gray-19);
+    --color-btn-primary-hover : var(--color-1);
+    padding-top               : calc(var(--vspace-0_75) + var(--vspace-0_75));
+    padding-bottom            : var(--vspace-0_5);
+}
+
+.s-footer__contact-btn .btn {
+    --btn-height : 7.2rem;
+    margin       : 0;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## subscription form
+ * ------------------------------------------------------------------- */
+.s-footer__subscribe {
+    --input-height : 7.2rem;
+    --btn-width    : 180px;
+}
+
+.s-footer__subscribe h6 {
+    margin-bottom : var(--vspace-0_75);
+}
+
+.s-footer__subscribe form {
+    display       : flex;
+    flex-flow     : row wrap;
+    margin-bottom : 0;
+}
+
+.s-footer__subscribe input[type="email"],
+.s-footer__subscribe input[type="submit"],
+.s-footer__subscribe .ms-status {
+    flex : none;
+}
+
+.s-footer__subscribe input[type="email"] {
+    --input-height   : 7.2rem;
+    width            : calc(100% - var(--btn-width));
+    background-color : var(--color-gray-6);
+    color            : var(--color-text);
+    border           : none;
+    padding          : var(--input-vpadding) calc(2.8rem - 1px);
+    text-align       : left;
+    margin           : 0;
+}
+
+.s-footer__subscribe input[type="email"]:focus,
+.s-footer__subscribe input[type="email"]:hover {
+    box-shadow : none;
+}
+
+.s-footer__subscribe input[type="submit"] {
+    --btn-height : var(--input-height);
+    width        : var(--btn-width);
+    margin       : 0;
+}
+
+.s-footer__subscribe .mc-status {
+    width       : 100%;
+    margin-top  : var(--vspace-0_5);
+    font-size   : var(--text-sm);
+    font-weight : 400;
+    color       : var(--color-1);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## footer social
+ * ------------------------------------------------------------------- */
+.s-footer__social {
+    list-style  : none;
+    display     : flex;
+    margin-left : 0;
+}
+
+.s-footer__social li {
+    padding-left : 0;
+    margin-right : .8rem;
+}
+
+.s-footer__social svg {
+    height : var(--vspace-1);
+    width  : var(--vspace-1);
+}
+
+.s-footer__social svg path {
+    fill : var(--color-text);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## copyright
+ * ------------------------------------------------------------------- */
+.ss-copyright span {
+    font-size   : calc(var(--text-size) * 0.8889);
+    line-height : var(--vspace-1);
+    display     : inline-block;
+}
+
+.ss-copyright span::after {
+    content : "·";
+    display : inline-block;
+    padding : 0 1rem 0 1.2rem;
+    color   : var(--color-gray-19);
+}
+
+.ss-copyright span:last-child::after {
+    display : none;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## go top
+ * ------------------------------------------------------------------- */
+.ss-go-top {
+    z-index    : 2;
+    opacity    : 0;
+    visibility : hidden;
+    transform  : translate(0, 200%);
+    transition : all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position   : fixed;
+    bottom     : 6rem;
+    right      : 4rem;
+}
+
+.ss-go-top a {
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    text-decoration  : none;
+    border           : none;
+    height           : calc(1.875 * var(--space));
+    width            : calc(1.875 * var(--space));
+    border-radius    : 50%;
+    background-color : #0C0C0C;
+    transition       : all .3s;
+    position         : relative;
+}
+
+.ss-go-top a:focus svg path,
+.ss-go-top a:hover svg path {
+    fill : white;
+}
+
+.ss-go-top svg {
+    height : var(--vspace-0_75);
+    width  : var(--vspace-0_75);
+}
+
+.ss-go-top svg path {
+    fill : white;
+}
+
+.ss-go-top.link-is-visible {
+    opacity    : 1;
+    visibility : visible;
+    transform  : translate(0, 0);
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * footer
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+    .s-footer__bottom-left {
+        padding-right : var(--gutter);
+    }
+
+    .s-footer__bottom-right {
+        padding-left : var(--gutter);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .s-footer__btns {
+        margin-top : var(--vspace-1);
+    }
+
+    .s-footer__contact-btn {
+        margin-bottom : var(--vspace-0_5);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .s-footer {
+        padding-top    : var(--vspace-4);
+        padding-bottom : var(--vspace-2_5);
+    }
+
+    .ss-go-top {
+        right  : var(--vspace-1);
+        bottom : var(--vspace-1);
+    }
+
+    .ss-go-top a {
+        height : var(--vspace-1_75);
+        width  : var(--vspace-1_75);
+    }
+
+    .ss-go-top svg {
+        height : var(--vspace-0_625);
+        width  : var(--vspace-0_625);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .s-footer__subscribe form {
+        display : block;
+    }
+
+    .s-footer__subscribe input[type="email"],
+    .s-footer__subscribe input[type="submit"] {
+        width      : 100%;
+        text-align : center;
+    }
+
+    .s-footer__subscribe input[type="email"] {
+        margin-bottom : var(--vspace-0_625);
+    }
+
+    .ss-go-top {
+        right  : var(--vspace-0_75);
+        bottom : var(--vspace-0_75);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .s-footer__bottom-left {
+        padding-right : 0;
+    }
+
+    .s-footer__bottom-right {
+        padding-left : 0;
+    }
+
+    .ss-go-top a {
+        height : var(--vspace-1_5);
+        width  : var(--vspace-1_5);
+    }
+}
+
+body,
+.s-header,
+.s-header__inner,
+.s-header__nav,
+.s-header__menu-links,
+.s-header__social,
+#page,
+.s-pagewrap,
+.s-content {
+    background: #1C1C24 !important;
+    color: #fff;
+}
+
+.s-footer {
+    background: #fff !important;
+    color: #222;
+}
+.bricks-wrapper .entry__thumb img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    object-position: center center;
+    width: 200px;
+    max-width: 100%;
+    height: 230px !important;
+    background: transparent;
+}
+
+/* Animation for sliding in from the left */
+.animate-slide-in-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    animation: slideInLeft 1s cubic-bezier(0.23, 1, 0.32, 1) 2.5s forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation for sliding in from the right (image) */
+.intro-image-slide-in {
+    opacity: 0;
+    transform: translateX(60px);
+    animation: slideInRight 1s cubic-bezier(0.23, 1, 0.32, 1) 2.5s forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation for sliding in from the bottom */
+.animate-slide-in-up {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: slideInUp 1s cubic-bezier(0.23, 1, 0.32, 1) 2.5s forwards;
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
