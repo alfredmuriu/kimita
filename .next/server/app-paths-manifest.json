@@ -1,8 +1,5 @@
 {
   "/page": "app/page.js",
-  "/products/k-digest/page": "app/products/k-digest/page.js",
-  "/products/page": "app/products/page.js",
-  "/products/agrivitam/page": "app/products/agrivitam/page.js",
-  "/downloads/page": "app/downloads/page.js",
-  "/products/toxinil/page": "app/products/toxinil/page.js"
+  "/blog/page": "app/blog/page.js",
+  "/downloads/page": "app/downloads/page.js"
 }

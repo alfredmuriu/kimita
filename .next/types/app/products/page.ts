@@ -1,4 +1,4 @@
-// File: C:\Users\Alfred Muriu\Downloads\agrikimanext-main\agrikimanext-main\src\app\products\page.tsx
+// File: C:\Users\Alfred Muriu\OneDrive\Documents\agrikimanext-main\agrikimanext-main\src\app\products\page.tsx
 import * as entry from '../../../../src/app/products/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

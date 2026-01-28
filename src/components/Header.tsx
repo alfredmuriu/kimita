@@ -69,6 +69,9 @@ export default function Header() {
                 <li><a href="/downloads">&nbsp;Poultry Farming</a></li>
               </ul>
             </li>
+            <li className={isActive('/blog') ? 'current' : ''}>
+              <Link href="/blog">Blog</Link>
+            </li>
             <li>
               <a href="/#footer" className="smoothscroll" id="contact-link">Contact</a>
             </li>
