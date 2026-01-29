@@ -1,2 +1,6 @@
 node_modules/
+.next/
+out/
+*.mp4
+desktop.ini
 .env

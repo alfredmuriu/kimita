@@ -37,7 +37,7 @@ export default function AdviceProduct() {
             >
               <img
                 src="/images/folio/advice.png"
-                alt="ADVICE natural treatment for Newcastle disease and viral infections in poultry Kenya"
+                alt="ADVICE natural treatment for Newcastle disease and viral infections in poultry in Kenya and Africa"
                 style={{
                   maxWidth: "420px",
                   width: "100%",

@@ -10,7 +10,7 @@ export default function Footer() {
         <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
           <img src="/logo.png" alt="Agrikima" style={{maxWidth: '180px', height: 'auto', marginBottom: '20px'}} />
           <p style={{color: 'rgba(0, 0, 0, 0.6)', fontSize: '15px', lineHeight: '1.7'}}>
-            Africa&apos;s leading provider of Agriculture and Veterinary products.
+            Kenya&apos;s leading provider of Agriculture and Veterinary products.
             We provide natural animal health solutions, supplements, and feed additives
             trusted by dairy, poultry, and livestock farmers across Africa.
           </p>
@@ -20,11 +20,11 @@ export default function Footer() {
         <div style={{flex: '0 1 150px'}}>
           <h6 style={{color: 'black', marginBottom: '20px'}}>Company</h6>
           <ul className="contact-list" style={{listStyle: 'none', margin: 0, padding: 0, fontSize: '15px'}}>
-            <li style={{marginBottom: '0.5px'}}><a href="/" style={{color: 'rgba(0, 0, 0, 0.6)rgba(0, 0, 0, 0.6)'}}>Home</a></li>
-            <li style={{marginBottom: '0.5px'}}><a href="/#about" style={{color: 'rgba(0, 0, 0, 0.6)rgba(0, 0, 0, 0.6)'}}>About Us</a></li>
-            <li style={{marginBottom: '0.5px'}}><a href="/products" style={{color: 'rgba(0, 0, 0, 0.6)rgba(0, 0, 0, 0.6)'}}>Products</a></li>
-            <li style={{marginBottom: '0.5px'}}><a href="/blog" style={{color: 'rgba(0, 0, 0, 0.6)rgba(0, 0, 0, 0.6)'}}>Blog</a></li>
-            <li style={{marginBottom: '0.5px'}}><a href="/downloads" style={{color: 'rgba(0, 0, 0, 0.6)rgba(0, 0, 0, 0.6)'}}>Resources</a></li>
+            <li style={{marginBottom: '0.5px'}}><a href="/" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Home</a></li>
+            <li style={{marginBottom: '0.5px'}}><a href="/#about" style={{color: 'rgba(0, 0, 0, 0.6)'}}>About Us</a></li>
+            <li style={{marginBottom: '0.5px'}}><a href="/products" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Products</a></li>
+            <li style={{marginBottom: '0.5px'}}><a href="/blog" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Blog</a></li>
+            <li style={{marginBottom: '0.5px'}}><a href="/downloads" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Resources</a></li>
           </ul>
         </div>
 
@@ -47,6 +47,7 @@ export default function Footer() {
             <li style={{marginBottom: '8px'}}><a href="tel:+254111410639" style={{color: 'rgba(0, 0, 0, 0.6)'}}>+254 111 410 639</a></li>
             <li style={{marginBottom: '8px'}}><a href="mailto:info@agrikima.co.ke" style={{color: 'rgba(0, 0, 0, 0.6)'}}>info@agrikima.co.ke</a></li>
           </ul>
+        </div>
       </div>
 
       {/* Bottom Section: Copyright & Social */}
