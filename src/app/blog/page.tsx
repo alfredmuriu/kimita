@@ -1,26 +1,46 @@
-'use client';
-
-import { useState } from 'react';
 import Layout from '@/components/Layout';
-import Link from 'next/link';
+import { supabase, BlogPost } from '@/lib/supabase';
+import BlogCard from './BlogCard';
 
-export default function Blog() {
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  const threshold = 12;
+async function getBlogPosts(): Promise<BlogPost[]> {
+  const { data, error } = await supabase
+    .from('blog_posts')
+    .select('*')
+    .eq('status', 'published')
+    .order('published_at', { ascending: false });
 
-  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - left) / width - 0.5;
-    const y = (e.clientY - top) / height - 0.5;
-    setTilt({ x: y * -threshold, y: x * threshold });
-  };
+  if (error) {
+    console.error('Error fetching blog posts:', error);
+    return [];
+  }
+
+  return data || [];
+}
+
+export default async function Blog() {
+  const posts = await getBlogPosts();
 
   return (
     <Layout>
       <main>
         <h1 className="s-intro__content-title" style={{marginTop: '150px', marginLeft: '60px', fontSize: '50px'}}>
-          Blog
-        </h1>        
+          Blogs
+        </h1>
+        <p style={{marginLeft: '60px', marginTop: '10px', color: '#666', fontSize: '18px'}}>
+          Agricultural insights and tips for farmers
+        </p>
+
+        <div style={{padding: '40px 60px', display: 'flex', flexWrap: 'wrap', gap: '30px'}}>
+          {posts.length === 0 ? (
+            <p style={{color: '#666', fontSize: '16px'}}>
+              No blog posts yet. Check back soon for agricultural tips and insights!
+            </p>
+          ) : (
+            posts.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))
+          )}
+        </div>
       </main>
     </Layout>
   );
