@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
-import { supabase, BlogPost } from '@/lib/supabase';
+import { getSupabase, BlogPost } from '@/lib/supabase';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
@@ -9,6 +9,12 @@ interface PageProps {
 }
 
 async function getBlogPost(slug: string): Promise<BlogPost | null> {
+  const supabase = getSupabase();
+  if (!supabase) {
+    console.error('Supabase not configured');
+    return null;
+  }
+
   const { data, error } = await supabase
     .from('blog_posts')
     .select('*')

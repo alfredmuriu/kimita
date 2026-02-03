@@ -1,8 +1,14 @@
 import Layout from '@/components/Layout';
-import { supabase, BlogPost } from '@/lib/supabase';
+import { getSupabase, BlogPost } from '@/lib/supabase';
 import BlogCard from './BlogCard';
 
 async function getBlogPosts(): Promise<BlogPost[]> {
+  const supabase = getSupabase();
+  if (!supabase) {
+    console.error('Supabase not configured');
+    return [];
+  }
+
   const { data, error } = await supabase
     .from('blog_posts')
     .select('*')

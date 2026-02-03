@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabaseAdmin } from '@/lib/supabase';
+import { getSupabaseAdmin } from '@/lib/supabase';
 import { generateBlogPost } from '@/lib/openai';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic'; // Prevent build-time evaluation
 export const maxDuration = 60; // Allow up to 60 seconds for AI generation
 
 // Fetch a relevant image from Unsplash based on search query
@@ -52,6 +53,11 @@ export async function GET(request: NextRequest) {
     const authHeader = request.headers.get('authorization');
     if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const supabaseAdmin = getSupabaseAdmin();
+    if (!supabaseAdmin) {
+      return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
     }
 
     // Get the next unused topic

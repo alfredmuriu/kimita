@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabaseAdmin } from '@/lib/supabase';
+import { getSupabaseAdmin } from '@/lib/supabase';
+
+// Force dynamic to prevent build-time evaluation
+export const dynamic = 'force-dynamic';
 
 const topics = [
   // Poultry Health (15 topics)
@@ -67,6 +70,11 @@ export async function GET(request: NextRequest) {
   }
 
   try {
+    const supabaseAdmin = getSupabaseAdmin();
+    if (!supabaseAdmin) {
+      return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
+    }
+
     const { data, error } = await supabaseAdmin
       .from('blog_topics')
       .insert(topics)
