@@ -2,6 +2,9 @@ import Layout from '@/components/Layout';
 import { getSupabase, BlogPost } from '@/lib/supabase';
 import BlogCard from './BlogCard';
 
+// Revalidate every 60 seconds to show new blog posts
+export const revalidate = 60;
+
 async function getBlogPosts(): Promise<BlogPost[]> {
   const supabase = getSupabase();
   if (!supabase) {
