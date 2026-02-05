@@ -31,22 +31,7 @@ export default function Antistrs300Product() {
                 ANTISTRS-300 is an advanced anti-stress formula that helps animals cope with environmental, nutritional, and physiological stress. This powerful formulation promotes better performance and faster recovery during challenging conditions such as heat stress, transportation, vaccination, and disease recovery. Trusted by farmers across Kenya and East Africa for comprehensive stress management in poultry.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Vitamin C (Ascorbic Acid)</li>
-                <li>Electrolytes</li>
-                <li>B-Complex Vitamins</li>
-                <li>Betaine</li>
-                <li>Adaptogens</li>
-                <li>Amino Acids</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>

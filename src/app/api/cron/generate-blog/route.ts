@@ -49,9 +49,16 @@ async function getUnsplashImage(query: string): Promise<string> {
 
 export async function GET(request: NextRequest) {
   try {
-    // Verify the request is from Vercel Cron
+    // Auth check - supports both header and query param
     const authHeader = request.headers.get('authorization');
-    if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+    const { searchParams } = new URL(request.url);
+    const secretParam = searchParams.get('secret');
+
+    const isAuthorized =
+      authHeader === `Bearer ${process.env.CRON_SECRET}` ||
+      secretParam === process.env.CRON_SECRET;
+
+    if (!isAuthorized) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 

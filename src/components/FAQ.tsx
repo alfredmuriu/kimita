@@ -10,7 +10,7 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: "Why are my poultry dying suddenly? Common causes of poultry mortality",
-    answer: "Sudden chicken deaths are often caused by Newcastle disease (the #1 killer), Gumboro (IBD), infectious bronchitis, or coccidiosis. Other causes include heat stress, poor ventilation, contaminated water, and vitamin deficiencies.\n If you're losing flock rapidly, isolate sick birds immediately and contact a veterinarian.",
+    answer: "Sudden deaths are often caused by Newcastle disease (the #1 killer), Gumboro (IBD), infectious bronchitis, or coccidiosis. Other causes include heat stress, poor ventilation, contaminated water, and vitamin deficiencies.\n If you're losing flock rapidly, isolate sick birds immediately and contact a veterinarian.",
   },
   {
     question: "How do I start poultry farming? Beginner's guide for new farmers",
@@ -18,7 +18,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "How do I treat coccidiosis naturally without antibiotics?",
-    answer: "Coccidiosis causes bloody diarrhea, weakness, and death in chickens. For natural treatment: \n1) Use BIO-GAR — our garlic-based gut health supplement that helps control coccidiosis naturally. \n2) Improve litter management and keep bedding dry. \n3) Boost immunity with ADVICE. \nWhile severe cases may need anticoccidial medication, natural prevention with BIO-GAR reduces outbreaks significantly. Always maintain clean, dry housing to prevent coccidia buildup.",
+    answer: "Coccidiosis causes bloody diarrhea, weakness, and death in poultry. For natural treatment: \n1) Use BIO-GAR — our garlic-based gut health supplement that helps control coccidiosis naturally. \n2) Improve litter management and keep bedding dry. \n3) Boost immunity with ADVICE. \nWhile severe cases may need anticoccidial medication, natural prevention with BIO-GAR reduces outbreaks significantly. Always maintain clean, dry housing to prevent coccidia buildup.",
   },
   {
     question: "What is a recommended poultry vaccination schedule?",
@@ -61,7 +61,7 @@ export default function FAQ() {
         </div>
         <div className="column lg-6 stack-on-1100 section-header__secondary">
           <p className="desc">
-            Get expert answers to your questions about chicken diseases, poultry vaccination, broiler management,
+            Get expert answers to your questions about poultry diseases, vaccination, broiler management,
             layer farming, and natural animal health solutions. From preventing Newcastle disease to boosting egg production —
             we&apos;ve got you covered.
           </p>

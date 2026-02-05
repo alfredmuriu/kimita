@@ -31,22 +31,7 @@ export default function AgristarterProduct() {
                 AGRISTARTER is a premium chick starter feed additive specially formulated for the critical first 14 days of life. This highly digestible formula provides essential nutrients for early gut development, immune system activation, and rapid initial growth. Gives your chicks the best possible start for lifelong performance. Trusted by farmers across Kenya and East Africa for reduced early mortality and vigorous chick development.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>High-Quality Amino Acids (Methionine, Lysine)</li>
-                <li>Vitamins (A, D3, E, K, B-Complex, Biotin)</li>
-                <li>Organic Trace Minerals</li>
-                <li>Probiotics and Prebiotics</li>
-                <li>Digestive Enzymes</li>
-                <li>Immune Boosters</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -89,7 +74,7 @@ export default function AgristarterProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

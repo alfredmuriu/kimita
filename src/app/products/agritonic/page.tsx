@@ -31,21 +31,7 @@ export default function AgritonicProduct() {
                 Agritonic is a powerful liquid feed supplement formulated to support optimal poultry health and productivity. This comprehensive tonic provides essential nutrients, vitamins, and minerals needed for healthy growth, improved feed conversion, and enhanced production performance. Trusted by farmers across Kenya and East Africa for boosting broiler weight gain and layer productivity.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Essential Vitamins Complex</li>
-                <li>Trace Minerals</li>
-                <li>Amino Acids</li>
-                <li>Electrolytes</li>
-                <li>Energy Boosters</li>
-              </ul>
-            </div>
-          </section>
+          </section>        
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -88,7 +74,7 @@ export default function AgritonicProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

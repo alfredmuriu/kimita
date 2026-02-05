@@ -31,21 +31,7 @@ export default function AgrifinisherProduct() {
                 AGRIFINISHER is a premium broiler finisher feed additive specifically formulated to maximize weight gain and meat quality during the final growth phase. This comprehensive formula provides optimal nutrition for finishing broilers, enhancing feed conversion and promoting superior carcass quality. Designed for the critical 28-42 day period. Trusted by farmers across Kenya and East Africa for premium broiler production.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Balanced Amino Acids (Methionine, Lysine)</li>
-                <li>Essential Vitamins (A, D3, E, K, B-Complex)</li>
-                <li>Trace Minerals (Zinc, Manganese, Iron)</li>
-                <li>Growth Promoters</li>
-                <li>Digestive Enzymes</li>
-              </ul>
-            </div>
-          </section>
+          </section>         
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -88,7 +74,7 @@ export default function AgrifinisherProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

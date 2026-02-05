@@ -31,21 +31,7 @@ export default function AgrigrowerProduct() {
                 AGRIGROWER is a specialized poultry grower feed additive designed to support optimal growth and development during the critical growing phase. This balanced formula provides essential nutrients for building strong skeletal structure, muscle development, and immune system support. Ideal for the 14-28 day growth period. Trusted by farmers across Kenya and East Africa for consistent growth performance.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Essential Amino Acids (Methionine, Lysine, Threonine)</li>
-                <li>Vitamins (A, D3, E, K, B-Complex)</li>
-                <li>Macro Minerals (Calcium, Phosphorus)</li>
-                <li>Trace Minerals (Zinc, Selenium, Manganese)</li>
-                <li>Probiotics and Prebiotics</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -88,7 +74,7 @@ export default function AgrigrowerProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

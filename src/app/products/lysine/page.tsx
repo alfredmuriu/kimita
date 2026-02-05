@@ -31,19 +31,7 @@ export default function LysineProduct() {
                 Lysine is an essential amino acid critical for protein synthesis, muscle development, and overall growth in livestock. This vital nutrient enhances feed efficiency and supports optimal production performance. The second limiting amino acid in poultry after methionine. Trusted by farmers across Kenya and East Africa for amino acid supplementation and improved growth.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>L-Lysine HCl (98.5% min)</li>
-                <li>Feed Grade Quality</li>
-                <li>White to Light Brown Powder</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -86,7 +74,7 @@ export default function LysineProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

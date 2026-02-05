@@ -31,20 +31,7 @@ export default function ADE3Product() {
                 ADE-3 is a premium vitamin supplement effective for treating vitamin deficiencies in farm animals. This powerful formulation promotes growth rate, enhances performance, and improves feed efficiency. ADE-3 supports poultry health by preventing vitamin deficiencies, boosting disease resistance, and improving egg production and hatchability. Trusted by farmers across Kenya and East Africa for optimal poultry nutrition.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Vitamin A (Retinol)</li>
-                <li>Vitamin D3 (Cholecalciferol)</li>
-                <li>Vitamin E (Tocopherol)</li>
-                <li>Stabilizers and Carriers</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>

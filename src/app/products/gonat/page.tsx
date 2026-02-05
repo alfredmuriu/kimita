@@ -31,22 +31,7 @@ export default function GonatProduct() {
                 GONAT is a unique immune-boosting oral supplement derived from garlic and onion extracts. This liquid formulation is specially created to strengthen animals' natural defenses against disease while promoting better overall performance. The powerful combination of allicin and quercetin provides natural antimicrobial and antioxidant properties. Trusted by farmers across Kenya and East Africa for natural immunity enhancement.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Garlic Extract (Allium sativum)</li>
-                <li>Onion Extract (Allium cepa)</li>
-                <li>Allicin</li>
-                <li>Quercetin</li>
-                <li>Sulfur Compounds</li>
-                <li>Natural Antioxidants</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -90,7 +75,7 @@ export default function GonatProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

@@ -60,24 +60,7 @@ export default function AdviceProduct() {
                 and East Africa for reliable disease control without antibiotics.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Cinnamon Extract (Cinnamomum verum)</li>
-                <li>Garlic Extract (Allium sativum)</li>
-                <li>Echinacea Extract (Echinacea purpurea)</li>
-                <li>Astragalus Extract (Astragalus membranaceus)</li>
-                <li>Aloe Vera Extract (Aloe barbadensis)</li>
-                <li>Citric Acid Compounds</li>
-                <li>Lectin</li>
-                <li>Amantadine</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -122,7 +105,7 @@ export default function AdviceProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a 
               href="tel:+254723405204" 
               className="btn btn--primary"

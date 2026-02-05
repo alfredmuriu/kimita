@@ -31,19 +31,7 @@ export default function CholineChlorideProduct() {
                 Choline Chloride is essential for fat metabolism, liver function, and nerve transmission in animals. This vital nutrient prevents fatty liver disease and supports optimal growth and egg production. An indispensable component of modern poultry nutrition. Trusted by farmers across Kenya and East Africa for liver health and enhanced production performance.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Choline Chloride (60% or 70%)</li>
-                <li>Feed Grade Carrier</li>
-                <li>Free-Flowing Powder Form</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -86,7 +74,7 @@ export default function CholineChlorideProduct() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

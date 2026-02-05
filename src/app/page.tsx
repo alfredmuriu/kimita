@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className="list-block__text">
               <p style={{ color: "black" }}>
-                Our R&amp;D teams develop science-backed, natural alternatives to conventional chicken antibiotics. Products like Bio-Gar use garlic extract and phytobiotics to improve gut health, treat diarrhea in chickens, and support recovery from coccidiosis treatment.
+                Our Research &amp; Development teams come up with science-backed, natural alternatives to conventional antibiotics. Products like Bio-Gar use garlic extract and phytobiotics to improve gut health, treat diarrhea in chickens, and support recovery from coccidiosis treatment.
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="list-block__text">
               <p style={{ color: "black" }}>
-                Through workshops, field demos, and partnerships with dairy and poultry cooperatives, we train farmers on broiler vaccination schedules, layer chicken management, proper brooding temperatures, and how to start poultry farming in Kenya successfully.
+                Through workshops, field demos, and partnerships with dairy and poultry cooperatives, we train farmers on vaccination schedules, layer chicken management, proper brooding temperatures, and how to start poultry farming in Kenya successfully.
               </p>
             </div>
           </div>
@@ -371,7 +371,7 @@ export default function Home() {
             <img src="/images/folio/Advice.png" alt="ADVICE natural Newcastle disease treatment Kenya" style={{width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover'}} />
             <div className="modal-popup__desc">
               <h5>ADVICE — Natural Viral Protection</h5>
-              <p>ADVICE is formulated with natural extracts (Cinnamon, Garlic, Echinacea, Astragalus, Aloe vera) to boost poultry immunity against Newcastle disease, infectious bronchitis, Gumboro, and other viral diseases. A proven natural alternative to chicken antibiotics — trusted by poultry farmers across Kenya for disease prevention and post-vaccination support.</p>
+              <p>ADVICE is formulated with natural extracts (Cinnamon, Garlic, Echinacea, Astragalus, Aloe vera) to boost poultry immunity against Newcastle disease, infectious bronchitis, Gumboro, and other viral diseases. A proven natural alternative to chicken antibiotics — trusted by poultry farmers across Africa for disease prevention and post-vaccination support.</p>
             </div>
           </div>
         </div>

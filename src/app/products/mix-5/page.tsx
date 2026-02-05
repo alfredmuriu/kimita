@@ -31,21 +31,7 @@ export default function Mix5Product() {
                 MIX-5 is a powerful respiratory relief formula recommended for prevention and treatment of respiratory problems of different etiology in poultry. This advanced formulation effectively reduces undesirable effects of post-vaccination reactions, diminishes contamination in drinking water, and alleviates heat stress. Trusted by farmers across Kenya and East Africa for reliable respiratory disease control.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Essential Oils Blend</li>
-                <li>Menthol Compounds</li>
-                <li>Eucalyptus Extract</li>
-                <li>Vitamin C</li>
-                <li>Electrolytes</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -89,7 +75,7 @@ export default function Mix5Product() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

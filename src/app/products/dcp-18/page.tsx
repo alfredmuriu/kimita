@@ -31,20 +31,7 @@ export default function DCP18Product() {
                 DCP 18 is a feed-grade dicalcium phosphate supplement containing 18% phosphorus and 21% calcium in highly absorbable forms. This essential mineral supplement supports strong bones, healthy growth, and overall development in poultry, swine, cattle, and other livestock. An indispensable component of balanced animal nutrition. Trusted by farmers across Kenya and East Africa for mineral supplementation.
               </p>
             </div>
-          </section>
-
-          {/* Composition Section */}
-          <section style={{marginBottom: '50px'}}>
-            <h3 className="column lg-12 section-header__pretitle pretitle text-pretitle">COMPOSITION</h3>
-            <div style={{backgroundColor: 'transparent', padding: '30px', borderRadius: '8px', marginTop: '20px'}}>
-              <ul style={{fontSize: '17px', lineHeight: '2', color: 'white', paddingLeft: '20px'}}>
-                <li>Phosphorus: 18% minimum</li>
-                <li>Calcium: 21% minimum</li>
-                <li>Dicalcium Phosphate Dihydrate</li>
-                <li>Feed Grade Quality</li>
-              </ul>
-            </div>
-          </section>
+          </section>          
 
           {/* Benefits Section */}
           <section style={{marginBottom: '50px'}}>
@@ -87,7 +74,7 @@ export default function DCP18Product() {
           </section>
 
           {/* CTA Section */}
-          <section style={{textAlign: 'center', marginTop: '60px'}}>            
+          <section style={{textAlign: 'center', marginTop: '10px', marginRight: '200px'}}>            
             <a href="tel:+254723405204" className="btn btn--primary" style={{backgroundColor: 'rgb(2, 108, 106)', color: 'white', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
               Contact Us
             </a>

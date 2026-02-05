@@ -10,9 +10,9 @@ export default function Footer() {
         <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
           <img src="/logo.png" alt="Agrikima" style={{maxWidth: '180px', height: 'auto', marginBottom: '20px'}} />
           <p style={{color: 'rgba(0, 0, 0, 0.6)', fontSize: '15px', lineHeight: '1.7'}}>
-            Kenya&apos;s leading provider of Agriculture and Veterinary products.
+            Africa&apos;s leading provider of Agriculture and Veterinary products.
             We provide natural animal health solutions, supplements, and feed additives
-            trusted by dairy, poultry, and livestock farmers across Africa.
+            trusted by dairy, poultry, and livestock farmers.
           </p>
         </div>
 
