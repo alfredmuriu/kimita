@@ -4,6 +4,20 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: '/cpanel',
+        destination: 'https://cpanel.agrikima.co.ke:2083',
+        permanent: false,
+      },
+      {
+        source: '/webmail',
+        destination: 'https://cpanel.agrikima.co.ke:2096',
+        permanent: false,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
