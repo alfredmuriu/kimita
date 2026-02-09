@@ -108,54 +108,22 @@ export default async function BlogPostPage({ params }: PageProps) {
               <Link
                 href={`/products/${product.slug}`}
                 style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '24px',
+                  display: 'block',
                   marginTop: '50px',
-                  padding: '24px',
-                  background: 'linear-gradient(135deg, rgba(2, 108, 106, 0.15) 0%, rgba(2, 108, 106, 0.05) 100%)',
-                  borderRadius: '16px',
-                  border: '1px solid rgba(2, 108, 106, 0.3)',
                   textDecoration: 'none',
-                  transition: 'transform 0.2s, box-shadow 0.2s',
-                  flexWrap: 'wrap',
                 }}
               >
                 <img
                   src={product.image}
                   alt={product.name}
                   style={{
-                    width: '140px',
-                    height: '140px',
+                    width: '100%',
+                    maxWidth: '400px',
                     objectFit: 'contain',
                     borderRadius: '12px',
-                    backgroundColor: 'rgba(255,255,255,0.08)',
-                    padding: '8px',
-                    flexShrink: 0,
+                    cursor: 'pointer',
                   }}
                 />
-                <div style={{ flex: 1, minWidth: '200px' }}>
-                  <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#16a34a', fontWeight: '600' }}>
-                    Recommended Product
-                  </span>
-                  <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#ffffff', margin: '6px 0 8px' }}>
-                    {product.name}
-                  </h3>
-                  <p style={{ fontSize: '14px', color: '#9ca3af', margin: '0 0 12px', lineHeight: '1.5' }}>
-                    {product.description}
-                  </p>
-                  <span style={{
-                    display: 'inline-block',
-                    fontSize: '13px',
-                    fontWeight: '600',
-                    color: '#026c6a',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    backgroundColor: 'rgba(2, 108, 106, 0.15)',
-                  }}>
-                    View Product →
-                  </span>
-                </div>
               </Link>
             );
           })()}
