@@ -101,34 +101,56 @@ export async function GET(request: NextRequest) {
     const imageQuery = searchQueries[topic.category] || 'kenya farm agriculture';
     const featuredImage = await getUnsplashImage(imageQuery);
 
-    // Save the blog post to database
-    const { data: post, error: postError } = await supabaseAdmin
-      .from('blog_posts')
-      .insert({
-        slug: generatedContent.slug,
-        title: generatedContent.title,
-        excerpt: generatedContent.excerpt,
-        content: generatedContent.content,
-        featured_image: featuredImage,
-        keywords: generatedContent.keywords,
-        status: 'published',
-        published_at: new Date().toISOString(),
-      })
-      .select()
-      .single();
-
-    if (postError) {
-      return NextResponse.json(
-        { error: 'Failed to save blog post', details: postError.message },
-        { status: 500 }
-      );
-    }
-
-    // Mark the topic as used
+    // Mark the topic as used first to prevent retrying the same topic on failure
     await supabaseAdmin
       .from('blog_topics')
       .update({ used: true })
       .eq('id', topic.id);
+
+    // Save the blog post to database, handle duplicate slugs
+    let slug = generatedContent.slug;
+    let post = null;
+    let postError = null;
+
+    // Try original slug first, then with a suffix if duplicate
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const trySlug = attempt === 0 ? slug : `${slug}-${Date.now()}`;
+      const { data, error } = await supabaseAdmin
+        .from('blog_posts')
+        .insert({
+          slug: trySlug,
+          title: generatedContent.title,
+          excerpt: generatedContent.excerpt,
+          content: generatedContent.content,
+          featured_image: featuredImage,
+          keywords: generatedContent.keywords,
+          status: 'published',
+          published_at: new Date().toISOString(),
+        })
+        .select()
+        .single();
+
+      if (!error) {
+        post = data;
+        postError = null;
+        break;
+      }
+
+      if (error.message.includes('duplicate key')) {
+        postError = error;
+        continue;
+      }
+
+      postError = error;
+      break;
+    }
+
+    if (postError || !post) {
+      return NextResponse.json(
+        { error: 'Failed to save blog post', details: postError?.message },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
