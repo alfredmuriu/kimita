@@ -67,44 +67,53 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
     }
 
-    // Get the next unused topic, skipping duplicates that already have blog posts
+    // Get all existing blog post titles to avoid duplicates
+    const { data: existingPosts } = await supabaseAdmin
+      .from('blog_posts')
+      .select('title');
+    const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title.toLowerCase());
+
+    // Get unused topics batch (enough to find a unique one even with many duplicates)
+    const { data: unusedTopics, error: topicError } = await supabaseAdmin
+      .from('blog_topics')
+      .select('*')
+      .eq('used', false)
+      .order('priority', { ascending: true })
+      .limit(200);
+
+    if (topicError || !unusedTopics || unusedTopics.length === 0) {
+      return NextResponse.json(
+        { error: 'No unused topics available', details: topicError?.message },
+        { status: 404 }
+      );
+    }
+
+    // Find the first topic that doesn't already have a blog post
     let topic = null;
-    const maxSkips = 20;
+    const topicsToMarkUsed: string[] = [];
 
-    for (let skip = 0; skip < maxSkips; skip++) {
-      const { data: candidateTopic, error: topicError } = await supabaseAdmin
-        .from('blog_topics')
-        .select('*')
-        .eq('used', false)
-        .order('priority', { ascending: true })
-        .limit(1)
-        .single();
+    for (const candidateTopic of unusedTopics) {
+      // Check if any existing blog post title is similar (first 4 significant words)
+      const topicWords = candidateTopic.topic.toLowerCase().split(' ').filter((w: string) => w.length > 3).slice(0, 4);
+      const hasExisting = existingTitles.some((title: string) =>
+        topicWords.every((word: string) => title.includes(word))
+      );
 
-      if (topicError || !candidateTopic) {
-        return NextResponse.json(
-          { error: 'No unused topics available', details: topicError?.message },
-          { status: 404 }
-        );
-      }
-
-      // Check if we already have a blog post for this topic (by checking title similarity)
-      const { data: existingPosts } = await supabaseAdmin
-        .from('blog_posts')
-        .select('id')
-        .ilike('title', `%${candidateTopic.topic.split(' ').slice(0, 4).join('%')}%`)
-        .limit(1);
-
-      if (existingPosts && existingPosts.length > 0) {
-        // Already have a post for this topic - mark as used and try next
-        await supabaseAdmin
-          .from('blog_topics')
-          .update({ used: true })
-          .eq('id', candidateTopic.id);
+      if (hasExisting) {
+        topicsToMarkUsed.push(candidateTopic.id);
         continue;
       }
 
       topic = candidateTopic;
       break;
+    }
+
+    // Bulk mark duplicate topics as used
+    if (topicsToMarkUsed.length > 0) {
+      await supabaseAdmin
+        .from('blog_topics')
+        .update({ used: true })
+        .in('id', topicsToMarkUsed);
     }
 
     if (!topic) {
