@@ -128,67 +128,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             );
           })()}
 
-          {/* CTA Section */}
-          <div style={{
-            marginTop: '60px',
-            padding: '40px',
-            background: 'linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%)',
-            borderRadius: '16px',
-            border: '1px solid rgba(22, 163, 74, 0.2)',
-            textAlign: 'center'
-          }}>
-            <h3 style={{fontSize: '24px', fontWeight: '600', color: '#ffffff', marginBottom: '16px'}}>
-              Need Quality Veterinary Products?
-            </h3>
-            <p style={{color: '#9ca3af', fontSize: '16px', marginBottom: '24px', maxWidth: '500px', margin: '0 auto 24px'}}>
-              Agrikima offers a wide range of veterinary medicines, feeds, and farm equipment to keep your livestock healthy and productive.
-            </p>
-            <div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap'}}>
-              <Link
-                href="/products"
-                className="btn btn--primary"
-                style={{fontSize: '14px', padding: '14px 28px'}}
-              >
-                Browse Products
-              </Link>
-              <Link
-                href="/contact"
-                className="btn btn--stroke"
-                style={{fontSize: '14px', padding: '14px 28px'}}
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
 
-          {/* Related Topics CTA */}
-          <div style={{
-            marginTop: '40px',
-            padding: '30px',
-            backgroundColor: 'rgba(255, 255, 255, 0.05)',
-            borderRadius: '12px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '20px'
-          }}>
-            <div>
-              <h4 style={{fontSize: '18px', fontWeight: '600', color: '#ffffff', marginBottom: '8px'}}>
-                Want to learn more?
-              </h4>
-              <p style={{color: '#9ca3af', fontSize: '14px', margin: 0}}>
-                Explore more articles on poultry health, livestock care, and farming tips.
-              </p>
-            </div>
-            <Link
-              href="/blog"
-              className="btn btn--stroke"
-              style={{fontSize: '12px', padding: '12px 24px'}}
-            >
-              View All Articles
-            </Link>
-          </div>
         </article>
       </main>
     </Layout>
