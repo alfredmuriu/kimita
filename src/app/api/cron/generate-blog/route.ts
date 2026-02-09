@@ -67,18 +67,49 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
     }
 
-    // Get the next unused topic
-    const { data: topic, error: topicError } = await supabaseAdmin
-      .from('blog_topics')
-      .select('*')
-      .eq('used', false)
-      .order('priority', { ascending: true })
-      .limit(1)
-      .single();
+    // Get the next unused topic, skipping duplicates that already have blog posts
+    let topic = null;
+    const maxSkips = 20;
 
-    if (topicError || !topic) {
+    for (let skip = 0; skip < maxSkips; skip++) {
+      const { data: candidateTopic, error: topicError } = await supabaseAdmin
+        .from('blog_topics')
+        .select('*')
+        .eq('used', false)
+        .order('priority', { ascending: true })
+        .limit(1)
+        .single();
+
+      if (topicError || !candidateTopic) {
+        return NextResponse.json(
+          { error: 'No unused topics available', details: topicError?.message },
+          { status: 404 }
+        );
+      }
+
+      // Check if we already have a blog post for this topic (by checking title similarity)
+      const { data: existingPosts } = await supabaseAdmin
+        .from('blog_posts')
+        .select('id')
+        .ilike('title', `%${candidateTopic.topic.split(' ').slice(0, 4).join('%')}%`)
+        .limit(1);
+
+      if (existingPosts && existingPosts.length > 0) {
+        // Already have a post for this topic - mark as used and try next
+        await supabaseAdmin
+          .from('blog_topics')
+          .update({ used: true })
+          .eq('id', candidateTopic.id);
+        continue;
+      }
+
+      topic = candidateTopic;
+      break;
+    }
+
+    if (!topic) {
       return NextResponse.json(
-        { error: 'No unused topics available', details: topicError?.message },
+        { error: 'No new unique topics available' },
         { status: 404 }
       );
     }
