@@ -92,39 +92,59 @@ export default async function BlogPostPage({ params }: PageProps) {
             <span>By Agrikima Team</span>
           </div>
 
-          {/* Content */}
-          <div
-            className="blog-content"
-            dangerouslySetInnerHTML={{ __html: post.content || '' }}
-          />
-
-          {/* Recommended Product */}
+          {/* Content with product recommendation inserted before Conclusion */}
           {(() => {
+            const content = post.content || '';
             const product = getRecommendedProduct(
               post.keywords || [],
               post.title
             );
+
+            // Find the last <h2> (usually "Conclusion") to insert the product image before it
+            const lastH2Index = content.lastIndexOf('<h2');
+            const beforeConclusion = lastH2Index > 0 ? content.slice(0, lastH2Index) : content;
+            const conclusion = lastH2Index > 0 ? content.slice(lastH2Index) : '';
+
             return (
-              <Link
-                href={`/products/${product.slug}`}
-                style={{
-                  display: 'block',
-                  marginTop: '50px',
-                  textDecoration: 'none',
-                }}
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  style={{
-                    width: '100%',
-                    maxWidth: '400px',
-                    objectFit: 'contain',
-                    borderRadius: '12px',
-                    cursor: 'pointer',
-                  }}
+              <>
+                <div
+                  className="blog-content"
+                  dangerouslySetInnerHTML={{ __html: beforeConclusion }}
                 />
-              </Link>
+
+                {/* Recommended Product */}
+                <h3 style={{ color: '#ffffff', fontSize: '20px', fontWeight: '600', marginBottom: '12px' }}>
+                  Recommended Product
+                </h3>
+                <Link
+                  href={`/products/${product.slug}`}
+                  style={{
+                    display: 'block',
+                    margin: '40px 0',
+                    textDecoration: 'none',
+                  }}
+                >
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    style={{
+                      height: '300px',
+                      width: '250px',
+                      maxWidth: '400px',
+                      objectFit: 'contain',
+                      borderRadius: '12px',
+                      cursor: 'pointer',
+                    }}
+                  />
+                </Link>
+
+                {conclusion && (
+                  <div
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: conclusion }}
+                  />
+                )}
+              </>
             );
           })()}
 
