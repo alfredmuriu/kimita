@@ -78,7 +78,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           {/* Featured Image */}
           <img
-            src={post.featured_image || 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?q=80&w=2000&auto=format&fit=crop'}
+            src={post.featured_image || 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2000&auto=format&fit=crop'}
             alt={post.title}
             style={{width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', marginBottom: '30px'}}
           />

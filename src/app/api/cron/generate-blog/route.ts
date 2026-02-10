@@ -12,7 +12,7 @@ async function getUnsplashImage(query: string): Promise<string> {
 
   if (!accessKey) {
     console.log('No Unsplash API key, using default image');
-    return 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?q=80&w=1200&auto=format&fit=crop';
+    return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
   }
 
   try {
@@ -27,7 +27,7 @@ async function getUnsplashImage(query: string): Promise<string> {
 
     if (!response.ok) {
       console.error('Unsplash API error:', response.status);
-      return 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?q=80&w=1200&auto=format&fit=crop';
+      return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
     }
 
     const data = await response.json();
@@ -40,10 +40,10 @@ async function getUnsplashImage(query: string): Promise<string> {
       return `${image.urls.regular}&w=1200&fit=crop`;
     }
 
-    return 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?q=80&w=1200&auto=format&fit=crop';
+    return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
   } catch (error) {
     console.error('Error fetching Unsplash image:', error);
-    return 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?q=80&w=1200&auto=format&fit=crop';
+    return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
   }
 }
 

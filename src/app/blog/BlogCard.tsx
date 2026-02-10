@@ -45,7 +45,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         flexShrink: 0
       }}>
         <img
-          src={post.featured_image || 'https://images.unsplash.com/photo-1500595046743-cd271d694e30?q=80&w=2000&auto=format&fit=crop'}
+          src={post.featured_image || 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2000&auto=format&fit=crop'}
           alt={post.title}
           style={{
             width: '100%',
