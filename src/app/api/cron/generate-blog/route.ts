@@ -91,12 +91,23 @@ export async function GET(request: NextRequest) {
     // Find the first topic that doesn't already have a blog post
     let topic = null;
     const topicsToMarkUsed: string[] = [];
+    const seenTopicTexts = new Set<string>();
 
     for (const candidateTopic of unusedTopics) {
-      // Check if any existing blog post title is similar (first 4 significant words)
-      const topicWords = candidateTopic.topic.toLowerCase().split(' ').filter((w: string) => w.length > 3).slice(0, 4);
+      const normalizedTopic = candidateTopic.topic.toLowerCase().trim();
+
+      // Skip duplicate topic text (same topic seeded multiple times)
+      if (seenTopicTexts.has(normalizedTopic)) {
+        topicsToMarkUsed.push(candidateTopic.id);
+        continue;
+      }
+      seenTopicTexts.add(normalizedTopic);
+
+      // Check if any existing blog post title is similar
+      const topicWords = normalizedTopic.split(' ').filter((w: string) => w.length > 3);
       const hasExisting = existingTitles.some((title: string) =>
-        topicWords.every((word: string) => title.includes(word))
+        // Match if at least 60% of significant words appear in the title
+        topicWords.filter((word: string) => title.includes(word)).length >= Math.ceil(topicWords.length * 0.6)
       );
 
       if (hasExisting) {
@@ -108,7 +119,7 @@ export async function GET(request: NextRequest) {
       break;
     }
 
-    // Bulk mark duplicate topics as used
+    // Bulk mark duplicate/matched topics as used
     if (topicsToMarkUsed.length > 0) {
       await supabaseAdmin
         .from('blog_topics')
@@ -122,6 +133,14 @@ export async function GET(request: NextRequest) {
         { status: 404 }
       );
     }
+
+    // Mark ALL rows with the same topic text as used (handles duplicate seeded rows)
+    await supabaseAdmin
+      .from('blog_topics')
+      .update({ used: true })
+      .eq('used', false)
+      .eq('topic', topic.topic)
+      .neq('id', topic.id);
 
     // Generate blog content using OpenAI
     const generatedContent = await generateBlogPost(
