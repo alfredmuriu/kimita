@@ -149,15 +149,21 @@ export async function GET(request: NextRequest) {
       topic.secondary_keywords || []
     );
 
-    // Get a relevant Unsplash image based on category and topic
-    const searchQueries: Record<string, string> = {
-      'poultry': 'chicken farm poultry',
-      'dairy': 'dairy cow farm milk',
-      'livestock': 'livestock farm animals',
-      'nutrition': 'animal feed farm',
-      'business': 'african farmer agriculture'
+    // Get a relevant Unsplash image using topic-specific keywords for variety
+    const categoryBase: Record<string, string> = {
+      'poultry': 'chicken poultry',
+      'dairy': 'dairy cow',
+      'livestock': 'livestock farm',
+      'nutrition': 'animal feed',
+      'business': 'african farmer'
     };
-    const imageQuery = searchQueries[topic.category] || 'kenya farm agriculture';
+    // Use primary keyword + category base for a unique, relevant image per blog
+    const topicKeywords = (topic.primary_keyword || topic.topic)
+      .split(' ')
+      .filter((w: string) => w.length > 3)
+      .slice(0, 3)
+      .join(' ');
+    const imageQuery = `${topicKeywords} ${categoryBase[topic.category] || 'kenya farm'}`;
     const featuredImage = await getUnsplashImage(imageQuery);
 
     // Mark the topic as used first to prevent retrying the same topic on failure
