@@ -76,13 +76,6 @@ export default async function BlogPostPage({ params }: PageProps) {
             ← Back
           </Link>
 
-          {/* Featured Image */}
-          <img
-            src={post.featured_image || 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=2000&auto=format&fit=crop'}
-            alt={post.title}
-            style={{width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', marginBottom: '30px'}}
-          />
-
           {/* Title and Meta */}
           <h1 style={{fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '16px', lineHeight: '1.2'}}>
             {post.title}
