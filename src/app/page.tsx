@@ -1,9 +1,11 @@
 import Layout from '@/components/Layout';
 import FAQ from '@/components/FAQ';
+import LightboxInit from '@/components/LightboxInit';
 
 export default function Home() {
   return (
     <Layout>
+      <LightboxInit />
       <section id="intro" className="s-intro target-section">
         <div className="s-intro__bg"></div>
 
