@@ -1,49 +1,59 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase';
-import { generateBlogPost } from '@/lib/openai';
+import { generateBlogPost, generateBlogImage } from '@/lib/openai';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic'; // Prevent build-time evaluation
-export const maxDuration = 60; // Allow up to 60 seconds for AI generation
+export const maxDuration = 120; // Allow up to 120 seconds for AI generation + image generation
 
-// Fetch a relevant image from Unsplash based on search query
-async function getUnsplashImage(query: string): Promise<string> {
-  const accessKey = process.env.UNSPLASH_ACCESS_KEY;
+const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
 
-  if (!accessKey) {
-    console.log('No Unsplash API key, using default image');
-    return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
-  }
+// Generate image with DALL·E 3, download it, upload to Supabase Storage, return permanent URL
+async function generateAndUploadImage(
+  topic: string,
+  keywords: string[],
+  slug: string,
+  supabaseAdmin: ReturnType<typeof getSupabaseAdmin>
+): Promise<string> {
+  if (!supabaseAdmin) return DEFAULT_IMAGE;
 
   try {
-    const response = await fetch(
-      `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=10&orientation=landscape`,
-      {
-        headers: {
-          'Authorization': `Client-ID ${accessKey}`
-        }
-      }
-    );
+    // 1. Generate image with DALL·E 3
+    const tempUrl = await generateBlogImage(topic, keywords);
 
-    if (!response.ok) {
-      console.error('Unsplash API error:', response.status);
-      return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
+    // 2. Download the image from the temporary DALL·E URL
+    const imageResponse = await fetch(tempUrl);
+    if (!imageResponse.ok) {
+      console.error('Failed to download DALL·E image:', imageResponse.status);
+      return DEFAULT_IMAGE;
     }
 
-    const data = await response.json();
+    const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
+    const fileName = `${slug}-${Date.now()}.png`;
 
-    if (data.results && data.results.length > 0) {
-      // Pick a random image from the results for variety
-      const randomIndex = Math.floor(Math.random() * Math.min(data.results.length, 5));
-      const image = data.results[randomIndex];
-      // Use the regular size with auto formatting
-      return `${image.urls.regular}&w=1200&fit=crop`;
+    // 3. Upload to Supabase Storage (blog-images bucket)
+    const { error: uploadError } = await supabaseAdmin.storage
+      .from('blog-images')
+      .upload(fileName, imageBuffer, {
+        contentType: 'image/png',
+        cacheControl: '31536000',
+        upsert: false,
+      });
+
+    if (uploadError) {
+      console.error('Supabase Storage upload error:', uploadError.message);
+      return DEFAULT_IMAGE;
     }
 
-    return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
+    // 4. Get the permanent public URL
+    const { data: publicUrlData } = supabaseAdmin.storage
+      .from('blog-images')
+      .getPublicUrl(fileName);
+
+    return publicUrlData.publicUrl;
   } catch (error) {
-    console.error('Error fetching Unsplash image:', error);
-    return 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
+    console.error('Error generating/uploading blog image:', error);
+    return DEFAULT_IMAGE;
   }
 }
 
@@ -149,22 +159,13 @@ export async function GET(request: NextRequest) {
       topic.secondary_keywords || []
     );
 
-    // Get a relevant Unsplash image using topic-specific keywords for variety
-    const categoryBase: Record<string, string> = {
-      'poultry': 'chicken poultry',
-      'dairy': 'dairy cow',
-      'livestock': 'livestock farm',
-      'nutrition': 'animal feed',
-      'business': 'african farmer'
-    };
-    // Use primary keyword + category base for a unique, relevant image per blog
-    const topicKeywords = (topic.primary_keyword || topic.topic)
-      .split(' ')
-      .filter((w: string) => w.length > 3)
-      .slice(0, 3)
-      .join(' ');
-    const imageQuery = `${topicKeywords} ${categoryBase[topic.category] || 'kenya farm'}`;
-    const featuredImage = await getUnsplashImage(imageQuery);
+    // Generate a unique featured image with DALL·E 3 and upload to Supabase Storage
+    const featuredImage = await generateAndUploadImage(
+      topic.topic,
+      generatedContent.keywords,
+      generatedContent.slug,
+      supabaseAdmin
+    );
 
     // Mark the topic as used first to prevent retrying the same topic on failure
     await supabaseAdmin

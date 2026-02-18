@@ -58,7 +58,7 @@ Return ONLY valid JSON, no other text.`;
       },
     ],
     temperature: 0.7,
-    max_tokens: 2500,
+    max_tokens: 4000,
   });
 
   const content = response.choices[0]?.message?.content;
@@ -78,6 +78,29 @@ Return ONLY valid JSON, no other text.`;
     keywords: parsed.keywords,
     featuredImageDescription: parsed.featuredImageDescription,
   };
+}
+
+// Generate a blog featured image using DALL·E 3
+export async function generateBlogImage(
+  topic: string,
+  keywords: string[]
+): Promise<string> {
+  const prompt = `A professional, vibrant photograph for an agricultural blog article about: "${topic}". Keywords: ${keywords.slice(0, 3).join(', ')}. The image should depict realistic African farming scenes with livestock, crops, or farmers. Bright natural lighting, editorial style, no text or watermarks.`;
+
+  const response = await openai.images.generate({
+    model: 'dall-e-3',
+    prompt,
+    n: 1,
+    size: '1792x1024',
+    quality: 'standard',
+  });
+
+  const imageUrl = response.data[0]?.url;
+  if (!imageUrl) {
+    throw new Error('No image generated from DALL·E');
+  }
+
+  return imageUrl;
 }
 
 export default openai;

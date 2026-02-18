@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <span>By Agrikima Team</span>
           </div>
 
-          {/* Content with product recommendation inserted before Conclusion */}
+          {/* Content with product recommendation above Introduction */}
           {(() => {
             const content = post.content || '';
             const product = getRecommendedProduct(
@@ -93,27 +93,26 @@ export default async function BlogPostPage({ params }: PageProps) {
               post.title
             );
 
-            // Find the last <h2> (usually "Conclusion") to insert the product image before it
-            const lastH2Index = content.lastIndexOf('<h2');
-            const beforeConclusion = lastH2Index > 0 ? content.slice(0, lastH2Index) : content;
-            const conclusion = lastH2Index > 0 ? content.slice(lastH2Index) : '';
+            // Find the first <h2> (usually "Introduction") to insert the product above it
+            const firstH2Index = content.indexOf('<h2');
+            const beforeIntro = firstH2Index > 0 ? content.slice(0, firstH2Index) : '';
+            const fromIntro = firstH2Index > 0 ? content.slice(firstH2Index) : content;
 
             return (
               <>
-                <div
-                  className="blog-content"
-                  dangerouslySetInnerHTML={{ __html: beforeConclusion }}
-                />
-
-                {/* Recommended Product */}
-                <h3 style={{ color: '#ffffff', fontSize: '20px', fontWeight: '600', marginBottom: '12px' }}>
-                  Recommended Product
-                </h3>
+                {/* Content before first h2 (if any) */}
+                {beforeIntro && (
+                  <div
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: beforeIntro }}
+                  />
+                )}
+                
                 <Link
                   href={`/products/${product.slug}`}
                   style={{
                     display: 'block',
-                    margin: '40px 0',
+                    margin: '0 0 40px 0',
                     textDecoration: 'none',
                   }}
                 >
@@ -131,12 +130,32 @@ export default async function BlogPostPage({ params }: PageProps) {
                   />
                 </Link>
 
-                {conclusion && (
-                  <div
-                    className="blog-content"
-                    dangerouslySetInnerHTML={{ __html: conclusion }}
-                  />
-                )}
+                {/* Main blog content (Introduction through Conclusion) */}
+                <div
+                  className="blog-content"
+                  dangerouslySetInnerHTML={{ __html: fromIntro }}
+                />
+
+                {/* CTA Button after Conclusion */}
+                <section style={{ textAlign: 'center', marginTop: '50px' }}>
+                  <Link
+                    href="/products"
+                    className="btn btn--stroke s-intro__content-btn"
+                    style={{
+                      fontSize: '10px',
+                      width: '250px',
+                      height: '60px',
+                      justifyContent: 'center',
+                      textAlign: 'center',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      marginLeft: '-500px',
+                      marginTop: '50px',
+                    }}
+                  >
+                    Explore Products
+                  </Link>
+                </section>
               </>
             );
           })()}

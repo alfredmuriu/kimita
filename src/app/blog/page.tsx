@@ -33,7 +33,7 @@ export default async function Blog() {
     <Layout>
       <main>
         <h1 className="s-intro__content-title" style={{marginTop: '150px', marginLeft: '60px', fontSize: '50px'}}>
-          Blogs
+          What's New
         </h1>
         <p style={{marginLeft: '60px', marginTop: '10px', color: '#666', fontSize: '18px'}}>
           Agricultural insights and tips for farmers
