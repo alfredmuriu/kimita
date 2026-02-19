@@ -6,3 +6,5 @@ desktop.ini
 .env
 .env.local
 .env*.local
+NUL
+nul
