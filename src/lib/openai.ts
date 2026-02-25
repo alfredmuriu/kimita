@@ -18,7 +18,7 @@ export async function generateBlogPost(
   primaryKeyword: string,
   secondaryKeywords: string[]
 ): Promise<GeneratedBlogContent> {
-  const prompt = `You are an expert agricultural content writer for Agrikima, a Kenyan company selling veterinary and agricultural products. Their products include natural animal health solutions, supplements, and feed additives for dairy, poultry, and livestock farmers.
+  const prompt = `You are an expert agricultural content writer for Agrikima, a company selling veterinary and agricultural products. Their products include natural animal health solutions, supplements, and feed additives for dairy, poultry, and livestock farmers.
 
 Write a comprehensive blog post about: "${topic}"
 
@@ -27,7 +27,7 @@ Secondary keywords to include: ${secondaryKeywords.join(', ')}
 
 Requirements:
 1. Write 1000-1200 words
-2. Use simple, educational language suitable for Kenyan farmers
+2. Use simple, educational language suitable for farmers
 3. Include practical, actionable tips
 4. Structure with clear H2 and H3 headings (use HTML tags)
 5. Where relevant, naturally mention that quality veterinary products and supplements can help
@@ -58,18 +58,18 @@ Return ONLY valid JSON, no other text.`;
       },
     ],
     temperature: 0.7,
-    max_tokens: 4000,
+    max_tokens: 6000,
   });
 
   const content = response.choices[0]?.message?.content;
-  
+
   if (!content) {
     throw new Error('No content generated from OpenAI');
   }
 
   // Parse the JSON response
   const parsed = JSON.parse(content);
-  
+
   return {
     title: parsed.title,
     slug: parsed.slug,
