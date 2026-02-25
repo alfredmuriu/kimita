@@ -5,6 +5,9 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getRecommendedProduct } from '@/lib/product-recommendations';
 
+// Revalidate every 60 seconds to show blog post edits
+export const revalidate = 60;
+
 interface PageProps {
   params: { slug: string };
 }
