@@ -85,7 +85,7 @@ export async function generateBlogImage(
   topic: string,
   keywords: string[]
 ): Promise<string> {
-  const prompt = `A professional, vibrant photograph for an agricultural blog article about: "${topic}". Keywords: ${keywords.slice(0, 3).join(', ')}. The image should depict realistic African farming scenes with livestock, crops, or farmers. Bright natural lighting, editorial style, no text or watermarks.`;
+  const prompt = `A professional, high-quality photograph of the specific animal discussed in this topic: "${topic}". Show a realistic, close-up or medium shot of the animal (e.g. chickens if poultry, cows if dairy, pigs if swine, goats if mentioned, etc.) in a clean farm setting. The animal should be healthy and well-kept. Bright natural lighting, sharp focus, editorial photography style. No text, no watermarks, no humans in the frame.`;
 
   const response = await openai.images.generate({
     model: 'dall-e-3',
