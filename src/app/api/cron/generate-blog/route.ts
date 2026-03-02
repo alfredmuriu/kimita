@@ -77,11 +77,35 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
     }
 
+    // Guard: skip if a blog post was already generated today (UTC)
+    const todayStart = new Date();
+    todayStart.setUTCHours(0, 0, 0, 0);
+    const { data: todayPosts } = await supabaseAdmin
+      .from('blog_posts')
+      .select('id, title')
+      .gte('published_at', todayStart.toISOString())
+      .limit(1);
+
+    if (todayPosts && todayPosts.length > 0) {
+      return NextResponse.json({
+        success: true,
+        message: 'Blog post already generated today',
+        post: { id: todayPosts[0].id, title: todayPosts[0].title },
+      });
+    }
+
     // Get all existing blog post titles to avoid duplicates
     const { data: existingPosts } = await supabaseAdmin
       .from('blog_posts')
       .select('title');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title.toLowerCase());
+
+    // Get previously used topic texts to catch topics that generated posts with very different titles
+    const { data: usedTopics } = await supabaseAdmin
+      .from('blog_topics')
+      .select('topic')
+      .eq('used', true);
+    const usedTopicTexts = (usedTopics || []).map((t: { topic: string }) => t.topic.toLowerCase().trim());
 
     // Get unused topics batch (enough to find a unique one even with many duplicates)
     const { data: unusedTopics, error: topicError } = await supabaseAdmin
@@ -113,14 +137,14 @@ export async function GET(request: NextRequest) {
       }
       seenTopicTexts.add(normalizedTopic);
 
-      // Check if any existing blog post title is similar
+      // Check if any existing blog post title OR previously used topic is similar
       const topicWords = normalizedTopic.split(' ').filter((w: string) => w.length > 3);
-      const hasExisting = existingTitles.some((title: string) =>
-        // Match if at least 60% of significant words appear in the title
-        topicWords.filter((word: string) => title.includes(word)).length >= Math.ceil(topicWords.length * 0.6)
-      );
+      const matchesTexts = (texts: string[]) =>
+        texts.some((text: string) =>
+          topicWords.filter((word: string) => text.includes(word)).length >= Math.ceil(topicWords.length * 0.6)
+        );
 
-      if (hasExisting) {
+      if (matchesTexts(existingTitles) || matchesTexts(usedTopicTexts)) {
         topicsToMarkUsed.push(candidateTopic.id);
         continue;
       }
