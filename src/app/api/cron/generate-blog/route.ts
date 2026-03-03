@@ -8,6 +8,55 @@ export const maxDuration = 120; // Allow up to 120 seconds for AI generation + i
 
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
 
+// Stop words to ignore when comparing topic similarity
+const STOP_WORDS = new Set([
+  'how', 'what', 'when', 'why', 'the', 'and', 'for', 'your', 'with',
+  'from', 'that', 'this', 'best', 'guide', 'complete', 'tips', 'ways',
+  'common', 'every', 'them', 'avoid', 'treat', 'manage', 'prevent',
+  'improve', 'signs', 'causes', 'should', 'about', 'into', 'make',
+  'keep', 'start', 'raise', 'build', 'write', 'set',
+]);
+
+/**
+ * Multi-signal similarity check to catch duplicate/overlapping topics.
+ * Returns true if the candidate topic is too similar to any existing content.
+ */
+function isSimilarTopic(
+  candidateTopic: string,
+  existingTitles: string[],
+  usedTopicTexts: string[],
+  existingExcerpts: string[],
+  existingKeywordSets: string[][]
+): boolean {
+  const normalized = candidateTopic.toLowerCase().trim();
+  const topicWords = normalized
+    .split(/\s+/)
+    .filter((w: string) => w.length > 2 && !STOP_WORDS.has(w));
+
+  if (topicWords.length === 0) return false;
+
+  // Check 1: Word overlap against titles, used topics, and excerpts (40% threshold)
+  const allTexts = [...existingTitles, ...usedTopicTexts, ...existingExcerpts];
+  for (const text of allTexts) {
+    const matchCount = topicWords.filter((word: string) => text.includes(word)).length;
+    if (matchCount >= Math.ceil(topicWords.length * 0.4)) {
+      return true;
+    }
+  }
+
+  // Check 2: Keyword overlap with existing posts (≥2 matching keywords)
+  for (const kwSet of existingKeywordSets) {
+    const matchingKws = topicWords.filter((word: string) =>
+      kwSet.some((kw: string) => kw.includes(word))
+    );
+    if (matchingKws.length >= 2) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 // Generate image with DALL·E 3, download it, upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
   topic: string,
@@ -94,11 +143,15 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Get all existing blog post titles to avoid duplicates
+    // Get all existing blog post titles, excerpts, and keywords to avoid duplicates
     const { data: existingPosts } = await supabaseAdmin
       .from('blog_posts')
-      .select('title');
+      .select('title, excerpt, keywords');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title.toLowerCase());
+    const existingExcerpts = (existingPosts || []).map((p: { excerpt: string }) => (p.excerpt || '').toLowerCase());
+    const existingKeywordSets = (existingPosts || []).map(
+      (p: { keywords: string[] }) => (p.keywords || []).map((k: string) => k.toLowerCase())
+    );
 
     // Get previously used topic texts to catch topics that generated posts with very different titles
     const { data: usedTopics } = await supabaseAdmin
@@ -137,14 +190,8 @@ export async function GET(request: NextRequest) {
       }
       seenTopicTexts.add(normalizedTopic);
 
-      // Check if any existing blog post title OR previously used topic is similar
-      const topicWords = normalizedTopic.split(' ').filter((w: string) => w.length > 3);
-      const matchesTexts = (texts: string[]) =>
-        texts.some((text: string) =>
-          topicWords.filter((word: string) => text.includes(word)).length >= Math.ceil(topicWords.length * 0.6)
-        );
-
-      if (matchesTexts(existingTitles) || matchesTexts(usedTopicTexts)) {
+      // Multi-signal similarity check against titles, excerpts, keywords, and used topics
+      if (isSimilarTopic(candidateTopic.topic, existingTitles, usedTopicTexts, existingExcerpts, existingKeywordSets)) {
         topicsToMarkUsed.push(candidateTopic.id);
         continue;
       }
@@ -180,7 +227,8 @@ export async function GET(request: NextRequest) {
     const generatedContent = await generateBlogPost(
       topic.topic,
       topic.primary_keyword || topic.topic,
-      topic.secondary_keywords || []
+      topic.secondary_keywords || [],
+      existingTitles
     );
 
     // Generate a unique featured image with DALL·E 3 and upload to Supabase Storage

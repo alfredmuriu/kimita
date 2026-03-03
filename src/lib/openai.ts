@@ -16,15 +16,20 @@ export interface GeneratedBlogContent {
 export async function generateBlogPost(
   topic: string,
   primaryKeyword: string,
-  secondaryKeywords: string[]
+  secondaryKeywords: string[],
+  existingPostTitles: string[] = []
 ): Promise<GeneratedBlogContent> {
+  const existingPostsContext = existingPostTitles.length > 0
+    ? `\n\nIMPORTANT: The following blog posts have ALREADY been published. Your article must cover a DIFFERENT angle and NOT repeat the same information:\n${existingPostTitles.slice(0, 30).map(t => `- "${t}"`).join('\n')}\n\nMake sure your content is distinct and provides NEW value not covered by the above posts.\n`
+    : '';
+
   const prompt = `You are an expert agricultural content writer for Agrikima, a company selling veterinary and agricultural products. Their products include natural animal health solutions, supplements, and feed additives for dairy, poultry, and livestock farmers.
 
 Write a comprehensive blog post about: "${topic}"
 
 Target primary keyword: "${primaryKeyword}"
 Secondary keywords to include: ${secondaryKeywords.join(', ')}
-
+${existingPostsContext}
 Requirements:
 1. Write 1000-1200 words
 2. Use simple, educational language suitable for farmers
