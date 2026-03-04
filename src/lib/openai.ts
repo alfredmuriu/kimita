@@ -13,15 +13,56 @@ export interface GeneratedBlogContent {
   featuredImageDescription: string;
 }
 
+/**
+ * Get an embedding vector for a piece of text using OpenAI's text-embedding-3-small model.
+ * Used for semantic similarity comparison between topics.
+ */
+export async function getEmbedding(text: string): Promise<number[]> {
+  const response = await openai.embeddings.create({
+    model: 'text-embedding-3-small',
+    input: text.trim(),
+  });
+  return response.data[0].embedding;
+}
+
+/**
+ * Compute cosine similarity between two embedding vectors.
+ * Returns a value between -1 and 1, where 1 means identical.
+ */
+export function cosineSimilarity(a: number[], b: number[]): number {
+  let dotProduct = 0;
+  let normA = 0;
+  let normB = 0;
+  for (let i = 0; i < a.length; i++) {
+    dotProduct += a[i] * b[i];
+    normA += a[i] * a[i];
+    normB += b[i] * b[i];
+  }
+  return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+}
+
 export async function generateBlogPost(
   topic: string,
   primaryKeyword: string,
   secondaryKeywords: string[],
-  existingPostTitles: string[] = []
+  existingPostTitles: string[] = [],
+  existingPostExcerpts: string[] = []
 ): Promise<GeneratedBlogContent> {
-  const existingPostsContext = existingPostTitles.length > 0
-    ? `\n\nIMPORTANT: The following blog posts have ALREADY been published. Your article must cover a DIFFERENT angle and NOT repeat the same information:\n${existingPostTitles.slice(0, 30).map(t => `- "${t}"`).join('\n')}\n\nMake sure your content is distinct and provides NEW value not covered by the above posts.\n`
-    : '';
+  // Build a combined list of existing posts with titles + excerpts for maximum context
+  let existingPostsContext = '';
+  if (existingPostTitles.length > 0) {
+    const postEntries = existingPostTitles.map((title, i) => {
+      const excerpt = existingPostExcerpts[i] || '';
+      return excerpt ? `- "${title}" — ${excerpt}` : `- "${title}"`;
+    });
+
+    existingPostsContext = `\n\n⚠️ CRITICAL CONSTRAINT — DUPLICATE AVOIDANCE ⚠️
+The following ${existingPostTitles.length} blog posts have ALREADY been published on this site. You MUST NOT repeat, rephrase, or overlap with ANY of these topics — not even from a different angle:
+
+${postEntries.join('\n')}
+
+Your article MUST cover a genuinely DIFFERENT subject. If the assigned topic above is too similar to any existing post, focus on a completely unique sub-topic or angle that has ZERO overlap with the above posts. Do NOT rehash the same advice, tips, or information.\n`;
+  }
 
   const prompt = `You are an expert agricultural content writer for Agrikima, a company selling veterinary and agricultural products. Their products include natural animal health solutions, supplements, and feed additives for dairy, poultry, and livestock farmers.
 
@@ -55,7 +96,7 @@ Return ONLY valid JSON, no other text.`;
     messages: [
       {
         role: 'system',
-        content: 'You are an expert agricultural content writer. Always respond with valid JSON only.',
+        content: 'You are an expert agricultural content writer. Always respond with valid JSON only. You must ensure your content is completely unique and does not overlap with any existing published content.',
       },
       {
         role: 'user',

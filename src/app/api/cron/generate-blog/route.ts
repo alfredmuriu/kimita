@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase';
-import { generateBlogPost, generateBlogImage } from '@/lib/openai';
+import { generateBlogPost, generateBlogImage, getEmbedding, cosineSimilarity } from '@/lib/openai';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic'; // Prevent build-time evaluation
@@ -8,54 +8,10 @@ export const maxDuration = 120; // Allow up to 120 seconds for AI generation + i
 
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
 
-// Stop words to ignore when comparing topic similarity
-const STOP_WORDS = new Set([
-  'how', 'what', 'when', 'why', 'the', 'and', 'for', 'your', 'with',
-  'from', 'that', 'this', 'best', 'guide', 'complete', 'tips', 'ways',
-  'common', 'every', 'them', 'avoid', 'treat', 'manage', 'prevent',
-  'improve', 'signs', 'causes', 'should', 'about', 'into', 'make',
-  'keep', 'start', 'raise', 'build', 'write', 'set',
-]);
-
-/**
- * Multi-signal similarity check to catch duplicate/overlapping topics.
- * Returns true if the candidate topic is too similar to any existing content.
- */
-function isSimilarTopic(
-  candidateTopic: string,
-  existingTitles: string[],
-  usedTopicTexts: string[],
-  existingExcerpts: string[],
-  existingKeywordSets: string[][]
-): boolean {
-  const normalized = candidateTopic.toLowerCase().trim();
-  const topicWords = normalized
-    .split(/\s+/)
-    .filter((w: string) => w.length > 2 && !STOP_WORDS.has(w));
-
-  if (topicWords.length === 0) return false;
-
-  // Check 1: Word overlap against titles, used topics, and excerpts (40% threshold)
-  const allTexts = [...existingTitles, ...usedTopicTexts, ...existingExcerpts];
-  for (const text of allTexts) {
-    const matchCount = topicWords.filter((word: string) => text.includes(word)).length;
-    if (matchCount >= Math.ceil(topicWords.length * 0.4)) {
-      return true;
-    }
-  }
-
-  // Check 2: Keyword overlap with existing posts (≥2 matching keywords)
-  for (const kwSet of existingKeywordSets) {
-    const matchingKws = topicWords.filter((word: string) =>
-      kwSet.some((kw: string) => kw.includes(word))
-    );
-    if (matchingKws.length >= 2) {
-      return true;
-    }
-  }
-
-  return false;
-}
+// Cosine similarity threshold — topics scoring at or above this are considered duplicates.
+// 0.82 is aggressive enough to catch "Mineral Supplements for Cows" vs "Feeding Practices for Dairy Cows"
+// but permissive enough to allow genuinely different topics within the same category.
+const SIMILARITY_THRESHOLD = 0.82;
 
 // Generate image with DALL·E 3, download it, upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
@@ -106,6 +62,29 @@ async function generateAndUploadImage(
   }
 }
 
+/**
+ * Compute embeddings for all existing posts (title + excerpt combined)
+ * and return them alongside the text for logging.
+ */
+async function getExistingPostEmbeddings(
+  titles: string[],
+  excerpts: string[]
+): Promise<number[][]> {
+  const embeddings: number[][] = [];
+  for (let i = 0; i < titles.length; i++) {
+    const combinedText = `${titles[i]}. ${excerpts[i] || ''}`.trim();
+    try {
+      const emb = await getEmbedding(combinedText);
+      embeddings.push(emb);
+    } catch (err) {
+      console.error(`Failed to get embedding for post "${titles[i]}":`, err);
+      // Push empty array so indices stay aligned
+      embeddings.push([]);
+    }
+  }
+  return embeddings;
+}
+
 export async function GET(request: NextRequest) {
   try {
     // Auth check - supports both header and query param
@@ -143,24 +122,25 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Get all existing blog post titles, excerpts, and keywords to avoid duplicates
+    // Get all existing blog posts (title + excerpt) to check for semantic duplicates
     const { data: existingPosts } = await supabaseAdmin
       .from('blog_posts')
-      .select('title, excerpt, keywords');
-    const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title.toLowerCase());
-    const existingExcerpts = (existingPosts || []).map((p: { excerpt: string }) => (p.excerpt || '').toLowerCase());
-    const existingKeywordSets = (existingPosts || []).map(
-      (p: { keywords: string[] }) => (p.keywords || []).map((k: string) => k.toLowerCase())
-    );
+      .select('title, excerpt');
+    const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
+    const existingExcerpts = (existingPosts || []).map((p: { excerpt: string }) => (p.excerpt || ''));
 
-    // Get previously used topic texts to catch topics that generated posts with very different titles
+    // Get previously used topic texts
     const { data: usedTopics } = await supabaseAdmin
       .from('blog_topics')
       .select('topic')
       .eq('used', true);
     const usedTopicTexts = (usedTopics || []).map((t: { topic: string }) => t.topic.toLowerCase().trim());
 
-    // Get unused topics batch (enough to find a unique one even with many duplicates)
+    // Pre-compute embeddings for all existing posts (title + excerpt)
+    console.log(`Computing embeddings for ${existingTitles.length} existing posts...`);
+    const existingEmbeddings = await getExistingPostEmbeddings(existingTitles, existingExcerpts);
+
+    // Get unused topics batch
     const { data: unusedTopics, error: topicError } = await supabaseAdmin
       .from('blog_topics')
       .select('*')
@@ -175,7 +155,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Find the first topic that doesn't already have a blog post
+    // Find the first topic that doesn't semantically duplicate an existing post
     let topic = null;
     const topicsToMarkUsed: string[] = [];
     const seenTopicTexts = new Set<string>();
@@ -190,10 +170,38 @@ export async function GET(request: NextRequest) {
       }
       seenTopicTexts.add(normalizedTopic);
 
-      // Multi-signal similarity check against titles, excerpts, keywords, and used topics
-      if (isSimilarTopic(candidateTopic.topic, existingTitles, usedTopicTexts, existingExcerpts, existingKeywordSets)) {
+      // Skip if this exact topic text was already used
+      if (usedTopicTexts.includes(normalizedTopic)) {
         topicsToMarkUsed.push(candidateTopic.id);
         continue;
+      }
+
+      // Semantic similarity check using embeddings
+      if (existingEmbeddings.length > 0) {
+        try {
+          const candidateEmbedding = await getEmbedding(candidateTopic.topic);
+          let isTooSimilar = false;
+
+          for (let i = 0; i < existingEmbeddings.length; i++) {
+            if (existingEmbeddings[i].length === 0) continue; // skip failed embeddings
+            const similarity = cosineSimilarity(candidateEmbedding, existingEmbeddings[i]);
+            if (similarity >= SIMILARITY_THRESHOLD) {
+              console.log(
+                `Skipping topic "${candidateTopic.topic}" — too similar to existing post "${existingTitles[i]}" (cosine: ${similarity.toFixed(3)})`
+              );
+              isTooSimilar = true;
+              break;
+            }
+          }
+
+          if (isTooSimilar) {
+            topicsToMarkUsed.push(candidateTopic.id);
+            continue;
+          }
+        } catch (err) {
+          console.error(`Embedding check failed for "${candidateTopic.topic}", falling through:`, err);
+          // If embedding fails, allow the topic through rather than blocking
+        }
       }
 
       topic = candidateTopic;
@@ -223,12 +231,13 @@ export async function GET(request: NextRequest) {
       .eq('topic', topic.topic)
       .neq('id', topic.id);
 
-    // Generate blog content using OpenAI
+    // Generate blog content using OpenAI — pass both titles and excerpts for full context
     const generatedContent = await generateBlogPost(
       topic.topic,
       topic.primary_keyword || topic.topic,
       topic.secondary_keywords || [],
-      existingTitles
+      existingTitles,
+      existingExcerpts
     );
 
     // Generate a unique featured image with DALL·E 3 and upload to Supabase Storage
@@ -307,4 +316,5 @@ export async function GET(request: NextRequest) {
     );
   }
 }
+
 
