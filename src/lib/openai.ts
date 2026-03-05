@@ -53,15 +53,33 @@ export async function generateBlogPost(
   if (existingPostTitles.length > 0) {
     const postEntries = existingPostTitles.map((title, i) => {
       const excerpt = existingPostExcerpts[i] || '';
-      return excerpt ? `- "${title}" — ${excerpt}` : `- "${title}"`;
+      return `${i + 1}. "${title}"${excerpt ? ` — ${excerpt}` : ''}`;
     });
 
-    existingPostsContext = `\n\n⚠️ CRITICAL CONSTRAINT — DUPLICATE AVOIDANCE ⚠️
-The following ${existingPostTitles.length} blog posts have ALREADY been published on this site. You MUST NOT repeat, rephrase, or overlap with ANY of these topics — not even from a different angle:
+    // Extract key theme words from titles for an explicit forbidden-themes list
+    const themeWords = new Set<string>();
+    const stopWords = new Set(['how', 'to', 'the', 'a', 'an', 'in', 'for', 'and', 'of', 'on', 'your', 'with', 'best', 'top', 'guide', 'complete', 'every', 'common', 'new']);
+    for (const title of existingPostTitles) {
+      for (const word of title.toLowerCase().split(/\s+/)) {
+        const cleaned = word.replace(/[^a-z]/g, '');
+        if (cleaned.length > 3 && !stopWords.has(cleaned)) {
+          themeWords.add(cleaned);
+        }
+      }
+    }
 
+    existingPostsContext = `\n\n🚫 ABSOLUTE DUPLICATE BAN 🚫
+The following ${existingPostTitles.length} blog posts have ALREADY been published. You MUST write about a COMPLETELY DIFFERENT subject.
+
+ALREADY PUBLISHED:
 ${postEntries.join('\n')}
 
-Your article MUST cover a genuinely DIFFERENT subject. If the assigned topic above is too similar to any existing post, focus on a completely unique sub-topic or angle that has ZERO overlap with the above posts. Do NOT rehash the same advice, tips, or information.\n`;
+FORBIDDEN THEMES (do NOT write primarily about any of these): ${Array.from(themeWords).join(', ')}
+
+RULES:
+- Do NOT repeat, rephrase, repackage, or cover the same ground as ANY post above.
+- Do NOT give the same tips, advice, or recommendations even from a "different angle".
+- The new article must be on a genuinely DISTINCT subject that a reader would consider completely separate from all of the above.\n`;
   }
 
   const prompt = `You are an expert agricultural content writer for Agrikima, a company selling veterinary and agricultural products. Their products include natural animal health solutions, supplements, and feed additives for dairy, poultry, and livestock farmers.
@@ -96,7 +114,7 @@ Return ONLY valid JSON, no other text.`;
     messages: [
       {
         role: 'system',
-        content: 'You are an expert agricultural content writer. Always respond with valid JSON only. You must ensure your content is completely unique and does not overlap with any existing published content.',
+        content: 'You are an expert agricultural content writer. Always respond with valid JSON only. You must ensure your content is completely unique and does not overlap with any existing published content. If the topic you are given is too similar to an existing post, shift your focus to an entirely unrelated aspect.',
       },
       {
         role: 'user',
@@ -105,6 +123,7 @@ Return ONLY valid JSON, no other text.`;
     ],
     temperature: 0.7,
     max_tokens: 6000,
+    response_format: { type: 'json_object' },
   });
 
   const content = response.choices[0]?.message?.content;

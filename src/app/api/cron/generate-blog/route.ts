@@ -9,9 +9,16 @@ export const maxDuration = 120; // Allow up to 120 seconds for AI generation + i
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
 
 // Cosine similarity threshold — topics scoring at or above this are considered duplicates.
-// 0.82 is aggressive enough to catch "Mineral Supplements for Cows" vs "Feeding Practices for Dairy Cows"
-// but permissive enough to allow genuinely different topics within the same category.
-const SIMILARITY_THRESHOLD = 0.82;
+// 0.75 catches closely related agricultural topics within the same category (e.g.
+// "Mineral Supplements for Cows" vs "Feeding Practices for Dairy Cows") that 0.82 missed.
+const SIMILARITY_THRESHOLD = 0.75;
+
+// Stricter threshold for checking the *generated* title + excerpt against existing posts.
+// This is the safety net: even if the topic passed, the actual content might overlap.
+const POST_GENERATION_SIMILARITY_THRESHOLD = 0.80;
+
+// Maximum number of topic-generate-check cycles before giving up
+const MAX_GENERATION_ATTEMPTS = 3;
 
 // Generate image with DALL·E 3, download it, upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
@@ -155,8 +162,8 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Find the first topic that doesn't semantically duplicate an existing post
-    let topic = null;
+    // Find candidate topics that don't semantically duplicate an existing post
+    const candidateTopics: typeof unusedTopics = [];
     const topicsToMarkUsed: string[] = [];
     const seenTopicTexts = new Set<string>();
 
@@ -179,7 +186,13 @@ export async function GET(request: NextRequest) {
       // Semantic similarity check using embeddings
       if (existingEmbeddings.length > 0) {
         try {
-          const candidateEmbedding = await getEmbedding(candidateTopic.topic);
+          // Enrich the candidate text with primary keyword + category for better embedding
+          const enrichedText = [
+            candidateTopic.topic,
+            candidateTopic.primary_keyword || '',
+            candidateTopic.category || '',
+          ].filter(Boolean).join('. ');
+          const candidateEmbedding = await getEmbedding(enrichedText);
           let isTooSimilar = false;
 
           for (let i = 0; i < existingEmbeddings.length; i++) {
@@ -204,8 +217,7 @@ export async function GET(request: NextRequest) {
         }
       }
 
-      topic = candidateTopic;
-      break;
+      candidateTopics.push(candidateTopic);
     }
 
     // Bulk mark duplicate/matched topics as used
@@ -216,80 +228,109 @@ export async function GET(request: NextRequest) {
         .in('id', topicsToMarkUsed);
     }
 
-    if (!topic) {
+    if (candidateTopics.length === 0) {
       return NextResponse.json(
         { error: 'No new unique topics available' },
         { status: 404 }
       );
     }
 
-    // Mark ALL rows with the same topic text as used (handles duplicate seeded rows)
-    await supabaseAdmin
-      .from('blog_topics')
-      .update({ used: true })
-      .eq('used', false)
-      .eq('topic', topic.topic)
-      .neq('id', topic.id);
-
-    // Generate blog content using OpenAI — pass both titles and excerpts for full context
-    const generatedContent = await generateBlogPost(
-      topic.topic,
-      topic.primary_keyword || topic.topic,
-      topic.secondary_keywords || [],
-      existingTitles,
-      existingExcerpts
-    );
-
-    // Generate a unique featured image with DALL·E 3 and upload to Supabase Storage
-    const featuredImage = await generateAndUploadImage(
-      topic.topic,
-      generatedContent.keywords,
-      generatedContent.slug,
-      supabaseAdmin
-    );
-
-    // Mark the topic as used first to prevent retrying the same topic on failure
-    await supabaseAdmin
-      .from('blog_topics')
-      .update({ used: true })
-      .eq('id', topic.id);
-
-    // Save the blog post to database, handle duplicate slugs
-    let slug = generatedContent.slug;
+    // Try candidates in priority order — generate content, then verify uniqueness
     let post = null;
     let postError = null;
 
-    // Try original slug first, then with a suffix if duplicate
-    for (let attempt = 0; attempt < 3; attempt++) {
-      const trySlug = attempt === 0 ? slug : `${slug}-${Date.now()}`;
-      const { data, error } = await supabaseAdmin
-        .from('blog_posts')
-        .insert({
-          slug: trySlug,
-          title: generatedContent.title,
-          excerpt: generatedContent.excerpt,
-          content: generatedContent.content,
-          featured_image: featuredImage,
-          keywords: generatedContent.keywords,
-          status: 'published',
-          published_at: new Date().toISOString(),
-        })
-        .select()
-        .single();
+    for (let attempt = 0; attempt < Math.min(candidateTopics.length, MAX_GENERATION_ATTEMPTS); attempt++) {
+      const topic = candidateTopics[attempt];
+      console.log(`Attempt ${attempt + 1}: generating blog for topic "${topic.topic}" (priority ${topic.priority})`);
 
-      if (!error) {
-        post = data;
-        postError = null;
+      // Mark ALL rows with the same topic text as used (handles duplicate seeded rows)
+      await supabaseAdmin
+        .from('blog_topics')
+        .update({ used: true })
+        .eq('topic', topic.topic);
+
+      // Generate blog content using OpenAI — pass both titles and excerpts for full context
+      const generatedContent = await generateBlogPost(
+        topic.topic,
+        topic.primary_keyword || topic.topic,
+        topic.secondary_keywords || [],
+        existingTitles,
+        existingExcerpts
+      );
+
+      // POST-GENERATION DUPLICATE CHECK:
+      // Verify the *generated* title + excerpt isn't too similar to existing posts
+      if (existingEmbeddings.length > 0) {
+        try {
+          const generatedText = `${generatedContent.title}. ${generatedContent.excerpt}`;
+          const generatedEmbedding = await getEmbedding(generatedText);
+          let isTooSimilar = false;
+
+          for (let i = 0; i < existingEmbeddings.length; i++) {
+            if (existingEmbeddings[i].length === 0) continue;
+            const similarity = cosineSimilarity(generatedEmbedding, existingEmbeddings[i]);
+            if (similarity >= POST_GENERATION_SIMILARITY_THRESHOLD) {
+              console.log(
+                `REJECTING generated post "${generatedContent.title}" — too similar to existing "${existingTitles[i]}" (cosine: ${similarity.toFixed(3)})`
+              );
+              isTooSimilar = true;
+              break;
+            }
+          }
+
+          if (isTooSimilar) {
+            console.log(`Will try next candidate topic...`);
+            continue; // try the next candidate
+          }
+        } catch (err) {
+          console.error('Post-generation embedding check failed, proceeding anyway:', err);
+        }
+      }
+
+      // Generate a unique featured image with DALL·E 3 and upload to Supabase Storage
+      const featuredImage = await generateAndUploadImage(
+        topic.topic,
+        generatedContent.keywords,
+        generatedContent.slug,
+        supabaseAdmin
+      );
+
+      // Save the blog post to database, handle duplicate slugs
+      let slug = generatedContent.slug;
+
+      for (let slugAttempt = 0; slugAttempt < 3; slugAttempt++) {
+        const trySlug = slugAttempt === 0 ? slug : `${slug}-${Date.now()}`;
+        const { data, error } = await supabaseAdmin
+          .from('blog_posts')
+          .insert({
+            slug: trySlug,
+            title: generatedContent.title,
+            excerpt: generatedContent.excerpt,
+            content: generatedContent.content,
+            featured_image: featuredImage,
+            keywords: generatedContent.keywords,
+            status: 'published',
+            published_at: new Date().toISOString(),
+          })
+          .select()
+          .single();
+
+        if (!error) {
+          post = data;
+          postError = null;
+          break;
+        }
+
+        if (error.message.includes('duplicate key')) {
+          postError = error;
+          continue;
+        }
+
+        postError = error;
         break;
       }
 
-      if (error.message.includes('duplicate key')) {
-        postError = error;
-        continue;
-      }
-
-      postError = error;
-      break;
+      if (post) break; // successfully saved, stop trying
     }
 
     if (postError || !post) {
