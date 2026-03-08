@@ -63,7 +63,7 @@ export default function Header() {
               </ul>
             </li>
             <li className={`dropdown ${isActive('/downloads') ? 'current' : ''}`}>
-              <Link href="/downloads">Download</Link>
+              <Link href="/downloads">Academy</Link>
               <ul className="dropdown-menu">
                 <li><a href="/downloads">&nbsp;Dairy Farming</a></li>
                 <li><a href="/downloads">&nbsp;Poultry Farming</a></li>
