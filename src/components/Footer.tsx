@@ -32,7 +32,7 @@ export default function Footer() {
         <div style={{flex: '0 1 200px'}}>
           <h6 style={{color: 'black', marginBottom: '20px'}}>Where To Find Us</h6>
           <p style={{color: 'rgba(0, 0, 0, 0.6)', fontSize: '15px', lineHeight: '1.7'}}>
-            Sky Park Plaza, Westlands<br />
+            Kibo Street, Off Road A, Industrial Area,<br />
             Nairobi, Kenya<br />
             P.O BOX 7773-00200
           </p>
