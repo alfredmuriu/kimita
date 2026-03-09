@@ -23,8 +23,8 @@ export default function Footer() {
             <li style={{marginBottom: '0.5px'}}><a href="/" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Home</a></li>
             <li style={{marginBottom: '0.5px'}}><a href="/#about" style={{color: 'rgba(0, 0, 0, 0.6)'}}>About Us</a></li>
             <li style={{marginBottom: '0.5px'}}><a href="/products" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Products</a></li>
-            <li style={{marginBottom: '0.5px'}}><a href="/blog" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Blog</a></li>
-            <li style={{marginBottom: '0.5px'}}><a href="/downloads" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Resources</a></li>
+            <li style={{marginBottom: '0.5px'}}><a href="/blog" style={{color: 'rgba(0, 0, 0, 0.6)'}}>What's New</a></li>
+            <li style={{marginBottom: '0.5px'}}><a href="/downloads" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Academy</a></li>
           </ul>
         </div>
 
