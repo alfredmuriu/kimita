@@ -13,73 +13,20 @@ export interface GeneratedBlogContent {
   featuredImageDescription: string;
 }
 
-/**
- * Get an embedding vector for a piece of text using OpenAI's text-embedding-3-small model.
- * Used for semantic similarity comparison between topics.
- */
-export async function getEmbedding(text: string): Promise<number[]> {
-  const response = await openai.embeddings.create({
-    model: 'text-embedding-3-small',
-    input: text.trim(),
-  });
-  return response.data[0].embedding;
-}
-
-/**
- * Compute cosine similarity between two embedding vectors.
- * Returns a value between -1 and 1, where 1 means identical.
- */
-export function cosineSimilarity(a: number[], b: number[]): number {
-  let dotProduct = 0;
-  let normA = 0;
-  let normB = 0;
-  for (let i = 0; i < a.length; i++) {
-    dotProduct += a[i] * b[i];
-    normA += a[i] * a[i];
-    normB += b[i] * b[i];
-  }
-  return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
-}
-
 export async function generateBlogPost(
   topic: string,
   primaryKeyword: string,
   secondaryKeywords: string[],
-  existingPostTitles: string[] = [],
-  existingPostExcerpts: string[] = []
+  existingPostTitles: string[] = []
 ): Promise<GeneratedBlogContent> {
-  // Build a combined list of existing posts with titles + excerpts for maximum context
+  // Build a reference list of existing posts so GPT can differentiate its content
   let existingPostsContext = '';
   if (existingPostTitles.length > 0) {
-    const postEntries = existingPostTitles.map((title, i) => {
-      const excerpt = existingPostExcerpts[i] || '';
-      return `${i + 1}. "${title}"${excerpt ? ` — ${excerpt}` : ''}`;
-    });
+    const postList = existingPostTitles
+      .map((title, i) => `${i + 1}. "${title}"`)
+      .join('\n');
 
-    // Extract key theme words from titles for an explicit forbidden-themes list
-    const themeWords = new Set<string>();
-    const stopWords = new Set(['how', 'to', 'the', 'a', 'an', 'in', 'for', 'and', 'of', 'on', 'your', 'with', 'best', 'top', 'guide', 'complete', 'every', 'common', 'new']);
-    for (const title of existingPostTitles) {
-      for (const word of title.toLowerCase().split(/\s+/)) {
-        const cleaned = word.replace(/[^a-z]/g, '');
-        if (cleaned.length > 3 && !stopWords.has(cleaned)) {
-          themeWords.add(cleaned);
-        }
-      }
-    }
-
-    existingPostsContext = `\n\n🚫 ABSOLUTE DUPLICATE BAN 🚫
-The following ${existingPostTitles.length} blog posts have ALREADY been published. You MUST write about a COMPLETELY DIFFERENT subject.
-
-ALREADY PUBLISHED:
-${postEntries.join('\n')}
-
-FORBIDDEN THEMES (do NOT write primarily about any of these): ${Array.from(themeWords).join(', ')}
-
-RULES:
-- Do NOT repeat, rephrase, repackage, or cover the same ground as ANY post above.
-- Do NOT give the same tips, advice, or recommendations even from a "different angle".
-- The new article must be on a genuinely DISTINCT subject that a reader would consider completely separate from all of the above.\n`;
+    existingPostsContext = `\n\nREFERENCE — Already published posts:\n${postList}\n\nYour article must cover the ASSIGNED TOPIC above. To avoid repetition, make sure your specific tips, examples, and recommendations are DIFFERENT from what these existing posts likely cover. Do NOT change the subject — stay on the assigned topic.\n`;
   }
 
   const prompt = `You are an expert agricultural content writer for Agrikima, a company selling veterinary and agricultural products. Their products include natural animal health solutions, supplements, and feed additives for dairy, poultry, and livestock farmers.
@@ -96,6 +43,7 @@ Requirements:
 4. Structure with clear H2 and H3 headings (use HTML tags)
 5. Where relevant, naturally mention that quality veterinary products and supplements can help
 6. Make it SEO-optimized with the keywords naturally integrated
+7. You MUST write about the assigned topic "${topic}" — do NOT write about a different subject
 
 Respond in this exact JSON format:
 {
@@ -114,7 +62,7 @@ Return ONLY valid JSON, no other text.`;
     messages: [
       {
         role: 'system',
-        content: 'You are an expert agricultural content writer. Always respond with valid JSON only. You must ensure your content is completely unique and does not overlap with any existing published content. If the topic you are given is too similar to an existing post, shift your focus to an entirely unrelated aspect.',
+        content: 'You are an expert agricultural content writer. Always respond with valid JSON only. Write ONLY about the specific topic you are assigned. Never deviate to a different subject.',
       },
       {
         role: 'user',
@@ -150,7 +98,7 @@ export async function generateBlogImage(
   topic: string,
   keywords: string[]
 ): Promise<string> {
-  const prompt = `A professional, high-quality photograph of the specific animal discussed in this topic: "${topic}". Show a realistic, close-up or medium shot of the animal (e.g. chickens if poultry, cows if dairy, pigs if swine, goats if mentioned, etc.) in a clean farm setting. The animal should be healthy and well-kept. Bright natural lighting, sharp focus, editorial photography style. No text, no watermarks, no humans in the frame.`;
+  const prompt = `A photorealistic, documentary-style photograph related to the agricultural topic: "${topic}". Shot on a Canon EOS R5 with an 85mm f/1.4 lens, shallow depth of field. Show the relevant farm animal (e.g. chickens if poultry, dairy cows if dairy, pigs if swine, goats if mentioned) in a natural Kenyan farm environment with real dirt, grass, and natural imperfections. Golden hour natural lighting, slight film grain, realistic skin/feather/fur textures. The style should look like a National Geographic documentary photo — NOT an illustration, NOT AI-generated looking, NOT overly clean or perfect. No text overlays, no watermarks, no logos.`;
 
   const response = await openai.images.generate({
     model: 'dall-e-3',
@@ -169,4 +117,3 @@ export async function generateBlogImage(
 }
 
 export default openai;
-
