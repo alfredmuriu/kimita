@@ -73,14 +73,14 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <Layout>
       <main>
-        <article style={{maxWidth: '800px', margin: '0 auto', padding: '150px 20px 60px'}}>
+        <article className="blog-article">
           {/* Back link */}
           <Link href="/blog" style={{color: '#0d4a3f', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '30px'}}>
             ← Back
           </Link>
 
           {/* Title and Meta */}
-          <h1 style={{fontSize: '36px', fontWeight: '700', color: '#ffffff', marginBottom: '16px', lineHeight: '1.2'}}>
+          <h1 className="blog-post-title">
             {post.title}
           </h1>
           <div style={{display: 'flex', gap: '20px', color: '#9ca3af', fontSize: '14px', marginBottom: '40px'}}>
@@ -122,14 +122,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <img
                     src={product.image}
                     alt={product.name}
-                    style={{
-                      height: '300px',
-                      width: '250px',
-                      maxWidth: '400px',
-                      objectFit: 'contain',
-                      borderRadius: '12px',
-                      cursor: 'pointer',
-                    }}
+                    className="product-rec-image"
                   />
                 </Link>
 
@@ -143,18 +136,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <section style={{ textAlign: 'center', marginTop: '50px' }}>
                   <Link
                     href="/products"
-                    className="btn btn--stroke s-intro__content-btn"
-                    style={{
-                      fontSize: '10px',
-                      width: '250px',
-                      height: '60px',
-                      justifyContent: 'center',
-                      textAlign: 'center',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      marginLeft: '-500px',
-                      marginTop: '50px',
-                    }}
+                    className="btn btn--stroke s-intro__content-btn blog-cta-btn"
                   >
                     Explore Products
                   </Link>

@@ -18,16 +18,16 @@ export default function Home() {
               Livestock Supplements &amp; <br />
               Disease Prevention for African Farmers.
             </h1>
-            <p className="s-intro__content-desc" style={{color: '#fff', fontSize: '1.1rem', marginTop: '1rem', maxWidth: '600px', lineHeight: '1.6'}}>
+            <p className="s-intro__content-desc intro-desc">
               Trusted by poultry, dairy, and livestock farmers across Africa.
               Combat Newcastle disease, coccidiosis, and respiratory infections with our natural antibiotic alternatives.
             </p>
 
-            <div className="s-intro__content-buttons">
-              <a href="#about" className="btn btn--stroke s-intro__content-btn smoothscroll" style={{fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
+            <div className="s-intro__content-buttons intro-buttons">
+              <a href="#about" className="btn btn--stroke s-intro__content-btn smoothscroll cta-btn">
                 More About Us
               </a>
-              <a href="/products" className="btn btn--stroke s-intro__content-btn" style={{marginLeft: '10px', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
+              <a href="/products" className="btn btn--stroke s-intro__content-btn cta-btn">
                 Explore Products
               </a>              
             </div>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{marginTop: '20px'}}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
-              <a href="https://wa.me/254111410639" className="btn btn--primary u-fullwidth" style={{fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
+              <a href="https://wa.me/254111410639" className="btn btn--primary u-fullwidth cta-btn">
                 Talk to Our Experts
               </a>
             </div>
@@ -287,7 +287,7 @@ export default function Home() {
         <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{marginTop: '-60px', marginBottom: '30px'}}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
-              <a href="/products" className="btn btn--primary u-fullwidth" style={{backgroundColor: 'rgb(2, 108, 106)', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
+              <a href="/products" className="btn btn--primary u-fullwidth cta-btn" style={{backgroundColor: 'rgb(2, 108, 106)'}}>
                 Browse All Products
               </a>
             </div>
@@ -295,17 +295,7 @@ export default function Home() {
         </div>
 
         <div className="section-title-wrapper" style={{textAlign: 'center', marginBottom: '40px'}}></div>
-        <span style={{
-          display: 'block',
-          fontSize: '40px',
-          fontWeight: 900,
-          color: '#444',
-          letterSpacing: '-2px',
-          fontFamily: "'Inter',sans-serif",
-          lineHeight: 1,
-          marginTop: '100px',
-          textAlign: 'center',
-        }}>
+        <span className="bestsellers-title">
           FARMER-APPROVED BEST SELLERS
         </span>
 
@@ -427,7 +417,7 @@ export default function Home() {
         <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{marginTop: '-60px', marginBottom: '30px'}}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
-              <a href="/downloads" className="btn btn--primary u-fullwidth" style={{backgroundColor: 'rgb(2, 108, 106)', fontSize: '10px', width: '250px', height: '60px', justifyContent: 'center', textAlign: 'center', display: 'inline-flex', alignItems: 'center'}}>
+              <a href="/downloads" className="btn btn--primary u-fullwidth cta-btn" style={{backgroundColor: 'rgb(2, 108, 106)'}}>
                 View Resources
               </a>
             </div>

@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer id="footer" className="s-footer target-section">
       {/* Main Footer Content */}
-      <div className="row" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '40px', paddingBottom: '40px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)'}}>
+      <div className="row footer-content">
 
         {/* Logo & Description */}
-        <div style={{flex: '1 1 300px', maxWidth: '400px'}}>
+        <div className="footer-brand">
           <img src="/logo.png" alt="Agrikima" style={{maxWidth: '180px', height: 'auto', marginBottom: '20px'}} />
           <p style={{color: 'rgba(0, 0, 0, 0.6)', fontSize: '15px', lineHeight: '1.7'}}>
             Africa&apos;s leading provider of Agriculture and Veterinary products.
@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         {/* Company Links */}
-        <div style={{flex: '0 1 150px'}}>
+        <div className="footer-links">
           <h6 style={{color: 'black', marginBottom: '20px'}}>Company</h6>
           <ul className="contact-list" style={{listStyle: 'none', margin: 0, padding: 0, fontSize: '15px'}}>
             <li style={{marginBottom: '0.5px'}}><a href="/" style={{color: 'rgba(0, 0, 0, 0.6)'}}>Home</a></li>
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
 
         {/* Where To Find Us */}
-        <div style={{flex: '0 1 200px'}}>
+        <div className="footer-location">
           <h6 style={{color: 'black', marginBottom: '20px'}}>Where To Find Us</h6>
           <p style={{color: 'rgba(0, 0, 0, 0.6)', fontSize: '15px', lineHeight: '1.7'}}>
             Kibo Street, Off Road A, Industrial Area,<br />
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
 
         {/* Contact Us */}
-        <div style={{flex: '0 1 200px'}}>
+        <div className="footer-contact">
           <h6 style={{color: 'black', marginBottom: '5px', fontSize: '15px'}}>Contact Us</h6>
           <ul className="contact-list" style={{listStyle: 'none', margin: 0, padding: 0, fontSize: '15px'}}>
             <li style={{marginBottom: '8px'}}><a href="tel:+254202089181" style={{color: 'rgba(0, 0, 0, 0.6)'}}>+254 20 208 9181</a></li>
@@ -51,12 +51,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section: Copyright & Social */}
-      <div className="row s-footer__bottom" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', paddingTop: '30px'}}>
+      <div className="row s-footer__bottom footer-bottom">
         <div className="ss-copyright">
           <span style={{fontSize: '15px'}}>© Copyright Agrikima 2025. All Rights Reserved.</span>
         </div>
 
-        <ul className="s-footer__social" style={{display: 'flex', gap: '12px', listStyle: 'none', margin: 0, padding: 0}}>
+        <ul className="s-footer__social footer-social">
           <li>
             <a href="https://wa.me/254111410639" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{fill: '#25D366'}}>

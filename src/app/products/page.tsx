@@ -3,19 +3,19 @@ import Layout from '@/components/Layout';
 export default function Products() {
   return (
     <Layout>
-      <div className="intro-flex" style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+      <div className="products-hero">
         <div>
-          <h1 className="s-intro__content-title" style={{marginTop: '150px', marginLeft: '60px', fontSize: '50px'}}>
+          <h1 className="s-intro__content-title page-title">
             Natural Animal Health <br />
             Products That Work
           </h1>
-          <h2 className="title text-display-1 animate-slide-in-left" style={{color: 'grey', fontSize: '25px', marginLeft: '60px', fontFamily: 'Inter, sans-serif'}}>
+          <h2 className="title text-display-1 animate-slide-in-left products-hero-subtitle">
             Prevent Newcastle disease, coccidiosis &amp; respiratory infections. <br />
             Boost broiler weight gain &amp; layer egg production naturally. <br />
             Trusted by dairy, poultry &amp; livestock farmers across Africa.
           </h2>
         </div>
-        <img src="/products/wheatfarmlogo.jpg" alt="Natural poultry health products and livestock supplements Kenya" className="intro-image-slide-in" style={{width: '400px', height: '375px', marginTop: '100px', marginRight: '60px', borderRadius: '2px', boxShadow: '0 4px 24px rgba(0,0,0,0.12)'}} />
+        <img src="/products/wheatfarmlogo.jpg" alt="Natural poultry health products and livestock supplements Kenya" className="intro-image-slide-in products-hero-image" />
       </div>
 
       <div className="go-to-natural-btn animate-slide-in-up" style={{display: 'flex', justifyContent: 'center', marginTop: '-10px', marginBottom: '30px'}}>

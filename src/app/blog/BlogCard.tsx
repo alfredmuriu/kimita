@@ -23,18 +23,9 @@ export default function BlogCard({ post }: BlogCardProps) {
     <div
       onMouseMove={handleMove}
       onMouseLeave={() => setTilt({ x: 0, y: 0 })}
+      className="blog-card"
       style={{
         transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-        borderRadius: '12px',
-        boxShadow: '0 10px 40px rgba(0, 0, 0, 0.15)',
-        overflow: 'hidden',
-        transition: 'transform 0.2s ease-out',
-        cursor: 'pointer',
-        width: '320px',
-        height: '480px',
-        backgroundColor: 'white',
-        display: 'flex',
-        flexDirection: 'column'
       }}
     >
       {/* Image container with fixed height */}
