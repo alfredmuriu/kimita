@@ -100,29 +100,45 @@ export async function GET(request: NextRequest) {
       .select('title');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
 
-    // Get the NEXT unused topic by strict priority order
-    const { data: nextTopics, error: topicError } = await supabaseAdmin
-      .from('blog_topics')
-      .select('*')
-      .eq('used', false)
-      .order('priority', { ascending: true })
-      .limit(1);
+    // Atomically claim the next unused topic (SELECT + mark used in one transaction)
+    // This uses a PostgreSQL function with FOR UPDATE SKIP LOCKED to prevent race conditions
+    const { data: claimedTopics, error: rpcError } = await supabaseAdmin
+      .rpc('claim_next_topic');
 
-    if (topicError || !nextTopics || nextTopics.length === 0) {
+    if (rpcError) {
+      console.error('RPC claim_next_topic failed:', rpcError.message);
       return NextResponse.json(
-        { error: 'No unused topics available', details: topicError?.message },
+        { error: 'Failed to claim topic', details: rpcError.message },
+        { status: 500 }
+      );
+    }
+
+    if (!claimedTopics || claimedTopics.length === 0) {
+      return NextResponse.json(
+        { error: 'No unused topics available' },
         { status: 404 }
       );
     }
 
-    const topic = nextTopics[0];
-    console.log(`Generating blog for topic: "${topic.topic}" (priority ${topic.priority})`);
+    const topic = claimedTopics[0];
+    console.log(`Claimed topic: "${topic.topic}" (priority ${topic.priority}, id ${topic.id})`);
 
-    // Mark the topic as used BEFORE generating (prevents double-generation if cron fires twice)
-    await supabaseAdmin
-      .from('blog_topics')
-      .update({ used: true })
-      .eq('id', topic.id);
+    // Redundant safeguard: skip if there's already a blog post whose title contains this topic
+    const topicWords = topic.topic.toLowerCase().split(' ').filter((w: string) => w.length > 3);
+    const possibleDuplicate = existingTitles.some((title: string) => {
+      const titleLower = title.toLowerCase();
+      const matchCount = topicWords.filter((w: string) => titleLower.includes(w)).length;
+      return matchCount >= topicWords.length * 0.6; // 60%+ keyword overlap → likely duplicate
+    });
+
+    if (possibleDuplicate) {
+      console.warn(`Skipping topic "${topic.topic}" — similar blog post already exists`);
+      // Topic is already marked used, so it won't be picked again. Retry with next topic.
+      return NextResponse.json({
+        success: false,
+        message: `Skipped "${topic.topic}" — similar post already exists. Will pick next topic tomorrow.`,
+      });
+    }
 
     // Generate blog content using OpenAI — pass existing titles for reference
     const generatedContent = await generateBlogPost(
