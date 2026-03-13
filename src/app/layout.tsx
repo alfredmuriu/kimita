@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" className="js ss-loaded">
       <body id="top" className="ss-show">
         {children}
+        <Analytics />
         <Script src="/js/plugins.js" strategy="beforeInteractive" />
         <Script src="/js/main.js" strategy="afterInteractive" />
       </body>
