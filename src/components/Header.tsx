@@ -62,11 +62,11 @@ export default function Header() {
                 <li><a href="/products#feed-additives">&nbsp;Feed-Additives</a></li>
               </ul>
             </li>
-            <li className={`dropdown ${isActive('/downloads') ? 'current' : ''}`}>
-              <Link href="/downloads">Academy</Link>
+            <li className={`dropdown ${isActive('/agrikima-academy') ? 'current' : ''}`}>
+              <Link href="/agrikima-academy">Academy</Link>
               <ul className="dropdown-menu">
-                <li><a href="/downloads">&nbsp;Dairy Farming</a></li>
-                <li><a href="/downloads">&nbsp;Poultry Farming</a></li>
+                <li><a href="/agrikima-academy">&nbsp;Dairy Farming</a></li>
+                <li><a href="/agrikima-academy">&nbsp;Poultry Farming</a></li>
               </ul>
             </li>
             <li className={isActive('/blog') ? 'current' : ''}>

@@ -401,7 +401,7 @@ export default function Home() {
 
       <section id="folio" className="s-folio target-section" style={{marginTop: '-175px'}}>
         <div className="row section-header light-on-dark">
-          <h3 className="column lg-12 section-header__pretitle text-pretitle">Download Center</h3>
+          <h3 className="column lg-12 section-header__pretitle text-pretitle">Agrikima Academy</h3>
           <div className="column lg-6 stack-on-1100 section-header__primary">
             <h2 className="title text-display-1">
               Access trusted guides on poultry and livestock farming, including feeding programs, vaccination schedules and disease prevention.
@@ -417,7 +417,7 @@ export default function Home() {
         <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{marginTop: '-60px', marginBottom: '30px'}}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
-              <a href="/downloads" className="btn btn--primary u-fullwidth cta-btn" style={{backgroundColor: 'rgb(2, 108, 106)'}}>
+              <a href="/agrikima-academy" className="btn btn--primary u-fullwidth cta-btn" style={{backgroundColor: 'rgb(2, 108, 106)'}}>
                 View Resources
               </a>
             </div>
