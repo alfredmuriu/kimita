@@ -5,7 +5,7 @@ import '../styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'Agrikima',
-  description: 'Kenya\'s leading provider of Agriculture and Veterinary products',
+  description: 'Africa\'s leading provider of Agriculture and Veterinary products',
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',
