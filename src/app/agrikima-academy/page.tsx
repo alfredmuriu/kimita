@@ -51,10 +51,10 @@ export default function Academy() {
 
   return (
     <Layout>
-      <main>
+      <main style={{ backgroundColor: '#ffffff', paddingBottom: '60px' }}>
         {/* Hero */}
         <section className="academy-hero">
-          <h1 className="s-intro__content-title page-title">
+          <h1 className="s-intro__content-title page-title" style={{ color: '#000000' }}>
             Agrikima Academy
           </h1>
           <p className="page-subtitle" style={{ maxWidth: 640 }}>
