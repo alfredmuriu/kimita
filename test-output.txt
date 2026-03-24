@@ -1,0 +1,8 @@
+﻿=== Test 1: Text generation with gemini-2.0-flash ===
+Text failed: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-lim
+
+=== Test 2: gemini-2.0-flash-exp with image ===
+Failed: {"error":{"code":404,"message":"models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their 
+
+=== Test 3: gemini-2.5-flash with image ===
+Failed: {"error":{"code":400,"message":"This model only supports text output.","status":"INVALID_ARGUMENT"}}

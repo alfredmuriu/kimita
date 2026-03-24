@@ -17,6 +17,13 @@ interface CategorySection {
 
 const SECTIONS: CategorySection[] = [
   {
+    name: 'GETTING STARTED',
+    anchor: 'getting-started',
+    videos: [
+      { id: '-m51mnGrLEU', title: 'Introduction to Poultry Farming' },
+    ],
+  },
+  {
     name: 'POULTRY FEEDING',
     anchor: 'poultry-feeding',
     videos: [
@@ -33,6 +40,7 @@ const SECTIONS: CategorySection[] = [
       { id: 'MXrLWo4xd68', title: 'Inside Out' },
       { id: 'TaL6EPbtPkQ', title: 'Brooding' },
       { id: 'nQj7g_DFWIU', title: 'Growing and Transition' },
+      { id: 'XEcSxfxqCww', title: 'Incubation' },
     ],
   },
   {
@@ -42,6 +50,24 @@ const SECTIONS: CategorySection[] = [
       { id: 'QkucCuQs4D0', title: 'Building the Perfect Poultry House' },
       { id: 'Vam23oykzd4', title: 'Inside the Poultry House' },
       { id: 'yqxmpNmKOBo', title: 'Poultry Housing' },
+      { id: 'svwduDniE4o', title: 'Poultry Lighting' },
+    ],
+  },
+  {
+    name: 'POULTRY HEALTH & DISEASE',
+    anchor: 'poultry-health',
+    videos: [
+      { id: 'mYjMDoP5rQE', title: 'Anti Microbial Resistance' },
+      { id: 'L0iE79JJGnM', title: 'Nutritional Deficiency' },
+      { id: 'Cz94nOBYuDg', title: 'Behavioural Abnormalities' },
+    ],
+  },
+  {
+    name: 'POULTRY WELFARE & BIOSECURITY',
+    anchor: 'poultry-welfare',
+    videos: [
+      { id: 'mVyLbzEBlgU', title: 'Poultry Welfare' },
+      { id: '5Z2lv3cia0M', title: 'Poultry Biosecurity Guide' },
     ],
   },
 ];
@@ -59,7 +85,7 @@ export default function Academy() {
           </h1>
           <p className="page-subtitle" style={{ maxWidth: 640 }}>
             Learn from our experts — practical video guides on poultry feeding,
-            brooding, housing, and farm setup to help you succeed.
+            brooding, housing, health, welfare, biosecurity, and more to help you succeed.
           </p>
         </section>
 
