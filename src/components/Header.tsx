@@ -70,7 +70,7 @@ export default function Header() {
               </ul>
             </li>
             <li className={isActive('/articles') ? 'current' : ''}>
-              <Link href="/articles">Articles</Link>
+              <Link href="/articles">What's New</Link>
             </li>
             <li>
               <a href="/#footer" className="smoothscroll" id="contact-link">Contact</a>
