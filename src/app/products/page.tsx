@@ -24,8 +24,25 @@ export const metadata: Metadata = {
 };
 
 export default function Products() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "url": "https://www.agrikima.co.ke/products",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://www.agrikima.co.ke/products/advice" },
+      { "@type": "ListItem", "position": 2, "url": "https://www.agrikima.co.ke/products/mix-5" },
+      { "@type": "ListItem", "position": 3, "url": "https://www.agrikima.co.ke/products/bio-gar" },
+      { "@type": "ListItem", "position": 4, "url": "https://www.agrikima.co.ke/products/immusol" },
+      { "@type": "ListItem", "position": 5, "url": "https://www.agrikima.co.ke/products/k-digest" }
+    ]
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="products-hero">
         <div>
           <h1 className="s-intro__content-title page-title">

@@ -27,5 +27,21 @@ export default function AcademyLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Agrikima Academy",
+    "url": "https://www.agrikima.co.ke/agrikima-academy",
+    "description": "Expert poultry and livestock farming training, video guides, and agricultural resources."
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

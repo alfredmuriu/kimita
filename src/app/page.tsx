@@ -26,8 +26,27 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "WebSite"],
+    "name": "Agrikima",
+    "url": "https://www.agrikima.co.ke",
+    "logo": "https://www.agrikima.co.ke/logo.png",
+    "description": "Africa's trusted provider of natural poultry health solutions and livestock supplements.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+254111410639",
+      "contactType": "sales",
+      "areaServed": "KE"
+    }
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <LightboxInit />
       <section id="intro" className="s-intro target-section">
         <div className="s-intro__bg"></div>

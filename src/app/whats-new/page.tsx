@@ -52,8 +52,28 @@ async function getBlogPosts(): Promise<BlogPost[]> {
 export default async function Blog() {
   const posts = await getBlogPosts();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "What's New | Agrikima Blog",
+    "url": "https://www.agrikima.co.ke/whats-new",
+    "description": "Agricultural insights and farming tips for African farmers.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Agrikima",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.agrikima.co.ke/logo.png"
+      }
+    }
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main>
         <h1 className="s-intro__content-title page-title">
           What's New
