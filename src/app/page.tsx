@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: 'Agrikima',
     images: [
       {
-        url: '/logo.png',
+        url: '/favicon.png',
         width: 1200,
         height: 630,
         alt: 'Agrikima Logo',
@@ -31,7 +31,7 @@ export default function Home() {
     "@type": ["Organization", "WebSite"],
     "name": "Agrikima",
     "url": "https://www.agrikima.co.ke",
-    "logo": "https://www.agrikima.co.ke/logo.png",
+    "logo": "https://www.agrikima.co.ke/favicon.png",
     "description": "Africa's trusted provider of natural poultry health solutions and livestock supplements.",
     "contactPoint": {
       "@type": "ContactPoint",

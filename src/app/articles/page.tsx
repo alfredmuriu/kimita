@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'What\'s New | Agricultural Insights & Farming Tips | Agrikima',
     description: 'Read the latest agricultural insights, farming tips, and poultry health articles from the experts at Agrikima. Stay updated on best practices for African farmers.',
-    url: 'https://www.agrikima.co.ke/whats-new',
+    url: 'https://www.agrikima.co.ke/articles',
     siteName: 'Agrikima',
     images: [
       {
-        url: '/logo.png',
+        url: '/favicon.png',
         width: 1200,
         height: 630,
         alt: 'Agrikima Blog',
@@ -56,14 +56,14 @@ export default async function Blog() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "What's New | Agrikima Blog",
-    "url": "https://www.agrikima.co.ke/whats-new",
+    "url": "https://www.agrikima.co.ke/articles",
     "description": "Agricultural insights and farming tips for African farmers.",
     "publisher": {
       "@type": "Organization",
       "name": "Agrikima",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.agrikima.co.ke/logo.png"
+        "url": "https://www.agrikima.co.ke/favicon.png"
       }
     }
   };

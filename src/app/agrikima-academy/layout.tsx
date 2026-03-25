@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Agrikima',
     images: [
       {
-        url: '/images/chicken1.jpg',
+        url: '/favicon.png',
         width: 1200,
         height: 630,
         alt: 'Agrikima Academy Training',
