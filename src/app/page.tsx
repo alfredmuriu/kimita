@@ -1,6 +1,29 @@
 import Layout from '@/components/Layout';
 import FAQ from '@/components/FAQ';
 import LightboxInit from '@/components/LightboxInit';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Agrikima | Natural Poultry & Livestock Health Solutions in Africa',
+  description: 'Africa\'s trusted provider of natural animal health products. Prevent poultry diseases, boost broiler growth, and improve dairy production with our organic feed supplements and antibiotic alternatives.',
+  keywords: 'Natural Animal Health Solutions, Livestock Supplements Kenya, Poultry Disease Prevention, Newcastle disease treatment naturally',
+  openGraph: {
+    title: 'Agrikima | Natural Poultry & Livestock Health Solutions in Africa',
+    description: 'Africa\'s trusted provider of natural animal health products. Prevent poultry diseases, boost broiler growth, and improve dairy production with our organic feed supplements and antibiotic alternatives.',
+    url: 'https://www.agrikima.co.ke',
+    siteName: 'Agrikima',
+    images: [
+      {
+        url: '/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Agrikima Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   return (
@@ -29,7 +52,7 @@ export default function Home() {
               </a>
               <a href="/products" className="btn btn--stroke s-intro__content-btn cta-btn">
                 Explore Products
-              </a>              
+              </a>
             </div>
           </div>
         </div>
@@ -85,7 +108,7 @@ export default function Home() {
             </div>
             <div className="list-block__text">
               <p style={{ color: "black" }}>
-                Through workshops, field demos, and partnerships with dairy and poultry cooperatives, we train farmers on vaccination schedules, layer chicken management, proper brooding temperatures, and how to start poultry farming in Kenya successfully.
+                Through workshops, field demos, and partnerships with dairy and poultry cooperatives, we train farmers on vaccination schedules, layer chicken management, proper brooding temperatures, and how to start poultry farming successfully.
               </p>
             </div>
           </div>
@@ -102,7 +125,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{marginTop: '20px'}}>
+        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{ marginTop: '20px' }}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
               <a href="https://wa.me/254111410639" className="btn btn--primary u-fullwidth cta-btn">
@@ -144,7 +167,7 @@ export default function Home() {
           </div>
           <div className="column lg-6 stack-on-1100 section-header__secondary">
             <p className="desc">
-              Whether you&apos;re starting poultry farming in Kenya, managing a layer or broiler operation,
+              Whether you&apos;re starting poultry farming, managing a layer or broiler operation,
               or running a dairy farm, Agrikima provides natural animal health products that reduce mortality,
               improve feed conversion, and boost your farm&apos;s profitability — all without harmful antibiotic residues.
             </p>
@@ -156,13 +179,13 @@ export default function Home() {
             <div className="list-block__title">
               <div className="list-block__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M8 14s1.5-2 4-2 4 2 4 2"/>
-                  <path d="M9 9h.01"/>
-                  <path d="M15 9h.01"/>
-                  <path d="M12 17v-2"/>
-                  <rect x="10.5" y="6" width="3" height="3" rx="1.5"/>
-                  <path d="M12 8.5v-2"/>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M8 14s1.5-2 4-2 4 2 4 2" />
+                  <path d="M9 9h.01" />
+                  <path d="M15 9h.01" />
+                  <path d="M12 17v-2" />
+                  <rect x="10.5" y="6" width="3" height="3" rx="1.5" />
+                  <path d="M12 8.5v-2" />
                 </svg>
               </div>
               <h3 className="h5">Poultry Disease Prevention</h3>
@@ -178,10 +201,10 @@ export default function Home() {
             <div className="list-block__title">
               <div className="list-block__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="13" rx="2"/>
-                  <path d="M16 3l-4 4-4-4"/>
-                  <path d="M12 11v2"/>
-                  <path d="M9 15h6"/>
+                  <rect x="2" y="7" width="20" height="13" rx="2" />
+                  <path d="M16 3l-4 4-4-4" />
+                  <path d="M12 11v2" />
+                  <path d="M9 15h6" />
                 </svg>
               </div>
               <h3 className="h5">Broiler &amp; Layer Farming Support</h3>
@@ -197,10 +220,10 @@ export default function Home() {
             <div className="list-block__title">
               <div className="list-block__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="10" rx="2"/>
-                  <path d="M2 17h20"/>
-                  <path d="M7 17v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2"/>
-                  <circle cx="12" cy="12" r="2"/>
+                  <rect x="2" y="7" width="20" height="10" rx="2" />
+                  <path d="M2 17h20" />
+                  <path d="M7 17v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2" />
+                  <circle cx="12" cy="12" r="2" />
                 </svg>
               </div>
               <h3 className="h5">Dairy Cattle &amp; Ruminant Health</h3>
@@ -216,9 +239,9 @@ export default function Home() {
             <div className="list-block__title">
               <div className="list-block__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 21c4.418 0 8-4.03 8-9V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7c0 4.97 3.582 9 8 9z"/>
-                  <path d="M12 21V2"/>
-                  <path d="M8 14c0-2.21 1.79-4 4-4s4 1.79 4 4"/>
+                  <path d="M12 21c4.418 0 8-4.03 8-9V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7c0 4.97 3.582 9 8 9z" />
+                  <path d="M12 21V2" />
+                  <path d="M8 14c0-2.21 1.79-4 4-4s4 1.79 4 4" />
                 </svg>
               </div>
               <h3 className="h5">Stress &amp; Recovery Management</h3>
@@ -234,10 +257,10 @@ export default function Home() {
             <div className="list-block__title">
               <div className="list-block__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2v20"/>
-                  <path d="M5 12c0-3.866 3.134-7 7-7s7 3.134 7 7c0 3.866-3.134 7-7 7s-7-3.134-7-7z"/>
-                  <path d="M12 12c-2.21 0-4 1.79-4 4"/>
-                  <path d="M12 12c2.21 0 4 1.79 4 4"/>
+                  <path d="M12 2v20" />
+                  <path d="M5 12c0-3.866 3.134-7 7-7s7 3.134 7 7c0 3.866-3.134 7-7 7s-7-3.134-7-7z" />
+                  <path d="M12 12c-2.21 0-4 1.79-4 4" />
+                  <path d="M12 12c2.21 0 4 1.79 4 4" />
                 </svg>
               </div>
               <h3 className="h5">Feed Additives &amp; Nutrition</h3>
@@ -253,7 +276,7 @@ export default function Home() {
             <div className="list-block__title">
               <div className="list-block__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
               <h3 className="h5">Food Safety &amp; Antibiotic-Free Farming</h3>
@@ -284,17 +307,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{marginTop: '-60px', marginBottom: '30px'}}>
+        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{ marginTop: '-60px', marginBottom: '30px' }}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
-              <a href="/products" className="btn btn--primary u-fullwidth cta-btn" style={{backgroundColor: 'rgb(2, 108, 106)'}}>
+              <a href="/products" className="btn btn--primary u-fullwidth cta-btn" style={{ backgroundColor: 'rgb(2, 108, 106)' }}>
                 Browse All Products
               </a>
             </div>
-          </div>          
+          </div>
         </div>
 
-        <div className="section-title-wrapper" style={{textAlign: 'center', marginBottom: '40px'}}></div>
+        <div className="section-title-wrapper" style={{ textAlign: 'center', marginBottom: '40px' }}></div>
         <span className="bestsellers-title">
           FARMER-APPROVED BEST SELLERS
         </span>
@@ -307,7 +330,7 @@ export default function Home() {
                 <a href="#modal-01" className="entry__link">
                   <div className="entry__thumb">
                     <img src="/images/folio/advice.png" alt="ADVICE natural treatment for Newcastle disease and infectious bronchitis in chickens Kenya" />
-                    <h4 className="entry__title" style={{marginLeft: '110px'}}>ADVICE</h4>
+                    <h4 className="entry__title" style={{ marginLeft: '110px' }}>ADVICE</h4>
                   </div>
                   <div className="entry__info">
                     <div className="entry__cat">VIRAL DISEASE PREVENTION</div>
@@ -319,8 +342,8 @@ export default function Home() {
               <article className="brick brick--double entry">
                 <a href="#modal-02" className="entry__link">
                   <div className="entry__thumb">
-                    <img src="/products/agritonic_1l.png" style={{height: '375px'}} alt="AGRITONIC poultry feed supplement for broiler weight gain Kenya" />
-                    <h4 className="entry__title" style={{marginLeft: '110px'}}>AGRITONIC</h4>
+                    <img src="/products/agritonic_1l.png" style={{ height: '375px' }} alt="AGRITONIC poultry feed supplement for broiler weight gain Kenya" />
+                    <h4 className="entry__title" style={{ marginLeft: '110px' }}>AGRITONIC</h4>
                   </div>
                   <div className="entry__info">
                     <div className="entry__cat">GROWTH &amp; PRODUCTIVITY</div>
@@ -333,7 +356,7 @@ export default function Home() {
                 <a href="#modal-03" className="entry__link">
                   <div className="entry__thumb">
                     <img src="/products/Bio-Gar_1kg.png" alt="BIO-GAR garlic extract for gut health and coccidiosis prevention in poultry Kenya" />
-                    <h4 className="entry__title" style={{marginLeft: '110px'}}>BIO-GAR</h4>
+                    <h4 className="entry__title" style={{ marginLeft: '110px' }}>BIO-GAR</h4>
                   </div>
                   <div className="entry__info">
                     <div className="entry__cat">GUT HEALTH &amp; IMMUNITY</div>
@@ -345,8 +368,8 @@ export default function Home() {
               <article className="brick brick--double entry">
                 <a href="#modal-04" className="entry__link">
                   <div className="entry__thumb">
-                    <img src="/products/agrivitam_1l.png" style={{height: '375px'}} alt="AGRIVITAM poultry vitamins for stress recovery and egg production Kenya" />
-                    <h4 className="entry__title" style={{marginLeft: '110px'}}>AGRIVITAM</h4>
+                    <img src="/products/agrivitam_1l.png" style={{ height: '375px' }} alt="AGRIVITAM poultry vitamins for stress recovery and egg production Kenya" />
+                    <h4 className="entry__title" style={{ marginLeft: '110px' }}>AGRIVITAM</h4>
                   </div>
                   <div className="entry__info">
                     <div className="entry__cat">VITAMINS &amp; RECOVERY</div>
@@ -359,8 +382,8 @@ export default function Home() {
         </div>
 
         <div id="modal-01" hidden>
-          <div className="modal-popup" style={{display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px'}}>
-            <img src="/images/folio/Advice.png" alt="ADVICE natural Newcastle disease treatment Kenya" style={{width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover'}} />
+          <div className="modal-popup" style={{ display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px' }}>
+            <img src="/images/folio/Advice.png" alt="ADVICE natural Newcastle disease treatment Kenya" style={{ width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover' }} />
             <div className="modal-popup__desc">
               <h5>ADVICE — Natural Viral Protection</h5>
               <p>ADVICE is formulated with natural extracts (Cinnamon, Garlic, Echinacea, Astragalus, Aloe vera) to boost poultry immunity against Newcastle disease, infectious bronchitis, Gumboro, and other viral diseases. A proven natural alternative to chicken antibiotics — trusted by poultry farmers across Africa for disease prevention and post-vaccination support.</p>
@@ -369,8 +392,8 @@ export default function Home() {
         </div>
 
         <div id="modal-02" hidden>
-          <div className="modal-popup" style={{display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px'}}>
-            <img src="/products/agritonic_1l.png" alt="AGRITONIC broiler feed supplement Kenya" style={{width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover'}} />
+          <div className="modal-popup" style={{ display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px' }}>
+            <img src="/products/agritonic_1l.png" alt="AGRITONIC broiler feed supplement Kenya" style={{ width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover' }} />
             <div className="modal-popup__desc">
               <h5>AGRITONIC — Growth &amp; Productivity Booster</h5>
               <p>AGRITONIC is a powerful liquid feed supplement that improves broiler weight gain per week, enhances feed conversion ratio, and supports optimal poultry productivity. Ideal for broiler feeding programs and layer management — helps farmers maximize returns while reducing mortality from poor nutrition.</p>
@@ -379,8 +402,8 @@ export default function Home() {
         </div>
 
         <div id="modal-03" hidden>
-          <div className="modal-popup" style={{display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px'}}>
-            <img src="/products/Bio-Gar_1kg.png" alt="BIO-GAR natural coccidiosis treatment and gut health Kenya" style={{width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover'}} />
+          <div className="modal-popup" style={{ display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px' }}>
+            <img src="/products/Bio-Gar_1kg.png" alt="BIO-GAR natural coccidiosis treatment and gut health Kenya" style={{ width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover' }} />
             <div className="modal-popup__desc">
               <h5>BIO-GAR — Gut Health &amp; Natural Antibiotic Alternative</h5>
               <p>BIO-GAR harnesses the power of garlic extract to improve gut health, prevent diarrhea in chickens, and support natural coccidiosis treatment without antibiotics. Effective against ascites (water belly) in broilers, poor feed conversion, and digestive issues. Also supports dairy cattle immunity and helps prevent mastitis naturally.</p>
@@ -389,8 +412,8 @@ export default function Home() {
         </div>
 
         <div id="modal-04" hidden>
-          <div className="modal-popup" style={{display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px'}}>
-            <img src="/products/agrivitam_1l.png" alt="AGRIVITAM poultry vitamins for layer egg production Kenya" style={{width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover'}} />
+          <div className="modal-popup" style={{ display: 'flex', alignItems: 'center', gap: '32px', maxWidth: '700px' }}>
+            <img src="/products/agrivitam_1l.png" alt="AGRIVITAM poultry vitamins for layer egg production Kenya" style={{ width: '250px', height: 'auto', borderRadius: '8px', objectFit: 'cover' }} />
             <div className="modal-popup__desc">
               <h5>AGRIVITAM — Complete Vitamin &amp; Mineral Support</h5>
               <p>AGRIVITAM provides essential poultry vitamins to prevent vitamin deficiency symptoms, support recovery after disease outbreaks, and reduce stress in chickens during vaccination, transport, or heat stress. Improves layer egg production, strengthens weak eggshells, and boosts overall flock immunity for healthier, more productive birds.</p>
@@ -399,7 +422,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="folio" className="s-folio target-section" style={{marginTop: '-175px'}}>
+      <section id="folio" className="s-folio target-section" style={{ marginTop: '-175px' }}>
         <div className="row section-header light-on-dark">
           <h3 className="column lg-12 section-header__pretitle text-pretitle">Agrikima Academy</h3>
           <div className="column lg-6 stack-on-1100 section-header__primary">
@@ -414,10 +437,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{marginTop: '-60px', marginBottom: '30px'}}>
+        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{ marginTop: '-60px', marginBottom: '30px' }}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
-              <a href="/agrikima-academy" className="btn btn--primary u-fullwidth cta-btn" style={{backgroundColor: 'rgb(2, 108, 106)'}}>
+              <a href="/agrikima-academy" className="btn btn--primary u-fullwidth cta-btn" style={{ backgroundColor: 'rgb(2, 108, 106)' }}>
                 View Resources
               </a>
             </div>

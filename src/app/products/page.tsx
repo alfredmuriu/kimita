@@ -1,4 +1,27 @@
 import Layout from '@/components/Layout';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Products | Natural Livestock Supplements & Feed Additives | Agrikima',
+  description: 'Browse our range of natural animal health products. Discover effective antibiotic alternatives, essential vitamins like ADE-3, and natural disease prevention solutions for Newcastle and coccidiosis.',
+  keywords: 'Poultry feed additives, Broiler weight gain supplements, Layer egg production vitamins, Natural coccidiosis treatment',
+  openGraph: {
+    title: 'Our Products | Natural Livestock Supplements & Feed Additives | Agrikima',
+    description: 'Browse our range of natural animal health products. Discover effective antibiotic alternatives, essential vitamins like ADE-3, and natural disease prevention solutions for Newcastle and coccidiosis.',
+    url: 'https://www.agrikima.co.ke/products',
+    siteName: 'Agrikima',
+    images: [
+      {
+        url: '/products/wheatfarmlogo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Our Products',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
 
 export default function Products() {
   return (

@@ -1,6 +1,29 @@
 import Layout from '@/components/Layout';
 import { getSupabase, BlogPost } from '@/lib/supabase';
 import BlogCard from './BlogCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'What\'s New | Agricultural Insights & Farming Tips | Agrikima',
+  description: 'Read the latest agricultural insights, farming tips, and poultry health articles from the experts at Agrikima. Stay updated on best practices for African farmers.',
+  keywords: 'Agrikima blog, agricultural news Kenya, farming tips Africa, poultry health articles, livestock insights',
+  openGraph: {
+    title: 'What\'s New | Agricultural Insights & Farming Tips | Agrikima',
+    description: 'Read the latest agricultural insights, farming tips, and poultry health articles from the experts at Agrikima. Stay updated on best practices for African farmers.',
+    url: 'https://www.agrikima.co.ke/whats-new',
+    siteName: 'Agrikima',
+    images: [
+      {
+        url: '/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Agrikima Blog',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
 
 // Revalidate every 60 seconds to show new blog posts
 export const revalidate = 60;

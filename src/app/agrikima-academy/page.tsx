@@ -21,6 +21,7 @@ const SECTIONS: CategorySection[] = [
     anchor: 'getting-started',
     videos: [
       { id: '-m51mnGrLEU', title: 'Introduction to Poultry Farming' },
+      { id: 'MXrLWo4xd68', title: 'Inside Out' },
     ],
   },
   {
@@ -37,7 +38,6 @@ const SECTIONS: CategorySection[] = [
     name: 'BROODING & EARLY CHICK CARE',
     anchor: 'brooding',
     videos: [
-      { id: 'MXrLWo4xd68', title: 'Inside Out' },
       { id: 'TaL6EPbtPkQ', title: 'Brooding' },
       { id: 'nQj7g_DFWIU', title: 'Growing and Transition' },
       { id: 'XEcSxfxqCww', title: 'Incubation' },
