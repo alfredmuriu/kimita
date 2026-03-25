@@ -69,8 +69,8 @@ export default function Header() {
                 <li><a href="/agrikima-academy">&nbsp;Poultry Farming</a></li>
               </ul>
             </li>
-            <li className={isActive('/blog') ? 'current' : ''}>
-              <Link href="/blog">What's New</Link>
+            <li className={isActive('/whats-new') ? 'current' : ''}>
+              <Link href="/whats-new">What's New</Link>
             </li>
             <li>
               <a href="/#footer" className="smoothscroll" id="contact-link">Contact</a>

@@ -75,7 +75,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <main>
         <article className="blog-article">
           {/* Back link */}
-          <Link href="/blog" style={{color: '#0d4a3f', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '30px'}}>
+          <Link href="/whats-new" style={{color: '#0d4a3f', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '30px'}}>
             ← Back
           </Link>
 

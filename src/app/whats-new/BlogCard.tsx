@@ -85,7 +85,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         {/* Button at bottom */}
         <div style={{marginTop: 'auto', paddingTop: '12px'}}>
           <Link
-            href={`/blog/${post.slug}`}
+            href={`/whats-new/${post.slug}`}
             className="btn btn--stroke"
             style={{
               fontSize: '11px',
