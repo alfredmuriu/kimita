@@ -567,7 +567,6 @@
   cursor: pointer;
   width: 100%;
   height: auto;
-  min-height: 400px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -1055,7 +1054,6 @@
   .blog-card {
     width: 100%;
     height: auto;
-    min-height: 360px;
   }
 
   /* Blog post detail */

@@ -31,7 +31,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       {/* Image container with fixed height */}
       <div style={{
         width: '100%',
-        height: '180px',
+        height: '160px',
         overflow: 'hidden',
         flexShrink: 0
       }}>
@@ -51,7 +51,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         display: 'flex',
         flexDirection: 'column',
         flex: 1,
-        padding: '16px'
+        padding: '14px'
       }}>
         {/* Title - limited to 2 lines */}
         <h3 style={{
