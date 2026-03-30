@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import { getSupabase, BlogPost } from '@/lib/supabase';
-import BlogCard from './BlogCard';
 import { Metadata } from 'next';
+import ArticlesClient from './ArticlesClient';
 
 export const metadata: Metadata = {
   title: 'What\'s New | Agricultural Insights & Farming Tips | Agrikima',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 // Revalidate every 60 seconds to show new blog posts
 export const revalidate = 60;
 
-async function getBlogPosts(): Promise<BlogPost[]> {
+async function getAllBlogPosts(): Promise<BlogPost[]> {
   const supabase = getSupabase();
   if (!supabase) {
     console.error('Supabase not configured');
@@ -49,8 +49,25 @@ async function getBlogPosts(): Promise<BlogPost[]> {
   return data || [];
 }
 
-export default async function Blog() {
-  const posts = await getBlogPosts();
+export default async function Blog({
+  searchParams,
+}: {
+  searchParams: { category?: string };
+}) {
+  const allPosts = await getAllBlogPosts();
+  const activeCategory = searchParams.category || 'All';
+
+  const filteredPosts =
+    activeCategory === 'All'
+      ? allPosts
+      : allPosts.filter((p) => p.category === activeCategory);
+
+  const counts: Record<string, number> = {
+    All: allPosts.length,
+    Poultry: allPosts.filter((p) => p.category === 'Poultry').length,
+    Dairy: allPosts.filter((p) => p.category === 'Dairy').length,
+    Pigs: allPosts.filter((p) => p.category === 'Pigs').length,
+  };
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -75,24 +92,11 @@ export default async function Blog() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
-        <h1 className="s-intro__content-title page-title">
-          What's New
-        </h1>
-        <p className="page-subtitle">
-          Agricultural insights and tips for farmers
-        </p>
-
-        <div className="blog-listing">
-          {posts.length === 0 ? (
-            <p style={{color: '#666', fontSize: '16px'}}>
-              No blog posts yet. Check back soon for agricultural tips and insights!
-            </p>
-          ) : (
-            posts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))
-          )}
-        </div>
+        <ArticlesClient
+          posts={filteredPosts}
+          activeCategory={activeCategory}
+          counts={counts}
+        />
       </main>
     </Layout>
   );

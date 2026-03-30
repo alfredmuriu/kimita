@@ -4772,7 +4772,9 @@ img.u-pull-left {
     pointer-events: none;
     transition:
         opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0s linear 0.4s;
+    visibility: hidden;
     position: absolute;
     top: 100%;
     left: 0;
@@ -4781,9 +4783,19 @@ img.u-pull-left {
     width: 180px;
     box-shadow: 20px 15px 15px black;
     z-index: 9999;
-    padding: 0;
+    padding: 8px 0 0 0;
     margin: 0;
-    margin-top: 1px;
+}
+
+/* Invisible bridge to prevent hover gap */
+.s-header__menu-links>.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: transparent;
 }
 
 .s-header__menu-links>.dropdown:hover>.dropdown-menu,
@@ -4791,6 +4803,11 @@ img.u-pull-left {
     opacity: 1;
     transform: translateY(0) scaleY(1);
     pointer-events: auto;
+    visibility: visible;
+    transition:
+        opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0s linear 0s;
 }
 
 .s-header__menu-links>.dropdown>.dropdown-menu li {

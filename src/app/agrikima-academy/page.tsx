@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Layout from '@/components/Layout';
 import VideoModal from '@/components/VideoModal';
 
@@ -15,13 +16,22 @@ interface CategorySection {
   videos: Video[];
 }
 
-const SECTIONS: CategorySection[] = [
+const POULTRY_SECTIONS: CategorySection[] = [
   {
     name: 'GETTING STARTED',
     anchor: 'getting-started',
     videos: [
       { id: '-m51mnGrLEU', title: 'Introduction to Poultry Farming' },
       { id: 'MXrLWo4xd68', title: 'Inside Out' },
+    ],
+  },
+  {
+    name: 'BROODING & EARLY CHICK CARE',
+    anchor: 'brooding',
+    videos: [
+      { id: 'TaL6EPbtPkQ', title: 'Brooding' },
+      { id: 'nQj7g_DFWIU', title: 'Growing and Transition' },
+      { id: 'XEcSxfxqCww', title: 'Incubation' },
     ],
   },
   {
@@ -32,15 +42,6 @@ const SECTIONS: CategorySection[] = [
       { id: '4HHYibFMkYc', title: 'Broiler Feeding' },
       { id: 'Xio1Ys6od7U', title: 'Layer Feeding' },
       { id: 'pQzfwHm8VD0', title: 'Poultry Feeding' },
-    ],
-  },
-  {
-    name: 'BROODING & EARLY CHICK CARE',
-    anchor: 'brooding',
-    videos: [
-      { id: 'TaL6EPbtPkQ', title: 'Brooding' },
-      { id: 'nQj7g_DFWIU', title: 'Growing and Transition' },
-      { id: 'XEcSxfxqCww', title: 'Incubation' },
     ],
   },
   {
@@ -72,63 +73,352 @@ const SECTIONS: CategorySection[] = [
   },
 ];
 
+const ACADEMY_DATA: Record<string, CategorySection[]> = {
+  'Poultry Farming': POULTRY_SECTIONS,
+  'Dairy Farming': [],
+};
+
 export default function Academy() {
+  const searchParams = useSearchParams();
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
+  const [activeFilter, setActiveFilter] = useState<string>('All');
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  // Read filter from URL query parameter (e.g. ?filter=poultry-feeding)
+  useEffect(() => {
+    const filterParam = searchParams.get('filter');
+    if (filterParam) {
+      setActiveFilter(filterParam);
+      // Auto-open the parent group dropdown in sidebar
+      for (const [groupName, sections] of Object.entries(ACADEMY_DATA)) {
+        if (groupName === filterParam) {
+          setOpenDropdown(groupName);
+          break;
+        }
+        if (sections.some(s => s.anchor === filterParam)) {
+          setOpenDropdown(groupName);
+          break;
+        }
+      }
+    }
+  }, [searchParams]);
+
+  const handleGroupClick = (groupName: string) => {
+    // Toggle the dropdown open/close
+    setOpenDropdown(prev => prev === groupName ? null : groupName);
+    // Also set the filter to this group
+    setActiveFilter(groupName);
+  };
+
+  const handleSubcategoryClick = (anchor: string, groupName: string) => {
+    setActiveFilter(anchor);
+    // Keep the parent dropdown open
+    setOpenDropdown(groupName);
+  };
+
+  const handleAllClick = () => {
+    setActiveFilter('All');
+    setOpenDropdown(null);
+  };
 
   return (
     <Layout>
-      <main style={{ backgroundColor: '#ffffff', paddingBottom: '60px' }}>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        body, .s-header, .s-header__inner, .s-header__nav, .s-header__menu-links, .s-header__social, #page, .s-pagewrap, .s-content, main {
+            background-color: #ffffff !important;
+            color: #111111 !important;
+        }
+        body, #page, .s-pagewrap, .s-content, main {
+            overflow: visible !important;
+            overflow-x: clip !important;
+        }
+        .s-header__menu-links a, .email, h1, h2, h3, h4, h5, p, span {
+            color: #111111 !important;
+        }
+        .s-header__menu-links li.current > a {
+            color: #014d4b !important;
+        }
+        
+        .s-header__social svg path {
+            fill: #111111 !important;
+        }
+        .s-header__menu-links > .dropdown > .dropdown-menu {
+            background-color: #ffffff !important;
+        }
+        .s-header__menu-links > .dropdown > .dropdown-menu a {
+            color: #111111 !important;
+        }
+        .s-header__menu-links > .dropdown > .dropdown-menu a:hover {
+            color: #014d4b !important;
+        }
+        .page-title {
+            color: #111111 !important;
+        }
+        .page-subtitle {
+            color: #444444 !important;
+        }
+        .section-header__pretitle {
+            color: #014d4b !important;
+        }
+        /* Sidebar Styles */
+        .academy-content-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 40px;
+            align-items: stretch;
+        }
+        .academy-sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            padding-right: 20px;
+            border-right: 1px solid #eee;
+        }
+        .academy-sidebar-sticky {
+            position: sticky;
+            top: 100px;
+        }
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .sidebar-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar-item {
+            margin-bottom: 12px;
+            padding: 0;
+        }
+        .sidebar-link {
+            color: #111111;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sidebar-link:hover, .sidebar-item.active > .sidebar-link, .sidebar-subitem.active > .sidebar-link,
+        .sidebar-link:hover span, .sidebar-item.active > .sidebar-link span, .sidebar-subitem.active > .sidebar-link span {
+            color: #014d4b !important;
+        }
+        .sidebar-item-count {
+            font-size: 12px;
+            color: #888888 !important;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        /* Chevron icon for dropdowns */
+        .sidebar-chevron {
+            width: 16px;
+            height: 16px;
+            margin-left: 6px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: #888888;
+        }
+        .sidebar-chevron.open {
+            transform: rotate(180deg);
+        }
+        .sidebar-link:hover .sidebar-chevron {
+            color: #014d4b;
+        }
+        /* Click-based Accordion */
+        .sidebar-submenu {
+            list-style: none;
+            margin: 0;
+            padding-left: 15px;
+            background: transparent;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            transition: max-height 0.35s ease, opacity 0.3s ease, padding-top 0.3s ease;
+        }
+        .sidebar-submenu.open {
+            max-height: 500px;
+            opacity: 1;
+            padding-top: 10px;
+        }
+        .sidebar-subitem {
+            margin-bottom: 8px;
+        }
+        .academy-main-column {
+            flex: 1;
+            min-width: 0;
+        }
+        @media screen and (max-width: 800px) {
+            .academy-content-wrapper {
+                flex-direction: column;
+            }
+            .academy-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+            .academy-sidebar-sticky {
+                position: static;
+            }
+        }
+      `}} />
+      <main>
         {/* Hero */}
-        <section className="academy-hero">
-          <h1 className="s-intro__content-title page-title" style={{ color: '#000000' }}>
-            Agrikima Academy
-          </h1>
-          <p className="page-subtitle" style={{ maxWidth: 640 }}>
-            Learn from our experts — practical video guides on poultry feeding,
-            brooding, housing, health, welfare, biosecurity, and more to help you succeed.
-          </p>
-        </section>
+        <div className="products-hero">
+          <div style={{ flex: 1 }}>
+            <h1 className="s-intro__content-title page-title">
+              Agrikima Academy
+            </h1>
+            <p className="page-subtitle" style={{ maxWidth: 640 }}>
+              Learn from our experts — practical video guides on poultry feeding,
+              brooding, housing, health, welfare, biosecurity, and more to help you succeed.
+            </p>
+          </div>
+          <img src="/images/agrikima-academy.png" alt="Poultry Farming Academy" className="intro-image-slide-in products-hero-image" />
+        </div>
 
-        {/* Category Sections */}
-        {SECTIONS.map((section) => (
-          <section key={section.anchor} id={section.anchor} className="academy-section">
-            <h2 className="column lg-12 section-header__pretitle pretitle text-pretitle">
-              {section.name}
-            </h2>
-            <div className="academy-table">
-              {section.videos.map((video) => (
-                <div
-                  key={video.id}
-                  className="academy-row"
-                  onClick={() => setSelectedVideo(video)}
-                  id={`video-${video.id}`}
-                >
-                  <div className="academy-row__info">
-                    <div className="academy-row__play-icon">
-                      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
+        <div style={{ backgroundColor: '#f9fafb', paddingTop: '60px', paddingBottom: '80px', borderTop: '1px solid #f3f4f6' }}>
+          <div className="academy-content-wrapper">
+            {/* Sidebar */}
+            <aside className="academy-sidebar">
+              <div className="academy-sidebar-sticky">
+                <div className="sidebar-title">CATEGORIES</div>
+                <ul className="sidebar-menu">
+                  <li className={`sidebar-item ${activeFilter === 'All' ? 'active' : ''}`}>
+                    <div className="sidebar-link" onClick={handleAllClick}>
+                      <span>All Sections</span>
                     </div>
-                    <span className="academy-row__title">{video.title}</span>
-                  </div>
-                  <div className="academy-row__thumb">
-                    <img
-                      src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
-                      alt={video.title}
-                      loading="lazy"
-                    />
-                    <div className="academy-row__watch">
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                      Watch
+                  </li>
+
+                  {Object.keys(ACADEMY_DATA).map((groupName) => {
+                    const isDropdownOpen = openDropdown === groupName;
+                    const isGroupActive = activeFilter === groupName ||
+                      ACADEMY_DATA[groupName].some(s => s.anchor === activeFilter);
+
+                    return (
+                      <li key={groupName} className={`sidebar-item ${isGroupActive ? 'active' : ''}`}>
+                        <div className="sidebar-link" onClick={() => handleGroupClick(groupName)}>
+                          <span>{groupName}</span>
+                          <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                            <span className="sidebar-item-count">
+                              {ACADEMY_DATA[groupName].reduce((acc, section) => acc + section.videos.length, 0)}
+                            </span>
+                            {ACADEMY_DATA[groupName].length > 0 && (
+                              <svg
+                                className={`sidebar-chevron ${isDropdownOpen ? 'open' : ''}`}
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <polyline points="6 9 12 15 18 9" />
+                              </svg>
+                            )}
+                          </span>
+                        </div>
+                        {/* Nested subcategories — click to expand */}
+                        {ACADEMY_DATA[groupName].length > 0 && (
+                          <ul className={`sidebar-submenu ${isDropdownOpen ? 'open' : ''}`}>
+                            {ACADEMY_DATA[groupName].map((section) => (
+                              <li key={`nav-${section.anchor}`} className={`sidebar-subitem ${activeFilter === section.anchor ? 'active' : ''}`}>
+                                <div
+                                  className="sidebar-link"
+                                  style={{ fontSize: '13px', paddingLeft: '10px' }}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleSubcategoryClick(section.anchor, groupName);
+                                  }}
+                                >
+                                  <span>{section.name}</span>
+                                  <span className="sidebar-item-count">{section.videos.length}</span>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </aside>
+
+            {/* Main Content */}
+            <div className="academy-main-column">
+              {Object.keys(ACADEMY_DATA).map((groupName) => {
+                const renderSection = (section: CategorySection) => (
+                  <section key={section.anchor} id={section.anchor} className="academy-section">
+                    <h2 className="column lg-12 section-header__pretitle pretitle text-pretitle">
+                      {section.name}
+                    </h2>
+                    <div className="academy-table">
+                      {section.videos.map((video) => (
+                        <div
+                          key={video.id}
+                          className="academy-row"
+                          onClick={() => setSelectedVideo(video)}
+                          id={`video-${video.id}`}
+                        >
+                          <div className="academy-row__info">
+                            <div className="academy-row__play-icon">
+                              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </div>
+                            <span className="academy-row__title">{video.title}</span>
+                          </div>
+                          <div className="academy-row__thumb">
+                            <img
+                              src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
+                              alt={video.title}
+                              loading="lazy"
+                            />
+                            <div className="academy-row__watch">
+                              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                              Watch
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  </div>
+                  </section>
+                );
+
+                if (activeFilter === 'All' || activeFilter === groupName) {
+                  return ACADEMY_DATA[groupName].map(renderSection);
+                }
+
+                const matchingSection = ACADEMY_DATA[groupName].find(s => s.anchor === activeFilter);
+                if (matchingSection) {
+                  return renderSection(matchingSection);
+                }
+
+                return null;
+              })}
+
+              {/* Empty state for sections without data */}
+              {activeFilter !== 'All' && ACADEMY_DATA[activeFilter] && ACADEMY_DATA[activeFilter].length === 0 && (
+                <div style={{ textAlign: 'center', padding: '60px 20px', color: '#666' }}>
+                  <p>Videos for this category will be added soon.</p>
                 </div>
-              ))}
+              )}
             </div>
-          </section>
-        ))}
+          </div>
+        </div>
       </main>
 
       {/* Modal */}

@@ -173,6 +173,7 @@ export async function GET(request: NextRequest) {
           content: generatedContent.content,
           featured_image: featuredImage,
           keywords: generatedContent.keywords,
+          category: topic.category || null,
           status: 'published',
           published_at: new Date().toISOString(),
         })

@@ -42,6 +42,7 @@ export interface BlogPost {
   content: string | null;
   featured_image: string | null;
   keywords: string[] | null;
+  category: string | null;
   status: 'draft' | 'published' | 'scheduled';
   published_at: string | null;
   created_at: string;
