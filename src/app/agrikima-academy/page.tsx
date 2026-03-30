@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Layout from '@/components/Layout';
 import VideoModal from '@/components/VideoModal';
@@ -78,7 +78,7 @@ const ACADEMY_DATA: Record<string, CategorySection[]> = {
   'Dairy Farming': [],
 };
 
-export default function Academy() {
+function AcademyContent() {
   const searchParams = useSearchParams();
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>('All');
@@ -429,5 +429,13 @@ export default function Academy() {
         onClose={() => setSelectedVideo(null)}
       />
     </Layout>
+  );
+}
+
+export default function Academy() {
+  return (
+    <Suspense>
+      <AcademyContent />
+    </Suspense>
   );
 }
