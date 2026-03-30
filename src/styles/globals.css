@@ -338,7 +338,7 @@
 .blog-content {
   font-size: 17px;
   line-height: 1.9;
-  color: #e5e7eb;
+  color: #1f2937;
 }
 
 .blog-content h1,
@@ -347,7 +347,7 @@
 .blog-content h4,
 .blog-content h5,
 .blog-content h6 {
-  color: #ffffff;
+  color: #111827;
   font-weight: 600;
   margin-top: 2em;
   margin-bottom: 0.75em;
@@ -356,7 +356,7 @@
 
 .blog-content h2 {
   font-size: 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 12px;
 }
 
@@ -370,14 +370,14 @@
 
 .blog-content p {
   margin-bottom: 1.5em;
-  color: #d1d5db;
+  color: #374151;
 }
 
 .blog-content ul,
 .blog-content ol {
   margin-bottom: 1.5em;
   padding-left: 1.5em;
-  color: #d1d5db;
+  color: #374151;
 }
 
 .blog-content li {
@@ -385,7 +385,7 @@
 }
 
 .blog-content strong {
-  color: #ffffff;
+  color: #111827;
   font-weight: 600;
 }
 
@@ -399,22 +399,22 @@
 }
 
 .blog-content blockquote {
-  border-left: 4px solid #16a34a;
+  border-left: 4px solid #014d4b;
   padding-left: 20px;
   margin: 1.5em 0;
   font-style: italic;
-  color: #9ca3af;
+  color: #6b7280;
 }
 
 .blog-content code {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.06);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
 .blog-content pre {
-  background: rgba(0, 0, 0, 0.3);
+  background: #f3f4f6;
   padding: 16px;
   border-radius: 8px;
   overflow-x: auto;
