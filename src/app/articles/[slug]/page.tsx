@@ -73,8 +73,10 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <Layout>
       <style dangerouslySetInnerHTML={{ __html: `
-        body, .s-header, .s-header__inner, .s-header__nav, .s-header__menu-links, .s-header__social, .dropdown-menu {
+        body, #page, .s-pagewrap, .s-content, main,
+        .s-header, .s-header__inner, .s-header__nav, .s-header__menu-links, .s-header__social, .dropdown-menu {
             background-color: #ffffff !important;
+            color: #111111 !important;
         }
         .s-header__menu-links a, .s-header__social .email {
             color: #111111 !important;
