@@ -42,6 +42,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
       { id: '4HHYibFMkYc', title: 'Broiler Feeding' },
       { id: 'Xio1Ys6od7U', title: 'Layer Feeding' },
       { id: 'pQzfwHm8VD0', title: 'Poultry Feeding' },
+      { id: 'iYTJsl8Ggj0', title: 'Poultry Supplementing' },
     ],
   },
   {
@@ -61,6 +62,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
       { id: 'mYjMDoP5rQE', title: 'Anti Microbial Resistance' },
       { id: 'L0iE79JJGnM', title: 'Nutritional Deficiency' },
       { id: 'Cz94nOBYuDg', title: 'Behavioural Abnormalities' },
+      { id: 'mViMyFUUikY', title: 'Poultry Vaccination' },
     ],
   },
   {
@@ -73,9 +75,40 @@ const POULTRY_SECTIONS: CategorySection[] = [
   },
 ];
 
+const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
+  {
+    name: 'HOUSING & FARM SETUP',
+    anchor: 'large-animal-housing',
+    videos: [
+      { id: 'UxhKRZK4KgI', title: 'Large Animal Housing' },
+    ],
+  },
+  {
+    name: 'FEEDING',
+    anchor: 'large-animal-feeding',
+    videos: [
+      { id: 'uNpJjeUrbFg', title: 'Large Animal Feeding' },
+    ],
+  },
+  {
+    name: 'PRODUCTION',
+    anchor: 'large-animal-production',
+    videos: [
+      { id: 'HSJi_eEBXb0', title: 'Milking and Meat Production' },
+    ],
+  },
+  {
+    name: 'BREEDING & REPRODUCTION',
+    anchor: 'large-animal-breeding',
+    videos: [
+      { id: '5_gmI60MgXY', title: 'Breeding and Reproduction' },
+    ],
+  },
+];
+
 const ACADEMY_DATA: Record<string, CategorySection[]> = {
   'Poultry Farming': POULTRY_SECTIONS,
-  'Dairy Farming': [],
+  'Larger Animals': LARGER_ANIMAL_SECTIONS,
 };
 
 function AcademyContent() {

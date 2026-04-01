@@ -69,7 +69,7 @@ export default function Contact() {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    font-size: 0.875rem; /* text-sm */
+                    font-size: 1rem;
                     color: #111827;
                 }
 
@@ -103,8 +103,9 @@ export default function Contact() {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 1.5rem; /* reduced gap */
-                    width: 350px; /* restored original mobile width */
+                    gap: 1.5rem;
+                    width: 100%;
+                    max-width: 760px;
                 }
 
                 .tw-input-wrapper {
@@ -112,40 +113,46 @@ export default function Contact() {
                 }
 
                 .tw-label {
-                    color: rgba(0, 0, 0, 0.7); /* text-black/70 */
+                    color: #374151;
                     display: block;
+                    font-size: 0.95rem;
+                    font-weight: 500;
+                    margin-bottom: 0.4rem;
                 }
 
                 .tw-input, .tw-textarea {
                     width: 100% !important;
-                    border: 1px solid rgba(107, 114, 128, 0.3) !important;
-                    border-radius: 0.25rem !important;
+                    border: 1.5px solid #d1d5db !important;
+                    border-radius: 0.5rem !important;
                     outline: none !important;
-                    margin-top: 0.35rem !important;
-                    padding: 0.5rem 0.75rem !important;
+                    padding: 0.75rem 1rem !important;
                     box-sizing: border-box !important;
-                    transition: border-color 0.15s ease-in-out !important;
-                    background-color: #ffffff !important;
-                    font-size: 0.9rem !important;
+                    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+                    background-color: #f9fafb !important;
+                    font-size: 1rem !important;
                     color: #111827 !important;
+                    font-family: inherit !important;
                 }
 
                 .tw-input {
-                    height: 44px !important;
+                    height: 52px !important;
                 }
 
                 .tw-textarea {
-                    height: 130px !important;
+                    height: 160px !important;
                     resize: vertical !important;
                 }
 
                 .tw-input:focus, .tw-textarea:focus {
-                    border-color: #a5b4fc; /* focus:border-indigo-300 */
+                    border-color: #014d4b !important;
+                    box-shadow: 0 0 0 3px rgba(1, 77, 75, 0.1) !important;
+                    background-color: #ffffff !important;
                 }
 
                 .tw-message-row {
-                    margin-top: 1.25rem; /* tighter spacing */
-                    width: 350px; /* restored original mobile width */
+                    margin-top: 1.25rem;
+                    width: 100%;
+                    max-width: 760px;
                 }
 
                 .tw-button {
@@ -169,12 +176,12 @@ export default function Contact() {
 
                 @media (min-width: 768px) {
                     .tw-row {
-                        flex-direction: row; /* md:flex-row */
-                        width: 700px; /* restored original desktop width */
-                        gap: 2rem; /* restored original gap */
+                        flex-direction: row;
+                        gap: 2rem;
                     }
-                    .tw-message-row {
-                        width: 700px; /* restored original desktop width */
+                    .tw-form-container {
+                        padding-left: 40px;
+                        padding-right: 40px;
                     }
                 }
                 `
