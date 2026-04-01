@@ -3,43 +3,36 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 export default function BetaineProduct() {
   return (
     <ProductPageLayout
-      productName="BETAINE"
+      productName="BETAINE 50%"
       productImage="/products/betaine.png"
-      productImageAlt="BETAINE heat stress relief poultry feed efficiency liver health Kenya"
-      description="Betaine is a natural compound that improves nutrient utilization, supports liver health, and helps animals cope with heat stress. This versatile feed additive enhances feed efficiency and promotes consistent performance under challenging conditions. An essential supplement for hot climate farming. Trusted by farmers across Kenya and East Africa for heat stress management and improved production."
+      productImageAlt="BETAINE 50% liquid feed supplement for feed absorption and heat stress in poultry"
+      description="Betaine liquid is used as an animal feed supplement which increases the feed absorption efficiency in the animals' digestion system. This helps to optimize nutrient digestibility and reduce their excretion. The addition of betaine supplementation has resulted in improvement in bodyweight, breast meat yield, feed conversion, and decreased abdominal fat pad weights. Betaine has also been shown to assist birds under heat stress conditions — the impact of severe heat stress can partially be overcome by adding betaine."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Helps animals cope with heat stress</li>
-              <li>Improves nutrient utilization</li>
-              <li>Supports liver health and function</li>
-              <li>Enhances feed efficiency</li>
-              <li>Maintains consistent performance</li>
-              <li>Acts as osmolyte for cell protection</li>
-              <li>Reduces methionine requirement</li>
-              <li>Suitable for all poultry and livestock</li>
+              <li>Increases feed absorption efficiency in the digestive system</li>
+              <li>Optimizes nutrient digestibility and reduces excretion</li>
+              <li>Improves bodyweight and breast meat yield</li>
+              <li>Improves feed conversion ratio</li>
+              <li>Decreases abdominal fat pad weights</li>
+              <li>Assists birds under heat stress conditions</li>
+              <li>Promotes health and growth for animals</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Regular Use:</strong></p><ul><li>Mix 0.5-1kg per ton of feed</li><li>Use continuously in feed</li></ul><p><strong>During Heat Stress:</strong></p><ul><li>Mix 1-1.5kg per ton of feed</li><li>Increase during hot seasons</li></ul><p className="note">Note: Best added during feed formulation. Store in a cool, dry place.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 1 ml per 6 litres of drinking water</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Heat stress in poultry and livestock</li>
-              <li>Poor nutrient utilization and feed efficiency</li>
-              <li>Liver health concerns and fatty liver risk</li>
-              <li>Reduced performance in hot climates</li>
-              <li>High methionine requirement in diets</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles. Form: Liquid</p>,
         },
       ]}
     />

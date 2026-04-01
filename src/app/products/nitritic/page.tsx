@@ -3,43 +3,38 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 export default function NitriticProduct() {
   return (
     <ProductPageLayout
-      productName="NITRITIC"
+      productName="NUTRITIC"
       productImage="/products/nitritic.png"
-      productImageAlt="NITRITIC natural antibiotic alternative E.coli Salmonella treatment poultry Kenya"
-      description="Nitritic is a powerful natural antibiotic alternative that effectively kills harmful germs including E. coli and Salmonella. This advanced formulation works by detoxifying heavy metals, boosting animal health and immunity, stimulating appetite and growth, and preventing mold and pests. Nitritic provides an effective, long-term alternative to synthetic antibiotics. Trusted by farmers across Kenya and East Africa for natural bacterial disease control."
+      productImageAlt="NUTRITIC natural feed additives with garlic extract and yeast culture for poultry and livestock"
+      description="NUTRITIC is a quality natural feed additive formulated with Garlic Extracts and Saccharomyces Cerevisiae (Yeast Culture). Allicin of Garlic Extract has strong sterilizing, antimicrobial, and antiviral actions and helps in blood circulation. It stimulates gastric mucosa, resulting in promotion of gastric secretion and intestinal regulation. Yeast Culture increases feed intake with its unique flavor, supplies rich amino acids, vitamins, and minerals, and improves intestinal environment and probiotic flora."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Kills harmful E. coli bacteria naturally</li>
-              <li>Eliminates Salmonella infections</li>
-              <li>Detoxifies heavy metals from the body</li>
-              <li>Boosts animal health and immunity</li>
-              <li>Stimulates appetite and promotes growth</li>
-              <li>Prevents mold growth in feed</li>
-              <li>Long-term effective antibiotic alternative</li>
-              <li>No withdrawal period required</li>
+              <li>Restricts and kills harmful germs — E. coli, Salmonella, Staphylococcus aureus, and dysentery bacillus</li>
+              <li>Detoxifies heavy metals such as mercury, cyanide, and nitrite</li>
+              <li>Improves animal health — brighter fur, better illness resistance, increased survival rate</li>
+              <li>Stimulates appetite through the aromatic of garlic</li>
+              <li>Improves gastric juice secretion and intestinal regulation</li>
+              <li>Resists molds and kills flies and maggots efficiently</li>
+              <li>Effective antibiotic refill and best additive for antibiotic-free fodder</li>
+              <li>Improves fertility and hatchability in breeders, increases egg production, reduces post-antibiotic stress</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Prevention:</strong></p><ul><li>Mix 0.5ml per 1 liter of drinking water</li><li>Administer for 3-5 days weekly</li></ul><p><strong>For Treatment:</strong></p><ul><li>Mix 1ml per 1 liter of drinking water</li><li>Administer for 5-7 consecutive days</li><li>Continue until infection clears</li></ul><p className="note">Note: Can be used alongside other treatments. Consult a veterinarian for severe bacterial infections.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 500 gm per ton of feed or as advised by a veterinarian</li>
+              <li><strong>Horse and livestock:</strong> 20 gm mixed into the daily feed</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>E. coli infections in poultry and livestock</li>
-              <li>Salmonella contamination and infections</li>
-              <li>Heavy metal toxicity in animals</li>
-              <li>Mold and pest contamination in feed</li>
-              <li>Bacterial disease prevention as an antibiotic alternative</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 25 KG pails. Form: Powder — Code: AKF007</p>,
         },
       ]}
     />

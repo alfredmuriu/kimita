@@ -5,41 +5,35 @@ export default function Antistrs300Product() {
     <ProductPageLayout
       productName="ANTISTRS-300"
       productImage="/products/antistrs-300.png"
-      productImageAlt="ANTISTRS-300 anti-stress formula poultry heat stress vaccination recovery Kenya"
-      description="ANTISTRS-300 is an advanced anti-stress formula that helps animals cope with environmental, nutritional, and physiological stress. This powerful formulation promotes better performance and faster recovery during challenging conditions such as heat stress, transportation, vaccination, and disease recovery. Trusted by farmers across Kenya and East Africa for comprehensive stress management in poultry."
+      productImageAlt="ANTISTRS-300 soluble powder to relieve pain, reduce fever and increase disease resistance"
+      description="ANTISTRS-300 works to relieve pain and reduce fever, and increase resistance against bacterial and viral diseases in pigeons, canaries, parrots, and poultry. Vitamin C plays an important role in maintaining the activity and vitality of the animals' body and increases their resistance, especially after stress and fatigue. Paracetamol is a common antipyretic and painkiller used to treat aches and pain. It is used as a secondary treatment for bacterial and viral infections and to increase resistance against diseases such as Gumboro in poultry."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Helps animals cope with heat stress</li>
-              <li>Reduces transportation stress effects</li>
-              <li>Supports post-vaccination recovery</li>
-              <li>Promotes faster disease recovery</li>
-              <li>Maintains production during stress</li>
-              <li>Restores electrolyte balance</li>
-              <li>Improves appetite during stress</li>
-              <li>Suitable for all stress conditions</li>
+              <li>Relieves pain and reduces fever</li>
+              <li>Increases resistance against bacterial and viral diseases</li>
+              <li>Reduces stress reaction caused by vaccinations</li>
+              <li>Attenuates mortality caused by temperature</li>
+              <li>Supports recovery after stress and fatigue</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>During Heat Stress:</strong></p><ul><li>Mix 1ml per 1 liter of drinking water</li><li>Administer during hot hours of the day</li></ul><p><strong>Post-Vaccination/Transportation:</strong></p><ul><li>Mix 1ml per 1 liter of drinking water</li><li>Administer for 2-3 days before and after event</li></ul><p className="note">Note: Increase water availability during stress periods. Store in a cool place.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 500 gm per 1000 litres of drinking water for 3–5 days</li>
+              <li><strong>Cattle:</strong> 8 g per animal, per day</li>
+              <li><strong>Calves:</strong> 2 g per animal, per day</li>
+              <li><strong>Pigs:</strong> 150 g per 1,000 litres of drinking water</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Heat stress in poultry during hot seasons</li>
-              <li>Transportation stress and handling trauma</li>
-              <li>Post-vaccination reactions and recovery</li>
-              <li>Disease recovery and convalescence</li>
-              <li>Electrolyte imbalance and appetite loss during stress</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 500 gm jars. Form: Powder — Code: AKS040</p>,
         },
       ]}
     />

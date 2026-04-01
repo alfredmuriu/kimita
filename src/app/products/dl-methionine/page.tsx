@@ -5,41 +5,32 @@ export default function DLMethionineProduct() {
     <ProductPageLayout
       productName="DL-METHIONINE"
       productImage="/products/Dl-Methionine.png"
-      productImageAlt="DL-METHIONINE amino acid feather development poultry growth supplement Kenya"
-      description="DL-Methionine is an essential amino acid critical for protein synthesis, feather development in poultry, and optimal liver function. This vital nutrient supports healthy growth, improves feed conversion, and is the first limiting amino acid in poultry nutrition. Trusted by farmers across Kenya and East Africa for amino acid supplementation and improved production performance."
+      productImageAlt="DL-METHIONINE Feed Grade 84% amino acid supplement for poultry"
+      description="DL-Methionine is an essential amino acid that serves as a nutrient facilitating the efficient production of high-quality chick meat. It also reduces the amount of nitrogen excreted by the livestock. Methionine plays an important role in metabolism and is used as an additive in cases of lack of amino acids for all farm animals. Due to its high flowability and good mixability, this preparation is easy to use, safe to handle, and can be used at any stage."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Essential for protein synthesis</li>
-              <li>Promotes healthy feather development</li>
-              <li>Supports optimal liver function</li>
-              <li>Improves feed conversion ratio</li>
-              <li>Enhances growth performance</li>
-              <li>First limiting amino acid in poultry</li>
-              <li>Supports egg production</li>
-              <li>Essential for all poultry diets</li>
+              <li>Facilitates efficient production of high-quality chick meat</li>
+              <li>Reduces nitrogen excreted by livestock</li>
+              <li>Increases egg production</li>
+              <li>Increases weight in broilers</li>
+              <li>Easy to use due to high flowability and good mixability</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Broilers:</strong></p><ul><li>Mix 1-2.5kg per ton of feed</li><li>Higher rates for starter diets</li></ul><p><strong>For Layers:</strong></p><ul><li>Mix 1-1.5kg per ton of feed</li><li>Adjust based on production stage</li></ul><p className="note">Note: Consult nutritionist for precise formulation. Store in a dry, cool place.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 1 ml per 4 litres of drinking water</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Methionine deficiency in poultry diets</li>
-              <li>Poor feather development and feather picking</li>
-              <li>Liver dysfunction and poor protein metabolism</li>
-              <li>Low growth rate and poor feed conversion</li>
-              <li>Reduced egg production from amino acid imbalance</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles. Form: Liquid — Feed Grade 84%</p>,
         },
       ]}
     />

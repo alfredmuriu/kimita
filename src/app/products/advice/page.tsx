@@ -5,41 +5,37 @@ export default function AdviceProduct() {
     <ProductPageLayout
       productName="ADVICE"
       productImage="/images/folio/advice.png"
-      productImageAlt="ADVICE natural treatment for Newcastle disease and viral infections in poultry in Kenya and Africa"
-      description="ADVICE is a premium natural additive formulated to be mixed with drinking water for poultry and livestock. Produced with carefully selected natural extracts including Cinnamon, Garlic, Echinacea, Astragalus, Aloe vera, and citric compounds, plus Lectin and Amantadine. This powerful formulation effectively treats and prevents virus diseases including common cold, influenza, Newcastle disease (ND), infectious bronchitis, and other respiratory viral infections. Trusted by farmers across Kenya and East Africa for reliable disease control without antibiotics."
+      productImageAlt="ADVICE herbal antiviral supplement for Newcastle disease and viral infections in poultry"
+      description="ADVICE is a herbal antiviral supplement formulated to be mixed with drinking water. It is produced with natural extracts — Cinnamon, Garlic, Echinacea, Astragalus, Aloe vera, and citric — plus Lectin and Amantadine. It is used to treat virus diseases including common cold, influenza, Newcastle disease (ND), and infectious bronchitis (IB). It treats cold-pungent diaphoresis, functions as heat-clearing, eliminates disease-causing microorganisms, serves as an anti-inflammation agent, and enhances the immune system."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Treats and prevents Newcastle disease (ND) naturally</li>
-              <li>Effective against infectious bronchitis and respiratory viruses</li>
-              <li>Boosts natural immunity in poultry</li>
-              <li>Reduces mortality during disease outbreaks</li>
-              <li>Safe antibiotic alternative for viral infections</li>
-              <li>Supports faster recovery after illness</li>
-              <li>Easy administration through drinking water</li>
-              <li>Suitable for layers, broilers, and indigenous chickens</li>
+              <li>Mainly used for virus diseases — Newcastle disease (ND), infections and bronchitis (IB)</li>
+              <li>Enhances immunity</li>
+              <li>Improves digestion and absorption</li>
+              <li>Supports growth and development</li>
+              <li>Improves production and performance</li>
+              <li>Supports overall animal health</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Prevention:</strong></p><ul><li>Mix 1ml per 1 liter of drinking water</li><li>Administer for 3-5 consecutive days</li><li>Repeat monthly or during stress periods</li></ul><p><strong>For Treatment:</strong></p><ul><li>Mix 2ml per 1 liter of drinking water</li><li>Administer for 5-7 consecutive days</li><li>Continue until symptoms subside</li></ul><p className="note">Note: Consult with a veterinarian for severe cases. Store in a cool, dry place away from direct sunlight.</p></>
+            <>
+              <ul>
+                <li><strong>Enhancing immunity (Poultry &amp; Livestock):</strong> 1000 ml per 1000 litres of drinking water, once a day</li>
+                <li><strong>Virus diseases (Poultry &amp; Livestock):</strong> 1000 ml per 1000 litres of drinking water for 5 days</li>
+              </ul>
+              <p>This product may be used during the whole production period without any risk or side effects. No withdrawal period.</p>
+            </>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Newcastle disease (ND) in poultry</li>
-              <li>Infectious bronchitis and respiratory viral infections</li>
-              <li>Common cold and influenza in chickens</li>
-              <li>Post-vaccination immune support</li>
-              <li>General viral disease prevention in layers, broilers, and indigenous chickens</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles. Form: Liquid — Code: AKS030</p>,
         },
       ]}
     />

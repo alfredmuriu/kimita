@@ -3,43 +3,36 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 export default function Optimum24Product() {
   return (
     <ProductPageLayout
-      productName="OPTIMUM-24"
+      productName="OPTIMUM24"
       productImage="/products/Optimum-24.png"
-      productImageAlt="OPTIMUM-24 energy booster poultry performance enhancer broiler production Kenya"
-      description="OPTIMUM-24 is a 24-hour energy and performance booster that provides sustained support for animals during periods of high demand. This advanced formulation ensures optimal productivity by delivering essential nutrients around the clock. Perfect for peak production periods, hot weather, and challenging conditions. Trusted by farmers across Kenya and East Africa for maximum poultry performance."
+      productImageAlt="OPTIMUM24 nutritional feed supplement to relieve heat stress in poultry and livestock"
+      description="OPTIMUM24 is a nutritional feed supplement formulated to relieve symptoms and health problems associated with heat stress. It reduces mortality and productivity losses in animals suffering from heat stress due to high ambient temperatures and high relative humidity. Paracetamol provides symptomatic treatment of fever in the context of respiratory diseases in combination with appropriate anti-infective therapy."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Provides 24-hour energy support</li>
-              <li>Boosts overall performance</li>
-              <li>Maintains productivity during stress</li>
-              <li>Improves feed conversion</li>
-              <li>Supports peak egg production</li>
-              <li>Enhances broiler weight gain</li>
-              <li>Reduces production dips</li>
-              <li>Suitable for all production stages</li>
+              <li>Reduces mortality and productivity losses from heat stress</li>
+              <li>Betaine prevents dehydration and retains water in gut mucosal cells</li>
+              <li>Vitamin C relieves heat stress symptoms and health problems</li>
+              <li>Antipyretic — reduces high temperature</li>
+              <li>Used as painkiller and for colic</li>
+              <li>Improves nutrient absorption</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Performance Boost:</strong></p><ul><li>Mix 1ml per 1 liter of drinking water</li><li>Administer continuously during high-demand periods</li></ul><p><strong>For Peak Production:</strong></p><ul><li>Mix 1ml per 2 liters of drinking water</li><li>Use daily during production peak</li></ul><p className="note">Note: Ensure adequate water intake. Store in a cool, dry place.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 250 gm per 1000 litres of drinking water for 3–5 days</li>
+              <li><strong>Calves, Goats, Sheep, Cattle &amp; Horse:</strong> 1 gm per 50 kg bodyweight for 3–5 days</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Low energy and poor performance during peak production</li>
-              <li>Production drops during hot weather or stress</li>
-              <li>Poor feed conversion in broilers and layers</li>
-              <li>Decreased egg production during peak laying</li>
-              <li>General performance decline in all production stages</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 500 gm and 1 KG jars. Form: Powder — Code: AKF41</p>,
         },
       ]}
     />

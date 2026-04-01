@@ -339,6 +339,7 @@
   font-size: 17px;
   line-height: 1.9;
   color: #1f2937;
+  text-align: left;
 }
 
 .blog-content h1,
@@ -577,6 +578,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 150px 20px 60px;
+  text-align: left;
 }
 
 .blog-post-title {

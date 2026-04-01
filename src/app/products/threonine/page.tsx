@@ -3,43 +3,33 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 export default function ThreonineProduct() {
   return (
     <ProductPageLayout
-      productName="THREONINE"
+      productName="THREONINE 65%"
       productImage="/products/therionine.png"
-      productImageAlt="THREONINE amino acid poultry gut health immune function supplement Kenya"
-      description="Threonine is an essential amino acid that supports immune function, intestinal health, and protein balance in livestock. This vital nutrient enhances nutrient absorption, promotes gut integrity, and contributes to overall animal welfare. Essential for optimal growth and production. Trusted by farmers across Kenya and East Africa for amino acid supplementation."
+      productImageAlt="THREONINE 65% essential amino acid supplement for poultry and livestock"
+      description="Threonine is a crucial component of a healthy diet and plays an important role in maintaining optimal health and wellness. Since it cannot be produced by the body, it is important to obtain enough Threonine through the diet or supplementation to meet the body's needs as an energy source. Threonine is the third limiting essential amino acid after Methionine and Lysine in corn-soybean based diets of broilers."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Supports immune system function</li>
-              <li>Promotes intestinal health</li>
-              <li>Enhances gut barrier integrity</li>
-              <li>Improves protein balance</li>
-              <li>Enhances nutrient absorption</li>
-              <li>Supports mucin production</li>
-              <li>Improves feed conversion</li>
-              <li>Essential for optimal growth</li>
+              <li>Essential amino acid that cannot be produced by the body</li>
+              <li>Crucial for maintaining optimal health and wellness</li>
+              <li>Third limiting essential amino acid in broiler diets</li>
+              <li>Supports protein synthesis and overall growth</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Poultry:</strong></p><ul><li>Mix 0.5-1kg per ton of feed</li><li>Adjust based on diet formulation</li></ul><p><strong>For Swine:</strong></p><ul><li>Mix 1-2kg per ton of feed</li><li>Based on growth stage requirements</li></ul><p className="note">Note: Consult nutritionist for precise inclusion rates. Store in a dry place.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 1 ml per 6 litres of drinking water</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Threonine deficiency in poultry and swine diets</li>
-              <li>Poor gut health and intestinal integrity</li>
-              <li>Weakened immune function</li>
-              <li>Low mucin production and poor gut barrier</li>
-              <li>Suboptimal growth and feed conversion</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles. Form: Liquid — 65%</p>,
         },
       ]}
     />

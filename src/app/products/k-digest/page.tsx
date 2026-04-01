@@ -5,41 +5,34 @@ export default function KDigestProduct() {
     <ProductPageLayout
       productName="K-DIGEST"
       productImage="/products/k-digest.png"
-      productImageAlt="K-DIGEST liver health fatty liver treatment poultry digestive supplement Kenya"
-      description="K-Digest is a dietetic liquid supplement formulated to correct fatty liver conditions, prevent liver dysfunctions, and correct digestive disturbances in animals. Specifically designed for animals fed lithogenic diets (high in oil, fat, cholesterol, and cholic acid), K-Digest helps manage the increased supply of free fatty acids to hepatic cells. Trusted by farmers across Kenya and East Africa for liver health management in poultry and livestock."
+      productImageAlt="K-DIGEST dietetic liquid supplement for liver health and digestive disorders in poultry"
+      description="K-Digest is a dietetic liquid supplement formulated to correct fatty liver conditions, prevent liver dysfunctions, and correct digestive disturbances in animals when fed a lithogenic diet (high in oil, fat, cholesterol, and cholic acid), leading to an increased supply of free fatty acids to hepatic cells. It is a refreshing, rehydrating, and stress-relieving oral solution for poultry."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Corrects fatty liver conditions in poultry</li>
-              <li>Prevents liver dysfunction and damage</li>
-              <li>Improves digestive function</li>
-              <li>Enhances fat metabolism</li>
-              <li>Supports liver detoxification</li>
-              <li>Improves feed conversion efficiency</li>
-              <li>Reduces mortality from liver problems</li>
-              <li>Suitable for layers and broilers</li>
+              <li>Corrects fatty liver conditions</li>
+              <li>Prevents liver dysfunctions</li>
+              <li>Corrects digestive disturbances</li>
+              <li>Suitable for animals on lithogenic diets (high in oil, fat, cholesterol, cholic acid)</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Prevention:</strong></p><ul><li>Mix 0.5ml per 1 liter of drinking water</li><li>Administer for 5 consecutive days per month</li></ul><p><strong>For Treatment:</strong></p><ul><li>Mix 1ml per 1 liter of drinking water</li><li>Administer for 7-14 consecutive days</li><li>Continue until liver function improves</li></ul><p className="note">Note: Recommended for flocks on high-energy diets. Consult a veterinarian for severe liver conditions.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 1 litre per 4000 litres of drinking water or as advised by a veterinarian</li>
+              <li><strong>Cattle, horses:</strong> 10 ml per 100 kg bodyweight for 5–7 days</li>
+              <li><strong>Sheep, goats, calves:</strong> 20 ml per 100 kg bodyweight for 5–7 days</li>
+              <li><strong>Pigs:</strong> 500 ml per 1,000 litres of drinking water for 5–7 days</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Fatty liver syndrome (hepatic lipidosis) in poultry</li>
-              <li>Liver dysfunction from high-fat diets</li>
-              <li>Digestive disturbances and poor fat metabolism</li>
-              <li>High mortality from liver problems</li>
-              <li>Animals on lithogenic diets (high oil/fat/cholesterol)</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles and 5L cans. Form: Liquid — Code: AKS17</p>,
         },
       ]}
     />

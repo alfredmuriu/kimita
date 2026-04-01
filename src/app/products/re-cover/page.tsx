@@ -5,41 +5,35 @@ export default function RecoverProduct() {
     <ProductPageLayout
       productName="RE-COVER"
       productImage="/products/re-cover.png"
-      productImageAlt="RE-COVER disease recovery supplement poultry livestock rapid healing Kenya"
-      description="RE-COVER is a specialized recovery formula designed to help animals bounce back quickly from disease, stress, or treatment. This powerful formulation restores energy levels, replenishes essential nutrients, and promotes rapid recovery. Ideal for use after illness, antibiotic treatment, or any stressful event. Trusted by farmers across Kenya and East Africa for fast and effective recovery support."
+      productImageAlt="RE-COVER refreshing, rehydrating and stress-relieving oral solution for poultry"
+      description="RE-COVER is a refreshing, rehydrating, and stress-relieving oral solution for poultry. It reduces mortality and productivity losses in animals suffering from heat stress due to high ambient temperatures and high relative humidity. Betaine prevents dehydration as it retains water in the mucosal cells of the gut wall, which reduces water loss in faeces and improves faecal consistency."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Promotes rapid recovery from illness</li>
-              <li>Restores energy and vitality</li>
-              <li>Replenishes lost electrolytes</li>
-              <li>Supports gut health after antibiotics</li>
-              <li>Stimulates appetite</li>
-              <li>Reduces recovery time</li>
-              <li>Minimizes production losses</li>
-              <li>Suitable for all poultry and livestock</li>
+              <li>Reduces mortality and productivity losses from heat stress</li>
+              <li>Prevents dehydration — Betaine retains water in gut mucosal cells</li>
+              <li>Improves faecal consistency and reduces water loss</li>
+              <li>Vitamin C relieves symptoms associated with heat stress</li>
+              <li>Broad-spectrum supplement for poultry and livestock</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>Post-Disease Recovery:</strong></p><ul><li>Mix 2ml per 1 liter of drinking water</li><li>Administer for 5-7 consecutive days</li></ul><p><strong>Post-Antibiotic Treatment:</strong></p><ul><li>Mix 1ml per 1 liter of drinking water</li><li>Administer for 3-5 days after treatment</li></ul><p className="note">Note: Ensure clean, fresh water is available. Store in a cool place.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 1 litre per 4000 litres of drinking water or as advised by a veterinarian</li>
+              <li><strong>Cattle, horses:</strong> 10 ml per 100 kg bodyweight for 5–7 days</li>
+              <li><strong>Sheep, goats, calves:</strong> 20 ml per 100 kg bodyweight for 5–7 days</li>
+              <li><strong>Pigs:</strong> 500 ml per 1,000 litres of drinking water for 5–7 days</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Post-disease recovery in poultry and livestock</li>
-              <li>Gut health restoration after antibiotic treatment</li>
-              <li>Electrolyte imbalance and dehydration after illness</li>
-              <li>Appetite loss and weight drop after stress or disease</li>
-              <li>General convalescence support for all animals</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles and 5L cans. Form: Liquid — Code: AKS2017015</p>,
         },
       ]}
     />

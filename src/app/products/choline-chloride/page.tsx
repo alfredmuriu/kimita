@@ -3,43 +3,37 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 export default function CholineChlorideProduct() {
   return (
     <ProductPageLayout
-      productName="CHOLINE CHLORIDE"
+      productName="CHOLINE CHLORIDE 70%"
       productImage="/products/chlorine-chloride.png"
-      productImageAlt="CHOLINE CHLORIDE fatty liver prevention egg production poultry supplement Kenya"
-      description="Choline Chloride is essential for fat metabolism, liver function, and nerve transmission in animals. This vital nutrient prevents fatty liver disease and supports optimal growth and egg production. An indispensable component of modern poultry nutrition. Trusted by farmers across Kenya and East Africa for liver health and enhanced production performance."
+      productImageAlt="CHOLINE CHLORIDE 70% feed additive to increase growth rate and reduce fatty liver syndrome"
+      description="Choline Chloride plays a significant role in nutrition and is used in the feed to increase growth rate, strengthen immunity, and reduce fatty liver syndrome of poultry. Choline Chloride supports the immune system of animals. It is also known for its ability to increase fertility, accelerate weight gain, and improve the quality of litter eggs. Choline prevents abnormal storage of fat in the liver, which ensures proper body metabolism and efficient utilization of nutrients."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Prevents fatty liver disease</li>
-              <li>Essential for fat metabolism</li>
-              <li>Supports liver function</li>
-              <li>Improves nerve transmission</li>
-              <li>Enhances egg production</li>
-              <li>Supports optimal growth</li>
-              <li>Improves feed conversion</li>
-              <li>Essential for all poultry diets</li>
+              <li>Increases growth rate</li>
+              <li>Strengthens immunity</li>
+              <li>Reduces fatty liver syndrome in poultry</li>
+              <li>Increases fertility</li>
+              <li>Accelerates weight gain</li>
+              <li>Improves the quality of litter eggs</li>
+              <li>Prevents abnormal storage of fat in the liver</li>
+              <li>Ensures proper body metabolism and nutrient utilization</li>
             </ul>
           ),
         },
         {
           title: 'Dosage',
           content: (
-            <><p><strong>For Layers:</strong></p><ul><li>Mix 0.5-1kg per ton of feed</li><li>Use continuously throughout production</li></ul><p><strong>For Broilers:</strong></p><ul><li>Mix 0.75-1.5kg per ton of feed</li><li>Higher rates for rapid growth phase</li></ul><p className="note">Note: Adjust based on other choline sources in diet. Store in a dry place.</p></>
+            <ul>
+              <li><strong>Poultry:</strong> 1 ml per 8 litres of drinking water</li>
+            </ul>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Fatty liver disease (hepatic lipidosis) in poultry</li>
-              <li>Poor fat metabolism and liver dysfunction</li>
-              <li>Low egg production in layers</li>
-              <li>Nerve transmission problems</li>
-              <li>Choline deficiency in poultry diets</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles. Form: Liquid — 70%</p>,
         },
       ]}
     />

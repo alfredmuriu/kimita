@@ -3,23 +3,20 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 export default function ADE3Product() {
   return (
     <ProductPageLayout
-      productName="ADE-3"
+      productName="AD3E 100/20/20"
       productImage="/products/AD3E.png"
-      productImageAlt="ADE-3 poultry vitamins A D3 E for egg production hatchability Kenya"
-      description="ADE-3 is a premium vitamin supplement effective for treating vitamin deficiencies in farm animals. This powerful formulation promotes growth rate, enhances performance, and improves feed efficiency. ADE-3 supports poultry health by preventing vitamin deficiencies, boosting disease resistance, and improving egg production and hatchability. Trusted by farmers across Kenya and East Africa for optimal poultry nutrition."
+      productImageAlt="AD3E 100/20/20 vitamins A, D3 and E supplement for poultry and livestock"
+      description="AD3E 100/20/20 is effective for vitamin deficiencies in farm animals, for growth rate promotion, enhancement of performance and feed efficiency. It is indicated for Vitamin E and/or Selenium deficiency, encephalomalacia (Crazy Chick Disease), muscular dystrophy (White Muscle Disease, Stiff Lamb Disease), exudative diathesis (Generalised Oedematous Condition), and decreased hatchability of egg production."
       sections={[
         {
           title: 'Benefits',
           content: (
             <ul>
-              <li>Promotes optimal growth rate</li>
-              <li>Enhances overall animal performance</li>
-              <li>Improves feed efficiency</li>
-              <li>Boosts disease resistance</li>
-              <li>Improves egg production in layers</li>
-              <li>Enhances hatchability rates</li>
-              <li>Supports bone development</li>
-              <li>Prevents vitamin deficiency symptoms</li>
+              <li>Prevention of vitamin insufficiencies in poultry</li>
+              <li>Strengthens resistance to diseases</li>
+              <li>Improvement of egg production and hatchability</li>
+              <li>Promotion of growth rates and improves feed efficiency</li>
+              <li>Helps for weakness and lack of growth in animals</li>
             </ul>
           ),
         },
@@ -27,32 +24,19 @@ export default function ADE3Product() {
           title: 'Dosage',
           content: (
             <>
-              <p><strong>For Maintenance:</strong></p>
               <ul>
-                <li>Mix 0.5ml per 1 liter of drinking water</li>
-                <li>Administer for 3-5 days monthly</li>
+                <li><strong>Poultry:</strong> 1 ml per 4 litres of drinking water or as advised by a veterinarian</li>
+                <li><strong>Horses, cattle:</strong> 5–10 ml per animal during 2–3 days</li>
+                <li><strong>Foals, calves:</strong> 5 ml per animal during 2–3 days</li>
+                <li><strong>Pigs, sheep, goats:</strong> 2–3 ml per animal during 2–3 days</li>
               </ul>
-              <p><strong>For Deficiency Treatment:</strong></p>
-              <ul>
-                <li>Mix 1ml per 1 liter of drinking water</li>
-                <li>Administer for 5-7 consecutive days</li>
-              </ul>
-              <p className="note">Note: Store in a cool, dark place. Protect from direct sunlight.</p>
+              <p>Medicated drinking water should be used within 24 hours.</p>
             </>
           ),
         },
         {
-          title: 'Indication',
-          content: (
-            <ul>
-              <li>Vitamin A, D3, and E deficiencies in poultry and livestock</li>
-              <li>Poor egg production and low hatchability in layers</li>
-              <li>Weak bone development and rickets</li>
-              <li>Reduced growth rate and poor feed conversion</li>
-              <li>Lowered disease resistance and immunity</li>
-              <li>Post-vaccination stress recovery</li>
-            </ul>
-          ),
+          title: 'Packing',
+          content: <p>Available in 1L bottles and 5L cans. Form: Liquid — Code: AKS43</p>,
         },
       ]}
     />
