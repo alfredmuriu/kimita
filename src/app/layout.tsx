@@ -16,6 +16,27 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Agrikima',
+  url: 'https://www.agrikima.co.ke',
+  logo: 'https://www.agrikima.co.ke/favicon.png',
+  description: "Africa's trusted provider of natural poultry health solutions, livestock supplements, and veterinary products.",
+  telephone: '+254111410639',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+254111410639',
+    contactType: 'sales',
+    areaServed: 'KE',
+  },
+  sameAs: [
+    'https://www.facebook.com/AgriKimaSdnBhd/',
+    'https://x.com/AgrikimaB',
+    'https://www.linkedin.com/company/agrikima/',
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -38,6 +59,10 @@ export default function RootLayout({
         </Script>
       </head>
       <body id="top" className="ss-show">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         {children}
         <Analytics />
         <Script src="/js/plugins.js" strategy="beforeInteractive" />

@@ -26,26 +26,66 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": ["Organization", "WebSite"],
-    "name": "Agrikima",
-    "url": "https://www.agrikima.co.ke",
-    "logo": "https://www.agrikima.co.ke/favicon.png",
-    "description": "Africa's trusted provider of natural poultry health solutions and livestock supplements.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+254111410639",
-      "contactType": "sales",
-      "areaServed": "KE"
-    }
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What treats Newcastle disease in poultry naturally?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'ADVICE is a herbal antiviral supplement that treats Newcastle disease (ND) and infectious bronchitis (IB). It contains natural extracts of Cinnamon, Garlic, Echinacea, Astragalus, and Aloe vera, mixed into drinking water. BIOGARD-99 and IMMUSOL also boost immunity against viral diseases.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I improve egg production in my layers?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AGRILAYER is a premium layer feed supplement that maximizes egg production, strengthens eggshell quality, and maintains hen health throughout the laying cycle. Use 2.5–5kg per ton of feed continuously. AGRIVITAM liquid vitamins and CHOLINE CHLORIDE also support consistent egg production.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the best supplement to increase broiler weight gain?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Use AGRISTARTER for day 0–14, AGRIGROWER for day 14–28, and AGRIFINISHER for day 28–42 to maximize broiler weight at each stage. AGRITONIC liquid supplement boosts feed conversion and overall productivity throughout the cycle.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How can I prevent coccidiosis in chickens without antibiotics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'BIO-GAR is a natural probiotic and prebiotic supplement that prevents coccidiosis through gut health support. It promotes healthy digestion, improves nutrient absorption, and supports natural immunity — without the antibiotic resistance risks of conventional treatments.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are Agrikima products safe alternatives to antibiotics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Agrikima\'s products like BIO-GAR, GONAT, BIOGARD-99, and IMMUSOL are formulated with medicinal plant extracts, garlic, probiotics, and natural antimicrobials that support animal health without creating antibiotic resistance. They are safe for use across all livestock species.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I protect my livestock from mycotoxins in feed?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AGRITOXINILSTOP is a powerful mycotoxin binder that protects poultry and livestock from aflatoxins, ochratoxins, and other harmful mycotoxins in contaminated feed. It is essential for feed safety in tropical climates where mold contamination is common.',
+        },
+      },
+    ],
   };
 
   return (
     <Layout>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <LightboxInit />
       <section id="intro" className="s-intro target-section">

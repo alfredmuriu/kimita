@@ -149,8 +149,34 @@ function AcademyInner() {
     setOpenDropdown(null);
   };
 
+  const allVideos = Object.values(ACADEMY_DATA).flatMap(sections =>
+    sections.flatMap(section =>
+      section.videos.map(video => ({
+        '@type': 'VideoObject',
+        name: video.title,
+        description: `Learn about ${video.title} in this Agrikima Academy farming video guide.`,
+        thumbnailUrl: `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`,
+        embedUrl: `https://www.youtube.com/embed/${video.id}`,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Agrikima',
+          url: 'https://www.agrikima.co.ke',
+        },
+      }))
+    )
+  );
+
+  const videoSchema = {
+    '@context': 'https://schema.org',
+    '@graph': allVideos,
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
       <style dangerouslySetInnerHTML={{
         __html: `
         body, .s-header, .s-header__inner, .s-header__nav, .s-header__menu-links, .s-header__social, #page, .s-pagewrap, .s-content, main {

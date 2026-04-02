@@ -29,8 +29,29 @@ export default function ProductPageLayout({
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: productName,
+    description: description,
+    image: `https://www.agrikima.co.ke${productImage}`,
+    brand: {
+      '@type': 'Brand',
+      name: 'Agrikima',
+    },
+    manufacturer: {
+      '@type': 'Organization',
+      name: 'Agrikima',
+      url: 'https://www.agrikima.co.ke',
+    },
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <style dangerouslySetInnerHTML={{
         __html: `
         body, .s-header, .s-header__inner, .s-header__nav, .s-header__menu-links, .s-header__social, .dropdown-menu {
