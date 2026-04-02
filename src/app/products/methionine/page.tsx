@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'METHIONINE — First Limiting Amino Acid for Poultry Nutrition | Agrikima',
+  description: 'Methionine supports protein metabolism, feather development, and liver function in poultry. The first limiting amino acid — critical for feed conversion and healthy growth.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/methionine' },
+  openGraph: {
+    title: 'METHIONINE — First Limiting Amino Acid for Poultry Nutrition | Agrikima',
+    description: 'Methionine supports protein metabolism, feather development, and liver function in poultry. The first limiting amino acid — critical for feed conversion and healthy growth.',
+    url: 'https://www.agrikima.co.ke/products/methionine',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function MethionineProduct() {
   return (

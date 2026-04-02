@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'K-DIGEST — Liver Health & Digestive Support Supplement for Poultry | Agrikima',
+  description: 'K-DIGEST corrects fatty liver conditions, prevents liver dysfunctions, and relieves digestive disturbances in poultry. A refreshing, rehydrating oral solution for stressed birds.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/k-digest' },
+  openGraph: {
+    title: 'K-DIGEST — Liver Health & Digestive Support Supplement for Poultry | Agrikima',
+    description: 'K-DIGEST corrects fatty liver conditions, prevents liver dysfunctions, and relieves digestive disturbances in poultry. A refreshing, rehydrating oral solution for stressed birds.',
+    url: 'https://www.agrikima.co.ke/products/k-digest',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function KDigestProduct() {
   return (

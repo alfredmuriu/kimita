@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'RE-COVER — Rehydrating & Heat Stress Relief Oral Solution for Poultry | Agrikima',
+  description: 'RE-COVER is a refreshing rehydrating oral solution for poultry. Reduces mortality from heat stress, retains gut moisture, and improves faecal consistency with Betaine.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/re-cover' },
+  openGraph: {
+    title: 'RE-COVER — Rehydrating & Heat Stress Relief Oral Solution for Poultry | Agrikima',
+    description: 'RE-COVER is a refreshing rehydrating oral solution for poultry. Reduces mortality from heat stress, retains gut moisture, and improves faecal consistency with Betaine.',
+    url: 'https://www.agrikima.co.ke/products/re-cover',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function RecoverProduct() {
   return (

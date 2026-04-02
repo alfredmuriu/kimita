@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'DCP-18 — Dicalcium Phosphate for Strong Bones in Poultry & Livestock | Agrikima',
+  description: 'DCP-18 is a feed-grade dicalcium phosphate with 18% phosphorus and 21% calcium. Supports strong bone development, healthy growth, and balanced mineral nutrition in all livestock.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/dcp-18' },
+  openGraph: {
+    title: 'DCP-18 — Dicalcium Phosphate for Strong Bones in Poultry & Livestock | Agrikima',
+    description: 'DCP-18 is a feed-grade dicalcium phosphate with 18% phosphorus and 21% calcium. Supports strong bone development, healthy growth, and balanced mineral nutrition in all livestock.',
+    url: 'https://www.agrikima.co.ke/products/dcp-18',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function DCP18Product() {
   return (

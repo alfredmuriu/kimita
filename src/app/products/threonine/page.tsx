@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'THREONINE 65% — Third Limiting Amino Acid for Broilers & Livestock | Agrikima',
+  description: 'Threonine 65% is the third limiting essential amino acid in corn-soybean broiler diets. Supports optimal health, wellness, and protein utilization in poultry and livestock.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/threonine' },
+  openGraph: {
+    title: 'THREONINE 65% — Third Limiting Amino Acid for Broilers & Livestock | Agrikima',
+    description: 'Threonine 65% is the third limiting essential amino acid in corn-soybean broiler diets. Supports optimal health, wellness, and protein utilization in poultry and livestock.',
+    url: 'https://www.agrikima.co.ke/products/threonine',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function ThreonineProduct() {
   return (

@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'GONAT — Garlic & Onion Extract Immunity Booster for Livestock | Agrikima',
+  description: 'GONAT is a natural oral supplement from garlic and onion extracts. Allicin and quercetin provide antimicrobial and antioxidant properties to strengthen animals\' natural disease defenses.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/gonat' },
+  openGraph: {
+    title: 'GONAT — Garlic & Onion Extract Immunity Booster for Livestock | Agrikima',
+    description: 'GONAT is a natural oral supplement from garlic and onion extracts. Allicin and quercetin provide antimicrobial and antioxidant properties to strengthen animals\' natural disease defenses.',
+    url: 'https://www.agrikima.co.ke/products/gonat',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function GonatProduct() {
   return (

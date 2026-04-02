@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'TOXINIL — Acidifying Gut Health & Microflora Balancing Supplement | Agrikima',
+  description: 'TOXINIL is a concentrated acidifying formulation that optimizes gut pH, promotes digestion, facilitates nutrient absorption, and restores gut health after antibiotic use in livestock.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/toxinil' },
+  openGraph: {
+    title: 'TOXINIL — Acidifying Gut Health & Microflora Balancing Supplement | Agrikima',
+    description: 'TOXINIL is a concentrated acidifying formulation that optimizes gut pH, promotes digestion, facilitates nutrient absorption, and restores gut health after antibiotic use in livestock.',
+    url: 'https://www.agrikima.co.ke/products/toxinil',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function ToxinilProduct() {
   return (

@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'CHOLINE CHLORIDE 70% — Liver Health & Growth Rate Feed Additive | Agrikima',
+  description: 'Choline Chloride 70% increases growth rate, strengthens immunity, reduces fatty liver syndrome, improves egg quality, and ensures proper nutrient metabolism in poultry.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/choline-chloride' },
+  openGraph: {
+    title: 'CHOLINE CHLORIDE 70% — Liver Health & Growth Rate Feed Additive | Agrikima',
+    description: 'Choline Chloride 70% increases growth rate, strengthens immunity, reduces fatty liver syndrome, improves egg quality, and ensures proper nutrient metabolism in poultry.',
+    url: 'https://www.agrikima.co.ke/products/choline-chloride',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function CholineChlorideProduct() {
   return (

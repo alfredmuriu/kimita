@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'MIX5 — 5-in-1 Respiratory Supplement for Poultry & Livestock | Agrikima',
+  description: 'MIX5 contains 5 plant extracts with antibacterial, antiviral, antifungal, and anti-inflammatory effects. Relieves respiratory problems, reduces heat stress, and eases post-vaccination reactions.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/mix-5' },
+  openGraph: {
+    title: 'MIX5 — 5-in-1 Respiratory Supplement for Poultry & Livestock | Agrikima',
+    description: 'MIX5 contains 5 plant extracts with antibacterial, antiviral, antifungal, and anti-inflammatory effects. Relieves respiratory problems, reduces heat stress, and eases post-vaccination reactions.',
+    url: 'https://www.agrikima.co.ke/products/mix-5',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function Mix5Product() {
   return (

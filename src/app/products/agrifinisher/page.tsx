@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRIFINISHER — Broiler Finisher Feed Additive | Agrikima',
+  description: 'AGRIFINISHER maximizes weight gain and meat quality in the final broiler growth phase (28–42 days). Improves feed conversion and promotes superior carcass quality.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agrifinisher' },
+  openGraph: {
+    title: 'AGRIFINISHER — Broiler Finisher Feed Additive | Agrikima',
+    description: 'AGRIFINISHER maximizes weight gain and meat quality in the final broiler growth phase (28–42 days). Improves feed conversion and promotes superior carcass quality.',
+    url: 'https://www.agrikima.co.ke/products/agrifinisher',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgrifinisherProduct() {
   return (

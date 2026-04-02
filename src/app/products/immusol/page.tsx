@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'IMMUSOL — Medicinal Plant Extract Immunity Supplement for Poultry | Agrikima',
+  description: 'IMMUSOL uses mixed medicinal plant extracts including Black Seed for immunomodulatory response against Newcastle disease, IB, IBD, and reducing coccidial burden in broilers.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/immusol' },
+  openGraph: {
+    title: 'IMMUSOL — Medicinal Plant Extract Immunity Supplement for Poultry | Agrikima',
+    description: 'IMMUSOL uses mixed medicinal plant extracts including Black Seed for immunomodulatory response against Newcastle disease, IB, IBD, and reducing coccidial burden in broilers.',
+    url: 'https://www.agrikima.co.ke/products/immusol',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function ImmusolProduct() {
   return (

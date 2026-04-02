@@ -4,8 +4,12 @@ import { Analytics } from '@vercel/analytics/next';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.agrikima.co.ke'),
   title: 'Agrikima',
   description: 'Africa\'s leading provider of Agriculture and Veterinary products',
+  alternates: {
+    canonical: 'https://www.agrikima.co.ke',
+  },
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',

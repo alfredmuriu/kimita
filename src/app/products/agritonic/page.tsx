@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRITONIC — Liquid Poultry Health & Productivity Supplement | Agrikima',
+  description: 'AGRITONIC is a powerful liquid feed supplement that boosts broiler weight gain, improves feed conversion, and enhances layer productivity with essential vitamins and minerals.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agritonic' },
+  openGraph: {
+    title: 'AGRITONIC — Liquid Poultry Health & Productivity Supplement | Agrikima',
+    description: 'AGRITONIC is a powerful liquid feed supplement that boosts broiler weight gain, improves feed conversion, and enhances layer productivity with essential vitamins and minerals.',
+    url: 'https://www.agrikima.co.ke/products/agritonic',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgritonicProduct() {
   return (

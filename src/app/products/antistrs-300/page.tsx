@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'ANTISTRS-300 — Pain Relief, Fever Reduction & Disease Resistance | Agrikima',
+  description: 'ANTISTRS-300 relieves pain, reduces fever, and increases resistance to bacterial and viral diseases in poultry, pigeons, and parrots. Includes Vitamin C and Paracetamol.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/antistrs-300' },
+  openGraph: {
+    title: 'ANTISTRS-300 — Pain Relief, Fever Reduction & Disease Resistance | Agrikima',
+    description: 'ANTISTRS-300 relieves pain, reduces fever, and increases resistance to bacterial and viral diseases in poultry, pigeons, and parrots. Includes Vitamin C and Paracetamol.',
+    url: 'https://www.agrikima.co.ke/products/antistrs-300',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function Antistrs300Product() {
   return (

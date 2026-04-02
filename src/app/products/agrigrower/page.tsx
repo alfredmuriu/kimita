@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRIGROWER — Poultry Grower Feed Additive | Agrikima',
+  description: 'AGRIGROWER supports optimal growth and development during the critical 14–28 day growing phase. Builds strong skeletal structure, muscle, and immune system in broilers.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agrigrower' },
+  openGraph: {
+    title: 'AGRIGROWER — Poultry Grower Feed Additive | Agrikima',
+    description: 'AGRIGROWER supports optimal growth and development during the critical 14–28 day growing phase. Builds strong skeletal structure, muscle, and immune system in broilers.',
+    url: 'https://www.agrikima.co.ke/products/agrigrower',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgrigrowerProduct() {
   return (

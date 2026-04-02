@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'ADVICE — Herbal Antiviral Supplement for Newcastle Disease & Poultry | Agrikima',
+  description: 'ADVICE is a herbal antiviral water supplement with Cinnamon, Garlic, Echinacea, and Aloe vera. Treats Newcastle disease, infectious bronchitis, and viral infections in poultry.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/advice' },
+  openGraph: {
+    title: 'ADVICE — Herbal Antiviral Supplement for Newcastle Disease & Poultry | Agrikima',
+    description: 'ADVICE is a herbal antiviral water supplement with Cinnamon, Garlic, Echinacea, and Aloe vera. Treats Newcastle disease, infectious bronchitis, and viral infections in poultry.',
+    url: 'https://www.agrikima.co.ke/products/advice',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AdviceProduct() {
   return (

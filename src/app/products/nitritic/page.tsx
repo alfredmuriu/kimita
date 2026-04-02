@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'NUTRITIC — Garlic Extract & Yeast Culture Natural Feed Additive | Agrikima',
+  description: 'NUTRITIC combines garlic extract and Saccharomyces Cerevisiae yeast culture for antimicrobial action against E. coli and Salmonella, improved gut health, and enhanced feed intake.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/nitritic' },
+  openGraph: {
+    title: 'NUTRITIC — Garlic Extract & Yeast Culture Natural Feed Additive | Agrikima',
+    description: 'NUTRITIC combines garlic extract and Saccharomyces Cerevisiae yeast culture for antimicrobial action against E. coli and Salmonella, improved gut health, and enhanced feed intake.',
+    url: 'https://www.agrikima.co.ke/products/nitritic',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function NitriticProduct() {
   return (

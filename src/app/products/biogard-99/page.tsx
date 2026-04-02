@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'BIOGARD-99 — Herbal Immunity Booster & Antiviral Supplement | Agrikima',
+  description: 'BIOGARD-99 is a herbal liquid supplement with medicinal plant extracts that enhances immunity and protects livestock against viral and microbial diseases naturally.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/biogard-99' },
+  openGraph: {
+    title: 'BIOGARD-99 — Herbal Immunity Booster & Antiviral Supplement | Agrikima',
+    description: 'BIOGARD-99 is a herbal liquid supplement with medicinal plant extracts that enhances immunity and protects livestock against viral and microbial diseases naturally.',
+    url: 'https://www.agrikima.co.ke/products/biogard-99',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function Biogard99Product() {
   return (

@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'BIO-GAR — Natural Probiotic for Gut Health & Coccidiosis Prevention | Agrikima',
+  description: 'BIO-GAR is a natural probiotic and prebiotic supplement that promotes healthy digestion, improves nutrient absorption, and supports natural immunity against coccidiosis in poultry.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/bio-gar' },
+  openGraph: {
+    title: 'BIO-GAR — Natural Probiotic for Gut Health & Coccidiosis Prevention | Agrikima',
+    description: 'BIO-GAR is a natural probiotic and prebiotic supplement that promotes healthy digestion, improves nutrient absorption, and supports natural immunity against coccidiosis in poultry.',
+    url: 'https://www.agrikima.co.ke/products/bio-gar',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function BioGarProduct() {
   return (

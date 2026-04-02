@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'OPTIMUM24 — Heat Stress Relief Nutritional Supplement for Livestock | Agrikima',
+  description: 'OPTIMUM24 relieves heat stress in poultry and livestock, reduces fever with Paracetamol, and prevents mortality and productivity losses during periods of high ambient temperatures.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/optimum-24' },
+  openGraph: {
+    title: 'OPTIMUM24 — Heat Stress Relief Nutritional Supplement for Livestock | Agrikima',
+    description: 'OPTIMUM24 relieves heat stress in poultry and livestock, reduces fever with Paracetamol, and prevents mortality and productivity losses during periods of high ambient temperatures.',
+    url: 'https://www.agrikima.co.ke/products/optimum-24',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function Optimum24Product() {
   return (

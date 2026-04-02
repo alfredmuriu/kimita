@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'DL-METHIONINE Feed Grade 84% — Essential Amino Acid Supplement | Agrikima',
+  description: 'DL-Methionine 84% facilitates efficient production of high-quality poultry meat, reduces nitrogen excretion, and corrects amino acid deficiencies in all farm animal diets.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/dl-methionine' },
+  openGraph: {
+    title: 'DL-METHIONINE Feed Grade 84% — Essential Amino Acid Supplement | Agrikima',
+    description: 'DL-Methionine 84% facilitates efficient production of high-quality poultry meat, reduces nitrogen excretion, and corrects amino acid deficiencies in all farm animal diets.',
+    url: 'https://www.agrikima.co.ke/products/dl-methionine',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function DLMethionineProduct() {
   return (

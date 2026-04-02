@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRIPIG-SOW — Sow Feed Supplement for Reproduction & Lactation | Agrikima',
+  description: 'AGRIPIG-SOW supports breeding sows through all stages of reproduction and lactation. Improves conception rates, milk production, and piglet vitality.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agripig-sow' },
+  openGraph: {
+    title: 'AGRIPIG-SOW — Sow Feed Supplement for Reproduction & Lactation | Agrikima',
+    description: 'AGRIPIG-SOW supports breeding sows through all stages of reproduction and lactation. Improves conception rates, milk production, and piglet vitality.',
+    url: 'https://www.agrikima.co.ke/products/agripig-sow',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgripigSowProduct() {
   return (

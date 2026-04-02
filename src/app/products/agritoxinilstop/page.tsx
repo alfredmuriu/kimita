@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRITOXINILSTOP — Mycotoxin Binder & Aflatoxin Prevention | Agrikima',
+  description: 'AGRITOXINILSTOP binds aflatoxins, ochratoxins, and other mycotoxins in contaminated feed. Protects poultry and livestock health in tropical climates with high mold risk.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agritoxinilstop' },
+  openGraph: {
+    title: 'AGRITOXINILSTOP — Mycotoxin Binder & Aflatoxin Prevention | Agrikima',
+    description: 'AGRITOXINILSTOP binds aflatoxins, ochratoxins, and other mycotoxins in contaminated feed. Protects poultry and livestock health in tropical climates with high mold risk.',
+    url: 'https://www.agrikima.co.ke/products/agritoxinilstop',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgritoxinilstopProduct() {
   return (

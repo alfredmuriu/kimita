@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRISTARTER — Chick Starter Feed Additive | Agrikima',
+  description: 'AGRISTARTER is a premium chick starter feed additive for the first 14 days. Reduces early mortality, supports gut development, and sets chicks up for lifelong performance.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agristarter' },
+  openGraph: {
+    title: 'AGRISTARTER — Chick Starter Feed Additive | Agrikima',
+    description: 'AGRISTARTER is a premium chick starter feed additive for the first 14 days. Reduces early mortality, supports gut development, and sets chicks up for lifelong performance.',
+    url: 'https://www.agrikima.co.ke/products/agristarter',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgristarterProduct() {
   return (

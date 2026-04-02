@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRILAYER — Layer Feed Supplement for Egg Production | Agrikima',
+  description: 'AGRILAYER maximizes egg production rate, strengthens eggshell quality, and maintains hen health throughout the laying cycle. Ideal for all laying hens from point of lay.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agrilayer' },
+  openGraph: {
+    title: 'AGRILAYER — Layer Feed Supplement for Egg Production | Agrikima',
+    description: 'AGRILAYER maximizes egg production rate, strengthens eggshell quality, and maintains hen health throughout the laying cycle. Ideal for all laying hens from point of lay.',
+    url: 'https://www.agrikima.co.ke/products/agrilayer',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgrilayerProduct() {
   return (

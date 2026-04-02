@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'LYSINE — Essential Amino Acid for Muscle Development & Growth | Agrikima',
+  description: 'Lysine is an essential amino acid critical for protein synthesis, muscle development, and growth in poultry and swine. The second limiting amino acid in poultry nutrition.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/lysine' },
+  openGraph: {
+    title: 'LYSINE — Essential Amino Acid for Muscle Development & Growth | Agrikima',
+    description: 'Lysine is an essential amino acid critical for protein synthesis, muscle development, and growth in poultry and swine. The second limiting amino acid in poultry nutrition.',
+    url: 'https://www.agrikima.co.ke/products/lysine',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function LysineProduct() {
   return (

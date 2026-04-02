@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AD3E 100/20/20 — Vitamins A, D3 & E Supplement for Poultry & Livestock | Agrikima',
+  description: 'AD3E 100/20/20 treats vitamin deficiencies in farm animals, promotes growth, prevents encephalomalacia, muscular dystrophy, and improves hatchability and egg production performance.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/ade-3' },
+  openGraph: {
+    title: 'AD3E 100/20/20 — Vitamins A, D3 & E Supplement for Poultry & Livestock | Agrikima',
+    description: 'AD3E 100/20/20 treats vitamin deficiencies in farm animals, promotes growth, prevents encephalomalacia, muscular dystrophy, and improves hatchability and egg production performance.',
+    url: 'https://www.agrikima.co.ke/products/ade-3',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function ADE3Product() {
   return (

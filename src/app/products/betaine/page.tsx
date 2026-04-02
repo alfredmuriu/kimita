@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'BETAINE 50% — Feed Absorption & Heat Stress Supplement for Poultry | Agrikima',
+  description: 'Betaine 50% increases feed absorption efficiency, improves bodyweight and breast meat yield, reduces abdominal fat, and helps birds cope with heat stress conditions.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/betaine' },
+  openGraph: {
+    title: 'BETAINE 50% — Feed Absorption & Heat Stress Supplement for Poultry | Agrikima',
+    description: 'Betaine 50% increases feed absorption efficiency, improves bodyweight and breast meat yield, reduces abdominal fat, and helps birds cope with heat stress conditions.',
+    url: 'https://www.agrikima.co.ke/products/betaine',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function BetaineProduct() {
   return (

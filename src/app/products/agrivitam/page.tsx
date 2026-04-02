@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+
+export const metadata: Metadata = {
+  title: 'AGRIVITAM — Liquid Vitamin & Mineral Supplement for Poultry | Agrikima',
+  description: 'AGRIVITAM provides all essential vitamins and minerals in highly bioavailable forms to support poultry health, stress recovery, and enhanced layer egg production.',
+  alternates: { canonical: 'https://www.agrikima.co.ke/products/agrivitam' },
+  openGraph: {
+    title: 'AGRIVITAM — Liquid Vitamin & Mineral Supplement for Poultry | Agrikima',
+    description: 'AGRIVITAM provides all essential vitamins and minerals in highly bioavailable forms to support poultry health, stress recovery, and enhanced layer egg production.',
+    url: 'https://www.agrikima.co.ke/products/agrivitam',
+    siteName: 'Agrikima',
+  },
+};
 
 export default function AgrivitamProduct() {
   return (
