@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import ScrollDownButton from '@/components/ScrollDownButton';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -119,18 +120,11 @@ export default function Products() {
         <img src="/products/wheatfarmlogo.jpg" alt="Natural poultry health products and livestock supplements Kenya" className="intro-image-slide-in products-hero-image" />
       </div>
 
-      <div className="go-to-natural-btn animate-slide-in-up" style={{ display: 'flex', justifyContent: 'center', marginTop: '-10px', marginBottom: '30px' }}>
-        <a className="smoothscroll scroll-pulse-btn" title="Go to Natural Solutions" href="#natural" aria-label="Go to Natural Solutions">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" style={{ fill: '#fff' }}>
-            <path d="M12 16l-6-6h12z" />
-          </svg>
-          <span className="u-screen-reader-text" style={{ color: '#fff' }}>Go to Natural Solutions</span>
-        </a>
-      </div>
+      <ScrollDownButton targetId="natural" />
 
       <main>
         <section id="folio" className="s-folio target-section">
-          <h2 id="natural" className="column lg-12 section-header__pretitle pretitle text-pretitle products-category-title">NATURAL SOLUTIONS</h2>
+          <h2 id="natural" className="column lg-12 section-header__pretitle pretitle text-pretitle products-category-title" style={{ scrollMarginTop: '100px', outline: 'none' }}>NATURAL SOLUTIONS</h2>
           <div id="bricks" className="row bricks">
             <div className="column lg-12 masonry">
               <div className="bricks-wrapper">

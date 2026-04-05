@@ -3,9 +3,6 @@
 @import url('/css/products.css');
 @import url('/css/downloads.css');
 
-html {
-  scroll-behavior: smooth;
-}
 
 /* ===== ACADEMY PAGE ===== */
 
@@ -562,15 +559,20 @@ html {
 }
 
 .scroll-pulse-btn {
-  background: #026c6a;
+  background: #026c6a !important;
+  border: none;
   border-radius: 50%;
   width: 56px;
   height: 56px;
+  min-width: 56px;
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
   position: relative;
+  cursor: pointer;
+  padding: 0;
 }
 
 .scroll-pulse-btn::before,

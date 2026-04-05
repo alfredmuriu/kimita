@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Layout from '@/components/Layout';
 import VideoModal from '@/components/VideoModal';
+import ScrollDownButton from '@/components/ScrollDownButton';
 
 interface Video {
   id: string;
@@ -63,6 +64,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
       { id: 'L0iE79JJGnM', title: 'Nutritional Deficiency' },
       { id: 'Cz94nOBYuDg', title: 'Behavioural Abnormalities' },
       { id: 'mViMyFUUikY', title: 'Poultry Vaccination' },
+      { id: 'hWWo1bpb_uw', title: 'Poultry Diseases' },
     ],
   },
   {
@@ -71,6 +73,13 @@ const POULTRY_SECTIONS: CategorySection[] = [
     videos: [
       { id: 'mVyLbzEBlgU', title: 'Poultry Welfare' },
       { id: '5Z2lv3cia0M', title: 'Poultry Biosecurity Guide' },
+    ],
+  },
+  {
+    name: 'FARM MANAGEMENT & RECORDS',
+    anchor: 'poultry-management',
+    videos: [
+      { id: 'cSuL_AN9OmQ', title: 'Poultry Record Keeping' },
     ],
   },
 ];
@@ -84,10 +93,11 @@ const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'FEEDING',
+    name: 'FEEDING & SUPPLEMENTING',
     anchor: 'large-animal-feeding',
     videos: [
       { id: 'uNpJjeUrbFg', title: 'Large Animal Feeding' },
+      { id: 'ZZ2ZobpI_z0', title: 'Supplementing' },
     ],
   },
   {
@@ -102,6 +112,27 @@ const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
     anchor: 'large-animal-breeding',
     videos: [
       { id: '5_gmI60MgXY', title: 'Breeding and Reproduction' },
+    ],
+  },
+  {
+    name: 'HEALTH MANAGEMENT',
+    anchor: 'large-animal-health',
+    videos: [
+      { id: 'oOQjk5dsfu0', title: 'Health Management' },
+    ],
+  },
+  {
+    name: 'SUSTAINABILITY & NATURAL PRACTICES',
+    anchor: 'large-animal-sustainability',
+    videos: [
+      { id: 'PpOrLwIHwRU', title: 'Sustainability and Natural Practices' },
+    ],
+  },
+  {
+    name: 'BUSINESS & MARKETING',
+    anchor: 'large-animal-business',
+    videos: [
+      { id: 'EuiljNR8FOw', title: 'Marketing and Revenue Addition' },
     ],
   },
 ];
@@ -290,13 +321,7 @@ function AcademyInner() {
           <img src="/images/agrikima-academy.png" alt="Agrikima Academy — Poultry and Livestock Farming Video Courses" className="intro-image-slide-in products-hero-image" />
         </div>
 
-        <div className="go-to-natural-btn animate-slide-in-up" style={{ display: 'flex', justifyContent: 'center', marginTop: '-10px', marginBottom: '30px' }}>
-          <a className="scroll-pulse-btn" href="#academy-content" aria-label="Scroll to videos">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" style={{ fill: '#fff' }}>
-              <path d="M12 16l-6-6h12z" />
-            </svg>
-          </a>
-        </div>
+        <ScrollDownButton targetId="academy-content" />
 
         <div id="academy-content" style={{ backgroundColor: '#f9fafb', paddingTop: '60px', paddingBottom: '80px', borderTop: '1px solid #f3f4f6' }}>
           <div className="academy-content-wrapper">
