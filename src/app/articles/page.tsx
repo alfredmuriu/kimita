@@ -60,13 +60,13 @@ export default async function Blog({
   const filteredPosts =
     activeCategory === 'All'
       ? allPosts
-      : allPosts.filter((p) => p.category === activeCategory);
+      : allPosts.filter((p) => p.category?.toLowerCase() === activeCategory.toLowerCase());
 
   const counts: Record<string, number> = {
     All: allPosts.length,
-    Poultry: allPosts.filter((p) => p.category === 'Poultry').length,
-    Dairy: allPosts.filter((p) => p.category === 'Dairy').length,
-    Pigs: allPosts.filter((p) => p.category === 'Pigs').length,
+    Poultry: allPosts.filter((p) => p.category?.toLowerCase() === 'poultry').length,
+    Dairy: allPosts.filter((p) => p.category?.toLowerCase() === 'dairy').length,
+    Pigs: allPosts.filter((p) => p.category?.toLowerCase() === 'pigs').length,
   };
 
   const jsonLd = {
