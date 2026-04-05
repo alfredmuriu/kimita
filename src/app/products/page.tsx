@@ -110,12 +110,17 @@ export default function Products() {
             Boost broiler weight gain &amp; layer egg production naturally. <br />
             Trusted by dairy, poultry &amp; livestock farmers across Africa.
           </p>
+          <div className="hero-badges">
+            <span className="hero-badge">✓ 28 Products</span>
+            <span className="hero-badge">✓ Trusted across Africa</span>
+            <span className="hero-badge">✓ Natural &amp; Antibiotic-Free</span>
+          </div>
         </div>
         <img src="/products/wheatfarmlogo.jpg" alt="Natural poultry health products and livestock supplements Kenya" className="intro-image-slide-in products-hero-image" />
       </div>
 
       <div className="go-to-natural-btn animate-slide-in-up" style={{ display: 'flex', justifyContent: 'center', marginTop: '-10px', marginBottom: '30px' }}>
-        <a className="smoothscroll" title="Go to Natural Solutions" href="#natural" aria-label="Go to Natural Solutions" style={{ background: '#026c6a', borderRadius: '50%', width: '56px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 24px rgba(0,0,0,0.12)', transition: 'background 0.2s' }}>
+        <a className="smoothscroll scroll-pulse-btn" title="Go to Natural Solutions" href="#natural" aria-label="Go to Natural Solutions">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" style={{ fill: '#fff' }}>
             <path d="M12 16l-6-6h12z" />
           </svg>

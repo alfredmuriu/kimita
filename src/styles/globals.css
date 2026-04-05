@@ -3,6 +3,10 @@
 @import url('/css/products.css');
 @import url('/css/downloads.css');
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== ACADEMY PAGE ===== */
 
 /* Hero */
@@ -533,9 +537,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: radial-gradient(circle, rgba(1, 77, 75, 0.12) 1.5px, transparent 1.5px);
-  background-size: 28px 28px;
-  border-radius: 12px;
 }
 
 .products-hero-image {
@@ -552,6 +553,65 @@
   font-size: 25px;
   margin-left: 60px;
   font-family: Inter, sans-serif;
+}
+
+/* Scroll down pulse button */
+@keyframes scroll-pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.scroll-pulse-btn {
+  background: #026c6a;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.scroll-pulse-btn::before,
+.scroll-pulse-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(1, 77, 75, 0.35);
+  animation: scroll-pulse 2.2s ease-out infinite;
+}
+
+.scroll-pulse-btn::after {
+  animation-delay: 1.1s;
+}
+
+.scroll-pulse-btn:hover {
+  background: #014d4b;
+}
+
+/* Hero trust badges */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border: 1.5px solid rgba(1, 77, 75, 0.4);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #014d4b !important;
+  background-color: rgba(1, 77, 75, 0.06);
+  letter-spacing: 0.3px;
 }
 
 /* Blog listing container */

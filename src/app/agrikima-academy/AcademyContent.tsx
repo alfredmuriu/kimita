@@ -281,11 +281,24 @@ function AcademyInner() {
               Learn from our experts — practical video guides on poultry feeding,
               brooding, housing, health, welfare, biosecurity, and more to help you succeed.
             </p>
+            <div className="hero-badges">
+              <span className="hero-badge">✓ Learn at Your Own Pace</span>
+              <span className="hero-badge">✓ Poultry &amp; Livestock</span>
+              <span className="hero-badge">✓ Expert-Led Training</span>
+            </div>
           </div>
           <img src="/images/agrikima-academy.png" alt="Agrikima Academy — Poultry and Livestock Farming Video Courses" className="intro-image-slide-in products-hero-image" />
         </div>
 
-        <div style={{ backgroundColor: '#f9fafb', paddingTop: '60px', paddingBottom: '80px', borderTop: '1px solid #f3f4f6' }}>
+        <div className="go-to-natural-btn animate-slide-in-up" style={{ display: 'flex', justifyContent: 'center', marginTop: '-10px', marginBottom: '30px' }}>
+          <a className="scroll-pulse-btn" href="#academy-content" aria-label="Scroll to videos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" style={{ fill: '#fff' }}>
+              <path d="M12 16l-6-6h12z" />
+            </svg>
+          </a>
+        </div>
+
+        <div id="academy-content" style={{ backgroundColor: '#f9fafb', paddingTop: '60px', paddingBottom: '80px', borderTop: '1px solid #f3f4f6' }}>
           <div className="academy-content-wrapper">
             <aside className="academy-sidebar">
               <div className="academy-sidebar-sticky">
