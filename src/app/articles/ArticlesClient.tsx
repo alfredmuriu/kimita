@@ -154,8 +154,8 @@ export default function ArticlesClient({ posts, activeCategory, counts }: Articl
         }
       `}} />
 
-      <h1 className="s-intro__content-title page-title">What&apos;s New</h1>
-      <p className="page-subtitle">Agricultural insights and tips for farmers</p>
+      <h1 className="s-intro__content-title page-title">Farming Tips &amp; Agricultural Insights</h1>
+      <p className="page-subtitle">Practical guides and expert advice for poultry, dairy, and livestock farmers across Africa</p>
 
       <div className="articles-bg-wrapper">
         <div className="articles-content-wrapper">
