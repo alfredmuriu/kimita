@@ -1,0 +1,492 @@
+/* ── Scope reset — neutralise site-wide CSS ──────────────── */
+/* :where() has zero specificity (0,0,0), so it loses to any
+   class selector (0,1,0) that follows, letting our classes win.
+   But it still strips the site's element-level styles first.    */
+
+:where(.page) input,
+:where(.page) textarea,
+:where(.page) select {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+:where(.page) button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+:where(.page) form {
+  margin-bottom: 0;
+}
+
+/* ── Page shell ─────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 28px 16px 72px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ── Top bar ─────────────────────────────────────────────── */
+.topBar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.toggleGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toggleBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  color: #666666;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.toggleBtn.active,
+.toggleBtn:global(.active) {
+  background: #2D6A4F;
+  color: #ffffff;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  cursor: pointer;
+  background: #ffffff;
+  color: #2D6A4F;
+  border: 1px solid #2D6A4F;
+  transition: background 0.18s ease, color 0.18s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.downloadBtn:hover {
+  background: #2D6A4F;
+  color: #ffffff;
+}
+
+/* ── Section headings ────────────────────────────────────── */
+.sectionHeading {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2D6A4F;
+  margin-top: 32px;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* ── Field groups ────────────────────────────────────────── */
+.fieldGroup {
+  margin-top: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: #e53935;
+  margin-left: 2px;
+}
+
+/* ── Inputs / Selects / Textareas ────────────────────────── */
+.input,
+.select,
+.textarea {
+  width: 100% !important;
+  padding: 9px 14px !important;
+  font-size: 15px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  color: #1a1a1a !important;
+  background: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #2D6A4F !important;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1) !important;
+}
+
+.inputError {
+  border-color: #e53935 !important;
+}
+
+.textarea {
+  min-height: 80px !important;
+  resize: vertical !important;
+  height: auto !important;
+}
+
+/* ── Select wrapper (custom arrow) ──────────────────────── */
+.selectWrapper {
+  position: relative;
+}
+
+.selectWrapper::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #888888;
+  pointer-events: none;
+}
+
+/* ── Error message ───────────────────────────────────────── */
+.errorMsg {
+  font-size: 12px;
+  color: #e53935;
+  margin-top: 4px;
+}
+
+/* ── Multi-select pills ──────────────────────────────────── */
+.pillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.pill {
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  color: #555555;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.pillSelected {
+  background: #2D6A4F;
+  color: #ffffff;
+  border-color: #2D6A4F;
+}
+
+/* ── Search box ──────────────────────────────────────────── */
+.searchBlock {
+  margin-bottom: 24px;
+}
+
+.searchLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 100% !important;
+  padding: 9px 14px !important;
+  font-size: 15px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  color: #1a1a1a !important;
+  background: #f5f5f5 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+.searchInput:focus {
+  border-color: #2D6A4F !important;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1) !important;
+  background: #ffffff !important;
+}
+
+.searchDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+  overflow: hidden;
+}
+
+.searchItem {
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1a1a1a;
+  transition: background 0.1s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.searchItem:last-child {
+  border-bottom: none;
+}
+
+.searchItem:hover {
+  background: #f9f9f9;
+}
+
+.searchItemEmpty {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #999999;
+  cursor: default;
+}
+
+.returningBadge {
+  display: inline-block;
+  padding: 5px 14px;
+  background: #e8f5e9;
+  color: #2D6A4F;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 999px;
+  margin-top: 8px;
+}
+
+/* ── Submit button ───────────────────────────────────────── */
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 36px;
+  background: #2D6A4F;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-height: 48px;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.submitBtn:hover {
+  background: #245a42;
+}
+
+.submitBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ── Success message ─────────────────────────────────────── */
+.successWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #2D6A4F;
+  color: #ffffff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.successTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.successSub {
+  font-size: 15px;
+  color: #555555;
+  margin-bottom: 28px;
+}
+
+.resetLink {
+  color: #2D6A4F;
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* ── Download modal ──────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.modalTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.modalConfirmBtn {
+  width: 100%;
+  padding: 12px 0;
+  background: #2D6A4F;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 12px;
+  min-height: 44px;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.modalConfirmBtn:hover {
+  background: #245a42;
+}
+
+.modalConfirmBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.modalCancel {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666666;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.modalError {
+  font-size: 13px;
+  color: #e53935;
+  margin-top: 8px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 520px) {
+  .topBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .downloadBtn {
+    align-self: flex-end;
+    width: auto;
+  }
+}
