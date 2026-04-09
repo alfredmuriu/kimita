@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'IMMUSOL — Medicinal Plant Extract Immunity Supplement for Poultry | Agrikima',
@@ -45,6 +46,7 @@ export default function ImmusolProduct() {
           content: <p>Available in 1L bottles. Form: Liquid</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('immusol')}
     />
   );
 }

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'AGRIPIG-SOW — Sow Feed Supplement for Reproduction & Lactation | Agrikima',
@@ -55,6 +56,7 @@ export default function AgripigSowProduct() {
           ),
         },
       ]}
+      relatedProducts={getRelatedProducts('agripig-sow')}
     />
   );
 }

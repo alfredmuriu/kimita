@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import BlogCard from './BlogCard';
 import { BlogPost } from '@/lib/supabase';
 
-const CATEGORIES = ['All', 'Poultry', 'Dairy', 'Pigs'];
+const CATEGORIES = ['All', 'Poultry', 'Dairy', 'Pigs', 'Livestock', 'Feed Milling'];
 
 interface ArticlesClientProps {
   posts: BlogPost[];
@@ -108,10 +108,17 @@ export default function ArticlesClient({ posts, activeCategory, counts }: Articl
             align-items: center;
         }
         .sidebar-link:hover,
-        .sidebar-item.active > .sidebar-link,
-        .sidebar-link:hover span,
-        .sidebar-item.active > .sidebar-link span {
+        .sidebar-link:hover span {
             color: #014d4b !important;
+        }
+        .sidebar-item.active > .sidebar-link,
+        .sidebar-item.active > .sidebar-link span {
+            color: #166534 !important;
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
         }
         .sidebar-item-count {
             font-size: 12px;
@@ -171,7 +178,7 @@ export default function ArticlesClient({ posts, activeCategory, counts }: Articl
                     className={`sidebar-item ${activeCategory === cat ? 'active' : ''}`}
                   >
                     <div className="sidebar-link" onClick={() => handleFilter(cat)}>
-                      <span>{cat === 'All' ? 'All Posts' : cat}</span>
+                      <span>{cat === 'All' ? 'ALL POSTS' : cat === 'Livestock' ? 'GOATS AND SHEEP' : cat === 'Feed Milling' ? 'FEED MILLING' : cat.toUpperCase()}</span>
                       <span className="sidebar-item-count">{counts[cat] ?? 0}</span>
                     </div>
                   </li>

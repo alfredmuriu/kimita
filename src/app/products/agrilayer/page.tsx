@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'AGRILAYER — Layer Feed Supplement for Egg Production | Agrikima',
@@ -55,6 +56,7 @@ export default function AgrilayerProduct() {
           ),
         },
       ]}
+      relatedProducts={getRelatedProducts('agrilayer')}
     />
   );
 }

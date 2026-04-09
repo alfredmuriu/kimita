@@ -8,12 +8,15 @@ interface AccordionSection {
   content: React.ReactNode;
 }
 
+import { RelatedProduct } from '@/lib/related-products';
+
 interface ProductPageLayoutProps {
   productName: string;
   productImage: string;
   productImageAlt: string;
   description: string;
   sections: AccordionSection[];
+  relatedProducts?: RelatedProduct[];
 }
 
 export default function ProductPageLayout({
@@ -22,6 +25,7 @@ export default function ProductPageLayout({
   productImageAlt,
   description,
   sections,
+  relatedProducts = [],
 }: ProductPageLayoutProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -76,6 +80,16 @@ export default function ProductPageLayout({
         .s-header__menu-links > .dropdown > .dropdown-menu a:hover {
             color: #014d4b !important;
         }
+        .related-products { padding: 60px 0 80px; border-top: 1px solid #f0f0f0; max-width: 960px; margin: 0 auto; }
+        .related-products__title { font-size: 22px; font-weight: 700; color: #111; margin-bottom: 32px; }
+        .related-products__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .related-product-card { border: 1px solid #ebebeb; border-radius: 12px; overflow: hidden; text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s; background: #f9f9f9; position: relative; }
+        .related-product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+        .related-product-card__img { width: 100%; height: 280px; object-fit: contain; padding: 28px 28px 80px; display: block; }
+        .related-product-card__body { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; background: #fff; border-top: 1px solid #ebebeb; }
+        .related-product-card__name { font-size: 14px; font-weight: 600; color: #111 !important; }
+        .related-product-card__arrow { width: 36px; height: 36px; border-radius: 50%; background: #014d4b; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        @media (max-width: 700px) { .related-products__grid { grid-template-columns: 1fr; } }
         `
       }} />
       <main className="product-detail-main">
@@ -156,6 +170,27 @@ export default function ProductPageLayout({
           </div>
 
         </div>
+
+        {relatedProducts.length > 0 && (
+          <div className="related-products">
+            <h2 className="related-products__title">Related products</h2>
+            <div className="related-products__grid">
+              {relatedProducts.map((p) => (
+                <a key={p.slug} href={`/products/${p.slug}`} className="related-product-card">
+                  <img src={p.image} alt={p.name} className="related-product-card__img" />
+                  <div className="related-product-card__body">
+                    <span className="related-product-card__name">{p.name}</span>
+                    <span className="related-product-card__arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </main>
     </Layout>
   );

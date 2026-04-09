@@ -4,6 +4,7 @@ import { getSupabase, BlogPost } from '@/lib/supabase';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getRecommendedProduct } from '@/lib/product-recommendations';
+import { getRelatedVideos } from '@/lib/related-videos';
 
 // Revalidate every 60 seconds to show blog post edits
 export const revalidate = 60;
@@ -61,6 +62,8 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) {
     notFound();
   }
+
+  const relatedVideos = getRelatedVideos(post.keywords || [], post.title);
 
   const formattedDate = post.published_at
     ? new Date(post.published_at).toLocaleDateString('en-US', {
@@ -166,6 +169,34 @@ export default async function BlogPostPage({ params }: PageProps) {
                     Explore Products
                   </Link>
                 </section>
+
+                {/* Related Academy Videos */}
+                {relatedVideos.length > 0 && (
+                  <section className="related-videos-section">
+                    <p className="related-videos-pretitle">Agrikima Academy</p>
+                    <h2 className="related-videos-title">Watch related videos</h2>
+                    <div className="related-videos-grid">
+                      {relatedVideos.map(video => (
+                        <a key={video.id} href={`/agrikima-academy?category=${video.anchor}`} className="related-video-card">
+                          <div className="related-video-thumb">
+                            <img src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`} alt={video.title} />
+                            <div className="related-video-play">
+                              <div className="related-video-play-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="related-video-body">
+                            <p>{video.title}</p>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                    <div className="related-videos-footer">
+                      <Link href="/agrikima-academy">Browse all videos →</Link>
+                    </div>
+                  </section>
+                )}
               </>
             );
           })()}

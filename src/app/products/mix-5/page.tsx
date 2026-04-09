@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'MIX5 — 5-in-1 Respiratory Supplement for Poultry & Livestock | Agrikima',
@@ -48,6 +49,7 @@ export default function Mix5Product() {
           content: <p>Available in 1L bottles and 5L cans. Form: Liquid — Code: AKS031</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('mix-5')}
     />
   );
 }

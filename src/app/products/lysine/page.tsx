@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'LYSINE — Essential Amino Acid for Muscle Development & Growth | Agrikima',
@@ -55,6 +56,7 @@ export default function LysineProduct() {
           ),
         },
       ]}
+      relatedProducts={getRelatedProducts('lysine')}
     />
   );
 }

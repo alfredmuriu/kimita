@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'ADVICE — Herbal Antiviral Supplement for Newcastle Disease & Poultry | Agrikima',
@@ -51,6 +52,7 @@ export default function AdviceProduct() {
           content: <p>Available in 1L bottles. Form: Liquid — Code: AKS030</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('advice')}
     />
   );
 }

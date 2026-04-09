@@ -57,9 +57,14 @@ export default async function Blog({
   const allPosts = await getAllBlogPosts();
   const activeCategory = searchParams.category || 'All';
 
+  const isLivestock = (p: BlogPost) =>
+    p.category?.toLowerCase() === 'livestock' || !p.category;
+
   const filteredPosts =
     activeCategory === 'All'
       ? allPosts
+      : activeCategory.toLowerCase() === 'livestock'
+      ? allPosts.filter(isLivestock)
       : allPosts.filter((p) => p.category?.toLowerCase() === activeCategory.toLowerCase());
 
   const counts: Record<string, number> = {
@@ -67,6 +72,8 @@ export default async function Blog({
     Poultry: allPosts.filter((p) => p.category?.toLowerCase() === 'poultry').length,
     Dairy: allPosts.filter((p) => p.category?.toLowerCase() === 'dairy').length,
     Pigs: allPosts.filter((p) => p.category?.toLowerCase() === 'pigs').length,
+    Livestock: allPosts.filter(isLivestock).length,
+    'Feed Milling': allPosts.filter((p) => p.category?.toLowerCase() === 'feed milling').length,
   };
 
   const jsonLd = {

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'CHOLINE CHLORIDE 70% — Liver Health & Growth Rate Feed Additive | Agrikima',
@@ -49,6 +50,7 @@ export default function CholineChlorideProduct() {
           content: <p>Available in 1L bottles. Form: Liquid — 70%</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('choline-chloride')}
     />
   );
 }

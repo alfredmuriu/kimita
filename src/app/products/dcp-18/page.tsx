@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'DCP-18 — Dicalcium Phosphate for Strong Bones in Poultry & Livestock | Agrikima',
@@ -55,6 +56,7 @@ export default function DCP18Product() {
           ),
         },
       ]}
+      relatedProducts={getRelatedProducts('dcp-18')}
     />
   );
 }

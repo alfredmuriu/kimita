@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'DL-METHIONINE Feed Grade 84% — Essential Amino Acid Supplement | Agrikima',
@@ -46,6 +47,7 @@ export default function DLMethionineProduct() {
           content: <p>Available in 1L bottles. Form: Liquid — Feed Grade 84%</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('dl-methionine')}
     />
   );
 }

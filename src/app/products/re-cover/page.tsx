@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'RE-COVER — Rehydrating & Heat Stress Relief Oral Solution for Poultry | Agrikima',
@@ -49,6 +50,7 @@ export default function RecoverProduct() {
           content: <p>Available in 1L bottles and 5L cans. Form: Liquid — Code: AKS2017015</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('re-cover')}
     />
   );
 }

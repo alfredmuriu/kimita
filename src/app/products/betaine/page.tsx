@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'BETAINE 50% — Feed Absorption & Heat Stress Supplement for Poultry | Agrikima',
@@ -48,6 +49,7 @@ export default function BetaineProduct() {
           content: <p>Available in 1L bottles. Form: Liquid</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('betaine')}
     />
   );
 }

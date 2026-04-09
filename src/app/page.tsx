@@ -1,7 +1,12 @@
 import Layout from '@/components/Layout';
 import FAQ from '@/components/FAQ';
 import LightboxInit from '@/components/LightboxInit';
+import BlogCard from '@/app/articles/BlogCard';
+import ContactFormSection from '@/app/contact/ContactFormSection';
+import { getSupabase, BlogPost } from '@/lib/supabase';
 import { Metadata } from 'next';
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: 'Agrikima | Natural Poultry & Livestock Health Solutions in Africa',
@@ -25,7 +30,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+async function getRecentPosts(): Promise<BlogPost[]> {
+  const supabase = getSupabase();
+  if (!supabase) return [];
+  const { data } = await supabase
+    .from('blog_posts')
+    .select('*')
+    .eq('status', 'published')
+    .order('published_at', { ascending: false })
+    .limit(3);
+  return data || [];
+}
+
+export default async function Home() {
+  const recentPosts = await getRecentPosts();
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -481,26 +499,142 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="folio" className="s-folio target-section" style={{ marginTop: '-175px' }}>
+      <section id="folio" className="s-folio target-section" style={{ marginTop: '-175px', backgroundColor: '#1C1C24' }}>
+        <style dangerouslySetInnerHTML={{ __html: `
+          .academy-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto 48px auto;
+            padding: 0 20px;
+          }
+          .academy-card {
+            text-decoration: none;
+            display: block;
+            transition: transform 0.25s;
+          }
+          .academy-card:hover {
+            transform: translateY(-4px);
+          }
+          .academy-card:hover .academy-card-img {
+            box-shadow: 0 14px 36px rgba(0,0,0,0.45);
+          }
+          .academy-card-img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+            transition: box-shadow 0.25s;
+          }
+          .academy-card-body {
+            padding: 16px 4px 0;
+          }
+          .academy-card-title {
+            font-size: 17px;
+            font-weight: 400;
+            color: #ffffff !important;
+            margin-bottom: 6px;
+            line-height: 1.4;
+          }
+          .academy-card-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #5ecfcd !important;
+          }
+          @media (max-width: 800px) {
+            .academy-cards {
+              grid-template-columns: 1fr;
+            }
+          }
+          @media (min-width: 801px) and (max-width: 1050px) {
+            .academy-cards {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+        `}} />
+
         <div className="row section-header light-on-dark">
           <h3 className="column lg-12 section-header__pretitle text-pretitle">Agrikima Academy</h3>
           <div className="column lg-6 stack-on-1100 section-header__primary">
             <h2 className="title text-display-1">
-              Access trusted guides on poultry and livestock farming, including feeding programs, vaccination schedules and disease prevention.
+              Stop guessing. Farm smarter with free expert-led video training.
             </h2>
           </div>
           <div className="column lg-6 stack-on-1100 section-header__secondary">
             <p className="desc">
-              Practical poultry and livestock farming resources, made simple to help you make informed decisions at every stage of production.
+              Step-by-step guides on disease prevention, feeding programs, vaccination, and farm profitability — built for African farmers, available for free. Watch on your own schedule and apply what you learn the same day.
             </p>
           </div>
         </div>
 
-        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{ marginTop: '-60px', marginBottom: '30px' }}>
+        <div className="academy-cards">
+          <a href="/agrikima-academy?category=getting-started" className="academy-card">
+            <img src="/images/img1.jpg" alt="Poultry farming training" className="academy-card-img" />
+            <div className="academy-card-body">
+              <div className="academy-card-title">Poultry Farming</div>
+              <span className="academy-card-label">Broiler & Layer · Disease Prevention</span>
+            </div>
+          </a>
+
+          <a href="/agrikima-academy?category=large-animal-housing" className="academy-card">
+            <img src="/images/img2.jpg" alt="Larger animals farming training" className="academy-card-img" />
+            <div className="academy-card-body">
+              <div className="academy-card-title">Large Animals</div>
+              <span className="academy-card-label">Cattle, Goats & Livestock</span>
+            </div>
+          </a>
+
+          <a href="/agrikima-academy?category=poultry-management" className="academy-card">
+            <img src="/images/img3.jpg" alt="Farm management and records training" className="academy-card-img" />
+            <div className="academy-card-body">
+              <div className="academy-card-title">Farm Management</div>
+              <span className="academy-card-label">Records · Biosecurity · Profitability</span>
+            </div>
+          </a>
+        </div>
+
+        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{ marginTop: '-20px', marginBottom: '30px' }}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
               <a href="/agrikima-academy" className="btn btn--primary u-fullwidth cta-btn" style={{ backgroundColor: 'rgb(2, 108, 106)' }}>
-                View Resources
+                Start Learning Free
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="s-services target-section" style={{ backgroundColor: '#f9fafb' }}>
+        <div className="row section-header">
+          <h3 className="column lg-12 section-header__pretitle text-pretitle" style={{ color: '#014d4b' }}>What&apos;s New</h3>
+          <div className="column lg-6 stack-on-1100 section-header__primary">
+            <h2 className="title text-display-1" style={{ color: '#111111' }}>
+              Fresh farming tips and insights, straight from our experts.
+            </h2>
+          </div>
+          <div className="column lg-6 stack-on-1100 section-header__secondary">
+            <p className="desc" style={{ color: '#444444' }}>
+              Stay ahead with practical guides on poultry health, livestock management, disease prevention, and everything in between — updated regularly for African farmers.
+            </p>
+          </div>
+        </div>
+
+        <div className="row" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+          <div className="blog-listing" style={{ width: '100%' }}>
+            {recentPosts.length > 0
+              ? recentPosts.map((post) => <BlogCard key={post.id} post={post} />)
+              : <p style={{ color: '#666' }}>No posts found.</p>
+            }
+          </div>
+        </div>
+
+        <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{ marginTop: '40px', marginBottom: '20px' }}>
+          <div className="column list-block__item">
+            <div className="s-footer__contact-btn">
+              <a href="/articles" className="btn btn--stroke u-fullwidth cta-btn">
+                Browse All Articles
               </a>
             </div>
           </div>
@@ -508,6 +642,10 @@ export default function Home() {
       </section>
 
       <FAQ />
+
+      <section style={{ backgroundColor: '#ffffff', borderTop: '1px solid #f3f4f6' }}>
+        <ContactFormSection paddingTop="60px" />
+      </section>
     </Layout>
   );
 }

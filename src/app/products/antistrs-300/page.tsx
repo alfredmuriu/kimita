@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'ANTISTRS-300 — Pain Relief, Fever Reduction & Disease Resistance | Agrikima',
@@ -49,6 +50,7 @@ export default function Antistrs300Product() {
           content: <p>Available in 500 gm jars. Form: Powder — Code: AKS040</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('antistrs-300')}
     />
   );
 }

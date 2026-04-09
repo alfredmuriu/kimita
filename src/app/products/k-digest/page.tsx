@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'K-DIGEST — Liver Health & Digestive Support Supplement for Poultry | Agrikima',
@@ -48,6 +49,7 @@ export default function KDigestProduct() {
           content: <p>Available in 1L bottles and 5L cans. Form: Liquid — Code: AKS17</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('k-digest')}
     />
   );
 }

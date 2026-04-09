@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase';
-import { generateBlogPost, generateBlogImage } from '@/lib/openai';
+import { generateBlogPost } from '@/lib/openai';
+import { generateBlogImageGemini } from '@/lib/gemini';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic'; // Prevent build-time evaluation
@@ -8,7 +9,7 @@ export const maxDuration = 120; // Allow up to 120 seconds for AI generation + i
 
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
 
-// Generate image with DALL·E 3, download it, upload to Supabase Storage, return permanent URL
+// Generate image with Nano Banana Pro (Gemini), upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
   topic: string,
   keywords: string[],
@@ -18,20 +19,11 @@ async function generateAndUploadImage(
   if (!supabaseAdmin) return DEFAULT_IMAGE;
 
   try {
-    // 1. Generate image with DALL·E 3
-    const tempUrl = await generateBlogImage(topic, keywords);
-
-    // 2. Download the image from the temporary DALL·E URL
-    const imageResponse = await fetch(tempUrl);
-    if (!imageResponse.ok) {
-      console.error('Failed to download DALL·E image:', imageResponse.status);
-      return DEFAULT_IMAGE;
-    }
-
-    const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
+    // 1. Generate image with Nano Banana Pro — returns Buffer directly (no temp URL needed)
+    const imageBuffer = await generateBlogImageGemini(topic);
     const fileName = `${slug}-${Date.now()}.png`;
 
-    // 3. Upload to Supabase Storage (blog-images bucket)
+    // 2. Upload to Supabase Storage (blog-images bucket)
     const { error: uploadError } = await supabaseAdmin.storage
       .from('blog-images')
       .upload(fileName, imageBuffer, {
@@ -45,7 +37,7 @@ async function generateAndUploadImage(
       return DEFAULT_IMAGE;
     }
 
-    // 4. Get the permanent public URL
+    // 3. Get the permanent public URL
     const { data: publicUrlData } = supabaseAdmin.storage
       .from('blog-images')
       .getPublicUrl(fileName);
@@ -148,7 +140,7 @@ export async function GET(request: NextRequest) {
       existingTitles
     );
 
-    // Generate a unique featured image with DALL·E 3 and upload to Supabase Storage
+    // Generate a unique featured image with Nano Banana Pro and upload to Supabase Storage
     const featuredImage = await generateAndUploadImage(
       topic.topic,
       generatedContent.keywords,

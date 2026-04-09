@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'NUTRITIC — Garlic Extract & Yeast Culture Natural Feed Additive | Agrikima',
@@ -50,6 +51,7 @@ export default function NitriticProduct() {
           content: <p>Available in 25 KG pails. Form: Powder — Code: AKF007</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('nitritic')}
     />
   );
 }

@@ -19,7 +19,7 @@ interface CategorySection {
 
 const POULTRY_SECTIONS: CategorySection[] = [
   {
-    name: 'GETTING STARTED',
+    name: 'Getting Started',
     anchor: 'getting-started',
     videos: [
       { id: '-m51mnGrLEU', title: 'Introduction to Poultry Farming' },
@@ -27,7 +27,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'BROODING & EARLY CHICK CARE',
+    name: 'Brooding & Early Chick Care',
     anchor: 'brooding',
     videos: [
       { id: 'TaL6EPbtPkQ', title: 'Brooding' },
@@ -36,7 +36,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'POULTRY FEEDING',
+    name: 'Poultry Feeding',
     anchor: 'poultry-feeding',
     videos: [
       { id: '2I3kSMEcXKY', title: 'Feed Types, Forms and Practical Feeding Tips' },
@@ -47,7 +47,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'POULTRY HOUSING & FARM SETUP',
+    name: 'Poultry Housing & Farm Setup',
     anchor: 'poultry-housing',
     videos: [
       { id: 'QkucCuQs4D0', title: 'Building the Perfect Poultry House' },
@@ -57,7 +57,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'POULTRY HEALTH & DISEASE',
+    name: 'Poultry Health & Disease',
     anchor: 'poultry-health',
     videos: [
       { id: 'mYjMDoP5rQE', title: 'Anti Microbial Resistance' },
@@ -68,7 +68,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'POULTRY WELFARE & BIOSECURITY',
+    name: 'Poultry Welfare & Biosecurity',
     anchor: 'poultry-welfare',
     videos: [
       { id: 'mVyLbzEBlgU', title: 'Poultry Welfare' },
@@ -76,7 +76,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'FARM MANAGEMENT & RECORDS',
+    name: 'Farm Management & Records',
     anchor: 'poultry-management',
     videos: [
       { id: 'cSuL_AN9OmQ', title: 'Poultry Record Keeping' },
@@ -86,14 +86,14 @@ const POULTRY_SECTIONS: CategorySection[] = [
 
 const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
   {
-    name: 'HOUSING & FARM SETUP',
+    name: 'Housing & Farm Setup',
     anchor: 'large-animal-housing',
     videos: [
       { id: 'UxhKRZK4KgI', title: 'Large Animal Housing' },
     ],
   },
   {
-    name: 'FEEDING & SUPPLEMENTING',
+    name: 'Feeding & Supplementing',
     anchor: 'large-animal-feeding',
     videos: [
       { id: 'uNpJjeUrbFg', title: 'Large Animal Feeding' },
@@ -101,35 +101,35 @@ const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
     ],
   },
   {
-    name: 'PRODUCTION',
+    name: 'Production',
     anchor: 'large-animal-production',
     videos: [
       { id: 'HSJi_eEBXb0', title: 'Milking and Meat Production' },
     ],
   },
   {
-    name: 'BREEDING & REPRODUCTION',
+    name: 'Breeding & Reproduction',
     anchor: 'large-animal-breeding',
     videos: [
       { id: '5_gmI60MgXY', title: 'Breeding and Reproduction' },
     ],
   },
   {
-    name: 'HEALTH MANAGEMENT',
+    name: 'Health Management',
     anchor: 'large-animal-health',
     videos: [
       { id: 'oOQjk5dsfu0', title: 'Health Management' },
     ],
   },
   {
-    name: 'SUSTAINABILITY & NATURAL PRACTICES',
+    name: 'Sustainability & Natural Practices',
     anchor: 'large-animal-sustainability',
     videos: [
       { id: 'PpOrLwIHwRU', title: 'Sustainability and Natural Practices' },
     ],
   },
   {
-    name: 'BUSINESS & MARKETING',
+    name: 'Business & Marketing',
     anchor: 'large-animal-business',
     videos: [
       { id: 'EuiljNR8FOw', title: 'Marketing and Revenue Addition' },
@@ -139,7 +139,7 @@ const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
 
 const ACADEMY_DATA: Record<string, CategorySection[]> = {
   'Poultry Farming': POULTRY_SECTIONS,
-  'Larger Animals': LARGER_ANIMAL_SECTIONS,
+  'Large Animals': LARGER_ANIMAL_SECTIONS,
 };
 
 function AcademyInner() {
@@ -274,9 +274,17 @@ function AcademyInner() {
             justify-content: space-between;
             align-items: center;
         }
-        .sidebar-link:hover, .sidebar-item.active > .sidebar-link, .sidebar-subitem.active > .sidebar-link,
-        .sidebar-link:hover span, .sidebar-item.active > .sidebar-link span, .sidebar-subitem.active > .sidebar-link span {
+        .sidebar-link:hover, .sidebar-link:hover span {
             color: #014d4b !important;
+        }
+        .sidebar-item.active > .sidebar-link, .sidebar-item.active > .sidebar-link span,
+        .sidebar-subitem.active > .sidebar-link, .sidebar-subitem.active > .sidebar-link span {
+            color: #166534 !important;
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
         }
         .sidebar-item-count { font-size: 12px; color: #888888 !important; font-weight: 400; transition: color 0.3s; }
         .sidebar-chevron { width: 16px; height: 16px; margin-left: 6px; flex-shrink: 0; transition: transform 0.3s ease; color: #888888; }
@@ -331,7 +339,7 @@ function AcademyInner() {
                 <ul className="sidebar-menu">
                   <li className={`sidebar-item ${activeFilter === 'All' ? 'active' : ''}`}>
                     <div className="sidebar-link" onClick={handleAllClick}>
-                      <span>All Sections</span>
+                      <span>ALL SECTIONS</span>
                     </div>
                   </li>
                   {Object.keys(ACADEMY_DATA).map((groupName) => {
@@ -341,7 +349,7 @@ function AcademyInner() {
                     return (
                       <li key={groupName} className={`sidebar-item ${isGroupActive ? 'active' : ''}`}>
                         <div className="sidebar-link" onClick={() => handleGroupClick(groupName)}>
-                          <span>{groupName}</span>
+                          <span>{groupName.toUpperCase()}</span>
                           <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                             <span className="sidebar-item-count">
                               {ACADEMY_DATA[groupName].reduce((acc, section) => acc + section.videos.length, 0)}

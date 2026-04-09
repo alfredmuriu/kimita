@@ -18,9 +18,17 @@ const ACADEMY_CATEGORIES = [
     ],
   },
   {
-    name: 'Dairy Farming',
-    filter: 'Dairy Farming',
-    subcategories: [],
+    name: 'Large Animals',
+    filter: 'Large Animals',
+    subcategories: [
+      { name: 'Housing & Farm Setup', anchor: 'large-animal-housing' },
+      { name: 'Feeding & Supplementing', anchor: 'large-animal-feeding' },
+      { name: 'Production', anchor: 'large-animal-production' },
+      { name: 'Breeding & Reproduction', anchor: 'large-animal-breeding' },
+      { name: 'Health Management', anchor: 'large-animal-health' },
+      { name: 'Sustainability & Natural Practices', anchor: 'large-animal-sustainability' },
+      { name: 'Business & Marketing', anchor: 'large-animal-business' },
+    ],
   },
 ];
 
@@ -288,6 +296,8 @@ export default function Header() {
                   <li><a href="/articles?category=Poultry">&nbsp;Poultry</a></li>
                   <li><a href="/articles?category=Dairy">&nbsp;Dairy</a></li>
                   <li><a href="/articles?category=Pigs">&nbsp;Pigs</a></li>
+                  <li><a href="/articles?category=Livestock">&nbsp;Goats and Sheep</a></li>
+                  <li><a href="/articles?category=Feed+Milling">&nbsp;Feed Milling</a></li>
                 </ul>
               </li>
               <li className={isActive('/contact') ? 'current' : ''}>

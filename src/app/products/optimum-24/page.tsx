@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'OPTIMUM24 — Heat Stress Relief Nutritional Supplement for Livestock | Agrikima',
@@ -48,6 +49,7 @@ export default function Optimum24Product() {
           content: <p>Available in 500 gm and 1 KG jars. Form: Powder — Code: AKF41</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('optimum-24')}
     />
   );
 }

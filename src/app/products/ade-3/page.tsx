@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'AD3E 100/20/20 — Vitamins A, D3 & E Supplement for Poultry & Livestock | Agrikima',
@@ -52,6 +53,7 @@ export default function ADE3Product() {
           content: <p>Available in 1L bottles and 5L cans. Form: Liquid — Code: AKS43</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('ade-3')}
     />
   );
 }

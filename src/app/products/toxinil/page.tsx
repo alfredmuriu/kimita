@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ProductPageLayout from '@/components/ProductPageLayout';
+import { getRelatedProducts } from '@/lib/related-products';
 
 export const metadata: Metadata = {
   title: 'TOXINIL — Acidifying Gut Health & Microflora Balancing Supplement | Agrikima',
@@ -49,6 +50,7 @@ export default function ToxinilProduct() {
           content: <p>Available in 1L bottles. Form: Liquid — Code: AKF029</p>,
         },
       ]}
+      relatedProducts={getRelatedProducts('toxinil')}
     />
   );
 }
