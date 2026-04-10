@@ -84,58 +84,36 @@ export default function DownloadModal({ onClose }) {
       // ── Sheet 2: Consultant Visits ────────────────────────
       const consultantHeaders = [
         'Date',
-        'Full Name',
         'Profession',
+        'Name of Consultant / VET / AHA',
         'Practice Number',
         'Contacts',
-        'County',
         'Type of Clients Served',
-        'Number of Clients',
         'Key Clients',
+        'Number of Clients',
         'Coverage Area',
         'Estimated Animals Under Influence',
-        'Technical Discussion — Topics Discussed',
-        'Technical Discussion — Field Challenges',
-        'Products Recommended',
-        'Competitors Mentioned',
-        'Opportunity — Products Introduced',
-        'Interest Level',
-        'Trial Opportunity',
-        'Referral Potential',
-        'Action Plan — Next Action',
-        'Support Needed',
-        'Follow-Up Date',
-        'Outcome',
-        'Remarks',
-        'Submitted By',
+        'County',
+        'Technical Discussion',
+        'Opportunity',
+        'Action and Remarks',
         'Submitted At',
       ]
       const consultantRows = (consultantVisits || []).map((r) => [
         r.date,
-        r.full_name,
         r.profession,
+        r.full_name,
         r.practice_number,
         r.contacts,
-        r.county,
         Array.isArray(r.client_types) ? r.client_types.join(', ') : (r.client_types ?? ''),
-        r.num_clients,
         r.key_clients,
+        r.num_clients,
         r.coverage_area,
         r.animals_under_influence,
+        r.county,
         r.topics_discussed,
-        r.field_challenges,
-        r.products_recommended,
-        r.competitors_mentioned,
         r.products_introduced,
-        r.interest_level,
-        r.trial_opportunity,
-        r.referral_potential,
-        r.next_action,
-        r.support_needed,
-        r.followup_date,
-        r.outcome,
         r.remarks,
-        r.submitted_by,
         r.created_at,
       ])
       const ws2 = XLSX.utils.aoa_to_sheet([consultantHeaders, ...consultantRows])
@@ -171,7 +149,7 @@ export default function DownloadModal({ onClose }) {
           onClick={handleConfirm}
           disabled={loading || !password}
         >
-          {loading ? 'Checking…' : 'Confirm & Download'}
+          {loading ? 'Downloading…' : 'Download'}
         </button>
         <button className={styles.modalCancel} onClick={onClose}>
           Cancel

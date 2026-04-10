@@ -20,7 +20,6 @@ const initialForm = {
   owner_contacts: '',
   manager_name: '',
   manager_contacts: '',
-  submitted_by: '',
   date: '',
   activity: '',
   products_currently_used: '',
@@ -61,7 +60,6 @@ export default function FarmVisitForm() {
 
   const validate = () => {
     const e = {}
-    if (!form.submitted_by.trim()) e.submitted_by = 'This field is required.'
     if (!form.farm_name.trim()) e.farm_name = 'This field is required.'
     if (!form.date) e.date = 'This field is required.'
     return e
@@ -89,6 +87,7 @@ export default function FarmVisitForm() {
             ...form,
             enterprise_type: form.enterprise_type ? [form.enterprise_type] : [],
             farm_size: form.farm_size !== '' ? parseInt(form.farm_size, 10) : null,
+            submitted_by: null,
           },
         }),
       })
@@ -147,6 +146,7 @@ export default function FarmVisitForm() {
         <label className={styles.label}>County</label>
         <div className={styles.selectWrapper}>
           <select
+            size={1}
             className={styles.select}
             value={form.county}
             onChange={(e) => set('county', e.target.value)}
@@ -173,6 +173,7 @@ export default function FarmVisitForm() {
         <label className={styles.label}>Type of Enterprise</label>
         <div className={styles.selectWrapper}>
           <select
+            size={1}
             className={styles.select}
             value={form.enterprise_type}
             onChange={(e) => set('enterprise_type', e.target.value)}
@@ -243,20 +244,6 @@ export default function FarmVisitForm() {
 
       <div className={styles.fieldGroup}>
         <label className={styles.label}>
-          Your Name <span className={styles.required}>*</span>
-        </label>
-        <input
-          type="text"
-          className={`${styles.input} ${errors.submitted_by ? styles.inputError : ''}`}
-          value={form.submitted_by}
-          onChange={(e) => set('submitted_by', e.target.value)}
-          data-error={errors.submitted_by ? 'true' : undefined}
-        />
-        {errors.submitted_by && <p className={styles.errorMsg}>{errors.submitted_by}</p>}
-      </div>
-
-      <div className={styles.fieldGroup}>
-        <label className={styles.label}>
           Date <span className={styles.required}>*</span>
         </label>
         <input
@@ -273,6 +260,7 @@ export default function FarmVisitForm() {
         <label className={styles.label}>Activity Type</label>
         <div className={styles.selectWrapper}>
           <select
+            size={1}
             className={styles.select}
             value={form.activity}
             onChange={(e) => set('activity', e.target.value)}
@@ -313,6 +301,7 @@ export default function FarmVisitForm() {
         <label className={styles.label}>Outcome</label>
         <div className={styles.selectWrapper}>
           <select
+            size={1}
             className={styles.select}
             value={form.outcome}
             onChange={(e) => set('outcome', e.target.value)}
@@ -339,6 +328,7 @@ export default function FarmVisitForm() {
         <label className={styles.label}>Priority</label>
         <div className={styles.selectWrapper}>
           <select
+            size={1}
             className={styles.select}
             value={form.priority}
             onChange={(e) => set('priority', e.target.value)}
