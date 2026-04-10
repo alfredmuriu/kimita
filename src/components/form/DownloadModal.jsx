@@ -55,8 +55,6 @@ export default function DownloadModal({ onClose }) {
         'Outcome',
         'Next Follow-Up Date',
         'Priority',
-        'Submitted By',
-        'Submitted At',
       ]
       const farmRows = (farmVisits || []).map((r) => [
         r.date,
@@ -75,8 +73,6 @@ export default function DownloadModal({ onClose }) {
         r.outcome,
         r.next_followup_date,
         r.priority,
-        r.submitted_by,
-        r.created_at,
       ])
       const ws1 = XLSX.utils.aoa_to_sheet([farmHeaders, ...farmRows])
       XLSX.utils.book_append_sheet(wb, ws1, 'Farm Visits')
@@ -97,7 +93,6 @@ export default function DownloadModal({ onClose }) {
         'Technical Discussion',
         'Opportunity',
         'Action and Remarks',
-        'Submitted At',
       ]
       const consultantRows = (consultantVisits || []).map((r) => [
         r.date,
@@ -114,7 +109,6 @@ export default function DownloadModal({ onClose }) {
         r.topics_discussed,
         r.products_introduced,
         r.remarks,
-        r.created_at,
       ])
       const ws2 = XLSX.utils.aoa_to_sheet([consultantHeaders, ...consultantRows])
       XLSX.utils.book_append_sheet(wb, ws2, 'Consultant Visits')
