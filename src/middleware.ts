@@ -27,7 +27,7 @@ export function middleware(req: NextRequest) {
 
   // ── Form — rep auth ───────────────────────────────────────────────────────
   const isFormRep =
-    (pathname === '/form' || pathname.startsWith('/form/records')) ||
+    (pathname === '/form' || pathname === '/form/' || pathname.startsWith('/form/records')) ||
     (pathname.startsWith('/api/form/records'))
 
   if (isFormRep) {
@@ -70,6 +70,7 @@ export const config = {
     '/api/marketing/:path*',
     '/api/chat/:path*',
     '/form',
+    '/form/',
     '/form/records/:path*',
     '/form/admin/:path*',
     '/api/form/records/:path*',

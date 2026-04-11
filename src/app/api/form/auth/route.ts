@@ -2,7 +2,24 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 export async function POST(req: NextRequest) {
-  const { code, password, customName } = await req.json()
+  const body = await req.json()
+
+  // Guest login — no DB check, just a name
+  if (body.guest) {
+    const name = body.name?.trim()
+    if (!name) return NextResponse.json({ error: 'Name is required' }, { status: 400 })
+    const res = NextResponse.json({ success: true, rep: { code: 'E000', name } })
+    res.cookies.set('form_rep', JSON.stringify({ code: 'E000', name }), {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      maxAge: 60 * 60 * 24 * 7,
+      path: '/',
+    })
+    return res
+  }
+
+  const { code, password } = body
 
   if (!code || !password) {
     return NextResponse.json({ error: 'Code and password required' }, { status: 400 })
@@ -22,8 +39,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid code or password' }, { status: 401 })
   }
 
-  // E000 uses a custom name supplied at login
-  const repName = rep.code === 'E000' && customName?.trim() ? customName.trim() : rep.name
+  const repName = rep.name
 
   const res = NextResponse.json({ success: true, rep: { code: rep.code, name: repName } })
   res.cookies.set('form_rep', JSON.stringify({ code: rep.code, name: repName }), {
