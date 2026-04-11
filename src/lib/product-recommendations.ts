@@ -35,44 +35,36 @@ const products: RecommendedProduct[] = [
   { name: 'AGRILAYER', slug: 'agrilayer', image: '/products/agrilayer.png', category: 'Feed Additive', description: 'Layer feed supplement for egg production and strong eggshells' },
 ];
 
-// Keyword-to-product mapping: keywords are checked against blog keywords, title, and content
+// Keyword-to-product mapping — priority products: biogar, advice, mix-5, agritonic, agrivitam
 const keywordMap: { keywords: string[]; productSlug: string }[] = [
-  { keywords: ['newcastle', 'newcastle disease'], productSlug: 'advice' },
-  { keywords: ['respiratory', 'breathing', 'bronchitis', 'crd'], productSlug: 'mix-5' },
-  { keywords: ['coccidiosis', 'coccidia', 'gut health', 'intestinal'], productSlug: 'bio-gar' },
-  { keywords: ['gumboro', 'bursal', 'ibd'], productSlug: 'immusol' },
-  { keywords: ['liver', 'fatty liver', 'digestive', 'digestion'], productSlug: 'k-digest' },
+  // ── Priority products ──────────────────────────────────────
+  { keywords: ['newcastle', 'newcastle disease', 'viral', 'virus', 'herbal treatment'], productSlug: 'advice' },
+  { keywords: ['respiratory', 'breathing', 'bronchitis', 'crd', 'cough', 'sneezing'], productSlug: 'mix-5' },
+  { keywords: ['coccidiosis', 'coccidia', 'gut health', 'intestinal', 'diarrhea', 'worm', 'deworm', 'parasite', 'digestion', 'digestive'], productSlug: 'bio-gar' },
+  { keywords: ['weight gain', 'broiler weight', 'productivity', 'performance', 'growth', 'feed conversion'], productSlug: 'agritonic' },
+  { keywords: ['stress recovery', 'multivitamin', 'deficiency', 'nutritional', 'vitamin supplement', 'mineral supplement'], productSlug: 'agrivitam' },
+
+  // ── Other products ─────────────────────────────────────────
+  { keywords: ['gumboro', 'bursal', 'ibd', 'immunity', 'immune', 'vaccination', 'vaccine', 'biosecurity'], productSlug: 'immusol' },
+  { keywords: ['liver', 'fatty liver'], productSlug: 'k-digest' },
   { keywords: ['e.coli', 'salmonella', 'bacterial', 'antibiotic'], productSlug: 'nitritic' },
-  { keywords: ['immunity', 'immune', 'immune system', 'immunization'], productSlug: 'gonat' },
-  { keywords: ['virus', 'viral', 'herbal'], productSlug: 'biogard-99' },
-  { keywords: ['vitamin', 'vitamin a', 'vitamin d', 'vitamin e', 'hatchability'], productSlug: 'ade-3' },
-  { keywords: ['weight gain', 'broiler weight', 'productivity', 'performance'], productSlug: 'agritonic' },
-  { keywords: ['stress recovery', 'multivitamin'], productSlug: 'agrivitam' },
+  { keywords: ['mastitis', 'udder', 'milk quality', 'immune system'], productSlug: 'gonat' },
+  { keywords: ['herbal', 'viral disease'], productSlug: 'biogard-99' },
+  { keywords: ['vitamin a', 'vitamin d', 'vitamin e', 'hatchability', 'egg quality'], productSlug: 'ade-3' },
   { keywords: ['heat stress', 'hot season', 'summer', 'ventilation'], productSlug: 'antistrs-300' },
   { keywords: ['mycotoxin', 'aflatoxin', 'toxin', 'mold', 'feed safety'], productSlug: 'toxinil' },
   { keywords: ['recovery', 'disease recovery', 'healing'], productSlug: 're-cover' },
   { keywords: ['energy', 'performance booster'], productSlug: 'optimum-24' },
-  { keywords: ['calcium', 'phosphorus', 'bone', 'mineral', 'eggshell'], productSlug: 'dcp-18' },
-  { keywords: ['amino acid', 'protein', 'muscle', 'lysine'], productSlug: 'lysine' },
-  { keywords: ['methionine', 'feather', 'plumage'], productSlug: 'methionine' },
-  { keywords: ['egg production', 'layer', 'laying'], productSlug: 'agrilayer' },
-  { keywords: ['broiler', 'finisher', 'meat production'], productSlug: 'agrifinisher' },
-  { keywords: ['grower', 'growing', 'development'], productSlug: 'agrigrower' },
-  { keywords: ['starter', 'chick', 'day old', 'baby chick'], productSlug: 'agristarter' },
+  { keywords: ['egg production', 'layer', 'laying hen'], productSlug: 'agrilayer' },
   { keywords: ['pig', 'swine', 'pork', 'sow', 'piggery'], productSlug: 'agripig-sow' },
-  { keywords: ['worm', 'deworm', 'parasite', 'anthelmintic'], productSlug: 'bio-gar' },
-  { keywords: ['mastitis', 'udder', 'milk quality'], productSlug: 'gonat' },
-  { keywords: ['vaccination', 'vaccine', 'biosecurity'], productSlug: 'immusol' },
-  { keywords: ['feed formulation', 'feed additive', 'feed cost', 'nutrition'], productSlug: 'agrigrower' },
-  { keywords: ['deficiency', 'nutritional'], productSlug: 'agrivitam' },
 ];
 
-// Category-level fallbacks
+// Category-level fallbacks — all point to priority products
 const categoryFallbacks: Record<string, string> = {
   poultry: 'agritonic',
   dairy: 'agrivitam',
-  livestock: 'gonat',
-  nutrition: 'agrigrower',
+  livestock: 'bio-gar',
+  nutrition: 'agrivitam',
   business: 'agritonic',
 };
 

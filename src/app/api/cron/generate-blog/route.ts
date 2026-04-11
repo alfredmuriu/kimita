@@ -115,21 +115,29 @@ export async function GET(request: NextRequest) {
     const topic = claimedTopics[0];
     console.log(`Claimed topic: "${topic.topic}" (priority ${topic.priority}, id ${topic.id})`);
 
-    // Redundant safeguard: skip if there's already a blog post whose title contains this topic
-    const topicWords = topic.topic.toLowerCase().split(' ').filter((w: string) => w.length > 3);
+    // Safeguard: skip if a similar blog post already exists
+    // Normalise a word to its stem (handles goat/goats, feed/feeding, etc.)
+    const stem = (w: string) => w.replace(/(?:ing|ed|s|es)$/, '')
+    const topicWords = topic.topic
+      .toLowerCase()
+      .split(/\s+/)
+      .filter((w: string) => w.length > 3)
+      .map(stem)
+
     const possibleDuplicate = existingTitles.some((title: string) => {
-      const titleLower = title.toLowerCase();
-      const matchCount = topicWords.filter((w: string) => titleLower.includes(w)).length;
-      return matchCount >= topicWords.length * 0.6; // 60%+ keyword overlap → likely duplicate
-    });
+      const titleWords = title.toLowerCase().split(/\s+/).map(stem)
+      const matchCount = topicWords.filter((w: string) =>
+        titleWords.some((tw: string) => tw.includes(w) || w.includes(tw))
+      ).length
+      return matchCount >= Math.max(2, topicWords.length * 0.4) // 40% overlap or at least 2 key words
+    })
 
     if (possibleDuplicate) {
-      console.warn(`Skipping topic "${topic.topic}" — similar blog post already exists`);
-      // Topic is already marked used, so it won't be picked again. Retry with next topic.
+      console.warn(`Skipping topic "${topic.topic}" — similar blog post already exists`)
       return NextResponse.json({
         success: false,
         message: `Skipped "${topic.topic}" — similar post already exists. Will pick next topic tomorrow.`,
-      });
+      })
     }
 
     // Generate blog content using OpenAI — pass existing titles for reference

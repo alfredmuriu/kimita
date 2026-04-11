@@ -7,7 +7,7 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || '');
 export async function generateBlogImageGemini(topic: string): Promise<Buffer> {
   const model = genAI.getGenerativeModel({ model: 'gemini-3-pro-image-preview' });
 
-  const prompt = `Generate a photorealistic, documentary-style photograph related to the agricultural topic: "${topic}". Shot on a Canon EOS R5 with an 85mm f/1.4 lens, shallow depth of field. Show the relevant farm animal (e.g. chickens if poultry, dairy cows if dairy, pigs if swine, goats if mentioned) in a natural farm environment with real dirt, grass, and natural imperfections. Golden hour natural lighting, slight film grain, realistic skin/feather/fur textures. The style should look like a National Geographic documentary photo — NOT an illustration, NOT AI-generated looking, NOT overly clean or perfect. No text overlays, no watermarks, no logos.`;
+  const prompt = `Generate a photorealistic natural photograph of the specific animal related to this topic: "${topic}". Show the animal in its natural farm setting — grazing, resting, or simply standing — no humans, no farmers, no actions involving people. The animal should be the clear subject of the image. Natural farm environment: open pasture, dirt yard, or barn background. Golden hour or soft daylight, realistic fur/feather/skin textures, slight film grain. Style: candid wildlife or farm photography — natural, unposed, authentic. NOT an illustration, NOT AI-generated looking. No text overlays, no watermarks, no logos.`;
 
   const result = await model.generateContent({
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
