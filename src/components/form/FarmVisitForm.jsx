@@ -5,7 +5,7 @@ import SearchBox from '@/components/form/SearchBox'
 import SuccessMessage from '@/components/form/SuccessMessage'
 import { KENYA_COUNTIES } from '@/lib/counties'
 
-const ENTERPRISE_OPTIONS = ['Dairy', 'Poultry', 'Piggery', 'Other']
+const ENTERPRISE_OPTIONS = ['Dairy', 'Poultry', 'Piggery', 'Mixed', 'Other']
 const ACTIVITY_OPTIONS = ['Prospecting', 'Follow-Up', 'Complaint', 'Routine', 'Delivery Support']
 const OUTCOME_OPTIONS = ['Interested', 'Not Interested', 'Order Placed', 'Needs Follow-Up']
 const PRIORITY_OPTIONS = ['High', 'Medium', 'Low']

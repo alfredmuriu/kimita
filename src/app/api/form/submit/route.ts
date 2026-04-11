@@ -1,23 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
+function getRepFromCookie(request: NextRequest): { code: string; name: string } | null {
+  try {
+    const cookie = request.cookies.get('form_rep')?.value
+    return cookie ? JSON.parse(cookie) : null
+  } catch { return null }
+}
+
 export async function POST(request: NextRequest) {
   const body = await request.json()
   const { type } = body
+  const rep = getRepFromCookie(request)
 
   const supabase = getSupabaseAdmin()
   if (!supabase) {
     return NextResponse.json({ error: 'Database not configured' }, { status: 500 })
   }
 
-  if (type === 'farm') return handleFarmSubmit(supabase, body)
-  if (type === 'consultant') return handleConsultantSubmit(supabase, body)
+  if (type === 'farm') return handleFarmSubmit(supabase, body, rep)
+  if (type === 'consultant') return handleConsultantSubmit(supabase, body, rep)
 
   return NextResponse.json({ error: 'Unknown form type' }, { status: 400 })
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function handleFarmSubmit(supabase: any, { isReturning, farmId, data }: any) {
+async function handleFarmSubmit(supabase: any, { isReturning, farmId, data }: any, rep: any) {
   const profileFields = {
     farm_name: data.farm_name,
     county: data.county || null,
@@ -59,7 +67,9 @@ async function handleFarmSubmit(supabase: any, { isReturning, farmId, data }: an
     outcome: data.outcome || null,
     next_followup_date: data.next_followup_date || null,
     priority: data.priority || null,
-    submitted_by: data.submitted_by,
+    submitted_by: rep?.name || data.submitted_by || null,
+    rep_code: rep?.code || null,
+    rep_name: rep?.name || null,
   })
   if (visitError) return NextResponse.json({ error: visitError.message }, { status: 500 })
 
@@ -67,7 +77,7 @@ async function handleFarmSubmit(supabase: any, { isReturning, farmId, data }: an
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function handleConsultantSubmit(supabase: any, { isReturning, consultantId, data }: any) {
+async function handleConsultantSubmit(supabase: any, { isReturning, consultantId, data }: any, rep: any) {
   const profileFields = {
     full_name: data.full_name,
     profession: data.profession || null,
@@ -117,7 +127,9 @@ async function handleConsultantSubmit(supabase: any, { isReturning, consultantId
     followup_date: data.followup_date || null,
     outcome: data.outcome || null,
     remarks: data.remarks || null,
-    submitted_by: data.submitted_by,
+    submitted_by: rep?.name || data.submitted_by || null,
+    rep_code: rep?.code || null,
+    rep_name: rep?.name || null,
   })
   if (visitError) return NextResponse.json({ error: visitError.message }, { status: 500 })
 
