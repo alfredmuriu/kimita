@@ -334,7 +334,7 @@ function AcademyInner() {
               <span className="hero-badge">✓ Expert-Led Training</span>
             </div>
           </div>
-          <img src="/images/agrikima-academy.png" alt="Agrikima Academy — Poultry and Livestock Farming Video Courses" className="intro-image-slide-in products-hero-image" />
+          <img src="/images/academy.jpg" alt="Agrikima Academy — Poultry and Livestock Farming Video Courses" className="intro-image-slide-in products-hero-image" />
         </div>
 
         <ScrollDownButton targetId="academy-content" />
