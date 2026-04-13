@@ -86,11 +86,16 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Get all existing blog post titles (for GPT reference context only)
+    // Get all existing blog post titles and source priorities (for context + duplicate guard)
     const { data: existingPosts } = await supabaseAdmin
       .from('blog_posts')
-      .select('title');
+      .select('title, source_priority');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
+    const existingPriorities = new Set(
+      (existingPosts || [])
+        .map((p: { source_priority: number | null }) => p.source_priority)
+        .filter((p): p is number => p !== null)
+    );
 
     // Claim the next unused topic in priority order
     const { data: claimedTopics, error: rpcError } = await supabaseAdmin.rpc('claim_next_topic')
@@ -107,13 +112,9 @@ export async function GET(request: NextRequest) {
     const topic = claimedTopics[0]
     console.log(`Claimed topic: "${topic.topic}" (priority ${topic.priority})`)
 
-    // Guard: skip if a post already exists for this exact topic (handles re-runs after manual deletions)
-    const topicLower = topic.topic.toLowerCase()
-    const alreadyPosted = existingTitles.some(
-      (t) => t.toLowerCase().includes(topicLower) || topicLower.includes(t.toLowerCase())
-    )
-    if (alreadyPosted) {
-      console.log(`Topic "${topic.topic}" already has a post — skipping generation`)
+    // Guard: skip if a post already exists for this priority (reliable — not title-matching)
+    if (existingPriorities.has(topic.priority)) {
+      console.log(`Priority ${topic.priority} already has a post — skipping generation`)
       return NextResponse.json({
         success: true,
         message: 'Topic already posted, skipped generation',
@@ -155,6 +156,7 @@ export async function GET(request: NextRequest) {
           featured_image: featuredImage,
           keywords: generatedContent.keywords,
           category: topic.category || null,
+          source_priority: topic.priority,
           status: 'published',
           published_at: new Date().toISOString(),
         })
