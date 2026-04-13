@@ -135,6 +135,14 @@ const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
       { id: 'EuiljNR8FOw', title: 'Marketing and Revenue Addition' },
     ],
   },
+  {
+    name: 'Record Keeping & AMR',
+    anchor: 'large-animal-records',
+    videos: [
+      { id: 'Rycjn0k_nAE', title: 'Record Keeping' },
+      { id: 'MPPmIdJodGg', title: 'AMR' },
+    ],
+  },
 ];
 
 const ACADEMY_DATA: Record<string, CategorySection[]> = {
