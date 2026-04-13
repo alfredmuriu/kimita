@@ -107,6 +107,20 @@ export async function GET(request: NextRequest) {
     const topic = claimedTopics[0]
     console.log(`Claimed topic: "${topic.topic}" (priority ${topic.priority})`)
 
+    // Guard: skip if a post already exists for this exact topic (handles re-runs after manual deletions)
+    const topicLower = topic.topic.toLowerCase()
+    const alreadyPosted = existingTitles.some(
+      (t) => t.toLowerCase().includes(topicLower) || topicLower.includes(t.toLowerCase())
+    )
+    if (alreadyPosted) {
+      console.log(`Topic "${topic.topic}" already has a post — skipping generation`)
+      return NextResponse.json({
+        success: true,
+        message: 'Topic already posted, skipped generation',
+        post: { title: topic.topic, priority: topic.priority },
+      })
+    }
+
     // Generate blog content using OpenAI — pass existing titles for reference
     const generatedContent = await generateBlogPost(
       topic.topic,
