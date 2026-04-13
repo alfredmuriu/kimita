@@ -92,52 +92,20 @@ export async function GET(request: NextRequest) {
       .select('title');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
 
-    // Normalise a word to its stem (handles goat/goats, feed/feeding, etc.)
-    const stem = (w: string) => w.replace(/(?:ing|ed|s|es)$/, '')
+    // Claim the next unused topic in priority order
+    const { data: claimedTopics, error: rpcError } = await supabaseAdmin.rpc('claim_next_topic')
 
-    const isDuplicate = (topicText: string) => {
-      const topicWords = topicText
-        .toLowerCase()
-        .split(/\s+/)
-        .filter((w: string) => w.length > 3)
-        .map(stem)
-      return existingTitles.some((title: string) => {
-        const titleWords = title.toLowerCase().split(/\s+/).map(stem)
-        const matchCount = topicWords.filter((w: string) =>
-          titleWords.some((tw: string) => tw.includes(w) || w.includes(tw))
-        ).length
-        return matchCount >= Math.max(2, topicWords.length * 0.5) // 50% overlap
-      })
+    if (rpcError) {
+      console.error('RPC claim_next_topic failed:', rpcError.message)
+      return NextResponse.json({ error: 'Failed to claim topic', details: rpcError.message }, { status: 500 })
     }
 
-    // Keep claiming topics until we find one that isn't a duplicate (max 5 attempts)
-    let topic = null
-    for (let attempt = 0; attempt < 5; attempt++) {
-      const { data: claimedTopics, error: rpcError } = await supabaseAdmin.rpc('claim_next_topic')
-
-      if (rpcError) {
-        console.error('RPC claim_next_topic failed:', rpcError.message)
-        return NextResponse.json({ error: 'Failed to claim topic', details: rpcError.message }, { status: 500 })
-      }
-
-      if (!claimedTopics || claimedTopics.length === 0) {
-        return NextResponse.json({ error: 'No unused topics available' }, { status: 404 })
-      }
-
-      const candidate = claimedTopics[0]
-      console.log(`Claimed topic (attempt ${attempt + 1}): "${candidate.topic}"`)
-
-      if (!isDuplicate(candidate.topic)) {
-        topic = candidate
-        break
-      }
-
-      console.warn(`Skipping "${candidate.topic}" — similar post already exists, trying next...`)
+    if (!claimedTopics || claimedTopics.length === 0) {
+      return NextResponse.json({ error: 'No unused topics available' }, { status: 404 })
     }
 
-    if (!topic) {
-      return NextResponse.json({ success: false, message: 'All candidate topics were duplicates of existing posts.' })
-    }
+    const topic = claimedTopics[0]
+    console.log(`Claimed topic: "${topic.topic}" (priority ${topic.priority})`)
 
     // Generate blog content using OpenAI — pass existing titles for reference
     const generatedContent = await generateBlogPost(
