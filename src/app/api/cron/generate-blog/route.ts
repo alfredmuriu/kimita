@@ -12,7 +12,7 @@ const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7
 // Generate image with Nano Banana Pro (Gemini), upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
   topic: string,
-  keywords: string[],
+  _keywords: string[],
   slug: string,
   supabaseAdmin: ReturnType<typeof getSupabaseAdmin>
 ): Promise<string> {
@@ -92,52 +92,51 @@ export async function GET(request: NextRequest) {
       .select('title');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
 
-    // Atomically claim the next unused topic (SELECT + mark used in one transaction)
-    // This uses a PostgreSQL function with FOR UPDATE SKIP LOCKED to prevent race conditions
-    const { data: claimedTopics, error: rpcError } = await supabaseAdmin
-      .rpc('claim_next_topic');
-
-    if (rpcError) {
-      console.error('RPC claim_next_topic failed:', rpcError.message);
-      return NextResponse.json(
-        { error: 'Failed to claim topic', details: rpcError.message },
-        { status: 500 }
-      );
-    }
-
-    if (!claimedTopics || claimedTopics.length === 0) {
-      return NextResponse.json(
-        { error: 'No unused topics available' },
-        { status: 404 }
-      );
-    }
-
-    const topic = claimedTopics[0];
-    console.log(`Claimed topic: "${topic.topic}" (priority ${topic.priority}, id ${topic.id})`);
-
-    // Safeguard: skip if a similar blog post already exists
     // Normalise a word to its stem (handles goat/goats, feed/feeding, etc.)
     const stem = (w: string) => w.replace(/(?:ing|ed|s|es)$/, '')
-    const topicWords = topic.topic
-      .toLowerCase()
-      .split(/\s+/)
-      .filter((w: string) => w.length > 3)
-      .map(stem)
 
-    const possibleDuplicate = existingTitles.some((title: string) => {
-      const titleWords = title.toLowerCase().split(/\s+/).map(stem)
-      const matchCount = topicWords.filter((w: string) =>
-        titleWords.some((tw: string) => tw.includes(w) || w.includes(tw))
-      ).length
-      return matchCount >= Math.max(2, topicWords.length * 0.4) // 40% overlap or at least 2 key words
-    })
-
-    if (possibleDuplicate) {
-      console.warn(`Skipping topic "${topic.topic}" — similar blog post already exists`)
-      return NextResponse.json({
-        success: false,
-        message: `Skipped "${topic.topic}" — similar post already exists. Will pick next topic tomorrow.`,
+    const isDuplicate = (topicText: string) => {
+      const topicWords = topicText
+        .toLowerCase()
+        .split(/\s+/)
+        .filter((w: string) => w.length > 3)
+        .map(stem)
+      return existingTitles.some((title: string) => {
+        const titleWords = title.toLowerCase().split(/\s+/).map(stem)
+        const matchCount = topicWords.filter((w: string) =>
+          titleWords.some((tw: string) => tw.includes(w) || w.includes(tw))
+        ).length
+        return matchCount >= Math.max(2, topicWords.length * 0.5) // 50% overlap
       })
+    }
+
+    // Keep claiming topics until we find one that isn't a duplicate (max 5 attempts)
+    let topic = null
+    for (let attempt = 0; attempt < 5; attempt++) {
+      const { data: claimedTopics, error: rpcError } = await supabaseAdmin.rpc('claim_next_topic')
+
+      if (rpcError) {
+        console.error('RPC claim_next_topic failed:', rpcError.message)
+        return NextResponse.json({ error: 'Failed to claim topic', details: rpcError.message }, { status: 500 })
+      }
+
+      if (!claimedTopics || claimedTopics.length === 0) {
+        return NextResponse.json({ error: 'No unused topics available' }, { status: 404 })
+      }
+
+      const candidate = claimedTopics[0]
+      console.log(`Claimed topic (attempt ${attempt + 1}): "${candidate.topic}"`)
+
+      if (!isDuplicate(candidate.topic)) {
+        topic = candidate
+        break
+      }
+
+      console.warn(`Skipping "${candidate.topic}" — similar post already exists, trying next...`)
+    }
+
+    if (!topic) {
+      return NextResponse.json({ success: false, message: 'All candidate topics were duplicates of existing posts.' })
     }
 
     // Generate blog content using OpenAI — pass existing titles for reference
