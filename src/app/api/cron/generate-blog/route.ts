@@ -89,37 +89,38 @@ export async function GET(request: NextRequest) {
     // Get all existing blog post titles and source priorities (for context + duplicate guard)
     const { data: existingPosts } = await supabaseAdmin
       .from('blog_posts')
-      .select('title, source_priority');
+      .select('title');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
-    const existingPriorities = new Set(
-      (existingPosts || [])
-        .map((p: { source_priority: number | null }) => p.source_priority)
-        .filter((p): p is number => p !== null)
-    );
 
-    // Claim the next unused topic in priority order
-    const { data: claimedTopics, error: rpcError } = await supabaseAdmin.rpc('claim_next_topic')
+    // Pick the next unused topic directly (ordered by priority)
+    const { data: nextTopics, error: topicError } = await supabaseAdmin
+      .from('blog_topics')
+      .select('*')
+      .eq('used', false)
+      .order('priority', { ascending: true })
+      .limit(1)
 
-    if (rpcError) {
-      console.error('RPC claim_next_topic failed:', rpcError.message)
-      return NextResponse.json({ error: 'Failed to claim topic', details: rpcError.message }, { status: 500 })
+    if (topicError) {
+      console.error('Failed to fetch next topic:', topicError.message)
+      return NextResponse.json({ error: 'Failed to fetch topic', details: topicError.message }, { status: 500 })
     }
 
-    if (!claimedTopics || claimedTopics.length === 0) {
+    if (!nextTopics || nextTopics.length === 0) {
       return NextResponse.json({ error: 'No unused topics available' }, { status: 404 })
     }
 
-    const topic = claimedTopics[0]
-    console.log(`Claimed topic: "${topic.topic}" (priority ${topic.priority})`)
+    const topic = nextTopics[0]
+    console.log(`Next topic: "${topic.topic}" (priority ${topic.priority})`)
 
-    // Guard: skip if a post already exists for this priority (reliable — not title-matching)
-    if (existingPriorities.has(topic.priority)) {
-      console.log(`Priority ${topic.priority} already has a post — skipping generation`)
-      return NextResponse.json({
-        success: true,
-        message: 'Topic already posted, skipped generation',
-        post: { title: topic.topic, priority: topic.priority },
-      })
+    // Mark it as used immediately before generating
+    const { error: updateError } = await supabaseAdmin
+      .from('blog_topics')
+      .update({ used: true })
+      .eq('id', topic.id)
+
+    if (updateError) {
+      console.error('Failed to mark topic as used:', updateError.message)
+      return NextResponse.json({ error: 'Failed to claim topic', details: updateError.message }, { status: 500 })
     }
 
     // Generate blog content using OpenAI — pass existing titles for reference
