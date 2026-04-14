@@ -96,7 +96,7 @@ export async function GET(request: NextRequest) {
     const { data: nextTopics, error: topicError } = await supabaseAdmin
       .from('blog_topics')
       .select('*')
-      .eq('used', false)
+      .is('used', false)
       .order('priority', { ascending: true })
       .limit(1)
 
@@ -110,6 +110,13 @@ export async function GET(request: NextRequest) {
     }
 
     const topic = nextTopics[0]
+
+    // Sanity check — if Supabase returned a topic already marked used, abort
+    if (topic.used === true) {
+      console.error(`Supabase returned used topic (priority ${topic.priority}) — aborting`)
+      return NextResponse.json({ error: 'Topic already used — skipping', priority: topic.priority }, { status: 409 })
+    }
+
     console.log(`Next topic: "${topic.topic}" (priority ${topic.priority})`)
 
     // Mark it as used immediately before generating
@@ -157,7 +164,6 @@ export async function GET(request: NextRequest) {
           featured_image: featuredImage,
           keywords: generatedContent.keywords,
           category: topic.category || null,
-          source_priority: topic.priority,
           status: 'published',
           published_at: new Date().toISOString(),
         })
