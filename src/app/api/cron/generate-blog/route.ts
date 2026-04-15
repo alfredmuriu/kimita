@@ -92,42 +92,48 @@ export async function GET(request: NextRequest) {
       .select('title');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
 
-    // Pick the next unused topic directly (ordered by priority)
-    const { data: nextTopics, error: topicError } = await supabaseAdmin
+    // Pick the next unused topic, skipping any that already have a post
+    const { data: candidateTopics, error: topicError } = await supabaseAdmin
       .from('blog_topics')
       .select('*')
       .is('used', false)
       .order('priority', { ascending: true })
-      .limit(1)
+      .limit(10)
 
     if (topicError) {
       console.error('Failed to fetch next topic:', topicError.message)
       return NextResponse.json({ error: 'Failed to fetch topic', details: topicError.message }, { status: 500 })
     }
 
-    if (!nextTopics || nextTopics.length === 0) {
+    if (!candidateTopics || candidateTopics.length === 0) {
       return NextResponse.json({ error: 'No unused topics available' }, { status: 404 })
     }
 
-    const topic = nextTopics[0]
-    console.log(`Next topic: "${topic.topic}" (priority ${topic.priority})`)
+    // Find the first candidate that doesn't already have a post
+    let topic = null
+    for (const candidate of candidateTopics) {
+      const { data: existing } = await supabaseAdmin
+        .from('blog_posts')
+        .select('id')
+        .eq('source_priority', candidate.priority)
+        .limit(1)
 
-    // Double-check: verify no post already exists for this priority in blog_posts
-    const { data: existingForPriority } = await supabaseAdmin
-      .from('blog_posts')
-      .select('id, title')
-      .eq('source_priority', topic.priority)
-      .limit(1)
+      if (existing && existing.length > 0) {
+        // Already posted — mark used and move on
+        console.log(`Priority ${candidate.priority} already has a post — marking used, skipping`)
+        await supabaseAdmin.from('blog_topics').update({ used: true }).eq('id', candidate.id)
+        continue
+      }
 
-    if (existingForPriority && existingForPriority.length > 0) {
-      console.log(`Post already exists for priority ${topic.priority} — marking used and skipping`)
-      await supabaseAdmin.from('blog_topics').update({ used: true }).eq('id', topic.id)
-      return NextResponse.json({
-        success: true,
-        message: 'Topic already posted, skipped generation',
-        post: { title: existingForPriority[0].title, priority: topic.priority },
-      })
+      topic = candidate
+      break
     }
+
+    if (!topic) {
+      return NextResponse.json({ error: 'No unposted topics available in next 10 candidates' }, { status: 404 })
+    }
+
+    console.log(`Next topic: "${topic.topic}" (priority ${topic.priority})`)
 
     // Mark it as used immediately before generating
     const { error: updateError } = await supabaseAdmin
