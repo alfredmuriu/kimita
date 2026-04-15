@@ -110,14 +110,24 @@ export async function GET(request: NextRequest) {
     }
 
     const topic = nextTopics[0]
-
-    // Sanity check — if Supabase returned a topic already marked used, abort
-    if (topic.used === true) {
-      console.error(`Supabase returned used topic (priority ${topic.priority}) — aborting`)
-      return NextResponse.json({ error: 'Topic already used — skipping', priority: topic.priority }, { status: 409 })
-    }
-
     console.log(`Next topic: "${topic.topic}" (priority ${topic.priority})`)
+
+    // Double-check: verify no post already exists for this priority in blog_posts
+    const { data: existingForPriority } = await supabaseAdmin
+      .from('blog_posts')
+      .select('id, title')
+      .eq('source_priority', topic.priority)
+      .limit(1)
+
+    if (existingForPriority && existingForPriority.length > 0) {
+      console.log(`Post already exists for priority ${topic.priority} — marking used and skipping`)
+      await supabaseAdmin.from('blog_topics').update({ used: true }).eq('id', topic.id)
+      return NextResponse.json({
+        success: true,
+        message: 'Topic already posted, skipped generation',
+        post: { title: existingForPriority[0].title, priority: topic.priority },
+      })
+    }
 
     // Mark it as used immediately before generating
     const { error: updateError } = await supabaseAdmin
@@ -164,6 +174,7 @@ export async function GET(request: NextRequest) {
           featured_image: featuredImage,
           keywords: generatedContent.keywords,
           category: topic.category || null,
+          source_priority: topic.priority,
           status: 'published',
           published_at: new Date().toISOString(),
         })
