@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { waitUntil } from '@vercel/functions';
 import { getSupabaseAdmin } from '@/lib/supabase';
 import { generateBlogPost } from '@/lib/openai';
 import { generateBlogImageGemini } from '@/lib/gemini';
@@ -126,92 +127,81 @@ export async function GET(request: NextRequest) {
 
     console.log(`Next topic: "${topic.topic}" (priority ${topic.priority}) — last posted was ${lastPriority}`);
 
-    // Generate blog content using OpenAI — pass existing titles for reference
-    const generatedContent = await generateBlogPost(
-      topic.topic,
-      topic.primary_keyword || topic.topic,
-      topic.secondary_keywords || [],
-      existingTitles
+    // Heavy work (OpenAI draft + Gemini image + Supabase insert) takes 40-90s and
+    // exceeds cron-job.org's ~30s HTTP timeout. Fire it in the background via
+    // waitUntil(): the HTTP response returns immediately, Vercel keeps the function
+    // alive until this promise resolves.
+    waitUntil(
+      (async () => {
+        try {
+          const generatedContent = await generateBlogPost(
+            topic.topic,
+            topic.primary_keyword || topic.topic,
+            topic.secondary_keywords || [],
+            existingTitles
+          );
+
+          const featuredImage = await generateAndUploadImage(
+            topic.topic,
+            generatedContent.keywords,
+            generatedContent.slug,
+            supabaseAdmin
+          );
+
+          const slug = generatedContent.slug;
+          for (let attempt = 0; attempt < 3; attempt++) {
+            const trySlug = attempt === 0 ? slug : `${slug}-${Date.now()}`;
+            const { data, error } = await supabaseAdmin
+              .from('blog_posts')
+              .insert({
+                slug: trySlug,
+                title: generatedContent.title,
+                excerpt: generatedContent.excerpt,
+                content: generatedContent.content,
+                featured_image: featuredImage,
+                keywords: generatedContent.keywords,
+                category: topic.category || null,
+                source_priority: topic.priority,
+                status: 'published',
+                published_at: new Date().toISOString(),
+              })
+              .select()
+              .single();
+
+            if (!error) {
+              console.log(`Blog post saved: "${data.title}" (${data.slug})`);
+              return;
+            }
+
+            if (error.message.includes('source_priority')) {
+              console.log(`Priority ${topic.priority} was posted by a concurrent run — exiting cleanly`);
+              return;
+            }
+
+            if (error.message.includes('duplicate key')) {
+              continue;
+            }
+
+            console.error('Failed to save blog post:', error.message);
+            return;
+          }
+
+          console.error('Failed to save blog post after 3 slug attempts');
+        } catch (err) {
+          console.error('Background blog generation failed:', err);
+        }
+      })()
     );
 
-    // Generate a unique featured image with Nano Banana Pro and upload to Supabase Storage
-    const featuredImage = await generateAndUploadImage(
-      topic.topic,
-      generatedContent.keywords,
-      generatedContent.slug,
-      supabaseAdmin
-    );
-
-    // Save the blog post to database, handle duplicate slugs
-    let slug = generatedContent.slug;
-    let post = null;
-    let postError = null;
-
-    // Try original slug first, then with a suffix if duplicate
-    for (let attempt = 0; attempt < 3; attempt++) {
-      const trySlug = attempt === 0 ? slug : `${slug}-${Date.now()}`;
-      const { data, error } = await supabaseAdmin
-        .from('blog_posts')
-        .insert({
-          slug: trySlug,
-          title: generatedContent.title,
-          excerpt: generatedContent.excerpt,
-          content: generatedContent.content,
-          featured_image: featuredImage,
-          keywords: generatedContent.keywords,
-          category: topic.category || null,
-          source_priority: topic.priority,
-          status: 'published',
-          published_at: new Date().toISOString(),
-        })
-        .select()
-        .single();
-
-      if (!error) {
-        post = data;
-        postError = null;
-        break;
-      }
-
-      // Unique-constraint hit: source_priority clash means another cron already posted it — bail cleanly
-      if (error.message.includes('source_priority')) {
-        console.log(`Priority ${topic.priority} was posted by a concurrent run — exiting cleanly`);
-        return NextResponse.json({
-          success: true,
-          message: 'Priority already posted by concurrent run',
-          priority: topic.priority,
-        });
-      }
-
-      // Slug clash — retry with a timestamp suffix
-      if (error.message.includes('duplicate key')) {
-        postError = error;
-        continue;
-      }
-
-      postError = error;
-      break;
-    }
-
-    if (postError || !post) {
-      return NextResponse.json(
-        { error: 'Failed to save blog post', details: postError?.message },
-        { status: 500 }
-      );
-    }
-
+    // Respond immediately — cron-job.org sees a fast 200, real work continues in the background.
     return NextResponse.json({
       success: true,
-      message: 'Blog post generated and published',
-      post: {
-        id: post.id,
-        title: post.title,
-        slug: post.slug,
-        priority: topic.priority,
-      },
+      message: 'Blog generation started in background',
+      topic: topic.topic,
+      priority: topic.priority,
     });
   } catch (error) {
-    console.error('Error generating blog post:', error);
+    console.error('Error starting blog generation:', error);
     return NextResponse.json(
       { error: 'Internal server error', details: String(error) },
       { status: 500 }

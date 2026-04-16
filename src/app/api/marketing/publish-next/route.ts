@@ -3,6 +3,7 @@
 // by cron-job.org with header `x-cron-secret: <AGENT_CRON_SECRET>`.
 
 import { NextRequest, NextResponse } from 'next/server'
+import { waitUntil } from '@vercel/functions'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { publishToTwitter } from '@/lib/publishers/twitter'
 import { publishToFacebook } from '@/lib/publishers/facebook'
@@ -64,57 +65,77 @@ export async function POST(req: NextRequest) {
   const text = [post.content, hashtags.join(' ')].filter(Boolean).join('\n\n')
   const imageUrl: string | undefined = post.image_url || undefined
 
-  let result
-  switch (post.platform) {
-    case 'Twitter':
-      result = await publishToTwitter(post.id, text)
-      break
-    case 'Facebook':
-      result = await publishToFacebook(post.id, text, imageUrl)
-      break
-    case 'Instagram':
-      result = await publishToInstagram(post.id, text, imageUrl)
-      break
-    case 'LinkedIn':
-      result = await publishToLinkedIn(post.id, text)
-      break
-    case 'TikTok':
-      result = await publishToTikTok(post.id, text)
-      break
-    default:
-      // Unknown platform — mark failed so we don't keep retrying it.
-      await supabase
-        .from('posts')
-        .update({ status: 'failed', error_message: `Unknown platform: ${post.platform}` })
-        .eq('id', post.id)
-      return NextResponse.json({ error: `Unknown platform: ${post.platform}` }, { status: 400 })
+  // Reject unknown platforms synchronously so the caller sees a 400.
+  const knownPlatforms = ['Twitter', 'Facebook', 'Instagram', 'LinkedIn', 'TikTok']
+  if (!knownPlatforms.includes(post.platform)) {
+    await supabase
+      .from('posts')
+      .update({ status: 'failed', error_message: `Unknown platform: ${post.platform}` })
+      .eq('id', post.id)
+    return NextResponse.json({ error: `Unknown platform: ${post.platform}` }, { status: 400 })
   }
 
-  await supabase
-    .from('posts')
-    .update({
-      status: result.success ? 'published' : 'failed',
-      platform_post_id: result.platform_post_id || null,
-      post_url: result.post_url || null,
-      error_message: result.error_message || null,
-      published_at: result.success ? new Date().toISOString() : null,
-    })
-    .eq('id', post.id)
+  // Publisher calls + Supabase update + notification email run 5-40s total
+  // depending on which platform API we're hitting. Do it in the background
+  // so cron-job.org sees a fast 200.
+  waitUntil(
+    (async () => {
+      try {
+        let result
+        switch (post.platform) {
+          case 'Twitter':
+            result = await publishToTwitter(post.id, text)
+            break
+          case 'Facebook':
+            result = await publishToFacebook(post.id, text, imageUrl)
+            break
+          case 'Instagram':
+            result = await publishToInstagram(post.id, text, imageUrl)
+            break
+          case 'LinkedIn':
+            result = await publishToLinkedIn(post.id, text)
+            break
+          case 'TikTok':
+            result = await publishToTikTok(post.id, text)
+            break
+          default:
+            return
+        }
 
-  await sendPublishNotification(
-    post.platform,
-    text,
-    result.post_url,
-    result.success,
-    result.error_message
-  ).catch((err) => console.error('[publish-next] Notification email failed:', err))
+        await supabase
+          .from('posts')
+          .update({
+            status: result.success ? 'published' : 'failed',
+            platform_post_id: result.platform_post_id || null,
+            post_url: result.post_url || null,
+            error_message: result.error_message || null,
+            published_at: result.success ? new Date().toISOString() : null,
+          })
+          .eq('id', post.id)
+
+        await sendPublishNotification(
+          post.platform,
+          text,
+          result.post_url,
+          result.success,
+          result.error_message
+        ).catch((err) => console.error('[publish-next] Notification email failed:', err))
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err)
+        console.error(`[publish-next] Background publish crashed for post ${post.id}:`, message)
+        await supabase
+          .from('posts')
+          .update({ status: 'failed', error_message: message })
+          .eq('id', post.id)
+      }
+    })()
+  )
 
   return NextResponse.json({
-    success: result.success,
+    success: true,
+    message: 'Publish started in background',
     cycle_id: cycle.id,
     post_id: post.id,
     platform: post.platform,
-    post_url: result.post_url,
-    error_message: result.error_message,
   })
 }
