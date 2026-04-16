@@ -69,20 +69,21 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Database not configured' }, { status: 500 });
     }
 
-    // Guard: skip if a blog post was already generated today (UTC)
+    // Guard: skip once today's cap (BLOG_POSTS_PER_DAY, default 1) is reached.
+    // cron-job.org fires this route several times a day; this cap is what
+    // limits the actual number of posts produced per UTC day.
+    const maxPerDay = Math.max(1, parseInt(process.env.BLOG_POSTS_PER_DAY || '1', 10));
     const todayStart = new Date();
     todayStart.setUTCHours(0, 0, 0, 0);
-    const { data: todayPosts } = await supabaseAdmin
+    const { count: todayCount } = await supabaseAdmin
       .from('blog_posts')
-      .select('id, title')
-      .gte('published_at', todayStart.toISOString())
-      .limit(1);
+      .select('id', { count: 'exact', head: true })
+      .gte('published_at', todayStart.toISOString());
 
-    if (todayPosts && todayPosts.length > 0) {
+    if (typeof todayCount === 'number' && todayCount >= maxPerDay) {
       return NextResponse.json({
         success: true,
-        message: 'Blog post already generated today',
-        post: { id: todayPosts[0].id, title: todayPosts[0].title },
+        message: `Daily cap reached (${todayCount}/${maxPerDay})`,
       });
     }
 
