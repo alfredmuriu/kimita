@@ -86,65 +86,44 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Get all existing blog post titles and source priorities (for context + duplicate guard)
+    // Get all existing blog post titles (for AI context — avoids repeating phrasing)
     const { data: existingPosts } = await supabaseAdmin
       .from('blog_posts')
       .select('title');
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
 
-    // Pick the next unused topic, skipping any that already have a post
-    const { data: candidateTopics, error: topicError } = await supabaseAdmin
+    // Find the highest priority already posted — this is the single source of truth
+    const { data: lastPosted } = await supabaseAdmin
+      .from('blog_posts')
+      .select('source_priority')
+      .not('source_priority', 'is', null)
+      .order('source_priority', { ascending: false })
+      .limit(1);
+
+    const lastPriority = lastPosted?.[0]?.source_priority ?? 0;
+
+    // Next topic = smallest priority greater than lastPriority (handles gaps automatically)
+    const { data: topic, error: topicError } = await supabaseAdmin
       .from('blog_topics')
       .select('*')
-      .is('used', false)
+      .gt('priority', lastPriority)
       .order('priority', { ascending: true })
-      .limit(10)
+      .limit(1)
+      .maybeSingle();
 
     if (topicError) {
-      console.error('Failed to fetch next topic:', topicError.message)
-      return NextResponse.json({ error: 'Failed to fetch topic', details: topicError.message }, { status: 500 })
-    }
-
-    if (!candidateTopics || candidateTopics.length === 0) {
-      return NextResponse.json({ error: 'No unused topics available' }, { status: 404 })
-    }
-
-    // Find the first candidate that doesn't already have a post
-    let topic = null
-    for (const candidate of candidateTopics) {
-      const { data: existing } = await supabaseAdmin
-        .from('blog_posts')
-        .select('id')
-        .eq('source_priority', candidate.priority)
-        .limit(1)
-
-      if (existing && existing.length > 0) {
-        // Already posted — mark used and move on
-        console.log(`Priority ${candidate.priority} already has a post — marking used, skipping`)
-        await supabaseAdmin.from('blog_topics').update({ used: true }).eq('id', candidate.id)
-        continue
-      }
-
-      topic = candidate
-      break
+      console.error('Failed to fetch next topic:', topicError.message);
+      return NextResponse.json({ error: 'Failed to fetch topic', details: topicError.message }, { status: 500 });
     }
 
     if (!topic) {
-      return NextResponse.json({ error: 'No unposted topics available in next 10 candidates' }, { status: 404 })
+      return NextResponse.json(
+        { error: 'No more topics available', lastPriority },
+        { status: 404 }
+      );
     }
 
-    console.log(`Next topic: "${topic.topic}" (priority ${topic.priority})`)
-
-    // Mark it as used immediately before generating
-    const { error: updateError } = await supabaseAdmin
-      .from('blog_topics')
-      .update({ used: true })
-      .eq('id', topic.id)
-
-    if (updateError) {
-      console.error('Failed to mark topic as used:', updateError.message)
-      return NextResponse.json({ error: 'Failed to claim topic', details: updateError.message }, { status: 500 })
-    }
+    console.log(`Next topic: "${topic.topic}" (priority ${topic.priority}) — last posted was ${lastPriority}`);
 
     // Generate blog content using OpenAI — pass existing titles for reference
     const generatedContent = await generateBlogPost(
@@ -193,6 +172,17 @@ export async function GET(request: NextRequest) {
         break;
       }
 
+      // Unique-constraint hit: source_priority clash means another cron already posted it — bail cleanly
+      if (error.message.includes('source_priority')) {
+        console.log(`Priority ${topic.priority} was posted by a concurrent run — exiting cleanly`);
+        return NextResponse.json({
+          success: true,
+          message: 'Priority already posted by concurrent run',
+          priority: topic.priority,
+        });
+      }
+
+      // Slug clash — retry with a timestamp suffix
       if (error.message.includes('duplicate key')) {
         postError = error;
         continue;
