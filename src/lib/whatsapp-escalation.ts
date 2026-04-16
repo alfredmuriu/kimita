@@ -1,10 +1,7 @@
 // Send a staff email when the WhatsApp bot escalates a conversation.
 
-import { Resend } from 'resend'
+import { sendEmail } from './email-client'
 import type { ConversationTurn } from './whatsapp-bot'
-
-const resend = new Resend(process.env.RESEND_API_KEY!)
-const FROM = 'Agrikima WhatsApp Bot <agent@agrikima.co.ke>'
 
 export async function sendEscalationEmail(params: {
   customerPhone: string
@@ -65,8 +62,8 @@ export async function sendEscalationEmail(params: {
     </div>
   `
 
-  await resend.emails.send({
-    from: FROM,
+  await sendEmail({
+    fromName: 'Agrikima WhatsApp Bot',
     to: recipients,
     subject: `[WhatsApp] ${params.customerName || params.customerPhone} needs a human`,
     html,
