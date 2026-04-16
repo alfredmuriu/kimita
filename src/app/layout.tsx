@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
+import ChatWidget from '@/components/ChatWidget';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -64,6 +65,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         {children}
+        <ChatWidget />
         <Analytics />
         <Script src="/js/plugins.js" strategy="beforeInteractive" />
         <Script src="/js/main.js" strategy="afterInteractive" />
