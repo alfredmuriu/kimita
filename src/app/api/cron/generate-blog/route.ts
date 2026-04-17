@@ -5,8 +5,9 @@ import { generateBlogPost } from '@/lib/openai';
 import { generateBlogImageGemini } from '@/lib/gemini';
 
 export const runtime = 'nodejs';
-export const dynamic = 'force-dynamic'; // Prevent build-time evaluation
-export const maxDuration = 120; // Allow up to 120 seconds for AI generation + image generation
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store'; // Prevent Next.js from caching Supabase fetch calls
+export const maxDuration = 120;
 
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
 
