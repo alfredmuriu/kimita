@@ -95,13 +95,14 @@ export async function GET(request: NextRequest) {
     const existingTitles = (existingPosts || []).map((p: { title: string }) => p.title);
 
     // Find the highest priority already posted — this is the single source of truth
-    const { data: lastPosted } = await supabaseAdmin
+    const { data: lastPosted, error: lastPostedError } = await supabaseAdmin
       .from('blog_posts')
       .select('source_priority')
       .not('source_priority', 'is', null)
       .order('source_priority', { ascending: false })
       .limit(1);
 
+    console.log('[Blog] lastPosted query:', JSON.stringify(lastPosted), 'error:', lastPostedError?.message ?? 'none');
     const lastPriority = lastPosted?.[0]?.source_priority ?? 0;
 
     // Next topic = smallest priority greater than lastPriority (handles gaps automatically)
