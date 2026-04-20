@@ -6,7 +6,7 @@ export interface RecommendedProduct {
   description: string;
 }
 
-const products: RecommendedProduct[] = [
+export const products: RecommendedProduct[] = [
   { name: 'ADVICE', slug: 'advice', image: '/images/folio/advice.png', category: 'Natural Solution', description: 'Natural treatment for Newcastle disease and viral infections' },
   { name: 'MIX-5', slug: 'mix-5', image: '/products/mix.png', category: 'Natural Solution', description: 'Relief for respiratory symptoms and infections in poultry' },
   { name: 'BIO-GAR', slug: 'bio-gar', image: '/products/Bio-Gar_1kg.png', category: 'Natural Solution', description: 'Natural supplement for gut health and coccidiosis prevention' },
@@ -41,7 +41,7 @@ const keywordMap: { keywords: string[]; productSlug: string }[] = [
   { keywords: ['newcastle', 'newcastle disease', 'viral', 'virus', 'herbal treatment'], productSlug: 'advice' },
   { keywords: ['respiratory', 'breathing', 'bronchitis', 'crd', 'cough', 'sneezing'], productSlug: 'mix-5' },
   { keywords: ['coccidiosis', 'coccidia', 'gut health', 'intestinal', 'diarrhea', 'worm', 'deworm', 'parasite', 'digestion', 'digestive'], productSlug: 'bio-gar' },
-  { keywords: ['weight gain', 'broiler weight', 'productivity', 'performance', 'growth', 'feed conversion'], productSlug: 'agritonic' },
+  { keywords: ['weight gain', 'broiler weight', 'feed conversion', 'broiler performance', 'growth promoter'], productSlug: 'agritonic' },
   { keywords: ['stress recovery', 'multivitamin', 'deficiency', 'nutritional', 'vitamin supplement', 'mineral supplement'], productSlug: 'agrivitam' },
 
   // ── Other products ─────────────────────────────────────────
@@ -71,8 +71,15 @@ const categoryFallbacks: Record<string, string> = {
 export function getRecommendedProduct(
   blogKeywords: string[],
   blogTitle: string,
-  blogCategory?: string
+  blogCategory?: string | null,
+  overrideSlug?: string | null
 ): RecommendedProduct {
+  // Manual override always wins
+  if (overrideSlug) {
+    const forced = products.find((p) => p.slug === overrideSlug);
+    if (forced) return forced;
+  }
+
   const searchText = [...blogKeywords, blogTitle].join(' ').toLowerCase();
 
   // Score each keyword mapping

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { getSupabase, BlogPost } from '@/lib/supabase';
+import { products } from '@/lib/product-recommendations';
 
 const inputStyle: React.CSSProperties = {
   width: '100%', padding: '10px 14px', background: '#1f2937', border: '1px solid #374151',
@@ -22,6 +23,7 @@ export default function AdminEdit({ params }: { params: { id: string } }) {
   const [keywords, setKeywords] = useState('');
   const [status, setStatus] = useState<'draft' | 'published' | 'scheduled'>('published');
   const [featuredImage, setFeaturedImage] = useState('');
+  const [recommendedProductSlug, setRecommendedProductSlug] = useState('');
 
   useEffect(() => {
     const supabase = getSupabase();
@@ -43,6 +45,7 @@ export default function AdminEdit({ params }: { params: { id: string } }) {
           setKeywords(data.keywords?.join(', ') || '');
           setStatus(data.status);
           setFeaturedImage(data.featured_image || '');
+          setRecommendedProductSlug(data.recommended_product_slug || '');
           setLoading(false);
         });
     });
@@ -63,6 +66,7 @@ export default function AdminEdit({ params }: { params: { id: string } }) {
         content,
         keywords: keywords.split(',').map(k => k.trim()).filter(Boolean),
         status,
+        recommended_product_slug: recommendedProductSlug || null,
         updated_at: new Date().toISOString(),
       })
       .eq('id', params.id);
@@ -135,6 +139,19 @@ export default function AdminEdit({ params }: { params: { id: string } }) {
           <div style={{ flex: 1 }}>
             <label style={{ display: 'block', color: '#9ca3af', fontSize: '13px', marginBottom: '4px'}}>Keywords</label>
             <input value={keywords} onChange={e => setKeywords(e.target.value)} style={inputStyle} />
+          </div>
+          <div style={{ width: '240px' }}>
+            <label style={{ display: 'block', color: '#9ca3af', fontSize: '13px', marginBottom: '4px' }}>Recommended product</label>
+            <select
+              value={recommendedProductSlug}
+              onChange={e => setRecommendedProductSlug(e.target.value)}
+              style={inputStyle}
+            >
+              <option value="">Auto (from keywords)</option>
+              {products.map(p => (
+                <option key={p.slug} value={p.slug}>{p.name}</option>
+              ))}
+            </select>
           </div>
           <div style={{ width: '160px' }}>
             <label style={{ display: 'block', color: '#9ca3af', fontSize: '13px', marginBottom: '4px' }}>Status</label>

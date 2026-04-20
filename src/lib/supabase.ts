@@ -43,6 +43,7 @@ export interface BlogPost {
   featured_image: string | null;
   keywords: string[] | null;
   category: string | null;
+  recommended_product_slug: string | null;
   status: 'draft' | 'published' | 'scheduled';
   published_at: string | null;
   created_at: string;
