@@ -73,6 +73,7 @@ export default async function Blog({
     Dairy: allPosts.filter((p) => p.category?.toLowerCase() === 'dairy').length,
     Pigs: allPosts.filter((p) => p.category?.toLowerCase() === 'pigs').length,
     Livestock: allPosts.filter(isLivestock).length,
+    Pets: allPosts.filter((p) => p.category?.toLowerCase() === 'pets').length,
     'Feed Milling': allPosts.filter((p) => p.category?.toLowerCase() === 'feed milling').length,
   };
 
