@@ -123,7 +123,8 @@ export default async function BlogPostPage({ params }: PageProps) {
               post.keywords || [],
               post.title,
               post.category,
-              post.recommended_product_slug
+              post.recommended_product_slug,
+              post.slug
             );
 
             // Find the first <h2> (usually "Introduction") to insert the product above it

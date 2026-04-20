@@ -59,20 +59,41 @@ const keywordMap: { keywords: string[]; productSlug: string }[] = [
   { keywords: ['pig', 'swine', 'pork', 'sow', 'piggery'], productSlug: 'agripig-sow' },
 ];
 
-// Category-level fallbacks — all point to priority products
-const categoryFallbacks: Record<string, string> = {
-  poultry: 'agritonic',
-  dairy: 'agrivitam',
-  livestock: 'bio-gar',
-  nutrition: 'agrivitam',
-  business: 'agritonic',
+// Category-level fallback POOLS — when no keyword matches, pick deterministically
+// from the relevant pool using a hash of the post slug. This guarantees diversity
+// across posts of the same category instead of every poultry post → agritonic.
+const categoryFallbackPools: Record<string, string[]> = {
+  poultry: ['agritonic', 'agrivitam', 'bio-gar', 'immusol', 'advice', 'mix-5', 'ade-3', 'agrilayer', 'optimum-24'],
+  dairy: ['agrivitam', 'gonat', 'k-digest', 'bio-gar', 'agritonic'],
+  livestock: ['bio-gar', 'agrivitam', 'gonat', 'agritonic', 'k-digest'],
+  pigs: ['agripig-sow', 'agritonic', 'agrivitam', 'bio-gar'],
+  pets: ['gonat', 'bio-gar', 'agrivitam', 're-cover'],
+  'feed milling': ['agritonic', 'lysine', 'methionine', 'dcp-18', 'toxinil', 'choline-chloride'],
+  nutrition: ['agrivitam', 'agritonic', 'optimum-24', 'ade-3'],
+  business: ['agritonic', 'agrivitam', 'bio-gar', 'immusol'],
 };
+
+const finalFallbackPool = ['agritonic', 'agrivitam', 'bio-gar', 'immusol', 'advice', 'mix-5'];
+
+// Simple, stable string hash → non-negative integer
+function hashString(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (h * 31 + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+function pickFromPool(pool: string[], seed: string): string {
+  return pool[hashString(seed) % pool.length];
+}
 
 export function getRecommendedProduct(
   blogKeywords: string[],
   blogTitle: string,
   blogCategory?: string | null,
-  overrideSlug?: string | null
+  overrideSlug?: string | null,
+  blogSlug?: string | null
 ): RecommendedProduct {
   // Manual override always wins
   if (overrideSlug) {
@@ -99,14 +120,18 @@ export function getRecommendedProduct(
     }
   }
 
-  // Use category fallback if no keyword match
+  // Use category fallback POOL if no keyword match — pick deterministically by slug hash
+  const seed = blogSlug || blogTitle || 'default';
   if (!bestMatch && blogCategory) {
-    bestMatch = categoryFallbacks[blogCategory] || 'agritonic';
+    const pool = categoryFallbackPools[blogCategory.toLowerCase()];
+    if (pool && pool.length > 0) {
+      bestMatch = pickFromPool(pool, seed);
+    }
   }
 
-  // Final fallback
+  // Final fallback — also rotates by slug hash
   if (!bestMatch) {
-    bestMatch = 'agritonic';
+    bestMatch = pickFromPool(finalFallbackPool, seed);
   }
 
   return products.find((p) => p.slug === bestMatch) || products[0];
