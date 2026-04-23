@@ -112,7 +112,7 @@ export default function Products() {
             Trusted by dairy, poultry &amp; livestock farmers across Africa.
           </p>
           <div className="hero-badges">
-            <span className="hero-badge">✓ 28 Products</span>
+            <span className="hero-badge">✓ Animal Health Products</span>
             <span className="hero-badge">✓ Trusted across Africa</span>
             <span className="hero-badge">✓ Natural &amp; Antibiotic-Free</span>
           </div>
