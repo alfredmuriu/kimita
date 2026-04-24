@@ -60,11 +60,18 @@ export default async function Blog({
   const isLivestock = (p: BlogPost) =>
     p.category?.toLowerCase() === 'livestock' || !p.category;
 
+  const isFeedMilling = (p: BlogPost) => {
+    const c = p.category?.toLowerCase();
+    return c === 'feed milling' || c === 'feed manufacturing';
+  };
+
   const filteredPosts =
     activeCategory === 'All'
       ? allPosts
       : activeCategory.toLowerCase() === 'livestock'
       ? allPosts.filter(isLivestock)
+      : activeCategory.toLowerCase() === 'feed milling'
+      ? allPosts.filter(isFeedMilling)
       : allPosts.filter((p) => p.category?.toLowerCase() === activeCategory.toLowerCase());
 
   const counts: Record<string, number> = {
@@ -74,7 +81,7 @@ export default async function Blog({
     Pigs: allPosts.filter((p) => p.category?.toLowerCase() === 'pigs').length,
     Livestock: allPosts.filter(isLivestock).length,
     Pets: allPosts.filter((p) => p.category?.toLowerCase() === 'pets').length,
-    'Feed Milling': allPosts.filter((p) => p.category?.toLowerCase() === 'feed milling').length,
+    'Feed Milling': allPosts.filter(isFeedMilling).length,
   };
 
   const jsonLd = {
