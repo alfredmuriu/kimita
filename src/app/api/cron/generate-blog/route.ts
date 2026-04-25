@@ -16,13 +16,14 @@ async function generateAndUploadImage(
   topic: string,
   _keywords: string[],
   slug: string,
-  supabaseAdmin: ReturnType<typeof getSupabaseAdmin>
+  supabaseAdmin: ReturnType<typeof getSupabaseAdmin>,
+  category?: string | null
 ): Promise<string> {
   if (!supabaseAdmin) return DEFAULT_IMAGE;
 
   try {
     // 1. Generate image with Nano Banana Pro — returns Buffer directly (no temp URL needed)
-    const imageBuffer = await generateBlogImageGemini(topic);
+    const imageBuffer = await generateBlogImageGemini(topic, category);
     const fileName = `${slug}-${Date.now()}.png`;
 
     // 2. Upload to Supabase Storage (blog-images bucket)
@@ -146,7 +147,8 @@ export async function GET(request: NextRequest) {
             topic.topic,
             generatedContent.keywords,
             generatedContent.slug,
-            supabaseAdmin
+            supabaseAdmin,
+            topic.category
           );
 
           const slug = generatedContent.slug;
