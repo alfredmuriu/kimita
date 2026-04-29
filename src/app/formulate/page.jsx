@@ -327,6 +327,9 @@ export default function FormulatePage() {
                           <td className={styles.tdLeft}>
                             <span className={styles.catTag}>{ing.category}</span>
                             {ing.name}
+                            {ing.note && (
+                              <span className={styles.ingNote}> · {ing.note}</span>
+                            )}
                           </td>
                           <td>{ing.cp}</td>
                           <td>{ing.me}</td>

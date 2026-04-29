@@ -18,6 +18,7 @@ export type Ingredient = {
   maxInclusion: number
   ruminantOnly?: boolean
   pricePerKg?: number
+  note?: string
 }
 
 export const INGREDIENTS: Ingredient[] = [
@@ -42,7 +43,7 @@ export const INGREDIENTS: Ingredient[] = [
 
   // ── Minerals ──
   { id: 'limestone',    name: 'Limestone',                category: 'mineral', cp: 0,    me: 0,    ca: 38,   p: 0.02, fibre: 0,   lysine: 0,    methionine: 0,    moisture: 1,  maxInclusion: 10 },
-  { id: 'dcp',          name: 'Dicalcium Phosphate (DCP)', category: 'mineral', cp: 0,   me: 0,    ca: 22,   p: 18,   fibre: 0,   lysine: 0,    methionine: 0,    moisture: 2,  maxInclusion: 3  },
+  { id: 'dcp',          name: 'Dicalcium Phosphate (DCP)', category: 'mineral', cp: 0,   me: 0,    ca: 22,   p: 18,   fibre: 0,   lysine: 0,    methionine: 0,    moisture: 2,  maxInclusion: 3, note: 'Typical dose: 500 g/tonne' },
   { id: 'bone-meal',    name: 'Bone Meal',                category: 'mineral', cp: 10,   me: 0,    ca: 24,   p: 12,   fibre: 0,   lysine: 0.3,  methionine: 0.1,  moisture: 5,  maxInclusion: 4  },
   { id: 'salt',         name: 'Salt (NaCl)',              category: 'mineral', cp: 0,    me: 0,    ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 1,  maxInclusion: 0.5 },
   { id: 'red-salt',     name: 'Red Salt',                 category: 'mineral', cp: 0,    me: 0,    ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 1,  maxInclusion: 0.5 },
@@ -53,8 +54,8 @@ export const INGREDIENTS: Ingredient[] = [
   { id: 'tallow',       name: 'Tallow / Animal Fat',      category: 'fat',     cp: 0,    me: 8400, ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 0,  maxInclusion: 4  },
 
   // ── Amino acids ──
-  { id: 'dl-methionine', name: 'DL-Methionine',           category: 'amino',   cp: 58,   me: 3900, ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 99,   moisture: 1,  maxInclusion: 0.4 },
-  { id: 'l-lysine',     name: 'L-Lysine HCl',             category: 'amino',   cp: 95,   me: 3800, ca: 0,    p: 0,    fibre: 0,   lysine: 78,   methionine: 0,    moisture: 1,  maxInclusion: 0.5 },
+  { id: 'dl-methionine', name: 'DL-Methionine',           category: 'amino',   cp: 58,   me: 3900, ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 99,   moisture: 1,  maxInclusion: 0.4, note: 'Typical dose: 500 g/tonne' },
+  { id: 'l-lysine',     name: 'L-Lysine HCl',             category: 'amino',   cp: 95,   me: 3800, ca: 0,    p: 0,    fibre: 0,   lysine: 78,   methionine: 0,    moisture: 1,  maxInclusion: 0.5, note: 'Typical dose: 500 g/tonne' },
   { id: 'l-threonine',  name: 'L-Threonine',              category: 'amino',   cp: 74,   me: 3500, ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 1,  maxInclusion: 0.3 },
 
   // ── Ruminant-only ──
@@ -67,7 +68,7 @@ export const INGREDIENTS: Ingredient[] = [
   { id: 'premix-pig',     name: 'Premix (Pig)',           category: 'premix',  cp: 0,    me: 0,    ca: 5,    p: 3,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 3,  maxInclusion: 0.5 },
   { id: 'premix-general', name: 'Premix (Layers/Growers)', category: 'premix', cp: 0,    me: 0,    ca: 5,    p: 2,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 3,  maxInclusion: 0.5 },
 
-  { id: 'toxin-binder', name: 'Toxin Binder',             category: 'additive', cp: 0,   me: 0,    ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 3,  maxInclusion: 0.25 },
+  { id: 'toxin-binder', name: 'Toxin Binder',             category: 'additive', cp: 0,   me: 0,    ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 3,  maxInclusion: 0.25, note: 'Typical dose: 500 g/tonne' },
   { id: 'coccidiostat', name: 'Coccidiostat (Bio-Gar)', category: 'additive', cp: 0, me: 0,    ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 3,  maxInclusion: 0.1  },
   { id: 'egg-colour',   name: 'Egg Colour',               category: 'additive', cp: 0,   me: 0,    ca: 0,    p: 0,    fibre: 0,   lysine: 0,    methionine: 0,    moisture: 3,  maxInclusion: 0.05 },
   { id: 'yeast-culture', name: 'Yeast Culture',           category: 'additive', cp: 40,  me: 2500, ca: 0.15, p: 1.3,  fibre: 3,   lysine: 3.0,  methionine: 0.6,  moisture: 7,  maxInclusion: 2   },
