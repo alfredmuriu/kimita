@@ -105,23 +105,6 @@ export function exportPdf(data: ExportData) {
   }
   y += 14
 
-  // Bio-Gar callout
-  if (y > pageH - 80) { doc.addPage(); y = margin }
-  doc.setFillColor('#E8F5E9')
-  doc.setDrawColor('#2D6A4F')
-  doc.rect(margin, y, pageW - margin * 2, 40, 'FD')
-  doc.setFont('helvetica', 'bold')
-  doc.setFontSize(10)
-  doc.setTextColor('#2D6A4F')
-  doc.text('BIO-GAR (Agrikima) — ' + data.biogarLabel, margin + 10, y + 16)
-  doc.setFont('helvetica', 'normal')
-  doc.setTextColor('#1a1a1a')
-  doc.text(
-    `Inclusion rate: ${data.biogarGrams} g per tonne.`,
-    margin + 10, y + 30,
-  )
-  y += 54
-
   // Footer
   doc.setFont('helvetica', 'normal')
   doc.setFontSize(9)
@@ -135,7 +118,7 @@ export function exportPdf(data: ExportData) {
   doc.save(filename)
 }
 
-function drawTableHeader(doc: jsPDF, x: number, y: number, cols: { label: string; w: number }[]) {
+function drawTableHeader(doc: jsPDF, x: number, y: number, cols: { label: string; w: number; align?: 'left' | 'right' }[]) {
   const h = 20
   let cx = x
   doc.setFillColor('#f7f7f7')
@@ -146,7 +129,11 @@ function drawTableHeader(doc: jsPDF, x: number, y: number, cols: { label: string
   doc.setFontSize(9)
   doc.setTextColor('#1a1a1a')
   for (const c of cols) {
-    doc.text(c.label.toUpperCase(), cx + 6, y + 13)
+    if (c.align === 'right') {
+      doc.text(c.label.toUpperCase(), cx + c.w - 6, y + 13, { align: 'right' })
+    } else {
+      doc.text(c.label.toUpperCase(), cx + 6, y + 13)
+    }
     cx += c.w
   }
   return y + h
@@ -207,8 +194,6 @@ export function exportExcel(data: ExportData) {
       Number(data.rows.reduce((s, r) => s + r.qtyKg, 0).toFixed(3)),
       Number(data.rows.reduce((s, r) => s + r.percent, 0).toFixed(3)),
     ],
-    [],
-    ['Bio-Gar (Agrikima)', `${data.biogarLabel} — ${data.biogarGrams} g per tonne`],
   ]
   const formulaSheet = XLSX.utils.aoa_to_sheet(formulaRows)
   formulaSheet['!cols'] = [{ wch: 36 }, { wch: 14 }, { wch: 14 }]
