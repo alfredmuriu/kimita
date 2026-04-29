@@ -571,9 +571,9 @@
 .ingTable {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: 13px;
   font-variant-numeric: tabular-nums;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .ingTable thead th {
   position: sticky;
@@ -583,23 +583,23 @@
   color: #333333;
   font-weight: 700;
   text-align: right;
-  padding: 6px 8px;
+  padding: 7px 9px;
   border-bottom: 1px solid #d0d0d0;
-  font-size: 10.5px;
+  font-size: 11.5px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
   white-space: nowrap;
 }
 .ingTable thead th.thLeft { text-align: left; }
-.ingTable thead th.thCheck { width: 30px; text-align: center; padding: 6px 4px; }
+.ingTable thead th.thCheck { width: 32px; text-align: center; padding: 7px 4px; }
 .ingTable tbody td {
-  padding: 3px 8px;
+  padding: 5px 9px;
   border-bottom: 1px solid #f0f0f0;
   text-align: right;
   white-space: nowrap;
 }
 .ingTable tbody td.tdLeft { text-align: left; }
-.ingTable tbody td.tdCheck { text-align: center; padding: 3px 4px; }
+.ingTable tbody td.tdCheck { text-align: center; padding: 5px 4px; }
 .ingTable tbody tr:nth-child(even) td { background: #fafafa; }
 .ingTable tbody tr:hover td { background: #f0f7f2; cursor: pointer; }
 .ingTable tbody tr.rowSelected td { background: #E8F5E9; }
@@ -613,8 +613,8 @@
 }
 .catTag {
   display: inline-block;
-  padding: 0 5px;
-  font-size: 9px;
+  padding: 0 6px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -622,7 +622,7 @@
   background: #eef2ef;
   color: #2D6A4F;
   margin-right: 6px;
-  line-height: 14px;
+  line-height: 16px;
   vertical-align: middle;
 }
 .gridEmpty {
@@ -636,15 +636,15 @@
 .cellInput,
 .cellInput[type="number"],
 .cellInput[type="text"] {
-  width: 70px;
+  width: 75px;
   min-width: 0;
-  max-width: 70px;
+  max-width: 75px;
   height: auto;
   min-height: 0;
-  padding: 2px 5px;
+  padding: 3px 6px;
   margin: 0;
-  font-size: 11.5px;
-  line-height: 1.2;
+  font-size: 12.5px;
+  line-height: 1.3;
   border: 1px solid #d0d0d0;
   border-radius: 2px;
   background: #ffffff;

@@ -69,12 +69,11 @@ export function exportPdf(data: ExportData) {
   let totalKg = 0, totalPct = 0
   for (const r of data.rows) {
     if (y > pageH - 80) { doc.addPage(); y = margin }
-    const rowBg = r.isBiogar ? '#E8F5E9' : undefined
     y = drawTableRow(doc, margin, y, cols, [
-      r.ingredient.name + (r.isBiogar ? '  (Agrikima)' : ''),
+      r.ingredient.name,
       r.qtyKg.toFixed(2),
       r.percent.toFixed(2),
-    ], rowBg, r.isBiogar)
+    ])
     totalKg += r.qtyKg
     totalPct += r.percent
   }
@@ -200,7 +199,7 @@ export function exportExcel(data: ExportData) {
     [],
     ['Ingredient', 'QTY (kg)', '% in Ration'],
     ...data.rows.map((r) => [
-      r.ingredient.name + (r.isBiogar ? '  (Agrikima)' : ''),
+      r.ingredient.name,
       Number(r.qtyKg.toFixed(3)),
       Number(r.percent.toFixed(3)),
     ]),

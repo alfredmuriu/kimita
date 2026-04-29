@@ -471,7 +471,7 @@ function Results({ data, onBack }) {
           </thead>
           <tbody>
             {mainRows.map((r, i) => (
-              <tr key={i} className={r.isBiogar ? styles.rowBiogar : ''}>
+              <tr key={i}>
                 <td>{r.ingredient.name}</td>
                 <td className={styles.tdNum}>{r.qtyKg.toFixed(2)}</td>
                 <td className={styles.tdNum}>{r.percent.toFixed(2)}</td>
@@ -645,7 +645,7 @@ function defaultIngredients(profileId) {
 }
 
 function isAdditive(row) {
-  if (row.isBiogar) return true
+  if (row.isBiogar) return false
   const c = row.ingredient?.category
   return c === 'additive' || c === 'premix' || c === 'amino'
 }
