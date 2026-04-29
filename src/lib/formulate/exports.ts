@@ -188,7 +188,16 @@ function slug(s: string) {
 }
 
 export function exportExcel(data: ExportData) {
-  const formulaRows = [
+  const wb = XLSX.utils.book_new()
+
+  // ── Sheet 1: Formula ─────────────────────────────────────────────
+  const formulaRows: (string | number)[][] = [
+    ['AGRIKIMA — Feed Formulation'],
+    [data.profileName],
+    [`Date: ${fmtDate(data.createdAt)}`],
+    [`Batch size: ${data.batchSizeKg} kg`],
+    [`Bio-Gar: ${data.biogarLabel} (${data.biogarGrams} g/tonne)`],
+    [],
     ['Ingredient', 'QTY (kg)', '% in Ration'],
     ...data.rows.map((r) => [
       r.ingredient.name + (r.isBiogar ? '  (Agrikima)' : ''),
@@ -199,18 +208,41 @@ export function exportExcel(data: ExportData) {
       Number(data.rows.reduce((s, r) => s + r.qtyKg, 0).toFixed(3)),
       Number(data.rows.reduce((s, r) => s + r.percent, 0).toFixed(3)),
     ],
+    [],
+    ['Bio-Gar (Agrikima)', `${data.biogarLabel} — ${data.biogarGrams} g per tonne`],
   ]
-  const nutrientRows = [
+  const formulaSheet = XLSX.utils.aoa_to_sheet(formulaRows)
+  formulaSheet['!cols'] = [{ wch: 36 }, { wch: 14 }, { wch: 14 }]
+  formulaSheet['!merges'] = [
+    { s: { r: 0, c: 0 }, e: { r: 0, c: 2 } }, // title row
+    { s: { r: 1, c: 0 }, e: { r: 1, c: 2 } }, // profile name row
+  ]
+  XLSX.utils.book_append_sheet(wb, formulaSheet, 'Formula')
+
+  // ── Sheet 2: Nutrients ───────────────────────────────────────────
+  const nutrientRows: (string | number)[][] = [
+    ['AGRIKIMA — Nutrient Analysis'],
+    [data.profileName],
+    [`Date: ${fmtDate(data.createdAt)}`],
+    [],
     ['Nutrient', 'Unit', 'Achieved', 'Min', 'Max', 'Status'],
     ...data.nutrients.map((n) => [
-      n.label, n.unit, Number(n.achieved.toFixed(3)),
-      n.min ?? '', n.max ?? '', n.ok ? 'OK' : 'OUT',
+      n.label,
+      n.unit,
+      Number(n.achieved.toFixed(3)),
+      n.min ?? '',
+      n.max ?? '',
+      n.ok ? 'OK' : 'OUT',
     ]),
   ]
+  const nutrientSheet = XLSX.utils.aoa_to_sheet(nutrientRows)
+  nutrientSheet['!cols'] = [{ wch: 22 }, { wch: 10 }, { wch: 12 }, { wch: 10 }, { wch: 10 }, { wch: 10 }]
+  nutrientSheet['!merges'] = [
+    { s: { r: 0, c: 0 }, e: { r: 0, c: 5 } },
+    { s: { r: 1, c: 0 }, e: { r: 1, c: 5 } },
+  ]
+  XLSX.utils.book_append_sheet(wb, nutrientSheet, 'Nutrients')
 
-  const wb = XLSX.utils.book_new()
-  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(formulaRows), 'Formula')
-  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(nutrientRows), 'Nutrients')
   const filename = `Agrikima-${slug(data.profileName)}-${fmtDate(data.createdAt).replace(/ /g, '')}.xlsx`
   XLSX.writeFile(wb, filename)
 }
