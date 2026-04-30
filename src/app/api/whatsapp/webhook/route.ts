@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
       console.error('generateBotReply failed:', err)
       await sendTextMessage(
         incoming.from,
-        "Samahani, nina tatizo la kiufundi. Tafadhali jaribu tena. / Sorry, I'm having a technical problem. Please try again in a moment."
+        "Sorry, I'm having a technical problem. Please try again in a moment."
       )
       return NextResponse.json({ ok: true })
     }
