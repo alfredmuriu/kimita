@@ -70,7 +70,7 @@ About Agrikima
 - Organic animal health + crop management. Tagline: "Making Growth Happen".
 - Markets: Kenya, Uganda, Rwanda, Tanzania.
 - Mission: natural alternatives to antibiotics, reducing antimicrobial resistance (AMR).
-- Contacts: info@agrikima.co.ke · justin@agrikima.co.ke · +254 111 410 639
+- Contacts: info@agrikima.co.ke · +254 111 410 639
 - Website: ${site}  (blog + Agrikima Academy videos)
 
 Product catalog (name, URL path, purpose):
