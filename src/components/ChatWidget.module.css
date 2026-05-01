@@ -4,21 +4,24 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  height: 56px;
+  padding: 0 20px 0 16px;
+  border-radius: 28px;
   background: #25d366; /* WhatsApp brand green */
   color: #fff !important;
   border: none;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
   z-index: 9998;
   text-decoration: none !important;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-  padding: 0;
 }
 .launcher:hover {
   transform: translateY(-2px);
@@ -29,22 +32,32 @@
   outline: 3px solid rgba(37, 211, 102, 0.4);
   outline-offset: 3px;
 }
-.launcher svg {
-  width: 32px;
-  height: 32px;
+.icon {
+  width: 28px;
+  height: 28px;
   fill: #fff;
   display: block;
+  flex-shrink: 0;
+}
+.label {
+  white-space: nowrap;
 }
 
 @media (max-width: 480px) {
   .launcher {
     right: 16px;
     bottom: 16px;
-    width: 56px;
-    height: 56px;
+    height: 52px;
+    padding: 0;
+    width: 52px;
+    border-radius: 50%;
+    justify-content: center;
   }
-  .launcher svg {
-    width: 30px;
-    height: 30px;
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+  .label {
+    display: none;
   }
 }

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ChatWidget from '@/components/ChatWidget';
 
 export const metadata: Metadata = {
   title: 'WhatsApp Bot Demo',
@@ -13,8 +12,6 @@ export default function WhatsAppBotDemoPage() {
         minHeight: '100vh',
         background: '#ffffff',
       }}
-    >
-      <ChatWidget />
-    </main>
+    />
   );
 }
