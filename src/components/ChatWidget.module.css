@@ -2,8 +2,8 @@
 
 .launcher {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 24px;
+  bottom: 24px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -30,8 +30,8 @@
   outline-offset: 3px;
 }
 .launcher svg {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   fill: #fff;
   display: block;
 }
@@ -44,7 +44,21 @@
     height: 56px;
   }
   .launcher svg {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Stack the global "Back to top" button directly above this launcher,
+   on the same right edge, instead of its default offset. */
+:global(.ss-go-top) {
+  right: 24px !important;
+  bottom: 96px !important;
+}
+
+@media (max-width: 480px) {
+  :global(.ss-go-top) {
+    right: 16px !important;
+    bottom: 84px !important;
   }
 }
