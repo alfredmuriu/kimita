@@ -3,6 +3,20 @@
 @import url('/css/products.css');
 @import url('/css/downloads.css');
 
+/* Stack the floating "Back to top" button directly above the WhatsApp
+   launcher (rendered by ChatWidget) on the same right edge. Overrides
+   the default offsets in /css/styles.css. */
+.ss-go-top {
+  right: 24px !important;
+  bottom: 96px !important;
+}
+@media (max-width: 480px) {
+  .ss-go-top {
+    right: 16px !important;
+    bottom: 84px !important;
+  }
+}
+
 
 /* ===== ACADEMY PAGE ===== */
 
