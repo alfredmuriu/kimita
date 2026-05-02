@@ -356,7 +356,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   border: none;
   display: flex;
@@ -369,7 +369,7 @@
   transition: background 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
 }
 .video-modal-nav:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.8);
 }
 .video-modal-nav:active:not(:disabled) {
   transform: translateY(-50%) scale(0.96);
