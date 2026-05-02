@@ -55,10 +55,9 @@ export default function VideoModal({ videos, index, isOpen, onClose, onChangeInd
         onClick={(e) => { e.stopPropagation(); goPrev(); }}
         disabled={!hasPrev}
         aria-label="Previous video"
+        style={{ color: '#ffffff' }}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="#ffffff" />
-        </svg>
+        <span aria-hidden="true" style={{ fontSize: 32, lineHeight: 1, fontWeight: 700, color: '#ffffff', display: 'block' }}>‹</span>
       </button>
 
       <div className="video-modal-container" onClick={(e) => e.stopPropagation()}>
@@ -86,10 +85,9 @@ export default function VideoModal({ videos, index, isOpen, onClose, onChangeInd
         onClick={(e) => { e.stopPropagation(); goNext(); }}
         disabled={!hasNext}
         aria-label="Next video"
+        style={{ color: '#ffffff' }}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" fill="#ffffff" />
-        </svg>
+        <span aria-hidden="true" style={{ fontSize: 32, lineHeight: 1, fontWeight: 700, color: '#ffffff', display: 'block' }}>›</span>
       </button>
     </div>
   );

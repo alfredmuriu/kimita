@@ -350,57 +350,44 @@
 }
 
 .video-modal-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.65) !important;
+  color: #ffffff !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   cursor: pointer;
   z-index: 2;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  transition: background 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
+  padding: 0 !important;
+  font-family: 'Arial', sans-serif !important;
+  transition: background 0.18s ease, opacity 0.18s ease;
 }
 .video-modal-nav:hover:not(:disabled) {
-  background: rgba(0, 0, 0, 0.8);
-}
-.video-modal-nav:active:not(:disabled) {
-  transform: translateY(-50%) scale(0.96);
+  background: rgba(0, 0, 0, 0.85) !important;
 }
 .video-modal-nav:disabled {
   opacity: 0.25;
   cursor: not-allowed;
 }
-.video-modal-nav--prev { left: 24px; }
-.video-modal-nav--next { right: 24px; }
-.video-modal-nav svg {
-  width: 28px !important;
-  height: 28px !important;
-  display: block;
-  pointer-events: none;
-}
-.video-modal-nav svg path {
-  fill: #ffffff !important;
+.video-modal-nav--prev { left: 24px !important; }
+.video-modal-nav--next { right: 24px !important; }
+.video-modal-nav > span {
+  color: #ffffff !important;
 }
 
 @media screen and (max-width: 800px) {
   .video-modal-nav {
-    width: 44px;
-    height: 44px;
+    width: 44px !important;
+    height: 44px !important;
   }
-  .video-modal-nav--prev { left: 8px; }
-  .video-modal-nav--next { right: 8px; }
-  .video-modal-nav svg {
-    width: 24px;
-    height: 24px;
-  }
+  .video-modal-nav--prev { left: 8px !important; }
+  .video-modal-nav--next { right: 8px !important; }
 }
 
 /* Blog Content Styles */
