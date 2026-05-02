@@ -2,33 +2,65 @@
 
 import { useEffect, useCallback } from 'react';
 
-interface VideoModalProps {
-  videoId: string;
+interface Video {
+  id: string;
   title: string;
-  isOpen: boolean;
-  onClose: () => void;
 }
 
-export default function VideoModal({ videoId, title, isOpen, onClose }: VideoModalProps) {
-  const handleEscape = useCallback((e: KeyboardEvent) => {
+interface VideoModalProps {
+  videos: Video[];
+  index: number;
+  isOpen: boolean;
+  onClose: () => void;
+  onChangeIndex: (next: number) => void;
+}
+
+export default function VideoModal({ videos, index, isOpen, onClose, onChangeIndex }: VideoModalProps) {
+  const hasPrev = index > 0;
+  const hasNext = index >= 0 && index < videos.length - 1;
+  const current = index >= 0 ? videos[index] : undefined;
+
+  const goPrev = useCallback(() => {
+    if (hasPrev) onChangeIndex(index - 1);
+  }, [hasPrev, index, onChangeIndex]);
+
+  const goNext = useCallback(() => {
+    if (hasNext) onChangeIndex(index + 1);
+  }, [hasNext, index, onChangeIndex]);
+
+  const handleKey = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') onClose();
-  }, [onClose]);
+    else if (e.key === 'ArrowLeft') goPrev();
+    else if (e.key === 'ArrowRight') goNext();
+  }, [onClose, goPrev, goNext]);
 
   useEffect(() => {
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
+      document.addEventListener('keydown', handleKey);
       document.body.style.overflow = 'hidden';
     }
     return () => {
-      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('keydown', handleKey);
       document.body.style.overflow = '';
     };
-  }, [isOpen, handleEscape]);
+  }, [isOpen, handleKey]);
 
-  if (!isOpen) return null;
+  if (!isOpen || !current) return null;
 
   return (
     <div className="video-modal-overlay" onClick={onClose}>
+      <button
+        type="button"
+        className="video-modal-nav video-modal-nav--prev"
+        onClick={(e) => { e.stopPropagation(); goPrev(); }}
+        disabled={!hasPrev}
+        aria-label="Previous video"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="#ffffff" />
+        </svg>
+      </button>
+
       <div className="video-modal-container" onClick={(e) => e.stopPropagation()}>
         <button className="video-modal-close" onClick={onClose} aria-label="Close video">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -38,14 +70,27 @@ export default function VideoModal({ videoId, title, isOpen, onClose }: VideoMod
         </button>
         <div className="video-modal-player">
           <iframe
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-            title={title}
+            key={current.id}
+            src={`https://www.youtube.com/embed/${current.id}?autoplay=1&rel=0`}
+            title={current.title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>
-        <h3 className="video-modal-title">{title}</h3>
+        <h3 className="video-modal-title">{current.title}</h3>
       </div>
+
+      <button
+        type="button"
+        className="video-modal-nav video-modal-nav--next"
+        onClick={(e) => { e.stopPropagation(); goNext(); }}
+        disabled={!hasNext}
+        aria-label="Next video"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" fill="#ffffff" />
+        </svg>
+      </button>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Layout from '@/components/Layout';
 import VideoModal from '@/components/VideoModal';
@@ -152,7 +152,7 @@ const ACADEMY_DATA: Record<string, CategorySection[]> = {
 
 function AcademyInner() {
   const searchParams = useSearchParams();
-  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
   const [activeFilter, setActiveFilter] = useState<string>('All');
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -187,6 +187,34 @@ function AcademyInner() {
     setActiveFilter('All');
     setOpenDropdown(null);
   };
+
+  // Flat, ordered list of videos currently visible given the active filter.
+  // The modal walks prev/next through this list so the customer steps through
+  // whatever they are looking at, not the entire academy.
+  const visibleVideos = useMemo<Video[]>(() => {
+    const out: Video[] = [];
+    Object.keys(ACADEMY_DATA).forEach((groupName) => {
+      const sections = (activeFilter === 'All' || activeFilter === groupName)
+        ? ACADEMY_DATA[groupName]
+        : ACADEMY_DATA[groupName].filter(s => s.anchor === activeFilter);
+      sections.forEach(section => section.videos.forEach(v => out.push(v)));
+    });
+    return out;
+  }, [activeFilter]);
+
+  const indexOfId = useMemo(() => {
+    const m = new Map<string, number>();
+    visibleVideos.forEach((v, i) => m.set(v.id, i));
+    return m;
+  }, [visibleVideos]);
+
+  // If the visible list shrinks below the current selection (e.g. user
+  // changes filter while the modal is open), close the modal.
+  useEffect(() => {
+    if (selectedIndex >= 0 && selectedIndex >= visibleVideos.length) {
+      setSelectedIndex(-1);
+    }
+  }, [visibleVideos, selectedIndex]);
 
   const allVideos = Object.values(ACADEMY_DATA).flatMap(sections =>
     sections.flatMap(section =>
@@ -415,7 +443,7 @@ function AcademyInner() {
                         <div
                           key={video.id}
                           className="academy-row"
-                          onClick={() => setSelectedVideo(video)}
+                          onClick={() => setSelectedIndex(indexOfId.get(video.id) ?? -1)}
                           id={`video-${video.id}`}
                         >
                           <div className="academy-row__info">
@@ -464,10 +492,11 @@ function AcademyInner() {
       </main>
 
       <VideoModal
-        videoId={selectedVideo?.id || ''}
-        title={selectedVideo?.title || ''}
-        isOpen={!!selectedVideo}
-        onClose={() => setSelectedVideo(null)}
+        videos={visibleVideos}
+        index={selectedIndex}
+        isOpen={selectedIndex >= 0}
+        onClose={() => setSelectedIndex(-1)}
+        onChangeIndex={setSelectedIndex}
       />
     </Layout>
   );
