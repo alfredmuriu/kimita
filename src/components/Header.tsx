@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
-const ACADEMY_CATEGORIES = [
+const VIDEO_CATEGORIES = [
   {
     name: 'Poultry Farming',
     filter: 'Poultry Farming',
@@ -32,48 +31,22 @@ const ACADEMY_CATEGORIES = [
   },
 ];
 
+const ARTICLE_CATEGORIES = [
+  { name: 'Poultry', query: 'Poultry' },
+  { name: 'Dairy', query: 'Dairy' },
+  { name: 'Pigs', query: 'Pigs' },
+  { name: 'Goats and Sheep', query: 'Livestock' },
+  { name: 'Feed Milling', query: 'Feed+Milling' },
+];
+
 export default function Header() {
   const pathname = usePathname();
-  const router = useRouter();
-  const [openAcademyGroup, setOpenAcademyGroup] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLLIElement>(null);
 
   const isActive = (path: string) => {
     if (path === '/') {
       return pathname === path;
     }
     return pathname.startsWith(path);
-  };
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setOpenAcademyGroup(null);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const handleCategoryClick = (e: React.MouseEvent, groupName: string, filter: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setOpenAcademyGroup(prev => prev === groupName ? null : groupName);
-  };
-
-  const handleSubcategoryClick = (e: React.MouseEvent, anchor: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setOpenAcademyGroup(null);
-    router.push(`/agrikima-academy?filter=${anchor}`);
-  };
-
-  const handleGroupNavigate = (e: React.MouseEvent, filter: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setOpenAcademyGroup(null);
-    router.push(`/agrikima-academy?filter=${encodeURIComponent(filter)}`);
   };
 
   return (
@@ -99,85 +72,128 @@ export default function Header() {
           transition: color 0.15s !important;
           white-space: nowrap !important;
         }
-        /* Academy nested dropdown styles */
+        /* Academy dropdown with side flyouts */
         .academy-dropdown-menu {
-          width: 240px !important;
+          width: 200px !important;
           overflow: visible !important;
         }
         .academy-dropdown-menu .academy-group {
           position: relative;
         }
-        .academy-dropdown-menu .academy-group-header {
+        .academy-dropdown-menu .academy-group-header-link {
           display: flex !important;
           align-items: center !important;
           justify-content: space-between !important;
-          cursor: pointer !important;
-          padding: 10px 14px !important;
+          padding: 10px 16px !important;
+          font-size: 13.5px !important;
           font-weight: 400 !important;
-          font-size: 14px !important;
-          transition: color 0.2s !important;
-          color: rgba(255, 255, 255, 0.75) !important;
+          text-decoration: none !important;
+          transform-origin: left center;
+          transition: transform 0.3s ease, color 0.2s !important;
         }
-        .academy-dropdown-menu .academy-group-header:hover {
+        .academy-dropdown-menu .academy-group-header-link:hover {
+          transform: scale(1.05);
           color: white !important;
+          background: none !important;
         }
-        .academy-dropdown-menu .academy-group-chevron {
-          width: 12px;
-          height: 12px;
-          margin-left: 8px;
-          transition: transform 0.3s ease;
-          flex-shrink: 0;
+        .academy-dropdown-menu .academy-group-chevron-side {
+          width: 11px;
+          height: 11px;
           opacity: 0.5;
+          flex-shrink: 0;
+          margin-left: 8px;
         }
-        .academy-dropdown-menu .academy-group-chevron.open {
-          transform: rotate(180deg);
-        }
-        .academy-dropdown-menu .academy-group-header:hover .academy-group-chevron {
+        .academy-dropdown-menu .academy-group:hover > .academy-group-header-link .academy-group-chevron-side {
           opacity: 1;
         }
-        .academy-dropdown-menu .academy-subcategories {
+        .academy-flyout {
+          position: absolute;
+          top: -6px;
+          left: 100%;
+          min-width: 240px;
+          padding: 12px 8px !important;
+          margin: 0 0 0 2px !important;
+          list-style: none !important;
+          background: inherit;
+          background-color: rgba(20,20,20,0.96);
+          box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-6px);
+          transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+          pointer-events: none;
+        }
+        .academy-flyout-grid {
+          flex-direction: row;
+          gap: 8px;
+          min-width: 520px;
+        }
+        .academy-dropdown-menu .academy-group:hover > .academy-flyout {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+          pointer-events: auto;
+        }
+        .academy-flyout-group {
+          list-style: none !important;
+          padding: 6px 0;
+          flex: 1;
+          min-width: 0;
+        }
+        .academy-flyout:not(.academy-flyout-grid) .academy-flyout-group + .academy-flyout-group {
+          border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .academy-flyout-grid .academy-flyout-group + .academy-flyout-group {
+          border-left: 1px solid rgba(255,255,255,0.08);
+          padding-left: 8px;
+        }
+        .academy-flyout-group-title {
+          display: block !important;
+          padding: 6px 16px !important;
+          font-size: 11px !important;
+          font-weight: 700 !important;
+          letter-spacing: 1px !important;
+          text-transform: uppercase !important;
+          color: rgba(255,255,255,0.5) !important;
+          text-decoration: none !important;
+          transform-origin: left center;
+          transition: transform 0.3s ease, color 0.2s !important;
+        }
+        .academy-flyout-group-title:hover {
+          transform: scale(1.05);
+          color: #ffffff !important;
+          background: none !important;
+        }
+        .academy-flyout-group ul {
           list-style: none !important;
           margin: 0 !important;
-          padding: 0 0 0 12px !important;
-          max-height: 0;
-          opacity: 0;
-          overflow: hidden;
-          transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.25s ease;
+          padding: 0 !important;
         }
-        .academy-dropdown-menu .academy-subcategories.open {
-          max-height: 400px;
-          opacity: 1;
-          padding-bottom: 6px !important;
-        }
-        .academy-dropdown-menu .academy-subcategories li {
+        .academy-flyout li {
           list-style: none !important;
+          margin: 0 !important;
         }
-        .academy-dropdown-menu .academy-subcategories a {
+        .academy-flyout a {
           display: block !important;
-          padding: 6px 10px !important;
-          font-size: 12.5px !important;
+          padding: 7px 16px !important;
+          font-size: 13px !important;
           font-weight: 400 !important;
-          color: rgba(255, 255, 255, 0.45) !important;
-          transition: color 0.2s !important;
-          cursor: pointer !important;
+          color: rgba(255,255,255,0.78) !important;
           text-decoration: none !important;
+          white-space: nowrap !important;
+          transform-origin: left center;
+          transition: transform 0.3s ease, color 0.2s !important;
         }
-        .academy-dropdown-menu .academy-subcategories a:hover {
-          color: white !important;
-          transform: none !important;
+        .academy-flyout a:hover {
+          transform: scale(1.05);
+          color: #ffffff !important;
+          background: none !important;
         }
-        .academy-dropdown-menu .academy-group-nav {
-          display: inline-block;
-          font-size: 11px;
-          color: rgba(255,255,255,0.35) !important;
-          margin-left: 6px;
-          cursor: pointer;
-          transition: color 0.2s;
-          text-decoration: underline;
-          text-underline-offset: 2px;
-        }
-        .academy-dropdown-menu .academy-group-nav:hover {
-          color: white !important;
+        .academy-flyout-simple {
+          min-width: 200px;
         }
       `}} />
       {pathname !== '/' && (
@@ -191,23 +207,32 @@ export default function Header() {
           .s-header__menu-links .dropdown-menu li a:hover {
             color: #014d4b !important;
           }
-          .academy-dropdown-menu .academy-group-header {
-            color: rgba(0, 0, 0, 0.75) !important;
+          .academy-dropdown-menu .academy-group-header-link {
+            color: #111111 !important;
           }
-          .academy-dropdown-menu .academy-group-header:hover {
+          .academy-dropdown-menu .academy-group-header-link:hover {
+            color: #014d4b !important;
+            background: none !important;
+          }
+          .academy-flyout {
+            background-color: #ffffff !important;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+          }
+          .academy-flyout-group + .academy-flyout-group {
+            border-top: 1px solid #f0f0f0 !important;
+          }
+          .academy-flyout-group-title {
+            color: rgba(0,0,0,0.5) !important;
+          }
+          .academy-flyout-group-title:hover {
             color: #014d4b !important;
           }
-          .academy-dropdown-menu .academy-subcategories a {
-            color: rgba(0, 0, 0, 0.55) !important;
+          .academy-flyout a {
+            color: #333333 !important;
           }
-          .academy-dropdown-menu .academy-subcategories a:hover {
+          .academy-flyout a:hover {
             color: #014d4b !important;
-          }
-          .academy-dropdown-menu .academy-group-nav {
-            color: rgba(0, 0, 0, 0.4) !important;
-          }
-          .academy-dropdown-menu .academy-group-nav:hover {
-            color: #014d4b !important;
+            background: none !important;
           }
         `}} />
       )}
@@ -238,66 +263,59 @@ export default function Header() {
                   <li><a href="/products#feed-additives">&nbsp;Feed-Additives</a></li>
                 </ul>
               </li>
-              <li ref={dropdownRef} className={`dropdown ${isActive('/agrikima-academy') ? 'current' : ''}`}>
-                <Link href="/agrikima-academy">Academy</Link>
+              <li className={`dropdown ${(isActive('/education') || isActive('/agrikima-academy') || isActive('/articles')) ? 'current' : ''}`}>
+                <Link href="/education">Academy</Link>
                 <ul className="dropdown-menu academy-dropdown-menu">
-                  {ACADEMY_CATEGORIES.map((group) => (
-                    <li key={group.name} className="academy-group">
-                      <div
-                        className="academy-group-header"
-                        onClick={(e) => handleCategoryClick(e, group.name, group.filter)}
-                      >
-                        <span>
-                          {group.name}
-                          {group.subcategories.length === 0 && (
-                            <span
-                              className="academy-group-nav"
-                              onClick={(e) => handleGroupNavigate(e, group.filter)}
-                            >
-                              view →
-                            </span>
-                          )}
-                        </span>
-                        {group.subcategories.length > 0 && (
-                          <svg
-                            className={`academy-group-chevron ${openAcademyGroup === group.name ? 'open' : ''}`}
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                  <li className="academy-group">
+                    <Link href="/agrikima-academy" className="academy-group-header academy-group-header-link">
+                      <span>Videos</span>
+                      <svg className="academy-group-chevron-side" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 6 15 12 9 18" />
+                      </svg>
+                    </Link>
+                    <ul className="academy-flyout academy-flyout-grid">
+                      {VIDEO_CATEGORIES.map((group) => (
+                        <li key={group.name} className="academy-flyout-group">
+                          <a
+                            href={`/agrikima-academy?filter=${encodeURIComponent(group.filter)}`}
+                            className="academy-flyout-group-title"
                           >
-                            <polyline points="6 9 12 15 18 9" />
-                          </svg>
-                        )}
-                      </div>
-                      {group.subcategories.length > 0 && (
-                        <ul className={`academy-subcategories ${openAcademyGroup === group.name ? 'open' : ''}`}>
-                          {group.subcategories.map((sub) => (
-                            <li key={sub.anchor}>
-                              <a
-                                href={`/agrikima-academy?filter=${sub.anchor}`}
-                                onClick={(e) => handleSubcategoryClick(e, sub.anchor)}
-                              >
-                                {sub.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
+                            {group.name}
+                          </a>
+                          <ul>
+                            {group.subcategories.map((sub) => (
+                              <li key={sub.anchor}>
+                                <a href={`/agrikima-academy?filter=${sub.anchor}`}>{sub.name}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                  <li className="academy-group">
+                    <Link href="/articles" className="academy-group-header academy-group-header-link">
+                      <span>Articles</span>
+                      <svg className="academy-group-chevron-side" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 6 15 12 9 18" />
+                      </svg>
+                    </Link>
+                    <ul className="academy-flyout academy-flyout-simple">
+                      {ARTICLE_CATEGORIES.map((cat) => (
+                        <li key={cat.query}>
+                          <a href={`/articles?category=${cat.query}`}>{cat.name}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li className={`dropdown ${isActive('/articles') ? 'current' : ''}`}>
                 <Link href="/articles">What&apos;s New</Link>
                 <ul className="dropdown-menu">
-                  <li><a href="/articles?category=Poultry">&nbsp;Poultry</a></li>
-                  <li><a href="/articles?category=Dairy">&nbsp;Dairy</a></li>
-                  <li><a href="/articles?category=Pigs">&nbsp;Pigs</a></li>
-                  <li><a href="/articles?category=Livestock">&nbsp;Goats and Sheep</a></li>
-                  <li><a href="/articles?category=Feed+Milling">&nbsp;Feed Milling</a></li>
+                  {ARTICLE_CATEGORIES.map((cat) => (
+                    <li key={cat.query}><a href={`/articles?category=${cat.query}`}>&nbsp;{cat.name}</a></li>
+                  ))}
                 </ul>
               </li>
               <li className={isActive('/contact') ? 'current' : ''}>

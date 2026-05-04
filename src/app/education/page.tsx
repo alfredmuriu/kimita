@@ -49,12 +49,11 @@ export default function EducationPage() {
             color: #014d4b !important;
         }
         .page-title {
-            color: #000000 !important;
+          color: #111111 !important;
         }
         .page-subtitle {
-            color: #444444 !important;
+          color: #444444 !important;
         }
-        .edu-hero { background: #ffffff; }
         .edu-cards-wrap {
           background: #f9fafb;
           border-top: 1px solid #f3f4f6;
@@ -99,12 +98,29 @@ export default function EducationPage() {
           box-shadow: 0 10px 28px rgba(0,0,0,0.08);
           border-color: #014d4b;
         }
-        .edu-card-image {
+        .edu-card-image-wrap {
+          position: relative;
           width: 100%;
           height: 240px;
+          overflow: hidden;
+          background: #eef2ef;
+        }
+        .edu-card-image {
+          width: 100%;
+          height: 100%;
           object-fit: cover;
           display: block;
-          background: #eef2ef;
+          transition: transform .4s ease;
+        }
+        .edu-card:hover .edu-card-image {
+          transform: scale(1.04);
+        }
+        .edu-card-image-wrap::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.45) 100%);
+          pointer-events: none;
         }
         .edu-card-body {
           padding: 24px 24px 28px;
@@ -114,11 +130,18 @@ export default function EducationPage() {
           flex: 1;
         }
         .edu-card-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
           font-size: 12px;
           font-weight: 700;
           letter-spacing: 1.5px;
           text-transform: uppercase;
           color: #014d4b;
+        }
+        .edu-card-tag-icon {
+          font-size: 13px;
+          line-height: 1;
         }
         .edu-card-title {
           font-size: 22px;
@@ -158,7 +181,6 @@ export default function EducationPage() {
       `}} />
 
       <main>
-        <div className="edu-hero">
         <div className="products-hero">
           <div style={{ flex: 1 }}>
             <h1 className="s-intro__content-title page-title">
@@ -175,7 +197,7 @@ export default function EducationPage() {
               <span className="hero-badge">✓ Poultry &amp; Livestock</span>
             </div>
           </div>
-        </div>
+          <img src="/images/academy.jpg" alt="Agrikima Academy — practical training for African farmers" className="intro-image-slide-in products-hero-image" />
         </div>
 
         <div className="edu-cards-wrap">
@@ -187,13 +209,18 @@ export default function EducationPage() {
 
             <div className="edu-cards-grid">
               <Link href="/agrikima-academy" className="edu-card">
-                <img
-                  src="/images/videos.jpg"
-                  alt="Training videos from Agrikima Academy"
-                  className="edu-card-image"
-                />
+                <div className="edu-card-image-wrap">
+                  <img
+                    src="/images/videos.jpg"
+                    alt="Training videos from Agrikima Academy"
+                    className="edu-card-image"
+                  />
+                </div>
                 <div className="edu-card-body">
-                  <span className="edu-card-tag">Farm Videos</span>
+                  <span className="edu-card-tag">
+                    <span className="edu-card-tag-icon" aria-hidden="true">▶</span>
+                    Farm Videos
+                  </span>
                   <h3 className="edu-card-title">Watch &amp; Learn</h3>
                   <p className="edu-card-desc">
                     Expert-led video courses on poultry feeding, brooding, housing, health,
@@ -204,13 +231,18 @@ export default function EducationPage() {
               </Link>
 
               <Link href="/articles" className="edu-card">
-                <img
-                  src="/images/guides.jpg"
-                  alt="Training articles and resources from Agrikima"
-                  className="edu-card-image"
-                />
+                <div className="edu-card-image-wrap">
+                  <img
+                    src="/images/guides.jpg"
+                    alt="Training articles and resources from Agrikima"
+                    className="edu-card-image"
+                  />
+                </div>
                 <div className="edu-card-body">
-                  <span className="edu-card-tag">Farm Guides</span>
+                  <span className="edu-card-tag">
+                    <span className="edu-card-tag-icon" aria-hidden="true">📖</span>
+                    Farm Guides
+                  </span>
                   <h3 className="edu-card-title">Read the Guides</h3>
                   <p className="edu-card-desc">
                     Written articles covering agricultural insights, farming tips, poultry
