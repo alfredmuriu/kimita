@@ -33,7 +33,17 @@ const VIDEO_CATEGORIES = [
   {
     name: 'Biogar Series',
     filter: 'Biogar Series',
-    subcategories: [],
+    subcategories: [
+      { name: 'Milk and Meat Quality', anchor: 'biogar-series' },
+      { name: 'Gut Health & Rumen Modulation', anchor: 'biogar-series' },
+      { name: 'Feed Protection', anchor: 'biogar-series' },
+      { name: 'Environmental Benefits', anchor: 'biogar-series' },
+      { name: 'Disease Control & Immunity', anchor: 'biogar-series' },
+      { name: 'Ascites Support', anchor: 'biogar-series' },
+      { name: 'Antibiotic Challenge', anchor: 'biogar-series' },
+      { name: 'Growth & Feed Conversion', anchor: 'biogar-series' },
+      { name: 'Mastitis Support', anchor: 'biogar-series' },
+    ],
   },
 ];
 
@@ -132,10 +142,77 @@ export default function Header() {
           transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
           pointer-events: none;
         }
-        .academy-flyout-grid {
-          flex-direction: row;
-          gap: 8px;
-          min-width: 520px;
+        .academy-flyout-cascade {
+          min-width: 200px;
+          padding: 6px 0 !important;
+        }
+        .academy-cascade-item {
+          position: relative;
+          list-style: none !important;
+          margin: 0 !important;
+        }
+        .academy-cascade-link {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          padding: 8px 16px !important;
+          font-size: 13.5px !important;
+          font-weight: 400 !important;
+          color: rgba(255,255,255,0.78) !important;
+          text-decoration: none !important;
+          white-space: nowrap !important;
+          transform-origin: left center;
+          transition: transform 0.3s ease, color 0.2s !important;
+        }
+        .academy-cascade-link:hover {
+          transform: scale(1.05);
+          color: #ffffff !important;
+          background: none !important;
+        }
+        .academy-cascade-item:hover > .academy-cascade-link .academy-group-chevron-side {
+          opacity: 1;
+        }
+        .academy-subflyout {
+          position: absolute;
+          top: -6px;
+          left: 100%;
+          min-width: 240px;
+          padding: 8px 0 !important;
+          margin: 0 0 0 2px !important;
+          list-style: none !important;
+          background-color: rgba(20,20,20,0.96);
+          box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-6px);
+          transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+          pointer-events: none;
+        }
+        .academy-cascade-item:hover > .academy-subflyout {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+          pointer-events: auto;
+        }
+        .academy-subflyout li {
+          list-style: none !important;
+          margin: 0 !important;
+        }
+        .academy-subflyout a {
+          display: block !important;
+          padding: 7px 16px !important;
+          font-size: 13px !important;
+          font-weight: 400 !important;
+          color: rgba(255,255,255,0.78) !important;
+          text-decoration: none !important;
+          white-space: nowrap !important;
+          transform-origin: left center;
+          transition: transform 0.3s ease, color 0.2s !important;
+        }
+        .academy-subflyout a:hover {
+          transform: scale(1.05);
+          color: #ffffff !important;
+          background: none !important;
         }
         .academy-dropdown-menu .academy-group:hover > .academy-flyout {
           opacity: 1;
@@ -240,6 +317,24 @@ export default function Header() {
             color: #014d4b !important;
             background: none !important;
           }
+          .academy-cascade-link {
+            color: #333333 !important;
+          }
+          .academy-cascade-link:hover {
+            color: #014d4b !important;
+            background: none !important;
+          }
+          .academy-subflyout {
+            background-color: #ffffff !important;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+          }
+          .academy-subflyout a {
+            color: #333333 !important;
+          }
+          .academy-subflyout a:hover {
+            color: #014d4b !important;
+            background: none !important;
+          }
         `}} />
       )}
       <header className="s-header">
@@ -279,22 +374,29 @@ export default function Header() {
                         <polyline points="9 6 15 12 9 18" />
                       </svg>
                     </Link>
-                    <ul className="academy-flyout academy-flyout-grid">
+                    <ul className="academy-flyout academy-flyout-cascade">
                       {VIDEO_CATEGORIES.map((group) => (
-                        <li key={group.name} className="academy-flyout-group">
+                        <li key={group.name} className="academy-cascade-item">
                           <a
                             href={`/agrikima-academy?filter=${encodeURIComponent(group.filter)}`}
-                            className="academy-flyout-group-title"
+                            className="academy-cascade-link"
                           >
-                            {group.name}
+                            <span>{group.name}</span>
+                            {group.subcategories.length > 0 && (
+                              <svg className="academy-group-chevron-side" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="9 6 15 12 9 18" />
+                              </svg>
+                            )}
                           </a>
-                          <ul>
-                            {group.subcategories.map((sub) => (
-                              <li key={sub.anchor}>
-                                <a href={`/agrikima-academy?filter=${sub.anchor}`}>{sub.name}</a>
-                              </li>
-                            ))}
-                          </ul>
+                          {group.subcategories.length > 0 && (
+                            <ul className="academy-subflyout">
+                              {group.subcategories.map((sub) => (
+                                <li key={`${group.name}-${sub.name}`}>
+                                  <a href={`/agrikima-academy?filter=${sub.anchor}`}>{sub.name}</a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </ul>

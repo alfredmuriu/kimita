@@ -197,7 +197,7 @@ export default function EducationPage() {
               <span className="hero-badge">✓ Poultry &amp; Livestock</span>
             </div>
           </div>
-          <img src="/images/academy.jpg" alt="Agrikima Academy — practical training for African farmers" className="intro-image-slide-in products-hero-image" />
+          <img src="/images/education.jpg" alt="Agrikima Academy — practical training for African farmers" className="intro-image-slide-in products-hero-image" />
         </div>
 
         <div className="edu-cards-wrap">
