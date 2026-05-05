@@ -278,6 +278,21 @@ export default function Header() {
         .academy-flyout-simple {
           min-width: 200px;
         }
+        .s-header__social {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 8px !important;
+        }
+        .s-header__social li {
+          margin: 0 !important;
+        }
+        .s-header__social .email {
+          font-size: 1.4rem !important;
+        }
+        .s-header__social svg {
+          width: 18px !important;
+          height: 18px !important;
+        }
       `}} />
       {pathname !== '/' && (
         <style dangerouslySetInnerHTML={{ __html: `
@@ -425,6 +440,9 @@ export default function Header() {
                     <li key={cat.query}><a href={`/articles?category=${cat.query}`}>&nbsp;{cat.name}</a></li>
                   ))}
                 </ul>
+              </li>
+              <li className={isActive('/downloads') ? 'current' : ''}>
+                <Link href="/downloads">Downloads</Link>
               </li>
               <li className={isActive('/contact') ? 'current' : ''}>
                 <Link href="/contact">Contact</Link>
