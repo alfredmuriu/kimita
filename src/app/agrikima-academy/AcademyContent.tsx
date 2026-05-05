@@ -86,6 +86,13 @@ const POULTRY_SECTIONS: CategorySection[] = [
 
 const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
   {
+    name: 'Getting Started',
+    anchor: 'large-animal-getting-started',
+    videos: [
+      { id: 'KHI1TcD_iUs', title: 'Introduction to Large Animals' },
+    ],
+  },
+  {
     name: 'Housing & Farm Setup',
     anchor: 'large-animal-housing',
     videos: [
@@ -145,9 +152,28 @@ const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
   },
 ];
 
+const BIOGAR_SERIES_SECTIONS: CategorySection[] = [
+  {
+    name: 'Biogar Series',
+    anchor: 'biogar-series',
+    videos: [
+      { id: 'ABAuvaWQSz4', title: 'Milk and Meat Quality Improvement' },
+      { id: 'l427GouHJdA', title: 'Gut Health and Rumen Modulation' },
+      { id: '4YZnIwGINuo', title: 'Feed Protection' },
+      { id: 'urn0eIMLO8E', title: 'Environmental Benefits' },
+      { id: 'hgadDRh1hR4', title: 'Disease Control and Immunity Support' },
+      { id: 'R0faGbvLNA8', title: 'Ascites Support' },
+      { id: 'WNqu5RHB1nE', title: 'Antibiotic Challenge' },
+      { id: '9GvPtScnu8Q', title: 'Growth, Performance and Feed Conversion' },
+      { id: 'qGyb46VA7fw', title: 'Mastitis Support' },
+    ],
+  },
+];
+
 const ACADEMY_DATA: Record<string, CategorySection[]> = {
   'Poultry Farming': POULTRY_SECTIONS,
   'Large Animals': LARGER_ANIMAL_SECTIONS,
+  'Biogar Series': BIOGAR_SERIES_SECTIONS,
 };
 
 function AcademyInner() {

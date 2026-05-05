@@ -20,6 +20,7 @@ const VIDEO_CATEGORIES = [
     name: 'Large Animals',
     filter: 'Large Animals',
     subcategories: [
+      { name: 'Getting Started', anchor: 'large-animal-getting-started' },
       { name: 'Housing & Farm Setup', anchor: 'large-animal-housing' },
       { name: 'Feeding & Supplementing', anchor: 'large-animal-feeding' },
       { name: 'Production', anchor: 'large-animal-production' },
@@ -28,6 +29,11 @@ const VIDEO_CATEGORIES = [
       { name: 'Sustainability & Natural Practices', anchor: 'large-animal-sustainability' },
       { name: 'Business & Marketing', anchor: 'large-animal-business' },
     ],
+  },
+  {
+    name: 'Biogar Series',
+    filter: 'Biogar Series',
+    subcategories: [],
   },
 ];
 
