@@ -5,7 +5,7 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || '');
 // Generate a blog featured image using Nano Banana Pro (Gemini image generation)
 // Returns the image as a Buffer ready for upload to Supabase Storage
 export async function generateBlogImageGemini(topic: string, category?: string | null): Promise<Buffer> {
-  const model = genAI.getGenerativeModel({ model: 'gemini-3-pro-image-preview' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-image-preview' });
 
   const cat = (category || '').toLowerCase();
   const isFeedMilling = cat === 'feed milling' || cat === 'feed manufacturing';
