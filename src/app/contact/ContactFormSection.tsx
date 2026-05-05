@@ -36,148 +36,170 @@ export default function ContactFormSection({ paddingTop = '180px' }: ContactForm
         <>
             <style dangerouslySetInnerHTML={{
                 __html: `
-                .tw-form-container {
-                    padding: ${paddingTop} 20px 80px 20px;
-                    background-color: #ffffff;
+                .ck-contact-section {
+                    background: #ffffff;
+                    padding: ${paddingTop} 24px 96px;
                     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
                 }
-                .tw-form {
+                .ck-contact-wrap {
+                    width: 100%;
+                    max-width: 1100px;
+                    margin: 0 auto;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    font-size: 1rem;
-                    color: #111827;
+                    justify-content: center;
+                    gap: 56px;
                 }
-                .tw-pretitle {
-                    font-size: 2rem;
-                    color: #014d4b;
-                    font-weight: 600;
-                    padding-bottom: 0.5rem;
-                    margin: 0;
-                }
-                .tw-title {
-                    font-size: 4rem;
-                    font-weight: 700;
-                    color: #334155;
-                    padding-bottom: 1rem;
-                    margin: 0;
-                    line-height: 4.5rem;
-                }
-                .tw-subtitle {
-                    font-size: 1.5rem;
-                    color: #6b7280;
+                .ck-contact-intro {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 0;
+                    align-items: center;
                     text-align: center;
-                    padding-bottom: 2.5rem;
-                    margin: 0;
-                    line-height: 2.25rem;
+                    flex: 1;
+                    max-width: 520px;
                 }
-                .tw-row {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 1.5rem;
-                    width: 100%;
-                    max-width: 760px;
-                }
-                .tw-input-wrapper {
-                    width: 100%;
-                }
-                .tw-label {
-                    color: #374151;
-                    display: block;
-                    font-size: 0.95rem;
+                .ck-contact-pretitle {
+                    font-size: 14px;
                     font-weight: 500;
-                    margin-bottom: 0.4rem;
+                    color: #71717a;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    margin: 0 0 16px;
                 }
-                .tw-input, .tw-textarea {
-                    width: 100% !important;
-                    border: 1.5px solid #d1d5db !important;
-                    border-radius: 0.5rem !important;
-                    outline: none !important;
-                    padding: 0.75rem 1rem !important;
-                    box-sizing: border-box !important;
-                    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
-                    background-color: #f9fafb !important;
-                    font-size: 1rem !important;
-                    color: #111827 !important;
-                    font-family: inherit !important;
+                .ck-contact-title {
+                    font-size: 44px;
+                    line-height: 1.15;
+                    font-weight: 700;
+                    color: #18181b;
+                    margin: 0 0 20px;
                 }
-                .tw-input {
-                    height: 52px !important;
+                .ck-contact-desc {
+                    font-size: 16px;
+                    line-height: 1.6;
+                    color: #71717a;
+                    margin: 0;
                 }
-                .tw-textarea {
-                    height: 160px !important;
-                    resize: vertical !important;
-                }
-                .tw-input:focus, .tw-textarea:focus {
-                    border-color: #014d4b !important;
-                    box-shadow: 0 0 0 3px rgba(1, 77, 75, 0.1) !important;
-                    background-color: #ffffff !important;
-                }
-                .tw-message-row {
-                    margin-top: 1.25rem;
+                .ck-contact-card {
                     width: 100%;
-                    max-width: 760px;
+                    max-width: 440px;
+                    border: 1px solid #d4d4d8;
+                    border-radius: 16px;
+                    padding: 24px 28px;
+                    background: #ffffff;
+                    box-sizing: border-box;
                 }
+                .ck-contact-card h2 {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #27272a;
+                    margin: 0 0 14px;
+                }
+                .ck-form { display: flex; flex-direction: column; gap: 10px; }
+                .ck-field { display: flex; flex-direction: column; gap: 4px; }
+                .ck-field label {
+                    font-size: 12px;
+                    color: #a1a1aa;
+                    font-weight: 400;
+                    margin: 0;
+                }
+                .ck-field input, .ck-field textarea {
+                    background: #fafafa;
+                    border: 1px solid #d4d4d8;
+                    border-radius: 6px;
+                    padding: 5px 12px;
+                    font-size: 13px;
+                    line-height: 1.4;
+                    color: #27272a;
+                    outline: none;
+                    transition: border-color 0.15s;
+                    font-family: inherit;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                .ck-field input { height: 32px; }
+                .ck-field textarea { resize: none; min-height: 60px; }
+                .ck-field input::placeholder, .ck-field textarea::placeholder { color: #a1a1aa; }
+                .ck-field input:focus, .ck-field textarea:focus {
+                    border-color: #71717a;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
+                .ck-submit {
+                    margin-top: 6px;
+                    align-self: center;
+                    text-align: center;
+                    cursor: pointer;
+                    font-size: 11px !important;
+                    padding: 8px 18px !important;
+                    height: auto !important;
+                    min-height: 0 !important;
+                    line-height: 1.4 !important;
+                }
+                .ck-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+                .ck-status { font-size: 13px; margin: 12px 0 0; }
+                .ck-status--ok { color: #014d4b; font-weight: 500; }
+                .ck-status--err { color: #dc2626; font-weight: 500; }
                 @media (min-width: 768px) {
-                    .tw-row {
+                    .ck-contact-wrap {
                         flex-direction: row;
-                        gap: 2rem;
+                        align-items: flex-start;
+                        gap: 80px;
                     }
-                    .tw-form-container {
-                        padding-left: 40px;
-                        padding-right: 40px;
+                    .ck-contact-intro {
+                        align-items: flex-start;
+                        text-align: left;
                     }
+                    .ck-contact-title { font-size: 56px; }
                 }
                 `
             }} />
 
-            <div className="tw-form-container">
-                <form className="tw-form" onSubmit={handleSubmit}>
-                    <p className="tw-pretitle">Contact Us</p>
-                    <h1 className="tw-title">Get in touch with us</h1>
-                    <p className="tw-subtitle">
-                        Have questions about our natural poultry solutions or livestock supplements?<br />
-                        Reach out to our experts today for personalized farm support.
-                    </p>
-
-                    <div className="tw-row">
-                        <div className="tw-input-wrapper">
-                            <label className="tw-label" htmlFor="name">Your Name</label>
-                            <input className="tw-input" id="name" name="name" type="text" required />
-                        </div>
-                        <div className="tw-input-wrapper">
-                            <label className="tw-label" htmlFor="email">Your Email</label>
-                            <input className="tw-input" id="email" name="email" type="email" required />
-                        </div>
+            <section className="ck-contact-section">
+                <div className="ck-contact-wrap">
+                    <div className="ck-contact-intro">
+                        <p className="ck-contact-pretitle">Get In Touch</p>
+                        <h1 className="ck-contact-title">Let&apos;s grow your farm together.</h1>
+                        <p className="ck-contact-desc">
+                            Talk to our team about natural animal health, supplements and feed solutions
+                            built for African farms — and the products that fit your flock or herd.
+                        </p>
                     </div>
 
-                    <div className="tw-message-row">
-                        <label className="tw-label" htmlFor="message">Message</label>
-                        <textarea className="tw-textarea" id="message" name="message" required></textarea>
+                    <div className="ck-contact-card">
+                        <h2>Send Message</h2>
+                        <form className="ck-form" onSubmit={handleSubmit}>
+                            <div className="ck-field">
+                                <label htmlFor="name">Name</label>
+                                <input id="name" name="name" type="text" placeholder="Enter your name" required />
+                            </div>
+                            <div className="ck-field">
+                                <label htmlFor="email">Email</label>
+                                <input id="email" name="email" type="email" placeholder="Enter your email" required />
+                            </div>
+                            <div className="ck-field">
+                                <label htmlFor="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message.." rows={4} required></textarea>
+                            </div>
+                            <button type="submit" className="btn btn--stroke ck-submit" disabled={status === 'sending'}>
+                                {status === 'sending' ? 'Sending...' : 'Send Message'}
+                            </button>
+
+                            {status === 'success' && (
+                                <p className="ck-status ck-status--ok">
+                                    Message sent! We&apos;ll get back to you soon.
+                                </p>
+                            )}
+                            {status === 'error' && (
+                                <p className="ck-status ck-status--err">
+                                    Something went wrong. Please try again or email us directly.
+                                </p>
+                            )}
+                        </form>
                     </div>
-
-                    <button
-                        type="submit"
-                        className="btn btn--primary cta-btn"
-                        disabled={status === 'sending'}
-                        style={{ backgroundColor: '#026c6a', color: '#ffffff', border: 'none', marginTop: '40px', cursor: status === 'sending' ? 'not-allowed' : 'pointer', fontFamily: 'Inter, sans-serif', opacity: status === 'sending' ? 0.7 : 1 }}
-                    >
-                        {status === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
-                    </button>
-
-                    {status === 'success' && (
-                        <p style={{ marginTop: '16px', color: '#014d4b', fontWeight: 500 }}>
-                            Message sent! We&apos;ll get back to you soon.
-                        </p>
-                    )}
-                    {status === 'error' && (
-                        <p style={{ marginTop: '16px', color: '#dc2626', fontWeight: 500 }}>
-                            Something went wrong. Please try again or email us directly.
-                        </p>
-                    )}
-                </form>
-            </div>
+                </div>
+            </section>
         </>
     );
 }

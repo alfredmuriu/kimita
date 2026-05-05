@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getRecommendedProduct } from '@/lib/product-recommendations';
 import { getRelatedVideos } from '@/lib/related-videos';
+import ArticleContactForm from '@/components/ArticleContactForm';
 
 // Revalidate every 60 seconds to show blog post edits
 export const revalidate = 60;
@@ -172,6 +173,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                     Explore Products
                   </Link>
                 </section>
+
+                {/* Inline contact form for the team */}
+                <ArticleContactForm />
 
                 {/* Related Academy Videos */}
                 {relatedVideos.length > 0 && (
