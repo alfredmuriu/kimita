@@ -131,7 +131,7 @@ export default function Header() {
           margin: 0 0 0 2px !important;
           list-style: none !important;
           background: inherit;
-          background-color: rgba(20,20,20,0.96);
+          background-color: #1C1C28;
           box-shadow: 0 4px 16px rgba(0,0,0,0.18);
           display: flex;
           flex-direction: column;
@@ -180,7 +180,7 @@ export default function Header() {
           padding: 8px 0 !important;
           margin: 0 0 0 2px !important;
           list-style: none !important;
-          background-color: rgba(20,20,20,0.96);
+          background-color: #1C1C28;
           box-shadow: 0 4px 16px rgba(0,0,0,0.18);
           opacity: 0;
           visibility: hidden;
