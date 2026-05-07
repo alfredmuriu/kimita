@@ -74,6 +74,9 @@ export default async function BlogPostPage({ params }: PageProps) {
       })
     : '';
 
+  const wordCount = (post.content || '').replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
+  const readMinutes = Math.min(4, Math.max(1, Math.round(wordCount / 200)));
+
   return (
     <Layout>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -115,6 +118,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div style={{display: 'flex', gap: '20px', color: '#9ca3af', fontSize: '14px', marginBottom: '40px'}}>
             <span>{formattedDate}</span>
             <span>By Agrikima Team</span>
+            <span>{readMinutes} min read</span>
           </div>
 
           {/* Content with product recommendation above Introduction */}
