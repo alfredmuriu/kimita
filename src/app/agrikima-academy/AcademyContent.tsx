@@ -1,184 +1,15 @@
 'use client';
 
-import { useState, useEffect, useMemo, Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import Layout from '@/components/Layout';
-import VideoModal from '@/components/VideoModal';
 import ScrollDownButton from '@/components/ScrollDownButton';
+import { ACADEMY_DATA, CategorySection } from '@/lib/academy-data';
 
-interface Video {
-  id: string;
-  title: string;
-}
-
-interface CategorySection {
-  name: string;
-  anchor: string;
-  videos: Video[];
-}
-
-const POULTRY_SECTIONS: CategorySection[] = [
-  {
-    name: 'Getting Started',
-    anchor: 'getting-started',
-    videos: [
-      { id: '-m51mnGrLEU', title: 'Introduction to Poultry Farming' },
-      { id: 'MXrLWo4xd68', title: 'Inside Out' },
-    ],
-  },
-  {
-    name: 'Brooding & Early Chick Care',
-    anchor: 'brooding',
-    videos: [
-      { id: 'TaL6EPbtPkQ', title: 'Brooding' },
-      { id: 'nQj7g_DFWIU', title: 'Growing and Transition' },
-      { id: 'XEcSxfxqCww', title: 'Incubation' },
-    ],
-  },
-  {
-    name: 'Poultry Feeding',
-    anchor: 'poultry-feeding',
-    videos: [
-      { id: '2I3kSMEcXKY', title: 'Feed Types, Forms and Practical Feeding Tips' },
-      { id: '4HHYibFMkYc', title: 'Broiler Feeding' },
-      { id: 'Xio1Ys6od7U', title: 'Layer Feeding' },
-      { id: 'pQzfwHm8VD0', title: 'Poultry Feeding' },
-      { id: 'iYTJsl8Ggj0', title: 'Poultry Supplementing' },
-    ],
-  },
-  {
-    name: 'Poultry Housing & Farm Setup',
-    anchor: 'poultry-housing',
-    videos: [
-      { id: 'QkucCuQs4D0', title: 'Building the Perfect Poultry House' },
-      { id: 'Vam23oykzd4', title: 'Inside the Poultry House' },
-      { id: 'yqxmpNmKOBo', title: 'Poultry Housing' },
-      { id: 'svwduDniE4o', title: 'Poultry Lighting' },
-    ],
-  },
-  {
-    name: 'Poultry Health & Disease',
-    anchor: 'poultry-health',
-    videos: [
-      { id: 'mYjMDoP5rQE', title: 'Anti Microbial Resistance' },
-      { id: 'L0iE79JJGnM', title: 'Nutritional Deficiency' },
-      { id: 'Cz94nOBYuDg', title: 'Behavioural Abnormalities' },
-      { id: 'mViMyFUUikY', title: 'Poultry Vaccination' },
-      { id: 'hWWo1bpb_uw', title: 'Poultry Diseases' },
-    ],
-  },
-  {
-    name: 'Poultry Welfare & Biosecurity',
-    anchor: 'poultry-welfare',
-    videos: [
-      { id: 'mVyLbzEBlgU', title: 'Poultry Welfare' },
-      { id: '5Z2lv3cia0M', title: 'Poultry Biosecurity Guide' },
-    ],
-  },
-  {
-    name: 'Farm Management & Records',
-    anchor: 'poultry-management',
-    videos: [
-      { id: 'cSuL_AN9OmQ', title: 'Poultry Record Keeping' },
-    ],
-  },
-];
-
-const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
-  {
-    name: 'Getting Started',
-    anchor: 'large-animal-getting-started',
-    videos: [
-      { id: 'KHI1TcD_iUs', title: 'Introduction to Large Animals' },
-    ],
-  },
-  {
-    name: 'Housing & Farm Setup',
-    anchor: 'large-animal-housing',
-    videos: [
-      { id: 'UxhKRZK4KgI', title: 'Large Animal Housing' },
-    ],
-  },
-  {
-    name: 'Feeding & Supplementing',
-    anchor: 'large-animal-feeding',
-    videos: [
-      { id: 'uNpJjeUrbFg', title: 'Large Animal Feeding' },
-      { id: 'ZZ2ZobpI_z0', title: 'Supplementing' },
-    ],
-  },
-  {
-    name: 'Production',
-    anchor: 'large-animal-production',
-    videos: [
-      { id: 'HSJi_eEBXb0', title: 'Milking and Meat Production' },
-    ],
-  },
-  {
-    name: 'Breeding & Reproduction',
-    anchor: 'large-animal-breeding',
-    videos: [
-      { id: '5_gmI60MgXY', title: 'Breeding and Reproduction' },
-    ],
-  },
-  {
-    name: 'Health Management',
-    anchor: 'large-animal-health',
-    videos: [
-      { id: 'oOQjk5dsfu0', title: 'Health Management' },
-    ],
-  },
-  {
-    name: 'Sustainability & Natural Practices',
-    anchor: 'large-animal-sustainability',
-    videos: [
-      { id: 'PpOrLwIHwRU', title: 'Sustainability and Natural Practices' },
-    ],
-  },
-  {
-    name: 'Business & Marketing',
-    anchor: 'large-animal-business',
-    videos: [
-      { id: 'EuiljNR8FOw', title: 'Marketing and Revenue Addition' },
-    ],
-  },
-  {
-    name: 'Record Keeping & AMR',
-    anchor: 'large-animal-records',
-    videos: [
-      { id: 'Rycjn0k_nAE', title: 'Record Keeping' },
-      { id: 'MPPmIdJodGg', title: 'AMR' },
-    ],
-  },
-];
-
-const BIOGAR_SERIES_SECTIONS: CategorySection[] = [
-  {
-    name: 'Biogar Series',
-    anchor: 'biogar-series',
-    videos: [
-      { id: 'ABAuvaWQSz4', title: 'Milk and Meat Quality Improvement' },
-      { id: 'l427GouHJdA', title: 'Gut Health and Rumen Modulation' },
-      { id: '4YZnIwGINuo', title: 'Feed Protection' },
-      { id: 'urn0eIMLO8E', title: 'Environmental Benefits' },
-      { id: 'hgadDRh1hR4', title: 'Disease Control and Immunity Support' },
-      { id: 'R0faGbvLNA8', title: 'Ascites Support' },
-      { id: 'WNqu5RHB1nE', title: 'Antibiotic Challenge' },
-      { id: '9GvPtScnu8Q', title: 'Growth, Performance and Feed Conversion' },
-      { id: 'qGyb46VA7fw', title: 'Mastitis Support' },
-    ],
-  },
-];
-
-const ACADEMY_DATA: Record<string, CategorySection[]> = {
-  'Poultry Farming': POULTRY_SECTIONS,
-  'Large Animals': LARGER_ANIMAL_SECTIONS,
-  'Biogar Series': BIOGAR_SERIES_SECTIONS,
-};
 
 function AcademyInner() {
   const searchParams = useSearchParams();
-  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
   const [activeFilter, setActiveFilter] = useState<string>('All');
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -213,34 +44,6 @@ function AcademyInner() {
     setActiveFilter('All');
     setOpenDropdown(null);
   };
-
-  // Flat, ordered list of videos currently visible given the active filter.
-  // The modal walks prev/next through this list so the customer steps through
-  // whatever they are looking at, not the entire academy.
-  const visibleVideos = useMemo<Video[]>(() => {
-    const out: Video[] = [];
-    Object.keys(ACADEMY_DATA).forEach((groupName) => {
-      const sections = (activeFilter === 'All' || activeFilter === groupName)
-        ? ACADEMY_DATA[groupName]
-        : ACADEMY_DATA[groupName].filter(s => s.anchor === activeFilter);
-      sections.forEach(section => section.videos.forEach(v => out.push(v)));
-    });
-    return out;
-  }, [activeFilter]);
-
-  const indexOfId = useMemo(() => {
-    const m = new Map<string, number>();
-    visibleVideos.forEach((v, i) => m.set(v.id, i));
-    return m;
-  }, [visibleVideos]);
-
-  // If the visible list shrinks below the current selection (e.g. user
-  // changes filter while the modal is open), close the modal.
-  useEffect(() => {
-    if (selectedIndex >= 0 && selectedIndex >= visibleVideos.length) {
-      setSelectedIndex(-1);
-    }
-  }, [visibleVideos, selectedIndex]);
 
   const allVideos = Object.values(ACADEMY_DATA).flatMap(sections =>
     sections.flatMap(section =>
@@ -466,11 +269,12 @@ function AcademyInner() {
                     </h2>
                     <div className="academy-table">
                       {section.videos.map((video) => (
-                        <div
+                        <Link
                           key={video.id}
+                          href={`/agrikima-academy/${video.slug}`}
                           className="academy-row"
-                          onClick={() => setSelectedIndex(indexOfId.get(video.id) ?? -1)}
                           id={`video-${video.id}`}
+                          style={{ textDecoration: 'none', color: 'inherit' }}
                         >
                           <div className="academy-row__info">
                             <div className="academy-row__play-icon">
@@ -493,7 +297,7 @@ function AcademyInner() {
                               Watch
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       ))}
                     </div>
                   </section>
@@ -516,14 +320,6 @@ function AcademyInner() {
           </div>
         </div>
       </main>
-
-      <VideoModal
-        videos={visibleVideos}
-        index={selectedIndex}
-        isOpen={selectedIndex >= 0}
-        onClose={() => setSelectedIndex(-1)}
-        onChangeIndex={setSelectedIndex}
-      />
     </Layout>
   );
 }
