@@ -44,12 +44,15 @@ export async function POST(req: NextRequest) {
     })
   }
 
-  // Pick the oldest pending post from that cycle.
+  // Pick the oldest pending Twitter post from that cycle. Other platforms
+  // (FB/IG/LI) are paused until their API access is sorted — picking them
+  // would just produce noisy failures and burn through the daily slot.
   const { data: post } = await supabase
     .from('posts')
     .select('*')
     .eq('cycle_id', cycle.id)
     .eq('status', 'pending')
+    .eq('platform', 'Twitter')
     .order('created_at', { ascending: true })
     .limit(1)
     .maybeSingle()

@@ -84,6 +84,8 @@ export default function MarketingAgentPage() {
   const [composeUploading, setComposeUploading] = useState(false)
   const [composePublishing, setComposePublishing] = useState(false)
   const [composeResult, setComposeResult] = useState<{ ok: boolean; msg: string } | null>(null)
+  const [composeScheduleEnabled, setComposeScheduleEnabled] = useState(false)
+  const [composeScheduleAt, setComposeScheduleAt] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   // Run state
@@ -227,6 +229,22 @@ export default function MarketingAgentPage() {
   // ── Manual compose & publish ───────────────────────────────
   const handleComposePublish = async () => {
     if (!composeCaption.trim() || composePlatforms.length === 0) return
+
+    // Validate schedule input if enabled
+    let scheduledIso: string | null = null
+    if (composeScheduleEnabled) {
+      if (!composeScheduleAt) {
+        setComposeResult({ ok: false, msg: 'Pick a date and time to schedule' })
+        return
+      }
+      const when = new Date(composeScheduleAt)
+      if (isNaN(when.getTime()) || when.getTime() <= Date.now()) {
+        setComposeResult({ ok: false, msg: 'Schedule time must be in the future' })
+        return
+      }
+      scheduledIso = when.toISOString()
+    }
+
     setComposePublishing(true)
     setComposeResult(null)
 
@@ -257,7 +275,7 @@ export default function MarketingAgentPage() {
 
       const text = [composeCaption.trim(), hashtags.join(' ')].filter(Boolean).join('\n\n')
 
-      // Publish to all selected platforms in parallel
+      // Publish (or schedule) to all selected platforms in parallel
       const results = await Promise.all(
         composePlatforms.map((platform) =>
           fetch('/api/marketing/publish-compose', {
@@ -270,10 +288,35 @@ export default function MarketingAgentPage() {
               media_url: mediaUrl,
               media_type: composeFile?.type.startsWith('video') ? 'video' : 'image',
               text,
+              scheduled_for: scheduledIso,
             }),
           }).then((r) => r.json().then((d) => ({ platform, ...d })))
         )
       )
+
+      if (scheduledIso) {
+        const ok = results.filter((r) => r.success).map((r) => r.platform)
+        const bad = results.filter((r) => !r.success).map((r) => r.platform)
+        const when = new Date(scheduledIso).toLocaleString()
+        if (bad.length === 0) {
+          setComposeResult({ ok: true, msg: `Scheduled for ${when} on ${ok.join(', ')}.` })
+          setComposeCaption('')
+          setComposeHashtags('')
+          clearFile()
+          setComposePlatforms(['Instagram'])
+          setComposeScheduleEnabled(false)
+          setComposeScheduleAt('')
+          fetchPosts()
+          setRightTab('posts')
+        } else {
+          setComposeResult({
+            ok: false,
+            msg: `Scheduled on ${ok.join(', ') || 'none'}. Failed: ${bad.join(', ')}.`,
+          })
+          fetchPosts()
+        }
+        return
+      }
 
       const succeeded = results.filter((r) => r.success).map((r) => r.platform)
       const failed = results.filter((r) => !r.success).map((r) => r.platform)
@@ -616,6 +659,32 @@ export default function MarketingAgentPage() {
                 )}
               </div>
 
+              {/* Schedule */}
+              <div className={s.composeField}>
+                <label className={s.composeLabel}>
+                  <input
+                    type="checkbox"
+                    checked={composeScheduleEnabled}
+                    onChange={(e) => {
+                      setComposeScheduleEnabled(e.target.checked)
+                      if (!e.target.checked) setComposeScheduleAt('')
+                    }}
+                  />
+                  &nbsp;Schedule for later
+                </label>
+                {composeScheduleEnabled && (
+                  <input
+                    type="datetime-local"
+                    className={s.composeInput}
+                    value={composeScheduleAt}
+                    onChange={(e) => setComposeScheduleAt(e.target.value)}
+                    min={new Date(Date.now() + 60_000).toISOString().slice(0, 16)}
+                    aria-label="Schedule publish date and time"
+                    title="Schedule publish date and time"
+                  />
+                )}
+              </div>
+
               {/* Result */}
               {composeResult && (
                 <div className={`${s.composeResult} ${composeResult.ok ? s.composeResultOk : s.composeResultErr}`}>
@@ -632,15 +701,20 @@ export default function MarketingAgentPage() {
                   composePublishing ||
                   !composeCaption.trim() ||
                   composePlatforms.length === 0 ||
-                  (needsMedia && !composeFile)
+                  (needsMedia && !composeFile) ||
+                  (composeScheduleEnabled && !composeScheduleAt)
                 }
               >
                 {composeUploading
                   ? 'Uploading media...'
                   : composePublishing
-                  ? 'Publishing...'
+                  ? (composeScheduleEnabled ? 'Scheduling...' : 'Publishing...')
                   : composePlatforms.length === 0
                   ? 'Select a platform'
+                  : composeScheduleEnabled
+                  ? composePlatforms.length === 1
+                    ? `Schedule for ${composePlatforms[0]}`
+                    : `Schedule for ${composePlatforms.length} platforms`
                   : composePlatforms.length === 1
                   ? `Publish to ${composePlatforms[0]}`
                   : `Publish to ${composePlatforms.length} platforms`}

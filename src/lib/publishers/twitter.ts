@@ -28,7 +28,7 @@ export async function publishToTwitter(
     const result: PublishResult = {
       success: true,
       platform_post_id: tweet.data.id,
-      post_url: `https://x.com/AgrikimaB/status/${tweet.data.id}`,
+      post_url: `https://x.com/agrikima_africa/status/${tweet.data.id}`,
     }
 
     await logToSupabase(postId, 'Twitter', true, tweet.data.id, undefined)
