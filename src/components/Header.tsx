@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 const VIDEO_CATEGORIES = [
   {
@@ -57,6 +58,30 @@ const ARTICLE_CATEGORIES = [
 
 export default function Header() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    const toggle = document.querySelector('.s-header__menu-toggle');
+    const body = document.body;
+    if (!toggle) return;
+    const onClick = (e: Event) => {
+      e.preventDefault();
+      toggle.classList.toggle('is-clicked');
+      body.classList.toggle('menu-is-open');
+    };
+    toggle.addEventListener('click', onClick);
+    const navLinks = document.querySelectorAll('.s-header__nav a');
+    const onLinkClick = () => {
+      if (window.matchMedia('(max-width: 800px)').matches) {
+        toggle.classList.remove('is-clicked');
+        body.classList.remove('menu-is-open');
+      }
+    };
+    navLinks.forEach((l) => l.addEventListener('click', onLinkClick));
+    return () => {
+      toggle.removeEventListener('click', onClick);
+      navLinks.forEach((l) => l.removeEventListener('click', onLinkClick));
+    };
+  }, [pathname]);
 
   const isActive = (path: string) => {
     if (path === '/') {

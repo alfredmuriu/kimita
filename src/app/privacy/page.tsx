@@ -23,6 +23,7 @@ export default function PrivacyPolicyPage() {
         .s-header__menu-links a, .email { color: #111111 !important; }
         .s-header__menu-links li.current > a { color: #014d4b !important; }
         .s-header__social svg path { fill: #111111 !important; }
+        .s-header__menu-toggle span, .s-header__menu-toggle span::before, .s-header__menu-toggle span::after { background-color: #111111 !important; }
       `}} />
 
       <main style={{ maxWidth: 820, margin: '0 auto', padding: '80px 24px 120px', lineHeight: 1.7, color: '#111' }}>

@@ -94,6 +94,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         .s-header__social svg path {
             fill: #111111 !important;
         }
+        .s-header__menu-toggle span, .s-header__menu-toggle span::before, .s-header__menu-toggle span::after { background-color: #111111 !important; }
         .s-header__menu-links > .dropdown > .dropdown-menu {
             background-color: #ffffff !important;
         }
