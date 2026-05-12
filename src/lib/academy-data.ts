@@ -27,6 +27,9 @@ function buildSection(name: string, anchor: string, items: { id: string; title: 
 }
 
 const POULTRY_SECTIONS: CategorySection[] = [
+  buildSection('Welcome', 'welcome-poultry', [
+    { id: '6BXIdqtdfAA', title: 'Welcome to Agrikima' },
+  ]),
   buildSection('Getting Started', 'getting-started', [
     { id: '-m51mnGrLEU', title: 'Introduction to Poultry Farming' },
     { id: 'MXrLWo4xd68', title: 'Inside Out' },
@@ -66,6 +69,9 @@ const POULTRY_SECTIONS: CategorySection[] = [
 ];
 
 const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
+  buildSection('Welcome', 'welcome-large-animals', [
+    { id: '6BXIdqtdfAA', title: 'Welcome to Agrikima' },
+  ]),
   buildSection('Getting Started', 'large-animal-getting-started', [
     { id: 'KHI1TcD_iUs', title: 'Introduction to Large Animals' },
   ]),
@@ -98,6 +104,9 @@ const LARGER_ANIMAL_SECTIONS: CategorySection[] = [
 ];
 
 const BIOGAR_SERIES_SECTIONS: CategorySection[] = [
+  buildSection('Welcome', 'welcome-biogar', [
+    { id: '6BXIdqtdfAA', title: 'Welcome to Agrikima' },
+  ]),
   buildSection('Biogar Series', 'biogar-series', [
     { id: 'ABAuvaWQSz4', title: 'Milk and Meat Quality Improvement' },
     { id: 'l427GouHJdA', title: 'Gut Health and Rumen Modulation' },
