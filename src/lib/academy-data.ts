@@ -120,10 +120,18 @@ const BIOGAR_SERIES_SECTIONS: CategorySection[] = [
   ]),
 ];
 
+const PRODUCT_VIDEOS_SECTIONS: CategorySection[] = [
+  buildSection('Product Videos', 'product-videos', [
+    { id: 'idMg2DsgSlI', title: 'Advice' },
+    { id: '8IBXFWw11g0', title: 'Mix-5' },
+  ]),
+];
+
 export const ACADEMY_DATA: Record<string, CategorySection[]> = {
   'Poultry Farming': POULTRY_SECTIONS,
   'Large Animals': LARGER_ANIMAL_SECTIONS,
   'Biogar Series': BIOGAR_SERIES_SECTIONS,
+  'Product Videos': PRODUCT_VIDEOS_SECTIONS,
 };
 
 export interface VideoLookup {
