@@ -46,7 +46,11 @@ export async function POST(req: NextRequest) {
     .single()
 
   if (saveError || !post) {
-    return NextResponse.json({ error: 'Failed to save post' }, { status: 500 })
+    console.error('[publish-compose] Supabase insert failed:', saveError)
+    return NextResponse.json(
+      { error: 'Failed to save post', detail: saveError?.message, code: saveError?.code, hint: saveError?.hint },
+      { status: 500 }
+    )
   }
 
   // Scheduled: don't publish now, return early.
