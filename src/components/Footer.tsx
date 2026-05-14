@@ -47,6 +47,7 @@ export default function Footer() {
             <li style={{marginBottom: '8px'}}><a href="tel:+254202089181" style={{color: 'rgba(0, 0, 0, 0.6)'}}>+254 20 208 9181</a></li>
             <li style={{marginBottom: '8px'}}><a href="tel:+254202089182" style={{color: 'rgba(0, 0, 0, 0.6)'}}>+254 20 208 9182</a></li>
             <li style={{marginBottom: '8px'}}><a href="tel:+254111410639" style={{color: 'rgba(0, 0, 0, 0.6)'}}>+254 111 410 639</a></li>
+            <li style={{marginBottom: '8px'}}><a href="https://wa.me/254762122122" style={{color: 'rgba(0, 0, 0, 0.6)'}}>WhatsApp: +254 762 122 122</a></li>
             <li style={{marginBottom: '8px'}}><a href="mailto:info@agrikima.co.ke" style={{color: 'rgba(0, 0, 0, 0.6)'}}>info@agrikima.co.ke</a></li>
           </ul>
         </div>
