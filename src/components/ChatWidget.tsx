@@ -4,7 +4,7 @@ import styles from './ChatWidget.module.css';
 
 // Agrikima WhatsApp number in E.164 form, no leading "+".
 // Override per-environment with NEXT_PUBLIC_WHATSAPP_NUMBER if needed.
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '254111410639';
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '254762122122';
 
 const INTRO_MESSAGE = "Hi Agrikima, I'd like to inquire about your products.";
 
