@@ -3,6 +3,7 @@ import { waitUntil } from '@vercel/functions';
 import { getSupabaseAdmin } from '@/lib/supabase';
 import { generateBlogPost } from '@/lib/openai';
 import { generateBlogImageGemini } from '@/lib/gemini';
+import { embedAndStoreArticle } from '@/lib/embeddings';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -173,6 +174,11 @@ export async function GET(request: NextRequest) {
 
             if (!error) {
               console.log(`Blog post saved: "${data.title}" (${data.slug})`);
+              try {
+                await embedAndStoreArticle(data.id, data.title, data.excerpt, data.content);
+              } catch (embedErr) {
+                console.error('Embedding failed (post still published):', embedErr);
+              }
               return;
             }
 

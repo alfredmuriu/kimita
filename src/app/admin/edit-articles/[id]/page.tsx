@@ -69,9 +69,23 @@ export default function AdminEdit({ params }: { params: { id: string } }) {
 
     if (error) {
       setMessage({ type: 'error', text: error.message });
-    } else {
-      setMessage({ type: 'success', text: 'Saved' });
+      setSaving(false);
+      return;
     }
+
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      fetch('/api/admin/reembed-article', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify({ id: params.id }),
+      }).catch((e) => console.error('Re-embed request failed:', e));
+    }
+
+    setMessage({ type: 'success', text: 'Saved' });
     setSaving(false);
   };
 

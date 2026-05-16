@@ -3,8 +3,8 @@
 // behave identically — same persona, same product knowledge, same escalation.
 
 import Anthropic from '@anthropic-ai/sdk'
-import { getSupabaseAdmin } from './supabase'
 import { PRODUCT_CATALOG, CATALOGUE_MESSAGE } from './products-catalog'
+import { findRelevantArticles } from './embeddings'
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
@@ -30,30 +30,27 @@ function buildCatalogBlock(): string {
   return PRODUCT_CATALOG.map((p) => `- ${p.name} (/products/${p.slug}): ${p.purpose}`).join('\n')
 }
 
-// Pull recent blog posts as light-touch knowledge. Non-blocking if Supabase fails.
-async function fetchBlogContext(): Promise<string> {
+const SITE = 'https://www.agrikima.co.ke'
+
+// Semantic search over published blog posts for the customer's latest message.
+// Returns the prompt block (or '' if no strong matches / Supabase down).
+async function fetchRelevantArticlesBlock(userMessage: string): Promise<string> {
   try {
-    const supabase = getSupabaseAdmin()
-    if (!supabase) return ''
-    const { data: posts } = await supabase
-      .from('blog_posts')
-      .select('title, excerpt, category')
-      .eq('status', 'published')
-      .order('published_at', { ascending: false })
-      .limit(15)
-    if (!posts?.length) return ''
-    return `\n\nRecent Agrikima blog articles (cite these when giving farming advice):\n${posts
-      .map((p: { title: string; excerpt: string | null; category: string | null }) => `- ${p.title} (${p.category || 'general'})`)
-      .join('\n')}`
+    const matches = await findRelevantArticles(userMessage, 3, 0.35)
+    if (!matches.length) return ''
+    const lines = matches.map(
+      (a) => `- ${a.title}${a.excerpt ? ` — ${a.excerpt}` : ''} (${SITE}/articles/${a.slug})`
+    )
+    return `\n\nRelevant Agrikima articles for this question (cite + share the URL if one actually answers what the customer asked):\n${lines.join('\n')}`
   } catch {
     return ''
   }
 }
 
-async function buildSystemPrompt(channel: Channel): Promise<string> {
+async function buildSystemPrompt(channel: Channel, userMessage: string): Promise<string> {
   const catalog = buildCatalogBlock()
-  const blogContext = await fetchBlogContext()
-  const site = 'https://www.agrikima.co.ke'
+  const blogContext = await fetchRelevantArticlesBlock(userMessage)
+  const site = SITE
 
   const channelRules =
     channel === 'whatsapp'
@@ -90,6 +87,7 @@ ${channelRules}
 - Match the customer's language: reply in English if they wrote English, in Kiswahili if they wrote Kiswahili. If mixed, follow their lead.
 - Be warm, practical, farmer-first. Skip preambles. Don't repeat what the customer said.
 - When a question maps to a product, recommend ONE product (occasionally two if it's a combo), name it clearly, give a one-line reason, and share the URL (${site}/products/<slug>).
+- When a question maps to one of the relevant articles listed below, give a one-sentence answer drawn from it and share the article URL so the customer can read more. Do NOT force an article link if none truly fits the question — skip the link in that case.
 - Prefer offering 2–3 tappable/numbered choices when the customer seems undecided.
 
 What you do NOT do
@@ -123,7 +121,7 @@ export async function generateBotReply(
   newUserMessage: string,
   channel: Channel = 'whatsapp'
 ): Promise<BotReply> {
-  const system = await buildSystemPrompt(channel)
+  const system = await buildSystemPrompt(channel, newUserMessage)
 
   const messages: ConversationTurn[] = [
     ...conversationHistory,
