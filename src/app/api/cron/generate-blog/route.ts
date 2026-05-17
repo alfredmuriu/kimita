@@ -25,13 +25,13 @@ async function generateAndUploadImage(
   try {
     // 1. Generate image — returns Buffer directly (no temp URL needed)
     const imageBuffer = await generateBlogImageGemini(topic, category);
-    const fileName = `${slug}-${Date.now()}.png`;
+    const fileName = `${slug}-${Date.now()}.jpg`;
 
     // 2. Upload to Supabase Storage (blog-images bucket)
     const { error: uploadError } = await supabaseAdmin.storage
       .from('blog-images')
       .upload(fileName, imageBuffer, {
-        contentType: 'image/png',
+        contentType: 'image/jpeg',
         cacheControl: '31536000',
         upsert: false,
       });
