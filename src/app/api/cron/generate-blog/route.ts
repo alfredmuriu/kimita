@@ -12,7 +12,7 @@ export const maxDuration = 120;
 
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
 
-// Generate image with Nano Banana Pro (Gemini), upload to Supabase Storage, return permanent URL
+// Generate image with Gemini 2.5 Flash Image (free tier), upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
   topic: string,
   _keywords: string[],
@@ -23,7 +23,7 @@ async function generateAndUploadImage(
   if (!supabaseAdmin) return DEFAULT_IMAGE;
 
   try {
-    // 1. Generate image with Nano Banana Pro — returns Buffer directly (no temp URL needed)
+    // 1. Generate image — returns Buffer directly (no temp URL needed)
     const imageBuffer = await generateBlogImageGemini(topic, category);
     const fileName = `${slug}-${Date.now()}.png`;
 

@@ -2,10 +2,10 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || '');
 
-// Generate a blog featured image using Nano Banana Pro (Gemini image generation)
+// Generate a blog featured image using Gemini 2.5 Flash Image (free tier on AI Studio)
 // Returns the image as a Buffer ready for upload to Supabase Storage
 export async function generateBlogImageGemini(topic: string, category?: string | null): Promise<Buffer> {
-  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-image-preview' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-image' });
 
   const cat = (category || '').toLowerCase();
   const isFeedMilling = cat === 'feed milling' || cat === 'feed manufacturing';

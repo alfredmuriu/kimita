@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { sendPublishNotification } from '@/lib/email'
 
 export interface PublishResult {
   success: boolean
@@ -43,6 +44,9 @@ export async function publishToFacebook(
     }
 
     await logToSupabase(postId, 'Facebook', true, fbPostId, undefined)
+    sendPublishNotification('Facebook', text, result.post_url, true).catch((e) =>
+      console.error('[Facebook] notify email failed:', e)
+    )
     return result
   } catch (err: unknown) {
     const message =
@@ -51,6 +55,9 @@ export async function publishToFacebook(
         : String(err)
     console.error('[Facebook] Publish failed:', message)
     await logToSupabase(postId, 'Facebook', false, undefined, message)
+    sendPublishNotification('Facebook', text, undefined, false, message).catch((e) =>
+      console.error('[Facebook] notify email failed:', e)
+    )
     return { success: false, error_message: message }
   }
 }

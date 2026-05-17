@@ -71,11 +71,13 @@ export async function sendPublishNotification(
   success: boolean,
   errorMessage?: string
 ): Promise<void> {
-  const recipients = (process.env.AGENT_NOTIFY_EMAILS || '')
+  const envRecipients = (process.env.AGENT_NOTIFY_EMAILS || '')
     .split(',')
     .map((e) => e.trim())
     .filter(Boolean)
-  if (!recipients.length) return
+  const recipients = envRecipients.length
+    ? envRecipients
+    : ['info@agrikima.co.ke', 'justin@agrikima.co.ke']
 
   const preview = postContent.slice(0, 200) + (postContent.length > 200 ? '…' : '')
   const statusColor = success ? '#16a34a' : '#dc2626'

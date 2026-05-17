@@ -1,5 +1,6 @@
 import { TwitterApi } from 'twitter-api-v2'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { sendPublishNotification } from '@/lib/email'
 
 export interface PublishResult {
   success: boolean
@@ -32,11 +33,17 @@ export async function publishToTwitter(
     }
 
     await logToSupabase(postId, 'Twitter', true, tweet.data.id, undefined)
+    sendPublishNotification('Twitter', text, result.post_url, true).catch((e) =>
+      console.error('[Twitter] notify email failed:', e)
+    )
     return result
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err)
     console.error('[Twitter] Publish failed:', message)
     await logToSupabase(postId, 'Twitter', false, undefined, message)
+    sendPublishNotification('Twitter', text, undefined, false, message).catch((e) =>
+      console.error('[Twitter] notify email failed:', e)
+    )
     return { success: false, error_message: message }
   }
 }
