@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
+import HeroCarousel from './HeroCarousel';
 
 export const metadata: Metadata = {
   title: 'Education — Agrikima Academy & Training Resources',
@@ -54,6 +55,15 @@ export default function EducationPage() {
         }
         .page-subtitle {
           color: #444444 !important;
+        }
+        .products-hero {
+          min-height: calc(100vh - 120px);
+          padding-top: 100px;
+          padding-bottom: 80px;
+          align-items: center;
+        }
+        .edu-hero-text {
+          margin-top: -80px;
         }
         .edu-cards-wrap {
           background: #f9fafb;
@@ -174,6 +184,65 @@ export default function EducationPage() {
         .edu-card:hover .edu-card-cta::after {
           transform: translateX(4px);
         }
+        .edu-carousel-fan {
+          position: relative;
+          width: 360px;
+          height: 270px;
+          margin-right: 60px;
+          flex-shrink: 0;
+        }
+        .edu-fan-card {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 78%;
+          height: 100%;
+          border-radius: 6px;
+          overflow: hidden;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+          transition: transform 700ms cubic-bezier(.22,.61,.36,1), opacity 700ms ease, filter 700ms ease;
+          transform-origin: center center;
+        }
+        .edu-fan-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        .edu-fan-slot-center {
+          transform: translate(-50%, 0) rotate(0deg) scale(1.18);
+          opacity: 1;
+          z-index: 3;
+          filter: none;
+        }
+        .edu-fan-slot-left {
+          transform: translate(-105%, 28px) rotate(-8deg) scale(0.65);
+          opacity: 0.8;
+          z-index: 2;
+          filter: brightness(0.9);
+        }
+        .edu-fan-slot-right {
+          transform: translate(5%, 28px) rotate(8deg) scale(0.65);
+          opacity: 0.8;
+          z-index: 2;
+          filter: brightness(0.9);
+        }
+        .edu-fan-slot-back {
+          transform: translate(-50%, 0) rotate(0deg) scale(0.55);
+          opacity: 0;
+          z-index: 1;
+          filter: brightness(0.8);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .edu-fan-card { transition: none; }
+        }
+        @media screen and (max-width: 900px) {
+          .edu-carousel-fan {
+            width: 360px;
+            height: 270px;
+            margin-right: 20px;
+          }
+        }
         @media screen and (max-width: 800px) {
           .edu-cards-grid { grid-template-columns: 1fr; gap: 20px; }
           .edu-cards-heading { font-size: 26px; }
@@ -183,7 +252,7 @@ export default function EducationPage() {
 
       <main>
         <div className="products-hero">
-          <div style={{ flex: 1 }}>
+          <div className="edu-hero-text" style={{ flex: 1 }}>
             <h1 className="s-intro__content-title page-title">
               Agrikima Academy
             </h1>
@@ -198,7 +267,7 @@ export default function EducationPage() {
               <span className="hero-badge">✓ Poultry &amp; Livestock</span>
             </div>
           </div>
-          <img src="/images/education.jpg" alt="Agrikima Academy — practical training for African farmers" className="intro-image-slide-in products-hero-image" />
+          <HeroCarousel />
         </div>
 
         <div className="edu-cards-wrap">
@@ -234,14 +303,13 @@ export default function EducationPage() {
               <Link href="/articles" className="edu-card">
                 <div className="edu-card-image-wrap">
                   <img
-                    src="/images/guides.jpg"
+                    src="/images/education.jpg"
                     alt="Training articles and resources from Agrikima"
                     className="edu-card-image"
                   />
                 </div>
                 <div className="edu-card-body">
-                  <span className="edu-card-tag">
-                    <span className="edu-card-tag-icon" aria-hidden="true">📖</span>
+                  <span className="edu-card-tag">                    
                     Farm Guides
                   </span>
                   <h3 className="edu-card-title">Read the Guides</h3>

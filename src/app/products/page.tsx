@@ -100,6 +100,11 @@ export default function Products() {
         .s-folio.target-section {
             background-color: #f6f6f6 !important;
         }
+        .products-hero-image.products-hero-image--sm {
+            width: 380px;
+            height: 285px;
+            border-radius: 6px;
+        }
       `}} />
       <div className="products-hero">
         <div style={{ flex: 1 }}>
@@ -118,7 +123,7 @@ export default function Products() {
             <span className="hero-badge">✓ Natural &amp; Antibiotic-Free</span>
           </div>
         </div>
-        <img src="/products/wheatfarmlogo.jpg" alt="Natural poultry health products and livestock supplements Kenya" className="intro-image-slide-in products-hero-image" />
+        <img src="/products/wheatfarmlogo.jpg" alt="Natural poultry health products and livestock supplements Kenya" className="intro-image-slide-in products-hero-image products-hero-image--sm" />
       </div>
 
       <ScrollDownButton targetId="natural" />
