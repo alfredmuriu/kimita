@@ -7,11 +7,12 @@ const SLIDES = [
   { src: '/images/carousel3.jpg', alt: 'Goats grazing — small ruminant training at Agrikima Academy' },
   { src: '/images/carousel4.jpg', alt: 'Farm imagery — Agrikima Academy training' },
   { src: '/images/carousel5.jpg', alt: 'Farm imagery — Agrikima Academy training' },
+  { src: '/images/carousel6.jpg', alt: 'Farm imagery — Agrikima Academy training' },
   { src: '/images/academy.jpg', alt: 'Agrikima Academy — practical training for African farmers' },
   { src: '/images/guides.jpg', alt: 'Maize silos and feed storage — Agrikima Academy guides' },
 ];
 
-const INTERVAL_MS = 8000;
+const INTERVAL_MS = 6000;
 
 // Position slot: -1 = left peek, 0 = active center, 1 = right peek, 2 = hidden behind
 function slotFor(slideIndex: number, activeIndex: number, total: number): number {
