@@ -4,10 +4,13 @@
 
 import Anthropic from '@anthropic-ai/sdk'
 import type { Message, MessageCreateParamsNonStreaming } from '@anthropic-ai/sdk/resources/messages'
+import OpenAI from 'openai'
 import { PRODUCT_CATALOG, CATALOGUE_MESSAGE } from './products-catalog'
 import { findRelevantArticles } from './embeddings'
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+const FALLBACK_MODEL = 'gpt-4o-mini'
 
 const MODEL = 'claude-haiku-4-5-20251001'
 const MAX_TOKENS = 600
@@ -142,6 +145,21 @@ async function createMessageWithRetry(params: MessageCreateParamsNonStreaming): 
   throw lastErr
 }
 
+async function generateWithOpenAIFallback(
+  system: string,
+  messages: ConversationTurn[],
+): Promise<string> {
+  const response = await openai.chat.completions.create({
+    model: FALLBACK_MODEL,
+    max_tokens: MAX_TOKENS,
+    messages: [
+      { role: 'system', content: system },
+      ...messages.map((m) => ({ role: m.role, content: m.content })),
+    ],
+  })
+  return response.choices[0]?.message?.content?.trim() ?? ''
+}
+
 export async function generateBotReply(
   conversationHistory: ConversationTurn[],
   newUserMessage: string,
@@ -154,15 +172,23 @@ export async function generateBotReply(
     { role: 'user', content: newUserMessage },
   ]
 
-  const response = await createMessageWithRetry({
-    model: MODEL,
-    max_tokens: MAX_TOKENS,
-    system,
-    messages,
-  })
-
-  const textBlocks = response.content.filter((b) => b.type === 'text')
-  let fullText = textBlocks.map((b) => (b as { type: 'text'; text: string }).text).join('\n').trim()
+  let fullText: string
+  try {
+    const response = await createMessageWithRetry({
+      model: MODEL,
+      max_tokens: MAX_TOKENS,
+      system,
+      messages,
+    })
+    const textBlocks = response.content.filter((b) => b.type === 'text')
+    fullText = textBlocks.map((b) => (b as { type: 'text'; text: string }).text).join('\n').trim()
+  } catch (err: unknown) {
+    const status = (err as { status?: number })?.status
+    const isTransient = status === 529 || status === 503 || status === 429
+    if (!isTransient) throw err
+    console.warn(`[bot-core] Anthropic ${status} after retries; falling back to OpenAI ${FALLBACK_MODEL}`)
+    fullText = await generateWithOpenAIFallback(system, messages)
+  }
 
   const escalateMatch = fullText.match(/\[ESCALATE:\s*(.+?)\]/i)
   const shouldEscalate = !!escalateMatch
