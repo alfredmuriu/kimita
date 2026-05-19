@@ -3,6 +3,7 @@
 // behave identically — same persona, same product knowledge, same escalation.
 
 import Anthropic from '@anthropic-ai/sdk'
+import type { Message, MessageCreateParamsNonStreaming } from '@anthropic-ai/sdk/resources/messages'
 import { PRODUCT_CATALOG, CATALOGUE_MESSAGE } from './products-catalog'
 import { findRelevantArticles } from './embeddings'
 
@@ -122,6 +123,25 @@ If you cannot confidently help, OR the customer:
 The system forwards the thread to staff. Tell the customer (without revealing the tag) "I'm connecting you with our team — they'll get back to you shortly" (English) or "Nitawaunganisha na timu yetu — watakujibu hivi karibuni" (Kiswahili).${blogContext}`
 }
 
+async function createMessageWithRetry(params: MessageCreateParamsNonStreaming): Promise<Message> {
+  const maxAttempts = 3
+  let lastErr: unknown
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await client.messages.create(params)
+    } catch (err: unknown) {
+      lastErr = err
+      const status = (err as { status?: number })?.status
+      const shouldRetry = status === 529 || status === 503 || status === 429
+      if (!shouldRetry || attempt === maxAttempts) throw err
+      const base = attempt === 1 ? 1000 : 2000
+      const jitter = Math.floor(Math.random() * 400)
+      await new Promise((r) => setTimeout(r, base + jitter))
+    }
+  }
+  throw lastErr
+}
+
 export async function generateBotReply(
   conversationHistory: ConversationTurn[],
   newUserMessage: string,
@@ -134,7 +154,7 @@ export async function generateBotReply(
     { role: 'user', content: newUserMessage },
   ]
 
-  const response = await client.messages.create({
+  const response = await createMessageWithRetry({
     model: MODEL,
     max_tokens: MAX_TOKENS,
     system,
