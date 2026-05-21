@@ -86,7 +86,7 @@ export default function FarmVisitForm() {
           data: {
             ...form,
             enterprise_type: form.enterprise_type ? [form.enterprise_type] : [],
-            farm_size: form.farm_size !== '' ? parseInt(form.farm_size, 10) : null,
+            farm_size: form.farm_size.trim() !== '' ? form.farm_size.trim() : null,
             submitted_by: null,
           },
         }),
@@ -189,11 +189,11 @@ export default function FarmVisitForm() {
       <div className={styles.fieldGroup}>
         <label className={styles.label}>Farm Size / Number of Animals</label>
         <input
-          type="number"
+          type="text"
           className={styles.input}
           value={form.farm_size}
           onChange={(e) => set('farm_size', e.target.value)}
-          min="0"
+          placeholder="e.g. 300 birds, 20 cows, 40 goats"
         />
       </div>
 
