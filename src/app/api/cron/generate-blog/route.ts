@@ -3,6 +3,7 @@ import { waitUntil } from '@vercel/functions';
 import { getSupabaseAdmin } from '@/lib/supabase';
 import { generateBlogPost } from '@/lib/openai';
 import { generateBlogImageGemini } from '@/lib/gemini';
+import { generateBlogImageVertex } from '@/lib/blog-imagen';
 import { embedAndStoreArticle } from '@/lib/embeddings';
 
 export const runtime = 'nodejs';
@@ -23,15 +24,27 @@ async function generateAndUploadImage(
   if (!supabaseAdmin) return DEFAULT_IMAGE;
 
   try {
-    // 1. Generate image — returns Buffer directly (no temp URL needed)
-    const imageBuffer = await generateBlogImageGemini(topic, category);
-    const fileName = `${slug}-${Date.now()}.jpg`;
+    // 1. Generate image — Vertex Imagen 3 if BLOG_VERTEX_* env vars are set
+    //    (uses $300 free trial credits, separate GCP project from the marketing
+    //    agent), else fall back to Pollinations. Vertex returns PNG, Pollinations
+    //    returns JPEG — pick file extension + content-type accordingly.
+    const useVertex = Boolean(
+      process.env.BLOG_VERTEX_PROJECT_ID &&
+      process.env.BLOG_GOOGLE_CLIENT_EMAIL &&
+      process.env.BLOG_GOOGLE_PRIVATE_KEY
+    );
+    const imageBuffer = useVertex
+      ? await generateBlogImageVertex(topic, category)
+      : await generateBlogImageGemini(topic, category);
+    const ext = useVertex ? 'png' : 'jpg';
+    const contentType = useVertex ? 'image/png' : 'image/jpeg';
+    const fileName = `${slug}-${Date.now()}.${ext}`;
 
     // 2. Upload to Supabase Storage (blog-images bucket)
     const { error: uploadError } = await supabaseAdmin.storage
       .from('blog-images')
       .upload(fileName, imageBuffer, {
-        contentType: 'image/jpeg',
+        contentType,
         cacheControl: '31536000',
         upsert: false,
       });
