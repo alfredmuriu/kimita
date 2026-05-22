@@ -70,23 +70,12 @@ Return ONLY valid JSON of this shape (no prose, no markdown fences):
   }
 }
 
-function buildSourcesHtml(sources: ArticleSource[]): string {
-  if (sources.length === 0) return '';
-  const items = sources
-    .map((s, i) => {
-      const label = s.publisher ? `${escapeHtml(s.title)} — ${escapeHtml(s.publisher)}` : escapeHtml(s.title);
-      return `<li id="source-${i + 1}"><a href="${escapeAttr(s.url)}" target="_blank" rel="nofollow noopener noreferrer">${label}</a></li>`;
-    })
-    .join('');
-  return `<h2>Sources</h2><ol>${items}</ol>`;
-}
-
-function escapeHtml(s: string): string {
-  return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string));
-}
-
-function escapeAttr(s: string): string {
-  return escapeHtml(s);
+// Strip the inline [1], [2] citation markers from the rendered HTML.
+// The article page exposes sources via a separate collapsible "Sources" disclosure
+// at the bottom of the page, so we don't want the bracketed numbers polluting prose.
+function stripCitationMarkers(html: string): string {
+  // Remove " [1]", "[1,2]", "[1, 2]", "[1-3]" etc. — leave surrounding punctuation intact.
+  return html.replace(/\s*\[\d+(?:\s*[-,]\s*\d+)*\]/g, '');
 }
 
 export async function generateBlogPost(
@@ -181,10 +170,10 @@ Return ONLY valid JSON, no other text.`;
 
   const parsed = JSON.parse(content);
 
-  // Append the Sources section to the rendered HTML so it appears at the bottom
-  // of every article with clickable, no-follow external links.
-  const sourcesHtml = buildSourcesHtml(sources);
-  const finalContent = sourcesHtml ? `${parsed.content}\n${sourcesHtml}` : parsed.content;
+  // Strip inline [n] citation markers from the body — sources are surfaced via a
+  // separate collapsible "Sources" disclosure on the article page (below the
+  // contact form), not inline in the prose.
+  const finalContent = stripCitationMarkers(parsed.content);
 
   return {
     title: parsed.title,

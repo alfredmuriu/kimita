@@ -182,6 +182,37 @@ export default async function BlogPostPage({ params }: PageProps) {
                 {/* Inline contact form for the team */}
                 <ArticleContactForm />
 
+                {/* Sources — collapsible, rendered below the contact form.
+                    Native <details> = no JS, no client component needed. */}
+                {post.sources && post.sources.length > 0 && (
+                  <details style={{ marginTop: '50px', fontSize: '14px' }}>
+                    <summary style={{
+                      cursor: 'pointer',
+                      color: '#0d4a3f',
+                      fontWeight: 600,
+                      listStyle: 'none',
+                      display: 'inline-block',
+                      userSelect: 'none',
+                    }}>
+                      Sources
+                    </summary>
+                    <ol style={{ marginTop: '12px', paddingLeft: '20px', color: '#444' }}>
+                      {post.sources.map((s, i) => (
+                        <li key={i} style={{ marginBottom: '6px' }}>
+                          <a
+                            href={s.url}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            style={{ color: '#0d4a3f', textDecoration: 'underline' }}
+                          >
+                            {s.title}{s.publisher ? ` — ${s.publisher}` : ''}
+                          </a>
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                )}
+
                 {/* Related Academy Videos */}
                 {relatedVideos.length > 0 && (
                   <section className="related-videos-section">

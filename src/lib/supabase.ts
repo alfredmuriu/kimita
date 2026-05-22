@@ -48,6 +48,7 @@ export interface BlogPost {
   published_at: string | null;
   created_at: string;
   updated_at: string;
+  sources: Array<{ title: string; url: string; publisher?: string; snippet?: string }> | null;
 }
 
 export interface BlogTopic {

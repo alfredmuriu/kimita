@@ -166,6 +166,7 @@ export async function GET(request: NextRequest) {
                 keywords: generatedContent.keywords,
                 category: topic.category || null,
                 source_priority: topic.priority,
+                sources: generatedContent.sources && generatedContent.sources.length > 0 ? generatedContent.sources : null,
                 status: 'published',
                 published_at: new Date().toISOString(),
               })
