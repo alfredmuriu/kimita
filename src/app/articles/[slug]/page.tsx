@@ -182,35 +182,52 @@ export default async function BlogPostPage({ params }: PageProps) {
                 {/* Inline contact form for the team */}
                 <ArticleContactForm />
 
-                {/* Sources — collapsible, rendered below the contact form.
-                    Native <details> = no JS, no client component needed. */}
+                {/* Sources — first link visible, rest behind a "Read more" disclosure. */}
                 {post.sources && post.sources.length > 0 && (
-                  <details style={{ marginTop: '50px', fontSize: '14px' }}>
-                    <summary style={{
-                      cursor: 'pointer',
-                      color: '#0d4a3f',
-                      fontWeight: 600,
-                      listStyle: 'none',
-                      display: 'inline-block',
-                      userSelect: 'none',
-                    }}>
+                  <div style={{ marginTop: '50px', fontSize: '14px', color: '#444' }}>
+                    <div style={{ fontWeight: 600, color: '#0d4a3f', marginBottom: '8px' }}>
                       Sources
-                    </summary>
-                    <ol style={{ marginTop: '12px', paddingLeft: '20px', color: '#444' }}>
-                      {post.sources.map((s, i) => (
-                        <li key={i} style={{ marginBottom: '6px' }}>
-                          <a
-                            href={s.url}
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            style={{ color: '#0d4a3f', textDecoration: 'underline' }}
-                          >
-                            {s.title}{s.publisher ? ` — ${s.publisher}` : ''}
-                          </a>
-                        </li>
-                      ))}
+                    </div>
+                    <ol style={{ margin: 0, paddingLeft: '20px' }}>
+                      <li style={{ marginBottom: '6px' }}>
+                        <a
+                          href={post.sources[0].url}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          style={{ color: '#0d4a3f', textDecoration: 'underline' }}
+                        >
+                          {post.sources[0].title}{post.sources[0].publisher ? ` — ${post.sources[0].publisher}` : ''}
+                        </a>
+                      </li>
                     </ol>
-                  </details>
+                    {post.sources.length > 1 && (
+                      <details style={{ marginTop: '8px' }}>
+                        <summary style={{
+                          cursor: 'pointer',
+                          color: '#0d4a3f',
+                          fontWeight: 600,
+                          listStyle: 'none',
+                          userSelect: 'none',
+                        }}>
+                          Read more
+                        </summary>
+                        <ol start={2} style={{ marginTop: '8px', paddingLeft: '20px' }}>
+                          {post.sources.slice(1).map((s, i) => (
+                            <li key={i} style={{ marginBottom: '6px' }}>
+                              <a
+                                href={s.url}
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                style={{ color: '#0d4a3f', textDecoration: 'underline' }}
+                              >
+                                {s.title}{s.publisher ? ` — ${s.publisher}` : ''}
+                              </a>
+                            </li>
+                          ))}
+                        </ol>
+                      </details>
+                    )}
+                  </div>
                 )}
 
                 {/* Related Academy Videos */}
