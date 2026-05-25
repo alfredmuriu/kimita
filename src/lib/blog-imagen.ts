@@ -27,10 +27,10 @@ function buildBlogImagePrompt(topic: string, category?: string | null): string {
   const isFeedMilling = cat === 'feed milling' || cat === 'feed manufacturing'
 
   if (isFeedMilling) {
-    return `Photorealistic natural photograph illustrating this feed milling topic: "${topic}". Real feed mill scene — hammer mill or roller mill grinding grain, pellet mill extruding feed, ribbon or paddle mixer in operation, conditioner with steam, bagged finished feed stacked on pallets, bulk ingredient silos, or raw materials (maize, soya cake, sunflower meal, fishmeal) on a receiving bay. Industrial feed manufacturing environment: stainless steel or painted steel equipment, conveyors, ducting, concrete floors, warehouse lighting. No humans, no operators in frame. Realistic textures of grain, pellets, mash, dust, and metal. Candid industrial photography — natural, unposed, authentic. Shot on a Canon EOS R5, 35mm f/1.8, shallow depth of field, golden hour or soft warehouse light, slight film grain. No text overlays, no watermarks, no logos. Widescreen 16:9 composition.`
+    return `Photorealistic photograph of a feed mill relevant to: "${topic}". Show feed milling equipment and scenes — hammer mills, pellet mills, mixers, conditioners, ingredient silos, bagged feed, or raw materials (maize, soya, sunflower meal). Real industrial feed mill environment. No humans, no text, no watermarks, no logos. Widescreen 16:9.`
   }
 
-  return `Photorealistic, documentary-style photograph related to the agricultural topic: "${topic}". Shot on a Canon EOS R5 with an 85mm f/1.4 lens, shallow depth of field. Show the relevant farm animal (chickens for poultry, dairy cows for dairy, pigs for swine, goats if mentioned) in a natural farm environment with real dirt, grass, and natural imperfections. Golden hour natural lighting, slight film grain, realistic skin, feather and fur textures. National Geographic documentary style — NOT illustration, NOT AI-looking, NOT overly clean. No humans in frame. No text overlays, no watermarks, no logos. Widescreen 16:9 composition.`
+  return `Photorealistic photograph of the specific animal referenced in this topic: "${topic}". The animal is the clear subject, in a natural farm setting. No humans, no text, no watermarks, no logos. Widescreen 16:9.`
 }
 
 export async function generateBlogImageVertex(
