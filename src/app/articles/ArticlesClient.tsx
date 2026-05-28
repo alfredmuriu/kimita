@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import BlogCard from './BlogCard';
 import { BlogPost } from '@/lib/supabase';
 
-const CATEGORIES = ['All', 'Poultry', 'Dairy', 'Pigs', 'Livestock', 'Pets', 'Feed Milling'];
+const CATEGORIES = ['All', 'Poultry', 'Dairy', 'Pigs', 'Livestock', 'Pets', 'Feed Milling', 'AMR'];
 
 interface ArticlesClientProps {
   posts: BlogPost[];

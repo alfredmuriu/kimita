@@ -25,9 +25,14 @@ function getAuthClient() {
 function buildBlogImagePrompt(topic: string, category?: string | null): string {
   const cat = (category || '').toLowerCase()
   const isFeedMilling = cat === 'feed milling' || cat === 'feed manufacturing'
+  const isAMR = cat === 'amr' || cat === 'antimicrobial resistance'
 
   if (isFeedMilling) {
     return `Photorealistic photograph of a feed mill relevant to: "${topic}". Show feed milling equipment and scenes — hammer mills, pellet mills, mixers, conditioners, ingredient silos, bagged feed, or raw materials (maize, soya, sunflower meal). Real industrial feed mill environment. No humans, no text, no watermarks, no logos. Widescreen 16:9.`
+  }
+
+  if (isAMR) {
+    return `Photorealistic photograph illustrating antimicrobial resistance in livestock relevant to: "${topic}". Show a close-up of a gloved hand holding a labeled antibiotic vial and syringe beside healthy farm animals (chickens, cattle, or goats) in a clean farm or veterinary setting. Convey responsible antibiotic stewardship. No human faces, no readable text, no watermarks, no logos. Widescreen 16:9.`
   }
 
   return `Photorealistic photograph of the specific animal referenced in this topic: "${topic}". The animal is the clear subject, in a natural farm setting. No humans, no text, no watermarks, no logos. Widescreen 16:9.`
