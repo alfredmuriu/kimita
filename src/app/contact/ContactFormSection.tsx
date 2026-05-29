@@ -166,7 +166,7 @@ export default function ContactFormSection({ paddingTop = '180px' }: ContactForm
                             built for African farms — and the products that fit your flock or herd.
                         </p>
                         <ul style={{ listStyle: 'none', padding: 0, margin: '24px 0 0', fontSize: '15px', lineHeight: 1.9 }}>
-                            <li><strong>WhatsApp:</strong> <a href="https://wa.me/254762122122" style={{ color: '#014d4b' }}>+254 762 122 122</a></li>
+                            <li><strong>WhatsApp:</strong> <a href="https://wa.me/254111410639" style={{ color: '#014d4b' }}>+254 111 410 639</a></li>
                             <li><strong>Phone:</strong> <a href="tel:+254202089181" style={{ color: '#014d4b' }}>+254 20 208 9181</a></li>
                             <li><strong>Email:</strong> <a href="mailto:info@agrikima.co.ke" style={{ color: '#014d4b' }}>info@agrikima.co.ke</a></li>
                             <li><strong>Address:</strong> Kibo Street, Industrial Area, Nairobi, Kenya</li>

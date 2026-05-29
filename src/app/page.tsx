@@ -205,7 +205,7 @@ export default async function Home() {
         <div className="row list-block block-lg-one-half block-tab-whole block-stack-on-1000 s-footer__btns" style={{ marginTop: '20px' }}>
           <div className="column list-block__item">
             <div className="s-footer__contact-btn">
-              <a href="https://wa.me/254762122122" className="btn btn--primary u-fullwidth cta-btn">
+              <a href="https://wa.me/254111410639" className="btn btn--primary u-fullwidth cta-btn">
                 Talk to Our Experts
               </a>
             </div>
