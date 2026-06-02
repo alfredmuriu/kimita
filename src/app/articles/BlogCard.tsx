@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { BlogPost } from '@/lib/supabase';
+import type { ListBlogPost } from './page';
 
 interface BlogCardProps {
-  post: BlogPost;
+  post: ListBlogPost;
 }
 
 export default function BlogCard({ post }: BlogCardProps) {

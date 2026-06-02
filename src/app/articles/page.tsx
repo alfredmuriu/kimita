@@ -3,6 +3,13 @@ import { getSupabase, BlogPost } from '@/lib/supabase';
 import { Metadata } from 'next';
 import ArticlesClient from './ArticlesClient';
 
+// The listing only needs these fields — never `content` or the heavy `embedding`
+// vector. Pulling those on every load made the page take ~30s.
+export type ListBlogPost = Pick<
+  BlogPost,
+  'id' | 'slug' | 'title' | 'excerpt' | 'featured_image' | 'keywords' | 'category' | 'published_at'
+>;
+
 export const metadata: Metadata = {
   title: 'What\'s New | Agricultural Insights & Farming Tips | Agrikima',
   description: 'Read the latest agricultural insights, farming tips, and poultry health articles from the experts at Agrikima. Stay updated on best practices for African farmers.',
@@ -28,16 +35,19 @@ export const metadata: Metadata = {
 // Revalidate every 60 seconds to show new blog posts
 export const revalidate = 60;
 
-async function getAllBlogPosts(): Promise<BlogPost[]> {
+async function getAllBlogPosts(): Promise<ListBlogPost[]> {
   const supabase = getSupabase();
   if (!supabase) {
     console.error('Supabase not configured');
     return [];
   }
 
+  // Select only the columns the listing needs. Crucially this excludes the heavy
+  // `embedding` vector (1536 floats/row) and full `content` HTML — pulling `*`
+  // dragged megabytes per load and made the page take ~30s to render.
   const { data, error } = await supabase
     .from('blog_posts')
-    .select('*')
+    .select('id, slug, title, excerpt, featured_image, keywords, category, published_at')
     .eq('status', 'published')
     .order('published_at', { ascending: false });
 
@@ -57,10 +67,10 @@ export default async function Blog({
   const allPosts = await getAllBlogPosts();
   const activeCategory = searchParams.category || 'All';
 
-  const isLivestock = (p: BlogPost) =>
+  const isLivestock = (p: ListBlogPost) =>
     p.category?.toLowerCase() === 'livestock' || !p.category;
 
-  const isFeedMilling = (p: BlogPost) => {
+  const isFeedMilling = (p: ListBlogPost) => {
     const c = p.category?.toLowerCase();
     return c === 'feed milling' || c === 'feed manufacturing';
   };
