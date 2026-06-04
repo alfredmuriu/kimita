@@ -53,7 +53,9 @@ const ARTICLE_CATEGORIES = [
   { name: 'Dairy', query: 'Dairy' },
   { name: 'Pigs', query: 'Pigs' },
   { name: 'Goats and Sheep', query: 'Livestock' },
+  { name: 'Pets', query: 'Pets' },
   { name: 'Feed Milling', query: 'Feed+Milling' },
+  { name: 'AMR', query: 'AMR' },
 ];
 
 export default function Header() {
