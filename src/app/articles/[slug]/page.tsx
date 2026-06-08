@@ -122,6 +122,26 @@ export default async function BlogPostPage({ params }: PageProps) {
             <span>{readMinutes} min read</span>
           </div>
 
+          {/* Auto-generated hero video (Veo slideshow + voiceover). Shows the
+              featured image as poster until the visitor presses play — browsers
+              block autoplay-with-sound, and this video has narration. */}
+          {post.video_url && (
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              poster={post.featured_image || undefined}
+              style={{
+                width: '100%',
+                borderRadius: '12px',
+                marginBottom: '40px',
+                backgroundColor: '#000',
+              }}
+            >
+              <source src={post.video_url} type="video/mp4" />
+            </video>
+          )}
+
           {/* Content with product recommendation above Introduction */}
           {(() => {
             const content = post.content || '';
