@@ -314,7 +314,7 @@ export default function Header() {
           margin: 0 !important;
         }
         .s-header__social .email {
-          font-size: 1.4rem !important;
+          font-size: 1.15rem !important;
         }
         .s-header__social svg {
           width: 18px !important;
@@ -486,22 +486,22 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="tel:+254202089181">
-                  <div style={{display: 'flex', alignItems: 'center'}}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{fill: 'rgba(0,0,0,1)', marginRight: '8px'}}>
-                      <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
-                    </svg>
-                    <span className="email"> +254 20 2089181</span>
-                  </div>
-                </a>
-              </li>
-              <li>
                 <a href="tel:+254111410639">
                   <div style={{display: 'flex', alignItems: 'center'}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{fill: 'rgba(0,0,0,1)', marginRight: '8px'}}>
                       <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
                     </svg>
                     <span className="email"> +254 111 410 639</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+254202089181">
+                  <div style={{display: 'flex', alignItems: 'center'}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{fill: 'rgba(0,0,0,1)', marginRight: '8px'}}>
+                      <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
+                    </svg>
+                    <span className="email"> +254 20 2089181</span>
                   </div>
                 </a>
               </li>
