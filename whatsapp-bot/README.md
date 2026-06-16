@@ -40,10 +40,10 @@ Conversation history is keyed by phone number in the Supabase
 Auth: the Next.js middleware already lets `x-cron-secret: AGENT_CRON_SECRET`
 through for `/api/chat` (same as the cron jobs), so no password/cookie is needed.
 
-> **New to servers / on Windows?** Follow the full hand-held walkthrough in
-> [DEPLOY-HETZNER-WINDOWS.md](DEPLOY-HETZNER-WINDOWS.md) instead — it covers
-> creating the Hetzner server and connecting from a Windows PC step by step.
-> Recommended host: **Hetzner Cloud CX22** (4 GB RAM, ~€3.79/mo).
+> **New to servers / on Windows?** Start with the
+> [SETUP-CHECKLIST.md](SETUP-CHECKLIST.md) (the do-it-in-order map), and use
+> [DEPLOY-HETZNER-WINDOWS.md](DEPLOY-HETZNER-WINDOWS.md) for the exact commands
+> at each step. Recommended host: **Hetzner Cloud CX22** (4 GB RAM, ~€3.79/mo).
 
 ## Deploy to a VPS (Ubuntu example)
 
