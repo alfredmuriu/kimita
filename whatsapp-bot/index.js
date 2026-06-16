@@ -1,11 +1,15 @@
 // Agrikima WhatsApp bot host.
 //
 // A thin bridge: open-wa logs into WhatsApp Web (via a one-time QR scan) on a
-// SPARE number, and every incoming message is forwarded to our existing chat
-// "brain" — the deployed /api/chat endpoint — then the reply is sent back.
+// SPARE number, and every incoming message is forwarded to our existing CUSTOMER
+// bot brain — the deployed /api/whatsapp/bridge endpoint — then the reply is
+// sent back. That endpoint runs the same bot-core brain, conversation history,
+// and escalation emails as the official Meta webhook; it's the temporary
+// stand-in while the official WhatsApp Business API is blocked on Meta
+// verification.
 //
-// The brain (Claude prompt, history, manual-publish detection) lives in the
-// Next.js app and is NOT duplicated here, so it keeps improving on its own.
+// The brain lives in the Next.js app and is NOT duplicated here, so it keeps
+// improving on its own.
 //
 // IMPORTANT: this must run on an always-on host (a ~$5/mo VPS). It cannot run on
 // Vercel — open-wa keeps a persistent headless-browser WhatsApp session alive.
@@ -33,32 +37,26 @@ if (!CHAT_API_URL || !AGENT_CRON_SECRET) {
   process.exit(1)
 }
 
-// Per-sender session id so the brain keeps conversation history per contact.
-function sessionIdFor(chatId) {
-  return `whatsapp:${chatId}`
-}
-
-// Forward one message to the brain and return its reply text.
-async function askBrain(message, sessionId) {
+// Forward one message to the customer brain and return its reply text.
+// `phone` is the sender's number (digits); `name` is their WhatsApp display name.
+async function askBrain(phone, name, message) {
   const res = await fetch(CHAT_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      // Same header the cron jobs use — middleware accepts it as auth, so the
-      // bot doesn't need the password cookie.
+      // Same secret the cron jobs use — the bridge route checks this header.
       'x-cron-secret': AGENT_CRON_SECRET,
     },
-    body: JSON.stringify({ message, sessionId }),
+    body: JSON.stringify({ phone, name, message }),
   })
 
   if (!res.ok) {
     const body = await res.text().catch(() => '')
-    throw new Error(`chat API ${res.status}: ${body.slice(0, 200)}`)
+    throw new Error(`bridge API ${res.status}: ${body.slice(0, 200)}`)
   }
 
   const data = await res.json()
-  // The brain may also have published something; surface that line too.
-  return [data.reply, data.publish_result].filter(Boolean).join('\n\n')
+  return data.reply
 }
 
 function isAllowed(numberDigits) {
@@ -81,12 +79,11 @@ function start(client) {
       return
     }
 
-    const sessionId = sessionIdFor(message.from)
     console.log(`[bot] ← ${message.from}: ${message.body.slice(0, 80)}`)
 
     try {
       await client.simulateTyping(message.from, true)
-      const reply = await askBrain(message.body, sessionId)
+      const reply = await askBrain(senderDigits, message.sender?.pushname || null, message.body)
       await client.simulateTyping(message.from, false)
       await client.sendText(
         message.from,
