@@ -58,10 +58,18 @@ logs in like a normal phone.
 - Treat it as a **temporary bridge** while we work on clearing the Meta
   restriction for a proper, official bot later.
 
-**To do:**
-- Pick a host (VPS) for the bot.
-- Confirm open-wa's free tier covers our needs.
-- Build the bot host — it reuses our existing bot "brain" unchanged.
+**Bot host code: DONE (2026-06-16)** — `whatsapp-bot/` in the repo. Standalone
+Node service: open-wa logs in on the spare number (one-time QR), forwards each
+message to the deployed `/api/chat` brain (authed via `x-cron-secret`), sends the
+reply back. Brain logic NOT duplicated. See `whatsapp-bot/README.md` for full VPS
+deploy steps. open-wa is free/open-source.
+
+**To go live (you):**
+- Pick + provision a VPS (~$5/mo). Have the spare number ready. ✓ (number ready)
+- Follow `whatsapp-bot/README.md`: install Node + Chromium deps, `npm install`,
+  set `.env` (`AGENT_CRON_SECRET`), `npm start`, scan QR on the spare phone once,
+  then keep alive with pm2.
+- Set `ALLOWED_NUMBERS` before exposing it publicly.
 
 ---
 
@@ -69,5 +77,12 @@ logs in like a normal phone.
 
 - **Meta restriction:** The real long-term fix for WhatsApp is resolving the
   business-verification restriction in Meta Business Manager.
-- **Zernio pricing:** Confirm the free-tier details on Zernio's site before
-  relying on $0.
+- **Zernio pricing:** ✓ Confirmed 2026-06-16 — free tier = first 2 accounts,
+  unlimited posts, no card. LinkedIn + Instagram fit free.
+
+## Considered & passed
+
+- **SocialClaw (getsocialclaw.com):** unified publishing API like Zernio, more
+  platforms (YouTube/Reddit/Telegram/etc.). No permanent free tier — 7-day
+  trial then $15/mo min. Passed 2026-06-16: we're already live & free on Zernio.
+  Revisit only if we need >2 platforms (then price-check vs Zernio's paid tiers).
