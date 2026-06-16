@@ -1,0 +1,7 @@
+node_modules/
+.env
+# open-wa session/auth data — secrets, never commit
+_IGNORE_*/
+.wwebjs_auth/
+session*.data.json
+*.data.json
