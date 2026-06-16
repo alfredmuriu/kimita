@@ -31,6 +31,7 @@ export async function POST(req: NextRequest) {
 
   const hashtags: string[] = Array.isArray(post.hashtags) ? post.hashtags : []
   const text = [post.content, hashtags.join(' ')].filter(Boolean).join('\n\n')
+  const imageUrl: string | undefined = post.image_url || undefined
 
   let result
   switch (post.platform) {
@@ -38,10 +39,10 @@ export async function POST(req: NextRequest) {
       result = await publishToTwitter(post.id, text)
       break
     case 'Facebook':
-      result = await publishToFacebook(post.id, text)
+      result = await publishToFacebook(post.id, text, imageUrl)
       break
     case 'Instagram':
-      result = await publishToInstagram(post.id, text)
+      result = await publishToInstagram(post.id, text, imageUrl)
       break
     case 'LinkedIn':
       result = await publishToLinkedIn(post.id, text)
