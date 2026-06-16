@@ -45,8 +45,13 @@ export async function POST(req: NextRequest) {
   }
 
   // Pick the oldest pending post for a platform we can actually publish to.
-  // IG/LinkedIn/TikTok are still paused pending API access.
+  // Twitter + Facebook use our own publishers. LinkedIn + Instagram go through
+  // Zernio (zernio.ts) and only become publishable once ZERNIO_API_KEY is set.
+  // TikTok stays paused pending API access.
   const PUBLISHABLE_PLATFORMS = ['Twitter', 'Facebook']
+  if (process.env.ZERNIO_API_KEY) {
+    PUBLISHABLE_PLATFORMS.push('LinkedIn', 'Instagram')
+  }
   const { data: post } = await supabase
     .from('posts')
     .select('*')
