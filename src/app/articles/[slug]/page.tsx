@@ -133,6 +133,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               poster={post.featured_image || undefined}
               style={{
                 width: '100%',
+                aspectRatio: '16 / 9',
+                objectFit: 'cover',
+                display: 'block',
                 borderRadius: '12px',
                 marginBottom: '40px',
                 backgroundColor: '#000',
