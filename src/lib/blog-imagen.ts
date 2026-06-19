@@ -38,6 +38,64 @@ function buildBlogImagePrompt(topic: string, category?: string | null): string {
   return `Photorealistic photograph for a farming article titled: "${topic}". First identify which farm animal species the title is about (e.g. poultry/chickens, layers, broilers, dairy cattle, beef cattle, goats, sheep, pigs, fish). That species MUST be the clear, dominant subject of the photo, shown in a natural farm setting. Ignore equipment or abstract words in the title (feeder, waterer, nutrition, vaccination, etc.) when choosing the animal — they describe the topic, not the subject. Do NOT show any other species. No humans, no text, no watermarks, no logos. Widescreen 16:9.`
 }
 
+// Google AI Studio (Gemini API) path — same "Nano Banana" model, but auth is a
+// single API key (GOOGLE_AI_STUDIO_API_KEY) instead of a service account. This
+// is the simplest setup and the preferred path once billing is enabled on the
+// key's GCP project. Falls back to Pollinations on any failure.
+export async function generateBlogImageAIStudio(
+  topic: string,
+  category?: string | null
+): Promise<Buffer> {
+  const apiKey = process.env.GOOGLE_AI_STUDIO_API_KEY
+
+  if (!apiKey) {
+    console.warn('[BlogImagen] GOOGLE_AI_STUDIO_API_KEY not set — falling back to Pollinations')
+    return generateBlogImageGemini(topic, category)
+  }
+
+  try {
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`
+
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'x-goog-api-key': apiKey,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        contents: [
+          {
+            role: 'user',
+            parts: [{ text: buildBlogImagePrompt(topic, category) }],
+          },
+        ],
+        generationConfig: {
+          responseModalities: ['IMAGE'],
+        },
+      }),
+    })
+
+    if (!res.ok) {
+      const errText = await res.text()
+      throw new Error(`AI Studio Gemini Image ${res.status}: ${errText}`)
+    }
+
+    const data = await res.json()
+    const parts: Array<{ inlineData?: { data?: string; mimeType?: string } }> =
+      data?.candidates?.[0]?.content?.parts ?? []
+    const imagePart = parts.find((p) => p?.inlineData?.data)
+    const base64Image = imagePart?.inlineData?.data
+    if (!base64Image) {
+      throw new Error('AI Studio Gemini Image returned no inlineData; response: ' + JSON.stringify(data).slice(0, 500))
+    }
+
+    return Buffer.from(base64Image, 'base64')
+  } catch (err) {
+    console.error('[BlogImagen] AI Studio Gemini Image failed, falling back to Pollinations:', err)
+    return generateBlogImageGemini(topic, category)
+  }
+}
+
 export async function generateBlogImageVertex(
   topic: string,
   category?: string | null
