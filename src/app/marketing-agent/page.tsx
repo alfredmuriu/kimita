@@ -86,6 +86,7 @@ export default function MarketingAgentPage() {
   const [composeResult, setComposeResult] = useState<{ ok: boolean; msg: string } | null>(null)
   const [composeScheduleEnabled, setComposeScheduleEnabled] = useState(false)
   const [composeScheduleAt, setComposeScheduleAt] = useState('')
+  const [isDragging, setIsDragging] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   // Run state
@@ -211,13 +212,37 @@ export default function MarketingAgentPage() {
   }
 
   // ── File pick for compose ──────────────────────────────────
-  const handleFilePick = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
+  const acceptFile = (file: File) => {
+    if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) {
+      setComposeResult({ ok: false, msg: 'Only image or video files are allowed' })
+      return
+    }
     setComposeFile(file)
     setComposeResult(null)
     const url = URL.createObjectURL(file)
     setComposePreview(url)
+  }
+
+  const handleFilePick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (file) acceptFile(file)
+  }
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    if (!isDragging) setIsDragging(true)
+  }
+
+  const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    setIsDragging(false)
+  }
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    setIsDragging(false)
+    const file = e.dataTransfer.files?.[0]
+    if (file) acceptFile(file)
   }
 
   const clearFile = () => {
@@ -530,7 +555,9 @@ export default function MarketingAgentPage() {
                       )}
 
                       <div className={s.postCardBottom}>
-                        <span className={s.postDate}>{formatDate(post.created_at)}</span>
+                        <span className={s.postDate}>
+                          {formatDate(post.status === 'published' && post.published_at ? post.published_at : post.created_at)}
+                        </span>
                         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                           {post.status === 'pending' && (
                             <button
@@ -619,11 +646,16 @@ export default function MarketingAgentPage() {
 
                 {!composeFile ? (
                   <div
-                    className={s.dropzone}
+                    className={`${s.dropzone} ${isDragging ? s.dropzoneActive : ''}`}
                     onClick={() => fileInputRef.current?.click()}
+                    onDragOver={handleDragOver}
+                    onDragLeave={handleDragLeave}
+                    onDrop={handleDrop}
                   >
                     <div className={s.dropzoneIcon}>↑</div>
-                    <div className={s.dropzoneText}>Click to upload image or video</div>
+                    <div className={s.dropzoneText}>
+                      {isDragging ? 'Drop file to upload' : 'Click or drag a file to upload'}
+                    </div>
                     <div className={s.dropzoneHint}>JPG, PNG, MP4, MOV — max 100MB</div>
                     <input
                       ref={fileInputRef}
