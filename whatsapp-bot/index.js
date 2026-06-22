@@ -110,6 +110,13 @@ create({
   authTimeout: 0,
   headless: true,
   qrTimeout: 0,
+  // Use the system-installed Google Chrome instead of open-wa's bundled
+  // Chromium — the bundled one times out loading WhatsApp Web on fresh VPS
+  // installs. Install with: apt-get install ./google-chrome-stable_*.deb
+  useChrome: true,
+  executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome',
+  // Required when running as root on a headless server.
+  chromiumArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
   // Quieter logs; the QR still prints to the terminal for the first scan.
   disableSpins: true,
 })
