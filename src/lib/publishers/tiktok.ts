@@ -7,6 +7,9 @@ export interface PublishResult {
   platform_post_id?: string
   post_url?: string
   error_message?: string
+  // True when the publish was intentionally skipped (e.g. paused). Kept in sync
+  // with the other publishers so callers can read result.skipped on the union.
+  skipped?: boolean
 }
 
 export async function publishToTikTok(

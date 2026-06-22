@@ -111,6 +111,13 @@ export async function POST(req: NextRequest) {
             return
         }
 
+        // Paused (SOCIAL_PUBLISH_DISABLED): leave the post pending so it
+        // publishes once posting resumes, and send no notification email.
+        if (result.skipped) {
+          console.log(`[publish-next] Skipped post ${post.id} (${post.platform}) — publishing paused, left pending`)
+          return
+        }
+
         await supabase
           .from('posts')
           .update({

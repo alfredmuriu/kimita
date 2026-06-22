@@ -82,6 +82,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: `Unknown platform: ${platform}` }, { status: 400 })
   }
 
+  // Paused (SOCIAL_PUBLISH_DISABLED): leave the post pending and send no email.
+  if (result.skipped) {
+    return NextResponse.json({
+      success: false,
+      skipped: true,
+      error: result.error_message,
+    })
+  }
+
   // Update post record
   await supabase
     .from('posts')

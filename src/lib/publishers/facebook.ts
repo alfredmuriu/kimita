@@ -3,6 +3,10 @@ import { getSupabaseAdmin } from '@/lib/supabase'
 
 export interface PublishResult {
   success: boolean
+  // True when the publish was intentionally skipped (e.g. paused via
+  // SOCIAL_PUBLISH_DISABLED). Callers should leave the post pending and send no
+  // notification, rather than treating it as a real failure.
+  skipped?: boolean
   platform_post_id?: string
   post_url?: string
   error_message?: string
@@ -38,12 +42,12 @@ export async function publishToFacebook(
 ): Promise<PublishResult> {
   // Temporary pause switch. The publishing logic below stays intact; while
   // SOCIAL_PUBLISH_DISABLED is set we just skip the actual post. Remove the
-  // env var (or set it to anything but 'true') in Vercel to resume.
+  // env var (or set it to anything but 'true') in Vercel to resume. Returns
+  // `skipped` so callers leave the post pending and send no email.
   if (process.env.SOCIAL_PUBLISH_DISABLED === 'true') {
     const message = 'Facebook publishing paused (SOCIAL_PUBLISH_DISABLED)'
     console.log(`[Facebook] ${message} — skipping post ${postId}`)
-    await logToSupabase(postId, 'Facebook', false, undefined, message)
-    return { success: false, error_message: message }
+    return { success: false, skipped: true, error_message: message }
   }
 
   try {
