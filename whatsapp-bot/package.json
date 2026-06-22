@@ -2,15 +2,17 @@
   "name": "agrikima-whatsapp-bot",
   "version": "1.0.0",
   "private": true,
-  "description": "open-wa bridge that routes WhatsApp messages to the Agrikima marketing-agent chat brain (/api/chat). Runs on an always-on VPS — NOT on Vercel.",
+  "description": "Baileys bridge that routes WhatsApp messages to the Agrikima customer bot brain (/api/whatsapp/bridge). Runs on an always-on VPS — NOT on Vercel.",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "@open-wa/wa-automate": "^4.74.0",
-    "dotenv": "^16.4.5"
+    "@whiskeysockets/baileys": "^6.7.0",
+    "dotenv": "^16.4.5",
+    "pino": "^9.0.0",
+    "qrcode-terminal": "^0.12.0"
   },
   "engines": {
     "node": ">=18"

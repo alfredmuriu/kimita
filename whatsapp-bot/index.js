@@ -1,25 +1,34 @@
 // Agrikima WhatsApp bot host.
 //
-// A thin bridge: open-wa logs into WhatsApp Web (via a one-time QR scan) on a
-// SPARE number, and every incoming message is forwarded to our existing CUSTOMER
-// bot brain — the deployed /api/whatsapp/bridge endpoint — then the reply is
-// sent back. That endpoint runs the same bot-core brain, conversation history,
-// and escalation emails as the official Meta webhook; it's the temporary
-// stand-in while the official WhatsApp Business API is blocked on Meta
-// verification.
+// A thin bridge: Baileys logs into WhatsApp (via a one-time QR scan) on a SPARE
+// number, and every incoming message is forwarded to our existing CUSTOMER bot
+// brain — the deployed /api/whatsapp/bridge endpoint — then the reply is sent
+// back. That endpoint runs the same bot-core brain, conversation history, and
+// escalation emails as the official Meta webhook; it's the temporary stand-in
+// while the official WhatsApp Business API is blocked on Meta verification.
 //
 // The brain lives in the Next.js app and is NOT duplicated here, so it keeps
 // improving on its own.
 //
-// IMPORTANT: this must run on an always-on host (a ~$5/mo VPS). It cannot run on
-// Vercel — open-wa keeps a persistent headless-browser WhatsApp session alive.
+// IMPORTANT: this must run on an always-on host (a ~$5/mo VPS). Baileys keeps a
+// persistent WebSocket WhatsApp session alive — there is NO browser/Chromium,
+// which is why this replaced the old open-wa host (its headless Chrome kept
+// timing out at the QR step on the VPS).
 //
-// open-wa breaks WhatsApp's terms of service: run it ONLY on a disposable spare
-// number, never the main business line. Treat it as a temporary bridge until the
-// official Meta WhatsApp Business API restriction is cleared.
+// Baileys is an unofficial WhatsApp client and breaks WhatsApp's terms of
+// service: run it ONLY on a disposable spare number, never the main business
+// line. Treat it as a temporary bridge until the official Meta WhatsApp Business
+// API restriction is cleared.
 
 import 'dotenv/config'
-import { create } from '@open-wa/wa-automate'
+import {
+  makeWASocket,
+  useMultiFileAuthState,
+  DisconnectReason,
+  fetchLatestBaileysVersion,
+} from '@whiskeysockets/baileys'
+import qrcode from 'qrcode-terminal'
+import P from 'pino'
 
 const CHAT_API_URL = process.env.CHAT_API_URL
 const AGENT_CRON_SECRET = process.env.AGENT_CRON_SECRET
@@ -64,64 +73,104 @@ function isAllowed(numberDigits) {
   return ALLOWED_NUMBERS.includes(numberDigits)
 }
 
-function start(client) {
-  console.log('[bot] Connected. Listening for messages…')
+// Pull plain text out of the various Baileys message shapes.
+function extractText(msg) {
+  const m = msg.message
+  if (!m) return ''
+  return (
+    m.conversation ||
+    m.extendedTextMessage?.text ||
+    m.imageMessage?.caption ||
+    m.videoMessage?.caption ||
+    ''
+  )
+}
 
-  client.onMessage(async (message) => {
-    // Ignore group chats, status broadcasts, and non-text payloads.
-    if (message.isGroupMsg) return
-    if (message.from === 'status@broadcast') return
-    if (message.type !== 'chat' || !message.body) return
+async function connect() {
+  // Persist the session under ./auth_info so we only scan the QR once.
+  const { state, saveCreds } = await useMultiFileAuthState('auth_info')
+  const { version } = await fetchLatestBaileysVersion()
 
-    const senderDigits = (message.from || '').replace(/\D/g, '')
-    if (!isAllowed(senderDigits)) {
-      console.log(`[bot] Ignoring message from non-allowlisted ${message.from}`)
-      return
+  const sock = makeWASocket({
+    version,
+    auth: state,
+    // We render the QR ourselves below for a reliable terminal display.
+    printQRInTerminal: false,
+    logger: P({ level: 'silent' }),
+    // Identifies the linked-device entry shown on the phone.
+    browser: ['Agrikima Bot', 'Chrome', '1.0.0'],
+  })
+
+  sock.ev.on('creds.update', saveCreds)
+
+  sock.ev.on('connection.update', (update) => {
+    const { connection, lastDisconnect, qr } = update
+
+    if (qr) {
+      console.log('\n[bot] Scan this QR with the SPARE number:')
+      console.log('      WhatsApp → Settings → Linked Devices → Link a Device\n')
+      qrcode.generate(qr, { small: true })
     }
 
-    console.log(`[bot] ← ${message.from}: ${message.body.slice(0, 80)}`)
+    if (connection === 'open') {
+      console.log('[bot] Connected. Listening for messages…')
+    }
 
-    try {
-      await client.simulateTyping(message.from, true)
-      const reply = await askBrain(senderDigits, message.sender?.pushname || null, message.body)
-      await client.simulateTyping(message.from, false)
-      await client.sendText(
-        message.from,
-        reply || 'Sorry, I had no response for that.'
+    if (connection === 'close') {
+      const statusCode = lastDisconnect?.error?.output?.statusCode
+      const loggedOut = statusCode === DisconnectReason.loggedOut
+      console.log(
+        `[bot] Connection closed (code ${statusCode ?? 'unknown'}).` +
+          (loggedOut ? ' Logged out — delete auth_info and rescan.' : ' Reconnecting…')
       )
-      console.log(`[bot] → ${message.from}: ${(reply || '').slice(0, 80)}`)
-    } catch (err) {
-      await client.simulateTyping(message.from, false).catch(() => {})
-      console.error(`[bot] Failed to handle message from ${message.from}:`, err)
-      await client
-        .sendText(
-          message.from,
-          'Sorry — something went wrong reaching the assistant. Please try again shortly.'
-        )
-        .catch(() => {})
+      if (!loggedOut) {
+        connect().catch((err) => console.error('[bot] Reconnect failed:', err))
+      }
+    }
+  })
+
+  sock.ev.on('messages.upsert', async ({ messages, type }) => {
+    if (type !== 'notify') return
+
+    for (const message of messages) {
+      const jid = message.key?.remoteJid
+      // Skip our own messages, groups, and status broadcasts.
+      if (!jid || message.key?.fromMe) continue
+      if (jid.endsWith('@g.us') || jid === 'status@broadcast') continue
+
+      const body = extractText(message).trim()
+      if (!body) continue
+
+      const senderDigits = jid.split('@')[0].replace(/\D/g, '')
+      if (!isAllowed(senderDigits)) {
+        console.log(`[bot] Ignoring message from non-allowlisted ${jid}`)
+        continue
+      }
+
+      console.log(`[bot] ← ${jid}: ${body.slice(0, 80)}`)
+
+      try {
+        await sock.sendPresenceUpdate('composing', jid)
+        const reply = await askBrain(senderDigits, message.pushName || null, body)
+        await sock.sendPresenceUpdate('paused', jid)
+        await sock.sendMessage(jid, {
+          text: reply || 'Sorry, I had no response for that.',
+        })
+        console.log(`[bot] → ${jid}: ${(reply || '').slice(0, 80)}`)
+      } catch (err) {
+        await sock.sendPresenceUpdate('paused', jid).catch(() => {})
+        console.error(`[bot] Failed to handle message from ${jid}:`, err)
+        await sock
+          .sendMessage(jid, {
+            text: 'Sorry — something went wrong reaching the assistant. Please try again shortly.',
+          })
+          .catch(() => {})
+      }
     }
   })
 }
 
-create({
-  sessionId: 'agrikima',
-  // Persist the session so we only scan the QR once, not on every restart.
-  multiDevice: true,
-  authTimeout: 0,
-  headless: true,
-  qrTimeout: 0,
-  // Use the system-installed Google Chrome instead of open-wa's bundled
-  // Chromium — the bundled one times out loading WhatsApp Web on fresh VPS
-  // installs. Install with: apt-get install ./google-chrome-stable_*.deb
-  useChrome: true,
-  executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome',
-  // Required when running as root on a headless server.
-  chromiumArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
-  // Quieter logs; the QR still prints to the terminal for the first scan.
-  disableSpins: true,
+connect().catch((err) => {
+  console.error('[bot] Failed to start:', err)
+  process.exit(1)
 })
-  .then(start)
-  .catch((err) => {
-    console.error('[bot] Failed to start open-wa:', err)
-    process.exit(1)
-  })
