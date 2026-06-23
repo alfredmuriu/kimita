@@ -31,7 +31,7 @@ async function generateAndUploadImage(
     // Preference order: Google AI Studio (single API key, paid model) →
     // Vertex AI ($300 trial, service account) → Pollinations (free fallback).
     // Both Google paths return PNG; Pollinations returns JPEG.
-    const useAIStudio = Boolean(process.env.GOOGLE_AI_STUDIO_API_KEY);
+    const useAIStudio = Boolean(process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GOOGLE_AI_API_KEY);
     const useVertex = Boolean(
       process.env.BLOG_VERTEX_PROJECT_ID &&
       process.env.BLOG_GOOGLE_CLIENT_EMAIL &&

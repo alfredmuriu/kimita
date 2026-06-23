@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
   }
 
   // ── Google AI Studio check (preferred path) ──────────────────────────────
-  const aiStudioKey = process.env.GOOGLE_AI_STUDIO_API_KEY;
+  const aiStudioKey = process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GOOGLE_AI_API_KEY;
   if (aiStudioKey) {
     try {
       const endpoint =

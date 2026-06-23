@@ -46,10 +46,12 @@ export async function generateBlogImageAIStudio(
   topic: string,
   category?: string | null
 ): Promise<Buffer> {
-  const apiKey = process.env.GOOGLE_AI_STUDIO_API_KEY
+  // Accept either name — GOOGLE_AI_API_KEY is the original var this project used
+  // for the Gemini API; GOOGLE_AI_STUDIO_API_KEY was added later for the same key.
+  const apiKey = process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GOOGLE_AI_API_KEY
 
   if (!apiKey) {
-    console.warn('[BlogImagen] GOOGLE_AI_STUDIO_API_KEY not set — falling back to Pollinations')
+    console.warn('[BlogImagen] No AI Studio key (GOOGLE_AI_STUDIO_API_KEY / GOOGLE_AI_API_KEY) — falling back to Pollinations')
     return generateBlogImageGemini(topic, category)
   }
 
