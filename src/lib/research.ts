@@ -113,21 +113,26 @@ async function auditAgrikimaSocial(): Promise<string> {
 export async function runResearch(): Promise<ResearchFindings> {
   console.log('[Research] Starting intelligence gathering...')
 
-  // Run all research tasks
-  console.log('[Research] 1/5 Discovering competitors...')
-  const competitorList = await discoverCompetitors()
+  // Each researchQuery is a slow web-search call (30-90s). Running all 5
+  // sequentially blew past the serverless function time limit, so the cycle
+  // never reached the strategy/email step. Only 1→2 are dependent (2 consumes
+  // 1's competitor list); 3, 4, 5 are independent. Run the 1→2 chain and the
+  // other three concurrently so the whole step fits the function budget.
+  const competitorChain = (async () => {
+    console.log('[Research] Discovering competitors → analysing activity...')
+    const competitorList = await discoverCompetitors()
+    const competitorActivity = await getCompetitorActivity(competitorList)
+    return { competitorList, competitorActivity }
+  })()
 
-  console.log('[Research] 2/5 Analysing competitor activity...')
-  const competitorActivity = await getCompetitorActivity(competitorList)
+  const [competitor, hashtagsRaw, industryNews, agrikimaSocialAudit] = await Promise.all([
+    competitorChain,
+    getTrendingHashtags(),
+    getIndustryNews(),
+    auditAgrikimaSocial(),
+  ])
 
-  console.log('[Research] 3/5 Finding trending hashtags...')
-  const hashtagsRaw = await getTrendingHashtags()
-
-  console.log('[Research] 4/5 Gathering industry news...')
-  const industryNews = await getIndustryNews()
-
-  console.log('[Research] 5/5 Auditing Agrikima social presence...')
-  const agrikimaSocialAudit = await auditAgrikimaSocial()
+  const { competitorList, competitorActivity } = competitor
 
   console.log('[Research] Complete.')
 
