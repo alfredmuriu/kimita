@@ -11,3 +11,6 @@ nul
 
 # Ignore local SEO documentation
 docs/
+
+# Local Claude Code config (may contain secrets — never commit)
+.claude/
