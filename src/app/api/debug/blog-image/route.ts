@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
               parts: [{ text: 'A single brown hen on a Kenyan farm at golden hour, photoreal.' }],
             },
           ],
-          generationConfig: { responseModalities: ['IMAGE'] },
+          generationConfig: { responseModalities: ['TEXT', 'IMAGE'] },
         }),
       });
 
@@ -128,7 +128,7 @@ export async function GET(request: NextRequest) {
             parts: [{ text: 'A single brown hen on a Kenyan farm at golden hour, photoreal.' }],
           },
         ],
-        generationConfig: { responseModalities: ['IMAGE'] },
+        generationConfig: { responseModalities: ['TEXT', 'IMAGE'] },
       }),
     });
 
