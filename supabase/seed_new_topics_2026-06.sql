@@ -1,11 +1,25 @@
--- 70 new blog topics (priorities 325-394), 2026-06-22.
--- 10 topics under each of the 7 existing site categories ONLY — no new themes.
+-- RECONCILIATION (2026-06-22): the earlier 100-topic batch at priorities
+-- 325-424 was already inserted into Supabase. This script replaces it with the
+-- final 70-topic set (10 under each of the 7 existing site categories, no new
+-- themes). It DELETES the whole 325-424 range we previously inserted, then
+-- inserts the new 70 at 325-394 — wrapped in a transaction so it's all-or-nothing.
+--
+-- SAFETY: priorities 325+ were a clean gap above your existing topics, so the
+-- DELETE only removes our own batch. If the blog cron has already PUBLISHED any
+-- of these since you ran the first query, those blog_posts stay untouched (only
+-- the topic queue is rewritten); re-check max(source_priority) if unsure.
+--
 -- DB category strings map to the /articles filter buttons like this:
 --   Poultry -> "POULTRY", Dairy -> "DAIRY", Pigs -> "PIGS",
 --   Livestock -> "GOATS AND SHEEP", Pets -> "PETS",
 --   Feed Manufacturing -> "FEED MILLING", AMR -> "AMR".
 -- Keywords are chosen to NOT overlap the 242 already-published articles.
 -- `used` defaults to false; the generator publishes the lowest source_priority first.
+
+BEGIN;
+
+-- Remove the previously-inserted batch (the 100 topics at 325-424).
+DELETE FROM blog_topics WHERE priority BETWEEN 325 AND 424;
 
 INSERT INTO blog_topics (topic, category, primary_keyword, secondary_keywords, priority) VALUES
 -- POULTRY (325-334)
@@ -91,3 +105,5 @@ INSERT INTO blog_topics (topic, category, primary_keyword, secondary_keywords, p
 ('Reducing Antibiotic Use Through Better Calf Housing', 'AMR', 'calf housing reduce antibiotics', ARRAY['calf pen ventilation','disease prevention calves','antibiotic free calf rearing'], 392),
 ('The Role of Clean Water in Lowering Antibiotic Use', 'AMR', 'clean water antibiotic reduction', ARRAY['water hygiene livestock','waterline sanitation','drinking water biosecurity'], 393),
 ('Zinc and Copper Alternatives to In-Feed Antibiotics', 'AMR', 'zinc copper feed alternative', ARRAY['zinc oxide piglets','trace mineral gut health','in-feed antibiotic replacement'], 394);
+
+COMMIT;
