@@ -72,8 +72,16 @@ export async function POST(req: NextRequest) {
           })
           .eq('id', cycleId)
 
-        // Send weekly digest email to team
-        const digestRecipients = (process.env.AGENT_NOTIFY_EMAILS || '')
+        // Email the weekly content plan. CONTENT_PLAN_RECIPIENTS is a dedicated
+        // list for the plan (the two addresses that should receive it), kept
+        // separate from AGENT_NOTIFY_EMAILS (per-post publish notifications +
+        // escalations) so plan recipients aren't subscribed to that noise. Falls
+        // back to AGENT_NOTIFY_EMAILS if the dedicated var isn't set.
+        const digestRecipients = (
+          process.env.CONTENT_PLAN_RECIPIENTS ||
+          process.env.AGENT_NOTIFY_EMAILS ||
+          ''
+        )
           .split(',')
           .map((e) => e.trim())
           .filter(Boolean)
