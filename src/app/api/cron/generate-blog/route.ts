@@ -3,7 +3,7 @@ import { waitUntil } from '@vercel/functions';
 import { getSupabaseAdmin } from '@/lib/supabase';
 import { generateBlogPost } from '@/lib/openai';
 import { generateBlogImageGemini } from '@/lib/gemini';
-import { generateBlogImageVertex, generateBlogImageAIStudio } from '@/lib/blog-imagen';
+import { generateBlogImageAIStudio } from '@/lib/blog-imagen';
 import { embedAndStoreArticle } from '@/lib/embeddings';
 
 export const runtime = 'nodejs';
@@ -24,27 +24,16 @@ async function generateAndUploadImage(
   if (!supabaseAdmin) return DEFAULT_IMAGE;
 
   try {
-    // 1. Generate image — Vertex Imagen 3 if BLOG_VERTEX_* env vars are set
-    //    (uses $300 free trial credits, separate GCP project from the marketing
-    //    agent), else fall back to Pollinations. Vertex returns PNG, Pollinations
-    //    returns JPEG — pick file extension + content-type accordingly.
-    // Preference order: Google AI Studio (single API key, paid model) →
-    // Vertex AI ($300 trial, service account) → Pollinations (free fallback).
-    // Both Google paths return PNG; Pollinations returns JPEG.
+    // 1. Generate image — Google AI Studio's Gemini 2.5 Flash Image ("Nano
+    //    Banana", single API key) if GOOGLE_AI_API_KEY / GOOGLE_AI_STUDIO_API_KEY
+    //    is set, else fall back to Pollinations. AI Studio returns PNG,
+    //    Pollinations returns JPEG — pick file extension + content-type to match.
     const useAIStudio = Boolean(process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GOOGLE_AI_API_KEY);
-    const useVertex = Boolean(
-      process.env.BLOG_VERTEX_PROJECT_ID &&
-      process.env.BLOG_GOOGLE_CLIENT_EMAIL &&
-      process.env.BLOG_GOOGLE_PRIVATE_KEY
-    );
-    const usesGoogle = useAIStudio || useVertex;
     const imageBuffer = useAIStudio
       ? await generateBlogImageAIStudio(topic, category)
-      : useVertex
-      ? await generateBlogImageVertex(topic, category)
       : await generateBlogImageGemini(topic, category);
-    const ext = usesGoogle ? 'png' : 'jpg';
-    const contentType = usesGoogle ? 'image/png' : 'image/jpeg';
+    const ext = useAIStudio ? 'png' : 'jpg';
+    const contentType = useAIStudio ? 'image/png' : 'image/jpeg';
     const fileName = `${slug}-${Date.now()}.${ext}`;
 
     // 2. Upload to Supabase Storage (blog-images bucket)
