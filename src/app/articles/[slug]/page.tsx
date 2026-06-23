@@ -258,29 +258,6 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </section>
                 )}
 
-                {/* Auto-generated article video (Veo slideshow + voiceover) at the
-                    bottom of the article. Shows the featured image as poster until
-                    the visitor presses play — browsers block autoplay-with-sound,
-                    and this video has narration. */}
-                {post.video_url && (
-                  <video
-                    controls
-                    preload="metadata"
-                    playsInline
-                    poster={post.featured_image || undefined}
-                    style={{
-                      width: '100%',
-                      aspectRatio: '16 / 9',
-                      objectFit: 'cover',
-                      display: 'block',
-                      borderRadius: '12px',
-                      marginTop: '50px',
-                      backgroundColor: '#000',
-                    }}
-                  >
-                    <source src={post.video_url} type="video/mp4" />
-                  </video>
-                )}
               </>
             );
           })()}

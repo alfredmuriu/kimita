@@ -41,11 +41,6 @@ export interface BlogPost {
   excerpt: string | null;
   content: string | null;
   featured_image: string | null;
-  video_url: string | null;
-  // Tick-based video pipeline state (see api/cron/generate-video):
-  // null → 'submitting' → 'polling' → 'done' | 'failed'
-  video_status: 'submitting' | 'polling' | 'done' | 'failed' | null;
-  video_jobs: { clips: { op: string; publicId: string | null }[]; audioPublicId: string | null } | null;
   keywords: string[] | null;
   category: string | null;
   recommended_product_slug: string | null;
