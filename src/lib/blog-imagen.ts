@@ -70,7 +70,10 @@ export async function generateBlogImageAIStudio(
           },
         ],
         generationConfig: {
-          responseModalities: ['IMAGE'],
+          // Must include TEXT — the image generateContent endpoint rejects an
+          // image-only modality list (400), which would silently fall back to
+          // Pollinations. We pick the image part out of the response below.
+          responseModalities: ['TEXT', 'IMAGE'],
         },
       }),
     })
@@ -131,8 +134,10 @@ export async function generateBlogImageVertex(
           },
         ],
         generationConfig: {
-          // Tell the model we want an image back, not text.
-          responseModalities: ['IMAGE'],
+          // Must include TEXT — the image generateContent endpoint rejects an
+          // image-only modality list (400), which would silently fall back to
+          // Pollinations. We pick the image part out of the response below.
+          responseModalities: ['TEXT', 'IMAGE'],
         },
       }),
     })
