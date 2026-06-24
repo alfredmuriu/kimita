@@ -45,30 +45,41 @@ export async function generateBlogImageAIStudio(
 
   try {
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`
-
-    const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'x-goog-api-key': apiKey,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        contents: [
-          {
-            role: 'user',
-            parts: [{ text: buildBlogImagePrompt(topic, category) }],
-          },
-        ],
-        generationConfig: {
-          // Must include TEXT — the image generateContent endpoint rejects an
-          // image-only modality list (400), which would silently fall back to
-          // Pollinations. We pick the image part out of the response below.
-          responseModalities: ['TEXT', 'IMAGE'],
+    const body = JSON.stringify({
+      contents: [
+        {
+          role: 'user',
+          parts: [{ text: buildBlogImagePrompt(topic, category) }],
         },
-      }),
+      ],
+      generationConfig: {
+        // Must include TEXT — the image generateContent endpoint rejects an
+        // image-only modality list (400), which would silently fall back to
+        // Pollinations. We pick the image part out of the response below.
+        responseModalities: ['TEXT', 'IMAGE'],
+      },
     })
 
-    if (!res.ok) {
+    // Retry transient throttling (429) and server errors (5xx) with backoff
+    // before giving up to Pollinations. A 429 can be per-minute rate limiting
+    // (retry helps) OR a per-day quota / no-billing cap (retry won't help — the
+    // fix there is enabling billing on the key's Google Cloud project).
+    const MAX_ATTEMPTS = 3
+    let res!: Response
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'x-goog-api-key': apiKey, 'Content-Type': 'application/json' },
+        body,
+      })
+      if (res.ok) break
+      const transient = res.status === 429 || res.status >= 500
+      if (transient && attempt < MAX_ATTEMPTS) {
+        const backoffMs = 2000 * attempt
+        console.warn(`[BlogImagen] AI Studio ${res.status} (attempt ${attempt}/${MAX_ATTEMPTS}) — retrying in ${backoffMs}ms`)
+        await new Promise((r) => setTimeout(r, backoffMs))
+        continue
+      }
       const errText = await res.text()
       throw new Error(`AI Studio Gemini Image ${res.status}: ${errText}`)
     }
