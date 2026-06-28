@@ -90,38 +90,12 @@
     * ---------------------------------------------------- */ 
     const ssMobileMenu = function() {
 
-        const toggleButton = document.querySelector('.s-header__menu-toggle');
-        const mainNavWrap = document.querySelector('.s-header__nav');
-        const siteBody = document.querySelector('body');
-
-        if (!(toggleButton && mainNavWrap)) return;
-
-        toggleButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            toggleButton.classList.toggle('is-clicked');
-            siteBody.classList.toggle('menu-is-open');
-        });
-
-        mainNavWrap.querySelectorAll('.s-header__nav a').forEach(function(link) {
-
-            link.addEventListener("click", function(event) {
-
-                // at 800px and below
-                if (window.matchMedia('(max-width: 800px)').matches) {
-                    toggleButton.classList.toggle('is-clicked');
-                    siteBody.classList.toggle('menu-is-open');
-                }
-            });
-        });
-
-        window.addEventListener('resize', function() {
-
-            // above 800px
-            if (window.matchMedia('(min-width: 801px)').matches) {
-                if (siteBody.classList.contains('menu-is-open')) siteBody.classList.remove('menu-is-open');
-                if (toggleButton.classList.contains('is-clicked')) toggleButton.classList.remove('is-clicked');
-            }
-        });
+        // The mobile menu toggle, nav-link close, and resize-close are owned by
+        // the React <Header> component (src/components/Header.tsx), which rebinds
+        // on every client-side route change. Binding here too would attach a
+        // second click handler to the same toggle, toggling `menu-is-open` twice
+        // per tap so the menu never opens. Intentionally left as a no-op.
+        return;
 
     }; // end ssMobileMenu
 

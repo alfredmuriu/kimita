@@ -79,9 +79,18 @@ export default function Header() {
       }
     };
     navLinks.forEach((l) => l.addEventListener('click', onLinkClick));
+    // Close the menu when the viewport grows past the mobile breakpoint.
+    const onResize = () => {
+      if (window.matchMedia('(min-width: 801px)').matches) {
+        toggle.classList.remove('is-clicked');
+        body.classList.remove('menu-is-open');
+      }
+    };
+    window.addEventListener('resize', onResize);
     return () => {
       toggle.removeEventListener('click', onClick);
       navLinks.forEach((l) => l.removeEventListener('click', onLinkClick));
+      window.removeEventListener('resize', onResize);
     };
   }, [pathname]);
 
