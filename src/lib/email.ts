@@ -7,16 +7,22 @@ export async function sendWeeklyDigest(
   strategy: ContentPlan,
   recipients: string[]
 ): Promise<void> {
-  const rows = strategy.posts
-    .map(
-      (p) => `
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid #e5e7eb">${p.platform}</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #e5e7eb">${p.content_type}</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #e5e7eb">${p.topic}</td>
-        <td style="padding:8px 12px;border-bottom:1px solid #e5e7eb">${p.scheduled_day || '—'}</td>
-      </tr>`
-    )
+  const cards = strategy.posts
+    .map((p, i) => {
+      const hashtags = Array.isArray(p.hashtag_focus) ? p.hashtag_focus.filter(Boolean) : []
+      const meta = [p.scheduled_day, p.platform, p.content_type, p.pillar]
+        .filter(Boolean)
+        .join(' &middot; ')
+      return `
+      <div style="border:1px solid #e5e7eb;border-radius:8px;padding:16px;margin-bottom:12px">
+        <div style="font-size:12px;color:#6b7280;text-transform:uppercase;letter-spacing:.03em">
+          ${i + 1}. ${meta}
+        </div>
+        <div style="font-size:16px;font-weight:700;margin:6px 0">${p.topic}</div>
+        ${p.brief ? `<div style="font-size:14px;color:#374151;line-height:1.55">${p.brief}</div>` : ''}
+        ${hashtags.length ? `<div style="margin-top:10px;font-size:13px;color:#2563eb">${hashtags.join(' ')}</div>` : ''}
+      </div>`
+    })
     .join('')
 
   const html = `
@@ -38,17 +44,8 @@ export async function sendWeeklyDigest(
       ${strategy.competitor_gap ? `<p><strong>Competitor gap:</strong> ${strategy.competitor_gap}</p>` : ''}
       ${strategy.trending_opportunity ? `<p><strong>Trending opportunity:</strong> ${strategy.trending_opportunity}</p>` : ''}
 
-      <table style="width:100%;border-collapse:collapse;font-size:14px">
-        <thead>
-          <tr style="background:#f9fafb;text-align:left">
-            <th style="padding:8px 12px;border-bottom:2px solid #e5e7eb">Platform</th>
-            <th style="padding:8px 12px;border-bottom:2px solid #e5e7eb">Type</th>
-            <th style="padding:8px 12px;border-bottom:2px solid #e5e7eb">Topic</th>
-            <th style="padding:8px 12px;border-bottom:2px solid #e5e7eb">Day</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
+      <h3 style="margin:24px 0 12px;font-size:16px">Planned posts</h3>
+      ${cards}
 
       <p style="margin-top:24px;font-size:12px;color:#9ca3af">
         Content generation is now running. You will receive individual publish notifications as each post goes live.
