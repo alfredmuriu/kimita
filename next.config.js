@@ -13,6 +13,9 @@ const nextConfig = {
     outputFileTracingIncludes: {
       '/api/marketing/**': ['./public/fonts/**', './public/logo.png'],
     },
+    // @resvg/resvg-js ships a native .node binary webpack can't bundle — load it
+    // at runtime instead. (sharp is externalized by Next automatically.)
+    serverComponentsExternalPackages: ['@resvg/resvg-js'],
   },
   async redirects() {
     return [
