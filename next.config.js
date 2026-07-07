@@ -5,6 +5,15 @@ const nextConfig = {
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
+  // Poster generation reads the brand fonts + logo from public/ at runtime via
+  // fs; force-include them in the marketing serverless bundle so they exist on
+  // Vercel (public assets aren't otherwise traced into function bundles).
+  // Under `experimental` on Next 14 (moved to top-level in Next 15).
+  experimental: {
+    outputFileTracingIncludes: {
+      '/api/marketing/**': ['./public/fonts/**', './public/logo.png'],
+    },
+  },
   async redirects() {
     return [
       {

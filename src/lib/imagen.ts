@@ -13,10 +13,13 @@ function getAuthClient() {
   })
 }
 
-export async function generateImage(
+// Generate the raw image bytes from Vertex Imagen without uploading. Returns the
+// PNG buffer so callers can post-process (e.g. compose a branded poster) before
+// upload. Returns null if credentials are missing or the API fails.
+export async function generateImageBuffer(
   prompt: string,
   aspectRatio: '1:1' | '16:9' | '4:5' = '1:1'
-): Promise<string | null> {
+): Promise<Buffer | null> {
   const projectId = process.env.VERTEX_PROJECT_ID
   const location = process.env.VERTEX_LOCATION || 'us-central1'
 
@@ -61,31 +64,50 @@ export async function generateImage(
       console.error('[Imagen] No image returned in response')
       return null
     }
-
-    // Upload to Supabase storage
-    const supabase = getSupabaseAdmin()
-    if (!supabase) return null
-
-    // Compress to WebP before upload to keep Supabase Cached Egress low.
-    const { buffer, contentType, ext } = await compressToWebp(Buffer.from(base64Image, 'base64'))
-    const fileName = `ai_${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`
-
-    const { error: uploadError } = await supabase.storage
-      .from(BUCKET)
-      .upload(fileName, buffer, { contentType, upsert: false })
-
-    if (uploadError) {
-      console.error('[Imagen] Storage upload error:', uploadError.message)
-      return null
-    }
-
-    const { data: urlData } = supabase.storage.from(BUCKET).getPublicUrl(fileName)
-    console.log('[Imagen] Image generated and uploaded:', urlData.publicUrl)
-    return urlData.publicUrl
+    return Buffer.from(base64Image, 'base64')
   } catch (err) {
     console.error('[Imagen] Error:', err)
     return null
   }
+}
+
+// Upload an image buffer to the marketing-media bucket, compressing to WebP to
+// keep Supabase Cached Egress low. Pass alreadyOptimized=true for buffers that
+// are already compressed (e.g. a WebP poster) to skip the extra re-encode.
+export async function uploadImageBuffer(
+  input: Buffer,
+  alreadyOptimized = false
+): Promise<string | null> {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) return null
+
+  const { buffer, contentType, ext } = alreadyOptimized
+    ? { buffer: input, contentType: 'image/webp', ext: 'webp' }
+    : await compressToWebp(input)
+  const fileName = `ai_${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`
+
+  const { error: uploadError } = await supabase.storage
+    .from(BUCKET)
+    .upload(fileName, buffer, { contentType, upsert: false })
+
+  if (uploadError) {
+    console.error('[Imagen] Storage upload error:', uploadError.message)
+    return null
+  }
+
+  const { data: urlData } = supabase.storage.from(BUCKET).getPublicUrl(fileName)
+  console.log('[Imagen] Image uploaded:', urlData.publicUrl)
+  return urlData.publicUrl
+}
+
+// Generate an image and upload it (compressed) — returns the public URL.
+export async function generateImage(
+  prompt: string,
+  aspectRatio: '1:1' | '16:9' | '4:5' = '1:1'
+): Promise<string | null> {
+  const buffer = await generateImageBuffer(prompt, aspectRatio)
+  if (!buffer) return null
+  return uploadImageBuffer(buffer)
 }
 
 // ── Build a detailed, brand-aligned image prompt ──────────────────────────────
@@ -122,6 +144,7 @@ export function buildImagePrompt(
     pillarStyle + ',',
     platformContext + ',',
     'golden hour natural lighting, vibrant colors,',
+    'main subject in the upper two-thirds, uncluttered simpler foreground in the lower third for a text overlay,',
     'photorealistic, high quality, 8k resolution,',
     'no text or watermarks',
   ]

@@ -1,6 +1,7 @@
 import { generateContent } from '@/lib/claude'
 import { PostPlan } from '@/lib/strategy'
-import { generateImage, buildImagePrompt, getAspectRatio } from '@/lib/imagen'
+import { generateImageBuffer, uploadImageBuffer, buildImagePrompt, getAspectRatio } from '@/lib/imagen'
+import { composePoster } from '@/lib/poster'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 export interface GeneratedPost {
@@ -9,6 +10,10 @@ export interface GeneratedPost {
   copy: {
     main_text: string
     headline?: string
+    // Short poster copy for visual content types — a punchy headline (<=7 words)
+    // and one supporting line — rendered onto the branded poster image.
+    poster_headline?: string
+    poster_subtitle?: string
     hashtags: string[]
   }
   image_url?: string
@@ -170,10 +175,16 @@ Hashtags to include: ${post.hashtag_focus.join(', ')}
 Platform guidelines: ${platformGuidelines[post.platform] || ''}
 ${BRAND_VOICE}
 
+This post gets a branded poster image. Also write short poster copy:
+- "poster_headline": max 7 words, bold and benefit-driven — the single message the poster must land.
+- "poster_subtitle": max 12 words, one supporting line.
+
 Return ONLY valid JSON, no other text:
 {
   "main_text": "the full caption",
   "headline": "short punchy headline (for LinkedIn/Facebook only, else empty string)",
+  "poster_headline": "punchy poster headline (<=7 words)",
+  "poster_subtitle": "one supporting line (<=12 words)",
   "hashtags": ["#tag1", "#tag2"]
 }`
 
@@ -287,10 +298,16 @@ Guidelines:
 - Each slide should work as a standalone insight
 ${BRAND_VOICE}
 
+The cover slide is a branded poster image. Also write short poster copy:
+- "poster_headline": max 7 words — the swipe-stopping cover message.
+- "poster_subtitle": max 12 words, one supporting line.
+
 Return ONLY valid JSON, no other text:
 {
   "main_text": "Slide 1: [title]\\nSlide 2: [headline] — [body]\\nSlide 3: [headline] — [body]\\n... (all slides)",
   "headline": "carousel series title",
+  "poster_headline": "cover poster headline (<=7 words)",
+  "poster_subtitle": "one supporting line (<=12 words)",
   "hashtags": ["#tag1", "#tag2"]
 }`
 
@@ -342,7 +359,7 @@ Return ONLY valid JSON, no other text:
 }
 
 // ── Safe JSON parser ──────────────────────────────────────────────────────────
-function safeParseJSON(raw: string): { main_text: string; headline: string; hashtags: string[] } {
+function safeParseJSON(raw: string): { main_text: string; headline: string; poster_headline?: string; poster_subtitle?: string; hashtags: string[] } {
   try {
     let cleaned = raw.trim()
     if (cleaned.startsWith('```')) {
@@ -392,14 +409,36 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
   }
 
   // Generate image for visual content types (articles already pull the blog image).
+  // Flow: generate the AI background photo, compose a branded Agrikima poster
+  // (headline + subtitle + logo) over it, then upload. Falls back to the plain
+  // photo if poster composition fails so a post always has an image.
   if (VISUAL_TYPES.includes(post.content_type) && !generated.image_url) {
-    console.log(`[Generator] Generating image for ${post.platform} — "${post.topic}"`)
+    console.log(`[Generator] Generating poster for ${post.platform} — "${post.topic}"`)
     const imagePrompt = buildImagePrompt(post.topic, post.platform, post.content_type, post.pillar)
     const aspectRatio = getAspectRatio(post.platform)
-    const imageUrl = await generateImage(imagePrompt, aspectRatio)
-    if (imageUrl) {
-      generated.image_url = imageUrl
-      console.log(`[Generator] Image ready: ${imageUrl}`)
+    const photo = await generateImageBuffer(imagePrompt, aspectRatio)
+
+    if (photo) {
+      const headline = (generated.copy.poster_headline || generated.copy.headline || post.topic).trim()
+      const subtitle = (generated.copy.poster_subtitle || '').trim() || undefined
+      let imageUrl: string | null = null
+      try {
+        const poster = await composePoster({
+          photo,
+          headline,
+          subtitle,
+          eyebrow: post.pillar,
+          platform: post.platform,
+        })
+        imageUrl = await uploadImageBuffer(poster, true) // already WebP
+      } catch (err) {
+        console.error('[Generator] Poster composition failed, using plain photo:', err)
+        imageUrl = await uploadImageBuffer(photo) // compress + upload raw photo
+      }
+      if (imageUrl) {
+        generated.image_url = imageUrl
+        console.log(`[Generator] Poster ready: ${imageUrl}`)
+      }
     }
   }
 
