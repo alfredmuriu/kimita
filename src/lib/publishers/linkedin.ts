@@ -8,13 +8,15 @@ export type { PublishResult }
 
 export async function publishToLinkedIn(
   postId: string,
-  text: string
+  text: string,
+  imageUrl?: string
 ): Promise<PublishResult> {
   return publishViaZernio(
     postId,
     text,
     'linkedin',
     process.env.ZERNIO_LINKEDIN_ACCOUNT_ID,
-    'LinkedIn'
+    'LinkedIn',
+    imageUrl
   )
 }

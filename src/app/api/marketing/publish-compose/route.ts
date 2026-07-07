@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
       result = await publishToInstagram(post.id, text, media_url)
       break
     case 'LinkedIn':
-      result = await publishToLinkedIn(post.id, text)
+      result = await publishToLinkedIn(post.id, text, media_url)
       break
     default:
       return NextResponse.json({ error: `Unknown platform: ${platform}` }, { status: 400 })

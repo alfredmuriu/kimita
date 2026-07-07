@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
               result = await publishToInstagram(post.id, text, imageUrl)
               break
             case 'LinkedIn':
-              result = await publishToLinkedIn(post.id, text)
+              result = await publishToLinkedIn(post.id, text, imageUrl)
               break
             case 'TikTok':
               result = await publishToTikTok(post.id, text)
