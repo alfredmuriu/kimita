@@ -430,7 +430,7 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
           eyebrow: post.pillar,
           platform: post.platform,
         })
-        imageUrl = await uploadImageBuffer(poster, true) // already WebP
+        imageUrl = await uploadImageBuffer(poster, { contentType: 'image/jpeg', ext: 'jpg' }) // JPEG for platform compatibility
       } catch (err) {
         console.error('[Generator] Poster composition failed, using plain photo:', err)
         imageUrl = await uploadImageBuffer(photo) // compress + upload raw photo

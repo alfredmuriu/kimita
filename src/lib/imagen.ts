@@ -72,17 +72,18 @@ export async function generateImageBuffer(
 }
 
 // Upload an image buffer to the marketing-media bucket, compressing to WebP to
-// keep Supabase Cached Egress low. Pass alreadyOptimized=true for buffers that
-// are already compressed (e.g. a WebP poster) to skip the extra re-encode.
+// keep Supabase Cached Egress low. Pass a `preEncoded` format for buffers that
+// are already in a final format (e.g. a JPEG poster) to skip the re-encode — use
+// this for images published to social platforms, which reject WebP.
 export async function uploadImageBuffer(
   input: Buffer,
-  alreadyOptimized = false
+  preEncoded?: { contentType: string; ext: string }
 ): Promise<string | null> {
   const supabase = getSupabaseAdmin()
   if (!supabase) return null
 
-  const { buffer, contentType, ext } = alreadyOptimized
-    ? { buffer: input, contentType: 'image/webp', ext: 'webp' }
+  const { buffer, contentType, ext } = preEncoded
+    ? { buffer: input, contentType: preEncoded.contentType, ext: preEncoded.ext }
     : await compressToWebp(input)
   const fileName = `ai_${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`
 

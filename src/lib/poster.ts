@@ -154,5 +154,8 @@ export async function composePoster(input: PosterInput): Promise<Buffer> {
   const svg = await satori(tree as unknown as React.ReactNode, { width: w, height: h, fonts: loadFonts() })
 
   const png = new Resvg(svg, { fitTo: { mode: 'width', value: w } }).render().asPng()
-  return sharp(png).webp({ quality: 82 }).toBuffer()
+  // Output JPEG, not WebP: Instagram (via Zernio/Meta) rejects WebP uploads
+  // ("Instagram only supports JPG and PNG"). JPEG is accepted by every platform
+  // and stays small, so it's the safe universal choice for published posters.
+  return sharp(png).jpeg({ quality: 85, mozjpeg: true }).toBuffer()
 }
