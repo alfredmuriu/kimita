@@ -116,8 +116,15 @@ export function buildImagePrompt(
   topic: string,
   platform: string,
   contentType: string,
-  pillar?: string
+  pillar?: string,
+  aspectRatio?: '1:1' | '16:9' | '4:5'
 ): string {
+  const ratioHint =
+    aspectRatio === '4:5' ? 'vertical 4:5 portrait composition'
+    : aspectRatio === '16:9' ? 'widescreen 16:9 composition'
+    : aspectRatio === '1:1' ? 'square 1:1 composition'
+    : ''
+
   const platformContext =
     platform === 'LinkedIn'
       ? 'professional, clean composition suitable for LinkedIn'
@@ -146,6 +153,7 @@ export function buildImagePrompt(
     platformContext + ',',
     'golden hour natural lighting, vibrant colors,',
     'main subject in the upper two-thirds, uncluttered simpler foreground in the lower third for a text overlay,',
+    ratioHint ? ratioHint + ',' : '',
     'photorealistic, high quality, 8k resolution,',
     'no text or watermarks',
   ]

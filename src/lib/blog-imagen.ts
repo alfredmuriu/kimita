@@ -26,44 +26,33 @@ function buildBlogImagePrompt(topic: string, category?: string | null): string {
   return `Photorealistic photograph for a farming article titled: "${topic}". First identify which farm animal species the title is about (e.g. poultry/chickens, layers, broilers, dairy cattle, beef cattle, goats, sheep, pigs, fish). That species MUST be the clear, dominant subject of the photo, shown in a natural farm setting. Ignore equipment or abstract words in the title (feeder, waterer, nutrition, vaccination, etc.) when choosing the animal — they describe the topic, not the subject. Do NOT show any other species. No humans, no text, no watermarks, no logos. Widescreen 16:9.`
 }
 
-// Google AI Studio (Gemini API) path — same "Nano Banana" model, but auth is a
-// single API key (GOOGLE_AI_STUDIO_API_KEY) instead of a service account. This
-// is the simplest setup and the preferred path once billing is enabled on the
-// key's GCP project. Falls back to Pollinations on any failure.
-export async function generateBlogImageAIStudio(
-  topic: string,
-  category?: string | null
-): Promise<Buffer> {
+// Low-level: generate an image from a raw prompt via Google AI Studio's Gemini
+// 2.5 Flash Image (single API key). Returns the PNG Buffer, or null on failure
+// so callers can pick their own fallback. Reused for both blog featured images
+// (buildBlogImagePrompt) and marketing posters (imagen.ts buildImagePrompt).
+export async function generateImageAIStudio(prompt: string): Promise<Buffer | null> {
   // Accept either name — GOOGLE_AI_API_KEY is the original var this project used
   // for the Gemini API; GOOGLE_AI_STUDIO_API_KEY was added later for the same key.
   const apiKey = process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GOOGLE_AI_API_KEY
-
   if (!apiKey) {
-    console.warn('[BlogImagen] No AI Studio key (GOOGLE_AI_STUDIO_API_KEY / GOOGLE_AI_API_KEY) — falling back to Pollinations')
-    return generateBlogImageGemini(topic, category)
+    console.warn('[AIStudioImage] No key (GOOGLE_AI_STUDIO_API_KEY / GOOGLE_AI_API_KEY)')
+    return null
   }
 
   try {
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`
     const body = JSON.stringify({
-      contents: [
-        {
-          role: 'user',
-          parts: [{ text: buildBlogImagePrompt(topic, category) }],
-        },
-      ],
+      contents: [{ role: 'user', parts: [{ text: prompt }] }],
       generationConfig: {
         // Must include TEXT — the image generateContent endpoint rejects an
-        // image-only modality list (400), which would silently fall back to
-        // Pollinations. We pick the image part out of the response below.
+        // image-only modality list (400). We pick the image part out below.
         responseModalities: ['TEXT', 'IMAGE'],
       },
     })
 
-    // Retry transient throttling (429) and server errors (5xx) with backoff
-    // before giving up to Pollinations. A 429 can be per-minute rate limiting
-    // (retry helps) OR a per-day quota / no-billing cap (retry won't help — the
-    // fix there is enabling billing on the key's Google Cloud project).
+    // Retry transient throttling (429) and server errors (5xx) with backoff.
+    // A 429 can be per-minute rate limiting (retry helps) OR a per-day quota /
+    // no-billing cap (retry won't help — the fix is billing on the key's project).
     const MAX_ATTEMPTS = 3
     let res!: Response
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
@@ -76,26 +65,37 @@ export async function generateBlogImageAIStudio(
       const transient = res.status === 429 || res.status >= 500
       if (transient && attempt < MAX_ATTEMPTS) {
         const backoffMs = 2000 * attempt
-        console.warn(`[BlogImagen] AI Studio ${res.status} (attempt ${attempt}/${MAX_ATTEMPTS}) — retrying in ${backoffMs}ms`)
+        console.warn(`[AIStudioImage] ${res.status} (attempt ${attempt}/${MAX_ATTEMPTS}) — retrying in ${backoffMs}ms`)
         await new Promise((r) => setTimeout(r, backoffMs))
         continue
       }
-      const errText = await res.text()
-      throw new Error(`AI Studio Gemini Image ${res.status}: ${errText}`)
+      console.error(`[AIStudioImage] ${res.status}: ${(await res.text()).slice(0, 300)}`)
+      return null
     }
 
     const data = await res.json()
     const parts: Array<{ inlineData?: { data?: string; mimeType?: string } }> =
       data?.candidates?.[0]?.content?.parts ?? []
-    const imagePart = parts.find((p) => p?.inlineData?.data)
-    const base64Image = imagePart?.inlineData?.data
+    const base64Image = parts.find((p) => p?.inlineData?.data)?.inlineData?.data
     if (!base64Image) {
-      throw new Error('AI Studio Gemini Image returned no inlineData; response: ' + JSON.stringify(data).slice(0, 500))
+      console.error('[AIStudioImage] no inlineData; response: ' + JSON.stringify(data).slice(0, 300))
+      return null
     }
-
     return Buffer.from(base64Image, 'base64')
   } catch (err) {
-    console.error('[BlogImagen] AI Studio Gemini Image failed, falling back to Pollinations:', err)
-    return generateBlogImageGemini(topic, category)
+    console.error('[AIStudioImage] failed:', err)
+    return null
   }
+}
+
+// Google AI Studio (Gemini API) path for blog featured images — same "Nano
+// Banana" model. Falls back to Pollinations on any failure.
+export async function generateBlogImageAIStudio(
+  topic: string,
+  category?: string | null
+): Promise<Buffer> {
+  const buf = await generateImageAIStudio(buildBlogImagePrompt(topic, category))
+  if (buf) return buf
+  console.warn('[BlogImagen] AI Studio Gemini Image failed — falling back to Pollinations')
+  return generateBlogImageGemini(topic, category)
 }

@@ -1,6 +1,8 @@
 import { generateContent } from '@/lib/claude'
 import { PostPlan } from '@/lib/strategy'
 import { generateImageBuffer, uploadImageBuffer, buildImagePrompt, getAspectRatio } from '@/lib/imagen'
+import { generateImageAIStudio } from '@/lib/blog-imagen'
+import { generateBlogImageGemini } from '@/lib/gemini'
 import { composePoster } from '@/lib/poster'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
@@ -414,9 +416,15 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
   // photo if poster composition fails so a post always has an image.
   if (VISUAL_TYPES.includes(post.content_type) && !generated.image_url) {
     console.log(`[Generator] Generating poster for ${post.platform} — "${post.topic}"`)
-    const imagePrompt = buildImagePrompt(post.topic, post.platform, post.content_type, post.pillar)
     const aspectRatio = getAspectRatio(post.platform)
-    const photo = await generateImageBuffer(imagePrompt, aspectRatio)
+    const imagePrompt = buildImagePrompt(post.topic, post.platform, post.content_type, post.pillar, aspectRatio)
+
+    // Best-available background: Gemini 2.5 Flash Image (same billed key the blog
+    // articles use) → Vertex Imagen 3 → Pollinations. Each is high quality except
+    // Pollinations, which is a last resort so a post always gets an image.
+    let photo = await generateImageAIStudio(imagePrompt)
+    if (!photo) photo = await generateImageBuffer(imagePrompt, aspectRatio)
+    if (!photo) photo = await generateBlogImageGemini(post.topic, post.pillar).catch(() => null)
 
     if (photo) {
       const headline = (generated.copy.poster_headline || generated.copy.headline || post.topic).trim()
