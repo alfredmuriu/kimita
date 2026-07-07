@@ -1,5 +1,6 @@
 import { JWT } from 'google-auth-library'
 import { getSupabaseAdmin } from './supabase'
+import { compressToWebp } from './image-compress'
 
 const BUCKET = 'marketing-media'
 const MODEL = 'imagen-3.0-generate-001'
@@ -65,12 +66,13 @@ export async function generateImage(
     const supabase = getSupabaseAdmin()
     if (!supabase) return null
 
-    const buffer = Buffer.from(base64Image, 'base64')
-    const fileName = `ai_${Date.now()}_${Math.random().toString(36).slice(2)}.png`
+    // Compress to WebP before upload to keep Supabase Cached Egress low.
+    const { buffer, contentType, ext } = await compressToWebp(Buffer.from(base64Image, 'base64'))
+    const fileName = `ai_${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`
 
     const { error: uploadError } = await supabase.storage
       .from(BUCKET)
-      .upload(fileName, buffer, { contentType: 'image/png', upsert: false })
+      .upload(fileName, buffer, { contentType, upsert: false })
 
     if (uploadError) {
       console.error('[Imagen] Storage upload error:', uploadError.message)

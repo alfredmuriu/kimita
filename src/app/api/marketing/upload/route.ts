@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { compressToWebp } from '@/lib/image-compress'
 
 const BUCKET = 'marketing-media'
 
@@ -17,14 +18,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'File too large (max 100MB)' }, { status: 400 })
   }
 
-  const ext = file.name.split('.').pop()?.toLowerCase() || 'bin'
+  const original = Buffer.from(await file.arrayBuffer())
+
+  // Compress images to WebP to keep Supabase Cached Egress low; pass videos and
+  // other file types through unchanged.
+  let ext = file.name.split('.').pop()?.toLowerCase() || 'bin'
+  let contentType = file.type
+  let buffer: Buffer<ArrayBufferLike> = original
+  if (file.type.startsWith('image/')) {
+    const compressed = await compressToWebp(original)
+    buffer = compressed.buffer
+    contentType = compressed.contentType
+    ext = compressed.ext
+  }
+
   const fileName = `${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`
-  const buffer = Buffer.from(await file.arrayBuffer())
 
   const { error } = await supabase.storage
     .from(BUCKET)
     .upload(fileName, buffer, {
-      contentType: file.type,
+      contentType,
       upsert: false,
     })
 

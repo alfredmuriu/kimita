@@ -5,6 +5,7 @@ import { generateBlogPost } from '@/lib/openai';
 import { generateBlogImageGemini } from '@/lib/gemini';
 import { generateBlogImageAIStudio } from '@/lib/blog-imagen';
 import { embedAndStoreArticle } from '@/lib/embeddings';
+import { compressToWebp } from '@/lib/image-compress';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -12,24 +13,6 @@ export const fetchCache = 'force-no-store'; // Prevent Next.js from caching Supa
 export const maxDuration = 120;
 
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
-
-// Detect the real image format from the buffer's magic bytes. AI Studio returns
-// PNG, but it silently falls back to Pollinations (JPEG) on failure — so we can't
-// trust the requested format. Tagging a JPEG as image/png produces broken,
-// "bad" images downstream, which is the bug this guards against.
-function detectImageFormat(buf: Buffer): { ext: string; contentType: string } {
-  if (buf.length >= 8 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) {
-    return { ext: 'png', contentType: 'image/png' };
-  }
-  if (buf.length >= 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) {
-    return { ext: 'jpg', contentType: 'image/jpeg' };
-  }
-  if (buf.length >= 12 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP') {
-    return { ext: 'webp', contentType: 'image/webp' };
-  }
-  // Unknown — default to JPEG, the most permissive choice for browsers.
-  return { ext: 'jpg', contentType: 'image/jpeg' };
-}
 
 // Generate image with Gemini 2.5 Flash Image (free tier), upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
@@ -50,16 +33,17 @@ async function generateAndUploadImage(
     const imageBuffer = useAIStudio
       ? await generateBlogImageAIStudio(topic, category)
       : await generateBlogImageGemini(topic, category);
-    // Pick extension + content-type from the actual bytes, not the requested
-    // generator — AI Studio falls back to Pollinations (JPEG) internally, so the
-    // buffer may not be the PNG we asked for.
-    const { ext, contentType } = detectImageFormat(imageBuffer);
+    // Compress to WebP before upload to keep Supabase Cached Egress low — blog
+    // images are served full-size on every public page + crawler hit, so the raw
+    // PNG/JPEG was the main egress driver. compressToWebp falls back to the
+    // original bytes if sharp fails, so publishing never breaks on this.
+    const { buffer: uploadBuffer, contentType, ext } = await compressToWebp(imageBuffer);
     const fileName = `${slug}-${Date.now()}.${ext}`;
 
     // 2. Upload to Supabase Storage (blog-images bucket)
     const { error: uploadError } = await supabaseAdmin.storage
       .from('blog-images')
-      .upload(fileName, imageBuffer, {
+      .upload(fileName, uploadBuffer, {
         contentType,
         cacheControl: '31536000',
         upsert: false,
