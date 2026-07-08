@@ -1,9 +1,10 @@
 import { generateContent } from '@/lib/claude'
 import { PostPlan } from '@/lib/strategy'
-import { generateImageBuffer, uploadImageBuffer, buildImagePrompt, getAspectRatio } from '@/lib/imagen'
+import { generateImageBuffer, uploadImageBuffer, buildImagePrompt, buildProductPosterPrompt, getAspectRatio } from '@/lib/imagen'
 import { generateImageAIStudio } from '@/lib/blog-imagen'
 import { generateBlogImageGemini } from '@/lib/gemini'
 import { composePoster } from '@/lib/poster'
+import { findProductPoster } from '@/lib/product-posters'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 export interface GeneratedPost {
@@ -415,9 +416,25 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
   // (headline + subtitle + logo) over it, then upload. Falls back to the plain
   // photo if poster composition fails so a post always has an image.
   if (VISUAL_TYPES.includes(post.content_type) && !generated.image_url) {
+    // If this post is about a product with a professionally designed poster,
+    // attach that poster verbatim and skip AI generation entirely.
+    const productText = [post.topic, post.brief, generated.copy.poster_headline].filter(Boolean).join(' ')
+    const premade = findProductPoster(productText, post.pillar === 'Product')
+    if (premade) {
+      generated.image_url = premade.url
+      console.log(`[Generator] Using pre-made ${premade.slug} poster for ${post.platform} — ${premade.url}`)
+    }
+  }
+
+  if (VISUAL_TYPES.includes(post.content_type) && !generated.image_url) {
     console.log(`[Generator] Generating poster for ${post.platform} — "${post.topic}"`)
     const aspectRatio = getAspectRatio(post.platform)
-    const imagePrompt = buildImagePrompt(post.topic, post.platform, post.content_type, post.pillar, aspectRatio)
+    // Product posts (without a pre-made poster) use a prompt that echoes the
+    // branded Agrikima product posters; everything else uses the general prompt.
+    const isProduct = post.pillar === 'Product'
+    const imagePrompt = isProduct
+      ? buildProductPosterPrompt(post.topic, post.platform, aspectRatio)
+      : buildImagePrompt(post.topic, post.platform, post.content_type, post.pillar, aspectRatio)
 
     // Best-available background: Gemini 2.5 Flash Image (same billed key the blog
     // articles use) → Vertex Imagen 3 → Pollinations. Each is high quality except

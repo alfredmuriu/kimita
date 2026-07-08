@@ -163,6 +163,50 @@ export function buildImagePrompt(
     .trim()
 }
 
+// ── Product-poster background prompt ──────────────────────────────────────────
+// For product posts that have no pre-made poster, generate a background that
+// echoes Agrikima's designed product posters (bright green botanical style,
+// natural herbs on wood, healthy farm animals along the bottom, clean white +
+// forest-green palette). The headline + logo are overlaid later by composePoster,
+// so the AI image must stay free of text, bottles and logos.
+export function buildProductPosterPrompt(
+  topic: string,
+  platform: string,
+  aspectRatio?: '1:1' | '16:9' | '4:5'
+): string {
+  const ratioHint =
+    aspectRatio === '4:5' ? 'vertical 4:5 portrait composition'
+    : aspectRatio === '16:9' ? 'widescreen 16:9 composition'
+    : aspectRatio === '1:1' ? 'square 1:1 composition'
+    : ''
+
+  const platformContext =
+    platform === 'LinkedIn'
+      ? 'professional, clean composition suitable for LinkedIn'
+      : platform === 'Twitter'
+      ? 'eye-catching, bold visual suitable for Twitter'
+      : 'vibrant, engaging visual suitable for Instagram and Facebook'
+
+  return [
+    `${topic},`,
+    'organic animal-health product poster background in the Agrikima brand style,',
+    'bright and airy scene with a clean white and fresh green background,',
+    'lush green leaves and natural botanical elements framing the edges,',
+    'fresh natural ingredients — garlic, aloe vera, cinnamon sticks, green herbs — arranged on a rustic wooden surface,',
+    'a row of healthy farm animals (dairy cow, goat, sheep, hens and chicks) standing on green grass along the lower third,',
+    'wholesome premium natural branding, deep forest-green and white palette, sunlit and fresh,',
+    'clean uncluttered upper area left open for a headline overlay,',
+    platformContext + ',',
+    ratioHint ? ratioHint + ',' : '',
+    'photorealistic, high quality, 8k resolution,',
+    'no text, no watermarks, no product bottles, no packaging, no logos',
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 // ── Aspect ratio per platform ─────────────────────────────────────────────────
 export function getAspectRatio(platform: string): '1:1' | '16:9' | '4:5' {
   if (platform === 'Instagram') return '4:5'
