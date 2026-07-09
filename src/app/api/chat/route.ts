@@ -1,10 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { chatWithAgent } from '@/lib/claude'
-import { publishToTwitter } from '@/lib/publishers/twitter'
-import { publishToFacebook } from '@/lib/publishers/facebook'
-import { publishToInstagram } from '@/lib/publishers/instagram'
-import { publishToLinkedIn } from '@/lib/publishers/linkedin'
 
 type ChatTurn = { role: 'user' | 'assistant'; content: string }
 
@@ -20,21 +16,11 @@ You help the team with:
 - Answering questions about content strategy
 - Reviewing post performance
 - Suggesting hashtags, captions, and content ideas
-- Publishing posts manually when asked
 
-MANUAL PUBLISH DETECTION:
-If the user asks you to post something to a specific platform, extract the content and respond with a JSON block in this exact format (in addition to your normal reply):
-
-<publish>
-{
-  "platform": "Twitter",
-  "content": "The post text here",
-  "hashtags": ["#tag1", "#tag2"]
-}
-</publish>
-
-Supported platforms: Twitter, Facebook, Instagram, LinkedIn.
-For Instagram, remind the user that an image URL is required.`
+You do NOT publish posts yourself. Publishing happens only through the weekly
+content plan and the team's "Publish Post" composer. If the user asks you to post
+something, draft the content for them and tell them to publish it from the
+Publish Post tab.`
 
 // ── Save message to chat_history ─────────────────────────────────────────────
 async function saveMessage(sessionId: string, role: string, content: string) {
@@ -69,78 +55,6 @@ async function loadHistory(sessionId: string): Promise<ChatTurn[]> {
   }
 }
 
-// ── Detect and execute manual publish ────────────────────────────────────────
-async function handlePublish(
-  assistantReply: string,
-  sessionId: string
-): Promise<string | null> {
-  const match = assistantReply.match(/<publish>([\s\S]*?)<\/publish>/)
-  if (!match) return null
-
-  let parsed: { platform: string; content: string; hashtags?: string[] }
-  try {
-    parsed = JSON.parse(match[1].trim())
-  } catch {
-    return 'Failed to parse publish instruction.'
-  }
-
-  const supabase = getSupabaseAdmin()
-  const text = [parsed.content, (parsed.hashtags ?? []).join(' ')].filter(Boolean).join('\n\n')
-
-  // Save to posts table
-  let postId = 'manual'
-  if (supabase) {
-    const { data } = await supabase
-      .from('posts')
-      .insert({
-        platform: parsed.platform,
-        content_type: 'manual',
-        content: parsed.content,
-        hashtags: parsed.hashtags ?? [],
-        status: 'pending',
-      })
-      .select('id')
-      .single()
-
-    if (data) postId = data.id
-  }
-
-  let result
-  switch (parsed.platform) {
-    case 'Twitter':
-      result = await publishToTwitter(postId, text)
-      break
-    case 'Facebook':
-      result = await publishToFacebook(postId, text)
-      break
-    case 'Instagram':
-      result = await publishToInstagram(postId, text)
-      break
-    case 'LinkedIn':
-      result = await publishToLinkedIn(postId, text)
-      break
-    default:
-      return `Unknown platform: ${parsed.platform}`
-  }
-
-  if (supabase) {
-    await supabase
-      .from('posts')
-      .update({
-        status: result.success ? 'published' : 'failed',
-        platform_post_id: result.platform_post_id || null,
-        post_url: result.post_url || null,
-        error_message: result.error_message || null,
-        published_at: result.success ? new Date().toISOString() : null,
-      })
-      .eq('id', postId)
-  }
-
-  return result.success
-    ? `Published to ${parsed.platform}. View: ${result.post_url}`
-    : `Failed to publish to ${parsed.platform}: ${result.error_message}`
-}
-
 // ── Main route handler ────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
   try {
@@ -161,18 +75,13 @@ export async function POST(req: NextRequest) {
 
     await saveMessage(sessionId, 'assistant', assistantReply)
 
-    // Check for manual publish instruction
-    let publishResult: string | null = null
-    if (assistantReply.includes('<publish>')) {
-      publishResult = await handlePublish(assistantReply, sessionId)
-    }
-
-    // Strip the <publish> block from the reply shown to user
+    // The assistant no longer publishes. Strip any stray <publish> block just in
+    // case the model emits one, so it never leaks into the reply — but never act
+    // on it. Publishing is done only via the content plan and the composer.
     const cleanReply = assistantReply.replace(/<publish>[\s\S]*?<\/publish>/g, '').trim()
 
     return NextResponse.json({
       reply: cleanReply,
-      publish_result: publishResult,
       session_id: sessionId,
     })
   } catch (err) {
