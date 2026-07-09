@@ -101,7 +101,7 @@ Requirements:
 - Identify the single biggest content gap competitors are missing that Agrikima can own
 - Choose a weekly theme aligned to current market signals and Agrikima's brand
 - Plan 8-10 posts across Twitter, Facebook, Instagram, LinkedIn (skip TikTok for now)
-- Mix content types: photo_post, article, thread, carousel
+- Mix content types: photo_post, thread, carousel. Do NOT use the "article" content type on any platform.
 - Assign each post to a specific day (Monday through Sunday)
 - Choose platform-appropriate hashtags
 - Set a confidence score between 0 and 1 for this strategy

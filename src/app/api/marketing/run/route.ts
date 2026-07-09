@@ -98,6 +98,13 @@ export async function POST(req: NextRequest) {
         const savedPostIds: string[] = []
 
         for (const postPlan of strategy.posts) {
+          // Articles are disabled on every platform — skip them even if the
+          // strategy engine still plans one.
+          if (postPlan.content_type === 'article') {
+            console.log(`[Agent] Skipping article post for ${postPlan.platform} — articles are disabled`)
+            continue
+          }
+
           const generated = await generatePost(postPlan, cycleId)
 
           const { data: savedPost } = await supabase
