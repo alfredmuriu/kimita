@@ -419,7 +419,7 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
     // If this post is about a product with a professionally designed poster,
     // attach that poster verbatim and skip AI generation entirely.
     const productText = [post.topic, post.brief, generated.copy.poster_headline].filter(Boolean).join(' ')
-    const premade = findProductPoster(productText, post.pillar === 'Product')
+    const premade = findProductPoster(productText, post.pillar === 'Product', post.platform)
     if (premade) {
       generated.image_url = premade.url
       console.log(`[Generator] Using pre-made ${premade.slug} poster for ${post.platform} — ${premade.url}`)
