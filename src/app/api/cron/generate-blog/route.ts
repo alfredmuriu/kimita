@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { waitUntil } from '@vercel/functions';
 import { getSupabaseAdmin } from '@/lib/supabase';
 import { generateBlogPost } from '@/lib/openai';
-import { generateBlogImageGemini } from '@/lib/gemini';
 import { generateBlogImageAIStudio } from '@/lib/blog-imagen';
 import { embedAndStoreArticle } from '@/lib/embeddings';
 import { compressToWebp } from '@/lib/image-compress';
@@ -26,13 +25,10 @@ async function generateAndUploadImage(
 
   try {
     // 1. Generate image — Google AI Studio's Gemini 2.5 Flash Image ("Nano
-    //    Banana", single API key) if GOOGLE_AI_API_KEY / GOOGLE_AI_STUDIO_API_KEY
-    //    is set, else fall back to Pollinations. AI Studio returns PNG,
-    //    Pollinations returns JPEG — pick file extension + content-type to match.
-    const useAIStudio = Boolean(process.env.GOOGLE_AI_STUDIO_API_KEY || process.env.GOOGLE_AI_API_KEY);
-    const imageBuffer = useAIStudio
-      ? await generateBlogImageAIStudio(topic, category)
-      : await generateBlogImageGemini(topic, category);
+    //    Banana", single API key). On any failure it returns null and we use
+    //    DEFAULT_IMAGE rather than an off-brand Pollinations image.
+    const imageBuffer = await generateBlogImageAIStudio(topic, category);
+    if (!imageBuffer) return DEFAULT_IMAGE;
     // Compress to WebP before upload to keep Supabase Cached Egress low — blog
     // images are served full-size on every public page + crawler hit, so the raw
     // PNG/JPEG was the main egress driver. compressToWebp falls back to the

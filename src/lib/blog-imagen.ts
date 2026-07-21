@@ -2,10 +2,8 @@
 // (a.k.a. "Nano Banana"), authed with a single API key.
 //
 // Returns a PNG Buffer ready for the cron's existing Supabase Storage upload.
-// Falls back to the Pollinations-based generator on any failure so a bad image
-// day never breaks the blog cron.
-
-import { generateBlogImageGemini } from './gemini'
+// On failure it returns null (no Pollinations fallback — those off-brand images
+// were leaking onto posts). The caller uses its own DEFAULT_IMAGE instead.
 
 // "Nano Banana" — the multimodal generation model, called via :generateContent.
 const MODEL = 'gemini-2.5-flash-image'
@@ -89,13 +87,14 @@ export async function generateImageAIStudio(prompt: string): Promise<Buffer | nu
 }
 
 // Google AI Studio (Gemini API) path for blog featured images — same "Nano
-// Banana" model. Falls back to Pollinations on any failure.
+// Banana" model. Returns null on failure (no Pollinations fallback) so the
+// caller can use its own default image instead of an off-brand generated one.
 export async function generateBlogImageAIStudio(
   topic: string,
   category?: string | null
-): Promise<Buffer> {
+): Promise<Buffer | null> {
   const buf = await generateImageAIStudio(buildBlogImagePrompt(topic, category))
   if (buf) return buf
-  console.warn('[BlogImagen] AI Studio Gemini Image failed — falling back to Pollinations')
-  return generateBlogImageGemini(topic, category)
+  console.warn('[BlogImagen] AI Studio Gemini Image failed — using default image')
+  return null
 }
