@@ -293,21 +293,19 @@ Content pillar: ${post.pillar}
 Brief: ${post.brief}
 Hashtags: ${post.hashtag_focus.join(', ')}
 
-Guidelines:
-- 6-10 slides
-- Slide 1: Bold hook/title that makes people want to swipe
-- Slides 2-9: One clear point per slide, short headline + 1-2 sentence body
-- Last slide: Strong CTA (follow, comment, share, contact)
-- Each slide should work as a standalone insight
-${BRAND_VOICE}
-
-The cover slide is a branded poster image. Also write short poster copy:
+The carousel is a branded poster image. Write:
+- "main_text": the post CAPTION only — a visual-first caption of 120-220 words.
+  First line must hook (it shows above the fold). Line breaks every 1-2 sentences.
+  2-4 emojis. End with a clear CTA and a question. Do NOT list or number slides,
+  and do NOT write "Slide 1", "Slide 2", etc. — this is the caption readers see,
+  not a slide script.
 - "poster_headline": max 7 words — the swipe-stopping cover message.
 - "poster_subtitle": max 12 words, one supporting line.
+${BRAND_VOICE}
 
 Return ONLY valid JSON, no other text:
 {
-  "main_text": "Slide 1: [title]\\nSlide 2: [headline] — [body]\\nSlide 3: [headline] — [body]\\n... (all slides)",
+  "main_text": "the full caption (no slide numbering)",
   "headline": "carousel series title",
   "poster_headline": "cover poster headline (<=7 words)",
   "poster_subtitle": "one supporting line (<=12 words)",
