@@ -65,6 +65,7 @@ const POULTRY_SECTIONS: CategorySection[] = [
   ]),
   buildSection('Farm Management & Records', 'poultry-management', [
     { id: 'cSuL_AN9OmQ', title: 'Poultry Record Keeping' },
+    { id: 'yuHooerScL8', title: 'Broiler Record Keeping' },
   ]),
 ];
 
@@ -120,6 +121,13 @@ const BIOGAR_SERIES_SECTIONS: CategorySection[] = [
   ]),
 ];
 
+const AMR_SECTIONS: CategorySection[] = [
+  buildSection('Responsible Medicine Use & AMR', 'responsible-medicine-use', [
+    { id: '-gSXXyFXYH0', title: 'Alarm Over Misuse of Veterinary Medicine' },
+    { id: 'WxZM2eAWu0k', title: 'The Dangers and Importance of Farm Medicines (Ũgwati na Bata wa Ndawa cia Ũrĩmi)' },
+  ]),
+];
+
 const PRODUCT_VIDEOS_SECTIONS: CategorySection[] = [
   buildSection('Product Videos', 'product-videos', [
     { id: 'idMg2DsgSlI', title: 'Advice' },
@@ -131,6 +139,7 @@ export const ACADEMY_DATA: Record<string, CategorySection[]> = {
   'Poultry Farming': POULTRY_SECTIONS,
   'Large Animals': LARGER_ANIMAL_SECTIONS,
   'Biogar Series': BIOGAR_SERIES_SECTIONS,
+  'Responsible Medicine Use & AMR': AMR_SECTIONS,
   'Product Videos': PRODUCT_VIDEOS_SECTIONS,
 };
 
