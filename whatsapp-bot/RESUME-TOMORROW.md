@@ -14,13 +14,14 @@ phone in hand) and **pm2** for 24/7 running. ~10 minutes.
 
 ## Verified working as of 2026-08-14
 
-- ✅ **Hetzner VPS is alive** — `167.233.130.182` (CX23, Falkenstein, Ubuntu),
+- ✅ **Hetzner VPS is alive** — `<VPS-IP>` (CX23, Falkenstein, Ubuntu),
   TCP/22 answering. Project "Agrikima", ~$6.49/mo.
 - ✅ **Bridge endpoint is deployed and correct** —
   `https://www.agrikima.co.ke/api/whatsapp/bridge` returns **401** without the
   secret and a full catalogue reply **with** it (tested live, 200 in ~10s).
-- ✅ **`AGENT_CRON_SECRET` confirmed** — Vercel/local value is exactly
-  `agrikima-cron-2026`, matching the server `.env`. No 401 risk.
+- ✅ **`AGENT_CRON_SECRET` confirmed** — the local/Vercel value matches the one
+  in the server `.env`, so there's no 401 risk. (Value deliberately not written
+  here: `origin` is a **public** repo.)
 - ✅ **Bot host rewritten to Baileys** — no Chromium dependency, QR prints
   straight to the terminal.
 
@@ -48,7 +49,7 @@ breaks WhatsApp's terms of service — the number can be banned without warning.
 
 In Windows PowerShell:
 ```powershell
-ssh root@167.233.130.182
+ssh root@<VPS-IP>
 ```
 
 Then on the server — **this pull is required**, the server still has the old
@@ -66,7 +67,7 @@ complains about leftovers: `rm -rf node_modules package-lock.json && npm install
 Sanity-check `.env` is still there (`cat .env`) — it needs:
 ```
 CHAT_API_URL=https://www.agrikima.co.ke/api/whatsapp/bridge
-AGENT_CRON_SECRET=agrikima-cron-2026
+AGENT_CRON_SECRET=<copy from Vercel>
 ALLOWED_NUMBERS=
 ```
 
@@ -153,7 +154,10 @@ pm2 restart agrikima-whatsapp
 
 ## Key facts
 
-- Server: `167.233.130.182` · user `root` · Hetzner project "Agrikima".
+- Server: Hetzner project "Agrikima", user `root`. IP is in the Hetzner console
+  and in the private notes — not recorded here, since `origin`
+  (`alfredmuriu/kimita`) is a **public** repo. Keep secrets and host addresses
+  out of this file.
 - Bridge: `https://www.agrikima.co.ke/api/whatsapp/bridge` — same bot-core brain,
   conversation history and escalation emails as the official Meta webhook.
 - The repo clone on the server came from the **vercel** remote

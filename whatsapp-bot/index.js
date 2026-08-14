@@ -32,6 +32,11 @@ import P from 'pino'
 
 const CHAT_API_URL = process.env.CHAT_API_URL
 const AGENT_CRON_SECRET = process.env.AGENT_CRON_SECRET
+// Liveness ping. Derived from CHAT_API_URL so there's one URL to configure, but
+// overridable for local testing. The watchdog cron emails staff if these stop.
+const HEARTBEAT_URL =
+  process.env.HEARTBEAT_URL || CHAT_API_URL?.replace(/\/bridge\/?$/, '/heartbeat')
+const HEARTBEAT_INTERVAL_MS = 5 * 60 * 1000
 // Comma-separated list of allowed WhatsApp numbers (digits only, e.g.
 // "254712345678,254700111222"). Empty = reply to everyone (not recommended).
 const ALLOWED_NUMBERS = (process.env.ALLOWED_NUMBERS || '')
@@ -68,6 +73,29 @@ async function askBrain(phone, name, message) {
   return data.reply
 }
 
+// Tell the app we're alive. Only ever called while the WhatsApp socket is open,
+// so a missing beat means the bridge genuinely can't serve customers — not just
+// that the process is running. Never throws: a monitoring blip must not disturb
+// the bot.
+async function sendHeartbeat(status) {
+  if (!HEARTBEAT_URL) return
+  try {
+    const res = await fetch(HEARTBEAT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-cron-secret': AGENT_CRON_SECRET,
+      },
+      body: JSON.stringify({ status }),
+    })
+    if (!res.ok) {
+      console.warn(`[bot] Heartbeat rejected (${res.status}) — watchdog may report a false outage`)
+    }
+  } catch (err) {
+    console.warn('[bot] Heartbeat failed:', err.message)
+  }
+}
+
 function isAllowed(numberDigits) {
   if (ALLOWED_NUMBERS.length === 0) return true
   return ALLOWED_NUMBERS.includes(numberDigits)
@@ -84,6 +112,24 @@ function extractText(msg) {
     m.videoMessage?.caption ||
     ''
   )
+}
+
+// Module-scoped so reconnects reuse one timer instead of stacking a new one per
+// connect() call.
+let heartbeatTimer = null
+
+function startHeartbeat() {
+  if (heartbeatTimer) return
+  sendHeartbeat('connected')
+  heartbeatTimer = setInterval(() => sendHeartbeat('connected'), HEARTBEAT_INTERVAL_MS)
+  // Don't hold the event loop open just for the ping.
+  heartbeatTimer.unref?.()
+}
+
+function stopHeartbeat() {
+  if (!heartbeatTimer) return
+  clearInterval(heartbeatTimer)
+  heartbeatTimer = null
 }
 
 async function connect() {
@@ -114,9 +160,13 @@ async function connect() {
 
     if (connection === 'open') {
       console.log('[bot] Connected. Listening for messages…')
+      startHeartbeat()
     }
 
     if (connection === 'close') {
+      // Stop beating the moment we're off WhatsApp, so the watchdog notices even
+      // if the process itself is perfectly healthy.
+      stopHeartbeat()
       const statusCode = lastDisconnect?.error?.output?.statusCode
       const loggedOut = statusCode === DisconnectReason.loggedOut
       console.log(
