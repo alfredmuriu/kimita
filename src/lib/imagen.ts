@@ -142,17 +142,18 @@ export function buildImagePrompt(
 
   const pillarStyle = pillar && pillars[pillar] ? pillars[pillar] : 'professional agricultural photography'
 
-  const carouselNote = contentType === 'carousel' ? 'clean minimal layout with space for text overlay, ' : ''
-
   return [
     `${topic},`,
     'East African farming context, Kenya countryside,',
     'healthy livestock or lush green crops,',
-    carouselNote,
     pillarStyle + ',',
     platformContext + ',',
     'golden hour natural lighting, vibrant colors,',
-    'main subject in the upper two-thirds, uncluttered simpler foreground in the lower third for a text overlay,',
+    // The image fills the poster's photo BAND, which centre-crops it and lays a
+    // dark scrim over the bottom for the headline — so the subject must sit in the
+    // middle (safe from the crop) with a simpler lower area, not high in the frame.
+    'main subject centred in the frame with clear margin on all four edges so it survives cropping,',
+    'calmer, less busy lower portion where a dark gradient and headline will sit,',
     ratioHint ? ratioHint + ',' : '',
     'photorealistic, high quality, 8k resolution,',
     'no text or watermarks',
@@ -195,7 +196,8 @@ export function buildProductPosterPrompt(
     'fresh natural ingredients — garlic, aloe vera, cinnamon sticks, green herbs — arranged on a rustic wooden surface,',
     'a row of healthy farm animals (dairy cow, goat, sheep, hens and chicks) standing on green grass along the lower third,',
     'wholesome premium natural branding, deep forest-green and white palette, sunlit and fresh,',
-    'clean uncluttered upper area left open for a headline overlay,',
+    'subject centred with clear margin on all four edges so it survives cropping,',
+    'calmer, less busy lower portion where a dark gradient and headline will sit,',
     platformContext + ',',
     ratioHint ? ratioHint + ',' : '',
     'photorealistic, high quality, 8k resolution,',

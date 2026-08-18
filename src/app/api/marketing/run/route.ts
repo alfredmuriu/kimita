@@ -9,14 +9,11 @@ import { runResearch } from '@/lib/research'
 import { runStrategy } from '@/lib/strategy'
 import { generatePost } from '@/lib/generators'
 import { sendWeeklyDigest } from '@/lib/email'
+import { isDisabledContentType } from '@/lib/content-policy'
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
 export const maxDuration = 300
-
-// Content types that are disabled and must never be planned, saved or posted.
-// Filtered out of the plan upstream so the digest matches what's published.
-const DISABLED_CONTENT_TYPES = new Set(['article'])
 
 export async function POST(req: NextRequest) {
   const secret = req.headers.get('x-cron-secret')
@@ -68,9 +65,9 @@ export async function POST(req: NextRequest) {
 
         // Enforce the content-type policy centrally, BEFORE the plan is saved,
         // emailed and generated — so the digest (what you review) is identical to
-        // what actually gets posted. Articles are disabled on every platform.
+        // what actually gets posted. Articles and carousels are disabled on every platform.
         const before = strategy.posts.length
-        strategy.posts = strategy.posts.filter((p) => !DISABLED_CONTENT_TYPES.has(p.content_type))
+        strategy.posts = strategy.posts.filter((p) => !isDisabledContentType(p.content_type))
         if (strategy.posts.length !== before) {
           console.log(`[Agent] Cycle ${cycleId} — dropped ${before - strategy.posts.length} disabled-type post(s) from the plan`)
         }

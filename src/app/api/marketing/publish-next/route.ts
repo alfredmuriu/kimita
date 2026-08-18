@@ -11,6 +11,7 @@ import { publishToInstagram } from '@/lib/publishers/instagram'
 import { publishToLinkedIn } from '@/lib/publishers/linkedin'
 import { publishToTikTok } from '@/lib/publishers/tiktok'
 import { sendPublishNotification } from '@/lib/email'
+import { DISABLED_CONTENT_TYPES } from '@/lib/content-policy'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -52,12 +53,16 @@ export async function POST(req: NextRequest) {
   if (process.env.ZERNIO_API_KEY) {
     PUBLISHABLE_PLATFORMS.push('LinkedIn', 'Instagram')
   }
+  // Disabled content types (articles) are already filtered out of new plans, but
+  // older cycles can still hold pending article rows — skip past them here so
+  // they never publish and the next real planned post goes out instead.
   const { data: post } = await supabase
     .from('posts')
     .select('*')
     .eq('cycle_id', cycle.id)
     .eq('status', 'pending')
     .in('platform', PUBLISHABLE_PLATFORMS)
+    .not('content_type', 'in', `(${DISABLED_CONTENT_TYPES.join(',')})`)
     .order('created_at', { ascending: true })
     .limit(1)
     .maybeSingle()

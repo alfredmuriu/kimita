@@ -4,7 +4,7 @@ import { ResearchFindings } from '@/lib/research'
 
 export interface PostPlan {
   platform: 'Twitter' | 'Facebook' | 'Instagram' | 'LinkedIn' | 'TikTok'
-  content_type: 'photo_post' | 'article' | 'video_script' | 'carousel' | 'thread'
+  content_type: 'photo_post' | 'article' | 'video_script' | 'thread'
   topic: string
   pillar: string
   scheduled_day: string
@@ -101,7 +101,7 @@ Requirements:
 - Identify the single biggest content gap competitors are missing that Agrikima can own
 - Choose a weekly theme aligned to current market signals and Agrikima's brand
 - Plan 8-10 posts across Twitter, Facebook, Instagram, LinkedIn (skip TikTok for now)
-- Mix content types: photo_post, thread, carousel. Do NOT use the "article" content type on any platform.
+- Mix content types: photo_post and thread ONLY. Do NOT use the "article" or "carousel" content types on any platform — carousels are retired because every post carries a single image, not a slideshow.
 - Assign each post to a specific day (Monday through Sunday)
 - Choose platform-appropriate hashtags
 - Set a confidence score between 0 and 1 for this strategy

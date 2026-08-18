@@ -6,6 +6,7 @@ import { publishToInstagram } from '@/lib/publishers/instagram'
 import { publishToLinkedIn } from '@/lib/publishers/linkedin'
 import { publishToTikTok } from '@/lib/publishers/tiktok'
 import { sendPublishNotification } from '@/lib/email'
+import { isDisabledContentType } from '@/lib/content-policy'
 
 export async function POST(req: NextRequest) {
   const supabase = getSupabaseAdmin()
@@ -27,6 +28,13 @@ export async function POST(req: NextRequest) {
 
   if (post.status === 'published') {
     return NextResponse.json({ error: 'Post already published' }, { status: 400 })
+  }
+
+  if (isDisabledContentType(post.content_type)) {
+    return NextResponse.json(
+      { error: `Content type "${post.content_type}" is disabled and cannot be posted` },
+      { status: 400 }
+    )
   }
 
   const hashtags: string[] = Array.isArray(post.hashtags) ? post.hashtags : []

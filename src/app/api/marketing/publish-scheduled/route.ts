@@ -11,6 +11,7 @@ import { publishToInstagram } from '@/lib/publishers/instagram'
 import { publishToLinkedIn } from '@/lib/publishers/linkedin'
 import { publishToTikTok } from '@/lib/publishers/tiktok'
 import { sendPublishNotification } from '@/lib/email'
+import { DISABLED_CONTENT_TYPES, isDisabledContentType } from '@/lib/content-policy'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -39,6 +40,9 @@ export async function POST(req: NextRequest) {
     .eq('status', 'pending')
     .not('scheduled_for', 'is', null)
     .lte('scheduled_for', nowIso)
+    // Exclude disabled types in the query as well as in the loop below, so a
+    // backlog of disabled-type posts can't eat the 20-row limit and starve real posts.
+    .not('content_type', 'in', `(${DISABLED_CONTENT_TYPES.join(',')})`)
     .order('scheduled_for', { ascending: true })
     .limit(20)
 
@@ -54,6 +58,15 @@ export async function POST(req: NextRequest) {
   waitUntil(
     (async () => {
       for (const post of duePosts) {
+        // Disabled types (articles, carousels) — leave them pending (never
+        // published, never failed) so they sit out until the policy changes.
+        if (isDisabledContentType(post.content_type)) {
+          console.log(
+            `[publish-scheduled] Skipped post ${post.id} — content_type "${post.content_type}" is disabled`
+          )
+          continue
+        }
+
         if (!KNOWN_PLATFORMS.includes(post.platform)) {
           await supabase
             .from('posts')

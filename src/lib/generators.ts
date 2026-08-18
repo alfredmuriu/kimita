@@ -1,9 +1,9 @@
 import { generateContent } from '@/lib/claude'
 import { PostPlan } from '@/lib/strategy'
-import { generateImageBuffer, uploadImageBuffer, buildImagePrompt, buildProductPosterPrompt, getAspectRatio } from '@/lib/imagen'
+import { generateImageBuffer, uploadImageBuffer, buildImagePrompt, buildProductPosterPrompt } from '@/lib/imagen'
 import { generateImageAIStudio } from '@/lib/blog-imagen'
 import { generateBlogImageGemini } from '@/lib/gemini'
-import { composePoster } from '@/lib/poster'
+import { composePoster, posterPhotoAspect } from '@/lib/poster'
 import { findProductPoster } from '@/lib/product-posters'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
@@ -13,10 +13,13 @@ export interface GeneratedPost {
   copy: {
     main_text: string
     headline?: string
-    // Short poster copy for visual content types — a punchy headline (<=7 words)
-    // and one supporting line — rendered onto the branded poster image.
+    // Short poster copy for visual content types — a punchy headline (<=7 words),
+    // one supporting line, three benefit bullets and a badge phrase — all rendered
+    // onto the branded poster image by composePoster.
     poster_headline?: string
     poster_subtitle?: string
+    poster_bullets?: string[]
+    poster_badge?: string
     hashtags: string[]
   }
   image_url?: string
@@ -26,7 +29,7 @@ export interface GeneratedPost {
 
 // Content types that should have an image generated via Imagen.
 // Articles intentionally excluded — they reuse the matching blog post's featured_image.
-const VISUAL_TYPES = ['photo_post', 'carousel']
+const VISUAL_TYPES = ['photo_post']
 
 const SITE_URL = 'https://www.agrikima.co.ke'
 
@@ -159,8 +162,23 @@ Engagement craft (apply to every post):
 - Close with a clear CTA: ask a question, invite a comment, or point to next step
 `
 
+// Poster copy spec, shared by every generator that produces a poster image. The
+// designed poster (src/lib/poster.ts) has a headline zone, a benefit-bullet panel
+// with a pictogram strip, and a round badge — so the model has to fill all four
+// slots or the panel falls back to repeating the subtitle.
+const POSTER_COPY_SPEC = `- "poster_headline": max 7 words, bold and benefit-driven — the single message the poster must land.
+- "poster_subtitle": max 12 words, one supporting line.
+- "poster_bullets": EXACTLY 3 benefit phrases, 2-4 words each, max 30 characters each.
+  Title case, no full stops, no emojis. Each must name a distinct concrete benefit
+  or practice (e.g. "Proper Animal Nutrition", "Fewer Mastitis Cases", "Higher Daily
+  Yield") — never restate the headline and never a full sentence.
+- "poster_badge": 2-3 words for a round seal, Title Case, no punctuation
+  (e.g. "Quality Livestock", "Proven Results", "Vet Approved").`
+
 // ── Photo Post ────────────────────────────────────────────────────────────────
-async function generatePhotoPost(post: PostPlan): Promise<GeneratedPost> {
+// Exported so scripts/poster-demo.mjs can exercise the real copy generator
+// (prompt included) without going through generatePost's Supabase upload.
+export async function generatePhotoPost(post: PostPlan): Promise<GeneratedPost> {
   const platformGuidelines: Record<string, string> = {
     Twitter: 'Max 270 characters (leave room for hashtags). Punchy, one sharp idea. Hook in first 7 words. 1 emoji max in body.',
     Facebook: 'Warm and conversational. 80-180 words. Short paragraphs (1-2 sentences each), blank lines between. Open with a question or scene. End with a question for the audience. 1-2 emojis sprinkled naturally.',
@@ -179,8 +197,7 @@ Platform guidelines: ${platformGuidelines[post.platform] || ''}
 ${BRAND_VOICE}
 
 This post gets a branded poster image. Also write short poster copy:
-- "poster_headline": max 7 words, bold and benefit-driven — the single message the poster must land.
-- "poster_subtitle": max 12 words, one supporting line.
+${POSTER_COPY_SPEC}
 
 Return ONLY valid JSON, no other text:
 {
@@ -188,6 +205,8 @@ Return ONLY valid JSON, no other text:
   "headline": "short punchy headline (for LinkedIn/Facebook only, else empty string)",
   "poster_headline": "punchy poster headline (<=7 words)",
   "poster_subtitle": "one supporting line (<=12 words)",
+  "poster_bullets": ["benefit one", "benefit two", "benefit three"],
+  "poster_badge": "two-word seal",
   "hashtags": ["#tag1", "#tag2"]
 }`
 
@@ -284,45 +303,6 @@ Return ONLY valid JSON, no other text:
   }
 }
 
-// ── Carousel ──────────────────────────────────────────────────────────────────
-async function generateCarousel(post: PostPlan): Promise<GeneratedPost> {
-  const prompt = `Write a carousel post for ${post.platform}.
-
-Topic: ${post.topic}
-Content pillar: ${post.pillar}
-Brief: ${post.brief}
-Hashtags: ${post.hashtag_focus.join(', ')}
-
-The carousel is a branded poster image. Write:
-- "main_text": the post CAPTION only — a visual-first caption of 120-220 words.
-  First line must hook (it shows above the fold). Line breaks every 1-2 sentences.
-  2-4 emojis. End with a clear CTA and a question. Do NOT list or number slides,
-  and do NOT write "Slide 1", "Slide 2", etc. — this is the caption readers see,
-  not a slide script.
-- "poster_headline": max 7 words — the swipe-stopping cover message.
-- "poster_subtitle": max 12 words, one supporting line.
-${BRAND_VOICE}
-
-Return ONLY valid JSON, no other text:
-{
-  "main_text": "the full caption (no slide numbering)",
-  "headline": "carousel series title",
-  "poster_headline": "cover poster headline (<=7 words)",
-  "poster_subtitle": "one supporting line (<=12 words)",
-  "hashtags": ["#tag1", "#tag2"]
-}`
-
-  const raw = await generateContent(prompt, 2048)
-  const parsed = safeParseJSON(raw)
-
-  return {
-    platform: post.platform,
-    content_type: 'carousel',
-    copy: parsed,
-    status: 'pending',
-  }
-}
-
 // ── Thread ────────────────────────────────────────────────────────────────────
 async function generateThread(post: PostPlan): Promise<GeneratedPost> {
   const prompt = `Write a Twitter/LinkedIn thread for ${post.platform}.
@@ -360,7 +340,15 @@ Return ONLY valid JSON, no other text:
 }
 
 // ── Safe JSON parser ──────────────────────────────────────────────────────────
-function safeParseJSON(raw: string): { main_text: string; headline: string; poster_headline?: string; poster_subtitle?: string; hashtags: string[] } {
+function safeParseJSON(raw: string): {
+  main_text: string
+  headline: string
+  poster_headline?: string
+  poster_subtitle?: string
+  poster_bullets?: string[]
+  poster_badge?: string
+  hashtags: string[]
+} {
   try {
     let cleaned = raw.trim()
     if (cleaned.startsWith('```')) {
@@ -383,6 +371,36 @@ function safeParseJSON(raw: string): { main_text: string; headline: string; post
   }
 }
 
+// ── Poster bullet normalisation ───────────────────────────────────────────────
+// Accepts whatever shape the model returned and yields at most 3 short, clean
+// phrases. Returns undefined when nothing usable survives, which makes
+// composePoster fall back to its subtitle panel rather than render empty rows.
+function normalisePosterBullets(raw: unknown): string[] | undefined {
+  const list = Array.isArray(raw)
+    ? raw
+    : typeof raw === 'string'
+    ? raw.split(/\s*[\n;•|]\s*/)
+    : []
+
+  const cleaned = list
+    .filter((b): b is string => typeof b === 'string')
+    .map((b) =>
+      b
+        .replace(/^[\s\-–—•*\d.)]+/, '') // strip bullet/number prefixes
+        .replace(/[.\s]+$/, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+    )
+    // Trim to a phrase rather than reject: the panel has room for ~4 words, and a
+    // slightly wordy bullet is still a usable bullet once its tail is dropped.
+    .map((b) => b.split(' ').slice(0, 4).join(' '))
+    // Drop what is still too long to fit one panel line, and anything too short to read.
+    .filter((b) => b.length >= 3 && b.length <= 32)
+    .slice(0, 3)
+
+  return cleaned.length ? cleaned : undefined
+}
+
 // ── Main generator — routes to the right generator by content type ─────────────
 export async function generatePost(post: PostPlan, cycleId?: number): Promise<GeneratedPost> {
   console.log(`[Generator] Generating ${post.content_type} for ${post.platform} — "${post.topic}"`)
@@ -399,9 +417,6 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
     case 'video_script':
       generated = await generateVideoScript(post)
       break
-    case 'carousel':
-      generated = await generateCarousel(post)
-      break
     case 'thread':
       generated = await generateThread(post)
       break
@@ -413,7 +428,7 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
   // Flow: generate the AI background photo, compose a branded Agrikima poster
   // (headline + subtitle + logo) over it, then upload. Falls back to the plain
   // photo if poster composition fails so a post always has an image.
-  if (VISUAL_TYPES.includes(post.content_type) && !generated.image_url) {
+  if (VISUAL_TYPES.includes(generated.content_type) && !generated.image_url) {
     // If this post is about a product with a professionally designed poster,
     // attach that poster verbatim and skip AI generation entirely.
     const productText = [post.topic, post.brief, generated.copy.poster_headline].filter(Boolean).join(' ')
@@ -424,9 +439,11 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
     }
   }
 
-  if (VISUAL_TYPES.includes(post.content_type) && !generated.image_url) {
+  if (VISUAL_TYPES.includes(generated.content_type) && !generated.image_url) {
     console.log(`[Generator] Generating poster for ${post.platform} — "${post.topic}"`)
-    const aspectRatio = getAspectRatio(post.platform)
+    // The AI image fills the poster's photo band, not the whole canvas, so ask for
+    // the band's ratio rather than the canvas ratio.
+    const aspectRatio = posterPhotoAspect(post.platform)
     // Product posts (without a pre-made poster) use a prompt that echoes the
     // branded Agrikima product posters; everything else uses the general prompt.
     const isProduct = post.pillar === 'Product'
@@ -444,12 +461,17 @@ export async function generatePost(post: PostPlan, cycleId?: number): Promise<Ge
     if (photo) {
       const headline = (generated.copy.poster_headline || generated.copy.headline || post.topic).trim()
       const subtitle = (generated.copy.poster_subtitle || '').trim() || undefined
+      // The model occasionally returns bullets as a string, or as full sentences —
+      // normalise to short phrases so the panel stays on one line each.
+      const bullets = normalisePosterBullets(generated.copy.poster_bullets)
       let imageUrl: string | null = null
       try {
         const poster = await composePoster({
           photo,
           headline,
           subtitle,
+          bullets,
+          badge: (generated.copy.poster_badge || '').trim() || undefined,
           eyebrow: post.pillar,
           platform: post.platform,
         })
