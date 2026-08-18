@@ -12,11 +12,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { sendEmail } from '@/lib/email-client'
+import { BOT_ID } from '@/lib/whatsapp-heartbeat'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
-
-export const BOT_ID = 'whatsapp-bot'
 
 export async function POST(req: NextRequest) {
   const secret = req.headers.get('x-cron-secret')
