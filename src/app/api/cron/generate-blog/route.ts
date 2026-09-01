@@ -5,6 +5,7 @@ import { generateBlogPost } from '@/lib/openai';
 import { generateBlogImageAIStudio } from '@/lib/blog-imagen';
 import { embedAndStoreArticle } from '@/lib/embeddings';
 import { compressToWebp } from '@/lib/image-compress';
+import { sendEmail } from '@/lib/email-client';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -12,6 +13,39 @@ export const fetchCache = 'force-no-store'; // Prevent Next.js from caching Supa
 export const maxDuration = 120;
 
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop';
+
+// This route answers 200 the moment it hands off to waitUntil(), so cron-job.org
+// reports success even when the background work dies. Without this alert a broken
+// generator is invisible -- exactly how a retired OpenAI model stopped publishing
+// for 13 days with every cron run still showing green.
+async function alertFailure(topic: string, priority: number, err: unknown): Promise<void> {
+  // Dedicated recipient list, deliberately NOT the shared AGENT_NOTIFY_EMAILS —
+  // that var also drives WhatsApp escalations and marketing digests, and adding an
+  // address there must not silently widen who gets blog alerts. Defaults to the
+  // single owner address so this works with no Vercel env var set at all.
+  const to = (process.env.BLOG_ALERT_EMAILS || 'alfred@agrikima.co.ke')
+    .split(',')
+    .map((e) => e.trim())
+    .filter(Boolean);
+  if (!to.length) return;
+
+  const detail = err instanceof Error ? `${err.message}
+
+${err.stack || ''}` : String(err);
+  await sendEmail({
+    to,
+    subject: `⚠️ Blog generation failed - "${topic}"`,
+    html: `
+      <p>The daily blog generator failed <strong>after</strong> returning its 200 to cron,
+      so the cron dashboard will still show this run as successful.</p>
+      <p><strong>Topic:</strong> ${topic}<br/><strong>Priority:</strong> ${priority}</p>
+      <p>No post was published. The same topic will be retried on the next run, so
+      publishing resumes on its own once the underlying cause is fixed.</p>
+      <pre style="white-space:pre-wrap;font-size:12px">${detail}</pre>
+    `,
+    fromName: 'Agrikima Blog Generator',
+  }).catch((e) => console.error('[generate-blog] alert email failed:', e));
+}
 
 // Generate image with Gemini 2.5 Flash Image (free tier), upload to Supabase Storage, return permanent URL
 async function generateAndUploadImage(
@@ -202,12 +236,15 @@ export async function GET(request: NextRequest) {
             }
 
             console.error('Failed to save blog post:', error.message);
+            await alertFailure(topic.topic, topic.priority, new Error(`Insert failed: ${error.message}`));
             return;
           }
 
           console.error('Failed to save blog post after 3 slug attempts');
+          await alertFailure(topic.topic, topic.priority, new Error('Insert failed after 3 slug attempts'));
         } catch (err) {
           console.error('Background blog generation failed:', err);
+          await alertFailure(topic.topic, topic.priority, err);
         }
       })()
     );

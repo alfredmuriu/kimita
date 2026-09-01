@@ -4,6 +4,10 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+// Model used for the web-grounded research step. Overridable via env so a future
+// deprecation can be worked around without a deploy.
+const RESEARCH_MODEL = process.env.BLOG_RESEARCH_MODEL || 'gpt-4.1';
+
 export interface ArticleSource {
   title: string;
   url: string;
@@ -43,19 +47,18 @@ Return ONLY valid JSON of this shape (no prose, no markdown fences):
   ]
 }`;
 
-  const response = await openai.chat.completions.create({
-    model: 'gpt-4o-search-preview',
-    messages: [
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ],
-    max_tokens: 1500,
+  // Web grounding runs through the Responses API's built-in `web_search` tool.
+  // The old `gpt-4o-search-preview` model was retired by OpenAI in Aug 2026 and
+  // now 404s; `web_search` on a current model is its supported replacement.
+  const response = await openai.responses.create({
+    model: RESEARCH_MODEL,
+    input: prompt,
+    tools: [{ type: 'web_search' }],
+    max_output_tokens: 2000,
   });
 
-  const raw = response.choices[0]?.message?.content || '';
-  // The search-preview model sometimes wraps JSON in prose; extract the JSON object.
+  const raw = response.output_text || '';
+  // The model sometimes wraps JSON in prose or a markdown fence; extract the object.
   const match = raw.match(/\{[\s\S]*\}/);
   if (!match) return [];
 
@@ -95,7 +98,16 @@ export async function generateBlogPost(
   }
 
   // Step A: gather public web sources for grounding.
-  const sources = await researchSources(topic, primaryKeyword, secondaryKeywords);
+  // Research is best-effort ONLY. The prompt below already handles an empty list
+  // by asking for a careful general overview, so a search outage must never stop
+  // the article from being written -- an unguarded throw here silently halted all
+  // publishing for two weeks when gpt-4o-search-preview was retired.
+  let sources: ArticleSource[] = [];
+  try {
+    sources = await researchSources(topic, primaryKeyword, secondaryKeywords);
+  } catch (err) {
+    console.error('Source research failed, publishing without sources:', err);
+  }
 
   const sourcesBlock = sources.length
     ? sources
@@ -184,29 +196,6 @@ Return ONLY valid JSON, no other text.`;
     featuredImageDescription: parsed.featuredImageDescription,
     sources,
   };
-}
-
-// Generate a blog featured image using DALL·E 3
-export async function generateBlogImage(
-  topic: string,
-  keywords: string[]
-): Promise<string> {
-  const prompt = `A photorealistic, documentary-style photograph related to the agricultural topic: "${topic}". Shot on a Canon EOS R5 with an 85mm f/1.4 lens, shallow depth of field. Show the relevant farm animal (e.g. chickens if poultry, dairy cows if dairy, pigs if swine, goats if mentioned) in a natural farm environment with real dirt, grass, and natural imperfections. Golden hour natural lighting, slight film grain, realistic skin/feather/fur textures. The style should look like a National Geographic documentary photo — NOT an illustration, NOT AI-generated looking, NOT overly clean or perfect. No text overlays, no watermarks, no logos.`;
-
-  const response = await openai.images.generate({
-    model: 'dall-e-3',
-    prompt,
-    n: 1,
-    size: '1792x1024',
-    quality: 'standard',
-  });
-
-  const imageUrl = response.data[0]?.url;
-  if (!imageUrl) {
-    throw new Error('No image generated from DALL·E');
-  }
-
-  return imageUrl;
 }
 
 export default openai;
