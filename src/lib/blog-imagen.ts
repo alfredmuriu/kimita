@@ -48,38 +48,46 @@ export async function generateImageAIStudio(prompt: string): Promise<Buffer | nu
       },
     })
 
-    // Retry transient throttling (429) and server errors (5xx) with backoff.
-    // A 429 can be per-minute rate limiting (retry helps) OR a per-day quota /
-    // no-billing cap (retry won't help — the fix is billing on the key's project).
+    // Retry transient throttling (429), server errors (5xx), AND 200 responses
+    // that carry no image part. The model regularly answers finishReason STOP
+    // with only a text part ("here is the image...") and no inlineData — ~1 in 3
+    // for kill/death-adjacent titles ("culling", "disposal of dead birds") — and
+    // treating that as terminal is what put the default chicken photo on pig
+    // articles. A 429 can also be a per-day quota / no-billing cap where retry
+    // won't help — the fix there is billing on the key's project.
     const MAX_ATTEMPTS = 3
-    let res!: Response
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-      res = await fetch(endpoint, {
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'x-goog-api-key': apiKey, 'Content-Type': 'application/json' },
         body,
       })
-      if (res.ok) break
-      const transient = res.status === 429 || res.status >= 500
-      if (transient && attempt < MAX_ATTEMPTS) {
-        const backoffMs = 2000 * attempt
-        console.warn(`[AIStudioImage] ${res.status} (attempt ${attempt}/${MAX_ATTEMPTS}) — retrying in ${backoffMs}ms`)
-        await new Promise((r) => setTimeout(r, backoffMs))
+
+      if (!res.ok) {
+        const transient = res.status === 429 || res.status >= 500
+        if (transient && attempt < MAX_ATTEMPTS) {
+          const backoffMs = 2000 * attempt
+          console.warn(`[AIStudioImage] ${res.status} (attempt ${attempt}/${MAX_ATTEMPTS}) — retrying in ${backoffMs}ms`)
+          await new Promise((r) => setTimeout(r, backoffMs))
+          continue
+        }
+        console.error(`[AIStudioImage] ${res.status}: ${(await res.text()).slice(0, 300)}`)
+        return null
+      }
+
+      const data = await res.json()
+      const parts: Array<{ inlineData?: { data?: string; mimeType?: string } }> =
+        data?.candidates?.[0]?.content?.parts ?? []
+      const base64Image = parts.find((p) => p?.inlineData?.data)?.inlineData?.data
+      if (base64Image) return Buffer.from(base64Image, 'base64')
+
+      if (attempt < MAX_ATTEMPTS) {
+        console.warn(`[AIStudioImage] 200 but no inlineData (attempt ${attempt}/${MAX_ATTEMPTS}) — retrying`)
         continue
       }
-      console.error(`[AIStudioImage] ${res.status}: ${(await res.text()).slice(0, 300)}`)
-      return null
-    }
-
-    const data = await res.json()
-    const parts: Array<{ inlineData?: { data?: string; mimeType?: string } }> =
-      data?.candidates?.[0]?.content?.parts ?? []
-    const base64Image = parts.find((p) => p?.inlineData?.data)?.inlineData?.data
-    if (!base64Image) {
       console.error('[AIStudioImage] no inlineData; response: ' + JSON.stringify(data).slice(0, 300))
-      return null
     }
-    return Buffer.from(base64Image, 'base64')
+    return null
   } catch (err) {
     console.error('[AIStudioImage] failed:', err)
     return null
