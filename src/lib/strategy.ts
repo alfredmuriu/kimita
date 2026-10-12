@@ -1,6 +1,7 @@
 import { generateContent } from '@/lib/claude'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { ResearchFindings } from '@/lib/research'
+import { CONTENT_GUARDRAILS } from '@/lib/content-policy'
 
 export interface PostPlan {
   platform: 'Twitter' | 'Facebook' | 'Instagram' | 'LinkedIn' | 'TikTok'
@@ -94,6 +95,8 @@ ${JSON.stringify(research.trendingHashtags)}
 PREVIOUS CYCLE FEEDBACK (last 5 cycles):
 ${feedback}
 
+${CONTENT_GUARDRAILS}
+
 YOUR TASK:
 Based on all the above, produce a weekly content plan for Agrikima.
 
@@ -117,7 +120,7 @@ Return ONLY valid JSON in this exact format, no other text:
       "platform": "LinkedIn",
       "content_type": "photo_post",
       "topic": "string",
-      "pillar": "string — Education / Product / Community / News / Brand",
+      "pillar": "string — Education / Product / Awareness / News / Brand",
       "scheduled_day": "Monday",
       "hashtag_focus": ["#tag1", "#tag2", "#tag3"],
       "brief": "string — 2-3 sentences describing what this post should say and why"

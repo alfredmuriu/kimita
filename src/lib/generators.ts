@@ -6,6 +6,7 @@ import { generateBlogImageGemini } from '@/lib/gemini'
 import { composePoster, posterPhotoAspect } from '@/lib/poster'
 import { findProductPoster } from '@/lib/product-posters'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { CONTENT_GUARDRAILS } from '@/lib/content-policy'
 
 export interface GeneratedPost {
   platform: string
@@ -155,11 +156,13 @@ Brand voice guidelines:
 - Key products: Advice (viral protection), Biogar (gut health), Agritonic, Agrivitam
 
 Engagement craft (apply to every post):
-- Open with a scroll-stopper: a surprising stat, bold claim, vivid scene, or pointed question
+- Open with a scroll-stopper: a striking (but true) fact, bold claim, vivid scene, or pointed question
 - Use short lines and line breaks — never a wall of text
 - Use 1-3 relevant emojis to add warmth and break up text (🌱🐄🐓🥚🌾💧📈) — never gimmicky
 - Speak directly to "you" (the farmer)
 - Close with a clear CTA: ask a question, invite a comment, or point to next step
+
+${CONTENT_GUARDRAILS}
 `
 
 // Poster copy spec, shared by every generator that produces a poster image. The

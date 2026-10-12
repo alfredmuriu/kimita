@@ -136,6 +136,7 @@ export function buildImagePrompt(
     Education: 'educational infographic style, clear and informative',
     Product: 'product showcase, clean background, professional lighting',
     Community: 'community of farmers, warm and welcoming atmosphere',
+    Awareness: 'healthy livestock in a clean, well-kept farm setting, calm and reassuring',
     News: 'journalistic style, documentary feel',
     Brand: 'brand lifestyle, aspirational and professional',
   }

@@ -9,7 +9,7 @@ import { runResearch } from '@/lib/research'
 import { runStrategy } from '@/lib/strategy'
 import { generatePost } from '@/lib/generators'
 import { sendWeeklyDigest } from '@/lib/email'
-import { isDisabledContentType } from '@/lib/content-policy'
+import { isDisabledContentType, findUndeliverableContent } from '@/lib/content-policy'
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
@@ -72,6 +72,15 @@ export async function POST(req: NextRequest) {
           console.log(`[Agent] Cycle ${cycleId} — dropped ${before - strategy.posts.length} disabled-type post(s) from the plan`)
         }
 
+        // Same idea for content we can't deliver (webinars, testimonials, named
+        // farmers, giveaways) — the prompt forbids them, this catches slips so the
+        // digest never promises them either.
+        strategy.posts = strategy.posts.filter((p) => {
+          const violation = findUndeliverableContent(`${p.topic} ${p.brief}`)
+          if (violation) console.log(`[Agent] Cycle ${cycleId} — dropped "${p.topic}" from the plan (${violation})`)
+          return !violation
+        })
+
         await supabase
           .from('cycles')
           .update({
@@ -109,6 +118,14 @@ export async function POST(req: NextRequest) {
 
         for (const postPlan of strategy.posts) {
           const generated = await generatePost(postPlan, cycleId)
+
+          // The writer can still drift into a made-up farmer or "join our webinar"
+          // even from a clean brief — skip saving those rather than queue them.
+          const violation = findUndeliverableContent(generated.copy.main_text)
+          if (violation) {
+            console.log(`[Agent] Cycle ${cycleId} — discarded generated "${postPlan.topic}" (${violation})`)
+            continue
+          }
 
           const { data: savedPost } = await supabase
             .from('posts')

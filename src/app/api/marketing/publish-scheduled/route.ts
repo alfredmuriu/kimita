@@ -11,7 +11,7 @@ import { publishToInstagram } from '@/lib/publishers/instagram'
 import { publishToLinkedIn } from '@/lib/publishers/linkedin'
 import { publishToTikTok } from '@/lib/publishers/tiktok'
 import { sendPublishNotification } from '@/lib/email'
-import { DISABLED_CONTENT_TYPES, isDisabledContentType } from '@/lib/content-policy'
+import { DISABLED_CONTENT_TYPES, isDisabledContentType, findUndeliverableContent } from '@/lib/content-policy'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -64,6 +64,18 @@ export async function POST(req: NextRequest) {
           console.log(
             `[publish-scheduled] Skipped post ${post.id} — content_type "${post.content_type}" is disabled`
           )
+          continue
+        }
+
+        // Content we can't deliver (webinars, testimonials, named farmers…) —
+        // mark failed, not pending, so it can't block the queue.
+        const violation = findUndeliverableContent(post.content)
+        if (violation) {
+          console.log(`[publish-scheduled] Blocked post ${post.id} — content policy (${violation})`)
+          await supabase
+            .from('posts')
+            .update({ status: 'failed', error_message: `Blocked by content policy: ${violation}` })
+            .eq('id', post.id)
           continue
         }
 
