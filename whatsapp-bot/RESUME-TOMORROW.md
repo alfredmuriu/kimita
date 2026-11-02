@@ -35,7 +35,7 @@ untested link in the chain is the WhatsApp session itself.
 Use a **disposable spare number**. Baileys is an unofficial WhatsApp client and
 breaks WhatsApp's terms of service — the number can be banned without warning.
 
-- ❌ **Never** the main business line **+254 111 410 639**.
+- ❌ **Never** the main business line **+254 758 396 854**.
 - ❌ **Not** +254 762 122 122 either, unless you first delete the Twilio sender
   and de-register it from the Cloud API. A number registered to the WhatsApp
   Business Platform **cannot** be used in the normal WhatsApp app, and Linked

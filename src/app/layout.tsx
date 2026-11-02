@@ -25,10 +25,10 @@ const organizationSchema = {
   url: 'https://www.agrikima.co.ke',
   logo: 'https://www.agrikima.co.ke/favicon.png',
   description: "Africa's trusted provider of natural poultry health solutions, livestock supplements, and veterinary products.",
-  telephone: '+254111410639',
+  telephone: '+254758396854',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+254111410639',
+    telephone: '+254758396854',
     contactType: 'sales',
     areaServed: 'KE',
   },

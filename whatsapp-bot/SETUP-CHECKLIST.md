@@ -16,7 +16,7 @@ continuing.
   scanning the "Linked Devices" QR (like WhatsApp Web). Customers chat that
   number normally; the bot replies from it.
 - **Spare number only — it can be banned.** open-wa automates a normal account,
-  which breaks WhatsApp's terms. NEVER use the main line +254 111 410 639. This
+  which breaks WhatsApp's terms. NEVER use the main line +254 758 396 854. This
   is a temporary bridge until the official Meta API is unblocked.
 - The spare number **can't also be logged into the WhatsApp app on another phone**
   at the same time as the bot (Linked Devices is fine; a second full login isn't).

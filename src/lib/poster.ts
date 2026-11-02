@@ -26,7 +26,7 @@ const BRAND = {
   creamLine: '#E2D9C2',
   ink: '#1B2A20',
   url: 'www.agrikima.co.ke',
-  phone: '+254 111 410 639',
+  phone: '+254 758 396 854',
   tagline: 'Healthy livestock. Better yields. Stronger farms.',
 }
 

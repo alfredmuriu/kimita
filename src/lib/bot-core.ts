@@ -31,7 +31,7 @@ export interface BotReply {
 }
 
 const ORDER_EMAIL = 'info@agrikima.co.ke'
-const CTA_PHONE = '+254 111 410 639'
+const CTA_PHONE = '+254 758 396 854'
 
 // Fixed out-of-scope redirect replies. The model is instructed to use these
 // VERBATIM so we can deterministically detect out-of-scope turns in stored
@@ -141,7 +141,7 @@ About Agrikima
 - Organic animal health + crop management. Tagline: "Making Growth Happen".
 - Markets: Africa.
 - Mission: natural alternatives to antibiotics, reducing antimicrobial resistance (AMR).
-- Contacts: info@agrikima.co.ke · +254 111 410 639
+- Contacts: info@agrikima.co.ke · +254 758 396 854
 - Website: ${site}  (blog + Agrikima Academy videos)
 
 Product catalog (name, URL path, purpose):

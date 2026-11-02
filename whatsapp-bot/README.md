@@ -17,7 +17,7 @@ improving on its own. This is just the bridge.
 - **Runs on a VPS, not Vercel.** open-wa keeps a live headless-browser WhatsApp
   Web session running 24/7. Serverless can't do that. Budget ~$5/mo.
 - **Spare number only.** open-wa violates WhatsApp's ToS; the number it runs on
-  can be banned. Never use the main business line (+254 111 410 639).
+  can be banned. Never use the main business line (+254 758 396 854).
 - **Temporary bridge.** The real fix is clearing the Meta business-verification
   restriction and using the official WhatsApp Business API. Retire this once that
   lands.
