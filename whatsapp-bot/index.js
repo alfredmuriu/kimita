@@ -26,6 +26,8 @@ import {
   useMultiFileAuthState,
   DisconnectReason,
   fetchLatestBaileysVersion,
+  Browsers,
+  isLidUser,
 } from '@whiskeysockets/baileys'
 import qrcode from 'qrcode-terminal'
 import P from 'pino'
@@ -143,8 +145,9 @@ async function connect() {
     // We render the QR ourselves below for a reliable terminal display.
     printQRInTerminal: false,
     logger: P({ level: 'silent' }),
-    // Identifies the linked-device entry shown on the phone.
-    browser: ['Agrikima Bot', 'Chrome', '1.0.0'],
+    // A standard browser identity — WhatsApp rejects the link ("Couldn't link
+    // device") for custom names it doesn't recognise.
+    browser: Browsers.ubuntu('Chrome'),
   })
 
   sock.ev.on('creds.update', saveCreds)
@@ -186,12 +189,16 @@ async function connect() {
       const jid = message.key?.remoteJid
       // Skip our own messages, groups, and status broadcasts.
       if (!jid || message.key?.fromMe) continue
-      if (jid.endsWith('@g.us') || jid === 'status@broadcast') continue
+      if (jid.endsWith('@g.us') || jid.endsWith('@newsletter') || jid === 'status@broadcast') continue
 
       const body = extractText(message).trim()
       if (!body) continue
 
-      const senderDigits = jid.split('@')[0].replace(/\D/g, '')
+      // WhatsApp may address chats by a privacy ID (@lid) instead of the phone
+      // number; the real number then arrives in remoteJidAlt. Conversation
+      // history and escalations are keyed by phone, so prefer it.
+      const phoneJid = isLidUser(jid) ? message.key.remoteJidAlt || jid : jid
+      const senderDigits = phoneJid.split('@')[0].replace(/\D/g, '')
       if (!isAllowed(senderDigits)) {
         console.log(`[bot] Ignoring message from non-allowlisted ${jid}`)
         continue

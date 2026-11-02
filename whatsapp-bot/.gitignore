@@ -5,3 +5,5 @@ _IGNORE_*/
 .wwebjs_auth/
 session*.data.json
 *.data.json
+# Baileys session keys (anyone holding these controls the linked WhatsApp) — never commit
+auth_info/
