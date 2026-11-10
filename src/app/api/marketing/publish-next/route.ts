@@ -11,7 +11,7 @@ import { publishToInstagram } from '@/lib/publishers/instagram'
 import { publishToLinkedIn } from '@/lib/publishers/linkedin'
 import { publishToTikTok } from '@/lib/publishers/tiktok'
 import { sendPublishNotification } from '@/lib/email'
-import { DISABLED_CONTENT_TYPES, findUndeliverableContent } from '@/lib/content-policy'
+import { DISABLED_CONTENT_TYPES, findUndeliverableContent, linksToBlogArticle } from '@/lib/content-policy'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -77,7 +77,9 @@ export async function POST(req: NextRequest) {
 
   // Content we can't deliver (webinars, testimonials, named farmers…) — mark
   // failed so the next run picks the following post instead of retrying this one.
-  const violation = findUndeliverableContent(post.content)
+  const violation = linksToBlogArticle(post.content)
+    ? 'blog article share'
+    : findUndeliverableContent(post.content)
   if (violation) {
     await supabase
       .from('posts')

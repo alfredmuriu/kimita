@@ -11,7 +11,12 @@ import { publishToInstagram } from '@/lib/publishers/instagram'
 import { publishToLinkedIn } from '@/lib/publishers/linkedin'
 import { publishToTikTok } from '@/lib/publishers/tiktok'
 import { sendPublishNotification } from '@/lib/email'
-import { DISABLED_CONTENT_TYPES, isDisabledContentType, findUndeliverableContent } from '@/lib/content-policy'
+import {
+  DISABLED_CONTENT_TYPES,
+  isDisabledContentType,
+  findUndeliverableContent,
+  linksToBlogArticle,
+} from '@/lib/content-policy'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -64,6 +69,16 @@ export async function POST(req: NextRequest) {
           console.log(
             `[publish-scheduled] Skipped post ${post.id} — content_type "${post.content_type}" is disabled`
           )
+          continue
+        }
+
+        // Blog-article shares aren't part of the content plan — never publish them.
+        if (linksToBlogArticle(post.content)) {
+          console.log(`[publish-scheduled] Blocked post ${post.id} — shares a blog article`)
+          await supabase
+            .from('posts')
+            .update({ status: 'failed', error_message: 'Blocked by content policy: blog article share' })
+            .eq('id', post.id)
           continue
         }
 

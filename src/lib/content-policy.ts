@@ -49,6 +49,16 @@ const UNDELIVERABLE_PATTERNS: Array<[label: string, re: RegExp]> = [
   ['giveaway/offer', /\b(giveaways?|contests?|promo codes?|free samples?|\d+% off|discount)\b/i],
 ]
 
+// ── Blog articles stay off social ────────────────────────────────────────────
+// Social pages carry only the weekly content plan. A one-off script once queued
+// a "title + link" post for every blog article (~350 rows, May–Nov 2026); this
+// check stops any post that shares a website article link from going out.
+const BLOG_ARTICLE_LINK = /agrikima\.co\.ke\/(articles|agrikima-academy)\/[\w-]+/i
+
+export function linksToBlogArticle(text: string | null | undefined): boolean {
+  return !!text && BLOG_ARTICLE_LINK.test(text)
+}
+
 export function findUndeliverableContent(text: string | null | undefined): string | null {
   if (!text) return null
   for (const [label, re] of UNDELIVERABLE_PATTERNS) {
