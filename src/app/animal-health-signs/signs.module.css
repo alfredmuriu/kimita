@@ -198,6 +198,37 @@
 .heroLight .heroFacts { border-top-color: #eeeeee; }
 .heroLight .heroFacts p { color: #333333; }
 
+/* "Key sign" bullets in the condition hero — same dash marker as the article bullets */
+ul.factList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.factList li {
+  position: relative;
+  padding: 0 0 0 22px;
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333333;
+}
+
+ul.factList li:first-child {
+  font-weight: 600;
+  color: #111111;
+}
+
+ul.factList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .85em;
+  width: 10px;
+  height: 1px;
+  background: var(--color-1);
+}
+
 /* ---------- healthy baseline block under the animal-page intro ---------- */
 .healthyFeature {
   background: #ffffff;

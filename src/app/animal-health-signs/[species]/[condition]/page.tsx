@@ -114,9 +114,11 @@ export default function ConditionPage({ params }: Params) {
           <div className={styles.heroFacts}>
             <div>
               <span className={styles.pretitle}>Key sign</span>
-              <p>
-                {c.headline} — {c.look}
-              </p>
+              <ul className={styles.factList}>
+                {[c.headline, ...c.look.split(/(?<=[.!?])\s+/)].filter(Boolean).map((t, i) => (
+                  <li key={i}>{t}</li>
+                ))}
+              </ul>
             </div>
             <div className={c.report ? styles.factReport : undefined}>
               <span className={styles.pretitle}>{c.report ? 'Report it' : 'First step'}</span>
