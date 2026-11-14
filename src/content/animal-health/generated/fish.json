@@ -1,0 +1,1076 @@
+{
+  "healthy": {
+    "card": {
+      "headline": "Active fish rushing to feed",
+      "look": "Healthy tilapia swim together in calm groups and rush to the surface when feed is thrown. Healthy catfish feed hard and fast. Colours are bright, fins are whole and the body is smooth with no spots or sores.",
+      "action": "Watch your fish every day at feeding time and test the water regularly, so you notice any change from normal early."
+    },
+    "detail": {
+      "aka": [
+        "Healthy pond fish",
+        "Samaki wenye afya",
+        "Normal tilapia and catfish behaviour",
+        "Fish health baseline"
+      ],
+      "summary": "This page describes what healthy Nile tilapia and African catfish (kambale) look like, and the pond water conditions they need to stay that way. Fish cannot tell you when they feel unwell, and many fish problems start with poor water rather than germs. If you know clearly what normal looks like in your pond, you will spot trouble days earlier. That gives you time to act before you lose fish, feed and money.",
+      "cause": "Fish health depends mostly on the water they live in. Unlike cattle or chickens, fish breathe, eat, drink and get rid of waste all in the same water. So water quality is the main thing that keeps them healthy. Fish need enough dissolved oxygen, which is oxygen mixed into the water that they take in through their gills. They also need a steady temperature, a pH (a measure of how acidic or alkaline the water is) in a safe range, and low ammonia. Ammonia is a poisonous waste that fish give off through their gills and that also comes from rotting leftover feed and manure. Useful general targets from FAO and Kenyan extension guidance are these. Water temperature should be about 25–30°C for both tilapia and catfish; below about 20°C they eat little and grow slowly. Dissolved oxygen should ideally stay above 5 mg/L; tilapia get stressed below about 3 mg/L. Catfish cope better with low oxygen because they can gulp air, but they still grow best in good water. pH should be about 6.5–8.5. Ammonia should be as close to zero as possible; the toxic form (un-ionised ammonia) should stay below about 0.05 mg/L. Ammonia becomes more poisonous when water is warm and pH is high. Pond water should be light green, from healthy algae (tiny water plants), so that a white disc or your palm disappears at roughly 30–40 cm depth. Next comes good nutrition. Fish need a balanced feed with the right protein for their size, fed in amounts they finish quickly. They need fair stocking density, meaning not too many fish for the pond size. Finally, stress must be kept low. Stress from rough handling, crowding, sudden water changes or poor water weakens the immune system and the protective slime on the skin. That lets bacteria, parasites and fungi take hold.",
+      "spread": [
+        "Most fish health problems are triggered by poor water quality: low oxygen, high ammonia, sudden temperature changes or pH swings stress fish before any germ is involved.",
+        "Oxygen is lowest just before dawn, because algae use up oxygen at night. It is worst after several cloudy days, during very hot calm weather, or when a thick algal bloom suddenly dies.",
+        "Overfeeding is a common trigger. Uneaten feed rots at the bottom, uses up oxygen and releases ammonia.",
+        "New fingerlings from uncertified sources can bring parasites and bacteria into a clean pond.",
+        "Heavy rain can wash soil, manure, pesticides or wild fish into ponds, causing muddy water and pH changes. This is most common in the long rains (March to May) and short rains (October to December).",
+        "Rough netting, sorting and transport damage the protective slime and scales, opening the way for infection.",
+        "Birds, frogs, wild fish and shared nets or buckets can carry parasites and germs between ponds."
+      ],
+      "atRisk": "Fingerlings and newly stocked fish are the most fragile, especially in the first two weeks after transport. Crowded ponds and ponds that are fed heavily are at greater risk of oxygen crashes and ammonia build-up. Tilapia are more sensitive to low oxygen than catfish. Catfish in crowded tanks tend to bite each other and develop skin wounds. In the hot dry season (roughly January to March) warm, still water holds less oxygen and blooms can crash. During the rains, runoff and muddy water are bigger risks. In highland areas such as Nyeri, Kiambu and Meru, the cold season (June to August) brings water temperatures that slow feeding and weaken fish. Liner ponds and tanks without aeration, recirculating systems where a pump can fail, and ponds fertilised with too much manure need extra care.",
+      "signs": {
+        "early": [
+          "Tilapia swim together in loose, calm groups at mid-depth and move away smoothly when your shadow falls over the pond.",
+          "Fish rush to the feed within seconds and eat it all within about 10–15 minutes, leaving little or nothing floating or sinking.",
+          "Tilapia have clear, bright colours with a shiny silver-grey to olive body. Breeding males may show darker or reddish colours on the head and fins, which is normal.",
+          "Catfish are smooth, dark grey-olive to mottled, with a clean slimy skin, long whole barbels (the 'whiskers') and strong, quick movements.",
+          "Fins are whole, held open and smooth-edged, with no frayed tips, red streaks or white cotton-like patches.",
+          "Gills are bright red to deep pink when you gently lift the gill cover of a netted fish, with no pale, brown, grey or swollen patches.",
+          "Eyes are clear and sit normally in the head, not cloudy, bulging or sunken.",
+          "Fish in a group are a fairly even size and grow steadily when you sample-weigh them every few weeks.",
+          "Pond water is light green, smells fresh or earthy, and there are no dead fish at the edges or the outlet."
+        ],
+        "advanced": [
+          "Fish come slowly to feed, eat only part of it, or leave feed floating. This is often the very first sign that water or health is going wrong.",
+          "Many tilapia gulp at the surface in the early morning or crowd at the water inlet. This means low oxygen and needs action that same morning.",
+          "A fish swims alone, sits still at the edge or bottom, swims in circles or on its side, or flashes and rubs its body against the pond bottom or walls.",
+          "The skin turns dull, very dark or pale, has too much slime or too little, or shows red spots, sores, white or grey cotton-like patches or missing scales.",
+          "Fins become frayed, ragged, reddened at the base or eaten away, or are held clamped tightly against the body.",
+          "Gills look pale, brown, blotchy or swollen, or the gill covers stay flared and move fast.",
+          "Eyes become cloudy or bulging, or the belly becomes swollen.",
+          "The water suddenly changes colour (very dark green, brown, grey or clear after being green), smells bad, or a few fish are found dead each day."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Catfish coming up for air",
+          "howToTell": "African catfish are air-breathers. They normally rise briefly to gulp air and dive straight back down, even in good water. Worry only if they hang at the surface for long periods, if they stop feeding, or if tilapia in the same pond are also gasping at the surface."
+        },
+        {
+          "name": "Tilapia breeding behaviour",
+          "howToTell": "Mature male tilapia dig round nests in the pond bottom, darken in colour, chase other fish and may have small nips on the fins. Females may stop eating while they carry eggs or fry in their mouths. The fish are otherwise active and their skin is clean. Sick fish are dull, slow and often show sores or frayed fins on many fish, not just a few chasing ones."
+        },
+        {
+          "name": "Slow feeding in cold weather",
+          "howToTell": "In the cold season, or on cold mornings in the highlands, all the fish eat less and move slowly because the water is cool. The water thermometer will read below about 22°C. Feeding picks up as the water warms in the afternoon, and there are no sores, gasping or deaths. In that case reduce feed rather than treating."
+        },
+        {
+          "name": "Stress after stocking or handling",
+          "howToTell": "Fish that have just been transported, netted or sorted may hide, change colour and eat poorly for a few days. If water quality is good and they return to normal feeding within about a week with no wounds spreading, it was handling stress. If sores, fungus or deaths appear, call for advice."
+        }
+      ],
+      "diagnosis": "You cannot take a fish's temperature the way you do with a cow. Instead, a home fish health check means checking the water, then watching the fish, then looking closely at a few fish. Do it the same way every time so you can compare. First, the water. Use a pond thermometer at about 30 cm depth, morning and afternoon. Use a simple test kit, sold by agrovets, aquaculture suppliers and some county fisheries offices, to check pH and ammonia at least weekly, and more often in tanks or crowded ponds. If you can get a dissolved oxygen meter or kit, test at dawn, when oxygen is lowest. Check water colour and clarity with a white disc or your hand: if you lose sight of it at shallower than about 20 cm the bloom is too thick, and if you can see past about 60 cm the water is too clear and poor in natural food. Second, watch the fish at feeding time. Note how fast they come, how much they eat, and whether any fish stay away. Look at the pond edges and outlet every morning for dead or weak fish. Third, every few weeks, gently net a small sample of fish with wet hands or a soft net. Look at the skin, fins, eyes and gills, then weigh them and return them quickly, keeping them out of water for as short a time as possible. Write everything in a pond record book: date, water readings, feed given, feeding response, deaths and sample weights. If something looks wrong, a fisheries officer or fish vet will want this record. They may also ask you to bring live, sick fish in a container of pond water with air, because dead fish spoil quickly and are hard to test. They can then examine skin scrapings and gills under a microscope, or send samples to a laboratory such as KMFRI or a veterinary lab.",
+      "firstSteps": [
+        "Watch your fish at every feeding and check the pond edges and outlet each morning, so you know clearly what normal looks like in your own pond.",
+        "Feed only what the fish clear in about 10–15 minutes, and reduce feed at once if they are slow to eat or the water is cold.",
+        "If fish gasp at the surface at dawn, stop feeding that day, add fresh well-oxygenated water or run an aerator, and splash or agitate the water if you have nothing else.",
+        "Test water temperature, pH and ammonia regularly, and immediately whenever the fish behave differently.",
+        "Remove dead or dying fish quickly and bury them away from the pond, because rotting fish foul the water and spread germs.",
+        "Keep separate nets and buckets for each pond, or clean and dry them in the sun between ponds.",
+        "Wash your hands after handling fish or pond water, and cover any cuts on your hands.",
+        "Write down feeding, water readings and any deaths, and call your County Fisheries Officer, an aquaculture extension officer or a vet early if changes do not settle within a day or two."
+      ],
+      "vetTreatment": "Healthy fish do not need routine medicines. Fish health care in Kenya is mostly about prevention and advice. It is provided by County Fisheries Officers, the Kenya Fisheries Service, KMFRI and other research stations, aquaculture extension officers, and vets trained in fish health. Useful routine support includes advice on pond design, stocking density, liming (adding agricultural lime to correct acid water) and fertilising. Officers can also help you test water, train you to sample and weigh fish, and check hatchery fingerlings. When fish do get sick, the officer or vet first looks for a water problem, because fixing the water often solves the problem without any drug. If a parasite, bacterium or fungus is confirmed, they may advise salt baths, improved water management, or in some cases a licensed medicine. Any medicine, especially antibiotics in feed or water, must only be used when prescribed by a vet. Treating a whole pond is costly, can harm the pond ecosystem, and careless use breeds antimicrobial resistance, where germs stop responding to medicines. Any treated fish must not be harvested or sold until the withdrawal period stated by the vet has passed, so that no drug residues reach consumers.",
+      "prevention": [
+        "Buy fingerlings only from hatcheries certified by the Kenya Fisheries Service. Check that they are active and even-sized, and acclimatise them by floating the bag in the pond for 15–30 minutes before slowly mixing in pond water.",
+        "Stock at the density recommended by your fisheries officer for your pond type and aeration. Crowding is one of the most common causes of poor water and disease.",
+        "Feed a good-quality feed with the right pellet size and protein for the fish's age. Store it dry and off the floor to stop mould, and never feed mouldy or caked feed.",
+        "Test water regularly, keep pH in range using agricultural lime on acidic soils as advised, and avoid over-fertilising with manure.",
+        "Keep oxygen up with aeration or fresh water flow where possible, especially in the hot season, in crowded ponds and after cloudy days.",
+        "Dig cut-off drains around ponds so rainwater runoff, soil and chemicals do not wash in. Screen inlets to keep out wild fish.",
+        "Handle fish gently and as little as possible, using wet hands and soft nets. Sort or harvest in the cool early morning.",
+        "Dry and lime ponds between production cycles where practical. Keep grass trimmed around the banks and discourage predatory birds."
+      ],
+      "impact": "On a Kenyan fish farm, feed is usually the biggest cost. Healthy fish turn that feed into growth efficiently. They reach market size on time and fetch better prices from hotels, fish traders and local markets that want even-sized, fresh-looking fish. When water or health goes wrong, the first loss is often invisible. Fish eat less, grow slowly, and wasted feed rots in the pond, so you pay for feed that never becomes fish. Next come scattered deaths, then sometimes sudden mass deaths after an oxygen crash, which can wipe out a pond overnight. Poor-looking fish with sores or uneven sizes sell for less, and buyers may lose trust. Daily observation and regular water testing cost little compared with losing a whole crop.",
+      "humanHealth": "Healthy, well-handled fish pose little risk to people, but basic hygiene still matters. A few germs found in pond water and fish, such as certain Streptococcus and Mycobacterium bacteria, can infect cuts on the hands of people who handle fish. Wear gloves or cover cuts, avoid spines puncturing the skin, and wash hands with soap after handling fish or pond water. Cook fish thoroughly. If fish have ever been treated with any medicine, follow the vet's withdrawal period strictly before eating or selling them, to avoid drug residues in food.",
+      "outlook": "Fish kept in good water, fed correctly and stocked at the right density usually stay healthy and grow well through the cycle. Most early warning signs come from water quality, such as slow feeding, morning gasping or dull colours. When they are caught within a day or two and the water is corrected, fish often recover fully without medicine. Recovery is less likely when problems are noticed late, when many fish already have sores or gill damage, or when the cause, such as overcrowding, overfeeding or no aeration, is not fixed. Keeping records and knowing your normal baseline is the best protection.",
+      "faqs": [
+        {
+          "q": "Why do my fish come to the surface early in the morning?",
+          "a": "If catfish rise briefly to gulp air and dive again, that is normal because they are air-breathers. If tilapia, or many fish of either kind, hang at the surface gasping at dawn, oxygen is too low. Stop feeding that day and add fresh water or aeration. Then look for the cause: overfeeding, too many fish, a thick algal bloom, or several cloudy days. Test the water and talk to your fisheries officer if it happens again."
+        },
+        {
+          "q": "What colour should my pond water be?",
+          "a": "A light to medium green is best. It shows healthy algae that produce oxygen and natural food. If you can still see your hand or a white disc deeper than about 60 cm, the water is too clear and may need fertilising as advised. If it disappears above about 20 cm, or the water is very dark green, brown or smells bad, the bloom is too thick or dying. Reduce feed and fertiliser and add fresh water."
+        },
+        {
+          "q": "How do I know I am feeding the right amount?",
+          "a": "Watch the fish. The right amount is what they eat eagerly and finish in about 10–15 minutes. If feed is left floating or sinking, you are overfeeding, which wastes money and fouls the water. Feed needs change as fish grow and as water temperature changes, so sample-weigh fish every few weeks. Ask your extension officer or feed supplier for a feeding guide matched to fish size."
+        },
+        {
+          "q": "Should I add antibiotics to the feed to prevent disease?",
+          "a": "No. Healthy fish do not need antibiotics. Adding them 'just in case' wastes money and leaves residues in fish meant for people. It also breeds germs that no longer respond to medicine. Prevention comes from clean water, good feed, correct stocking and careful handling. Medicines should only be used when a vet has confirmed a bacterial disease and prescribed them, and you must observe the withdrawal period before selling fish."
+        },
+        {
+          "q": "Can I keep tilapia and catfish in the same pond?",
+          "a": "Yes. Many Kenyan farmers keep them together, and catfish help by eating the extra tilapia fry that cause overcrowding. Stock the catfish at the right ratio and size so they do not eat your main tilapia crop. Remember that the pond now carries more fish, so watch oxygen and feeding closely. Your fisheries officer can advise on ratios for your pond."
+        },
+        {
+          "q": "How often should I test my pond water?",
+          "a": "Check temperature daily if you can, and pH and ammonia at least once a week in earth ponds. Test more often in tanks, liner ponds, crowded ponds and recirculating systems. Always test straight away if fish stop feeding, gasp, or change behaviour. Testing oxygen at dawn tells you the worst point of the day. Write all results down so you can see trends."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "A realistic photo of a school of healthy Nile tilapia with bright silver-olive scales and fully intact fins rushing to floating feed pellets at the surface of a light-green earthen fish pond in rural Kenya on a sunny morning.",
+    "seoDescription": "How to tell healthy tilapia and catfish: active schooling, strong feeding, bright colour, red gills, and pond targets for oxygen, pH and ammonia."
+  },
+  "low-oxygen": {
+    "card": {
+      "headline": "Fish gasping at the water surface",
+      "look": "At dawn, many fish crowd at the surface with their mouths open, gulping air, or pack together where fresh water flows in. They ignore feed, and big fish may suddenly be found dead along the edges.",
+      "action": "Stop feeding at once and get fresh, splashing, oxygen-rich water or aeration into the pond immediately."
+    },
+    "detail": {
+      "aka": [
+        "Oxygen depletion",
+        "Oxygen crash",
+        "Dissolved oxygen (DO) depletion",
+        "Piping (fish gulping at the surface)",
+        "Pond suffocation",
+        "Ukosefu wa oksijeni majini (Swahili description)"
+      ],
+      "summary": "Low oxygen happens when the water does not hold enough dissolved oxygen (oxygen mixed invisibly into the water, which fish breathe through their gills). It is one of the most common causes of sudden mass fish deaths in Kenyan tilapia and catfish ponds. It can kill a whole pond in one night, often just before sunrise. It is an emergency, but it can usually be prevented with good feeding, stocking and water management.",
+      "cause": "Fish take oxygen from the water through their gills, so the water must keep enough of it. In a fish pond, most oxygen comes from tiny green plants called algae (the green colour in the water) or phytoplankton. They make oxygen in sunlight. At night, and on dull cloudy days, the algae stop making oxygen but keep using it, along with the fish and the bacteria breaking down waste. So oxygen falls all night and is lowest just before dawn. Problems arise when this night-time demand is too high. Common reasons are too many fish, too much feed or manure, a very thick algae bloom, or several cloudy days in a row. Uneaten feed, fish droppings and manure rot on the pond bottom, and the bacteria doing the rotting use up large amounts of oxygen. A sudden algae die-off, also called a crash, is especially dangerous. Millions of algae die at once, stop producing oxygen, and their rotting bodies use up even more. Warm water holds less oxygen than cool water, while warm fish need more. Heavy cold rain or strong wind can also suddenly mix oxygen-poor bottom water into the whole pond, which is called a pond turnover. When oxygen drops, fish first move to the surface to gulp the thin oxygen-rich top layer. If levels keep falling, their gills cannot supply the body, they become weak, lose balance and die of suffocation. Larger fish need more oxygen and usually die first.",
+      "spread": [
+        "Low oxygen is not an infection and does not spread from fish to fish, but it can hit every fish in the pond at the same time.",
+        "Several cloudy, rainy or still days in a row reduce sunlight, so algae produce less oxygen while demand stays high.",
+        "Overfeeding leaves uneaten pellets on the pond bottom, where they rot and use up oxygen, especially overnight.",
+        "Overstocking means too many fish breathing the same water. Problems often appear as fish grow bigger towards harvest.",
+        "Too much manure, chicken droppings or fertiliser causes a very thick algae bloom that can suddenly crash and die.",
+        "Hot weather, very warm water, or water flow stopping (a dry inlet, broken pump, power cut, or blocked canal) can quickly tip a borderline pond into crisis.",
+        "Heavy cold rain, strong winds or disturbing deep, smelly bottom mud can mix oxygen-poor water and harmful gases such as hydrogen sulphide (rotten-egg smell) through the pond.",
+        "Using pesticides or herbicides near the pond, or chemicals that kill algae, can cause an algae die-off followed by an oxygen crash."
+      ],
+      "atRisk": "All farmed fish can suffocate. Tilapia, the most common pond fish in Kenya, cope with fairly low oxygen for short periods, but they still die when levels crash. African catfish (Clarias, locally called mumi or kamongo) can breathe some air from the surface, so they often survive when tilapia die. However, crowded catfish can still suffer, especially if they cannot reach the surface. Large fish close to harvest are most at risk because they need the most oxygen and the pond carries its heaviest load then. Fry and fingerlings in small tanks, hapas or transport bags are also very vulnerable. High-risk systems include intensively fed earthen ponds and liner ponds with little or no water exchange, backyard ponds fertilised heavily with manure, and recirculating or tank systems that depend on pumps and electricity. The highest-risk times are the long and short rains, when skies stay cloudy for days, hot still periods, and the hours between about midnight and sunrise. Ponds in warm lowland areas such as parts of Western, Nyanza and Coast regions, and ponds that have not been drained and desilted for several cycles, face extra risk.",
+      "signs": {
+        "early": [
+          "Fish come to the surface early in the morning and gulp air with their mouths, a behaviour called piping. Small ripples or popping sounds may be heard across the pond.",
+          "Fish crowd together near the water inlet, a waterfall or wherever fresh water enters, and stay there.",
+          "Fish refuse feed or eat much less than usual, especially at the morning feed.",
+          "Fish swim slowly and sluggishly near the surface or edges instead of staying deeper in the pond.",
+          "The water colour changes suddenly, for example from bright green to brown, grey, milky or unusually clear. This is a sign the algae may be dying.",
+          "The pond may smell stale, earthy or like rotten eggs, and foam or scum may appear on the surface.",
+          "Gill covers move fast and wide as fish breathe harder, and gills may look pale when a fish is examined."
+        ],
+        "advanced": [
+          "Large numbers of fish stay at the surface gasping even after sunrise, and they do not dive away when you approach or clap.",
+          "Fish lose balance, swim on their sides or in circles, or lie weak at the pond edges.",
+          "Sudden deaths occur, often overnight or at dawn, with the biggest fish dying first and many found floating or along the banks.",
+          "Dead fish may have mouths wide open and gill covers flared out.",
+          "Catfish may still be gulping while most tilapia are dead, or even catfish start dying in severe cases.",
+          "Within hours, a whole pond can be lost if oxygen is not restored."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Ammonia or nitrite poisoning (brown blood disease)",
+          "howToTell": "These also cause gasping because the toxic waste stops blood carrying oxygen. They often follow heavy feeding in ponds or tanks with poor water exchange. With nitrite, the gills and blood may look chocolate-brown instead of bright red. Gasping may continue during the day even when oxygen is good. A water test kit for ammonia and nitrite tells them apart."
+        },
+        {
+          "name": "Gill parasites or bacterial gill disease (e.g. columnaris)",
+          "howToTell": "Damaged gills cause fish to gasp and crowd at the inlet, but deaths usually build up over several days rather than all at once overnight. Fish of all sizes may be affected, and you may see swollen, slimy, patchy or rotting gills, white or yellow patches on the body, or flashing (rubbing against the bottom). Fish keep gasping even when oxygen levels are good. Diagnosis needs a fisheries or vet lab check of gill samples."
+        },
+        {
+          "name": "Chemical or pesticide poisoning",
+          "howToTell": "Deaths are sudden and may follow spraying of nearby crops, runoff after rain, or cattle dip washings entering the water. Fish may twitch, jump, or swim wildly in spirals rather than just gasping quietly. Small fish, frogs and insects in the pond may die too. Oxygen levels may be normal at first. Note the timing and any nearby spraying."
+        },
+        {
+          "name": "Heat stress from very warm water",
+          "howToTell": "Shallow ponds and tanks overheat on hot sunny afternoons, and fish become stressed and gasp in the heat of the day, not mainly at dawn. Warm water also holds less oxygen, so the two problems often overlap. A thermometer reading and the time of day help separate them."
+        }
+      ],
+      "diagnosis": "Diagnosis is mainly made by measuring dissolved oxygen and reading the signs and timing. A County Fisheries Officer, Kenya Fisheries Service officer, aquaculture extension officer or fish vet will usually test the water with a dissolved oxygen meter or chemical test kit. Testing at or just before dawn gives the most useful reading, because oxygen is lowest then. As a general guide, warm-water pond fish do best when oxygen is kept well above about 5 milligrams per litre and become stressed when it falls much below about 3. Fish start dying when it stays very low, although tolerance differs between species and sizes. The officer will also check water temperature, pH (acidity), ammonia and nitrite, and look at the water colour, depth of visibility and bottom condition. If fish are still dying after oxygen is restored, they may examine gills and send fresh or chilled fish to a lab, such as KMFRI or a veterinary laboratory, to rule out parasites, bacteria or poisoning. To help, the farmer should note when gasping and deaths started, and how many and what size fish died. Record recent weather (cloudy days, heavy rain), feeding amounts, stocking numbers, any manure or fertiliser added, changes in water colour or smell, and any spraying nearby. Keep two or three freshly dead or dying fish cool, not frozen, in a clean bag for examination.",
+      "firstSteps": [
+        "Stop feeding immediately and do not feed again until fish are behaving normally. Uneaten and digesting feed uses up oxygen the fish need to survive.",
+        "Add fresh, clean, oxygen-rich water straight away, ideally from a stream, borehole or canal. Let it fall or splash onto the surface so it picks up air. At the same time, let out bottom water from the drain if your pond allows it.",
+        "Create aeration (mixing air into water). Run a paddlewheel or aerator if you have one, or use a pump to spray water back onto the pond surface. In an emergency, people can splash and stir the surface with paddles, boards or buckets, working in shifts.",
+        "Do not stir up or disturb the bottom mud, and do not drain the pond very low. Bottom mud is oxygen-poor and can release harmful gases.",
+        "Do not add manure, fertiliser, lime, salt or any chemical as an emergency fix, as these do not add oxygen and some make things worse.",
+        "Remove dead and dying fish quickly using a net and gloves. Bury them away from the water with lime or soil, or dispose of them as your officer advises, because rotting fish use oxygen and attract predators.",
+        "Keep safe. Keep electric pumps and cables well away from water and people, never work alone at a deep pond at night, and keep children away from the edges.",
+        "Call your County Fisheries Officer or aquaculture extension officer, and record times, numbers and sizes of dead fish, weather and feeding. Keep checking the pond through the night and the next dawn, because oxygen may fall again."
+      ],
+      "vetTreatment": "There is no medicine that cures low oxygen. The treatment is to restore oxygen and remove its causes. A fisheries officer or fish vet will usually confirm oxygen levels with a meter, then advise on emergency aeration, water exchange and how long to withhold feed. Next, they will help you find the root cause, such as overstocking, overfeeding, too much manure, an algae crash, or a failed water supply. They may recommend partial harvest to reduce the number of fish, adjusting feed amounts, or changing how you fertilise. Where a turnover or rotten bottom is suspected, they may advise draining, drying and desilting the pond after harvest. Survivors are stressed and may develop infections in the following days and weeks. If disease appears, the officer may take samples and, only if a bacterial infection is confirmed, a vet may prescribe a treatment such as a medicated feed. Antibiotics do nothing for low oxygen itself, and using them without a diagnosis wastes money and encourages antimicrobial resistance (germs no longer responding to medicines). Any medicine must be prescribed by a vet and comes with a withdrawal period, a waiting time before fish can be harvested and eaten, which must be followed strictly. Expect fish to resume feeding within a day or two if the crisis was caught early. Restart feeding with small amounts.",
+      "prevention": [
+        "Stock at a density suited to your pond, water supply and aeration. Follow guidance from your fisheries officer or KALRO/KMFRI materials rather than adding extra fish, because problems often appear as fish grow.",
+        "Feed carefully. Give only what fish eat within a short time, watch that feed is cleared, and adjust amounts as fish grow. Never dump extra feed to speed up growth.",
+        "Reduce or skip feeding on cloudy, rainy or very hot still days, and whenever fish show any surface gasping in the morning.",
+        "Go to the pond at dawn every day and look for fish at the surface. This simple habit catches most problems before mass deaths. If you can, get a dissolved oxygen meter or test kit, or ask your extension officer to test regularly.",
+        "Manage the green water. Use manure and fertiliser only in moderate amounts as advised. A simple check is to put your arm in the water: if the water is so thick you cannot see your hand just below the surface, the bloom is too dense. Stop fertilising and add fresh water.",
+        "Keep a reliable supply of fresh water and a way to aerate. Consider an aerator, paddlewheel or spray pump for intensive ponds, along with a backup plan for power cuts or a dry inlet.",
+        "Between production cycles, drain, dry and remove excess black mud from the pond bottom. Keep ponds at a sensible depth, and cut back overgrown water weeds and overhanging vegetation that rot in the water.",
+        "Harvest or partly harvest fish once they reach market size rather than holding very heavy fish in the pond. Keep pesticide spraying, dip wash and runoff away from ponds."
+      ],
+      "impact": "Low oxygen is one of the fastest ways a Kenyan fish farmer can lose an investment. A single bad night can kill most of the fish in a pond, and the biggest fish, which have eaten the most feed and are closest to sale, usually die first. The farmer loses the cost of fingerlings and months of feed, and often the expected harvest income or school fees. Fish that die in the pond quickly spoil in warm weather and usually cannot be sold. Repeated mild low-oxygen periods that do not kill fish still cause poor appetite, slow growth, poor feed conversion (more feed for each kilo of fish) and weaker immunity, so disease outbreaks become more likely. For groups and commercial farms supplying hotels, schools or markets, sudden losses can also break supply contracts and damage trust. Prevention through careful feeding, sensible stocking and simple aeration costs far less than a single crash.",
+      "humanHealth": "Low oxygen itself does not infect people. However, fish that are found dead in the pond, especially after some hours in warm water, spoil quickly and can cause food poisoning. They should not be sold or eaten unless they were collected while still alive and fresh and handled hygienically, and if unsure, dispose of them safely. Wear gloves when handling dead fish and wash hands well afterwards. Take care with electric pumps near water and with deep ponds at night, as drowning and electric shock are real risks during emergencies.",
+      "outlook": "If the problem is noticed early, at the first signs of gasping, and oxygen is restored quickly with fresh water and aeration, most fish usually survive. They start feeding again within a day or two. Once mass deaths have started, losses can be heavy, and the outcome depends on how quickly oxygen is raised and how big and crowded the fish are. Survivors may be stressed for some days, grow more slowly and be more likely to pick up infections, so watch them closely. Unless the cause is fixed, such as overstocking, overfeeding, too much manure or no aeration, the problem often returns at the next cloudy spell. The long-term outlook for the farm is good when daily dawn checks, careful feeding and a water or aeration backup become routine.",
+      "faqs": [
+        {
+          "q": "Why do my fish always gasp and die early in the morning, not in the afternoon?",
+          "a": "During the day, the green algae in the water use sunlight to make oxygen, so levels usually rise through the afternoon. At night there is no sunlight, and the algae, fish and the bacteria rotting waste all use oxygen without any being made. So oxygen falls all night and is lowest just before sunrise. That is why dawn is the most dangerous time and the best time to check your pond."
+        },
+        {
+          "q": "My catfish survived but all my tilapia died. Why?",
+          "a": "African catfish have a special breathing organ that lets them gulp air at the surface. They can survive in water with very little oxygen for longer than tilapia. Tilapia depend on oxygen dissolved in the water, so they suffocate first. If you see tilapia dying while catfish look fine, low oxygen is a strong suspect. Even catfish can die if oxygen stays very low, so don't rely on them as an all-clear."
+        },
+        {
+          "q": "Can I sell or eat fish that died from low oxygen?",
+          "a": "Fish collected alive and still fresh during a crisis can be harvested, kept cool and used like normal fish, as long as no medicines have been given. Fish found already dead in the water, especially after several hours in warm weather, spoil fast and can cause food poisoning, so do not sell or eat them. Bury or dispose of them away from the pond."
+        },
+        {
+          "q": "Will adding salt, lime or medicine help my gasping fish?",
+          "a": "No. None of these add oxygen to the water, and in an emergency some can make things worse or stress fish further. The fix is fresh, splashing water and aeration, plus stopping feeding. Antibiotics do not help low oxygen at all and should only be used if a vet diagnoses a bacterial infection afterwards. Lime and salt have specific uses in pond management, so ask your fisheries officer when and how to use them."
+        },
+        {
+          "q": "How can I tell if my pond oxygen is low if I do not have a meter?",
+          "a": "Watch your fish at dawn. Fish at the surface gulping air, crowding at the inlet or refusing morning feed are warning signs. Also watch the water: a sudden change in colour, from green to brown, grey or very clear, a bad smell or scum may mean the algae are dying. Be extra careful after two or three cloudy days, in very hot weather or after heavy feeding. Ask your extension officer to test with a meter, and consider buying a simple test kit if you farm intensively."
+        },
+        {
+          "q": "How do I stop this happening again?",
+          "a": "Look at what changed before the crisis. Often it is too many fish for the pond, too much feed or manure, cloudy weather, or the water supply stopping. Reduce stocking or harvest some fish, feed only what is eaten quickly, and cut back feed on dull days. Avoid overfertilising, and keep a fresh water source or aerator ready. Most importantly, check the pond every morning at first light. Desilting and drying the pond between cycles also reduces the rotting mud that uses up oxygen."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Realistic early-morning photo of a green earthen fish pond in rural Kenya with many tilapia crowded at the surface, mouths open gulping air, causing small ripples in soft dawn light, no people or text.",
+    "seoDescription": "Fish gasping at the pond surface at dawn? Learn the causes of low oxygen in tilapia and catfish ponds, emergency first steps, and how to prevent mass deaths."
+  },
+  "ammonia-poisoning": {
+    "card": {
+      "headline": "Fish gasping with red-brown gills",
+      "look": "Fish crowd at the surface or the water inlet, gulping air, and stop eating. The water may be cloudy, dark or smell rotten, and lifting a gill cover shows swollen, dark red or brownish gills instead of a clean bright red.",
+      "action": "Stop feeding at once, add fresh clean water or aeration, and call your fisheries officer or aquatic vet to test the water today."
+    },
+    "detail": {
+      "aka": [
+        "Ammonia poisoning",
+        "Ammonia toxicity",
+        "Poor water quality",
+        "New tank or new pond syndrome",
+        "Brown blood disease (when nitrite is also high)"
+      ],
+      "summary": "Ammonia poisoning happens when fish waste and rotting feed build up faster than the pond or tank can break them down. Ammonia is a natural waste fish release through their gills, but when it collects in the water it burns the gills, stresses the fish and opens the door to infections. It is one of the most common causes of poor growth and sudden deaths on tilapia and catfish farms in Kenya. The good news is that it is mostly preventable with sensible feeding, the right number of fish and regular water checks.",
+      "cause": "Fish pass most of their waste as ammonia straight out through their gills, and more ammonia is released when uneaten feed, dead fish, manure or decaying plants rot in the water. In a healthy pond, helpful bacteria turn ammonia into nitrite and then into nitrate, which is much less harmful, and algae and plants also take some up. Trouble starts when there are too many fish, too much feed or too little clean water, so ammonia builds up faster than it is removed. Ammonia exists in two forms: a less harmful form and a very toxic gas-like form. The warmer the water and the higher the pH (how alkaline the water is), the more of the toxic form there is, so the same test reading can be far more dangerous on a hot afternoon. The toxic ammonia damages the delicate gill tissue, which swells, produces extra mucus and becomes red and inflamed, so the fish cannot take in oxygen properly or get rid of waste. It also harms the skin, fins, liver and kidneys and weakens the immune system. If nitrite also builds up, it enters the blood and stops it carrying oxygen, turning the blood and gills chocolate brown. Low oxygen usually goes hand in hand with poor water, so fish are hit by several stresses at once, and bacteria and parasites then attack the weakened fish.",
+      "spread": [
+        "Overfeeding is the most common trigger: feed that is not eaten within a few minutes sinks, rots and releases ammonia.",
+        "Stocking too many fish for the size of the pond, tank or water flow means more waste than the water can handle.",
+        "Rotting material such as dead fish left in the pond, too much manure or fertiliser, and decaying weeds or grass add large amounts of ammonia.",
+        "Poor water exchange or slow flow, especially in liner ponds, concrete tanks and recirculating systems, allows waste to collect.",
+        "A sudden algae die-off after cloudy weather or a sharp temperature change releases ammonia and uses up oxygen at the same time.",
+        "New ponds, newly cleaned tanks or filters that have been washed with chlorinated water lack the helpful bacteria that break down ammonia.",
+        "Hot sunny afternoons and high pH, including after adding too much quicklime or hydrated lime, turn more ammonia into its toxic form.",
+        "It is not an infection and does not pass from fish to fish, but the secondary bacterial and parasite infections that follow can spread through shared water, nets and equipment."
+      ],
+      "atRisk": "All farmed fish can be affected, but tilapia and especially fingerlings and fry are sensitive, as are fish in hatcheries and nursery tanks. African catfish (Clarias) tolerate poor water better because they can breathe air, but they still suffer gill damage, poor growth and disease. Fish in small liner ponds, concrete tanks, raised tanks and recirculating aquaculture systems (RAS, where water is filtered and reused) are at higher risk because waste builds up quickly. Heavily stocked cages and ponds near the end of a production cycle, when fish are big and eating the most feed, are a common problem point. Risk rises in the hot dry months, during spells of cloudy weather that cause algae to crash, after heavy manuring, and when water supply drops in the dry season. Farms that feed by guesswork, use poor-quality feed that breaks up quickly, or rarely test their water are the most likely to see losses.",
+      "signs": {
+        "early": [
+          "Fish eat less or ignore feed, and pellets are left floating or sinking uneaten.",
+          "Fish gather near the surface, the water inlet or aerator, gulping air, often worst in the early morning.",
+          "Fish are slow, sluggish or hang in one place instead of swimming actively.",
+          "Fish appear darker than usual or show uneven colour from stress.",
+          "Some fish rub or flash against the sides or bottom, a sign of gill and skin irritation.",
+          "The water looks cloudy, very green, brown or foamy, or smells sour, rotten or like a toilet.",
+          "Growth slows and fish at harvest are smaller than expected for their age."
+        ],
+        "advanced": [
+          "Gills look swollen, dark red or blotchy, covered in thick mucus, or brown in colour when nitrite is also high.",
+          "Gill covers flare open and breathing is fast and laboured.",
+          "Fins look frayed, ragged or eroded, sometimes with red streaks or a white edge.",
+          "Red patches, bleeding spots or sores appear on the skin, often where bacteria have moved in.",
+          "Eyes look cloudy or bulging, and fish may swim on their side, spin or lose balance.",
+          "Fish lie on the bottom or float weakly and do not react when you approach.",
+          "Daily deaths begin, often bigger fish first, and can turn into a sudden mass die-off, especially at dawn."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Low dissolved oxygen",
+          "howToTell": "Low oxygen also makes fish gasp at the surface, and the two often happen together. Pure oxygen shortage is usually worst just before sunrise and improves quickly once aeration or fresh water is added, and the gills may look pale rather than red and swollen. Only an oxygen test and an ammonia test can tell you which is driving the problem."
+        },
+        {
+          "name": "Nitrite poisoning (brown blood disease)",
+          "howToTell": "This is part of the same poor-water problem but shows chocolate-brown gills and blood rather than bright red inflamed gills. It is common in new or overloaded systems where the bacteria have not caught up. A nitrite test confirms it."
+        },
+        {
+          "name": "Bacterial gill disease and columnaris",
+          "howToTell": "Bacteria can cause swollen gills, white or yellow patches on gills, skin and mouth, and fin rot. These infections often follow poor water, but the water tests may be normal if the original trigger has passed. A vet needs to look at gill samples and may culture the bacteria."
+        },
+        {
+          "name": "Gill and skin parasites",
+          "howToTell": "Parasites such as Trichodina and gill flukes cause flashing, rubbing, extra mucus and gasping. Unlike ammonia, the water tests are often fine. A vet or fisheries officer can see the parasites by looking at a gill or skin scraping under a microscope."
+        },
+        {
+          "name": "Chemical or pesticide poisoning",
+          "howToTell": "Runoff from sprayed farms, cattle dips or car washing can cause sudden deaths of many fish of all sizes at once, sometimes with twitching or erratic swimming. Think of it if deaths follow rain, spraying or a new water source, and water tests for ammonia are normal."
+        }
+      ],
+      "diagnosis": "Diagnosis starts with testing the water, because the problem is in the water, not just the fish. A fisheries officer or aquatic vet will measure total ammonia, nitrite, pH, temperature and dissolved oxygen, and sometimes alkalinity, then use the pH and temperature to work out how much of the ammonia is in the toxic form. They will look at your stocking density, feeding records, water source and pond or tank set-up. They usually examine a few sick fish, lifting the gill cover to check gill colour and swelling, and may look at gill and skin scrapings under a microscope to rule out parasites. If infection is suspected, they may take samples for bacterial culture at a laboratory, such as a county or national veterinary lab or a KMFRI aquaculture centre, and sometimes tissue samples to examine gill damage. To help, keep a record of daily feed amounts, fish numbers and size, deaths per day, recent water changes, fertiliser or manure use and weather. Collect a water sample in a clean bottle rinsed with pond water, from mid-depth away from the inlet, and keep it cool but not frozen. If possible, bring a few live, sick fish in a bag of pond water rather than dead ones, as fish decay very fast. Have your own test kit results ready if you have taken them.",
+      "firstSteps": [
+        "Stop feeding completely for now; less feed means less ammonia, and stressed fish cannot digest well anyway. Resume slowly and in small amounts once fish are eating and water improves.",
+        "Increase oxygen straight away by running aerators or pumps, splashing water in, or letting fresh water flow in; this helps fish cope while you fix the ammonia.",
+        "Do a partial water change with clean water of similar temperature, replacing only part of the water at a time rather than draining the pond, to avoid shocking the fish.",
+        "Remove dead and dying fish and any rotting feed, weeds or debris from the water at least twice a day and bury or burn them away from the water.",
+        "Test the water for ammonia, nitrite, pH and oxygen if you have a kit, and write down the results with the time and temperature.",
+        "Do not add quicklime, hydrated lime, fertiliser or manure now, because raising the pH makes ammonia more toxic and fertiliser adds more waste.",
+        "Do not add any medicines, antibiotics or chemicals to the water without advice from a vet or fisheries officer.",
+        "Avoid netting, grading, transporting or selling fish while they are stressed, and wear gloves when handling sick or dead fish.",
+        "Call your County Fisheries Officer, aquatic vet or a trusted agrovet with fish experience the same day, especially if deaths are rising."
+      ],
+      "vetTreatment": "There is no medicine that cures ammonia poisoning; the treatment is to fix the water and remove the cause. The vet or fisheries officer will guide you on how much water to exchange and how quickly, how to improve aeration, and how many fish to remove or harvest early to reduce the load. In tanks and recirculating systems they may advise cleaning or rebuilding the biological filter, adding a starter culture of helpful bacteria, or adjusting pH and alkalinity carefully. Where nitrite is high, they may recommend adding a measured amount of plain, non-iodised salt, because chloride helps block nitrite from entering the fish; the amount depends on your water and fish, so follow their advice. Products such as zeolite are sometimes sold to bind ammonia, but results in ponds vary and they do not replace water exchange. If fish have developed bacterial infections such as fin rot or ulcers, the vet may prescribe an antibiotic, usually as medicated feed, after confirming the infection. Antibiotics should only be used on a vet's prescription, as wrong use breeds resistant bacteria that harm fish and people, and drug-treated fish must not be sold or eaten until the withdrawal period on the prescription is over. Parasites, if found, are treated separately. Once the water is right, healthy fish usually start feeding again within days, though damaged gills take longer to heal.",
+      "prevention": [
+        "Feed carefully: give only what the fish eat in a few minutes, split into two or more meals, and adjust the amount as fish grow using a feeding chart from your feed supplier or fisheries officer.",
+        "Reduce or skip feeding on very hot afternoons, cloudy or cold days, and when fish show little appetite, because uneaten feed quickly becomes ammonia.",
+        "Stock fish at the density recommended for your pond type, water supply and aeration, and harvest or thin out fish as they grow rather than overcrowding near harvest.",
+        "Test water regularly, ideally weekly and more often in tanks and RAS, for ammonia, nitrite, pH and oxygen, and keep written records so you can spot rising trends early.",
+        "Keep a steady supply of clean water and plan partial water changes, especially in the dry season and in liner ponds and tanks.",
+        "Use good-quality, water-stable feed that does not break up quickly, and store it dry and off the floor so mouldy or spoiled feed is not used.",
+        "Fertilise and manure ponds lightly and only on advice, keep water colour a moderate green, and remove excess weeds and decaying plants.",
+        "Remove dead fish daily, keep inlets and outlets clear, and for new ponds or tanks stock slowly so helpful bacteria have time to build up.",
+        "Never clean biofilters with chlorinated tap water, and use aerators or water flow to keep oxygen up, especially at night and at dawn."
+      ],
+      "impact": "Poor water quality is one of the biggest hidden costs on Kenyan fish farms. Even before fish die, ammonia stress slows growth, so fish take longer to reach market size and more feed is spent for every kilo of fish, and feed is already the largest cost in most tilapia and catfish enterprises. Stressed fish catch bacterial and parasite infections more easily, bringing more losses and treatment costs. When things go badly, a whole pond or tank can be lost in one night, wiping out months of feed, fingerlings and labour. Smaller, damaged or blemished fish fetch lower prices from buyers, hotels and markets. For farmers who borrowed to start or who sell into contracts, one bad die-off can make the season unprofitable. Regular testing and careful feeding cost far less than these losses.",
+      "humanHealth": "Ammonia in pond water is not a direct danger to people at the levels found in fish farms. The risk comes from what happens next: fish weakened by poor water often carry bacteria such as Aeromonas, which can infect cuts and wounds on hands, so wear gloves, wash well after handling sick or dead fish and do not handle them with open cuts. Do not sell or eat fish that were found dead or dying, as they spoil very quickly. If a vet prescribes antibiotics or other drugs, respect the withdrawal period fully before harvesting, selling or eating the fish, to avoid drug residues reaching consumers.",
+      "outlook": "If the problem is caught early and the water is corrected quickly, most fish recover well and start feeding again within a few days, although growth may be set back for a while. Mildly damaged gills can heal over a few weeks once water stays clean. The outlook is poorer when fish are already showing severe gill damage, sores, loss of balance or many daily deaths, when fry and fingerlings are affected, or when low oxygen and nitrite are also high. Fish that survive a serious episode can remain weaker and more prone to disease. The biggest factor in long-term success is fixing the root cause, such as overfeeding or overstocking, so the problem does not keep coming back.",
+      "faqs": [
+        {
+          "q": "Why do my fish die mostly early in the morning?",
+          "a": "At night, algae and plants stop producing oxygen and instead use it up, as do fish and rotting waste. By dawn, oxygen is at its lowest, and fish already stressed by ammonia cannot cope. That is why you often find fish gasping or dead at sunrise. Aerating at night and early morning, feeding less and keeping the water cleaner all help."
+        },
+        {
+          "q": "How do I know if I am overfeeding?",
+          "a": "If pellets are still floating or lying on the bottom several minutes after feeding, you are giving too much. Other signs are water that smells bad, turns very green or cloudy quickly, or foam on the surface. Feed small amounts, watch the fish eat, and stop when they slow down. Ask your feed supplier or fisheries officer for a feeding chart based on fish weight and water temperature."
+        },
+        {
+          "q": "Can I test the water myself?",
+          "a": "Yes. Simple test kits for ammonia, nitrite and pH are sold in some agrovets and aquaculture suppliers, and oxygen meters are available for larger farms. Follow the instructions carefully and note the water temperature. A reading that rises week by week is an early warning even before fish look sick. If readings are high or you are unsure what they mean, share them with your fisheries officer."
+        },
+        {
+          "q": "Should I add lime to fix the problem?",
+          "a": "Not during an ammonia problem without advice. Quicklime and hydrated lime raise the pH sharply, which turns more ammonia into its toxic form and can kill fish quickly. Agricultural lime is used to correct acidic or soft water, usually when preparing a pond, and only after testing. Let the fisheries officer guide any liming."
+        },
+        {
+          "q": "Can antibiotics save my fish?",
+          "a": "Antibiotics do not remove ammonia or fix bad water, so they will not solve the main problem. They only help when a vet confirms a bacterial infection on top of the water problem, and they must be prescribed. Using them without need wastes money, encourages resistant bacteria and leaves residues, so fish cannot be sold until the withdrawal period ends."
+        },
+        {
+          "q": "Are the surviving fish safe to eat and sell?",
+          "a": "Healthy-looking fish that recover after the water is corrected are generally safe to harvest, as ammonia itself does not stay in the flesh in a way that harms people. Do not sell fish found dead or dying, and if any drugs were used, wait for the full withdrawal period on the prescription. Harvest and chill fish quickly to keep quality good."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a live Nile tilapia held gently in gloved hands beside an earthen fish pond, its gill cover slightly lifted to show swollen, dark red-brown inflamed gills with excess mucus.",
+    "seoDescription": "Ammonia and poor water quality in fish ponds: spot red or brown gills, gasping and deaths early, test water, act fast and prevent losses on Kenyan fish farms."
+  },
+  "streptococcosis": {
+    "card": {
+      "headline": "Bulging, cloudy eyes and spinning swimming",
+      "look": "Tilapia with one or both eyes bulging out (pop-eye) or turning milky white, often with a swollen belly and dark skin. Sick fish swim in circles, spiral or spin near the surface, then sink or lie still, and dead fish appear day after day, often in the hottest weeks.",
+      "action": "Reduce or stop feeding, remove dead fish every day, boost aeration and call a fish health officer or vet for laboratory confirmation before any treatment."
+    },
+    "detail": {
+      "aka": [
+        "Strep",
+        "Tilapia streptococcosis",
+        "Streptococcal septicaemia",
+        "Pop-eye disease (a common sign, not a separate disease)",
+        "Streptococcal meningoencephalitis"
+      ],
+      "summary": "Streptococcosis is a serious bacterial disease of farmed tilapia, caused mainly by Streptococcus agalactiae and Streptococcus iniae. The bacteria spread through the blood and attack the brain and eyes, so sick fish swim abnormally, develop bulging or cloudy eyes, and die. It is one of the most damaging tilapia diseases worldwide, especially in warm water, and it often hits larger fish close to harvest, when the farmer has already spent most of the money on feed. Early recognition and good water management can limit the losses.",
+      "cause": "The disease is caused by Streptococcus bacteria, mainly Streptococcus agalactiae (sometimes called Group B Strep) and Streptococcus iniae. These bacteria can live in pond water, mud and in apparently healthy carrier fish without causing obvious problems. When fish are stressed, for example by hot water, low oxygen, high ammonia from too much feed and waste, overcrowding or rough handling, their defences weaken and the bacteria enter the body, usually through the gut, gills or small skin wounds. Once in the blood (septicaemia means bacteria spreading in the blood), they multiply and travel to the brain, eyes, kidney, spleen and heart. Infection of the brain and its covering (meningoencephalitis) is what causes the spinning, circling and loss of balance. Infection inside and behind the eye causes fluid and swelling, so the eye bulges out (exophthalmia, or pop-eye) and the cornea turns cloudy. Fluid may also build up in the belly, making it look swollen. Some outbreaks are sudden with many deaths; others are slow, with a few fish dying every day for weeks.",
+      "spread": [
+        "Through the water: sick and dying fish shed huge numbers of bacteria, which spread through the pond, and from cage to cage in lakes and dams by water currents.",
+        "Dead and dying fish left in the pond or cage, because healthy fish nibble on them and swallow the bacteria.",
+        "Bringing in infected or carrier fingerlings from a hatchery that has the disease, which is one of the commonest ways it reaches a new farm.",
+        "Shared nets, buckets, hapas, boats, transport tanks and boots that move from an infected pond or cage to a clean one without cleaning and drying.",
+        "Water flowing from an infected pond into another pond, or wild fish and birds carrying infected fish between ponds.",
+        "Triggers that turn a hidden infection into an outbreak: water temperature above roughly 27–28 °C, low dissolved oxygen, high ammonia or nitrite, overstocking, overfeeding, and stress from grading, sorting, netting or transport."
+      ],
+      "atRisk": "Nile tilapia (Oreochromis niloticus) and other tilapia species are most at risk, along with some other warm-water fish. In Kenya and East Africa the highest risk is in intensive systems: cage farms on Lake Victoria and large dams, heavily stocked liner and concrete ponds, and recirculating tanks, where many fish share the same water. Streptococcus agalactiae often strikes larger, fast-growing fish (from fingerling grow-out up to market size), while Streptococcus iniae can also affect younger fish. Outbreaks are most common in the hot, dry months before the long rains and during any spell of hot, still weather, when water warms up and oxygen falls. Shallow ponds, ponds with no shade or aeration, ponds receiving heavy feeding, and farms that buy fingerlings from many different sources are at greater risk. Earthen ponds with low stocking can still be affected, but outbreaks there tend to be smaller.",
+      "signs": {
+        "early": [
+          "Fish eat less than usual and leave pellets uneaten, or the shoal is slow to come up at feeding time.",
+          "A few fish swim slowly or alone near the edges, at the surface or near water inlets, separate from the shoal.",
+          "Some fish turn darker in colour than the others.",
+          "Odd swimming in a few fish: short bursts of spinning, swimming on their side, tail-chasing or 'whirling' when disturbed.",
+          "One eye starting to bulge slightly or looking hazy, and sometimes small red spots around the eye, mouth, fin bases or gill covers.",
+          "A small but steady rise in the number of dead fish collected each morning, often larger fish."
+        ],
+        "advanced": [
+          "Marked pop-eye: one or both eyes bulging far out of the head, sometimes with blood inside the eye.",
+          "Eyes turning milky white or opaque, and some fish becoming blind; eyes may burst or be lost.",
+          "Strong spinning, spiral or C-shaped swimming, fish floating head-up or belly-up, then sinking and lying on the bottom.",
+          "Swollen, soft belly from fluid build-up, sometimes with a red, swollen vent (anal opening).",
+          "Curved or bent body in some fish, and bleeding at the base of fins or on the gill covers.",
+          "Daily deaths that keep going for days or weeks, or a sudden heavy die-off during very hot weather."
+        ]
+      },
+      "lookalikes": [],
+      "diagnosis": "A vet or fish health officer starts by looking at the pond or cage, the fish behaviour, the pattern of deaths, the water temperature and the water quality. Pop-eye with cloudy eyes and spinning in warm water strongly suggests streptococcosis, but other diseases look similar, so laboratory confirmation is important. The lab takes swabs or tissue from the brain, kidney, spleen and eye of freshly sick fish and grows the bacteria on culture plates; Streptococcus shows as small round bacteria in chains under the microscope. PCR (a DNA test) can identify the exact species, and an antibiotic sensitivity test shows which drugs will actually work, which is very valuable because resistance varies. Histology (looking at thin slices of tissue) may also be done. In Kenya, contact your County Fisheries or County Veterinary office, or institutions such as KMFRI (Kenya Marine and Fisheries Research Institute) and university or government veterinary labs. To help, the farmer should send 3–5 live sick fish (showing signs, not long dead) in a bag of pond water with air, or freshly dead fish chilled on ice but not frozen; record water temperature, oxygen if you can measure it, stocking numbers, feed used, recent handling or new fish, and daily death counts.",
+      "firstSteps": [
+        "Reduce feeding sharply or stop for a few days, because sick fish eat little, leftover feed rots and lowers oxygen, and the bacteria spread more easily when fish crowd at feeding; ask your fish health officer how long.",
+        "Remove dead and dying fish at least once a day, and bury them deep with lime away from water or burn them; never throw them back into the lake, a stream or another pond, and never feed them to other fish.",
+        "Improve water conditions: increase aeration or paddlewheel time, add fresh, clean, cooler water if available, add shade, and check temperature, oxygen and ammonia, especially early in the morning.",
+        "Stop all handling, grading, sorting, netting and transport of fish from affected ponds or cages until the vet advises, because stress makes the outbreak worse.",
+        "Do not move fish, water, nets or equipment from the affected unit to healthy ones; use separate nets and buckets, and wash and sun-dry equipment after use.",
+        "Wear gloves when handling sick or dead fish, avoid getting fish spines into cuts, and wash hands well with soap afterwards.",
+        "Keep a written record of daily deaths, signs seen, water temperature and feeding, and keep a few freshly sick fish for the lab.",
+        "Call a vet or fish health officer quickly, and do not buy or use antibiotics from the agrovet on your own, as the wrong drug wastes money and builds resistance."
+      ],
+      "vetTreatment": "Treatment must be decided and prescribed by a vet or qualified fish health professional, ideally after the bacteria have been identified and a sensitivity test done. Fish are usually treated with antibiotics mixed into feed (medicated feed), because injecting every fish is not practical in grow-out. Drug classes used internationally for tilapia streptococcosis include florfenicol, amoxicillin and other penicillins, and macrolides such as erythromycin; older drugs like oxytetracycline often work poorly against Streptococcus. Which drugs are legally allowed for food fish differs by country, so your vet will advise what is approved in Kenya. A major problem is that very sick fish stop eating, so they do not take in the medicated feed; treatment works best when started early, while most fish are still feeding. Antibiotics do not repair damaged eyes or brains, so blind or badly affected fish often still die or grow poorly. Putting antibiotics directly into pond or lake water is wasteful, pollutes the environment and encourages antimicrobial resistance, so it should not be done. Every antibiotic has a withdrawal period, a set time after treatment before fish can be harvested, sold or eaten, and this must be followed strictly. Alongside any drug, the vet will insist on better water quality, lower stocking, less stress and daily removal of dead fish, because these are what actually stop the outbreak. Expect deaths to continue for some days even with good treatment.",
+      "prevention": [
+        "Buy fingerlings only from licensed, reputable hatcheries with a good health record, ask about past disease problems, and avoid mixing fish from many different sources.",
+        "Quarantine new fish in a separate pond or tank for a few weeks where possible, watching them for abnormal swimming, eye changes or deaths before mixing them with your stock.",
+        "Keep stocking density within recommended levels for your system (pond, liner, cage or tank), since overcrowding is one of the biggest triggers.",
+        "Manage water quality: aerate, exchange water, avoid overfeeding, remove sludge, and measure dissolved oxygen, temperature and ammonia regularly, especially in hot months.",
+        "Protect fish from heat: use deeper ponds, partial shade, and extra aeration during hot spells, and in cages choose sites with good depth and water flow.",
+        "Avoid grading, sorting, netting and transporting fish during the hottest part of the day or the hottest season; do it in cool early mornings and handle fish gently.",
+        "Feed good-quality, properly stored feed in the right amounts, and reduce feeding when water is very hot or oxygen is low.",
+        "Remove dead fish daily, use separate equipment for each pond or cage group, disinfect and sun-dry nets and buckets, and between cycles drain, dry and lime earthen ponds.",
+        "Ask your fish health officer about vaccination: inactivated Streptococcus vaccines are used in tilapia in some countries, but availability and registration in Kenya are limited, so check what is approved and suited to the local strains."
+      ],
+      "impact": "Streptococcosis can cause heavy losses on Kenyan tilapia farms. Because it often strikes larger fish near market size, the farmer loses fish on which most of the feed money, the biggest cost in fish farming, has already been spent. Cage farms on Lake Victoria and intensive pond or tank units can lose a large share of a cycle in a bad outbreak, while smaller ponds may see a steady trickle of deaths that quietly eats into profit. Survivors often grow slowly, convert feed poorly, and fish with damaged eyes or bent bodies fetch lower prices or cannot be sold at all. Extra costs come from lab tests, medicated feed, aeration, fuel or electricity, and lost time. Fish under antibiotic withdrawal cannot be sold, which can delay harvest and upset contracts with traders, hotels or supermarkets. Repeated outbreaks can damage a farm's or hatchery's reputation and discourage buyers.",
+      "humanHealth": "Streptococcus iniae and some strains of Streptococcus agalactiae can infect people, though this is uncommon. Most human cases reported worldwide involved people who handled or cleaned live or raw fish and got a cut or a fish-spine prick on the hand, leading to painful skin and soft tissue infection; rarely the infection spreads more widely. A particular strain of Streptococcus agalactiae has been linked to eating raw freshwater fish in parts of Asia. To protect yourself, wear gloves when handling sick or dead fish, cover any cuts, avoid spine pricks, and wash hands well with soap and water. Cook fish thoroughly and do not eat raw fish from an affected farm. Do not sell or eat visibly sick fish. If you develop a red, swollen, painful hand or fever after handling fish, see a doctor and mention fish contact. If antibiotics are used, respect the withdrawal period so that drug residues do not end up in food.",
+      "outlook": "The outlook depends on how early the problem is spotted and how quickly stress is reduced. When deaths are noticed early, feeding is cut, water quality improved, dead fish removed daily and the vet confirms the cause and prescribes effective treatment, many fish in the pond or cage can be saved and deaths can slow within days to weeks. Individual fish with bulging or white eyes and strong spinning rarely recover fully, and blind survivors grow poorly. Outbreaks in very hot weather, crowded cages or ponds with low oxygen tend to be the most severe. Surviving fish can carry the bacteria, so the disease can return when the next stress or hot season comes, unless the farm improves biosecurity, stocking and water management.",
+      "faqs": [
+        {
+          "q": "Can I eat or sell fish from a pond with streptococcosis?",
+          "a": "Do not eat or sell fish that are visibly sick, have bulging or white eyes, or were found dead. Healthy-looking fish from an affected pond should be handled with gloves and cooked thoroughly, never eaten raw. If the fish have been given antibiotics, you must wait until the withdrawal period your vet gives you has passed before harvesting or selling any fish. Ask your fish health officer for advice before an emergency harvest."
+        },
+        {
+          "q": "Why does this disease appear when the weather is hot?",
+          "a": "Streptococcus bacteria grow faster in warm water, and outbreaks in tilapia are strongly linked to water temperatures above about 27–28 °C. Hot water also holds less oxygen, and fish eat and excrete more, so ammonia rises. Together these stress the fish and weaken their defences, allowing hidden bacteria to cause disease. That is why deeper water, shade, aeration and careful feeding matter most in the hottest months."
+        },
+        {
+          "q": "Can I just buy antibiotics from the agrovet and put them in the pond?",
+          "a": "No. Pouring antibiotics into pond or lake water wastes most of the drug, harms the environment and helps bacteria become resistant, so the drugs stop working for fish and even people. Many common antibiotics also work poorly against Streptococcus. Treatment should be prescribed by a vet, usually as medicated feed, ideally after a lab test shows which drug works, and the withdrawal period must be followed."
+        },
+        {
+          "q": "Should I empty the pond and start again?",
+          "a": "Not always. In many outbreaks, cutting feed, improving water and removing dead fish daily, with vet-guided treatment, can save much of the stock. If losses are very heavy or the fish are near market size, your vet may suggest an early harvest of healthy fish. At the end of the cycle, draining, drying and liming an earthen pond, and cleaning and drying cages and nets, helps reduce the bacteria before restocking."
+        },
+        {
+          "q": "Will the disease come back next cycle?",
+          "a": "It can, because the bacteria may survive in carrier fish, mud, equipment and nearby farms, especially in shared lakes. Your chances improve if you buy fingerlings from a reliable hatchery, avoid overstocking, keep good water quality, handle fish only in cool weather, remove dead fish daily and keep equipment separate. Keeping records of each outbreak helps you and your fish health officer spot risky times and conditions."
+        },
+        {
+          "q": "Is there a vaccine for tilapia streptococcosis in Kenya?",
+          "a": "Vaccines against Streptococcus agalactiae and Streptococcus iniae are used for tilapia in some other countries, usually given by injection or by dipping fish. Their availability and registration in Kenya are limited, and a vaccine works best when it matches the local strain. Ask your County Fisheries officer, vet or KMFRI whether an approved vaccine is available, and remember vaccination only works well alongside good management."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up side view of a live Nile tilapia held just above pond water, showing one strongly bulging cloudy white eye and a slightly swollen belly, with a murky green pond in the soft-focus background, natural daylight, realistic photograph.",
+    "seoDescription": "Streptococcosis in tilapia: pop-eye, cloudy eyes, spinning and deaths in warm water. Learn signs, first steps, vet treatment and prevention for Kenyan fish farms."
+  },
+  "columnaris": {
+    "card": {
+      "headline": "Grey-white saddle patch across fish back",
+      "look": "Pale grey, white or yellowish patches appear on the skin, often in a band across the back behind the top fin like a saddle. The fins look ragged and eaten away, and the gills may show pale or brown dead areas.",
+      "action": "Stop all handling and movement of fish, check and improve water oxygen and quality straight away, and call your County Fisheries Officer or a fish vet."
+    },
+    "detail": {
+      "aka": [
+        "Saddleback disease",
+        "Cotton-wool disease",
+        "Cotton-mouth disease",
+        "Fin rot (when mainly on fins)",
+        "Flavobacteriosis"
+      ],
+      "summary": "Columnaris is a bacterial disease of the skin, fins and gills of freshwater fish, caused by Flavobacterium columnare and closely related bacteria. It usually strikes a few days after fish have been handled, graded, transported or stressed by poor water, warm temperatures or crowding. In Kenya it affects tilapia, African catfish, trout and ornamental fish. It can spread through a pond or tank quickly and kill many fish, especially fingerlings, so early action on water quality and stress makes a big difference.",
+      "cause": "The cause is a long, thin, rod-shaped bacterium called Flavobacterium columnare. Scientists have recently split it into several closely related species, but they cause the same disease and farmers can treat them as one problem. These bacteria live naturally in most freshwater ponds, rivers, dams and on the fish themselves, so their presence alone does not mean disease. Trouble starts when fish are stressed or their protective skin slime (mucus) is damaged, for example by rough netting, crowding in transport tanks, low oxygen, high ammonia (a toxic waste from fish droppings and rotting feed) or warm water. The bacteria then stick to the skin, fins and gills, multiply and produce enzymes that break down tissue. On the skin this forms pale, dead patches that may become shallow ulcers. On the fins the edges rot away. On the gills, which are the organs fish use to breathe, the bacteria destroy the delicate gill filaments so the fish cannot take in enough oxygen or get rid of waste. Gill damage is often what kills the fish, sometimes before skin lesions are obvious. Damaged skin also lets water and salts leak in and out of the body and lets other germs in, so secondary infections with bacteria such as Aeromonas or water moulds are common.",
+      "spread": [
+        "Handling, netting, grading, sorting and transporting fish rub off the protective mucus and are the most common trigger, with disease often showing two to five days later.",
+        "The bacteria pass from fish to fish through the water, so one sick fish in a crowded tank or pond can quickly infect the rest.",
+        "Dead and dying fish left in the water release large numbers of bacteria and should be seen as a major source of infection.",
+        "Shared nets, buckets, hapas, transport tanks and boots carry the bacteria from one pond to another when they are not cleaned and dried.",
+        "Buying in fingerlings from a hatchery with poor hygiene, or mixing new fish with your stock without quarantine, can bring in the disease.",
+        "Warm water, especially in the hot dry months before the long rains and in shallow ponds or plastic-lined tanks in full sun, favours fast growth of the bacteria.",
+        "Poor water quality such as low dissolved oxygen, high ammonia or nitrite, heavy algae die-off, muddy water after heavy rain and overfeeding all weaken fish and make outbreaks more likely.",
+        "Water flowing from an infected pond into others, or from rivers and dams with wild fish, can carry the bacteria onto the farm."
+      ],
+      "atRisk": "All freshwater fish can be affected, but in Kenya the disease is most often seen in Nile tilapia, African catfish (Clarias, locally called kambare), rainbow trout in the cold-water farms of Central and Rift Valley highlands, and aquarium or ornamental fish such as goldfish and koi. Fry and fingerlings are the most vulnerable because their skin and gills are delicate, but adult brood fish also suffer after spawning or handling. Risk is highest just after stocking, transport, grading, harvesting part of a pond, or treatment baths. Warm conditions increase risk, so tilapia and catfish ponds in hot lowland areas, shallow ponds and tanks in direct sun, and trout farms during unusually warm spells are especially exposed. Intensive systems such as high-density tanks, recirculating systems and cages, as well as small backyard ponds that are overstocked, overfed or poorly aerated, see more outbreaks than well-managed, lightly stocked earthen ponds.",
+      "signs": {
+        "early": [
+          "Fish gather near the water inlet or at the surface and gulp air, especially in the early morning when oxygen is lowest.",
+          "Fish eat less or stop coming to feed, and leftover pellets are seen in the pond.",
+          "Small pale, greyish or whitish spots or patches appear on the skin, head, mouth or around the fins, sometimes with a yellowish tinge.",
+          "Fin edges look frayed, white-edged or slightly eaten away, especially the tail and top fin.",
+          "The body may look dull or covered in extra slime, and fish may rub against the pond sides or bottom.",
+          "Gills, when gently checked on a caught fish, may have pale, whitish or brownish-yellow patches instead of a healthy deep red colour.",
+          "A few fish die each day, often those that were handled most or are weakest."
+        ],
+        "advanced": [
+          "A clear pale or grey band of damaged skin forms across the back behind the dorsal (top) fin, giving the classic saddle-back look.",
+          "Patches turn into shallow, open sores with yellowish or orange edges, and scales may fall off around them.",
+          "Fins are badly eroded down to the base, and the tail may be almost gone.",
+          "White, fluffy-looking or cotton-like growth appears around the mouth and lips, which is why it is called cotton-mouth.",
+          "Gills are badly eaten away, swollen or covered in yellow-brown debris, and fish breathe fast with flared gill covers.",
+          "Fish become weak, swim slowly or lie near the edges, and lose balance.",
+          "Deaths rise sharply over a few days, and in fingerlings a large part of the batch can be lost if nothing is changed."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Water mould (Saprolegnia, fungal infection)",
+          "howToTell": "Water mould forms soft, fluffy, cotton-wool tufts that float out in the water and are usually pure white or turn brown-green as they trap dirt. Columnaris patches are flatter, greyer or yellowish and lie on the skin rather than standing out as long fibres. The two often occur together, so a vet or fisheries officer using a microscope is the reliable way to tell them apart."
+        },
+        {
+          "name": "White spot disease (Ich, Ichthyophthirius parasite)",
+          "howToTell": "White spot shows as many tiny, separate white dots like grains of salt or sugar scattered over the body and fins. Columnaris causes larger, spreading patches, saddle-shaped bands and rotting fins rather than neat pinhead spots."
+        },
+        {
+          "name": "Motile Aeromonas septicaemia (red sore or haemorrhagic disease)",
+          "howToTell": "Aeromonas infection usually causes red, bloody-looking ulcers, red streaks on fins and belly, a swollen belly and bulging eyes. Columnaris lesions are mainly pale, grey or yellowish with eroded fins and gills. Aeromonas can also invade columnaris sores, so mixed signs are possible and lab tests help."
+        },
+        {
+          "name": "Water quality problems (low oxygen, ammonia or nitrite poisoning)",
+          "howToTell": "When the water itself is the problem, many fish of all sizes gasp at the surface at once, often at dawn or after an algae crash, and there may be no skin patches at all. Columnaris usually starts in a few fish with visible skin, fin or gill lesions and spreads over days. Testing the water with a simple kit settles the question, and poor water can trigger columnaris, so both may be present."
+        }
+      ],
+      "diagnosis": "A vet, fisheries officer or aquaculture laboratory usually starts by asking about recent handling, stocking, transport, feeding and water temperature, and by watching how the fish behave in the pond. They then catch a few sick but still living fish and look closely at the skin, fins and gills. The quickest test is a wet mount: a small scraping of slime or gill tissue is put on a glass slide and looked at under a microscope. Columnaris bacteria appear as long, thin, gliding rods that gather into characteristic columns or haystack-like clumps, which gives the disease its name. To confirm, samples can be grown on special low-nutrient culture plates, where the bacteria form yellowish, spreading colonies, and some laboratories use PCR (a test that detects the germ's genetic material) to identify the exact species. Labs may also test which antibiotics will work, which is important for responsible use. Water will be tested for temperature, dissolved oxygen, ammonia, nitrite and pH. In Kenya, help can be sought from your County Fisheries or Veterinary Officer, the Kenya Fisheries Service, KMFRI aquaculture research centres such as Sagana, and university or government veterinary laboratories. To prepare, keep a written record of when signs began, daily deaths, feeding, recent handling or new stock and any treatments used. Have five or more live, sick fish ready in a clean bucket of pond water with an air stone if possible, because fish that have been dead for hours are of little use for testing. Note water test results and the source of your fingerlings.",
+      "firstSteps": [
+        "Stop all netting, grading, sorting, sampling and transport of fish from the affected pond or tank, because every handling makes the disease worse and spreads it.",
+        "Improve oxygen immediately by running aerators or paddle wheels, increasing water flow, or adding fresh, clean, well-oxygenated water of a similar temperature to the pond.",
+        "Test the water for oxygen, ammonia, nitrite, pH and temperature if you have a kit, and write the results down to share with the fisheries officer or vet.",
+        "Reduce feeding or stop it for a day or two, since sick fish eat little and uneaten feed rots, lowers oxygen and raises ammonia.",
+        "Provide shade over small ponds and tanks during hot weather, for example with shade net, to help keep the water cooler.",
+        "Remove dead and dying fish at least once or twice a day, and bury them deeply with lime or burn them away from water sources, rather than throwing them into rivers or feeding them to other animals.",
+        "Keep separate nets, buckets and boots for the sick pond, and wash and sun-dry or disinfect equipment before using it anywhere else on the farm.",
+        "Do not move fish from the sick pond into other ponds and do not sell or give away live fish until the problem is under control.",
+        "Record daily deaths, feeding, water results and any changes in behaviour, and call your County Fisheries Officer or a fish vet for advice before using any chemical or medicine."
+      ],
+      "vetTreatment": "Treatment of columnaris always begins with fixing the underlying stress, because the bacteria are already present in most water and the disease returns if conditions stay poor. A vet or fisheries officer will usually advise better aeration, partial water changes, lower stocking density, reduced feeding, removal of organic waste and, where possible, cooler water. Depending on the species, the system and what is legally available, they may advise external treatments such as baths or dips using salt, potassium permanganate or hydrogen peroxide to reduce bacteria on the skin and gills. These chemicals can easily harm or kill fish if the strength, water quality or timing is wrong, and some species, especially catfish and fry, are very sensitive, so they must only be used under professional guidance and never by guesswork. In severe or spreading outbreaks, a vet may prescribe antibiotics mixed into feed, such as oxytetracycline or florfenicol, where these are registered for fish. Medicated feed only works if fish are still eating, so it is most useful early in an outbreak. Antibiotics must be prescribed by a vet, ideally after a lab test shows which drug will work, and the full course must be followed. Using antibiotics casually in ponds wastes money, pollutes the water, harms beneficial bacteria and builds antimicrobial resistance, where medicines stop working for fish and people. Any drug used has a withdrawal period, a set time during which treated fish must not be harvested or sold for food, and this must be strictly respected. Farmers should expect losses to slow within days once water quality improves and treatment starts, but some badly damaged fish will still die, and survivors need time and good conditions to heal their skin and fins.",
+      "prevention": [
+        "Handle fish as little and as gently as possible, use soft knotless nets, keep fish in water rather than in the air, and avoid grading or moving them during the hottest part of the day or season.",
+        "Before and after transport or stocking, give fish clean, well-aerated water, avoid overcrowding in transport containers and allow them to settle without feeding heavily for the first day.",
+        "Keep stocking density within what your pond, tank or cage and aeration can support, as advised by your fisheries extension officer.",
+        "Maintain good water quality by testing regularly, using aeration where needed, exchanging water, removing sludge between cycles and avoiding sudden changes in temperature or pH.",
+        "Feed a good-quality, correctly sized fish feed in amounts the fish clear within a few minutes, and store feed dry and cool so it does not go mouldy or lose vitamins, which weakens immunity.",
+        "Buy fingerlings only from certified, reputable hatcheries, ask about their disease history, and quarantine new fish in a separate tank for observation before mixing them with your stock.",
+        "Keep separate equipment for each pond or disinfect nets, buckets and hapas between uses, and dry ponds and treat them with agricultural lime between production cycles.",
+        "Provide shade or deeper water in hot areas, and plan harvesting, grading and restocking for cooler months or early mornings.",
+        "Remove dead fish every day, keep records of deaths and water quality, and act early when you notice fish gasping, off-feed or showing pale patches."
+      ],
+      "impact": "Columnaris can cause heavy losses on Kenyan fish farms, especially among fingerlings just after stocking, which means farmers lose the money spent on seed, transport and early feed. Even when deaths are moderate, sick fish stop eating and grow slowly, so harvests are delayed and fish reach market below the expected size. Scarred, fin-damaged fish fetch lower prices or may be rejected by buyers, hotels and supermarkets that want clean-looking fish. Treatment, extra aeration, water pumping and lab tests add cost, and where antibiotics are used, the withdrawal period can delay sales. Hatcheries that suffer repeated outbreaks lose customers and reputation. For smallholders who joined fish farming through county or national programmes, a single bad outbreak can wipe out a season's profit, which is why prevention through gentle handling and good water management pays off.",
+      "humanHealth": "Columnaris is not considered a disease that infects people, and properly cooked fish from an affected pond is not known to cause the illness in humans. However, sick and dying fish often carry other germs, so wear gloves or wash hands well with soap after handling them and cover any cuts on your hands. Do not eat or sell fish that died of disease. If your fish have been treated with antibiotics or chemicals, strictly follow the withdrawal period given by the vet before harvesting, eating or selling them, because drug residues in fish meat can harm consumers and contribute to antimicrobial resistance.",
+      "outlook": "The outlook depends mostly on how early the problem is spotted and how quickly the stress behind it is corrected. When water quality, oxygen and crowding are fixed early and professional treatment follows, losses often slow down within days and most fish recover, with fins and skin regrowing over the following weeks. Outbreaks in fry and fingerlings, those with severe gill damage, and those in very warm or badly polluted water carry a poorer outlook, and many affected fish may die. Fish that survive can carry the bacteria and remain at risk of relapse if stressed again, so continued good management is essential. Repeated outbreaks on the same farm are a sign that handling, stocking density or water management needs to change.",
+      "faqs": [
+        {
+          "q": "Why do my fish get sick a few days after I move or sort them?",
+          "a": "Netting and handling rub off the protective slime layer and cause tiny injuries to the skin and gills, and crowding during transport adds stress and lowers oxygen. Columnaris bacteria already live in most ponds and take advantage of this damage, so signs often appear two to five days later. Gentle handling, moving fish in cool parts of the day, avoiding overcrowded containers and giving clean, well-aerated water afterwards greatly reduce the risk."
+        },
+        {
+          "q": "Is this the same as fungus on my fish?",
+          "a": "Not exactly. Columnaris is a bacterial disease that causes flat grey, white or yellowish patches, saddle-shaped bands and rotting fins and gills. True fungus, more correctly a water mould called Saprolegnia, forms long fluffy cotton-like tufts. The two can look alike and often appear together because water mould grows on damaged skin. A quick microscope check by a fisheries officer or vet tells them apart, and the right treatment differs, so it is worth getting it confirmed."
+        },
+        {
+          "q": "Can I just add antibiotics from the agrovet to the pond water?",
+          "a": "No. Pouring antibiotics into pond water is wasteful, rarely reaches the right level to work, pollutes the environment and kills useful bacteria in the pond. It also builds antimicrobial resistance, so medicines stop working in future for fish, livestock and people. If antibiotics are needed, a vet will prescribe a suitable product, usually in feed, and tell you the withdrawal period before the fish can be eaten or sold. Fixing water quality and stress is always the first and most important step."
+        },
+        {
+          "q": "Is salt safe to use for columnaris?",
+          "a": "Salt baths are a common treatment for many freshwater fish and can help reduce bacteria on the skin and support the fish's salt balance. But the correct strength and time vary with species, fish size and water conditions, and catfish, fry and some ornamental fish can be harmed by the wrong strength. Ask your fisheries officer or a fish vet to guide you, test on a few fish first if advised, and always watch fish closely during any bath."
+        },
+        {
+          "q": "Can I eat or sell fish from a pond with columnaris?",
+          "a": "Columnaris is not known to infect people, so healthy-looking fish from the pond that have not received any medicine can be eaten after proper cleaning and cooking. Do not eat or sell fish that died of disease or look badly diseased, as other germs may be present and buyers will reject them. If any antibiotic or chemical treatment was used, you must wait the full withdrawal period your vet gives before harvesting for food."
+        },
+        {
+          "q": "Will the disease come back after the outbreak ends?",
+          "a": "It can. The bacteria stay in the water and on surviving fish, so any new stress such as hot weather, overcrowding, low oxygen or rough handling can trigger another outbreak. Between cycles, drain and dry the pond, remove sludge and apply agricultural lime, clean all equipment, buy fingerlings from a reliable hatchery and keep stocking and feeding at sensible levels. Regular water testing and gentle handling are the best protection."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "A live Nile tilapia swimming in clear shallow pond water, showing a distinct pale grey-white saddle-shaped band of damaged skin across its back just behind the dorsal fin and slightly frayed fin edges, natural daylight, realistic close-up photograph.",
+    "seoDescription": "Columnaris in tilapia, catfish and trout: spot grey-white saddle patches and rotting fins early, fix water quality, act fast and prevent outbreaks in Kenya."
+  },
+  "saprolegnia": {
+    "card": {
+      "headline": "White cotton-wool tufts on skin and eggs",
+      "look": "Fluffy white or grey patches, like wet cotton wool, grow on the fish's body, fins, gills or around wounds. In hatcheries, eggs become covered in a fuzzy white halo and may clump together. Older patches often turn brown or greenish as they trap mud and algae.",
+      "action": "Remove dead fish and dead eggs at once, check and improve water quality, stop all unnecessary handling, and call your County Fisheries Officer or a vet with fish experience for advice."
+    },
+    "detail": {
+      "aka": [
+        "Saprolegniasis",
+        "Water mould disease",
+        "Cotton wool disease (also used loosely for a bacterial disease, columnaris)",
+        "Winter fungus",
+        "Egg fungus",
+        "Ukungu wa samaki (Swahili: fish mould)"
+      ],
+      "summary": "Saprolegniasis is an infection caused by water moulds, mainly Saprolegnia, that grow as cotton-wool-like tufts on the skin, fins, gills and eggs of fish. It almost always attacks fish that are already injured, stressed or weak, and dead or unfertilised eggs in hatcheries. It matters because it can spread from dead eggs to healthy ones and wipe out a batch, and in ponds it can turn small wounds into deep sores that kill fish. In Kenya it is most often seen during the cold months and in highland farms, after rough handling, transport or spawning.",
+      "cause": "Saprolegnia is a water mould. It looks and behaves like a fungus, but scientists class it as an oomycete, a separate group of organisms. It lives naturally in almost all fresh water, ponds, rivers and tanks, feeding on dead plant and animal matter. Healthy fish are protected by a layer of slime (mucus) and intact skin and scales, so the mould usually cannot get a hold. When that protective layer is damaged, for example by netting, rough handling, fighting, bird attacks, parasites, bacterial sores or poor water, the mould's tiny swimming spores settle on the damaged spot and germinate. They grow fine threads (called hyphae) that spread across the skin and push into the flesh underneath. This destroys the skin surface, so the fish loses body salts and takes in too much water, which upsets its internal balance. If the gills are affected, the fish struggles to breathe. On eggs, the mould first grows on dead or unfertilised eggs, then its threads spread out and smother nearby healthy eggs, cutting off oxygen. Cool water favours the mould and also slows the fish's immune system, which is why the problem peaks when temperatures drop.",
+      "spread": [
+        "Spores are already present in almost all fresh water, so the disease is triggered mainly by injury and stress rather than simply 'caught' from another farm.",
+        "Rough handling during netting, sorting, grading, weighing or transport scrapes off slime and scales and creates entry points for the mould.",
+        "Sudden drops in water temperature, such as during the cold season (roughly June to August) or when cold rain or borehole water floods a pond, weaken the fish and favour mould growth.",
+        "Dead fish and dead or unfertilised eggs left in the water grow large amounts of mould and release huge numbers of spores that then attack live fish and eggs.",
+        "Poor water quality, including low oxygen, high ammonia from overfeeding or overstocking, and dirty water full of organic matter, stresses fish and feeds the mould.",
+        "Wounds from fighting, cannibalism in catfish, predator birds, otters, monitor lizards and parasites such as anchor worm or lice open the skin for infection.",
+        "Spawning stress and hormone-induced breeding leave broodstock thin-skinned and run-down, so they often develop mould after stripping.",
+        "Contaminated nets, buckets, hatchery trays and water shared between tanks can carry spores and infected material from one unit to another."
+      ],
+      "atRisk": "Fish eggs and newly hatched fry in hatcheries are at the highest risk, especially catfish and trout eggs incubated in trays or jars where dead eggs are not removed. Rainbow trout farmed in the cold highland rivers around Mount Kenya, the Aberdares and parts of the Rift Valley are very susceptible because their water is cool all year. Nile tilapia and African catfish in ponds are mostly affected during the cold season, in high-altitude counties, and after handling, transport or stocking. Broodstock after spawning, fingerlings just delivered from a hatchery, and fish in overstocked or poorly managed ponds and tanks are all more likely to suffer. Farms with muddy, unmanaged ponds, little water exchange, overfeeding, or frequent harvesting and sorting see more cases.",
+      "signs": {
+        "early": [
+          "Small white or grey fluffy spots, like a thin layer of cotton wool, appear on the skin, fins, tail or around the mouth and eyes.",
+          "The fluffy growth often starts at the edge of a wound, a damaged fin or a spot where scales have been lost after netting.",
+          "When the fish is lifted out of water the tufts collapse into a slimy, flat, greyish film, then fluff up again when put back.",
+          "Affected fish may rub against the pond sides or bottom and swim alone near the edges or the water inlet.",
+          "Fish eat less than usual and react slowly when feed is thrown in.",
+          "In hatchery trays or jars, dead eggs turn opaque white and develop a fine fuzzy halo of threads around them."
+        ],
+        "advanced": [
+          "The patches spread and join into large areas covering the body, head or gills, sometimes looking like a woolly coat.",
+          "Older tufts turn brown, grey or greenish because they trap mud, algae and debris.",
+          "Fins become ragged and eroded, and pale or reddish sores appear under the mould when it comes away.",
+          "Infected gills look pale and clogged with fluffy growth, and the fish gasps at the surface.",
+          "Fish lose balance, lie on their side, stop feeding completely and become thin.",
+          "Deaths increase over several days, usually among fish that were already injured or weak.",
+          "In hatcheries, mould threads join eggs together into fuzzy mats, and healthy eggs inside the clump die."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Columnaris (bacterial 'cotton wool' or saddleback disease)",
+          "howToTell": "Columnaris is caused by bacteria, not mould. Patches are usually flatter, yellowish-white or greyish and often form a band across the back (a 'saddle'), with mouth and gill rot. It is more common in warm water, while Saprolegnia favours cool water. Under a microscope, a vet or fisheries officer sees bacteria instead of the long branching threads of mould, and the two are treated differently."
+        },
+        {
+          "name": "White spot (Ich, Ichthyophthirius)",
+          "howToTell": "White spot shows as many small, separate, pinhead-sized white dots scattered over the body and fins, like grains of salt or sugar. There is no fluffy, hairy growth. Saprolegnia forms larger soft tufts, usually starting at a wound."
+        },
+        {
+          "name": "Excess mucus from poor water or parasites",
+          "howToTell": "Fish irritated by ammonia, low pH or skin parasites may produce a cloudy, greyish slime layer over the whole body. This film is smooth and not fluffy, and it does not form cotton-like threads in the water. A skin scraping under a microscope helps tell them apart."
+        },
+        {
+          "name": "Dead or unfertilised eggs without mould",
+          "howToTell": "Dead eggs turn white and opaque but at first are smooth and clean. Only when Saprolegnia grows on them do they get a fuzzy halo of fine threads. Both should be removed quickly, because clean dead eggs soon become mouldy."
+        }
+      ],
+      "diagnosis": "A vet, County Fisheries Officer or aquaculture specialist usually suspects Saprolegnia from the typical cotton-wool appearance, the cool season and a recent history of handling, transport or spawning. To confirm, they take a small sample of the fluffy material or a skin scraping and look at it under a microscope: water mould shows long, branching threads without cross-walls, often with spore sacs at the tips. This also rules out bacteria such as columnaris and parasites, which often occur at the same time. Samples may be sent to a laboratory such as a county veterinary lab or KMFRI (Kenya Marine and Fisheries Research Institute) for culture and to identify secondary bacterial infection. The officer will also test water quality, especially temperature, dissolved oxygen, ammonia and pH, because poor water is often the real root cause. To help, the farmer should keep a few live affected fish in a bucket of pond water, keep a record of when deaths started, how many fish have died each day, recent handling or stocking, feeding amounts, water source and any changes in weather, and, if possible, take clear photos of the affected fish and eggs.",
+      "firstSteps": [
+        "Remove all dead and dying fish and all dead or mouldy eggs at once, and bury them away from the water or dispose of them as your fisheries officer advises; never throw them back into a pond or stream.",
+        "Stop all netting, sorting, grading and transport of the affected fish unless absolutely necessary, because every handling causes new skin damage.",
+        "Check water quality: improve aeration or water flow to raise oxygen, stop overfeeding, and remove uneaten feed and excess debris from tanks and ponds.",
+        "Where you can, move badly affected fish into a separate tank or hapa (net cage) so they do not shed huge numbers of spores into the main pond.",
+        "Reduce feeding to what the fish actually eat within a few minutes, as uneaten feed rots and worsens water quality.",
+        "Clean and disinfect nets, buckets, hatchery trays and other equipment, and use separate equipment for affected units.",
+        "Record daily deaths, water temperature and what you have observed, and take photos to show the expert.",
+        "Contact your County Fisheries Officer, a vet with fish experience or your hatchery supplier for advice before using any salt bath or chemical, as the right product and strength depend on the fish species, size and water."
+      ],
+      "vetTreatment": "Treatment focuses on killing or slowing the mould on the fish or eggs and, more importantly, fixing the stress that allowed it to grow. Expert advice is essential, and any chemical treatment should be chosen and prescribed by a vet or qualified fisheries officer. A common first approach for table fish is a salt (sodium chloride) bath or longer exposure to salt in the water, which helps fish keep their body salt balance and discourages mould; the correct strength and time differ greatly between tilapia, catfish and trout, so it must not be guessed. For hatchery eggs and some fish, approved disinfectants such as hydrogen peroxide, and in some places formalin or bronopol-based products, may be used as short baths under strict guidance, since too strong a dose can kill eggs and fish. Malachite green was once widely used but is banned for food fish in many countries because it leaves harmful residues, and it should not be used on fish meant for eating. Antibiotics do not kill water moulds and will not cure Saprolegnia; they are only considered if a vet confirms a bacterial infection alongside the mould, and must be used responsibly to avoid antimicrobial resistance. Where any drug or chemical is used, the vet will give a withdrawal period, a time during which treated fish must not be harvested or sold for food. Fish with mild, early patches often recover once handling stops and water improves, while fish with heavy gill or whole-body infection may not survive and are best removed.",
+      "prevention": [
+        "Handle fish as little and as gently as possible: use soft, knotless nets, wet your hands, keep fish in water during sorting and avoid crowding them in buckets or nets.",
+        "Keep good water quality by not overstocking, feeding only what fish eat, maintaining aeration or water flow, and checking oxygen, ammonia and temperature regularly where you can.",
+        "Remove dead fish daily and, in hatcheries, remove dead and unfertilised eggs at least once a day using a soft tool or pipette.",
+        "In hatcheries, use clean, well-oxygenated water, keep egg trays and jars clean, and ask your hatchery adviser about approved routine egg disinfection.",
+        "Plan handling, harvesting, grading and transport for warmer parts of the day and avoid them in the coldest weeks when possible.",
+        "Avoid sudden temperature changes by acclimatising new fish slowly and protecting ponds from large inflows of cold rain or borehole water.",
+        "Quarantine new fingerlings or broodstock in a separate tank for a period before mixing them with your stock, and buy only from reputable certified hatcheries.",
+        "Feed a good-quality, balanced fish feed stored dry and away from heat to keep fish strong, and separate catfish by size to reduce biting.",
+        "Control predators such as birds and otters with netting or bird lines, and treat skin parasites early with expert advice so wounds do not form.",
+        "Between production cycles, drain, dry and lime ponds where appropriate, and regularly clean and disinfect nets, tanks and equipment."
+      ],
+      "impact": "On a Kenyan fish farm, Saprolegnia can cause serious losses in hatcheries, where whole batches of catfish, tilapia or trout eggs can be lost if dead eggs are not removed, cutting fingerling supply and income. In grow-out ponds and tanks, deaths after handling, transport or stocking reduce the number of fish that reach market size. Sick fish stop feeding and grow slowly, so the farmer spends more on feed for less weight gained. Fish with mould patches, sores and ragged fins look unattractive and may be rejected or fetch lower prices at local markets and hotels. Broodstock losses after spawning are expensive because good breeding fish take time and money to replace. There are also extra costs for treatment, labour and expert visits, and repeated outbreaks can damage a hatchery's reputation with customers.",
+      "humanHealth": "Saprolegnia water mould is not known to infect people, so normal handling of affected fish carries no direct infection risk; washing hands after handling fish and pond water is still good hygiene. The main human concern comes from the chemicals used to treat fish. Some products, such as formalin and strong hydrogen peroxide, irritate skin, eyes and lungs, so wear gloves and eye protection and use them only in well-ventilated areas as instructed. Fish treated with any chemical must not be harvested or sold before the withdrawal period given by the vet or fisheries officer has passed, and banned products such as malachite green must never be used on food fish because they can leave harmful residues.",
+      "outlook": "The outlook depends on how early the problem is noticed, how much of the fish is covered and whether the underlying cause is fixed. Fish with small patches on the skin or fins often recover once handling stops, water quality improves and temperatures rise, sometimes with the help of expert-guided salt or disinfectant treatment. Fish with heavy infection of the gills, head or large parts of the body, or with deep sores and bacterial infection, often die even with treatment. Eggs that are already covered in mould cannot be saved, but the rest of the batch can be protected by removing dead eggs quickly. Because the mould is always present in water, outbreaks will return unless handling, water quality and hatchery hygiene are improved.",
+      "faqs": [
+        {
+          "q": "Is this the same as 'cotton wool disease'?",
+          "a": "Farmers often use 'cotton wool disease' for any fluffy white growth on fish, but two different problems can look similar. Saprolegnia is a water mould that forms soft, hairy tufts, usually in cool water and on wounds. Columnaris is a bacterial disease that forms flatter, yellowish-white patches, often in warm water. They are treated differently, so it is worth having a fisheries officer or vet check a sample under a microscope."
+        },
+        {
+          "q": "Can I eat or sell fish that had this mould?",
+          "a": "The mould itself is not known to harm people, but badly affected fish look poor and should not be sold. Dead or dying fish should be removed and disposed of properly, not sold. If fish have been treated with any chemical, you must wait for the full withdrawal period advised by the vet or fisheries officer before harvesting or selling them for food."
+        },
+        {
+          "q": "Can I just add salt to the pond to cure it?",
+          "a": "Salt is commonly used to help fish with water mould, but it is not a guaranteed cure and the right amount depends on the fish species, size and whether it is a short bath or a whole pond. Too much salt can kill fish, especially catfish and trout, and salting a large earthen pond can be costly and harmful to plants. Always ask your County Fisheries Officer or a vet for the correct method before using salt, and fix handling and water problems at the same time."
+        },
+        {
+          "q": "Why does it appear mostly in the cold season?",
+          "a": "Saprolegnia grows well in cool water, while fish like tilapia and catfish become sluggish and their immune defences slow down when water is cold. In Kenya this often happens around June to August and in highland counties. Trout farms have cool water all year, so they must be careful all the time. Avoiding handling during the coldest weeks and keeping water clean reduces the risk."
+        },
+        {
+          "q": "Should I use antibiotics?",
+          "a": "No, not on your own. Antibiotics do not kill water moulds, so they will not cure Saprolegnia. A vet may only prescribe an antibiotic if tests show a bacterial infection as well. Using antibiotics without need wastes money, can leave residues in fish meant for food, and helps create resistant bacteria that are harder to treat in future."
+        },
+        {
+          "q": "Will it spread to my other ponds?",
+          "a": "The mould spores are already present in most fresh water, so the disease is mostly triggered by stress and injury. However, dead fish, mouldy eggs and dirty equipment release huge numbers of spores and can increase infection in other units. Removing dead fish and eggs quickly, using separate or disinfected nets and buckets, and not moving sick fish between ponds helps protect the rest of your farm."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a live Nile tilapia swimming in clear pond water, with soft white cotton-wool-like fluffy tufts growing on its tail fin and lower flank.",
+    "seoDescription": "Saprolegnia water mould in fish: spot cotton-wool tufts on tilapia, catfish, trout and eggs, act fast, and prevent it with gentle handling and clean water."
+  },
+  "white-spot": {
+    "card": {
+      "headline": "Tiny white salt-like spots on fish",
+      "look": "Fish have many small white dots, like grains of salt or sugar, scattered over the skin, fins and gills. They often flash, rub against the pond bottom or tank walls, and gasp near the surface.",
+      "action": "Stop all fish movement, boost aeration and clean water flow, and call a vet or County Fisheries Officer quickly, because untreated white spot can kill many fish within days."
+    },
+    "detail": {
+      "aka": [
+        "Ich",
+        "Ick",
+        "White spot disease",
+        "Ichthyophthiriasis",
+        "Madoa meupe (Swahili description)"
+      ],
+      "summary": "White spot, often called Ich, is a common parasitic disease of freshwater fish caused by a single-celled parasite that burrows into the skin and gills. It shows as small white spots and causes irritation, breathing difficulty and death, especially in young fish. In Kenya it affects tilapia, African catfish, carp and ornamental fish in ponds, tanks, hatcheries and aquariums. It spreads fast in crowded, stressed fish, so early action can save a whole stock.",
+      "cause": "White spot is caused by Ichthyophthirius multifiliis, a protozoan. That means a tiny single-celled organism, too small to see one by one without a microscope. It is covered in fine hairs called cilia that help it move. The feeding stage, called the trophont, burrows under the outer skin and gill lining and feeds on the fish's cells and body fluids. The fish's body forms a small blister around each parasite, and that is the white spot you see. When mature, the parasite breaks out and drops off. On the pond floor, plants or tank walls it forms a cyst called a tomont. Inside the cyst it divides into hundreds or even thousands of young swimming parasites called theronts. These swim off and must find a fish quickly, usually within a day or two, or they die. Each one burrows into a fish and the cycle starts again. So the number of parasites can multiply very fast. The damage comes from many small wounds in the skin, which upset the fish's control of water and salts and let bacteria and fungi enter. The gills are the most dangerous site. Damaged, swollen gills cannot take in oxygen well, so fish suffocate even when the water has enough oxygen. The speed of the life cycle depends on water temperature. In warm water it may take only a few days. In cool water it can take weeks. This matters for treatment, because only the free-swimming stage can be killed by most treatments. Parasites under the skin and inside cysts are protected.",
+      "spread": [
+        "New fish brought in from another farm, hatchery, market or the wild can carry the parasite in their skin or gills even when they look healthy.",
+        "Water from rivers, streams, dams or lakes that hold wild fish can carry free-swimming parasites into ponds and tanks.",
+        "Wet nets, buckets, transport bags, boots and other shared equipment can carry parasites and cysts from one pond or farm to another.",
+        "Cysts on the pond floor, walls, plants and stones release new waves of parasites, so infection keeps building inside the same pond or tank.",
+        "Stress lowers the fish's defences and triggers outbreaks, especially after transport, handling, grading, overcrowding or poor water quality.",
+        "Sudden drops or swings in water temperature, common in highland ponds and during the cold months around June to August, often set off outbreaks.",
+        "In recirculating and aquaponic systems, water shared between tanks lets the parasite spread to every tank linked to the system."
+      ],
+      "atRisk": "All freshwater fish can get white spot, but fry and fingerlings are hit hardest because their small gills are easily damaged. African catfish (Clarias), which have no scales, and ornamental fish such as goldfish and koi are very sensitive. Nile tilapia and common carp also suffer outbreaks, especially in hatcheries and nursery ponds. Risk is highest in crowded tanks, hatcheries, recirculating systems, aquaponics and small ponds with poor water exchange. Farms in cooler highland areas and fish moved between farms or newly stocked are at special risk. Outbreaks are common after transport, during cool spells and after a sudden change in weather, such as cold nights in the long rains or the cold dry season. Fish that are underfed, kept in dirty water with high ammonia, or recovering from another illness are also more likely to get sick.",
+      "signs": {
+        "early": [
+          "A few small white spots, about the size of a grain of salt, appear on the fins, tail or body of some fish.",
+          "Fish flash, meaning they suddenly turn and rub their sides against the bottom, walls or stones to scratch an itch.",
+          "Fish become restless, dart around or hold their fins close to the body.",
+          "Some fish eat less and do not rush to the feed as usual.",
+          "Fish may gather near the water inlet or the aerator where there is more oxygen.",
+          "Gills may be affected before any spots show on the skin, so unusual breathing can be the first sign."
+        ],
+        "advanced": [
+          "Many white spots cover the skin, fins and gills, sometimes so many that the fish looks dusted with salt.",
+          "Fish gasp at the surface and breathe fast, with gill covers moving quickly, because the gills are damaged.",
+          "Gills look pale, swollen or covered in mucus when you gently lift the gill cover.",
+          "The skin becomes cloudy with extra slime, and patches of skin may peel, leaving raw-looking areas.",
+          "Fish stop eating, become weak, hang still in the water or lie on the bottom.",
+          "Secondary bacterial or fungal infections appear, such as red sores or cotton-like growths.",
+          "Fish start dying, often many per day, with young fish dying first."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Fungal infection (Saprolegnia, water mould)",
+          "howToTell": "Fungus grows as white or grey fluffy tufts like cotton wool, usually on wounds or damaged areas, not as separate salt-sized dots spread evenly over the body."
+        },
+        {
+          "name": "Columnaris (bacterial cotton-mouth or saddleback)",
+          "howToTell": "Columnaris causes larger greyish-white or yellowish patches, often on the mouth, fins or as a band across the back, and the patches spread and erode the skin rather than appearing as many tiny raised spots."
+        },
+        {
+          "name": "Other skin and gill parasites (Trichodina, Costia, gill flukes)",
+          "howToTell": "These also cause flashing, extra slime and gasping, but they do not usually make clear white dots. A vet must look at a skin scrape or gill sample under a microscope to tell them apart."
+        },
+        {
+          "name": "Low oxygen or poor water quality",
+          "howToTell": "Fish gasp at the surface, often early in the morning, but have no white spots. Many fish are affected at once, and testing oxygen and ammonia, or adding aeration, quickly shows the problem."
+        }
+      ],
+      "diagnosis": "A vet or fish health officer usually confirms white spot by catching a few affected fish and taking a skin scrape and a small gill sample. These are looked at under a microscope straight away. The parasite is large for a protozoan, round, covered in cilia, moves slowly in a rolling way and has a typical horseshoe-shaped nucleus, which makes it fairly easy to identify by someone trained. Fish that have just died can also be checked, but the parasite may leave dead fish within hours, so live, sick fish give the best result. The officer will also check water quality, because poor water often drives the outbreak and affects which treatment is safe. To prepare, keep a few live sick fish in a clean bucket or bag of their own pond water with air, do not freeze them, and do not add any chemicals before the visit. Write down when signs started, how many fish have died each day, recent fish movements or new stock, feeding, water source and any recent changes in weather or water temperature. If you have a test kit, record oxygen, temperature, pH and ammonia. Know the size or volume of your pond or tank, because treatment depends on it.",
+      "firstSteps": [
+        "Stop moving fish in or out of the affected pond or tank, and do not sell, share or restock until a vet or fisheries officer has advised you.",
+        "Increase aeration and water flow if you can, because damaged gills need more oxygen, and flushing with clean water carries away some free-swimming parasites.",
+        "Reduce feeding to what the fish clear quickly and remove uneaten feed, since rotting feed fouls the water and stresses sick fish further.",
+        "Remove dead and dying fish every day, bury them away from water or dispose of them as advised, and never throw them into other ponds or rivers.",
+        "Use separate nets, buckets and boots for the affected unit, and clean and dry them after use so you do not carry the parasite to healthy ponds.",
+        "Avoid handling, grading or transporting the fish, because stress makes the disease worse.",
+        "Do not add salt, copper, formalin, dyes or other chemicals on your own, because the wrong amount can kill fish quickly and some products are banned for food fish.",
+        "Record daily deaths, signs and water readings, then call a vet, County Fisheries Officer or aquaculture extension officer as soon as possible."
+      ],
+      "vetTreatment": "Treatment must be chosen and prescribed by a vet or qualified fish health professional, because the right product and strength depend on the fish species, their size, the water volume, water hardness, temperature and whether the fish are for food. Treatments only kill the free-swimming young parasites and the swimming stage leaving the fish. Parasites under the skin and in cysts are protected, so treatment has to be repeated several times over the whole life cycle, and the timing depends on water temperature. Stopping too early is a common reason spots return. Common options include salt (sodium chloride) baths or longer salt treatments, which many fish such as tilapia tolerate well, though some species tolerate it less. Formalin is used in some hatcheries and tanks, but it reduces oxygen in the water and is dangerous to people, so it needs strong aeration and careful handling. Copper sulphate and potassium permanganate are sometimes used, but they are toxic to fish if the dose is wrong, especially in soft water. Malachite green, an old dye treatment, is banned for food fish in many countries because of residue concerns and must not be used on fish for eating. In aquariums, a vet may advise slowly raising the water temperature for species that tolerate it, which speeds up the cycle so treatment works faster; this is rarely practical in ponds. In flow-through tanks and raceways, increased water flow and frequent cleaning of the bottom help remove cysts. Treating a large earthen pond can be costly and difficult, so the vet may advise focusing on aeration, water exchange and partial harvest. If secondary bacterial infections are present, the vet may consider an antibiotic, but antibiotics do not kill the Ich parasite. Use them only when prescribed, to protect against antimicrobial resistance, which is when germs stop responding to medicines. For any chemical or drug used in food fish, follow the withdrawal period, meaning the time you must wait before harvesting and selling fish, as set by the vet and the label. Expect fish to stop dying within days if treatment works, with spots clearing over one to two weeks depending on temperature.",
+      "prevention": [
+        "Buy fingerlings only from certified, reputable hatcheries, and ask about recent disease problems before buying.",
+        "Quarantine all new fish in a separate tank or pond for at least two to three weeks, watching for spots, flashing and gasping before mixing them with your stock.",
+        "Avoid filling ponds directly from rivers, streams or dams with wild fish where possible; use screened or filtered inlets, boreholes or settled water, and never put wild-caught fish into your ponds.",
+        "Keep stocking densities sensible for your system and keep water clean, with good oxygen, by regular partial water changes and avoiding overfeeding.",
+        "Reduce temperature shocks by keeping ponds at a good depth, avoiding sudden large additions of cold water, and being extra watchful in cool months and after cold nights.",
+        "Handle and transport fish gently and only when needed, using clean water of similar temperature, to limit stress.",
+        "Between production cycles, drain, dry and lime earthen ponds, and clean and disinfect tanks, so cysts in the mud and on walls are destroyed.",
+        "Give each pond or tank its own nets and buckets, or clean and dry shared equipment fully between units, and limit visitors walking from farm to farm.",
+        "Feed a good-quality, fresh, properly stored fish feed in the right amount so fish stay strong and better able to resist infection."
+      ],
+      "impact": "White spot can cause heavy losses on Kenyan fish farms, especially in hatcheries and nursery ponds where fry and fingerlings can die in large numbers within a few days. For a hatchery, an outbreak can wipe out a batch of fingerlings meant for sale to other farmers, causing lost income and damaged reputation. In grow-out ponds and cages, sick fish stop eating and grow slowly, so harvest is delayed and feed, the biggest cost in fish farming, is wasted. Survivors with scarred skin and secondary infections may look poor at market and sell for less. Treatment costs, extra aeration, water pumping and labour add to expenses, and fish movement must stop, delaying sales and restocking. Because the parasite can live on in pond mud and equipment, one outbreak can affect later cycles if ponds are not cleaned well.",
+      "humanHealth": "White spot does not infect people, and fish that recover are not a disease risk to the people who eat them. The human risk comes from the chemicals used to treat it. Formalin and some other products are harmful to breathe or touch, so wear gloves and protect your eyes and skin when a vet advises their use. Banned chemicals such as malachite green can leave residues in fish meat, so never use them on food fish, and always observe the withdrawal period before harvesting fish treated with any chemical or drug.",
+      "outlook": "The outlook is good when white spot is noticed early, the cause of stress is fixed and the full course of treatment is completed across the whole life cycle. Fish with only a few skin spots usually recover well. The outlook is poorer when the gills are badly damaged, when fry or very young fingerlings are affected, when water quality is poor or when secondary bacterial and fungal infections set in. Outbreaks in cool water last longer because the parasite develops slowly and treatment must continue for longer. Large earthen ponds are harder to treat than tanks. Fish that survive often develop some resistance to reinfection for a time, but this protection is not complete and new fish brought in can start a fresh outbreak.",
+      "faqs": [
+        {
+          "q": "Can we eat fish that have white spot?",
+          "a": "The Ich parasite does not infect people, so properly cooked fish from an affected pond are not a disease danger. However, very sick fish are of poor quality and should not be sold. If the fish have been treated with any chemical or drug, you must wait for the withdrawal period advised by the vet before harvesting, and never sell fish treated with banned products such as malachite green."
+        },
+        {
+          "q": "Is ordinary salt enough to treat white spot?",
+          "a": "Salt is one of the treatments vets use, and many fish, including tilapia, tolerate it well. But the right type of salt, strength and length of treatment depend on the species, the fish size and the exact volume of water. Too little does not work and too much can kill fish, and some species such as catfish may be more sensitive. Get the plan from a vet or fisheries officer rather than guessing, and use plain salt without additives such as iodine or anti-caking agents unless advised otherwise."
+        },
+        {
+          "q": "I treated once and the spots went away, but now they are back. Why?",
+          "a": "Treatments only kill the swimming stage of the parasite. The ones under the skin and inside cysts on the pond floor are protected. When they mature, a new wave of swimming parasites comes out and attacks the fish again. That is why treatment must be repeated over the whole life cycle as your vet advises. Spots disappearing from the fish does not always mean the parasite is gone from the water."
+        },
+        {
+          "q": "Will white spot go away on its own?",
+          "a": "Sometimes a mild outbreak settles if the fish are strong, the water is clean and the temperature becomes warmer. But it can also explode very quickly, because each parasite can produce hundreds of new ones. In fry, fingerlings and crowded ponds, waiting often leads to heavy deaths. It is safer to improve aeration and water quality straight away and get professional advice."
+        },
+        {
+          "q": "Can white spot spread from one pond to my other ponds?",
+          "a": "Yes. The parasite travels in water, on wet nets, buckets and boots, and in fish moved between ponds. Keep separate equipment for the sick pond, clean and dry tools between uses, do not let water from the sick pond flow into others, and do not move fish until the outbreak is over."
+        },
+        {
+          "q": "How can I stop it coming in with new fingerlings?",
+          "a": "Buy from a certified hatchery, check the fish closely on arrival, and keep them in a separate quarantine tank or small pond for at least two to three weeks before mixing them with other fish. Avoid sudden temperature changes when releasing them by slowly mixing pond water into the transport bag. Watch for white spots, flashing and gasping during quarantine and call for advice if you see them."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a live Nile tilapia fingerling swimming in clear water, its body and fins scattered with many tiny white salt-grain-like spots, natural light, sharp focus on the spots.",
+    "seoDescription": "White spot (Ich) in fish: spot salt-like white dots, flashing and gasping in tilapia and catfish ponds, first steps, vet treatment and prevention in Kenya."
+  },
+  "external-parasites": {
+    "card": {
+      "headline": "Tiny discs or threads stuck on fish",
+      "look": "Flat, see-through, greenish discs that move on the skin (fish lice), or thin white-green threads, often with two tails, sticking out of red spots (anchor worm). Fish flash, jump and rub against the pond sides and bottom.",
+      "action": "Net a few fish, look closely at their skin, fins and gills, and call your County Fisheries Officer or an aquaculture vet before using any chemical in the pond."
+    },
+    "detail": {
+      "aka": [
+        "Argulosis (fish lice infestation)",
+        "Lernaeosis (anchor worm infestation)",
+        "Carp louse",
+        "Chawa wa samaki (fish lice)"
+      ],
+      "summary": "Fish lice (Argulus) and anchor worm (Lernaea) are two small crustacean parasites, distant relatives of crabs and shrimps, that attach to the outside of fish. They feed on skin, blood and body fluids, leaving red sores that bacteria and fungus can easily invade. They are common in warm ponds in Kenya, especially where new fish are brought in without checks or river water enters unscreened. Light infestations mostly slow growth, but heavy ones can kill fingerlings and make table and ornamental fish unsellable.",
+      "cause": "Fish lice (Argulus) are flat, round to oval parasites, usually a few millimetres across and up to about the size of a fingernail. They are almost transparent or greenish, so they blend in with the fish. They hold on with two strong suckers and can swim freely from fish to fish. To feed, a louse pierces the skin with a sharp mouthpart and injects digestive juices, then sucks blood and tissue fluid. This leaves small red pinpoint wounds that become swollen and inflamed. Adult females leave the fish to lay rows of eggs on hard surfaces such as stones, pond walls, sticks and pipes. Anchor worm (Lernaea) is a different parasite. Only the adult female attaches. She buries her head deep into the fish's skin and muscle, and the head grows into an anchor-shaped hook that holds her in place. What the farmer sees is the thin body, about one to two centimetres long, hanging out of the fish, often with two small egg sacs at the end that look like a split tail. Around the entry point the flesh becomes red, swollen and sometimes ulcerated. The young stages of anchor worm swim free in the water and also feed on fish, including on the gills. With both parasites, the real danger is often what follows: the open wounds let in bacteria such as Aeromonas and water moulds (fungus), which cause ulcers, fin rot and deaths. Constant irritation also stresses the fish, so they eat less, grow slowly and become more likely to catch other diseases. Fish lice have also been reported to carry some viral and bacterial diseases from fish to fish.",
+      "spread": [
+        "Bringing in infested fingerlings, brood stock or ornamental fish from another farm, hatchery or market is the most common way both parasites reach a new pond.",
+        "Wild fish entering through unscreened inlets from rivers, dams or canals can carry lice and anchor worms into a clean pond.",
+        "Free-swimming young parasites and adult fish lice move with the water, so water flowing from one pond to the next can carry them downstream.",
+        "Nets, buckets, seine nets and transport containers moved wet between ponds can carry eggs and young parasites.",
+        "Fish lice eggs stuck on stones, pond walls, roots and debris can survive after the fish are harvested and hatch when the pond is restocked if it is not dried and cleaned.",
+        "Warm water speeds up the life cycle of both parasites, so numbers can build up very quickly during hot, dry spells and in shallow, warm ponds.",
+        "Overcrowding, poor water quality, low oxygen and too much organic waste stress the fish and let parasite numbers rise faster."
+      ],
+      "atRisk": "All farmed fish can be affected, but common carp, koi and goldfish are classic hosts, and Nile tilapia and African catfish are also affected in Kenyan ponds. Fingerlings and small fish suffer most because a few parasites take a large share of their small body. Problems are most common in earthen ponds fed by river or canal water, in ponds stocked with fish from unknown sources, and in overstocked ponds with poor water exchange. Warm seasons and warm lowland areas, such as the Lake Victoria basin and coastal regions, favour fast parasite build-up, but ponds in central Kenya can also be hit during hot dry months. Ornamental fish ponds and aquariums that keep adding new fish are at high risk. Cage farms in lakes can be exposed through wild fish living around the cages.",
+      "signs": {
+        "early": [
+          "Fish flashing, which means suddenly turning on their side so the belly flashes silver in the light.",
+          "Fish rubbing or scraping their bodies against the pond walls, bottom, stones or nets.",
+          "Fish jumping out of the water more than usual, or darting about restlessly.",
+          "Small flat discs that move across the skin or fins when you look closely at a netted fish, or thin threads sticking out of the skin.",
+          "Small red pinpoint spots or slightly raised red patches on the skin, often near the fins or base of the tail.",
+          "Fish slightly slower to come to feed or eating less than normal."
+        ],
+        "advanced": [
+          "Many lice or anchor worms visible on each fish, sometimes in the mouth, on the gills or around the eyes.",
+          "Red, swollen, open sores and ulcers around the attachment points, sometimes with white cotton-wool tufts of fungus.",
+          "Ragged, frayed or reddened fins and loss of scales.",
+          "Thin fish with poor growth and uneven sizes in the same pond.",
+          "Fish gasping at the surface or crowding near the water inlet, especially if gills are damaged or oxygen is low.",
+          "Daily deaths, often starting with fingerlings and the weakest fish.",
+          "Harvested fish with marked, scarred or sore skin that buyers reject or pay less for."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "White spot disease (Ich)",
+          "howToTell": "White spot shows as many tiny white dots like grains of salt or sugar scattered over the skin and fins. The dots do not move and do not stick out as threads. Fish lice are larger, flat and move around, and anchor worms are visible threads with a tail."
+        },
+        {
+          "name": "Fish leeches",
+          "howToTell": "Leeches are longer, worm-like and segmented, with a sucker at each end. They move by looping like an inchworm and stretch and shrink. Fish lice are flat and round, and anchor worms stay fixed in one place with the head buried in the flesh."
+        },
+        {
+          "name": "Bacterial ulcer and fin rot (such as Aeromonas infection)",
+          "howToTell": "Bacterial disease also causes red sores and ragged fins, but when you look closely there are no lice or threads on the fish. Note that the two often go together, because bacteria invade parasite wounds, so a vet may find both."
+        },
+        {
+          "name": "Poor water quality or tiny skin flukes",
+          "howToTell": "High ammonia, low oxygen or microscopic parasites like flukes also cause flashing and rubbing, but you will not see anything on the skin with the naked eye. A water test and a skin or gill scraping under a microscope are needed to tell them apart."
+        }
+      ],
+      "diagnosis": "Fish lice and anchor worms are usually large enough to see with the naked eye, so diagnosis often starts with simply netting several fish and examining them closely in good light, ideally with a magnifying glass. The vet or fisheries officer will check the skin, fins, mouth and gills, count roughly how many parasites each fish has, and may scrape a little mucus from the skin and gills to look under a microscope for young parasite stages and other parasites such as flukes or white spot. They will look for secondary bacterial or fungal infection in the sores, and may send swabs or whole sick fish to a laboratory if deaths are high. Because water quality affects how badly fish suffer, they will usually test or ask about oxygen, temperature, ammonia and pH. To prepare, keep a few live, affected fish in a clean bucket or plastic bag of their own pond water with air, rather than dead or frozen ones. Write down when signs started, the number of deaths per day, the source and date of your last stocking, the stocking density, feed type and amount, water source, and any treatments already used.",
+      "firstSteps": [
+        "Net a few fish from each affected pond and look closely at their skin, fins and gills in good light so you know what you are dealing with and how many fish are affected.",
+        "Stop moving fish, water and equipment between ponds, and do not sell or give away live fish from affected ponds, so you do not spread the parasites to clean ponds or other farms.",
+        "Remove dead and dying fish every day and dispose of them by burying them away from the pond with lime or burning them, never throwing them into rivers or other ponds.",
+        "Check and improve water quality: if you can, increase aeration or add clean, screened water, and remove rotting feed, weeds and debris.",
+        "Reduce feeding to what the fish clear quickly, because uneaten feed rots, lowers oxygen and stresses fish further.",
+        "Clean and dry nets, buckets and boots after use, and keep a separate set of equipment for the affected pond if possible.",
+        "Do not pour livestock dips, crop pesticides or household chemicals into the pond; many are deadly to fish and leave dangerous residues in fish people will eat.",
+        "Keep a written record of signs, deaths and dates, then call your County Fisheries Officer, an aquaculture extension officer or a vet who handles fish for advice on safe treatment."
+      ],
+      "vetTreatment": "Treatment must be planned and prescribed by a vet or qualified fisheries health officer, because the wrong chemical or amount can kill all the fish, and some products are not allowed for food fish. Treatment usually targets both the parasites on the fish and the eggs and young stages in the water, so more than one step is often needed over several weeks. For small numbers of valuable fish such as koi or brood stock, anchor worms can be gently pulled out with fine forceps close to the skin, and the wound cleaned, by a trained person. Short salt baths or dips are sometimes used to reduce lice and help the skin heal, but salt does not reliably kill embedded anchor worms. For whole ponds, a vet may recommend approved anti-parasite treatments; drug groups used in aquaculture in different countries include chitin-inhibitors such as diflubenzuron or lufenuron, which stop the parasites from growing their shell, in-feed treatments such as emamectin benzoate, and older organophosphate chemicals, some of which are now restricted or banned for food fish. Products such as potassium permanganate or formalin are sometimes used for skin infections but must be handled with great care. Which products are legal and available in Kenya varies, so rely on your vet. Fish lice eggs stuck to hard surfaces resist most treatments, so after harvest the vet may advise draining, drying and liming the pond to break the cycle. If sores are badly infected with bacteria, a vet may prescribe an antibiotic, usually given in medicated feed. Antibiotics do not kill the parasites themselves, and should only be used when truly needed, because misuse in ponds creates antibiotic-resistant bacteria that harm fish and people. Every drug used in food fish has a withdrawal period, a set number of days during which the fish must not be harvested or eaten. Follow the vet's instructions and the label exactly. Expect fish to start eating better and rubbing less within days to weeks if treatment works, and sores to heal more slowly.",
+      "prevention": [
+        "Buy fingerlings and brood stock only from certified, reputable hatcheries, and ask about their parasite and disease history.",
+        "Quarantine all new fish in a separate tank or small pond for at least two to three weeks, checking them closely for lice and threads before adding them to your main ponds.",
+        "Screen water inlets with fine mesh or pass river water through a simple sand or gravel filter to keep out wild fish and free-swimming parasites.",
+        "Between production cycles, drain the pond fully, let the bottom dry and crack in the sun, remove mud and debris, and apply agricultural lime as advised by your extension officer to kill eggs and larvae.",
+        "Keep stocking density within recommended levels for your pond size and species, and maintain good water quality with regular water exchange, aeration where possible and careful feeding.",
+        "Check a sample of fish every week or two, especially in hot dry months, so you catch a few parasites before they become thousands.",
+        "For fish lice, some farmers place smooth boards or tiles in the pond as egg-laying surfaces, then lift, dry or scrub them regularly to remove the eggs; ask your fisheries officer if this suits your system.",
+        "Keep separate nets and buckets for each pond or disinfect and dry them between ponds, and do not let water from an infested pond flow into clean ones."
+      ],
+      "impact": "On a Kenyan fish farm, fish lice and anchor worms mainly cost money through slower growth, poorer feed conversion and losses of fingerlings. Fish that are constantly irritated eat less and turn more of their feed into fighting the parasites than into flesh, so it takes longer and costs more in feed to reach market size. Heavy infestations can kill many fingerlings within weeks, wasting the money spent on stocking. Table tilapia and catfish with red sores, scars and missing scales fetch lower prices or are rejected by hotels, supermarkets and traders, and ornamental koi and goldfish can lose most of their value. Secondary bacterial infections can cause bigger die-offs. Treatment, extra labour for checking fish, pond drying and lost production time between cycles add further costs. Because parasites spread easily, an infested hatchery or farm can damage its reputation with buyers of fingerlings.",
+      "humanHealth": "Fish lice and anchor worms do not infect people, and properly cleaned and well-cooked fish from a pond with these parasites is not known to be harmful. Cut away and discard any badly ulcerated or infected parts of the flesh and cook fish thoroughly. The main human risk comes from chemical residues: never use livestock dips, crop pesticides or unapproved products in fish ponds, and always observe the withdrawal period of any treatment before harvesting, selling or eating the fish. Wear gloves when handling pond chemicals such as lime, potassium permanganate or formalin, avoid breathing fumes, and wash hands after handling sick fish, as some bacteria in fish sores can infect cuts on human skin.",
+      "outlook": "The outlook is good when infestations are found early and the farmer combines vet-guided treatment with better pond management. Lightly affected fish usually recover, start eating normally again and their small wounds heal over a few weeks, although scars may remain. Fingerlings, heavily infested fish and fish with badly infected sores or damaged gills are less likely to recover. Parasites often come back if only the fish are treated and the eggs and young stages in the pond are ignored, or if new infested fish or unscreened water keep coming in. Breaking the cycle by drying and liming ponds, quarantining new stock and screening inlets gives the best long-term results, but no single step guarantees the pond stays free.",
+      "faqs": [
+        {
+          "q": "Can I eat fish that had fish lice or anchor worms?",
+          "a": "Yes, in most cases. These parasites do not infect people. Remove the parasites, cut away any badly damaged or ulcerated flesh, and cook the fish well. If the fish were treated with any drug or chemical, do not eat or sell them until the withdrawal period given by your vet or on the label has passed."
+        },
+        {
+          "q": "Can I just pull the anchor worms out by hand?",
+          "a": "For a few valuable fish such as koi or brood fish, a trained person can remove anchor worms with fine forceps, pulling gently close to the skin so the head comes out. If the head breaks off inside it can cause infection, so ask your vet first. Pulling worms off a whole pond of table fish is not practical, and it does not deal with the young parasites in the water."
+        },
+        {
+          "q": "Will adding salt to my pond get rid of them?",
+          "a": "Salt can help fish heal and may reduce some fish lice when used as a short bath for small numbers of fish, but it does not reliably kill embedded anchor worms or eggs on pond surfaces. Salting a whole earthen pond takes very large amounts and can harm some fish and plants. Ask your fisheries officer or vet before using salt, and follow their guidance."
+        },
+        {
+          "q": "I treated my pond but the parasites came back. Why?",
+          "a": "Both parasites have stages that are hard to kill. Fish lice eggs stick to stones and walls and resist most treatments, and anchor worm larvae live in the water. If treatment only kills adults, new parasites hatch a few weeks later. New fish or unscreened river water can also bring them back. Your vet may recommend repeat treatments, and drying and liming the pond after harvest is one of the best ways to break the cycle."
+        },
+        {
+          "q": "Can I use cattle dip or tick spray in my fish pond?",
+          "a": "No. Livestock dips and crop pesticides are made for land animals or plants and are often extremely poisonous to fish, even in tiny amounts. They can wipe out your whole pond, poison downstream water and leave dangerous residues in fish people eat. Only use products a vet has prescribed for fish."
+        },
+        {
+          "q": "Do tilapia and catfish really get these parasites, or only koi and goldfish?",
+          "a": "Carp, koi and goldfish are the best-known hosts, but tilapia and African catfish in Kenyan ponds can also be affected, especially fingerlings and fish in crowded, warm ponds with poor water quality. Checking a sample of your fish regularly is the best way to know whether your pond has a problem."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a live koi or tilapia held just above pond water, showing several thin white-green thread-like anchor worms with small forked tails sticking out of red spots on its side, with a flat translucent fish louse on the skin near the fin.",
+    "seoDescription": "Fish lice (Argulus) and anchor worm (Lernaea) in tilapia, catfish and koi: spot the signs, first steps, vet treatment and pond prevention for Kenyan farmers."
+  },
+  "aeromonas": {
+    "card": {
+      "headline": "Red blotches and ulcers on fish",
+      "look": "Fish show red patches or bleeding spots on the skin, fins and belly, often with open sores, ragged fins, a swollen belly or bulging eyes. Sick fish stop feeding, hang near the surface or pond edges, and a few die every day.",
+      "action": "Remove dead and dying fish, stop feeding for the day, add fresh water and aeration, and call a vet or County Fisheries Officer quickly."
+    },
+    "detail": {
+      "aka": [
+        "MAS",
+        "Red sore disease",
+        "Haemorrhagic septicaemia of fish",
+        "Aeromonas infection",
+        "Ugonjwa wa vidonda vyekundu (red sore disease)"
+      ],
+      "summary": "Motile Aeromonas septicaemia (MAS) is a bacterial infection of fish caused mainly by Aeromonas hydrophila and related Aeromonas bacteria. Septicaemia means the bacteria have entered the blood and spread through the body. It is one of the most common causes of red sores and deaths in farmed catfish and tilapia in Kenya and East Africa. It almost always follows stress or poor water quality, so it is as much a warning about pond management as it is a disease.",
+      "cause": "Aeromonas bacteria live naturally in almost all fresh water, pond mud and even in the gut of healthy fish. Normally a healthy fish with intact skin and slime keeps them out. When fish are stressed by low oxygen, high ammonia (a toxic waste from fish droppings and rotting feed), crowding, rough handling, transport, sudden temperature changes or parasite damage, their immune defences drop and the skin may be scratched. The bacteria then enter through damaged skin, gills or the gut. They release toxins and enzymes that break down blood vessels and tissue. This causes the red blotches (bleeding under the skin), ulcers (open sores where skin and muscle are eaten away), fin rot (fins fraying and dying back) and damage to internal organs such as the kidney, liver and spleen. When the kidney fails, fluid builds up in the body cavity, giving the swollen belly and sometimes raised scales and bulging eyes. In short, the bacteria are opportunists: they take advantage of fish already weakened by poor conditions.",
+      "spread": [
+        "Poor water quality is the main trigger: low dissolved oxygen, high ammonia or nitrite, very green or murky water, and rotting uneaten feed all stress fish and feed the bacteria.",
+        "Overstocking, where too many fish share too little water, raises stress, waste and fighting injuries, letting bacteria build up quickly.",
+        "Handling, grading, netting, seining and transport damage the protective slime and scales, so outbreaks often start a few days after fingerlings are stocked or fish are moved.",
+        "Sudden temperature swings, such as cold rain falling into a warm pond at the start of the long or short rains, or very hot shallow water in the dry season, weaken the fish.",
+        "Dead and dying fish left in the pond release huge numbers of bacteria into the water, so infection spreads to the rest of the stock.",
+        "Contaminated nets, buckets, boots and transport tanks moved between ponds, and water flowing from an infected pond into another, carry the bacteria between units.",
+        "Buying fingerlings from an unknown or poorly managed hatchery can bring in stressed or already infected fish.",
+        "Parasites and other infections that damage the skin and gills open the door for Aeromonas to enter."
+      ],
+      "atRisk": "African catfish (Clarias gariepinus, kambare) and Nile tilapia (ngege or perege) are the species most often affected on Kenyan farms, though almost any freshwater fish can get MAS. Fingerlings and juveniles, newly stocked or recently transported fish, and fish that have just been sorted or harvested from are at the highest risk. Earthen ponds with heavy feeding and little water exchange, overstocked liner ponds and tanks, recirculating systems with failing filters, hatcheries, and cages in lakes or dams during poor-water periods are all vulnerable. Risk rises in the hot dry months when water is shallow and oxygen is low, and at the start of the rains when temperature changes and muddy runoff hit the pond. Farms that overfeed, never test water, or leave dead fish in the pond see more outbreaks.",
+      "signs": {
+        "early": [
+          "Fish eat less or stop coming up for feed, and more feed than usual is left floating or sinking uneaten.",
+          "Fish become slow and dull, hang near the surface, the inlet or the pond edges, or swim lazily on their own away from the shoal.",
+          "Skin colour turns darker than normal, and the body may lose its shine as the slime layer changes.",
+          "Small red spots or streaks appear at the base of the fins, around the mouth, under the jaw or along the belly.",
+          "Fins begin to look frayed, ragged or reddened at the edges, and a few scales may be loose or missing on tilapia.",
+          "A small number of fish die each day, often the smaller or weaker ones, instead of a sudden mass kill."
+        ],
+        "advanced": [
+          "Large red blotches cover the body, and open ulcers appear that may be grey, white or red in the middle with a red ring around them.",
+          "Fins rot back towards the body, and the tail may be badly eroded.",
+          "The belly becomes swollen and soft with fluid, and the vent (the opening under the tail) looks red and swollen.",
+          "Eyes may bulge outwards (pop-eye) or look cloudy or bloody, and scales may stand out from the body like a pine cone.",
+          "Gills may look pale or blotchy instead of a healthy bright red.",
+          "Fish swim abnormally, lie on their sides or roll, and daily deaths increase; a cut fish may show bloody fluid in the belly and a swollen, soft kidney or spleen."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Columnaris disease (Flavobacterium columnare)",
+          "howToTell": "Columnaris usually gives greyish-white or yellowish patches, often a pale 'saddle' band behind the head or fuzzy, eaten-looking gills, rather than deep red blotches. It often appears in warm water after handling. Both can occur together, so a lab test is the only sure way to separate them."
+        },
+        {
+          "name": "Streptococcosis in tilapia",
+          "howToTell": "Streptococcus infection in tilapia typically causes bulging, cloudy eyes, fish spinning or swimming in circles, and a curved body, often in warm water and larger fish. Red skin patches can appear in both, so bacterial culture by a lab is needed to confirm."
+        },
+        {
+          "name": "Epizootic ulcerative syndrome (EUS)",
+          "howToTell": "EUS is caused by a water mould (Aphanomyces invadans) and produces very deep, crater-like red ulcers that can expose muscle, often after cool weather. It is a WOAH-listed disease, so if a vet suspects it they must investigate and may need to report it. Only lab examination of tissue can tell it apart from MAS."
+        },
+        {
+          "name": "Low oxygen or ammonia poisoning",
+          "howToTell": "Oxygen crashes usually kill many fish suddenly, often at dawn, with fish gasping at the surface, and the dead fish have no red sores or ulcers. Ammonia stress can cause reddened gills and fins but is confirmed by a water test. Poor water often comes first and MAS follows a few days later."
+        }
+      ],
+      "diagnosis": "A vet or trained fish health officer starts by looking at the whole pond: how the fish behave, how many are dying, feeding records, stocking density and recent handling or weather changes. They will test the water for temperature, dissolved oxygen, pH, ammonia and nitrite, because finding and fixing the stress is part of the diagnosis. They then examine sick fish closely, checking skin, fins, eyes, gills and the inside of the body during a post-mortem (opening the fish to look at the organs). To confirm Aeromonas, samples from the kidney, liver or ulcers are sent to a laboratory for bacterial culture, and sometimes molecular tests such as PCR. A sensitivity test shows which antibiotics, if any, will actually work against the bacteria on your farm. In Kenya, samples may go to the Central Veterinary Laboratories at Kabete, KMFRI (Kenya Marine and Fisheries Research Institute) centres such as Sagana, county or university labs. The best samples are live, sick fish carried in a bag with pond water and air, or fish that have only just died, kept cool on ice but not frozen. Rotten fish are of little use. Before the visit, write down when the problem started, daily deaths, feeding amounts, stocking date and numbers, where the fingerlings came from, any recent handling, and any water test results you have.",
+      "firstSteps": [
+        "Remove dead and dying fish from the pond at least twice a day, and bury them deeply with lime away from water sources or burn them; never throw them into another pond or a river, and never feed them to other animals.",
+        "Reduce or stop feeding for a day or two, because sick fish eat little and uneaten feed rots, lowers oxygen and feeds the bacteria; then restart with small amounts the fish actually finish.",
+        "Improve the water straight away by adding clean fresh water from a safe source, running aerators or paddle wheels, or splashing water to add oxygen, especially at night and early morning.",
+        "Stop all handling, sorting, seining, harvesting and moving of fish from the affected pond, and do not stock new fish until the problem is resolved.",
+        "Keep separate nets, buckets and boots for the sick pond, and clean and dry equipment in the sun after use so you do not carry the bacteria to other ponds.",
+        "Wear gloves when handling sick or dead fish, avoid touching them with cuts on your hands, and wash your hands well with soap afterwards.",
+        "Write down daily deaths, the signs you see, feeding and any water test readings, and keep a few freshly sick fish cool for testing.",
+        "Call a vet, the County Fisheries Officer or your aquaculture extension officer early, and do not add antibiotics, chemicals or home remedies to the pond without their advice."
+      ],
+      "vetTreatment": "The first and most important treatment is fixing the cause: the vet will help you correct oxygen, ammonia, stocking density, feeding and water exchange, because drugs will not work if the fish stay stressed. Some fish professionals may advise short supportive measures such as salt treatments or other bath treatments to help the skin and slime recover; these must be done exactly as advised, because wrong strengths can kill fish. When antibiotics are needed, they are usually given in medicated feed, using drugs such as oxytetracycline or florfenicol, but only where a product is registered for fish and prescribed by a vet, ideally after a sensitivity test shows it will work. The vet decides the drug, the amount and how long to feed it. Medicated feed only reaches fish that are still eating, so it helps most when started early; badly sick fish that have stopped feeding often cannot be saved. Antibiotics should never be poured into pond water routinely, as this wastes drugs, harms the pond environment and breeds resistant bacteria. Aeromonas is known for developing antimicrobial resistance, which means the bacteria learn to survive drugs and future outbreaks become harder to treat, so antibiotics must be used responsibly and only under prescription. Any fish treated with antibiotics must not be harvested or sold until the withdrawal period on the product label or given by the vet has passed, so that no drug residues reach consumers. Vaccines against Aeromonas exist in some countries but are not widely available on Kenyan farms. Expect deaths to continue for a few days after treatment begins before they slow down.",
+      "prevention": [
+        "Test water regularly for dissolved oxygen, ammonia, nitrite, pH and temperature using a simple test kit, and act early when readings worsen rather than waiting for fish to die.",
+        "Stock at a density your pond, water supply and aeration can support, and harvest or split fish as they grow instead of letting the pond become crowded.",
+        "Feed good-quality fish feed at the right amount for fish size and water temperature, feed only what is eaten within a few minutes, and store feed dry and away from mould.",
+        "Buy fingerlings from a certified, well-run hatchery, check them for sores and weak swimming before accepting them, and acclimatise them slowly to your pond water temperature.",
+        "Handle fish as little and as gently as possible, use smooth knotless nets, avoid handling during the hottest part of the day, and plan grading or transport for cool mornings.",
+        "Prepare ponds well between cycles by draining, removing excess mud, sun-drying and liming the bottom, and keep pond banks and inlets clean so runoff does not carry dirt in during the rains.",
+        "Remove dead fish every day, keep separate equipment for each pond or clean and dry it between uses, and use a footbath or clean boots when moving between units.",
+        "Control predators and birds with netting where possible, manage parasites with advice from a fisheries officer, and keep simple farm records of feeding, deaths and water tests so problems are spotted early."
+      ],
+      "impact": "On a Kenyan fish farm, MAS can cause steady daily losses that add up to a large part of the stock, especially among fingerlings and newly stocked fish. Survivors often grow more slowly because they eat less while sick, which delays harvest and wastes feed, the biggest running cost in fish farming. Fish with red sores and ulcers are hard to sell, as buyers in local markets, hotels and supermarkets reject damaged fish, and a farm's reputation can suffer. Treatment adds costs for testing, medicated feed and extra aeration or water pumping, and fish under antibiotic withdrawal cannot be sold on time. For smallholders who have invested savings or group funds in a pond or cage, one bad outbreak can wipe out a season's profit, so prevention through good water and stocking management pays back many times.",
+      "humanHealth": "Aeromonas bacteria can occasionally infect people. They can cause wound infections if bacteria from fish or pond water enter cuts or scratches, and stomach upsets with diarrhoea if contaminated fish or water are swallowed. People with weak immune systems, liver disease, diabetes, young children and the elderly are more at risk of serious illness. Wear gloves when handling sick or dead fish, cover any cuts, wash hands and tools well with soap, and seek medical care if a wound becomes red, swollen or painful after working with fish. Do not eat or sell visibly sick, ulcerated or dead fish, and always cook fish thoroughly. If fish have been given antibiotics, do not eat or sell them until the full withdrawal period has passed, because drug residues can harm consumers and add to antibiotic resistance in people.",
+      "outlook": "The outlook is good for the pond as a whole if the problem is caught early and water quality and stress are quickly corrected; deaths usually slow down within days once conditions improve. Fish with only small red spots or mild fin damage often recover and heal if kept in good water. Fish with deep ulcers, a swollen fluid-filled belly, bulging eyes or that have stopped eating rarely recover and are best removed. Losses are higher in fingerlings, in warm, crowded or dirty ponds, and where treatment is delayed or the wrong antibiotic is used. Because the bacteria stay in the water and mud, outbreaks can return whenever fish are stressed again, so long-term success depends on management, not just treatment.",
+      "faqs": [
+        {
+          "q": "Is it safe to eat fish from a pond that has red sore disease?",
+          "a": "Do not eat or sell fish that are visibly sick, ulcerated, swollen or already dead. Healthy-looking fish from the same pond that have not been given antibiotics are generally safe if handled hygienically and cooked thoroughly, but ask your vet or fisheries officer first. If the pond has been treated with antibiotics, no fish can be eaten or sold until the withdrawal period is complete."
+        },
+        {
+          "q": "Can I just buy antibiotics at the agrovet and put them in the pond water?",
+          "a": "No. Pouring antibiotics into pond water wastes the drug, harms the useful bacteria and algae in the pond, leaves residues in fish and breeds bacteria that resist treatment. Many cases improve with water management alone. If antibiotics are truly needed, a vet should choose a registered product, usually in feed, ideally after a lab sensitivity test, and tell you the withdrawal period."
+        },
+        {
+          "q": "Why does this disease often appear after I stock new fingerlings?",
+          "a": "Catching, packing and transporting fingerlings damages their skin and slime and stresses them badly. Temperature and water differences between the hatchery and your pond add more stress. Aeromonas already in your water then takes its chance, so deaths often begin a few days to two weeks after stocking. Buy from good hatcheries, transport fish in cool hours, and acclimatise them slowly by floating the bags and mixing in pond water gradually."
+        },
+        {
+          "q": "Should I drain the pond and start again?",
+          "a": "Not always. Many outbreaks can be controlled by removing dead fish, improving water and reducing feeding. If losses are very heavy, or the problem keeps returning, your fisheries officer may advise harvesting what can be saved, draining, removing sludge, sun-drying and liming the pond before restocking. Make this decision with professional advice, and never release pond water carrying sick fish into rivers or other ponds."
+        },
+        {
+          "q": "Why do I see more red sores at the start of the rains?",
+          "a": "The first heavy rains can cool a warm pond suddenly, wash mud, manure and soil into the water, and change the pH and oxygen levels. Fish become stressed and their immunity drops, while the extra organic matter feeds bacteria. Protect ponds with diversion trenches and grass on the banks, keep good aeration, and watch fish closely in the days after heavy rain."
+        },
+        {
+          "q": "Will the disease keep coming back?",
+          "a": "Aeromonas lives naturally in water and mud, so you cannot remove it completely. It causes disease mainly when fish are stressed. If you keep stocking density reasonable, test water, feed correctly, handle fish gently and remove dead fish daily, outbreaks become much less frequent and less severe. Repeated outbreaks are a sign that something in the system, such as oxygen, crowding or feeding, needs fixing."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a live Nile tilapia held just above a pond in a gloved hand, showing several bright red blotches and a small reddened ulcer on its side with frayed red-edged fins, natural daylight, Kenyan earthen pond in soft focus behind.",
+    "seoDescription": "Motile Aeromonas septicaemia (red sore) in tilapia and catfish: spot red blotches, ulcers and swollen bellies early, fix water quality and prevent fish deaths."
+  }
+}

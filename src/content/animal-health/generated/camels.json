@@ -1,0 +1,1000 @@
+{
+  "healthy": {
+    "card": {
+      "headline": "Alert camel chewing cud, firm hump",
+      "look": "A healthy camel holds its head high, watches you with bright clear eyes and chews its cud calmly, often while kneeling. Its hump is firm and upright, and its droppings are small, dry, firm pellets.",
+      "action": "Learn what is normal for each of your camels and look at every animal daily, so you notice any change early and call the vet before a problem grows."
+    },
+    "detail": {
+      "aka": [
+        "Ngamia mzima (Swahili, a healthy camel)",
+        "Healthy dromedary",
+        "Normal camel health check",
+        "Baseline camel health"
+      ],
+      "summary": "This page describes what a normal, healthy one-humped camel (dromedary) looks, sounds and behaves like in Kenya and East Africa. Camels are tough and hide illness well, so many herders only notice a problem when it is already serious. If you know your camels' normal behaviour, droppings, hump size and temperature, you can spot trouble days earlier. Early action saves milk, calves and money, and it helps your vet treat the animal more successfully.",
+      "cause": "A camel stays healthy when its body, its food, its water and its surroundings are in balance. The camel is a pseudo-ruminant, which means it chews cud like a cow but has a three-part stomach instead of four. Microbes in the first stomach break down tough browse such as acacia, Salvadora (the 'toothbrush tree') and dry grasses. These microbes need steady feeding and enough salt and minerals to work well. Camels need much more salt than cattle, which is why pastoralists take herds to salty water points or salt licks. The hump is a store of fat, not water. In good seasons it fills up, and in the long dry season the camel burns that fat slowly, so the hump shrinks. The camel copes with heat in a special way. When water is short, it lets its body temperature rise during the hot day and cools down again at night, which saves sweat and water. Its kidneys make thick, small amounts of urine, and its gut pulls water out of droppings, which is why healthy droppings are dry. A camel can go many days without drinking, especially when it eats green browse, and then drink a very large volume in a few minutes without harm. Good health also depends on low parasite numbers (worms, ticks, mange mites and the blood parasites that cause surra, which is camel trypanosomiasis), a calm herd, and a body condition that is neither too thin nor too fat.",
+      "spread": [
+        "A healthy herd stays healthy mainly through good management: enough browse, regular watering and access to salt or mineral licks.",
+        "Health can quickly be put at risk when new camels are brought in from markets without a quarantine period, because they may carry mange, surra, camel pox or brucellosis.",
+        "Sharing water points and night bomas with many other herds increases the chance of picking up infections and parasites.",
+        "Biting flies, such as horse flies and stable flies, increase during and after the rains and spread surra from sick camels to healthy ones.",
+        "Long treks, transport, overcrowding and sudden changes in feed are stress triggers that can weaken a normally healthy camel.",
+        "Drought, poor browse and lack of minerals slowly lower body condition and immunity, so diseases appear more easily at the end of the long dry season."
+      ],
+      "atRisk": "All camels benefit from daily observation, but some need closer attention. Young calves in their first months are the most fragile, because they depend on colostrum (the first thick milk) and milk, and they suffer quickly from diarrhoea, pneumonia and ticks. Heavily pregnant females and those in early lactation need good feed and water because pregnancy lasts about 13 months and milking drains their reserves. Breeding bulls lose condition during the rut, the mating season, because they eat less. In Kenya, camels in pastoral systems in Turkana, Marsabit, Wajir, Mandera, Garissa, Isiolo and Samburu face long dry seasons and long distances to water. Camels kept in semi-zero-grazing or peri-urban dairy units, for example around Isiolo, Nanyuki and Nairobi, face different risks: limited browse, crowding, fly build-up and feed that may be stored poorly. The period at the start of the long and short rains is important too, because biting flies and ticks increase and lush feed can upset digestion.",
+      "signs": {
+        "early": [
+          "The camel is alert, holds its head and neck up, and turns its ears and eyes towards sounds and movement around it.",
+          "It chews cud for long periods every day, often while kneeling (couched) on its chest with the legs folded under, with a steady side-to-side jaw movement.",
+          "Droppings are small, firm, dry oval pellets that do not stick to the tail; calves still feeding mainly on milk normally pass softer, pasty droppings.",
+          "The hump is firm and stands upright, its size matching the season: fuller after good rains and smaller but still firm late in the dry season.",
+          "The eyes are bright and clear with no tears or crust, and the inner eyelid and gums are moist and pink.",
+          "The coat is clean, and the skin is soft and elastic with no crusts, bald itchy patches or lumps.",
+          "Body temperature follows a daily pattern: roughly 36–38 °C in a well-watered camel, rising to about 40 °C by late afternoon when water is short, then cooling at night.",
+          "At rest the camel breathes slowly and evenly, about 5–12 breaths per minute, and the heart beats about 40–50 times per minute.",
+          "It walks evenly with the herd, eats eagerly when browsing, drinks well at watering, and milking females keep steady milk yields."
+        ],
+        "advanced": [
+          "The camel stops chewing cud or eats much less than usual, even when good browse is available.",
+          "It stands or lies apart from the herd, lags behind on the way to browse, or does not get up when the herd moves.",
+          "It lies flat on its side for long periods instead of resting couched on its chest; this is a serious warning sign in a camel.",
+          "Droppings become watery, very soft, bloody or foul-smelling in an adult, or stop completely.",
+          "The morning temperature is above about 38.5 °C, or any reading is above 40 °C, together with dullness or poor appetite.",
+          "The eyes look dull or sunken, tears run down the face, or there is thick discharge from the nose or eyes.",
+          "The hump collapses, leans or shrinks fast and ribs and hip bones show more than the season explains.",
+          "Breathing becomes fast, noisy or laboured, or the camel coughs, grinds its teeth or groans while lying down.",
+          "There is lameness, swelling of the legs, joints, lymph nodes or under the jaw, scabs on the lips and nostrils, or itchy, thickened, crusty skin.",
+          "Milk yield drops suddenly, the udder is hot or hard, or a pregnant female aborts or produces a weak calf."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Bull in rut (mating season)",
+          "howToTell": "A breeding bull pushes a pink, balloon-like soft palate called the dulla out of the side of his mouth, froths, gurgles, grinds his teeth, splashes urine onto his tail and gives off a strong smell from glands behind the head. He eats less and may become aggressive. This is normal breeding behaviour, not choking or rabies, though he still needs careful handling. A bull with a dulla that keeps eating cud between displays and stays alert is usually just in rut. Signs outside the breeding season, drooling without the dulla, difficulty swallowing or paralysis need a vet urgently."
+        },
+        {
+          "name": "High afternoon temperature in the hot season",
+          "howToTell": "When water is short, a healthy camel lets its temperature rise to about 40 °C by late afternoon and cools down overnight. This saves water and is normal. Take temperatures early in the morning when you want to check for fever. A camel that is hot in the cool morning, or hot and dull, off feed or breathing fast, may have a fever and should be seen by a vet."
+        },
+        {
+          "name": "Seasonal hair shedding",
+          "howToTell": "Camels shed patches of old hair as the hot season begins, leaving uneven, thin-looking areas. The skin underneath is smooth, soft and not itchy. Mange, caused by mites, makes the camel rub and scratch, and the skin becomes thick, wrinkled, crusty and often smelly, starting around the head, neck, belly and inner legs. If you see itching and crusts, call the vet."
+        },
+        {
+          "name": "Not drinking for several days and dry droppings",
+          "howToTell": "A healthy camel, especially on green browse, may go many days without drinking and normally passes very dry pellets. This is how it saves water. The worry is a camel that refuses water at the watering point when others drink, or has sunken eyes, skin that stays tented when pinched, and stops passing droppings. A pregnant female that lifts her tail when a bull comes near is also normal, as this is a known sign of pregnancy, not a sign of pain."
+        }
+      ],
+      "diagnosis": "A short home health check, done the same way each time, gives you a picture of what is normal for each camel. Start by watching from a distance before you disturb the herd: who is alert, who is chewing cud, who is standing alone, and how each animal walks. Then check the hump, ribs and hip bones to judge body condition; you should feel the ribs with light pressure but not see every rib sharply. Look at the eyes, nostrils, lips and mouth for discharge, sores or scabs. Run your hand over the skin of the neck, belly and legs for lumps, ticks, wounds or crusts, and gently feel under the jaw and in front of the shoulders for swollen lymph nodes. Check droppings in the boma and at resting places. For milking females, look at milk volume and check that the udder is soft and even. To take the temperature, couch the camel and hobble a front leg, with a helper holding the head rope. Lift the tail, insert a clean, lubricated digital thermometer gently into the rectum and press the tip against the side wall. Hold it until it beeps, then clean and disinfect it. Do this early in the morning for the most useful reading, and write it down. Count breaths by watching the flank rise and fall for one minute while the camel rests. You can feel or listen to the heart on the lower left chest behind the elbow. Keep a simple notebook of each camel's normal readings, body condition, milk yield, calving dates and treatments. If something looks wrong, your vet will use the same check plus blood smears for surra, blood tests for brucellosis, faecal tests for worms, skin scrapings for mange or milk tests for mastitis. Your notes will help the vet a great deal.",
+      "firstSteps": [
+        "Look at every camel at least once a day, ideally when they leave the boma in the morning and when they return, and note any animal that is slow, alone or not chewing cud.",
+        "Take the morning temperature of any camel that looks dull, and compare it with its normal reading in your records.",
+        "Separate a camel that seems unwell from the herd, give it shade, water and fresh browse, and keep it calm and away from strangers' herds.",
+        "Stop moving, selling or buying camels from a group where an animal looks sick until a vet has checked it.",
+        "Wear gloves and wash your hands after handling sick animals, aborted calves, afterbirths or discharges, and boil milk from any camel that is unwell.",
+        "Write down what you saw, when it started, what the camel ate and drank, and any treatments given, then call your vet, a trained animal health worker or the County Veterinary Officer.",
+        "Do not give antibiotics, trypanocides or other drugs bought from the agrovet without a vet's advice, because wrong drugs or wrong amounts can hide disease, cause resistance and leave residues in milk and meat."
+      ],
+      "vetTreatment": "Healthy camels still benefit from routine vet care, planned with your vet or County Veterinary Officer for your area and season. Routine care often includes a yearly or seasonal herd check: body condition, teeth, feet, udders and breeding history. Parasite control is a big part of it. The vet can test droppings and decide when and with what to deworm, rather than dosing blindly, which helps slow drug resistance in worms. In areas with biting flies and tsetse, the vet may screen blood for surra and advise on trypanocidal drugs, which must be used correctly because the wrong product can harm camels. Ticks and mange mites are controlled with acaricides chosen by the vet for camels. Vaccine options for camels are fewer than for cattle and vary by country, so ask your vet which vaccines, such as camel pox, are available and advised in your county. Testing for brucellosis is important in milking herds, especially where milk is sold. The vet may also advise on mineral and salt supplements, calf care and colostrum, castration and identification such as ear tags or brands. If any drug is used, the vet will tell you the withdrawal period, which is how long you must wait before milk or meat is safe to use or sell. Follow it strictly. Use antibiotics only when a vet says they are needed, and finish the course as prescribed, because careless use creates resistant germs that harm both animals and people.",
+      "prevention": [
+        "Give camels enough time on mixed browse each day, and when you must hand-feed, introduce new feeds slowly so the stomach microbes can adjust.",
+        "Provide regular access to salt, mineral licks or traditional salty water points, because camels have a very high salt need and lack of it lowers appetite and health.",
+        "Water camels on a regular schedule suited to the season and keep watering points as clean as possible, avoiding stagnant, dirty pools.",
+        "Make sure every newborn calf suckles colostrum within the first hours of life, keep calf pens clean and dry, and protect calves from ticks and cold nights.",
+        "Plan deworming, tick, mange and surra control with your vet, using tests where possible and keeping records of every product used.",
+        "Quarantine new or returning camels for a few weeks, watch them daily, and ask the vet to test them, for example for brucellosis and surra, before they join the herd.",
+        "Keep night bomas clean, dry and not overcrowded, and remove dung regularly to reduce flies, especially in dairy units near towns.",
+        "Store any concentrates or hay dry and off the ground so they do not go mouldy, and never feed mouldy feed.",
+        "Keep simple records of temperature, body condition, milk yield, breeding and treatments, so you can compare each camel with its own normal."
+      ],
+      "impact": "Healthy camels are the backbone of many households in northern and eastern Kenya. They give milk through long dry seasons when cattle and goats are struggling, and camel milk is increasingly sold in towns such as Isiolo, Garissa, Wajir and Nairobi. Camels also provide meat, transport, income from sales and social value in dowry and other traditions. Because camels breed slowly, with a pregnancy of about 13 months and usually one calf every two years or so, losing a breeding female or calf is a very large setback that takes years to recover from. Illness often shows first as a quiet drop in milk, slower growth or weight loss, long before an animal collapses. A farmer who checks the herd daily and knows normal signs can catch problems early. This keeps treatment costs lower, protects milk sales and reduces the risk that one sick camel infects the rest of the herd.",
+      "humanHealth": "Even camels that look completely healthy can carry germs that infect people. Brucellosis, a bacterial infection causing long-lasting fever and joint pain in people, can pass through raw camel milk and through contact with afterbirths and aborted calves. Camels in Kenya and the region have also been found to carry MERS coronavirus, a virus that can cause severe breathing illness in people, usually with no signs in the camel. To protect your family, boil or pasteurise camel milk before drinking, wash hands with soap after milking and handling camels, wear gloves when helping with calving or handling afterbirths, and cook camel meat thoroughly. Anyone who develops fever, cough or joint pain after close contact with camels should visit a health facility and mention their work with camels. Always respect drug withdrawal periods so that drug residues do not end up in milk or meat.",
+      "outlook": "Camels are hardy animals and can live and work for well over 20 years when they are well managed. A camel that is alert, chewing cud, keeping its hump and body condition for the season and passing firm dry droppings is usually in good health. The outlook for any camel depends on how quickly problems are spotted, how good the feed, water and mineral supply is, and how well parasites and infections are controlled. Camels hide illness, so changes can be small at first. Herders who check their animals daily, keep records and call the vet early are much more likely to keep a productive herd through droughts and disease seasons.",
+      "faqs": [
+        {
+          "q": "What is a normal temperature for a camel?",
+          "a": "It changes with the time of day and how much water the camel has. A well-watered camel usually stays around 36–38 °C. When water is short in the hot season, a healthy camel can warm up to about 40 °C by late afternoon and cool down again overnight. This is normal and helps it save water. For checking fever, take the temperature early in the morning. A morning reading above about 38.5 °C, or any reading over 40 °C, together with dullness or poor appetite, is a reason to call the vet."
+        },
+        {
+          "q": "My camel's hump has become small. Is it sick?",
+          "a": "Not always. The hump stores fat, and camels use it up during the long dry season, so it shrinks naturally when browse is poor. A healthy hump stays firm and upright even when smaller. Be concerned if the hump shrinks quickly, falls to one side or becomes floppy, or if the ribs and hip bones show a lot while other camels in the same herd still look fine. That can point to worms, surra, poor teeth or another illness, and a vet should check the camel."
+        },
+        {
+          "q": "How long can a healthy camel go without water?",
+          "a": "It depends on the season, the heat, the work it does and the browse. On green browse in cooler weather, camels may go a long time without drinking, and in hot dry periods they need water more often. Milking females, pregnant camels and calves need water more regularly than other camels. Long water stress lowers milk yield and body condition, so even though camels can survive without water, regular watering keeps them productive."
+        },
+        {
+          "q": "Why is my bull camel blowing a pink bubble out of his mouth?",
+          "a": "That pink balloon is the dulla, part of the soft palate that bulls push out during the rut, the breeding season. It comes with gurgling sounds, froth, teeth grinding, a strong smell and splashing urine on the tail. It is normal and not a sign of choking. Rutting bulls can be dangerous, so handle them carefully and keep children away. If you see drooling without a dulla, trouble swallowing, staggering or paralysis, call a vet immediately."
+        },
+        {
+          "q": "How often should I deworm and treat my camels?",
+          "a": "There is no single schedule that suits every herd. It depends on your area, the season, the rains and the type of grazing. Ask your vet to test droppings and blood, and to plan worm, tick, mange and surra control for your herd. Treating only when needed, with the right product, saves money and slows drug resistance. Always follow the milk and meat withdrawal periods the vet gives you."
+        },
+        {
+          "q": "Do I need to give vitamins or supplements to healthy camels?",
+          "a": "Camels on good mixed browse with access to salt and minerals usually get most of what they need. Late in the long dry season, when browse is dry and green feed is scarce, levels of vitamins such as vitamin A can fall. Stress such as long treks or transport in heat also drains camels. Talk to your vet or agrovet about whether a vitamin or rehydration product would help your herd at such times, and always follow the label. Supplements support good feeding, salt and parasite control but do not replace them."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "ade-3",
+        "role": "During the late dry season, when green browse is scarce and vitamin A levels can drop, AD3E can help top up vitamins A, D3 and E for pregnant and milking camels. Use it alongside good browse, salt and minerals and routine vet care, following the label and your vet's advice."
+      },
+      {
+        "slug": "re-cover",
+        "role": "Before and after long treks, transport or very hot periods, this oral rehydration solution can help camels replace fluids and electrolytes and cope with heat stress. It supports, but does not replace, regular watering, shade and calm handling."
+      }
+    ],
+    "imagePrompt": "A healthy, alert one-humped dromedary camel standing in dry acacia scrubland in northern Kenya in soft morning light, head held high, bright eyes, chewing cud, with a firm upright hump, clean coat and small dry dung pellets on the sandy ground nearby.",
+    "seoDescription": "Know what a healthy camel looks like: alert, chewing cud, firm dry droppings, good hump and normal daily temperature. A practical guide for Kenyan herders."
+  },
+  "trypanosomiasis": {
+    "card": {
+      "headline": "Shrinking hump and steady weight loss",
+      "look": "The camel slowly gets thinner, the hump shrinks and sags, and the gums and eyes look pale. It is often dull, has runny eyes, and may show soft swelling under the belly, chest or lower legs.",
+      "action": "Separate the sick camel, keep it in shade with water, and call a vet to take a blood sample for testing before any trypanocide is given."
+    },
+    "detail": {
+      "aka": [
+        "Camel trypanosomiasis",
+        "Trypanosoma evansi infection",
+        "Dhukaan (Somali)",
+        "Tibersa or 'three-year disease' (Sudan)"
+      ],
+      "summary": "Surra is a blood parasite disease of camels caused by Trypanosoma evansi, a tiny organism that lives and multiplies in the blood. Biting flies carry it from camel to camel. It is the most important disease of camels in Kenya and the Horn of Africa. It can kill quickly, but more often it drags on for months or even years, slowly wasting the camel, cutting milk yield and causing abortions.",
+      "cause": "Surra is caused by Trypanosoma evansi, a single-celled parasite called a trypanosome that swims in the blood and body fluids. Unlike the trypanosomes behind 'nagana' in cattle, it does not need tsetse flies; any biting fly that feeds on an infected camel and then quickly bites another can carry it on its mouthparts. Once inside, the parasites multiply in waves. Each wave brings a bout of fever, then the camel's immune system knocks the numbers down, then the parasites change their outer coat and multiply again. This is why the fever comes and goes. The parasites and the body's reaction to them destroy red blood cells, causing anaemia (too little blood to carry oxygen). The camel loses appetite, burns its fat reserves including the hump, and the liver and other organs are stressed. Low blood protein lets fluid leak out of the vessels, producing soft swellings (oedema) under the belly, brisket and legs. In pregnant camels the fever and anaemia can kill the unborn calf, leading to abortion or weak calves. Without treatment many camels slowly waste and die, often when another stress such as drought or a long trek is added.",
+      "spread": [
+        "Horse flies (Tabanus, the large flies with a painful bite) are the main carriers; they bite, get disturbed, and finish their meal on the next camel, carrying blood and parasites with them.",
+        "Stable flies (Stomoxys) and camel flies (Hippobosca) also carry the parasite in the same way, especially when camels crowd together at water points and night bomas.",
+        "Fly numbers rise sharply during and after the long rains and the short rains, so new infections peak in the wet season and the weeks after it.",
+        "Grazing near rivers, swamps, riverine forest and thick bush, where biting flies breed, greatly increases the risk.",
+        "Reusing the same needle or syringe on several camels can carry infected blood from one animal to the next.",
+        "Moving camels into a new area, buying in animals from markets, and mixing herds at shared watering points bring infected camels into contact with healthy ones.",
+        "Chronically infected camels that look only slightly thin can carry the parasite for a long time and act as a hidden source for the rest of the herd."
+      ],
+      "atRisk": "Camels of all ages can get surra, but adult camels, pregnant and milking females, and working pack camels suffer most because they are under the most stress. Camels from dry areas with little fly challenge suffer badly when moved into wetter, bushier areas. Risk is highest during and after the long rains (March to May) and short rains (October to December), when biting flies are plentiful. Pastoral herds in northern and eastern Kenya, including Marsabit, Wajir, Mandera, Garissa, Isiolo, Samburu, Turkana and Laikipia, are heavily affected, as are herds that graze along rivers such as the Tana, Ewaso Ng'iro and Daua. Camels that are underfed, wormy, or stressed by drought, long treks or other illness are more likely to become seriously sick. Horses, donkeys and dogs can also be infected and may become very ill; cattle, goats and sheep usually get milder infections.",
+      "signs": {
+        "early": [
+          "Bouts of fever that come and go: the camel feels hot, is dull and stands apart, then seems to recover for a few days before the next bout.",
+          "Runny, watery eyes and a slightly reduced appetite, often around the time of the fever.",
+          "Gradual weight loss even when grazing is fair, with the camel lagging behind the herd.",
+          "A drop in milk yield in lactating females.",
+          "Pale pink rather than healthy pink gums and inner eyelids, a first sign of anaemia.",
+          "Many herders notice a strong, unusual sweetish or sharp smell to the urine of infected camels; this is a useful warning sign but not proof on its own."
+        ],
+        "advanced": [
+          "Obvious wasting with ribs and hip bones showing, and a small, soft or collapsed hump.",
+          "Very pale or whitish gums and eyelids, weakness, and tiring quickly when walking or loaded.",
+          "Soft swellings (oedema) under the belly, brisket, sheath or udder and on the lower legs that may pit when pressed with a finger.",
+          "Dull, rough coat and hair loss in patches.",
+          "Abortion, stillbirth or the birth of weak calves that do poorly.",
+          "Lying down for long periods, difficulty getting up, and in some cases staggering or other nervous signs.",
+          "Death, either suddenly in a severe acute attack or after a long, slow decline, often triggered by drought or another stress."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Heavy worm burden (especially Haemonchus, the barber's pole worm)",
+          "howToTell": "Worms also cause pale gums, weight loss and bottle-jaw type swelling, but usually without bouts of fever. Several camels on the same grazing are often affected, and a faecal egg count at a lab will show many worm eggs. Surra is confirmed by finding trypanosomes or antibodies in a blood sample. The two often occur together, so a vet may test for both."
+        },
+        {
+          "name": "Starvation and drought stress",
+          "howToTell": "In drought the whole herd loses condition together, the hump shrinks in all animals, and they pick up when rains and pasture return. Camels with surra lose weight even when feed is available, show fever and runny eyes, and keep wasting after the rains."
+        },
+        {
+          "name": "Brucellosis",
+          "howToTell": "Brucellosis also causes abortion, but aborting camels usually stay in fair body condition without repeated fever, pallor or wasting. Brucellosis is diagnosed with a separate blood test and can infect people through raw milk and birth fluids, so handle all abortions with gloves."
+        },
+        {
+          "name": "Sarcoptic mange",
+          "howToTell": "Mange camels lose condition and hair, but the main sign is intense itching, rubbing and thick, crusty, wrinkled skin, especially on the head, neck, flanks and legs. Surra causes patchy hair loss without the severe itching and crusts, and comes with pale gums and fever."
+        }
+      ],
+      "diagnosis": "Signs alone are not enough because many conditions cause wasting. A vet or animal health technician will check temperature, body condition, gum colour and swellings, then take blood. The simplest test is to look at a fresh drop of blood or a stained blood smear under the microscope for moving trypanosomes. Spinning blood in a thin tube (the buffy coat or haematocrit centrifuge test) concentrates the parasites and also measures the packed cell volume (PCV), which shows how anaemic the camel is. Because parasite numbers rise and fall, a negative smear does not rule surra out, especially in chronic cases. Labs can also use blood tests that detect antibodies, such as the card agglutination test (CATT/T. evansi) or ELISA, or a PCR test that finds the parasite's genetic material. In dead camels a post-mortem may show a thin carcass, pale tissues, watery fluid in body cavities and an enlarged spleen and lymph nodes, but blood tests on living herd mates are more useful. To help the vet, note when the fever bouts happened, which camels are thin or have aborted, where the herd has grazed and watered recently, any recent purchases or treks, and any drugs already given, with names and dates. Ideally have the camel sampled while it has a fever, when parasites are easiest to find.",
+      "firstSteps": [
+        "Separate the sick camel from the herd where you can, and keep it in shade near the boma so it does not have to walk far.",
+        "Make sure it has easy access to clean drinking water and good-quality browse or fodder, because fever and anaemia sap its strength.",
+        "Stop loading, working or trekking the camel; extra exertion can make an anaemic camel collapse.",
+        "Protect it from biting flies as much as possible, for example by keeping it away from rivers and thick bush and resting it in an open, breezy spot at the hottest fly times.",
+        "Check the rest of the herd closely for thin animals, pale gums, runny eyes, swellings and recent abortions, and write down what you find.",
+        "Record the camel's temperature if you have a thermometer, the dates of fever bouts, and any treatment already given.",
+        "Call your vet, County Veterinary Officer or a trained animal health worker to take blood samples before any drug is used.",
+        "Do not inject cattle trypanocides or any other drug without a vet's advice; camels react badly to some products and wrong doses cause poisoning and drug resistance. Use a new or properly sterilised needle for every animal."
+      ],
+      "vetTreatment": "Surra is treated with trypanocides, which are drugs that kill trypanosomes. They are not antibiotics, and antibiotics do not cure surra, though a vet may use them if there is a second bacterial infection. Drugs commonly used in camels include quinapyramine and melarsomine, which has been developed specifically for T. evansi in camels. Some trypanosome drugs used in cattle, such as diminazene and isometamidium, are riskier in camels, which are more sensitive to their toxic effects, so the choice of drug, the dose and the route must be decided by a vet for camels specifically. Some products can also be used preventively at the start of the fly season under veterinary guidance. Treatment must be prescribed by a vet; never borrow cattle doses. Injection site swelling, drooling, trembling or restlessness can occur with some drugs, so the camel should be watched after treatment. Most treated camels improve over days to weeks, but rebuilding the hump, body condition and blood takes longer and needs good feeding and rest. Resistance of T. evansi to trypanocides is a real and growing problem, driven by under-dosing, fake or poor-quality drugs and repeated use of the same product, so buy from licensed agrovets and follow the vet's plan. All trypanocides have milk and meat withdrawal periods, during which milk and meat must not be used for people; ask the vet for the exact period of the product used and keep to it.",
+      "prevention": [
+        "Reduce fly contact: where possible, graze away from rivers, swamps and thick bush during and after the rains, and water camels at cooler times of day when biting flies are less active.",
+        "Ask your vet about fly control products that are approved for camels, such as pour-ons or sprays, and about fly traps or insecticide-treated targets near bomas and water points.",
+        "Under veterinary advice, consider preventive trypanocide treatment for high-risk herds before or at the start of the rainy season or before moving camels into fly-infested areas.",
+        "Check new camels before mixing them with your herd: keep them apart for a few weeks and have them blood-tested for surra.",
+        "Use one clean needle per camel for all injections and never share syringes between herds.",
+        "Keep camels in good body condition with access to browse, salt and minerals, and plan for drought, because well-fed camels cope with infection far better.",
+        "Control worms with a planned deworming programme agreed with your vet, since worms and surra together cause severe anaemia.",
+        "Watch the herd regularly for weight loss, pale gums, runny eyes and abortions, and have suspect camels tested early rather than waiting for them to waste.",
+        "Buy trypanocides only from licensed agrovets, use the full prescribed dose, and rotate products as your vet advises to slow down drug resistance."
+      ],
+      "impact": "For pastoral and commercial camel keepers in Kenya, surra is one of the biggest drains on income. Milk yield falls in sick females, and since camel milk is a key food and cash product in northern Kenya, families feel the loss quickly. Abortions and weak calves slow herd growth for years. Wasted camels fetch much lower prices at market, and pack and riding camels cannot work. Repeated drug purchases, transport to get treatment, and losses from deaths in severe or neglected cases add to the cost. Chronic carriers keep the disease circulating, so one untreated camel can cost the whole herd. Drug resistance makes treatment less reliable and more expensive over time.",
+      "humanHealth": "Surra is not considered an important disease of people, although a very small number of human infections with T. evansi have been reported worldwide. The main human concern is drug residues: camel milk is often drunk raw, and milk or meat from camels treated with trypanocides must not be consumed until the withdrawal period given by the vet is over. Because abortions in camels can also be caused by brucellosis, which does infect people, always wear gloves when handling aborted calves and birth fluids, bury or burn them, and boil camel milk before drinking.",
+      "outlook": "Camels diagnosed and treated early with an appropriate trypanocide usually recover well, although they need weeks of good feeding and rest to regain the hump and body condition. The outlook is more guarded in camels that have been sick for a long time, are severely anaemic, very thin, heavily pregnant or also carrying worms or other diseases. Relapses happen if the drug did not clear all the parasites, if the parasites are resistant, or if the camel is quickly reinfected by flies. Recovered camels can be infected again, so prevention and regular checks remain important.",
+      "faqs": [
+        {
+          "q": "My camels are far from tsetse areas. Can they still get surra?",
+          "a": "Yes. Surra does not need tsetse flies. It is carried by common biting flies such as horse flies and stable flies, which are found across camel country, especially after the rains. That is why surra occurs throughout northern and eastern Kenya, even in dry areas."
+        },
+        {
+          "q": "Can I use the trypanosome injection I use for my cattle?",
+          "a": "Not without a vet's advice. Camels are more sensitive than cattle to some trypanocides, and a cattle product or dose can poison a camel or fail to clear the infection. Using the wrong drug or too little of it also helps the parasite become resistant. Ask a vet which product is suitable for camels and how it should be given."
+        },
+        {
+          "q": "Is the strange smell of the urine enough to know my camel has surra?",
+          "a": "The unusual urine smell that many herders recognise is a helpful warning, and it is worth taking seriously. But it is not proof, and other conditions can change urine smell. A blood test is the reliable way to confirm surra, so use the smell as a reason to call the vet, not as a replacement for testing."
+        },
+        {
+          "q": "Can we drink the milk from a camel with surra?",
+          "a": "The parasite itself is not considered a real risk to people through milk, but sick camels give less milk and it should be boiled like all camel milk. The bigger concern is drugs: after a camel is treated with a trypanocide, its milk and meat must not be used until the withdrawal period stated by the vet has passed."
+        },
+        {
+          "q": "Why did my camel get sick again after being treated?",
+          "a": "There are several possible reasons. The camel may have been reinfected by flies, the dose may not have been right, the drug may have been of poor quality, or the parasites in your area may be resistant to that drug. Tell your vet so they can retest the camel and, if needed, change the treatment and advise on fly control."
+        },
+        {
+          "q": "Can surra spread to my donkeys, horses, goats or dogs?",
+          "a": "Yes, T. evansi can infect several animals. Horses, donkeys and dogs can become seriously ill, while cattle, goats and sheep usually have milder infections but can still carry the parasite. If other animals near your camels become thin, weak or feverish, ask the vet to test them too."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "An oral rehydration and heat-stress relief solution that can help a feverish, weak camel keep drinking and stay hydrated in hot conditions while it receives vet-prescribed trypanocide treatment. It supports comfort and recovery only and does not kill the parasite."
+      },
+      {
+        "slug": "ade-3",
+        "role": "Vitamins A, D3 and E can help support a camel recovering from surra whose body reserves have been run down, particularly after drought and weight loss, when advised by your vet as part of recovery feeding. It does not treat surra or replace trypanocides, fly control or good nutrition."
+      }
+    ],
+    "imagePrompt": "A thin dromedary camel with a small, sagging hump, visible ribs and soft swelling under the belly standing in dry acacia bushland in northern Kenya, realistic daylight photo.",
+    "seoDescription": "Surra in camels: learn the signs of Trypanosoma evansi—fever, weight loss, shrinking hump, swelling—plus first steps, vet treatment and fly control in Kenya."
+  },
+  "camel-pox": {
+    "card": {
+      "headline": "Pox scabs on lips and nostrils",
+      "look": "Raised red spots appear on the lips, nostrils and eyelids and turn into blisters, pus-filled bumps and then dark crusts. The camel often has a fever, watery eyes and swollen glands, and calves may become covered in lesions all over the body.",
+      "action": "Separate the sick camel from the herd, keep its calf and other young camels away from it, and call your vet or County Veterinary Officer."
+    },
+    "detail": {
+      "aka": [
+        "Ndui ya ngamia (Swahili)",
+        "Camelpox",
+        "Furuq (Somali word for pox)"
+      ],
+      "summary": "Camel pox is a contagious viral skin disease of camels. It causes fever and pox lesions that start on the head and can spread over the whole body. Adult camels usually recover, but young calves can get a severe form and some die. It matters to herders because it cuts milk, slows growth, causes abortions, lowers market value and can occasionally infect the people who handle sick camels.",
+      "cause": "Camel pox is caused by the camelpox virus, an orthopoxvirus. Orthopoxviruses are a family of viruses that also includes cowpox and the old human smallpox virus. The virus enters through small breaks in the skin or the lining of the mouth and nose. It multiplies there and in nearby lymph nodes, which are the 'glands' under the jaw and in front of the shoulder, so they swell. It then travels in the blood and settles in the skin. Each lesion goes through stages over days: a red spot (macule), a raised bump (papule), a fluid blister (vesicle), a pus-filled bump (pustule), and finally a dry crust or scab that falls off and leaves a scar. In the mild form, lesions stay mostly on the lips, nostrils, eyelids and face. In the generalised form, lesions cover the neck, legs, belly, udder and genitals, and can also form inside the mouth, throat, airways and gut. This makes eating, drinking and breathing painful. Raw lesions easily become infected with bacteria, which causes much of the serious illness and many of the deaths. The scabs that fall off are full of virus and can stay infectious in the dry environment for a long time.",
+      "spread": [
+        "Direct contact between a sick camel and a healthy one, especially nose-to-nose contact, licking and suckling, spreads the virus quickly.",
+        "Scabs that fall off sick camels contain a lot of virus and can stay infectious for months in dry, shaded places such as bomas, resting spots and under trees.",
+        "Shared water troughs, feeding places, ropes, saddles, halters and milking containers carry the virus from one camel to another.",
+        "Bringing in newly bought camels, or mixing herds at markets, water points and during migration, is a common way the disease enters a healthy herd.",
+        "Biting ticks, especially Hyalomma ticks, may be able to carry the virus between camels, although direct contact is the main route.",
+        "People's hands and clothing can carry virus from a sick camel to a healthy one, for example when one person milks the whole herd."
+      ],
+      "atRisk": "Young camels, usually under about three years old and especially calves still suckling, are most at risk of the severe, generalised form. Older camels that have never been exposed can also get sick, while camels that recovered before usually stay protected for a long time. Pregnant females may abort. Camels weakened by poor grazing, heavy worm or tick loads, or other illness tend to suffer more. Outbreaks are often reported during and after the rains, when herds gather at water points and fresh grazing and when movement and trading increase. In Kenya the disease matters most in pastoral camel areas such as Marsabit, Wajir, Mandera, Garissa, Isiolo, Turkana, Samburu and Laikipia, and in herds where animals are bought and sold frequently.",
+      "signs": {
+        "early": [
+          "Fever: the camel feels hot, seems dull and may stand apart from the herd or lie down more than usual.",
+          "Reduced appetite and less interest in browsing, and a lactating camel may give noticeably less milk.",
+          "Watery eyes and tears running down the face, sometimes with a runny nose.",
+          "Swollen, firm glands under the jaw, below the ear or in front of the shoulder that you can feel with your hand.",
+          "Small red spots on the lips, around the nostrils and on the eyelids that soon become raised bumps.",
+          "Swelling of the lips and face, and drooling in some animals."
+        ],
+        "advanced": [
+          "Blisters and pus-filled bumps that break and form thick brown or dark crusts on the head, neck, legs, belly, udder, groin and around the tail.",
+          "In calves, lesions joining together over large areas of skin, with the calf becoming weak and thin very quickly.",
+          "Sores in the mouth and on the tongue that make the camel unable to eat or drink properly, and calves that refuse to suckle.",
+          "Difficult or noisy breathing and discharge from the nose when lesions reach the airways.",
+          "Swollen, crusted eyelids, cloudy eyes and sometimes blindness in one or both eyes.",
+          "Bad-smelling, pus-filled wounds when bacteria infect the lesions, and flies gathering on them.",
+          "Diarrhoea, dehydration and severe weight loss in calves with the generalised form.",
+          "Abortion in pregnant camels and, in severe cases, death, mostly among young calves."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Camel contagious ecthyma (orf-like disease)",
+          "howToTell": "This is caused by a different virus (a parapoxvirus) and also mostly affects young camels. The thick, wart-like crusts usually stay on the lips, muzzle and around the mouth and rarely spread over the whole body, and fever is often mild. The two diseases can look very similar and can even occur together, so only a laboratory test on scabs can tell them apart for certain."
+        },
+        {
+          "name": "Camel papillomatosis (warts)",
+          "howToTell": "Warts are firm, dry, cauliflower-like growths on the lips and face that grow slowly. There is no fever, no blister or pus stage, and the camel usually stays bright and eats well."
+        },
+        {
+          "name": "Mange (sarcoptic mange)",
+          "howToTell": "Mange causes intense itching, so the camel rubs and bites itself. You see hair loss and thick, wrinkled, crusty skin, often on the head, neck, flanks and inside the thighs, but no fever and no sequence of blisters turning into pustules. A vet can confirm it with a skin scraping."
+        },
+        {
+          "name": "Dermatophilosis (rain scald)",
+          "howToTell": "This bacterial skin infection appears in wet weather as tufts of matted hair that lift off like a paintbrush, leaving raw, moist skin underneath. It does not usually start on the lips, nostrils and eyelids, and the camel is rarely feverish."
+        }
+      ],
+      "diagnosis": "An experienced vet can often suspect camel pox from the typical lesions on the lips, nostrils and eyelids, the fever, the swollen glands and the way it spreads through young camels. Because contagious ecthyma and other skin diseases look similar, the vet may collect samples to confirm it. Useful samples are fresh scabs, fluid from unbroken blisters, and swabs from lesions, sometimes with a blood sample. These are sent to a laboratory such as the Central Veterinary Laboratories at Kabete or a regional veterinary laboratory, where tests such as PCR (a test that detects the virus's genetic material) or virus isolation confirm the cause. If a calf dies, a post-mortem can show lesions in the mouth, airways and gut. You can help by writing down when the first animal got sick, how many camels and calves are affected, their ages, any deaths or abortions, recent purchases or herd mixing, and any treatments already given. Keep sick animals restrained in a shaded place where the vet can examine them safely.",
+      "firstSteps": [
+        "Isolate every camel with fever or pox lesions in a separate shaded area, away from the rest of the herd and especially away from young calves and pregnant females.",
+        "Stop buying, selling, lending or moving camels from your herd, and keep the herd away from shared water points and markets where possible until the vet has seen it.",
+        "Wear gloves when you handle sick camels, wash your hands well with soap and water afterwards, and cover any cuts on your hands.",
+        "Make sure sick camels have easy access to clean water, shade and soft, palatable browse or fodder, because mouth sores make eating painful.",
+        "Help calves that cannot suckle well by gently offering milk or water, and watch them closely for weakness and dehydration.",
+        "Use separate ropes, buckets and milking containers for sick animals, and milk sick camels last so you do not carry the virus to healthy ones.",
+        "Collect fallen scabs and contaminated bedding and burn or bury them, and clean shared equipment.",
+        "Record which animals are sick, their ages and signs, and call your vet or County Veterinary Officer; do not give antibiotics or other drugs unless a vet prescribes them."
+      ],
+      "vetTreatment": "There is no medicine that kills the camelpox virus, so treatment is supportive. This means helping the camel's own body fight the virus while preventing complications. Antibiotics do not cure camel pox; the vet uses them only to control bacterial infection of the sores, for example with broad-spectrum antibiotics such as oxytetracycline or penicillin-type drugs, chosen according to the case. Using antibiotics only when they are needed, for the full course the vet prescribes, helps prevent antimicrobial resistance, where bacteria stop responding to drugs. The vet may also clean lesions with mild antiseptic solutions, apply soothing ointments or fly-repellent wound sprays, treat eye lesions to protect sight, and recommend vitamins and fluids for weak calves. Anti-inflammatory or fever-reducing medicine may be used in some cases. Any drug given to a camel can leave residues in milk and meat, so follow the withdrawal period your vet gives you before milk is drunk or sold or the animal is slaughtered. Many medicines have no withdrawal period specifically set for camels, so the vet will advise a safe waiting time. Most lesions dry and scab within one to two weeks and the whole illness often runs over about four to six weeks. Calves with the generalised form need close nursing and may still die despite good care.",
+      "prevention": [
+        "Vaccination: live and inactivated camel pox vaccines exist and are used in several camel-keeping countries, and they give good protection. Availability in Kenya varies, so ask your County Veterinary Officer whether vaccine can be obtained and when to vaccinate young camels.",
+        "Quarantine newly bought camels for at least two to three weeks, away from your herd, and check them for fever and skin lesions before mixing them in.",
+        "Avoid buying camels from herds or markets where pox is known to be present, and limit mixing with other herds at water points during an outbreak where you can.",
+        "Control ticks and other parasites regularly with products and methods advised by your vet, because ticks may carry the virus and heavy parasite loads weaken camels.",
+        "Keep camels, especially calves and pregnant females, in good body condition with adequate browse, water and mineral supplements, because well-fed camels cope better with infection.",
+        "Clean bomas and resting areas, and collect and destroy scabs after an outbreak, because the virus can survive a long time in dry scabs.",
+        "Keep separate equipment for sick animals, and teach herders and milkers to wash their hands between animals.",
+        "Keep records of illness, purchases and vaccinations so that outbreaks can be traced and the vet can advise you better."
+      ],
+      "impact": "For a pastoral family, camels are milk, transport, savings and status, so camel pox hits hard. Sick lactating camels give much less milk, at the very time families depend on it. Calves can die or be stunted for months, which slows herd growth. Pregnant camels may abort, losing a whole year of production. Damaged skin lowers the value of hides, and visibly sick or scarred camels fetch lower prices or cannot be sold while the herd is affected. Extra labour is needed to nurse calves and keep sick animals apart, and vet visits, antiseptics and antibiotics add cost. Outbreaks can also disrupt marketing and movement between herds and counties.",
+      "humanHealth": "Camel pox can infect people, though this is uncommon. Herders, milkers and people who nurse sick camels have developed sore, pus-filled lesions on the hands and fingers, sometimes with mild fever and swollen glands in the armpit. Most human cases are mild and heal on their own, but anyone with a weak immune system, or any person who develops sores after handling sick camels, should visit a health centre and tell the health worker about the contact. To protect yourself, wear gloves when handling sick camels or their scabs, cover cuts and scratches, wash your hands well with soap and water, and do not let children play with sick calves. Do not drink raw milk from sick camels; boil all camel milk, and discard milk during the drug withdrawal period your vet gives you.",
+      "outlook": "Most adult camels recover within about four to six weeks, and recovered camels usually stay protected against the disease for many years. The outlook is much worse for young calves with the generalised form, especially when lesions reach the mouth and airways and they cannot suckle or breathe easily, and some will die. Recovery depends on the age and condition of the camel, how quickly bacterial infection of the sores is controlled, good nursing with water and soft feed, and fly control. Some camels are left with scars, and a few may lose sight in an eye. Pregnant females that abort will usually recover but lose that season's calf.",
+      "faqs": [
+        {
+          "q": "Can I drink milk from a camel that has camel pox?",
+          "a": "It is safest not to drink raw milk from a sick camel. The virus can pass to people through contact, and sick camels often have lesions on the udder and teats. Boil any camel milk before drinking. If your vet has given the camel antibiotics or other drugs, throw the milk away for the whole withdrawal period they tell you, even if you boil it, because boiling does not remove drug residues."
+        },
+        {
+          "q": "Will a camel get camel pox again after it recovers?",
+          "a": "Camels that recover from camel pox usually develop strong, long-lasting immunity, so they rarely get sick again. This is why the disease mostly affects young camels in herds where it is common. Camels from areas without the disease, or herds that have not been exposed for a long time, can still get sick at any age."
+        },
+        {
+          "q": "Is there a camel pox vaccine in Kenya?",
+          "a": "Effective camel pox vaccines exist and are widely used in some Middle Eastern and Asian countries. Availability in Kenya can be limited and changes over time. Ask your County Veterinary Officer or a reputable agrovet whether a vaccine is available in your area and how it should be used for young camels."
+        },
+        {
+          "q": "Can camel pox spread to my goats, sheep or cattle?",
+          "a": "Camelpox virus mainly infects camels, and goats, sheep and cattle are generally not affected. However, goats and sheep have their own pox and orf diseases that look similar, so if other animals on your farm develop skin lesions, ask your vet to check them rather than assuming they caught it from the camels."
+        },
+        {
+          "q": "Should I open or scrape off the scabs to help the camel heal?",
+          "a": "No. Picking or scraping scabs makes the wounds raw, spreads the virus on your hands and invites bacterial infection and flies. Let the scabs dry and fall off naturally. Keep the area clean as your vet advises, and collect fallen scabs and burn or bury them so they do not infect other camels."
+        },
+        {
+          "q": "Can people really catch camel pox from camels?",
+          "a": "Yes, but it is uncommon. Herders and milkers who handle sick camels have developed sores on their hands and fingers. These are usually mild and heal, but you should still wear gloves, cover cuts, wash your hands well and visit a health centre if you develop sores after handling sick camels."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "An oral rehydration solution that can help sick camels, and especially calves with mouth sores, fever or diarrhoea, replace lost water and salts when they are drinking and eating less. It supports recovery alongside vet care and good nursing and does not act against the virus."
+      },
+      {
+        "slug": "ade-3",
+        "role": "Vitamins A, D3 and E support normal skin and mucous membrane health and general condition. This can help camels recovering from pox, particularly during dry seasons when browse is poor in vitamin A. Use it as your vet advises, as a nutritional aid alongside treatment, not as a cure."
+      }
+    ],
+    "imagePrompt": "Close-up photograph of a young dromedary camel calf's muzzle in a dry Kenyan boma, showing raised pox bumps and brown crusted scabs on the lips, around the nostrils and on the eyelids, in natural daylight.",
+    "seoDescription": "Camel pox in Kenya: spot scabs on lips, nostrils and eyelids, fever and swollen glands. Learn first steps, vet care, prevention and human risk."
+  },
+  "mange": {
+    "card": {
+      "headline": "Thick, crusted, hairless itchy skin",
+      "look": "The camel rubs and bites itself constantly against trees, posts and other camels. Patches of skin on the head, neck, flanks and inner thighs become bald, grey, crusty, wrinkled and thickened like old leather.",
+      "action": "Separate itchy camels from the herd, wear gloves when handling them, and call your vet or animal health worker to confirm mange and plan treatment for the whole herd."
+    },
+    "detail": {
+      "aka": [
+        "Sarcoptic mange",
+        "Camel scabies",
+        "Upele (Swahili)",
+        "Camel itch"
+      ],
+      "summary": "Mange in camels is a skin disease caused by a tiny mite, Sarcoptes scabiei, that burrows into the skin. It causes intense itching, hair loss and thick, crusted, cracked skin, starting on the head, neck, flanks and inner thighs and spreading over the body if left alone. It is one of the most common and costly skin problems of camels in the pastoral areas of northern and eastern Kenya and the Horn of Africa, because affected camels lose weight, give less milk and fetch lower prices. It also spreads easily to herders and milkers, causing itchy skin in people.",
+      "cause": "Camel mange is caused by Sarcoptes scabiei var. cameli, a mite too small to see clearly with the naked eye. The female mite digs tunnels (burrows) in the top layer of the skin, where she lays eggs. The eggs hatch, the young mites grow into adults within about two to three weeks, and the cycle repeats, so numbers build up fast on one animal. The burrowing, together with the mites' saliva and droppings, triggers a strong allergic-type reaction in the skin. This is why the itching is so severe. The skin responds by thickening, losing hair and forming crusts and scales. Constant rubbing, scratching and biting break the skin, producing cracks (fissures) that weep fluid and bleed slightly. These open cracks can become infected by bacteria and attract flies, which makes the skin worse. A heavily affected camel spends so much time scratching and is so uncomfortable that it browses less and rests poorly, so it loses body condition and milk. In young or already weak camels, widespread mange combined with poor nutrition and secondary infection can lead to severe wasting and occasionally death.",
+      "spread": [
+        "Direct body contact between camels is the main route, especially when animals are crowded together in night enclosures (bomas), at water points, at markets and during treks.",
+        "Mites can survive for a short time off the animal, so shared rubbing trees, fence posts, resting grounds and walls of night enclosures can pass mites from one camel to the next.",
+        "Saddles, pack frames, harnesses, ropes, blankets and mats used on an infected camel and then on a healthy one can carry mites.",
+        "Bringing in a newly bought camel, or mixing herds at shared grazing, wells and markets, is a common way the disease enters a clean herd.",
+        "Mothers pass mites to their calves through close contact during suckling and resting.",
+        "Poor body condition, stress, heavy work and long dry spells do not cause mange on their own, but they weaken the skin's defences so mites multiply faster and disease becomes severe."
+      ],
+      "atRisk": "All camels can get mange, but young camels, weaned calves, old animals and any camel in poor body condition suffer the worst disease. Pregnant and heavily lactating she-camels, and pack or transport camels that work hard and carry saddles, are also at higher risk. Mange problems tend to rise during long dry seasons and cooler months, when grazing is poor, camels are weak and herds crowd together at the few remaining water points and in enclosures at night. Pastoral and agro-pastoral herds in Turkana, Marsabit, Wajir, Mandera, Garissa, Isiolo, Samburu and similar areas, where herds mix at wells and markets, are commonly affected. Herds that buy in camels without a quarantine period, or that share grazing with infected herds, are more likely to be hit. Once mange is in a herd, untreated carrier animals keep reinfecting the others.",
+      "signs": {
+        "early": [
+          "Frequent rubbing of the head, neck and body against trees, posts, walls or other camels, and biting or nibbling at the skin.",
+          "Restlessness, especially at night, with the camel getting up and lying down more often than usual.",
+          "Small raised bumps, redness and fine scaling on the face, around the eyes and lips, on the neck, flanks, inner thighs, belly, udder or around the genitals.",
+          "Thinning hair and small bald patches where the camel has been rubbing, often with grey, dandruff-like flakes.",
+          "Itching that gets worse when the camel is warm, for example after resting in the sun or after a trek."
+        ],
+        "advanced": [
+          "Large bald areas with very thick, wrinkled, grey or dark skin that feels hard and leathery, sometimes covering most of the body.",
+          "Heavy yellow-grey crusts and deep cracks in the skin that may ooze clear fluid, bleed slightly or smell bad when infected.",
+          "Flies gathering on raw, broken skin, and sometimes wounds from the camel rubbing itself on thorny trees.",
+          "Weight loss, a visible drop in hump size, poor appetite and a dull, tired look, because the camel spends its energy scratching instead of browsing.",
+          "Marked fall in milk yield in lactating she-camels, and calves that stop growing well.",
+          "Pack camels that cannot carry a saddle because the skin under it is sore, cracked or infected.",
+          "In very weak or young camels, severe wasting, weakness and occasionally death, usually when mange is combined with hunger and other infections."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Ringworm (dermatophytosis)",
+          "howToTell": "Ringworm is a fungal infection that makes round, well-defined grey or white crusty patches, mostly on the head, neck and shoulders of young camels. It is usually much less itchy than mange, and the patches are round and separate rather than spreading, thickened and wrinkled. A vet can tell them apart with skin scrapings and hair samples."
+        },
+        {
+          "name": "Camelpox",
+          "howToTell": "Camelpox causes fever and pock-like lumps that turn into blisters and scabs, starting on the lips, nostrils, eyelids and then the legs, udder and body. Affected camels, especially young ones, are clearly sick with fever and swollen glands. Mange does not cause fever on its own and is mainly intense itching with thick, hairless skin."
+        },
+        {
+          "name": "Contagious ecthyma (camel orf)",
+          "howToTell": "Orf mainly affects young camels and causes thick, warty scabs on the lips, mouth corners and nostrils, which can stop them suckling or browsing. It rarely spreads over the body, flanks and thighs the way mange does, and itching is not the main feature."
+        },
+        {
+          "name": "Lice and heavy tick infestation",
+          "howToTell": "Lice and ticks can also cause rubbing and hair loss, but you can see them with your eyes: lice and their eggs (nits) stuck to hairs, or ticks attached around the ears, tail, udder and between the legs. Sarcoptic mites are too small to see and live inside the skin, which becomes very thick and crusted."
+        }
+      ],
+      "diagnosis": "A vet or trained animal health worker will usually suspect mange from the typical intense itching and the pattern of thick, crusted, hairless skin starting on the head, neck, flanks and inner thighs. To confirm it, they take deep skin scrapings: they gently scrape the edge of an active lesion with a blade until the skin just starts to show tiny pinpoint spots of blood, then look at the scrapings under a microscope for mites, eggs or mite droppings. Mites can be hard to find, so several scrapings from different places may be needed, and a negative result does not fully rule out mange. Sometimes the vet confirms the diagnosis by how well the herd responds to anti-mite treatment. They will also look for other causes of skin disease such as ringworm, camelpox, orf, lice and ticks, and check for secondary bacterial infection. Before the vet comes, the farmer can help by keeping suspected camels tied or penned apart, counting how many animals are itching, noting when the itching started, which camels were recently bought or mixed with other herds, what treatments have already been tried (including traditional remedies), and whether any family members or herders have developed an itchy rash.",
+      "firstSteps": [
+        "Separate camels that are itching or have crusty, hairless skin from the rest of the herd, and keep them in their own resting area and away from shared rubbing trees as far as possible.",
+        "Protect yourself: wear gloves and long sleeves when handling affected camels, wash your hands and arms with soap and water afterwards, and change and wash clothes that touched the skin.",
+        "Stop sharing saddles, pack frames, ropes, mats and blankets between affected and healthy camels, and set aside equipment used on sick animals until it can be cleaned.",
+        "Check every camel in the herd carefully, including calves, looking at the head, neck, flanks, inner thighs, udder and genitals, and write down which animals show signs.",
+        "Make sure affected camels have easy access to water, shade and the best grazing or browse you can find, because weak, hungry camels suffer far worse mange.",
+        "Rest working or pack camels with skin lesions, especially where the saddle sits, so the skin is not rubbed further.",
+        "Avoid putting used engine oil, battery acid, diesel, strong detergents or other harsh substances on the skin; these can burn the skin, poison the camel and contaminate milk and meat.",
+        "Call your vet, County Veterinary Officer or a trained animal health worker to confirm the problem and plan proper treatment for the whole herd, and do not sell or move itchy camels to markets until they are treated."
+      ],
+      "vetTreatment": "Treatment must be prescribed and supervised by a vet, who will choose the product, the dose and how often to repeat it based on the camels' weight, condition and whether they are being milked. The commonly used treatments are anti-parasite drugs from the macrocyclic lactone group, such as ivermectin or doramectin, usually given by injection, and acaricides (mite- and tick-killing chemicals) such as amitraz, certain pyrethroids or organophosphates, applied as a spray or wash over the whole body. Because mite eggs are not always killed, treatment almost always has to be repeated after an interval set by the vet, and the whole herd, not just the visibly sick camels, should be treated at the same time to stop reinfection. Before spraying, the vet may advise soaking and softening thick crusts so the product reaches the mites. Where the cracked skin has become infected, the vet may add an antibiotic; antibiotics do not kill mites and should only be used when truly needed, exactly as prescribed, to reduce the risk of antimicrobial resistance (germs becoming resistant to medicines). Withdrawal periods are very important with these drugs: this is the time after treatment when milk and meat must not be used for people. Many anti-mite products are not approved for animals producing milk for human use, or have long withdrawal times, and camel milk is a daily food for many pastoral families, so tell the vet which camels are being milked. Expect itching to ease over one to several weeks after effective treatment, while hair regrowth and the skin returning to normal take much longer, often a few months in severe cases. Very weak camels may also need better feeding and supportive care to recover.",
+      "prevention": [
+        "Quarantine newly bought camels or camels returning from markets and long treks for a few weeks, check them carefully for itching and crusty skin, and have them treated by a vet before they join the herd if needed.",
+        "Treat the whole herd when mange is diagnosed, follow the full repeat treatment the vet recommends, and recheck the herd afterwards so no carrier animals are left to reinfect the others.",
+        "Keep camels in good body condition with the best browse and grazing available, access to water and salt or mineral licks, especially before and during long dry seasons, because well-fed camels resist mange better.",
+        "Avoid overcrowding in night enclosures where possible, and give sick and healthy camels separate resting places.",
+        "Do not share saddles, pack frames, harnesses, ropes and blankets between camels without cleaning them; wash them and leave them in strong sun to dry before reuse.",
+        "Reduce mixing with herds known to have mange at wells, grazing areas and markets, and agree with neighbouring herders on treating at the same time where mange is widespread.",
+        "Include regular skin checks in your routine herd inspections, looking closely at the head, neck, thighs, udder and genitals, so mange is caught early when it is easier to control.",
+        "Keep good records of which camels were treated, with what, when, and the withdrawal dates for milk and meat, and plan routine parasite control with your vet or County Veterinary Officer."
+      ],
+      "impact": "Mange causes real losses for camel keepers. Itchy camels browse less and rest poorly, so they lose weight and condition, and she-camels give noticeably less milk, which hits household food and milk sales directly. Calves from affected mothers grow slowly and weak young camels may die when mange is combined with drought and hunger. Camels with thick, scarred skin and bald patches fetch lower prices at livestock markets, and their hides are damaged and worth less. Pack and transport camels may be unable to carry saddles for weeks, interrupting water carrying, trade and migration. There are also extra costs for drugs, vet services and labour, often for repeated treatments of the whole herd, and lost milk during withdrawal periods. Because the mites spread to people, herders and milkers can suffer itchy rashes that affect their sleep and work.",
+      "humanHealth": "Camel mange mites can spread to people who handle, milk, ride or sleep close to affected camels. In people the mite usually causes very itchy red bumps and small blisters on the arms, hands, chest, belly and legs where they touched the camel. This form from animals usually does not settle permanently on people and tends to fade once contact with infected camels stops and the herd is treated, but the itching can be severe and the skin can become infected from scratching. To protect yourself and your family, wear gloves and long sleeves when handling itchy camels, wash with soap and water after contact, wash clothes and bedding that touched affected camels, and keep children from playing with or sleeping beside them. Anyone with an itchy rash after working with camels should visit a health facility and mention the contact with mangy camels. Also respect milk and meat withdrawal periods after anti-mite drugs, so that drug residues do not end up in the family's food.",
+      "outlook": "The outlook is good for most camels when mange is caught early and the whole herd is treated properly, with repeat doses as advised by the vet. Itching usually eases within weeks of effective treatment, although hair and skin may take a few months to look normal again, and badly scarred skin may stay thicker. Recovery is slower and less certain in camels with widespread, long-standing mange, deep infected cracks, very poor body condition, or other diseases at the same time, and some severely affected young or weak camels may not survive. Reinfection is common if only some camels are treated, if treatment is stopped early, if new camels are brought in without checks, or if the herd keeps mixing with infected herds. Good nutrition and consistent herd-wide control make the biggest difference to long-term success.",
+      "faqs": [
+        {
+          "q": "Can I use used engine oil or diesel to treat mange in my camels?",
+          "a": "This is a common traditional practice, but it is not recommended. Engine oil and diesel can burn and irritate already damaged skin, they can be absorbed and poison the camel, and they contaminate milk, meat and hides. They may soften crusts and smother some mites, but they do not reliably clear the infestation, so mange usually comes back. Ask your vet or animal health worker for a proper anti-mite treatment and a plan for the whole herd."
+        },
+        {
+          "q": "Why do I need to treat camels that are not itching yet?",
+          "a": "Mites spread quietly from camel to camel before you see signs, so animals that look healthy may already be carrying them. If you treat only the visibly sick camels, the hidden ones keep reinfecting the herd and you end up treating again and again. Treating the whole herd at the same time, and repeating treatment as the vet advises, gives the best chance of breaking the cycle."
+        },
+        {
+          "q": "Can my family still drink milk from a camel being treated for mange?",
+          "a": "Not always. Many anti-mite drugs pass into milk, and some are not approved for animals producing milk for people or have long withdrawal periods. Always tell the vet which camels are being milked so they can choose a suitable product and tell you exactly how long to throw away the milk. Respect that time fully, even though it means losing milk for a while."
+        },
+        {
+          "q": "I have an itchy rash after milking a mangy camel. Did I catch it from her?",
+          "a": "Quite possibly. Camel mange mites can cause itchy red bumps on people, especially on the arms, hands and chest. It usually settles once the camels are treated and you avoid close contact with infected animals, but you should visit a health facility for advice and to make sure scratching has not caused infection. Wear gloves and long sleeves and wash well after handling camels until the herd is clear."
+        },
+        {
+          "q": "How long until my camel's hair grows back?",
+          "a": "Itching often improves within one to a few weeks of effective treatment, but the skin needs time to heal. Hair regrowth and softening of thick skin usually take a couple of months or longer in bad cases, and some scarred skin may never look completely normal. If itching continues or new crusts appear after the full course, call the vet back, because treatment may need adjusting or the camel may have been reinfected."
+        },
+        {
+          "q": "Will one injection cure my camel of mange?",
+          "a": "Usually not. Treatments do not always kill mite eggs, so new mites hatch after the first treatment. Vets therefore normally repeat treatment after a set interval and treat all camels in the herd together. Follow the full plan your vet gives you, and keep affected camels well fed and watered, which helps their skin recover."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "ade-3",
+        "role": "Vitamin A helps keep skin healthy, and vitamins A, D3 and E support general condition. In thin or poorly fed camels recovering from mange, a vet may use AD3E to help correct vitamin shortfalls and support skin repair. It does not kill mites and does not replace the vet's anti-mite treatment, good feeding or herd-wide control."
+      }
+    ],
+    "imagePrompt": "A realistic outdoor photo of a dromedary camel in dry Kenyan bushland, its neck and flank showing large grey, thickened, wrinkled, crusty, hairless patches of skin, rubbing its neck against an acacia tree trunk.",
+    "seoDescription": "Camel mange (upele): spot thick, crusted, hairless itchy skin on head, neck and thighs. Learn first steps, vet treatment, prevention and herder safety."
+  },
+  "skin-necrosis": {
+    "card": {
+      "headline": "Crusted sores and lumps on neck, shoulders",
+      "look": "Round, hairless swellings appear on the neck, shoulders or flanks. They soften, burst and leave raw, crusted or dead-looking sores that may ooze yellow pus, often with swollen glands nearby.",
+      "action": "Separate the affected camel, keep flies and other camels away from the sores, and call your vet before the lesions spread through the herd."
+    },
+    "detail": {
+      "aka": [
+        "CSN",
+        "Camel skin necrosis",
+        "Camel skin abscesses",
+        "Majipu (Swahili for boils/abscesses)"
+      ],
+      "summary": "Contagious skin necrosis is a bacterial skin disease of camels. Lumps and abscesses (pockets of pus) form in the skin, burst, and leave patches of dead skin (necrosis) that heal slowly. It is common in pastoral camel herds in northern and eastern Kenya, especially in the dry season. It rarely kills, but it costs milk, body condition, hide value and working ability, and it can spread through a herd if not managed.",
+      "cause": "The disease is mainly caused by bacteria called Staphylococcus aureus. Streptococcus bacteria, including Streptococcus agalactiae, are also often found in the sores, and other germs such as Dermatophilus congolensis may join in. These bacteria live on skin and in the environment. They usually cannot get through healthy, unbroken skin. Trouble starts when the skin is damaged by thorns, tick bites, biting flies, rubbing saddles or ropes, branding or fighting. The bacteria enter the small wound and multiply under the skin. The body sends white blood cells to fight them, and pus builds up, forming a firm, painful lump. As the lump grows, it cuts off blood supply to the skin above it, so that skin dies, turns dark or leathery, and peels or sloughs away. This leaves an open, weeping ulcer that slowly fills in and scars. The infection drains to the nearest lymph nodes (the glands that filter infection), which swell. Poor nutrition makes everything worse: camels short of salt, minerals such as calcium, phosphorus and zinc, and vitamin A in a long dry season have weaker skin and weaker immunity, so sores appear more easily and heal more slowly.",
+      "spread": [
+        "Direct contact between camels, especially when they rub necks and shoulders together in crowded night enclosures (bomas) or at watering points.",
+        "Shared equipment such as saddles, saddle pads, halters, ropes and grooming tools carry pus from one camel to the next.",
+        "Thorny browse such as Acacia and Balanites scratches the neck and shoulders while camels feed, opening the skin to bacteria.",
+        "Ticks and biting flies damage the skin and may carry bacteria from sore to sore; flies are attracted to open, weeping lesions.",
+        "Pus and scabs that fall onto the ground, fences and resting places contaminate the environment for other camels.",
+        "Poorly done branding, ear-marking or traditional firing leaves wounds that can become infected.",
+        "Stress from long treks, heavy loads, drought, hunger and mineral shortage lowers resistance and triggers outbreaks."
+      ],
+      "atRisk": "Camels of all ages can be affected, but young camels and those around one to four years old are often reported to be hit harder, along with weak, thin or recently weaned animals. Pack and working camels that carry saddles and loads are at risk on the hump, withers and shoulders where equipment rubs. The disease is most common in pastoral systems in counties such as Turkana, Marsabit, Wajir, Mandera, Garissa, Isiolo, Samburu and parts of Laikipia, especially in the hot dry season when browse is thorny and dry, salt licks are far away, ticks are plentiful and camels are crowded at few water points. Herds that are not given salt or mineral supplements, have heavy tick burdens, or share equipment between many animals have more cases.",
+      "signs": {
+        "early": [
+          "Small, firm, painful swellings or nodules the size of a pea to a walnut on the neck, shoulders, withers, chest or flanks.",
+          "Patches where the hair stands up, falls out or looks matted over a swelling.",
+          "Swellings that feel warm and that the camel flinches from when touched.",
+          "The camel rubs or scratches the area against trees, fences or other camels.",
+          "Glands (lymph nodes) near the sores, such as in front of the shoulder, start to feel enlarged."
+        ],
+        "advanced": [
+          "Lumps become soft in the centre, then burst and release thick yellow, cream or blood-tinged pus.",
+          "The skin over the lump dies, turning dark, dry and leathery, then peels away leaving a raw, weeping ulcer.",
+          "Sores join together into large crusted areas of damaged skin, sometimes over much of the neck and shoulder.",
+          "Clearly swollen, firm lymph nodes that may themselves form abscesses.",
+          "Flies gather on the sores, and maggots (myiasis) may appear in neglected wounds with a foul smell.",
+          "Weight loss, reduced feeding and lower milk yield in badly affected camels.",
+          "Occasional fever and dullness when infection is widespread, and scarred, thickened skin after healing."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Camelpox",
+          "howToTell": "Camelpox is a viral disease that causes many small raised spots that turn into blisters and scabs, often starting on the lips, nostrils and eyelids and spreading over the body, usually with fever and more severe illness in young camels. Contagious skin necrosis usually starts with fewer, larger lumps on the neck and shoulders that fill with pus. A vet may need samples to tell them apart."
+        },
+        {
+          "name": "Mange (sarcoptic mange)",
+          "howToTell": "Mange is caused by tiny mites. It brings intense itching, hair loss and thick, wrinkled, crusty skin, often starting on the head, neck, inner thighs and belly, without the deep pus-filled lumps. A vet confirms it with a skin scraping under the microscope."
+        },
+        {
+          "name": "Ringworm (dermatophytosis)",
+          "howToTell": "Ringworm is a fungal infection that causes round, grey, scaly, hairless patches, often on the head and neck of young camels. The patches are dry and flaky and do not usually form pus-filled lumps or swollen glands."
+        },
+        {
+          "name": "Caseous lymphadenitis",
+          "howToTell": "This is a different bacterial disease (Corynebacterium pseudotuberculosis) where the lymph nodes themselves form large abscesses with thick, cheesy pus, often without the spreading skin sores. Laboratory culture of the pus is the reliable way to tell the difference."
+        }
+      ],
+      "diagnosis": "A vet usually suspects contagious skin necrosis from the typical pattern: lumps and necrotic sores on the neck and shoulders, swollen glands, and a history of thorny browse, ticks or saddle rubbing in the dry season. To confirm it and choose the right treatment, the vet may take a swab or a sample of pus from an unopened abscess and send it to a laboratory, such as a County or regional veterinary laboratory or the Central Veterinary Laboratories at Kabete, for bacterial culture and an antibiotic sensitivity test, which shows which drugs will work against the germs found. Skin scrapings may be taken to rule out mange, and scabs or tissue samples may be tested if camelpox or other diseases are possible. You can help by noting when the sores first appeared, how many camels are affected and their ages, any recent treks, new animals, tick problems or changes in grazing, whether salt or minerals are being given, and any treatments already used. Do not burst or treat lumps before the vet sees them, as this can spoil samples.",
+      "firstSteps": [
+        "Separate affected camels from the rest of the herd and keep them in their own enclosure or tethered apart, especially at night and at watering points.",
+        "Do not share saddles, pads, ropes or halters between sick and healthy camels; set aside equipment used on the sick camel.",
+        "Wear gloves or cover your hands when touching sores, avoid contact with pus, and wash your hands well with soap and water afterwards.",
+        "Keep flies off the sores as far as you can, for example by keeping the camel in shade away from dung heaps and removing soiled bedding, so maggots do not get into the wounds.",
+        "Do not squeeze, cut or burn the lumps yourself; wrong opening or traditional firing can push infection deeper and leave large scars.",
+        "Make sure the camel has easy access to clean water, shade and good browse, and offer salt if it is normally given.",
+        "Check the whole herd carefully, feeling the neck and shoulders for early lumps, and write down which animals are affected.",
+        "Call your vet or the nearest veterinary officer and describe the sores, numbers affected and any fever or weight loss."
+      ],
+      "vetTreatment": "Treatment depends on how many sores there are and how deep they go. For ripe abscesses, the vet will usually open them at the lowest point with clean instruments to let the pus drain, then flush the cavity and clean the sores with an antiseptic such as dilute iodine (povidone-iodine) or chlorhexidine. Dead skin may be gently removed so healthy tissue can heal. Antiseptic or antibiotic sprays and ointments are often applied to open sores, together with a fly repellent or wound spray to prevent maggots. Where many sores are present, glands are badly swollen or the camel has a fever, the vet may prescribe antibiotics given by injection. Drug classes commonly used include penicillins, tetracyclines such as oxytetracycline, and sometimes other groups chosen after a sensitivity test, because Staphylococcus bacteria can be resistant to some antibiotics. Only use antibiotics prescribed by a vet, give the full course exactly as directed, and never use leftover or shared drugs, because incomplete or wrong use breeds antibiotic-resistant bacteria that are harder to treat in camels and people. Very few drugs are tested and labelled specifically for camels, so vets set cautious milk and meat withdrawal periods (the time after treatment before milk or meat is safe to use); follow these strictly and ask your vet how long to keep milk out of the food chain. The vet may also treat for ticks and advise salt, mineral and vitamin supplements to help healing. Expect sores to take several weeks to heal, and some camels need repeat cleaning visits.",
+      "prevention": [
+        "Provide salt and a good camel mineral supplement regularly, especially in the dry season, as mineral shortage is closely linked to outbreaks.",
+        "Control ticks with a regular programme advised by your vet or extension officer, and check the neck, shoulders and under the tail often.",
+        "Look after saddles and pads: keep them clean, well padded and fitted, rest camels with rubs, and do not move equipment from sick to healthy animals.",
+        "Treat any thorn scratches, branding marks or small wounds early by cleaning them and protecting them from flies.",
+        "Avoid overcrowding in night bomas and at watering points where camels rub against each other, and clean resting areas of pus and scabs.",
+        "Isolate new or returning camels for a few weeks and check their skin before mixing them with the herd.",
+        "Isolate camels with sores as soon as you see them so the disease does not spread through contact.",
+        "Keep camels in good body condition through careful grazing management and planned movements in drought, as strong camels resist infection better."
+      ],
+      "impact": "Contagious skin necrosis rarely kills camels, but it quietly drains income. Painful sores and fever reduce feeding, so camels lose condition and milk yield drops, which matters greatly in pastoral homes where camel milk is a main food and a growing cash income in markets such as Isiolo, Garissa and Nairobi. Milk from treated camels must be held back during withdrawal periods. Pack and working camels cannot carry saddles over neck and shoulder sores, so trade and transport work stops. Scarred skin lowers hide value, and camels with visible sores fetch lower prices at livestock markets or are refused by buyers. Treatment, repeated cleaning, transport to the vet and supplements add cost, and an outbreak that runs through young stock can set back herd growth.",
+      "humanHealth": "The bacteria involved, especially Staphylococcus aureus, can infect people through cuts and scratches on the hands, causing boils, skin infections and occasionally more serious illness. Some strains are resistant to common antibiotics. Wear gloves or cover your hands when handling sores or pus, wash well with soap afterwards, and keep children away from sick camels. Burn or bury dressings, scabs and pus-soaked material. If a camel has sores on or near the udder or shows signs of mastitis, do not drink its milk. Camel milk is often drunk raw in pastoral areas; boiling milk kills these bacteria and is strongly advised. After any antibiotic treatment, keep milk and meat out of human food until the vet's withdrawal period has passed, because drug residues can cause allergic reactions and add to antibiotic resistance.",
+      "outlook": "Most camels recover well when sores are cleaned, drained and protected early and nutrition is improved, although healing often takes several weeks and scars may remain. Recovery is slower in thin, young or mineral-deficient camels, in those with many joined-up sores or badly swollen glands, and where flies and maggots get into wounds. Cases can become long-lasting or keep returning if ticks, saddle rubs, thorns and mineral shortage are not dealt with. Early action and herd-wide prevention give the best results.",
+      "faqs": [
+        {
+          "q": "Can I just burst the abscess myself and put on engine oil or ash?",
+          "a": "Please do not. Opening a lump at the wrong time or with dirty tools can push infection deeper, and engine oil, ash or hot irons damage the skin further and slow healing. They also do not kill the bacteria reliably. Let the vet open ripe abscesses cleanly, flush them and advise on safe wound care and fly control."
+        },
+        {
+          "q": "Why does this disease seem worse in the dry season?",
+          "a": "In the dry season camels browse more thorny bushes, ticks and biting flies are often heavy, salt and minerals are scarce, and camels crowd at few water points. Damaged skin, poor nutrition and close contact together give the bacteria an easy way in. Giving salt and minerals and controlling ticks before the dry season helps a lot."
+        },
+        {
+          "q": "Is it safe to drink milk from a camel with these sores?",
+          "a": "If the sores are only on the neck or shoulders and the camel is not on any drugs, boiled milk is generally considered safe, but hygiene during milking is important. Do not use milk from a camel with sores on the udder or signs of mastitis, and never use milk during the withdrawal period after antibiotic treatment. Always boil camel milk before drinking."
+        },
+        {
+          "q": "Will antibiotics from the agrovet cure it quickly?",
+          "a": "Antibiotics help in some cases, but they work best alongside cleaning and draining the sores, and only if the right drug is used for the full course. Many camel cases need little or no injected antibiotic if wounds are well managed. Buying and using antibiotics without a vet risks the wrong drug, the wrong amount, resistant bacteria and drug residues in milk and meat. Let your vet decide."
+        },
+        {
+          "q": "Can my goats, sheep or cattle catch it from the camels?",
+          "a": "The same types of bacteria can cause skin infections and abscesses in other livestock, so it is sensible to keep sick camels and their equipment away from other animals and to clean shared enclosures. Good hygiene and tick control protect the whole homestead."
+        },
+        {
+          "q": "Is there a vaccine for contagious skin necrosis?",
+          "a": "There is no widely used commercial vaccine for this disease in camels in Kenya. Prevention depends on good nutrition with salt and minerals, tick and fly control, well-fitted clean saddles, quick care of small wounds and isolating affected camels early. Ask your vet or County Veterinary Officer about local advice."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "ade-3",
+        "role": "Vitamin A helps keep skin healthy and supports healing and immunity, and camels in a long dry season with poor browse can run short of it. Where a vet agrees, AD3E can be used as a supportive supplement alongside wound care, any prescribed treatment and good mineral feeding. It does not treat the infection itself."
+      }
+    ],
+    "imagePrompt": "Close-up photo of a dromedary camel's neck and shoulder in dry Kenyan bushland, showing several round raised hairless swellings and dark crusted skin sores, natural daylight, no people.",
+    "seoDescription": "Contagious skin necrosis in camels: spot abscesses and crusted sores on neck and shoulders, first steps, vet treatment and prevention for Kenyan herders."
+  },
+  "mastitis": {
+    "card": {
+      "headline": "One udder quarter swollen and hot",
+      "look": "One quarter of the udder is larger, firmer and warmer than the others, and the camel may kick or refuse to let the calf suckle. Milk from that teat may be watery, yellowish, clotted, flaky or blood-tinged, or it may look normal.",
+      "action": "Milk the affected quarter last into a separate container, throw that milk away safely, and call your vet or animal health officer the same day."
+    },
+    "detail": {
+      "aka": [
+        "Udder infection",
+        "Ugonjwa wa kiwele (Swahili: udder disease)",
+        "Kiwele kuvimba (swollen udder)"
+      ],
+      "summary": "Mastitis is an infection and swelling of the udder, usually caused by bacteria that enter through the teat openings. In camels it is one of the most common causes of lost milk, and much of it is hidden: many camels have subclinical mastitis, where the milk looks normal but the quarter is infected and producing less. Because camel milk is a major food and income source in northern and eastern Kenya, and is often drunk raw, mastitis affects family nutrition, milk sales and human health at the same time.",
+      "cause": "Mastitis is caused mainly by bacteria. The most common in camels include Staphylococcus aureus and other staphylococci, streptococci (including Streptococcus agalactiae), and gut bacteria such as E. coli that come from dung and dirty ground. A camel's teat is unusual: each teat has two or sometimes three small openings (streak canals) instead of one, which gives bacteria more ways in. Bacteria get into the teat through dirty hands, dirty milking containers, the calf's mouth, flies, or damaged teat skin. Once inside, they multiply in the milk-producing tissue. The camel's body sends white blood cells to fight them, which causes heat, swelling, pain and changes in the milk such as clots and flakes. If the infection is strong, the tissue is damaged, scar tissue forms and the quarter may permanently produce less milk or dry up completely (a 'blind' quarter). Some bacteria, especially E. coli, can release toxins that make the whole camel sick with fever and weakness. Ticks are a special problem in camels: the large Hyalomma ticks often attach on and around the udder and teats, and their bites cause wounds, swelling and teat damage that let bacteria in. Traditional anti-suckling methods, such as tying teats with string or covering the udder with tight cloth or thorn-stick devices to stop the calf suckling, can also injure teats and trap dirt and milk, which raises the risk.",
+      "spread": [
+        "Dirty hands of the milker carry bacteria from one infected camel to the next, especially when the same person milks the whole herd without washing.",
+        "Shared milking containers, cloths and towels that are not cleaned between camels spread bacteria, particularly Staphylococcus and Streptococcus.",
+        "The calf suckles before and during milking to help milk let-down, and a calf can carry bacteria from an infected quarter or from its mouth to healthy teats.",
+        "Tick bites and tick wounds on the teats and udder damage the skin and open the way for infection.",
+        "Teat injuries from thorny browse, rough ground, tight teat-tying strings or anti-suckling devices allow bacteria into the teat.",
+        "Dirty, wet or muddy resting areas, especially in bomas (night enclosures) during the long and short rains, expose the teats to dung bacteria when the camel lies down.",
+        "Flies feeding on milk drops and teat wounds can carry bacteria between camels.",
+        "Incomplete milking, where milk is left in the udder for long periods, gives bacteria a place to grow."
+      ],
+      "atRisk": "Any lactating she-camel can get mastitis, but risk is highest in camels in early lactation, older camels that have had many calves, and camels with previous udder problems or damaged teats. Heavy-milking camels in peri-urban and commercial dairy herds, such as around Isiolo, Nanyuki, Garissa and Nairobi, are at high risk because they are milked often and by several people. In pastoral herds in Marsabit, Wajir, Mandera, Turkana, Samburu and Isiolo, risk rises where teats are tied, where tick loads are heavy, and where water for washing hands and containers is scarce. Wet seasons bring muddy bomas and more dung contamination, while dry seasons bring poor nutrition, weaker immunity and high tick numbers. Camels whose calves have died and are not milked out properly can also develop mastitis.",
+      "signs": {
+        "early": [
+          "Milk from one teat looks slightly different: a few small flakes, clots or a watery appearance, which you see best when you strip the first squirts onto a dark surface or cloth.",
+          "One quarter feels a little firmer, warmer or slightly larger than the others when you compare them by hand.",
+          "The camel is restless, kicks or moves away during milking, or refuses to let the calf suckle one particular teat.",
+          "Milk yield from the camel drops a little without any other obvious reason.",
+          "Small tick bites, cuts, cracks or swellings are seen on or near the teat openings.",
+          "In subclinical mastitis there may be no visible sign at all, and only a test such as the California Mastitis Test shows a problem."
+        ],
+        "advanced": [
+          "One or more quarters are clearly swollen, hard, hot and painful to touch, and the skin may look tight or reddened.",
+          "Milk becomes thick, yellow or brown, full of clots, very watery like whey, or tinged pink or red with blood.",
+          "The milk may have a bad or sour smell.",
+          "The camel has a fever, stops eating, stands apart from the herd, and may be weak or lie down more than usual.",
+          "An abscess (a pocket of pus) may form in the udder, sometimes bursting through the skin.",
+          "The quarter becomes shrunken and hard over time and gives little or no milk, a so-called blind quarter.",
+          "In severe toxic cases the camel becomes very dull and dehydrated and can die without prompt treatment."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Udder or teat injury without infection",
+          "howToTell": "Bruising from thorns, kicks or tight teat-tying strings causes swelling where the injury is, but the milk usually stays normal and a mastitis test stays negative. If the milk changes or the camel gets a fever, infection has likely set in."
+        },
+        {
+          "name": "Tick infestation and tick abscesses",
+          "howToTell": "Heavy ticks on the udder cause small hard lumps and sores on the skin, but the inside of the quarter feels soft and milk is normal. Ticks often lead to mastitis, so check both the skin and the milk."
+        },
+        {
+          "name": "Udder swelling (oedema) near calving",
+          "howToTell": "Around calving the whole udder and the belly in front of it can be swollen and puffy, often evenly on all quarters, and pressing leaves a dent. It is not hot or painful and the milk is normal. Mastitis usually affects one quarter and changes the milk."
+        },
+        {
+          "name": "Camel pox",
+          "howToTell": "Camel pox causes raised spots and scabs on the lips, nose, head and sometimes the udder and teats, often in young camels and several animals at once. The milk inside may be normal unless bacteria invade the sores."
+        }
+      ],
+      "diagnosis": "A vet or animal health officer first examines the udder, feeling each quarter for heat, hardness and pain, and checks the teats for wounds, ticks and blocked openings. They strip milk from each quarter to look for clots, colour change or blood. The California Mastitis Test (CMT) is a simple, cheap cow-side test: milk from each quarter is mixed with a reagent in a paddle, and the mixture thickens if the milk has many white blood cells, showing hidden infection. It works in camels, though reading the results needs some experience because camel milk behaves a little differently from cow milk. For stubborn or repeated cases, or herd problems, the vet may take clean milk samples into sterile tubes and send them to a laboratory for culture, which identifies the bacteria, and a sensitivity test, which shows which antibiotics will work. Laboratories at county veterinary offices, universities and KALRO centres may offer this. To help, keep a record of which camel and which quarter is affected, when you first noticed it, how much milk she normally gives, any tick problems, and any drugs already given. Do not treat before samples are taken if you can avoid it, because drugs can make the lab test useless.",
+      "firstSteps": [
+        "Separate the affected camel from the milking line and milk her last, so your hands and containers do not carry infection to healthy camels.",
+        "Wash your hands with soap and clean water before and after handling her udder, and use a separate container for milk from the sick quarter.",
+        "Strip out the affected quarter gently and often if she tolerates it, because removing infected milk helps reduce pressure and the number of bacteria; do not squeeze roughly.",
+        "Throw milk from infected quarters away safely by burying it or pouring it in a pit away from people, animals and water sources; do not drink it, sell it or feed it to calves or dogs.",
+        "Remove any ticks you can see on the udder by hand with gloves, without crushing them, and keep the camel in a clean, dry, shaded place.",
+        "Remove any teat-tying strings or tight anti-suckling devices from the affected camel so the teats can heal.",
+        "Make sure she has easy access to clean drinking water and good browse or fodder, especially if she has a fever or is off feed.",
+        "Write down the camel, the quarter, the date and the signs, then call your vet or County animal health officer; do not give antibiotics or other drugs unless a vet prescribes them."
+      ],
+      "vetTreatment": "Treatment depends on how severe the mastitis is and which bacteria are involved, and it must be decided and prescribed by a vet. For clinical mastitis, vets commonly use antibiotics, either as intramammary tubes placed into the teat (in camels each teat opening may need attention) or as injections when the camel is generally sick. Commonly used drug groups include penicillins, cloxacillin, cephalosporins, oxytetracycline and some combinations, chosen according to the likely bacteria and, ideally, lab sensitivity results. For a feverish or toxic camel the vet may add an anti-inflammatory painkiller such as flunixin or meloxicam, and fluids. Abscesses may need to be lanced and cleaned. Frequent stripping of the quarter is usually advised. Some badly damaged quarters will not recover and the vet may advise drying off that quarter or, for repeated cases, culling the camel. Every drug used has a milk withdrawal period, which is the time after treatment when milk must be thrown away because it contains drug residues, and many drugs also have a meat withdrawal period. Withdrawal periods for camels are often not on the label, so ask your vet, who usually advises an extended period. Use antibiotics responsibly: give the full course exactly as prescribed, never use leftover tubes or share them between animals without advice, and do not buy antibiotics to treat on guesswork. Misuse leads to antimicrobial resistance, where bacteria stop responding to drugs, which harms both animals and people.",
+      "prevention": [
+        "Wash hands with soap and clean water before milking, and between camels if possible; keep nails short and cover any cuts on your hands.",
+        "Clean and dry the teats before milking with a clean cloth for each camel, or a single-use paper towel, and avoid sharing one wet cloth for the whole herd.",
+        "Use clean, smooth containers such as food-grade aluminium or stainless steel cans that are easy to wash, and scald or wash them well after every milking; traditional woven or wooden containers are hard to clean.",
+        "Dip or spray the teats with a vet-approved teat disinfectant after milking to kill bacteria at the teat openings.",
+        "Milk out each camel fully and in a calm, gentle way, and milk known infected camels last.",
+        "Control ticks regularly with an acaricide (tick-killing product) advised by your vet or agrovet, paying special attention to the udder, teats and the area between the hind legs.",
+        "Avoid tying teats with string or using tight or thorny anti-suckling devices; if you must restrict suckling, use soft, clean, loose udder covers and check the teats daily for injury.",
+        "Keep bomas clean and dry, remove dung regularly, and give camels clean resting ground, especially during the rains.",
+        "Test camels with the California Mastitis Test regularly, for example monthly in dairy herds, to find hidden infections early.",
+        "Feed well, give access to salt and minerals, and support vitamin intake in the dry season, because well-nourished camels resist infection better; cull camels with repeated mastitis or permanently damaged quarters."
+      ],
+      "impact": "Mastitis is one of the biggest causes of lost camel milk in Kenya. Clinical cases mean milk must be thrown away during illness and treatment withdrawal, and a damaged quarter may never return to full production. Subclinical mastitis is often the larger hidden loss, because many camels quietly give less milk for months without the owner knowing why. Poor-quality milk with high bacteria spoils faster in hot conditions, fetches lower prices and can be rejected by milk traders, cooperatives and processors. Treatment and vet costs add up, calves may get less milk and grow slowly, and valuable milking camels may need to be culled early. For pastoral families who depend on camel milk for daily food, especially in the dry season, these losses directly affect household nutrition and income.",
+      "humanHealth": "Milk from camels with mastitis can contain large numbers of bacteria, including Staphylococcus aureus, which can produce toxins that cause food poisoning, and streptococci and E. coli that can make people ill. Camel milk is often drunk raw or fermented, which increases the risk. Raw camel milk can also carry other serious infections such as brucellosis, even from camels that look healthy. Boil or properly pasteurise camel milk before drinking, never drink or sell milk from infected quarters, and keep milk cool and covered. Milk from treated camels contains antibiotic residues that can cause allergic reactions in some people and encourage antimicrobial resistance, so always respect the milk withdrawal period advised by your vet. Wash your hands after handling infected udders and cover any cuts.",
+      "outlook": "Mild cases caught early, especially those found by regular testing, usually respond well to vet-guided treatment and good milking hygiene, and the quarter often returns to near-normal milk. Severe cases with fever, very hard quarters or abscesses take longer and may leave the quarter permanently damaged or dry. Infections with some Staphylococcus aureus strains can be stubborn and come back, even after treatment. Recovery is more likely when the right drug is chosen, the full course is completed, ticks and teat injuries are controlled, and milking hygiene improves. Camels with repeated mastitis in the same quarters seldom become fully productive again and are often best culled.",
+      "faqs": [
+        {
+          "q": "Can I still drink milk from the healthy quarters of a camel with mastitis?",
+          "a": "If the camel is not being treated with drugs and only one quarter is affected, milk from the healthy quarters can usually be used after boiling, as long as you milk the infected quarter last into a separate container. Once the camel is given antibiotics, especially by injection, all her milk may contain residues, so follow your vet's advice on the withdrawal period before using any milk."
+        },
+        {
+          "q": "My camel's milk looks normal but her yield has dropped. Could it be mastitis?",
+          "a": "Yes. Subclinical mastitis often shows no visible change in the milk or udder, only a drop in yield. Ask your vet or animal health officer to do a California Mastitis Test on each quarter. It is quick and cheap, and it shows hidden infection so you can act before it becomes serious."
+        },
+        {
+          "q": "Is it safe to tie the teats to stop the calf suckling?",
+          "a": "Tying teats with string or using tight or thorny devices is a common practice, but it often damages the teats, traps dirt and milk, and increases mastitis. If you need to limit suckling, use a soft, clean, loose udder cover, remove it regularly, and check the teats every day for cuts or swelling."
+        },
+        {
+          "q": "Can I buy a mastitis tube from the agrovet and treat my camel myself?",
+          "a": "It is better to have a vet or animal health officer examine the camel first. Many mastitis tubes are made for cows, camel teats have more than one opening, and the wrong drug or poor technique can push dirt into the teat or fail to clear the infection. A vet can choose the right treatment, show you how to give it hygienically, and tell you how long to throw away the milk."
+        },
+        {
+          "q": "Why do ticks matter so much for udder health in camels?",
+          "a": "Large ticks often attach on the udder and teats, and their bites cause sores, swelling and damage to the teat openings. Bacteria then enter easily and cause mastitis. Regular tick control, with special attention to the udder area, is one of the most useful ways to prevent mastitis in camel herds."
+        },
+        {
+          "q": "Should I let the calf suckle the infected quarter to empty it?",
+          "a": "It is better not to. The calf can spread bacteria to other teats and to other camels, and the milk is poor for the calf. Strip that quarter by hand into a separate container instead, and let the calf suckle only the healthy quarters while the camel is being treated."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "An oral rehydration and heat-stress relief solution that can help a feverish camel that is drinking or eating less to stay hydrated and keep up her strength during recovery, used alongside vet treatment and not as a treatment for the udder infection itself."
+      },
+      {
+        "slug": "ade-3",
+        "role": "A vitamin A, D3 and E supplement that can help correct vitamin shortages common in the dry season when green browse is scarce; vitamins A and E support healthy skin and teat lining and normal immune function, so it supports udder health as part of good nutrition, used as directed by your vet, and does not cure mastitis."
+      }
+    ],
+    "imagePrompt": "A realistic close-up photo of a dromedary camel's udder in a dry northern Kenyan boma, with one quarter clearly more swollen and firmer-looking than the other three and its teat slightly reddened, in natural daylight.",
+    "seoDescription": "Camel mastitis: spot swollen hot udder quarters and abnormal milk, act fast, call the vet, and prevent udder infection with clean milking and tick control."
+  },
+  "tick-infestation": {
+    "card": {
+      "headline": "Clusters of large ticks on udder",
+      "look": "You see big, hard-bodied brown ticks, often with banded legs, packed onto the udder, teats, around the tail and vulva, and between the hind legs. Teats may be swollen, scabbed or cracked, and some quarters may give little or no milk.",
+      "action": "Examine every camel's udder, perineum and inner legs today, then call your vet or animal health officer for advice on a camel-safe tick control plan."
+    },
+    "detail": {
+      "aka": [
+        "Kupe (Swahili for ticks)",
+        "Camel tick (Hyalomma dromedarii)",
+        "Tick burden"
+      ],
+      "summary": "Tick infestation means many ticks are attached to a camel and feeding on its blood. In camels the most important ticks belong to the Hyalomma group, and they prefer the soft, thin skin of the udder, teats, perineum (the area around the anus and vulva) and between the legs. Heavy burdens damage teats, open the way for mastitis (infection of the udder), cause blood loss and weakness, and spread germs that cause disease in camels and people. In pastoral herds where milk is the main food and income, this is a serious and often underestimated problem.",
+      "cause": "Ticks are eight-legged blood-sucking parasites related to spiders. The main camel tick in East Africa is Hyalomma dromedarii. Other Hyalomma species, along with Amblyomma (bont ticks, with colourful shields) and Rhipicephalus species, also feed on camels. Hyalomma ticks have long mouthparts that cut deep into the skin. Each tick feeds for several days, swelling up with blood before dropping off to lay thousands of eggs on the ground, in boma walls or in resting places. When dozens or hundreds of ticks feed at once, the camel loses blood and can become anaemic (short of red blood cells), which shows as weakness and pale gums. The deep bites cause pain, swelling and wounds. On the teats, bites and the swelling that follows can block the teat canal, damage the teat end and let bacteria into the udder, causing mastitis and sometimes permanent loss of a quarter, known as a blind teat. Wounds can become infected, form abscesses, or attract flies that lay eggs in them. Ticks also inject saliva that can carry germs, including Anaplasma and other blood parasites, Coxiella (the cause of Q fever) and the virus that causes Crimean-Congo haemorrhagic fever in people.",
+      "spread": [
+        "Camels pick up ticks while grazing and browsing in bush and grassland where young ticks wait on vegetation for a passing host.",
+        "Hyalomma dromedarii often lives where camels rest, hiding in cracks of boma walls, thorn fences, dung and soil, so camels kept in the same night enclosure for a long time are reinfested again and again.",
+        "Mixing with other herds at watering points, markets and shared grazing brings in ticks from other animals, including cattle, goats and wildlife.",
+        "Buying or borrowing camels without checking and treating them first introduces new ticks and the diseases they carry onto the farm.",
+        "Moving herds into new grazing areas during migration or drought can expose camels to different tick species and heavier tick populations.",
+        "Poor or irregular tick control, wrong products, weak dilutions or treating only some animals allows ticks to survive, breed and build up resistance to acaricides (tick-killing chemicals)."
+      ],
+      "atRisk": "All camels can carry ticks, but lactating she-camels suffer most because ticks cluster on the udder and teats, directly threatening milk supply and calf feeding. Young calves, old camels, and animals already weakened by poor feeding, worms, trypanosomiasis (surra) or recent illness cope worst with blood loss. Herds in northern and eastern Kenya, such as Marsabit, Wajir, Mandera, Garissa, Isiolo, Samburu, Turkana and Laikipia, live where camel ticks are common. Tick numbers often rise during and after the long and short rains when vegetation is lush, but Hyalomma ticks tolerate heat and dryness well and can remain a problem in the dry season too; patterns vary by area. Herds kept in the same boma for long periods, herds that share watering points, and herds where tick checks are not routine carry the heaviest burdens.",
+      "signs": {
+        "early": [
+          "A few to several ticks attached under the tail, around the anus and vulva, on the udder, teats, inner thighs, armpits, belly or brisket.",
+          "The camel rubs its hindquarters against trees or fences, kicks at its belly or swishes its tail more than usual.",
+          "Small raised, tender bumps or scabs where ticks have been attached and dropped off.",
+          "Slight swelling or redness of the teats, and the camel may resist milking or kick when the udder is touched.",
+          "Calves may be pushed away at suckling because the teats are sore."
+        ],
+        "advanced": [
+          "Dense clusters of large engorged ticks, some the size of a bean or larger, crowded on the udder, teats and perineum.",
+          "Swollen, hot, hard quarters with clots, flakes, watery or bloody milk, showing mastitis.",
+          "Teats with deep cracks, scabs, abscesses or a teat that gives no milk at all (blind quarter).",
+          "Pale pink or whitish gums and inner eyelids, weakness, lagging behind the herd and loss of body condition from blood loss.",
+          "Infected wounds with pus, a bad smell or fly maggots in them.",
+          "Fever, dullness, reduced feeding, drop in milk yield, or abortion, which may point to a tick-borne infection and needs a vet urgently."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Mange (Sarcoptic mange, 'scabies')",
+          "howToTell": "Mange is caused by tiny mites you cannot see. The camel itches intensely, with hair loss, thick crusty or wrinkled skin often starting on the head, neck, flanks and inner legs. You will not find large attached ticks; a vet confirms mange with a skin scraping."
+        },
+        {
+          "name": "Trypanosomiasis (surra)",
+          "howToTell": "Surra, spread by biting flies, also causes anaemia, weakness and weight loss, sometimes with swelling under the belly and abortion. Anaemia with few ticks on the body suggests surra or worms rather than ticks. A vet confirms it with a blood test."
+        },
+        {
+          "name": "Camel keds (Hippobosca flies)",
+          "howToTell": "Keds are flat, brownish flies that crawl quickly through the hair around the tail and belly and can fly off. Ticks are round, firmly attached, and do not move away when touched."
+        },
+        {
+          "name": "Mastitis from other causes",
+          "howToTell": "Udder infection can follow poor milking hygiene, injury or calf bites without ticks. If the udder is hot and milk is abnormal but there are no ticks or bite wounds on the teats, other causes are likely, though ticks may still have been involved earlier."
+        }
+      ],
+      "diagnosis": "Diagnosing the infestation itself is simple: a careful look at the udder, teats, perineum, under the tail, inner thighs, armpits, ears and belly. The vet will judge how heavy the burden is and look for damage: teat wounds, abscesses, mastitis and signs of anaemia such as pale gums. To identify the tick species, which helps choose control methods and judge disease risk, the vet may collect ticks for a county veterinary laboratory or KALRO. A blood sample can measure anaemia (packed cell volume) and be checked for blood parasites such as Anaplasma or trypanosomes. For mastitis, the vet may do a California Mastitis Test at the camel side and send milk for culture to find which bacteria are involved and which antibiotics will work. You can prepare by penning the affected camels, noting which animals are worst, how long the problem has been building, any drop in milk, which tick products you have used before with dates and dilutions, and by collecting a few ticks in a small jar or bottle with spirit, without crushing them with bare hands.",
+      "firstSteps": [
+        "Restrain the camel calmly and inspect every animal in the herd, paying close attention to the udder, teats, perineum, under the tail and between the legs.",
+        "Wear gloves or use a cloth or tweezers if you remove ticks by hand, and never crush ticks with fingers, nails or teeth because their contents can infect people.",
+        "When removing a tick, grip it close to the skin and pull steadily straight out rather than twisting or tearing, because Hyalomma mouthparts left in the skin cause abscesses.",
+        "Drop removed ticks into a container with spirit or burn them, instead of throwing them on the ground where engorged females will lay eggs.",
+        "Do not apply used engine oil, paraffin, battery acid or other harsh home remedies to the udder, as they burn the skin, contaminate the milk and can poison the camel.",
+        "Milk sore or swollen quarters gently and completely, keep the udder clean, and separate milk from quarters with clots, blood or watery milk so it is not drunk or sold.",
+        "Give plenty of clean water, shade and good browse, and keep weak or pale camels from long treks until they are assessed.",
+        "Record which camels are affected, milk yield changes and any fever or dullness, then call your vet or animal health officer before using any acaricide or medicine."
+      ],
+      "vetTreatment": "The vet will plan two things: killing the ticks now, and treating the damage they have caused. For the ticks, the main options are acaricides such as synthetic pyrethroids (for example deltamethrin, cypermethrin or flumethrin as sprays or pour-ons), amitraz, or organophosphates, and sometimes macrocyclic lactones such as ivermectin, which have only a partial effect on ticks. Many of these products are made for cattle and are not specifically licensed for camels, and camels can react badly to some chemicals or wrong dilutions, so the vet must choose the product, method and interval. Hand-spraying or applying the product carefully to the udder, perineum and legs is often needed because these hidden areas are where ticks hide. The vet may also advise treating the boma and resting places. Damaged teats and wounds are cleaned and may be dressed. Mastitis is treated according to the vet's examination and, ideally, milk culture, sometimes with intramammary tubes (inserted into the teat) or injectable antibiotics. Antibiotics must only be used when the vet prescribes them and the full course must be completed, because misuse breeds resistant bacteria (antimicrobial resistance) that threaten both animal and human health. Anaemic camels need rest, good feeding and checks for worms and trypanosomes, and very severe cases may need extra supportive care. Every acaricide and antibiotic has a milk and meat withdrawal period, the time during which milk and meat must not be used. For camels these periods are often not well established, so the vet will advise a safe, usually cautious, withdrawal time. Expect ticks to die within days of correct treatment, but new ticks will keep arriving, so repeat treatment on a schedule is usually needed. Teat damage and mastitis may take weeks to settle and some quarters may not recover.",
+      "prevention": [
+        "Check camels at least weekly, and more often during and after the rains, especially the udder, teats, perineum, under the tail, inner thighs and armpits, and remove or treat ticks early before burdens build up.",
+        "Work with your vet or animal health officer on a strategic tick control plan using a camel-appropriate acaricide at the right dilution and interval, treating the whole herd, not just the worst animals.",
+        "Follow product directions exactly: weak mixtures, skipped animals and frequent switching of products help ticks survive and become resistant.",
+        "Clean bomas regularly, remove built-up dung and bedding, seal or treat cracks in walls where Hyalomma ticks hide, and move the night enclosure to a fresh site when practical.",
+        "Quarantine new or returning camels for a period, inspect them closely and treat them before they join the herd.",
+        "Limit contact with heavily infested herds at shared watering points and markets where possible, and inspect camels after such visits.",
+        "Keep good milking hygiene: wash and dry hands and teats, milk completely, watch every quarter for clots or swelling, and deal with teat wounds quickly.",
+        "Keep camels in good body condition with adequate browse, water and minerals, and control worms and trypanosomiasis so camels can better withstand blood loss from ticks."
+      ],
+      "impact": "For pastoral families, camel milk is food for children and a key source of cash, so ticks on the udder hit directly where it matters most. Sore teats lead to reduced milk let-down, refusal to be milked and poor calf feeding. Mastitis lowers milk yield and quality, milk must be discarded during treatment and withdrawal periods, and blind quarters can permanently reduce a she-camel's production for the rest of her life. Calves on damaged udders grow slowly or may need extra feeding. Anaemia and constant irritation reduce body condition, fertility and the camel's ability to walk long distances to water and grazing. Damaged hides lose value, and tick-borne infections can cause illness, abortion and occasionally deaths. Add the cost of acaricides, vet visits and labour, and repeated heavy tick burdens become an important drain on herd income.",
+      "humanHealth": "Ticks on camels can carry germs that infect people. The most serious is Crimean-Congo haemorrhagic fever (CCHF), a viral disease spread mainly by Hyalomma ticks. Camels usually show no sign of this virus but can carry it and feed infected ticks. People can be infected by a tick bite, by crushing ticks with bare hands, or by contact with blood and tissues of infected animals at slaughter. Camel ticks can also carry Coxiella burnetii (Q fever) and rickettsia that cause tick-bite fever. To protect yourself: wear gloves when removing ticks, never crush them with fingers or teeth, wash hands with soap after handling camels, check your own body and clothes after herding, and seek medical care quickly if you get sudden fever, headache, muscle pain or unusual bleeding after a tick bite or handling livestock. Acaricides are poisons: wear gloves and protective clothing when mixing and applying them, keep them away from children, food and water, and do not drink or sell milk or meat before the withdrawal period your vet gives has passed.",
+      "outlook": "The outlook for tick infestation itself is good when it is caught early and treated correctly: ticks can be killed and burdens kept low with regular checks and a sound control plan. The outlook becomes more guarded once complications appear. Mild teat wounds usually heal, but deep damage, abscesses and chronic mastitis can leave a quarter permanently blind. Badly anaemic or thin camels recover more slowly and need good feeding and rest. Tick-borne infections can complicate recovery and need a vet's diagnosis. Because ticks keep returning from the environment and other herds, long-term success depends on steady, whole-herd prevention rather than one-off treatment.",
+      "faqs": [
+        {
+          "q": "Can I use the same cattle dip or spray on my camels?",
+          "a": "Some acaricides used on cattle are also used on camels, but camels can react differently and many products are not labelled for camels. The dilution, method and interval matter a lot. Ask your vet or animal health officer which product is suitable and how to apply it to the hidden areas like the udder and perineum. Never guess the strength."
+        },
+        {
+          "q": "Is it safe to drink milk from a camel I have just sprayed for ticks?",
+          "a": "Not until the withdrawal period has passed. Acaricides can pass into milk, and camel milk is often drunk raw, especially by children. Withdrawal times for camels are often not well known, so follow your vet's advice, which is usually cautious, and discard or keep aside milk during that time."
+        },
+        {
+          "q": "Is hand-picking ticks a good idea?",
+          "a": "Hand-picking is a long tradition in camel herds and helps, especially on the udder, but it must be done safely. Wear gloves, pull ticks straight out close to the skin, do not crush them, and destroy them in spirit or fire. On its own, hand-picking rarely keeps up with heavy infestations, so combine it with a vet-advised acaricide plan and boma cleaning."
+        },
+        {
+          "q": "Why do the ticks come back so quickly after I treat?",
+          "a": "Treatment kills ticks on the camel but not the eggs and young ticks waiting in the boma walls, dung and grazing land. New ticks attach within days. Ticks may also be resistant if the same product has been used wrongly for years. Treat the whole herd on a regular schedule, clean and treat resting places, and ask your vet to check whether resistance is a problem."
+        },
+        {
+          "q": "Can ticks really make a teat stop giving milk?",
+          "a": "Yes. Deep Hyalomma bites cause swelling and wounds on the teat. Bacteria can enter and cause mastitis, and scarring can block the teat canal so that quarter gives little or no milk. Early tick control and quick care of teat wounds and mastitis give the best chance of saving the quarter."
+        },
+        {
+          "q": "My camel is weak with pale gums but has few ticks. Is it still ticks?",
+          "a": "Possibly not. Pale gums and weakness with only a few ticks point to other causes such as trypanosomiasis (surra), worms or a tick-borne blood parasite. Ask your vet for a blood test so the right cause is treated."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photograph of a dromedary camel's udder and teats in a dry Kenyan boma, with several large brown banded-leg Hyalomma ticks clustered on the teats and udder skin, natural daylight, no people.",
+    "seoDescription": "Tick infestation in camels: spot Hyalomma ticks on udder and perineum, prevent teat damage, mastitis and anaemia, and know when to call the vet in Kenya."
+  },
+  "calf-diarrhoea": {
+    "card": {
+      "headline": "Watery scours and soiled tail in calves",
+      "look": "A young camel calf, usually under about three months old, passes watery yellow, green or grey dung that stains its tail and hind legs. It stops suckling, looks weak, and its eyes may look sunken.",
+      "action": "Separate the sick calf into a clean, shaded pen, keep it drinking fluids and suckling, and call your vet or animal health worker the same day."
+    },
+    "detail": {
+      "aka": [
+        "Calf scours",
+        "Neonatal diarrhoea of camel calves",
+        "Kuhara kwa ndama wa ngamia (Swahili)"
+      ],
+      "summary": "Camel calf diarrhoea, often called scours, is a common and serious problem in young camel calves, mostly in the first weeks of life. Germs such as E. coli, rotavirus and Salmonella damage the gut, so the calf loses large amounts of water and salts in its dung. A calf can become badly dehydrated within a day or two, and it is one of the main causes of calf deaths in camel herds in northern Kenya and the wider Horn of Africa. Good colostrum feeding and clean calf pens prevent many cases.",
+      "cause": "Scours in camel calves is usually caused by germs, often more than one at the same time. The main ones are bacteria such as E. coli (especially in the first days of life) and Salmonella, viruses such as rotavirus and coronavirus, and tiny parasites such as Cryptosporidium. In older calves, coccidia (another gut parasite) and worms can also cause diarrhoea. These germs attack the lining of the small intestine. Some bacteria make toxins that force the gut to pour out water and salts; viruses and parasites destroy the small finger-like structures (villi) that absorb milk, so milk passes through undigested. The result is watery dung, loss of body water and important salts such as sodium and potassium, and a build-up of acid in the blood. This is what makes the calf weak, cold and unable to stand, and it is the dehydration, more than the germ itself, that usually kills. Salmonella and some E. coli can also enter the bloodstream and cause blood poisoning (septicaemia). A key reason camel calves are so vulnerable is that they are born with almost no protective antibodies; they get all their early immunity from colostrum, the first thick milk from the dam. If the calf does not get enough good colostrum soon after birth, it has little defence against these germs.",
+      "spread": [
+        "Calves swallow germs from dung of sick calves or carrier adults that contaminates the ground, bedding, water containers and the dam's udder.",
+        "Crowded, muddy or dung-filled calf enclosures and night bomas build up very high numbers of germs, especially when the same pen is used season after season.",
+        "Poor colostrum intake is a major trigger: calves that suckle late, or whose dam's colostrum is milked off or discarded, have weak immunity and fall sick easily.",
+        "Dirty hands, milking containers and feeding utensils carry germs from one calf to the next when people handle many calves.",
+        "Stress from cold nights, heavy rain, long treks to water or grazing, dust, heat and sudden changes in milk supply lowers the calf's resistance.",
+        "New animals brought into the herd, or mixing with other herds at watering points and markets, can introduce new strains of germs.",
+        "Dams that are thin or poorly fed in late pregnancy, for example during drought, often produce less and lower-quality colostrum."
+      ],
+      "atRisk": "Calves in the first few weeks of life are at highest risk, with E. coli scours often seen in the first days and viral and Cryptosporidium scours a little later in the first weeks. Coccidiosis and worm-related diarrhoea are more common in calves a month old or older. Calves that were weak at birth, born to first-time or thin dams, or that did not suckle well in the first hours are much more likely to fall ill. Risk rises when many calves are born close together and kept in the same small enclosure, so problems often show up in the main calving season. The long and short rains bring mud and wet bedding that help germs survive, while drought brings poor dam nutrition, low milk and long walks. Pastoral herds in Turkana, Marsabit, Wajir, Mandera, Garissa, Isiolo, Samburu and Laikipia face particular difficulty because veterinary help may be far away, while peri-urban and semi-intensive camel dairies can see outbreaks when calves are crowded together and milk is heavily taken for sale.",
+      "signs": {
+        "early": [
+          "Dung becomes soft, then watery, often yellow, pale grey or greenish, and may smell sour or foul.",
+          "The tail, hind legs and the area under the tail are wet and stained with dung.",
+          "The calf suckles less, leaves the dam early, or shows little interest in milk.",
+          "The calf is quieter than usual, stands with a hunched back, or lies down more than other calves.",
+          "Mild belly discomfort, such as kicking at the belly, straining or lying and getting up often."
+        ],
+        "advanced": [
+          "Sunken eyes and a dry, sticky mouth and gums, which are clear signs of dehydration.",
+          "When you pinch and lift the skin on the neck, it stays tented for more than a couple of seconds instead of springing back.",
+          "The calf cannot stand or stands only with help, and its legs, ears and mouth feel cold.",
+          "Dung may contain mucus or blood, especially with Salmonella or coccidia, and may smell very bad.",
+          "The calf stops suckling completely, becomes floppy and dull, and may lie flat on its side.",
+          "Fast or very weak breathing, and sometimes high fever early on with Salmonella, followed by a low temperature as the calf goes into shock.",
+          "Death, sometimes within a day or two of the first signs in very young calves."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Nutritional (milk) diarrhoea",
+          "howToTell": "This happens after sudden changes in milk supply, such as a calf gorging after a long separation from its dam, or being fed milk replacer or cow milk wrongly. Dung is soft and pasty rather than very watery, the calf stays bright and keeps suckling, and it usually settles within a day or two once feeding is made regular. If the calf becomes dull or dehydrated, treat it as infectious scours."
+        },
+        {
+          "name": "Coccidiosis",
+          "howToTell": "Usually affects calves older than about three to four weeks rather than newborns. Dung often contains mucus and streaks of fresh blood, and the calf strains a lot. It tends to appear when calves are kept on dirty, damp ground. A vet confirms it by finding coccidia eggs (oocysts) in a dung sample."
+        },
+        {
+          "name": "Worm infestation",
+          "howToTell": "Seen in older calves that have started grazing. Diarrhoea is more gradual, and the calf loses condition, has a rough coat, a pot belly and pale gums from anaemia. It rarely causes the sudden severe dehydration seen in young calves with scours."
+        },
+        {
+          "name": "Enterotoxaemia (clostridial disease)",
+          "howToTell": "Caused by Clostridium bacteria toxins, often in well-fed, fast-growing calves. Calves may die very suddenly, sometimes before much diarrhoea is seen, or show bloating, severe belly pain and nervous signs. A post-mortem by a vet is usually needed to tell it apart."
+        }
+      ],
+      "diagnosis": "A vet or trained animal health worker first examines the calf: checking body temperature, how sunken the eyes are, the skin tent test, mouth moisture, suck reflex and whether the calf can stand, to judge how dehydrated it is. They will also check the navel for infection and the joints for swelling, which can point to blood poisoning. Because many germs cause the same signs, the exact cause can only be confirmed in a laboratory. The vet may take fresh dung samples for rapid tests (for example for rotavirus or Cryptosporidium), microscope checks for parasites and coccidia, and bacterial culture for E. coli and Salmonella, which also shows which antibiotics will work. Samples can be sent through the County Veterinary Office to regional veterinary laboratories or the Central Veterinary Laboratories at Kabete. A blood test may show whether the calf received enough colostrum. If a calf dies, a post-mortem examination done quickly is very useful for finding the cause and protecting the rest of the calves. To help, the farmer should note each calf's age, when signs started, colour and smell of the dung, whether it suckled colostrum and how soon, how many calves are sick or have died, and any treatments given. Keep a fresh dung sample in a clean, closed container in a cool place if the vet asks for one, and do not bury a dead calf before the vet has advised.",
+      "firstSteps": [
+        "Move the sick calf, ideally with its dam, into a clean, dry, shaded pen away from healthy calves, and protect it from cold wind at night and strong sun by day.",
+        "Let the calf keep suckling its dam or keep feeding its normal milk in small, frequent amounts; do not starve the calf, because milk gives it energy and helps the gut heal.",
+        "Give an oral rehydration solution between milk feeds, following the product label or your vet's advice, to replace the water and salts lost in the diarrhoea.",
+        "If the calf cannot stand, cannot suck, feels cold, or has very sunken eyes, call the vet urgently; such a calf may need fluids by drip that only a vet can give.",
+        "Wear gloves or wash your hands with soap and water after handling the calf or its dung, and keep children away from sick calves.",
+        "Clean up dung, burn or bury soiled bedding, and use separate buckets and containers for sick and healthy calves.",
+        "Do not give antibiotics, human medicines or leftover drugs without a vet's advice, because the wrong drug can harm the calf and help germs become resistant.",
+        "Write down which calves are sick, their ages, when signs started and any deaths, and share this with your vet or County Veterinary Officer."
+      ],
+      "vetTreatment": "The most important part of treatment is replacing lost fluid and salts. For mildly to moderately dehydrated calves that can still suck, the vet will usually advise oral rehydration fluids given between milk feeds, while the calf continues to drink milk. Badly dehydrated, weak or collapsed calves usually need fluids given into a vein (intravenous drip), which must be done by a vet; these fluids also correct the acid build-up in the blood. The vet may give anti-inflammatory pain relief to help the calf feel better and suck again, and will keep the calf warm. Antibiotics are not needed for every case. Viral and Cryptosporidium scours do not respond to antibiotics, because antibiotics do not kill viruses or these parasites. The vet will consider antibiotics mainly when there are signs of blood poisoning, high fever, blood in the dung or suspected Salmonella or severe E. coli infection, and ideally will choose the drug based on laboratory culture and sensitivity results. Using antibiotics only when needed, at the right drug and for the full course the vet prescribes, helps prevent antimicrobial resistance, which is when germs stop responding to medicines that people and animals depend on. If coccidiosis is confirmed, the vet may prescribe an anticoccidial medicine such as a sulphonamide or toltrazuril-type drug; for worms in older calves, a suitable dewormer. All treatment must be prescribed and dosed by a vet, as camels respond differently to some drugs than cattle. If the dam is also treated, ask about the milk withdrawal period (the time milk must be thrown away after treatment so drug residues do not reach people), and meat withdrawal periods apply to any treated animal before slaughter. With early care many calves improve within a few days, but very weak calves can still die despite treatment.",
+      "prevention": [
+        "Make sure every calf suckles colostrum as soon as possible after birth, ideally within the first hour or two, and gets plenty during the first day; do not milk off or throw away the dam's first milk.",
+        "Help weak calves to stand and suckle, or milk the dam's colostrum into a clean container and feed it, so that no calf misses this vital first protection.",
+        "Feed pregnant dams as well as possible in late pregnancy, including mineral licks and access to browse, so they produce good colostrum and strong calves; seek advice on vitamin support in drought.",
+        "Keep calving and calf pens clean and dry: remove dung regularly, move or rest night enclosures, avoid muddy areas, and give calves shade and shelter from cold wind.",
+        "Avoid crowding many young calves together, and keep newborn calves apart from older calves that may be shedding germs.",
+        "Clean the navel of newborn calves as advised by your vet, and keep the dam's udder and teats free of caked dung.",
+        "Wash hands and milking containers, use separate equipment for sick calves, and keep watering troughs clean.",
+        "Isolate newly bought or returning animals for a period, and ask your vet whether vaccines or other herd programmes are suitable for your area; there is no widely used camel-specific scours vaccine, so management is the main protection.",
+        "Do not take so much milk for sale or home use that young calves go hungry; leave enough milk for the calf to grow and stay strong."
+      ],
+      "impact": "Calf diarrhoea is one of the biggest causes of calf losses in camel herds. Because a camel dam usually gives birth only about every two years, each calf lost is a big setback to herd growth and future income. Calves that survive may grow slowly and reach breeding or market age later. For many pastoral families, camel milk is the main food and source of cash, and some dams may dry off or produce less milk if their calf dies, as camels often need the calf present to let down milk. There are also costs for vet visits, drugs, fluids and labour, and time taken from herding and other work. In camel dairies near towns such as Isiolo, Garissa and Nanyuki, outbreaks can affect many calves at once and reduce milk supply to buyers.",
+      "humanHealth": "Some of the germs that cause scours, especially Salmonella, certain types of E. coli and Cryptosporidium, can also make people sick with diarrhoea, stomach pain and fever. Children, elderly people, pregnant women and people with weak immunity are most at risk. Always wash hands well with soap and clean water after handling sick calves, their dung or bedding, and before eating or preparing food. Keep children from playing with or kissing sick calves. Boiling or pasteurising camel milk before drinking reduces the risk of picking up these germs, and milk from dams being treated with drugs should be discarded for the withdrawal period the vet gives.",
+      "outlook": "Calves with mild diarrhoea that keep suckling and get oral fluids early usually recover within several days. The outlook becomes much worse once a calf is severely dehydrated, cold, cannot stand or has stopped sucking, and very young calves that missed colostrum are most likely to die. Salmonella and blood poisoning carry a higher risk of death than simple viral scours. Calves that recover may have reduced growth for a while and need good milk and care. Quick action, good colostrum and clean pens make the biggest difference to survival.",
+      "faqs": [
+        {
+          "q": "Should I stop giving milk to a calf with diarrhoea?",
+          "a": "No. The old practice of starving a scouring calf is not recommended. Milk gives the calf energy and helps the gut repair itself. Let the calf continue to suckle or feed its normal milk in small, frequent amounts, and give oral rehydration fluids separately between feeds, as your vet advises."
+        },
+        {
+          "q": "Is it true that the first milk (colostrum) is bad for the calf?",
+          "a": "No. In some communities colostrum is milked off or thrown away, but it is the calf's most important protection. Camel calves are born with almost no antibodies and depend on colostrum to fight germs. Calves that get plenty of colostrum early are much less likely to get scours or die from it."
+        },
+        {
+          "q": "Can I just buy an antibiotic from the agrovet and give it?",
+          "a": "It is better not to without a vet's advice. Many cases are caused by viruses or parasites that antibiotics cannot kill, and dehydration, not the germ, is usually what kills the calf. Using the wrong drug wastes money, can harm the calf and helps germs become resistant. Let a vet decide if an antibiotic is needed and which one."
+        },
+        {
+          "q": "How do I know if my calf is dangerously dehydrated?",
+          "a": "Look for sunken eyes, a dry or cold mouth, and skin on the neck that stays tented for more than a couple of seconds after you pinch it. A calf that cannot stand, will not suck or feels cold is in danger and needs a vet urgently, as it may need fluids into the vein."
+        },
+        {
+          "q": "Many of my calves are getting sick at once. What should I do?",
+          "a": "Call your vet or County Veterinary Officer so samples can be taken to find the cause. Separate sick calves, clean or move the calf enclosure, stop crowding, and make sure all new calves get colostrum quickly. Keep records of ages, signs and deaths to help the vet."
+        },
+        {
+          "q": "Can I catch diarrhoea from my sick calves?",
+          "a": "Yes, some of the germs, such as Salmonella and Cryptosporidium, can infect people. Wash hands with soap after handling calves or dung, keep children away from sick calves, and boil camel milk before drinking to reduce the risk."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "An oral rehydration solution that helps replace the water and salts a scouring calf loses in its dung; give it between milk feeds as directed on the label or by your vet, as support alongside veterinary care, not as a cure for the infection."
+      },
+      {
+        "slug": "ade-3",
+        "role": "Vitamins A, D3 and E can help correct deficiencies in pregnant dams and weak calves, especially in drought when dry forage is low in vitamin A, supporting colostrum quality and the calf's natural resistance; use under vet or agrovet guidance as part of good nutrition, not as a treatment for scours."
+      }
+    ],
+    "imagePrompt": "A young camel calf standing weakly with a hunched back in a thorn-fence boma in arid northern Kenya, its tail and hind legs stained with watery yellow dung and its eyes slightly sunken, its mother nearby in soft morning light.",
+    "seoDescription": "Camel calf diarrhoea: spot watery scours, dehydration and sunken eyes early, give fluids, call the vet, and prevent losses with colostrum and clean bomas."
+  }
+}

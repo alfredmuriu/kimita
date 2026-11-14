@@ -1,0 +1,1209 @@
+{
+  "healthy": {
+    "card": {
+      "headline": "Alert rabbit with bright, clean eyes",
+      "look": "A healthy rabbit sits up alert, ears responsive to sounds, with clear eyes, a dry clean nose and a smooth, shiny coat. It nibbles hay or greens through much of the day and leaves plenty of round, dry droppings.",
+      "action": "Look at every rabbit, its feed and its droppings every morning and evening, and call the vet the same day if one stops eating or stops passing droppings."
+    },
+    "detail": {
+      "aka": [
+        "Normal rabbit health",
+        "Healthy sungura (Swahili for rabbit)",
+        "Baseline rabbit check"
+      ],
+      "summary": "This page describes what a normal, healthy rabbit looks, sounds and behaves like, so you can spot problems early. Rabbits are prey animals and naturally hide pain and illness, so changes are often small at first. By the time a rabbit looks obviously sick it may be seriously ill. Knowing the healthy baseline for your own rabbits is the most useful health tool any rabbit farmer can have.",
+      "cause": "A rabbit stays healthy when its gut, teeth, housing and stress levels are all in balance. The rabbit's digestive system is built to process large amounts of fibre, mainly from hay and grasses. Fibre keeps the gut moving, feeds the helpful bacteria in the caecum (a large pouch at the start of the large intestine where food is fermented) and wears down the teeth. A rabbit's teeth grow throughout its life, so constant chewing of rough fibre keeps them the right length. The caecum produces soft, sticky droppings called caecotrophs, which the rabbit eats straight from its bottom, usually at night or early morning, to take in vitamins and protein made by gut bacteria. This is completely normal and essential. Rabbits cannot vomit, so anything that slows the gut, such as low fibre, too much starch or sugar, sudden feed changes, stress or pain, can quickly lead to a dangerous gut slowdown. Clean, dry, well-ventilated housing protects the lungs from ammonia (the sharp smell from urine) and reduces coccidia and other germs. Shade and airflow matter because rabbits do not sweat and cope poorly with heat. Calm handling, enough space and a steady routine keep stress low, which keeps the immune system strong.",
+      "spread": [
+        "Good health builds from a high-fibre diet: unlimited clean hay or dry grass forms the base, with fresh greens and a measured amount of rabbit pellets on top.",
+        "Clean, fresh drinking water available at all times keeps digestion moving and helps the rabbit cope with heat, even when it eats plenty of greens.",
+        "Gradual feed changes over about one to two weeks give gut bacteria time to adjust; sudden changes are a common trigger for bloat and diarrhoea.",
+        "Dry, clean hutches with regular removal of droppings and wet bedding reduce coccidiosis, sore hocks and breathing problems.",
+        "Good ventilation without strong draughts keeps ammonia low and protects the nose and lungs.",
+        "Shade and cool housing during hot months and in hot lowland areas prevent heat stress.",
+        "Quarantining new rabbits for about two to three weeks before they join the herd keeps mange, snuffles and other infections out.",
+        "Calm, correct handling, supporting the back and hindquarters, prevents injuries and reduces fear and stress."
+      ],
+      "atRisk": "Every rabbit benefits from regular health checks, but some need closer watching. Young rabbits around weaning, usually four to eight weeks old, are the most fragile because their gut is still adapting and they are prone to diarrhoea and coccidiosis. Pregnant and nursing does need more water and good feed, and their condition can drop quickly. Older rabbits are more likely to develop tooth problems and arthritis. Heavy, thick-coated breeds such as Flemish Giant, and long-haired rabbits, suffer more in heat, while all breeds common in Kenya, including New Zealand White, Californian and Chinchilla, are sensitive to high temperatures. The hot, dry months and hot lowland areas raise the risk of heat stress, while the long and short rains bring damp hutches, wet or mouldy forage and more breathing and gut problems. Rabbits in crowded, poorly cleaned or poorly ventilated hutches, and those fed mostly on kitchen waste, wet greens or too many pellets with little hay, are at higher risk of illness.",
+      "signs": {
+        "early": [
+          "The rabbit is alert and curious, with ears moving towards sounds, and it comes forward or reacts normally when you approach the hutch.",
+          "Eyes are bright, clear and fully open, with no discharge, crust, cloudiness or wet fur below them.",
+          "The nose is clean and dry or slightly damp, with no white or yellow discharge and no matted fur on the inside of the front legs, which rabbits use to wipe their faces.",
+          "The coat is smooth, clean and even, with no bald patches, crusts, dandruff or dirty, wet fur around the bottom.",
+          "Droppings are plentiful, round, dry, fairly uniform in size and crumble when pressed; a healthy adult produces a large number each day.",
+          "Caecotrophs, if you see them, are soft, shiny, dark clusters like a small bunch of grapes, usually eaten straight from the bottom so you rarely find them.",
+          "The rabbit eats hay or grass on and off through the day and night, drinks regularly and chews with a steady side-to-side motion.",
+          "Normal body temperature is about 38.5–40 °C, breathing is quiet and even through the nose, and the rabbit moves with a smooth hop, using all four legs."
+        ],
+        "advanced": [
+          "Eating less, refusing pellets or favourite greens, or not eating at all is an urgent warning sign in a rabbit.",
+          "Small, few, misshapen or no droppings for around 12 hours or more suggests gut slowdown, which can become life-threatening quickly.",
+          "Sitting hunched in a corner, reluctant to move, eyes half-closed, or loud teeth grinding usually means pain.",
+          "Runny or sticky droppings, a dirty wet bottom, or uneaten caecotrophs piling up in the hutch point to a gut or diet problem.",
+          "Discharge from the nose or eyes, sneezing, wet fur on the front legs, or noisy or open-mouth breathing suggest infection or heat stress.",
+          "Drooling, a wet chin, dropping food, or chewing awkwardly may mean overgrown or damaged teeth.",
+          "Head tilt, losing balance, scratching ears constantly, crusty ears, bald or scabby patches, or a swollen belly all need a vet check.",
+          "Temperature below about 38 °C or above about 40.5 °C, especially with dullness, is a serious sign; lying stretched out panting with hot ears in hot weather is heat stress."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Eating caecotrophs (mistaken for a bad habit or diarrhoea)",
+          "howToTell": "Healthy rabbits eat soft, shiny caecotrophs straight from the bottom, usually at night or early morning. This is normal. Diarrhoea is watery or pasty, smells bad, soils the fur around the bottom and comes with fewer normal round droppings."
+        },
+        {
+          "name": "Red, orange or cloudy urine (mistaken for blood)",
+          "howToTell": "Plant pigments can turn normal rabbit urine yellow, orange, red or brown, and extra calcium can make it cloudy or chalky. A healthy rabbit with coloured urine still eats, drinks and behaves normally. Real blood often appears as spots or streaks, may come with straining or a wet bottom, and needs a vet."
+        },
+        {
+          "name": "Moulting (mistaken for mange or ringworm)",
+          "howToTell": "During a moult, fur comes out in tufts or lines, often with a visible line of new fur, and the skin underneath looks clean and smooth. Mange and ringworm cause crusts, scabs, flaky or thickened skin and itching, often around the ears, face, nose or feet."
+        },
+        {
+          "name": "Nest building and fur pulling by a doe",
+          "howToTell": "A pregnant or falsely pregnant doe carries hay in her mouth and pulls fur from her chest, belly and dewlap (the fold of skin under the chin) to line a nest, usually near kindling. She stays bright and keeps eating. Fur loss with scabs, sores or itching is a skin problem, not nesting."
+        }
+      ],
+      "diagnosis": "A home health check takes a few minutes and is best done at the same time each day, ideally at feeding. First, watch before touching: is the rabbit alert, eating, moving normally and breathing quietly? Check the feed and water from yesterday and count roughly how many droppings there are and what they look like. Then handle the rabbit calmly on a non-slip surface such as a sack on a table. Never lift a rabbit by its ears or the loose skin alone. Place one hand under the chest and the other under the hindquarters, and hold it close to your body. Rabbits can break their backs if they kick hard while unsupported. Look at the eyes, nose, ears, teeth (gently lift the lips to see the front teeth meet evenly), front legs, coat, belly, feet and bottom. Feel along the spine and hips: you should feel bones under a slight layer of flesh, not sharp bones and not thick fat. To take temperature, use a digital thermometer with a flexible tip, lubricated with a little petroleum jelly. It is easiest with two people: one holds the rabbit securely on its back or side, supporting the spine, while the other gently inserts only the tip, about 1–2 cm, into the rectum at a slight angle and waits for the beep. Normal is about 38.5–40 °C. Stop if the rabbit struggles hard. Breathing is normally about 30–60 breaths a minute at rest, faster when warm or excited. Weigh growers and breeding stock regularly on a kitchen or hanging scale and record weights. If you call the vet, have ready your records: age, breed, weight changes, feed and any recent changes, when the problem started, droppings and temperature, and how many other rabbits are affected.",
+      "firstSteps": [
+        "Watch each rabbit for a minute before touching it, noting appetite, alertness, posture and breathing, so you learn what is normal for that animal.",
+        "Check droppings, leftover feed and water every day, because a drop in eating or droppings is often the very first sign of trouble.",
+        "Move any rabbit that looks unwell into a clean, quiet, shaded hutch away from the others, with fresh hay and water close by.",
+        "Keep the sick rabbit cool in hot weather and out of draughts and rain in cold or wet weather.",
+        "Record the date, what you saw, the temperature if you took it, and any feed or weather changes, so the vet has clear information.",
+        "Wash your hands after handling rabbits, especially any with skin problems or discharge, and clean equipment between hutches.",
+        "Call your vet or animal health assistant the same day if a rabbit stops eating or passing droppings; do not give any medicines without veterinary advice."
+      ],
+      "vetTreatment": "Routine vet care keeps a rabbit unit healthy and profitable. A vet or animal health officer can do a whole-herd health check, looking at housing, ventilation, feeding, hygiene and record keeping, and advise on improvements. They can check teeth, body condition, skin, ears and feet, and examine breeding does and bucks before mating. Coccidiosis, mange and ear mites, and snuffles (a breathing infection often linked to Pasteurella bacteria) are among the common problems on Kenyan farms, and your vet can advise on prevention plans and, if needed, prescribe treatment. Ask your vet which rabbit vaccines, if any, are available and recommended in your area, because availability in Kenya is limited and changes over time. Faecal (dung) tests help decide whether parasite treatment is needed, instead of treating blindly. Any medicine, including anticoccidials, antibiotics and anti-parasite drugs, must be prescribed by a vet, because rabbits react badly to some drugs used in other animals, and some antibiotics given by mouth can upset their gut bacteria and cause fatal diarrhoea. Using antibiotics only when truly needed also slows antimicrobial resistance, where germs stop responding to medicines. If rabbits are kept for meat, always follow the meat withdrawal period on the label or given by the vet before slaughter or sale.",
+      "prevention": [
+        "Give unlimited clean, dry hay or dry grass every day as the main part of the diet, because fibre protects the gut and wears down the teeth.",
+        "Add fresh greens such as clean sukuma wiki, lucerne, sweet potato vines or other safe forages, introducing anything new slowly and avoiding wet, wilted, fermenting or mouldy greens.",
+        "Feed rabbit pellets in measured amounts rather than filling the feeder, as too many pellets and starchy kitchen waste can upset the gut and cause obesity.",
+        "Provide clean water at all times in a drinker or heavy bowl, and clean drinkers often to stop slime and germs building up.",
+        "Build or raise hutches off the ground in a shaded, well-ventilated spot, protect them from rain, and clean out droppings and wet bedding regularly to cut coccidiosis and ammonia.",
+        "Avoid overcrowding, give each rabbit enough space to stretch and hop, and separate bucks and growing rabbits as needed to prevent fighting.",
+        "Quarantine new or returning rabbits for about two to three weeks, check them for mites, discharge and diarrhoea, and buy only from healthy, reputable sources.",
+        "Keep good records of births, weaning, weights, feed, illness and treatments, and plan regular checks with your vet or animal health officer."
+      ],
+      "impact": "Healthy rabbits grow quickly, breed well and give a reliable income from meat, breeding stock, manure and urine sold as fertiliser. Does can produce several litters a year, so a doe that stays healthy is very valuable. Because rabbits hide illness and can deteriorate within a day, small farms in Kenya often lose animals that could have been saved if a change in appetite or droppings had been noticed early. Losses at weaning from diarrhoea and coccidiosis, poor growth from bad feeding, and failed breeding from heat stress or poor condition all cut profit. A few minutes of daily checking, good feeding and clean housing usually cost far less than replacing dead stock, buying medicines, or losing a buyer's trust. Regular weighing and records also show which does and bucks perform best, helping you improve your herd over time.",
+      "humanHealth": "Healthy, well-kept rabbits pose little risk to people, but good hygiene still matters. Rabbits with skin problems can sometimes carry ringworm (a fungal infection) or mites that can cause an itchy rash in people, and scratches or bites can become infected. Wear gloves when handling rabbits with skin lesions, wash hands with soap after handling rabbits, cleaning hutches or collecting manure and urine, and keep children supervised. If rabbits have been treated with medicines, follow the meat withdrawal period so no drug residues reach consumers.",
+      "outlook": "Rabbits that are well fed, kept in clean, cool, dry housing and checked daily usually stay healthy and productive for several years. The main danger is that rabbits hide illness, so problems are often found late. When a change such as reduced eating, fewer droppings, discharge or hunching is noticed early and a vet is called promptly, the chances of recovery are much better. Rabbits that go a day or more without eating or passing droppings, or that are badly heat stressed, have a much poorer outlook. Knowing what normal looks like for each of your rabbits is the single best way to protect them.",
+      "faqs": [
+        {
+          "q": "Is it normal for my rabbit to eat its own droppings?",
+          "a": "Yes. Rabbits eat special soft droppings called caecotrophs, usually at night or early morning, straight from the bottom. These carry vitamins and protein made by gut bacteria and are essential for health. The hard, round droppings you see in the hutch are not normally eaten. If you find lots of uneaten soft droppings stuck to the bottom or lying in the hutch, the diet may have too little fibre or the rabbit may be too fat or sore to reach, so check feeding and ask your vet."
+        },
+        {
+          "q": "My rabbit's urine is red or orange. Is it bleeding?",
+          "a": "Often not. Pigments from plants and some greens can turn normal rabbit urine yellow, orange, red or brown, and extra calcium can make it cloudy. If the rabbit is eating, drinking and behaving normally, it is usually fine. Call the vet if you see clear blood spots or clots, straining, a wet or burnt-looking bottom, or if the rabbit is dull or off its food."
+        },
+        {
+          "q": "How long can a rabbit go without eating?",
+          "a": "Not long. A rabbit that stops eating or stops passing droppings can develop a dangerous gut slowdown within hours. If a rabbit has eaten little or nothing, or has passed few or no droppings, for around 12 hours, treat it as an emergency and call your vet the same day. Do not wait to see if it improves overnight."
+        },
+        {
+          "q": "How do I know if my rabbit is too thin or too fat?",
+          "a": "Run your hand along the spine and over the hips and ribs. In a rabbit in good condition you can feel the bones under a thin, even layer of flesh. If the bones feel sharp and prominent, the rabbit is too thin. If you cannot feel the ribs or spine at all, and there are fat rolls, it is too fat. Weighing your rabbits regularly and writing it down helps you spot slow weight loss that you might not see."
+        },
+        {
+          "q": "Do rabbits still need water if they eat lots of greens?",
+          "a": "Yes. Greens contain some water, but rabbits need clean, fresh drinking water at all times, especially nursing does, growing rabbits and all rabbits in hot weather. Lack of water slows the gut, reduces appetite and milk production, and makes heat stress much worse. Check drinkers twice a day, because they can block, leak or get knocked over."
+        },
+        {
+          "q": "How often should I check my rabbits?",
+          "a": "Look at every rabbit at least twice a day, usually at morning and evening feeding, checking appetite, droppings, water and behaviour. Do a quick hands-on check of eyes, nose, ears, teeth, coat, feet and bottom about once a week, and weigh growers and breeding stock regularly. Ask your vet or animal health officer to visit for a herd health check from time to time, and whenever you notice a problem in more than one rabbit."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "A healthy, alert New Zealand White rabbit sitting upright in a clean, shaded wooden hutch, ears up, bright clear eyes and clean nose, smooth white coat, nibbling fresh hay with a few round dry droppings visible on the floor, soft natural daylight.",
+    "seoDescription": "Healthy rabbit guide for Kenyan farmers: bright eyes, clean nose, round droppings, steady hay appetite, normal 38.5–40 °C temperature and early warning signs."
+  },
+  "coccidiosis": {
+    "card": {
+      "headline": "Pot-bellied, thin young rabbits with diarrhoea",
+      "look": "Weaned rabbits, usually 4 to 12 weeks old, stop growing, look rough-coated and bony along the back, and have swollen bellies. The droppings turn soft, pasty or watery, and the fur around the tail is often soiled.",
+      "action": "Separate sick rabbits, clean droppings out of every cage today, and call your vet or County Veterinary Officer to confirm coccidiosis and prescribe the right anticoccidial medicine."
+    },
+    "detail": {
+      "aka": [
+        "Rabbit coccidiosis",
+        "Cocci",
+        "Liver coccidiosis (hepatic form)",
+        "Intestinal coccidiosis",
+        "Kuhara kwa sungura (diarrhoea in rabbits, general Swahili description)"
+      ],
+      "summary": "Coccidiosis is a gut and liver disease of rabbits caused by tiny single-celled parasites called Eimeria. It is one of the most common reasons young rabbits stop growing, develop pot bellies and die in the weeks after weaning. Almost every rabbitry carries some of these parasites, so the disease is really about how many the rabbits swallow, which depends on hygiene, cage design and stress. With good cleaning, raised wire floors, clean feeding and prompt vet treatment, losses can be greatly reduced.",
+      "cause": "The disease is caused by several species of Eimeria, which are protozoa (microscopic single-celled parasites, not worms and not bacteria). Each Eimeria species infects only one kind of animal, so the types that attack rabbits do not infect chickens, goats or people, and the chicken types do not infect rabbits. There are two main forms. In the intestinal form, several species, including Eimeria flavescens and Eimeria intestinalis, which are among the most harmful, invade the lining of the small intestine, caecum and large intestine. They multiply inside the gut cells and burst out, destroying the lining. The damaged gut cannot absorb food and water well, so the rabbit gets diarrhoea, loses fluids and wastes away, and harmful gut bacteria can take over and make things worse. In the liver form, Eimeria stiedae travels from the gut to the liver and multiplies in the bile ducts, the small tubes that carry bile from the liver. The bile ducts swell and become blocked, the liver enlarges, and the belly swells. Liver-form rabbits may look only slightly ill but grow very poorly, and heavy infections can kill. Many rabbits carry mixed infections of both forms at the same time.",
+      "spread": [
+        "Infected rabbits pass huge numbers of microscopic eggs called oocysts in their droppings, often without looking very sick themselves.",
+        "Freshly passed oocysts are not yet infective; they need about one to a few days in warm, damp conditions to mature, which is why droppings left lying in cages, trays and bedding are so dangerous.",
+        "Rabbits become infected by swallowing mature oocysts in feed, greens, hay or water that has touched droppings, for example pellets or grass thrown on a dirty cage floor.",
+        "Wooden or solid-floored hutches where droppings collect, and colony pens on soil, allow oocysts to build up to very high numbers.",
+        "Greens cut from ground where rabbit droppings or manure have been spread, or from around the rabbit house, can carry oocysts into the cage.",
+        "Oocysts survive for months in moist, shaded places and resist many common disinfectants, so a dirty unit can keep infecting batch after batch of young rabbits.",
+        "Stress at weaning, sudden feed changes, overcrowding, transport, heat, cold and wet weather lower resistance and often trigger outbreaks.",
+        "Contaminated equipment, feeders, drinkers, shoes and hands can carry oocysts between cages and between farms, as can newly bought rabbits that are carrying the parasite."
+      ],
+      "atRisk": "Young rabbits from weaning to about three months of age are most at risk, with the worst losses usually seen a few weeks after weaning, when they lose the protection of their mother's milk and are stressed by separation and new feed. Adult rabbits are usually partly immune and often show no signs, but they keep shedding oocysts and infecting the young ones; does that are pregnant, nursing, old or sick can still become ill. All breeds are affected, including New Zealand White, California, Chinchilla, Flemish Giant and local crosses. Risk is highest in rabbitries with solid wooden floors, rabbits kept on the ground or in deep litter, overcrowded cages, feeding on the floor, and poor cleaning routines. Outbreaks are often more common during the long and short rains, when damp, warm conditions help oocysts mature and survive. Growing meat-rabbit enterprises with frequent batches of weaners are especially affected if cages are not cleaned between batches.",
+      "signs": {
+        "early": [
+          "Young rabbits eat less than usual and stop gaining weight, so they look smaller than litter mates of the same age.",
+          "The coat becomes dull, rough and stary instead of smooth and shiny.",
+          "Droppings become softer, pasty or clumped together instead of firm, round, separate pellets, and may contain mucus.",
+          "Soiling of the fur around the tail and hind legs with soft droppings.",
+          "Rabbits are quieter than normal, sit hunched in a corner and are slower to come to the feeder.",
+          "The belly starts to look fuller or rounder than normal while the back and hips feel thin when you run your hand along them."
+        ],
+        "advanced": [
+          "Watery or mucus-covered diarrhoea, sometimes with streaks of blood, and a strong sour smell in the cage.",
+          "A clearly swollen pot belly, especially in the liver form, while the spine and hip bones stick out.",
+          "Severe weight loss and wasting, with sunken eyes and skin that stays tented when gently pinched, showing dehydration.",
+          "Grinding of teeth, which often signals pain, and refusal of all feed and water.",
+          "In the liver form, the whites of the eyes or inside of the ears may look yellowish (jaundice), and the rabbit becomes weak.",
+          "Rabbits lying stretched out or on their side, too weak to move, sometimes with paddling or fits shortly before death.",
+          "Deaths of several young rabbits over days to weeks, often while older rabbits in the same unit look healthy."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Mucoid enteropathy (part of the enteritis complex)",
+          "howToTell": "Affected rabbits pass large amounts of clear, jelly-like mucus, often with little or no normal droppings, and the belly may be bloated and sloshing with fluid. Coccidiosis usually causes pasty or watery diarrhoea and slow wasting. The two often occur together, so only a faecal test or post-mortem by a vet can separate them."
+        },
+        {
+          "name": "Enterotoxaemia (Clostridium infection)",
+          "howToTell": "This is a sudden, fast-killing diarrhoea, often brown and watery with a foul smell, frequently after a sudden feed change or too much starchy feed and too little fibre. Rabbits may die within a day or two, sometimes without much diarrhoea at all. Coccidiosis usually builds up more slowly, with weight loss and pot bellies over days to weeks."
+        },
+        {
+          "name": "Colibacillosis (E. coli diarrhoea)",
+          "howToTell": "E. coli often hits very young kits still in the nest, causing yellowish watery diarrhoea and high deaths in whole litters, as well as weaners. Coccidiosis is most common after weaning. A vet needs lab tests to tell them apart, and mixed infections are common."
+        },
+        {
+          "name": "Tapeworm cysts (Cysticercus pisiformis) and other liver problems",
+          "howToTell": "At post-mortem, tapeworm cysts look like small fluid-filled bubbles on the liver surface and in the belly, and come from rabbits eating greens contaminated by dog droppings. Liver coccidiosis shows firm white or cream-coloured spots and swollen tubes inside the liver tissue. Live rabbits with tapeworm cysts often show few signs, so a vet post-mortem is the best way to tell."
+        }
+      ],
+      "diagnosis": "A vet usually suspects coccidiosis from the history: young rabbits after weaning, diarrhoea, pot bellies, poor growth and deaths, together with the cage conditions. To confirm it, the vet or lab examines fresh droppings under a microscope using a flotation test, which floats the oocysts up so they can be seen and counted. Because healthy rabbits often carry a few oocysts, the number found and the signs in the animals both matter; a heavy count in sick young rabbits strongly points to coccidiosis. A post-mortem (examination of a dead rabbit) is often the clearest test. In the liver form the liver is enlarged with firm white to yellowish spots and thickened bile ducts, and in the intestinal form the gut wall is thickened, inflamed, sometimes with white spots, and the contents are watery. The lab can also check for other causes such as E. coli, Clostridium or mucoid enteropathy, which often occur alongside coccidiosis. To help, the farmer can collect fresh droppings from several affected rabbits into a clean, sealed container or bag, label it, keep it cool (not frozen) and get it to the vet or lab within a day. A rabbit that has just died should be kept cool in a sealed bag and taken quickly to the vet, the County Veterinary Office or a veterinary laboratory such as those run by the Directorate of Veterinary Services or KALRO. Write down the ages of affected rabbits, when signs started, how many have died, recent feed changes, and any medicines already given.",
+      "firstSteps": [
+        "Move rabbits with diarrhoea, pot bellies or weakness into a separate clean cage, away from healthy stock, and handle them last.",
+        "Remove all droppings, wet bedding and spilled feed from every cage, tray and floor today, and keep doing this daily, because oocysts become infective within a few days.",
+        "Make sure every rabbit has constant access to clean, fresh drinking water in a clean drinker that droppings cannot fall into, as diarrhoea quickly causes dehydration.",
+        "Feed good-quality hay or dry grass and fresh, clean greens from areas free of rabbit droppings and manure, and avoid sudden changes or large amounts of wet, lush feed.",
+        "Never put feed or greens on the cage floor; use raised racks, hay nets or feeders so food cannot touch droppings.",
+        "Keep sick rabbits warm, dry, out of draughts and out of direct sun, and reduce stress by not moving, mixing or transporting them.",
+        "Wash your hands after handling sick rabbits and droppings, and clean boots, feeders and tools before going to the healthy cages.",
+        "Record the ages, number sick, number dead and dates, keep a fresh rabbit or droppings sample cool, and call your vet or County Veterinary Officer; do not give any drugs until a vet has confirmed the cause and prescribed treatment."
+      ],
+      "vetTreatment": "Coccidiosis is caused by a parasite, so ordinary antibiotics alone do not cure it; the vet will prescribe a specific anticoccidial medicine. Commonly used options in rabbits include sulfonamide drugs such as sulfadimethoxine or sulfaquinoxaline, often given in drinking water, and newer anticoccidials such as toltrazuril or diclazuril. Amprolium is also used in some places, though its effect in rabbits varies. Because the whole group is usually exposed, the vet will often recommend treating all rabbits in the affected unit, not only the sick ones. The choice of drug, dose and length of treatment depend on the product, the form of the disease and local availability, so these must be decided by a vet and not guessed from chicken or livestock labels, as some poultry products and doses are unsafe or ineffective in rabbits. Sulfonamides are antimicrobial drugs, so use them only on prescription and finish the course exactly as directed, to slow the development of drug resistance in both parasites and bacteria. If bacteria have also invaded the damaged gut, the vet may add an antibiotic, again only where truly needed. Supportive care is just as important: fluids for dehydrated rabbits, good hay and fibre to restore normal gut movement, warmth and quiet. Very weak rabbits may not survive even with treatment, and liver damage can leave some survivors as poor growers. All drugs used in meat rabbits have withdrawal periods, a set time after the last treatment before the rabbit can be slaughtered for food, so follow the withdrawal time on the label and the vet's instructions. Treatment must be combined with deep cleaning of cages, otherwise rabbits are quickly reinfected.",
+      "prevention": [
+        "Keep rabbits in raised cages with wire mesh floors of a suitable size, so droppings fall through and away from the rabbits; if you use wooden hutches, fit mesh floors or removable trays that you clean often.",
+        "Remove droppings from under and inside cages at least daily or every other day, before oocysts have time to mature, and never let manure pile up close to the cages.",
+        "Feed pellets and grains in raised feeders or hoppers and hay in racks, never on the floor, and use drinkers or nipple systems that cannot be soiled with droppings.",
+        "Cut greens from clean areas, not from where rabbit manure is spread or near the rabbit house, and do not let dogs foul the cutting area; let washed greens wilt slightly rather than feeding them soaking wet.",
+        "Between batches, empty cages completely, scrub off all droppings, then use boiling water, a blowlamp on metal mesh, or a disinfectant your vet or agrovet confirms works against coccidia, and let cages dry fully in the sun before restocking; many ordinary disinfectants do not kill oocysts.",
+        "Avoid overcrowding, wean rabbits gradually, keep litters together after weaning where possible, and make feed changes slowly over about a week to reduce stress.",
+        "Feed a balanced diet rich in fibre with enough protein, minerals and vitamins, as well-nourished rabbits resist and recover from coccidiosis better.",
+        "Ask your vet about preventive anticoccidial feeds or planned treatment programmes for weaners on farms with repeated outbreaks, and follow withdrawal periods for meat rabbits.",
+        "Quarantine new rabbits in a separate cage for at least two to three weeks, check their droppings, and buy breeding stock from clean, well-managed rabbitries.",
+        "Keep the rabbit house dry and well ventilated, especially during the long and short rains, and fix leaking roofs and drainage."
+      ],
+      "impact": "Coccidiosis is one of the biggest hidden costs in Kenyan rabbit farming. Deaths of weaners after weaning can wipe out much of a batch in badly affected units, but even rabbits that survive often grow slowly and reach market weight weeks late, eating feed without giving a good return. Liver-form rabbits may look acceptable but have damaged livers that are condemned at slaughter, and thin carcasses fetch lower prices from buyers, hotels and butcheries. Farmers spend money on medicines, vet visits and extra labour for cleaning. Repeated outbreaks can make a rabbit enterprise look unprofitable and discourage new farmers who started with breeding stock and cages. Breeding units that sell weaners can lose their reputation if buyers' rabbits fall sick soon after purchase. On the positive side, most of these losses can be prevented with good cage design and hygiene, which cost far less than repeated deaths.",
+      "humanHealth": "The Eimeria parasites that cause rabbit coccidiosis infect only rabbits and are not known to infect people. However, diarrhoeic droppings can carry other germs, so wash your hands with soap after handling sick rabbits, droppings or bedding, and keep children from playing with sick animals. The bigger human-health concern is drug residues: meat from rabbits treated with sulfonamides or other anticoccidials must not be eaten or sold until the withdrawal period on the label or advised by your vet has passed. Do not slaughter visibly sick rabbits for food, and discard livers with white spots or obvious damage.",
+      "outlook": "The outlook depends on how early the disease is caught, how heavy the infection is, and how quickly the environment is cleaned. Rabbits treated in the early stages, while still eating and drinking, often recover well, and the rest of the group can be protected by vet-guided treatment and strict hygiene. Rabbits that are already severely dehydrated, refusing food or lying on their side have a poor chance even with treatment. Survivors of heavy liver infections may remain poor growers because of liver damage, and some are better culled than kept for breeding. Recovered rabbits develop some immunity to the species that infected them, but they can still carry and shed oocysts, so prevention must continue. Farms that fix floors, feeding and cleaning routines usually see far fewer and milder outbreaks.",
+      "faqs": [
+        {
+          "q": "My adult rabbits look healthy. Why do only the young ones get sick and die?",
+          "a": "Adult rabbits have usually met the parasite before and built up partial immunity, so they often show no signs. But they still pass oocysts in their droppings. Young rabbits after weaning have no immunity yet, are stressed by weaning and new feed, and swallow oocysts from the cage, so they get the full disease. That is why cleaning and good cage design matter most around weaning time."
+        },
+        {
+          "q": "Can I use the coccidiosis medicine I bought for my chickens?",
+          "a": "Do not do this without asking a vet. The coccidia in chickens are different species from those in rabbits, and some poultry products or the doses on poultry labels are not suitable or safe for rabbits. Some drugs that work in chickens work poorly in rabbits. Your vet will choose a product and dose that is right for rabbits and tell you the meat withdrawal period."
+        },
+        {
+          "q": "Will antibiotics cure coccidiosis?",
+          "a": "Ordinary antibiotics do not kill the coccidia parasite. The medicines that work are anticoccidials, and some of these, such as sulfonamides, also happen to be antimicrobials. A vet may sometimes add an antibiotic if bacteria have invaded the damaged gut. Using antibiotics without a proper diagnosis wastes money, can upset the rabbit's delicate gut and helps drug resistance develop."
+        },
+        {
+          "q": "Rabbits eat their own soft droppings at night. Does that spread the disease?",
+          "a": "Rabbits naturally eat special soft droppings called caecotrophs straight from the bottom; this is normal and needed for good digestion. Newly passed oocysts are not yet infective, so this habit is not the main problem. The danger comes from ordinary droppings left lying in the cage for a day or more, where the oocysts mature and then get onto feed, greens and drinkers. Removing droppings regularly breaks this cycle."
+        },
+        {
+          "q": "Is it safe to eat rabbits from a group that had coccidiosis?",
+          "a": "Rabbit coccidiosis does not infect people. Rabbits that are healthy and well-grown at slaughter can be eaten, but only after the withdrawal period of any medicine they were given has fully passed. Do not slaughter sick or wasted rabbits for food, and throw away any liver with white spots or swollen ducts, which is a sign of liver coccidiosis."
+        },
+        {
+          "q": "How do I clean cages properly after an outbreak?",
+          "a": "First remove all rabbits, droppings, bedding and leftover feed. Scrub every surface with water and soap or detergent to remove dirt, because disinfectants do not work through dirt. Oocysts resist many common disinfectants, so use boiling water, carefully flame metal wire mesh with a blowlamp, or use a product your vet or agrovet confirms kills coccidia. Clean feeders and drinkers the same way, then let everything dry fully in the sun before bringing rabbits back."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "ade-3",
+        "role": "Coccidiosis damages the gut lining and, in the liver form, the liver, where vitamin A is stored, so recovering rabbits may benefit from vitamin A, D3 and E support. Used only as your vet advises, AD3E can help correct a vitamin shortfall and support normal recovery of the gut lining and general condition alongside vet-prescribed anticoccidial treatment, good fibre-rich feeding and strict cage hygiene. It does not kill the parasite or cure coccidiosis."
+      }
+    ],
+    "imagePrompt": "A realistic photo of a thin young white rabbit with a noticeably swollen pot belly, rough dull coat and soiled fur around the tail, sitting hunched in a raised wire-mesh rabbit cage in a simple Kenyan rabbit house.",
+    "seoDescription": "Rabbit coccidiosis: spot diarrhoea, pot belly and weight loss in weaners, act fast before the vet arrives, and prevent it with hygiene and wire floors."
+  },
+  "snuffles": {
+    "card": {
+      "headline": "Thick white discharge and crusty front paws",
+      "look": "The rabbit sneezes and snorts, with thick white or yellow mucus around the nostrils. The fur on the inner side of the front paws is wet, matted or crusty from wiping the nose.",
+      "action": "Move the sneezing rabbit to a clean, airy, separate hutch away from the others, then call your vet before it spreads or gets worse."
+    },
+    "detail": {
+      "aka": [
+        "Pasteurellosis",
+        "Rabbit snuffles",
+        "Mafua ya sungura (rabbit cold/flu)",
+        "Wry neck or head tilt (when the ear is affected)",
+        "Rabbit respiratory disease"
+      ],
+      "summary": "Snuffles is a bacterial infection of the nose, sinuses and airways of rabbits, caused mainly by Pasteurella multocida. It starts with sneezing and a thick white nasal discharge but can spread to the lungs, eyes, ears, womb and under the skin as abscesses (pockets of pus). Many rabbits carry the germ quietly and fall sick when stressed, so one sick rabbit usually means others in the unit carry it too. It is one of the most common reasons for poor growth, failed breeding and losses on Kenyan rabbit farms.",
+      "cause": "The cause is a bacterium called Pasteurella multocida, sometimes with other germs such as Bordetella bronchiseptica or Staphylococcus joining in. Many healthy-looking rabbits carry Pasteurella deep in the nose without showing signs; these are called carriers. When the rabbit's defences drop, from ammonia fumes from urine, dust, poor ventilation, crowding, heat, cold draughts, transport, kindling (giving birth) or weaning, the bacteria multiply and inflame the lining of the nose and sinuses. This causes sneezing and pus-like discharge. Because the nose connects to the tear ducts, the middle ear and the windpipe, the infection can travel to the eyes (sticky, weepy eyes), the ear (head tilt and loss of balance), and the lungs (pneumonia). The bacteria can also be carried in the blood or through bites and wounds to form abscesses under the skin, in the jaw, or in the reproductive organs, causing womb infections in does and swollen testicles in bucks. Rabbit pus is very thick, like cream cheese, so abscesses do not burst and drain easily. Once a rabbit has had snuffles, the germ often stays hidden in its sinuses for life and can flare up again.",
+      "spread": [
+        "Direct nose-to-nose contact between rabbits, especially when they share a hutch or touch through wire walls.",
+        "Droplets sneezed into the air, which travel short distances between hutches that are close together in a poorly ventilated house.",
+        "Shared feeders, water bowls, nipple drinkers and hay that sick rabbits have sneezed on or soiled.",
+        "From doe to kits around kindling and during nursing, which is why infected does often produce sickly litters.",
+        "During mating, when bucks and does are put together; an infected buck can spread it to many does.",
+        "Bringing in new breeding stock from markets or other farms without quarantine, since carriers look healthy.",
+        "On the hands, clothes and equipment of people moving between hutches or farms.",
+        "Stress triggers such as ammonia smell from dirty urine trays, dusty hay or sawdust, overcrowding, hot iron-sheet roofs, cold night draughts during the rains, and long journeys turn silent carriers into sick rabbits."
+      ],
+      "atRisk": "All rabbits can get snuffles, but the highest risk is in weaners (just after weaning), does around kindling and while nursing, and older breeding stock that have carried the germ for a long time. Rabbits kept in closed, poorly ventilated houses or hutches where urine collects and smells of ammonia are at great risk, as are units that are overcrowded or mix rabbits from different sources. Cases often rise during the cold, damp long and short rains when farmers close up houses and air goes stale, and during hot dry spells under iron roofs. Farms that buy breeding stock from markets or several different breeders, and those without a quarantine hutch, see more outbreaks. Both meat breeds such as New Zealand White and California and local crosses are affected; no breed is truly resistant.",
+      "signs": {
+        "early": [
+          "Sneezing, often several times in a row, and snorting or snuffling sounds when breathing.",
+          "Clear watery nasal discharge that soon becomes thick, white, cream or yellow.",
+          "Wet, matted or crusty fur on the inner side of the front paws and legs, because rabbits wipe their nose with their paws.",
+          "Watery or sticky eyes, sometimes with white pus in the corner of the eye and wet fur below it.",
+          "Rubbing the face against the cage wire or floor.",
+          "Slightly reduced appetite and less interest in pellets, while still drinking."
+        ],
+        "advanced": [
+          "Noisy, laboured breathing, breathing with the mouth open, or flaring nostrils, which suggests the lungs are involved (pneumonia) and is an emergency.",
+          "Head tilt (wry neck), rolling, circling or falling over, caused by infection spreading to the middle and inner ear.",
+          "Firm or soft lumps under the skin, on the jaw, face, neck or chest, which are abscesses full of thick pus.",
+          "Weight loss, a bony back, dull rough coat and refusing food.",
+          "In does, a smelly or bloody discharge from the vulva, failed pregnancies or small, weak litters; in bucks, swollen testicles.",
+          "Sudden death with few signs, especially in young rabbits, when the bacteria reach the blood (septicaemia)."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Dental disease (overgrown teeth or tooth root problems)",
+          "howToTell": "Rabbits with tooth problems drool, have a wet chin, drop food, lose weight and may have overgrown front teeth you can see. Long tooth roots can block tear ducts and cause eye and nose discharge on one side, but there is usually less sneezing. A vet checks the teeth and may X-ray the skull."
+        },
+        {
+          "name": "Dust or irritant sneezing",
+          "howToTell": "Sneezing after fresh dusty hay, sawdust or ammonia fumes is sudden, the discharge stays clear and watery, and the rabbit eats normally. It settles within a day or two once bedding is changed and ventilation improved. Thick white pus and matted paws point to infection instead."
+        },
+        {
+          "name": "Encephalitozoon cuniculi (a parasite affecting the brain and kidneys)",
+          "howToTell": "This parasite also causes head tilt, rolling and weakness, but usually without any history of sneezing or nasal discharge. Ear infection from Pasteurella often comes with snuffles signs or pus in the ear. A vet may need blood tests or X-rays to tell them apart."
+        },
+        {
+          "name": "Ear mites (ear canker)",
+          "howToTell": "Ear mites cause thick, brown-grey, flaky crusts inside the ear flap, intense scratching and head shaking. You can see the crusts by looking into the ear. Pasteurella ear infection is deeper inside the head, so the outer ear often looks clean while the rabbit tilts its head."
+        }
+      ],
+      "diagnosis": "A vet usually suspects snuffles from the signs and the farm history. They will examine the nose, eyes, ears, teeth, chest and body for abscesses, listen to the lungs and check the reproductive organs. To confirm the germ and choose an antibiotic that works, the vet may take a deep nasal swab or a sample of pus for culture and sensitivity testing at a laboratory such as the Central Veterinary Laboratories at Kabete or a county or regional veterinary lab. X-rays can show pneumonia, ear damage or tooth root problems. When a rabbit dies, a post-mortem (examination of the body) is very useful for the whole herd, showing pus in the sinuses, lungs, ears or womb. To help, the farmer should note how many rabbits are sick, their ages, when signs started, recent purchases or shows, any recent stress like transport or a heat spell, and any drugs already given. If a rabbit dies, keep the body cool in a sealed bag (chilled, not frozen) and take it to the vet within a day.",
+      "firstSteps": [
+        "Isolate every sneezing rabbit in a separate hutch, ideally in a different room or at the far end of the house, and handle it last after the healthy ones.",
+        "Improve air flow immediately: open vents and windows during the day while avoiding cold draughts on the rabbits at night, and remove anything that blocks fresh air.",
+        "Clean out urine trays and soiled bedding today so there is no ammonia smell, and replace dusty hay or sawdust with clean, dust-free bedding.",
+        "Make sure the rabbit has constant clean, fresh water and its usual hay, greens and pellets; offer favourite fresh greens to keep it eating, because rabbits that stop eating can quickly develop serious gut problems.",
+        "Gently wipe the nose and eyes with a clean cloth dipped in cooled boiled water, using a fresh piece for each rabbit, and wash your hands afterwards.",
+        "Keep the rabbit calm, in shade, out of the sun and rain, and avoid handling, mating, transporting or selling it.",
+        "Stop all movement of rabbits in and out of the unit, stop mating, and do not bring in new stock until the vet has advised.",
+        "Write down which rabbits are affected, their signs, and the date, and call your vet or County Veterinary Officer; treat laboured breathing, head tilt or a rabbit that has stopped eating as urgent, and do not give any drugs until the vet has prescribed them."
+      ],
+      "vetTreatment": "Treatment must be prescribed by a vet. Snuffles is bacterial, so the vet will usually prescribe an antibiotic, often as an injection or in water, chosen for safety in rabbits. Drugs commonly used include fluoroquinolones such as enrofloxacin, potentiated sulphonamides (trimethoprim-sulpha) and tetracyclines such as oxytetracycline, ideally guided by a culture and sensitivity test. It is very important that farmers never give rabbits antibiotics meant for other animals without vet advice: some, such as oral penicillins, amoxicillin, ampicillin, lincomycin and clindamycin, can upset the rabbit's gut bacteria and cause fatal diarrhoea. Courses for snuffles are often longer than for other animals, and stopping early or using the wrong drug encourages antimicrobial resistance, where the germs no longer respond, so finish the full course exactly as prescribed and never use antibiotics just to prevent disease. The vet may add pain relief and anti-inflammatory drugs, eye drops or ointment for infected eyes, steam or nebulisation to loosen mucus, and assisted feeding for rabbits that stop eating. Abscesses usually need surgical removal or opening and flushing by a vet, because the thick pus does not drain well, and antibiotics alone rarely clear them. Rabbits with head tilt may need long treatment and nursing, and some never fully straighten. For meat rabbits, the vet will tell you the meat withdrawal period, the time you must wait after the last dose before slaughtering, so that no drug residues reach consumers. Expect that signs may improve but the germ often stays hidden, so relapses are common; the vet may advise culling chronic or repeatedly sick breeding rabbits to protect the herd.",
+      "prevention": [
+        "Buy breeding stock only from clean, well-run farms that have no sneezing rabbits, and avoid buying from markets where rabbits from many sources are mixed.",
+        "Quarantine every new rabbit in a separate hutch away from the main unit for at least two to three weeks, watching closely for sneezing, discharge or matted paws before mixing.",
+        "Provide good ventilation without draughts: raise hutches off the ground, leave open mesh sides or vents high up, and avoid closing the house up tightly during the rains.",
+        "Clean urine trays and remove droppings often, ideally daily in busy units, so the house never smells of ammonia; use slatted or wire floors and dry, dust-free bedding.",
+        "Avoid overcrowding, keep one adult per hutch, give each rabbit enough space, and separate weaners into small groups rather than large crowded pens.",
+        "Reduce stress: shade hutches from midday sun, insulate under iron roofs, handle rabbits gently, and plan transport for cool times of day.",
+        "Feed a balanced diet with plenty of good hay or fodder, clean greens and quality pellets, plus constant clean water, so the immune system stays strong.",
+        "Check every rabbit's nose, eyes and front paws weekly and before mating; never mate a sneezing rabbit, and consider culling breeding stock that keep relapsing, as they keep infecting kits.",
+        "Clean and disinfect hutches, feeders and drinkers between occupants, and work from young and healthy rabbits to old and sick ones.",
+        "Commercial Pasteurella vaccines for rabbits exist in some countries but are not widely available in Kenya; ask your vet about current options, and rely mainly on management and biosecurity."
+      ],
+      "impact": "On a Kenyan rabbit farm, snuffles quietly eats into profits. Sick weaners grow slowly and take longer to reach slaughter weight, so feed costs rise per kilo of meat sold. Does with chronic infection may fail to conceive, abort, or produce small litters of weak kits that die young, cutting the number of rabbits for sale. Pneumonia can kill rabbits quickly, and abscesses or head tilt make rabbits unfit for sale. Buyers of breeding stock and rabbit associations often refuse rabbits with runny noses or matted paws, damaging a farm's reputation. Vet visits, drugs and the cost of replacing culled breeding stock add up, and meat cannot be sold during drug withdrawal periods. Because the germ spreads through the whole unit, one neglected case can turn into a long-running herd problem.",
+      "humanHealth": "Pasteurella multocida can occasionally infect people, usually through bites or scratches, causing a painful, swollen, red wound infection within a day or two. The risk from rabbits is low compared with cats and dogs, but children, elderly people, pregnant women and anyone with a weak immune system should take care. Wash hands with soap after handling rabbits, wear gloves when cleaning discharge or abscesses, and clean any bite or scratch well with soap and running water. See a doctor if a wound becomes swollen, hot or very painful, and mention you keep rabbits. Only slaughter meat rabbits after the drug withdrawal period has passed, so that no antibiotic residues reach your family or customers.",
+      "outlook": "The outlook depends on how early treatment starts and which parts of the body are affected. Mild, early snuffles often improves well with the right vet-prescribed antibiotic and better housing, although the rabbit may remain a carrier and flare up later under stress. Long-standing nasal infection is hard to clear completely because the germ hides in the sinus bones. Rabbits with pneumonia have a guarded to poor outlook and can die quickly, especially young ones. Head tilt may improve over weeks, and many rabbits learn to cope, but some stay tilted for life. Abscesses often return unless fully removed. Good ventilation, low stress, strong nutrition and culling chronic carriers give the herd the best long-term chance.",
+      "faqs": [
+        {
+          "q": "Will snuffles go away on its own if I just wait?",
+          "a": "Sometimes a very mild case seems to settle, but usually the infection keeps going and slowly spreads to the eyes, ears or lungs, and to other rabbits. Waiting often means a harder, longer treatment later. Isolate the rabbit, fix the housing and call your vet early."
+        },
+        {
+          "q": "Can I use the antibiotic I bought for my chickens or cows?",
+          "a": "No, not without your vet's advice. Rabbits have a delicate gut, and some common antibiotics, especially penicillin-type drugs and some others given by mouth, can cause deadly diarrhoea in rabbits. The wrong drug or a short course also builds antibiotic resistance. Let a vet choose a rabbit-safe drug and the right course."
+        },
+        {
+          "q": "Why does my rabbit keep getting sick again after treatment?",
+          "a": "Pasteurella often hides deep in the sinuses, where antibiotics cannot fully reach it, so the rabbit stays a carrier. Stress such as ammonia smell, heat, cold draughts, kindling or transport lets it flare up again. Improving ventilation, cleaning urine daily and reducing crowding helps most; repeatedly sick breeding rabbits may need to be culled."
+        },
+        {
+          "q": "Can I eat or sell meat from a rabbit that had snuffles?",
+          "a": "A rabbit that has recovered can be eaten, but only after the full meat withdrawal period of any drug it received, which your vet will tell you. Do not slaughter rabbits with abscesses, fever, pneumonia or obvious illness for food. Ask your vet or meat inspector if unsure."
+        },
+        {
+          "q": "Is there a vaccine against snuffles in Kenya?",
+          "a": "Pasteurella vaccines for rabbits are made in some countries, but they are not commonly available in Kenya and do not give complete protection. Ask your vet about what is currently available. For now, clean stock, quarantine, good ventilation and hygiene are the best protection."
+        },
+        {
+          "q": "Should I keep kits from a doe that has snuffles?",
+          "a": "Kits from an infected doe often pick up the germ early in life. If the doe is valuable, your vet may help you plan, but many farmers choose not to keep her kits for breeding and to replace the doe with clean stock. Weaners from her can still be raised for meat if they stay healthy."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a white New Zealand rabbit sitting in a wooden-and-wire hutch, with thick white discharge crusted around its nostrils and visibly wet, matted fur on the inner side of its front paws, soft natural daylight.",
+    "seoDescription": "Snuffles in rabbits: spot sneezing, white nasal discharge and matted front paws early, learn first steps, vet treatment and prevention for Kenyan farms."
+  },
+  "ear-mites": {
+    "card": {
+      "headline": "Thick brown crusts inside the ear",
+      "look": "The rabbit shakes its head, scratches its ears and may let one or both ears droop. Inside the ear you see dry, flaky, grey-brown crusts in layers, like stacked cornflakes, sometimes filling the canal.",
+      "action": "Separate the rabbit, do not pick off the crusts, clean its hutch and call your vet or animal health officer for treatment for every rabbit in contact."
+    },
+    "detail": {
+      "aka": [
+        "Ear canker",
+        "Psoroptic mange of the ear",
+        "Psoroptes cuniculi infestation",
+        "Otoacariasis",
+        "Utitiri wa masikio (Swahili: ear mites)"
+      ],
+      "summary": "Ear mites are tiny parasites that live inside a rabbit's ear and cause painful, crusty ear canker. It is one of the most common problems in Kenyan rabbit units, especially where rabbits share hutches or are bought from markets without checking. Caught early, it usually responds well to vet-prescribed treatment. Left alone, it causes weight loss, poor breeding, deep ear infections and sometimes a permanent head tilt.",
+      "cause": "Ear canker is caused by a mite called Psoroptes cuniculi. A mite is a very small relative of ticks and spiders, just visible to the naked eye as a pale moving dot. This mite does not burrow into the skin. It lives on the surface of the skin inside the ear and feeds on tissue fluid. Its feeding and droppings irritate the skin badly. The ear becomes inflamed (red, hot and swollen) and oozes fluid. That fluid dries together with dead skin, mites and mite droppings, building up thick layered grey-brown crusts. The crusts are very itchy and painful, so the rabbit scratches and shakes its head and can wound itself with its hind claws. Bacteria then get into the damaged skin and cause a smelly secondary infection. If the infection travels deeper into the middle and inner ear, it can damage balance and cause a head tilt. In heavy cases the mites spread beyond the ear to the head, face, neck, feet and around the genitals. The whole mite life cycle, from egg to adult, takes roughly three weeks, which is why treatment usually has to continue long enough to kill mites that hatch later.",
+      "spread": [
+        "Direct contact between rabbits is the main route, for example when rabbits share a hutch, when a doe feeds her kits, or during mating.",
+        "Newly bought rabbits from markets, neighbours or other farms often bring mites into a clean unit, even when they look healthy at first.",
+        "Mites and crust flakes can survive off the rabbit for some days to a few weeks, especially in cool, damp conditions, so dirty bedding, hay, nest boxes and hutch corners can reinfect rabbits.",
+        "Shared equipment such as feeders, carry boxes, grooming brushes and transport cages can carry mites and crusts from one hutch to another.",
+        "Farmers' hands and clothes can move crust flakes between hutches if they handle an affected rabbit and then a healthy one without washing.",
+        "Overcrowding, stress, poor nutrition and other illnesses weaken the rabbit's defences and allow mite numbers to build up quickly.",
+        "Some rabbits carry a few mites without signs; stress such as kindling, weaning, transport or a cold wet spell can then trigger an outbreak."
+      ],
+      "atRisk": "Any rabbit of any breed or age can get ear mites. They are seen most in crowded hutches, colony housing and units that buy stock often without quarantine. Young rabbits around and after weaning, pregnant and nursing does, old rabbits and rabbits that are thin or already sick tend to get heavier infestations. Lop-eared breeds may hide early crusts because the ear canal is harder to see. Meat breeds kept in large numbers, such as New Zealand White, Californian, Chinchilla and Flemish Giant crosses, are commonly affected in Kenyan commercial units simply because of the close contact. Cases often rise during the cool, damp months of the long and short rains, when hutches stay wet and mites survive longer in bedding. Wooden hutches with cracks and corners that are hard to clean also hold mites and crusts.",
+      "signs": {
+        "early": [
+          "Frequent head shaking and flapping of the ears, more than normal grooming.",
+          "Scratching at the ears with the hind feet, sometimes followed by the rabbit licking or chewing its feet.",
+          "A small amount of light brown or grey waxy flakes at the base of the ear canal when you gently look inside.",
+          "Ears that feel warmer than normal and the rabbit pulling away or flinching when you touch them.",
+          "Slight hair loss or redness on the inside of the ear flap."
+        ],
+        "advanced": [
+          "Thick, dry, grey-brown crusts in layers that fill the ear canal and spread up the inside of the ear flap.",
+          "One or both ears drooping or held at an odd angle because of weight of crusts, pain and swelling.",
+          "Scratch wounds, scabs and hair loss around the ears, face and neck from the rabbit's own claws.",
+          "A bad smell or moist discharge from the ear, suggesting a secondary bacterial infection.",
+          "Crusts and hair loss spreading to the head, face, neck, feet or genital area in heavy infestations.",
+          "Weight loss, poor appetite, dullness and does that stop breeding or rear weak litters.",
+          "Head tilt, circling, rolling or loss of balance if infection has reached the middle or inner ear."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Bacterial ear infection or head tilt (often Pasteurella, or the parasite Encephalitozoon cuniculi)",
+          "howToTell": "These can cause head tilt and loss of balance, but there are usually no thick layered brown crusts in the outer ear. A bacterial ear infection may show creamy pus deep in the canal. A vet may need to examine the ear closely and sometimes run tests to tell them apart, and ear mites can also lead on to a deep infection."
+        },
+        {
+          "name": "Ringworm (a fungal skin infection)",
+          "howToTell": "Ringworm causes round, dry, scaly patches of hair loss, often on the face, nose, around the eyes and on the feet, rather than crusts packed inside the ear canal. It can infect people, so wear gloves and get a vet to check it."
+        },
+        {
+          "name": "Fur mites (Cheyletiella, sometimes called 'walking dandruff')",
+          "howToTell": "Fur mites cause white, dandruff-like scale over the back and shoulders, not crusts in the ear. The flakes may seem to move. They can cause itchy spots on people, unlike ear mites."
+        },
+        {
+          "name": "Normal ear wax or dirt",
+          "howToTell": "A little light-coloured wax is normal and the rabbit is not bothered. With ear mites the material is thick, layered and crusty, keeps building up, and the rabbit shakes its head, scratches and resents handling."
+        }
+      ],
+      "diagnosis": "In most cases a vet or animal health officer can recognise ear canker by looking into the ear and seeing the typical layered brown crusts together with head shaking and scratching. To confirm, they may take a small sample of loose crust from the surface and look at it under a magnifying glass or microscope, where the mites are easy to see. If you place a flake on dark paper in a warm spot you may yourself see tiny pale dots moving. If the rabbit has a head tilt, a smelly discharge or is very ill, the vet will check for deeper ear infection and other diseases, and may take a swab for bacteria. To prepare, keep the rabbit in a clean box, do not remove or wash out the crusts before the visit, note how many rabbits are affected and in which hutches, when signs started, any new rabbits bought recently, and whether rabbits are kept for meat, breeding or both, because this affects which drug is chosen.",
+      "firstSteps": [
+        "Move the affected rabbit to a separate, clean, dry hutch away from the others so mites do not spread further.",
+        "Check the ears of every other rabbit, especially those that shared a hutch, nest box or buck, and write down which ones show crusts or head shaking.",
+        "Do not pull or scrape off the crusts; the skin underneath is raw and will bleed and hurt, and this does not cure the mites.",
+        "Keep the rabbit calm, warm and out of draughts and rain, with fresh clean water and good hay and greens so it keeps eating.",
+        "Remove and burn or bury soiled bedding, scrub the hutch, feeders and nest boxes with soapy water, dry them in the sun, and leave the hutch empty if you can.",
+        "Wash your hands and change or brush down clothes after handling an affected rabbit, and handle healthy rabbits first and sick ones last.",
+        "Do not use dog, cat or livestock sprays, powders, used engine oil, paraffin or home mixtures in the ear; some, such as fipronil sprays sold for dogs and cats, can kill rabbits.",
+        "Call your vet, County Veterinary Officer or a trained agrovet animal health officer for a correct diagnosis and a treatment plan for the whole group."
+      ],
+      "vetTreatment": "Ear mites are usually treated with anti-parasite drugs from the avermectin family, such as ivermectin, selamectin or moxidectin, given by injection, by mouth or as a spot-on product, depending on what the vet judges safest for the rabbit. Treatment is normally repeated over several weeks to cover the mite life cycle, because eggs hatch after the first dose. Only a vet should choose the drug and the dose, because rabbits are small and sensitive, and products made for dogs, cats or cattle can easily be overdosed or are simply unsafe for rabbits. All rabbits in contact should usually be treated at the same time, even those without signs, or the problem keeps coming back. The vet may also give pain relief and, if the ear is infected and smelly, an antibiotic or ear treatment. Antibiotics do not kill mites; they are only for a confirmed or strongly suspected bacterial infection, and should be used exactly as prescribed to avoid antimicrobial resistance (bacteria learning to survive the drug). As the mites die, the crusts loosen and fall away over one to two weeks; the vet may gently soften them with a safe oil but you should not force them out. For meat rabbits, ask the vet for the meat withdrawal period, which is the time after treatment before a rabbit can safely be slaughtered for food, and keep records of each treated rabbit.",
+      "prevention": [
+        "Quarantine every new rabbit in a separate hutch for at least three to four weeks, check its ears often, and only mix it with your stock when it is clear.",
+        "Check the ears of all your rabbits regularly, for example once a week when you feed or clean, so you find the first flakes before crusts build up.",
+        "Avoid overcrowding; give each adult rabbit enough space and keep breeding does in their own hutches where possible.",
+        "Keep hutches dry, well ventilated and raised off the ground, with a roof that keeps out rain during the long and short rains.",
+        "Clean hutches and nest boxes regularly, change bedding often, and scrub and sun-dry hutches thoroughly between litters or before bringing in new rabbits.",
+        "Do not share carry boxes, feeders or grooming equipment between farms, and clean them well if they must move between hutches.",
+        "Check bucks and does before mating and do not mate a rabbit with crusty ears until it has been treated.",
+        "Feed a balanced diet with plenty of good hay, fresh greens and a quality rabbit pellet or mash, with clean water at all times, so rabbits stay strong and resist parasites.",
+        "When one case appears, ask your vet whether to treat the whole unit to stop mites moving quietly through the stock."
+      ],
+      "impact": "Ear canker rarely kills rabbits directly, but it quietly eats into farm income. Itchy, sore rabbits eat less and grow slowly, so meat rabbits take longer to reach market weight and fetch lower prices. Breeding does may stop accepting the buck, kindle smaller litters or neglect their kits, and they pass mites on to them. Rabbits with crusty ears, drooping ears or a head tilt are hard to sell as breeding stock, and buyers may avoid a farm that has a reputation for sick rabbits. Treatment costs, vet visits and extra labour add up when the whole unit must be treated, and some severely affected rabbits with permanent balance problems may have to be culled. For a smallholder with a few dozen rabbits, an untreated outbreak can wipe out a season's profit.",
+      "humanHealth": "The rabbit ear mite Psoroptes cuniculi is not considered a risk to people and does not set up infestation in human ears or skin. Still, wear gloves or wash your hands well after handling crusty ears, because some lookalike conditions such as ringworm and fur mites can infect people. If your rabbits are treated with anti-parasite drugs or antibiotics, follow the meat withdrawal period your vet gives you before slaughtering any treated rabbit for eating or sale, so drug residues do not end up in the meat.",
+      "outlook": "The outlook is good when ear mites are caught early and treated properly. Most rabbits stop scratching within days of the first treatment, and the ears heal over a few weeks once crusts fall away. Recovery is slower when crusts are thick, the skin is badly wounded or a bacterial infection has set in. If infection has reached the middle or inner ear and caused a head tilt, some rabbits recover with vet care but others keep a permanent tilt, though many still eat and live comfortably. The biggest reasons for failure are stopping treatment too early, treating only the rabbit with signs and not its companions, and not cleaning the hutch, which all allow mites to come back.",
+      "faqs": [
+        {
+          "q": "Can I just clean the crusts out of the ear myself?",
+          "a": "No. The crusts are stuck to raw, inflamed skin, and pulling them off is very painful, causes bleeding and does not kill the mites hiding in the ear. Once the vet's treatment kills the mites, the crusts loosen and fall off by themselves over one to two weeks. If the vet advises it, they may show you how to soften them gently, but never force them."
+        },
+        {
+          "q": "Can I use the dog or cattle spray from the agrovet on my rabbits?",
+          "a": "Not without a vet's advice. Some products made for dogs, cats and livestock are dangerous to rabbits; fipronil sprays, for example, have killed rabbits. Even safe ingredients can be overdosed in a small rabbit if you guess the amount from a cattle or dog product. Ask your vet for a rabbit-safe product and the correct dose."
+        },
+        {
+          "q": "Only one rabbit has crusts. Do I need to treat the others?",
+          "a": "Usually yes. Mites spread easily through contact, bedding and nest boxes, and other rabbits may already carry mites without showing signs yet. If you treat only one rabbit, it often gets reinfected from its companions. Your vet will advise whether to treat just the hutch mates or the whole unit, but treating in-contact rabbits together is the normal approach."
+        },
+        {
+          "q": "How long until I can sell or slaughter a treated rabbit?",
+          "a": "That depends on the drug used. Many anti-parasite drugs and antibiotics have a meat withdrawal period, a set number of days when the rabbit must not be slaughtered for food. Ask your vet for the exact period for the product they use, write the treatment date on a record card, and keep those rabbits back until the time is over."
+        },
+        {
+          "q": "My rabbit now has its head tilted to one side. Is that still ear mites?",
+          "a": "It can be. If ear mites are left untreated, infection can spread deep into the ear and affect balance. But head tilt can also come from other infections, such as Pasteurella bacteria or the parasite Encephalitozoon cuniculi. Keep the rabbit in a small, well-padded space so it does not fall and hurt itself, help it reach food and water, and call the vet quickly."
+        },
+        {
+          "q": "Will my rabbits get ear mites again after treatment?",
+          "a": "They can, if mites are brought back in or survive in the hutch. To lower the risk, clean and sun-dry hutches and nest boxes, change bedding, quarantine new rabbits for a few weeks, check ears every week, and avoid overcrowding. Rabbits do not become fully immune, so good routine management is the best long-term protection."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a white domestic rabbit in a wooden hutch with one ear gently held open, showing thick layered grey-brown crusts inside the ear canal and a slightly drooping ear, natural daylight, no text.",
+    "seoDescription": "Ear mites (ear canker) in rabbits: spot head shaking and brown ear crusts early, act before the vet comes, and prevent Psoroptes spreading in your hutches."
+  },
+  "sore-hocks": {
+    "card": {
+      "headline": "Bald, red or open sores on heels",
+      "look": "The underside of the back feet, where the rabbit rests its weight, loses fur and turns pink or red. Later it becomes a scabbed or open sore, and the rabbit sits awkwardly or does not want to move.",
+      "action": "Move the rabbit at once onto a clean, dry, soft resting surface such as a wooden board covered with dry hay, and check every other rabbit's feet."
+    },
+    "detail": {
+      "aka": [
+        "Ulcerative pododermatitis",
+        "Pododermatitis",
+        "Bumblefoot",
+        "Sore feet",
+        "Hock sores"
+      ],
+      "summary": "Sore hocks are pressure sores on the underside of a rabbit's feet, mostly the back feet, where the rabbit rests its weight. They start as hair loss and red skin and can become deep infected wounds that reach tendons and bone. They are very common in rabbits kept on bare wire floors or wet, dirty bedding. They are painful and reduce growth, breeding and the value of your stock, but in most cases they can be prevented with good housing.",
+      "cause": "Rabbits have no foot pads like cats or dogs. Instead, a thick layer of fur on the underside of the foot acts as a cushion. When a rabbit sits for long hours on a hard, thin or uneven surface such as wire mesh, the pressure squeezes the skin between the floor and the small bones of the foot. Blood cannot flow well to that skin, so the fur wears away and the skin becomes thin, red and inflamed. Wet floors soaked with urine and droppings soften the skin and burn it with ammonia, making the damage faster. Heavy or overweight rabbits press harder on the same small area. Once the skin cracks, bacteria from the floor and the rabbit's own skin get in. Staphylococcus aureus is the most common germ involved, but others can join. The infection forms pus and abscesses (pockets of pus under the skin). If it is not stopped, it spreads deeper to the tendons (the cords that move the toes) and the bones, a condition called osteomyelitis (bone infection). At that stage the foot may stay damaged for life and the infection can spread through the blood.",
+      "spread": [
+        "Sore hocks are not mainly a contagious disease; they are caused by poor floors and management, so many rabbits in the same unit often get them at the same time.",
+        "Bare wire mesh floors, especially thin wire, wide gaps or rusted and sagging mesh, put constant pressure on a small part of the foot.",
+        "Wet bedding and floors soaked with urine soften the skin and burn it with ammonia, so it breaks more easily.",
+        "Overweight rabbits and large heavy breeds press harder on their heels and wear the fur away faster.",
+        "Small cages where the rabbit cannot move around keep the weight on the same spot for most of the day.",
+        "Rabbits that stamp their feet a lot because of stress, noise, dogs or predators near the hutch damage their heels more quickly.",
+        "Long, overgrown nails push the weight back onto the heel instead of the toes, increasing pressure on the sore area.",
+        "Once a sore is open, bacteria from dirty floors, pus from other infected rabbits and dirty hands or tools can make the infection worse."
+      ],
+      "atRisk": "Any rabbit can get sore hocks, but some are more at risk. Heavy breeds such as Flemish Giant, New Zealand White and Californian, and rabbits that are overweight, carry more weight on their feet. Rex rabbits are especially prone because their short, thin fur gives little cushion on the feet. Adult breeding bucks and does are affected more than young growers because they stay in cages for many months or years, and older rabbits with stiff joints sit still more. Rabbits in raised hutches with bare wire floors, which are common in Kenyan backyard and commercial units, are at the highest risk, as are rabbits on floors that are rarely cleaned. The problem often gets worse in the long and short rains, when hutches stay damp and bedding does not dry. Rabbits that cannot move much because of small cages, arthritis or other illness also develop sores faster.",
+      "signs": {
+        "early": [
+          "Thinning fur or a small bald patch on the underside of the back feet, usually at the heel area that touches the floor when the rabbit sits.",
+          "Pink or red skin in the bald patch, sometimes dry, flaky or slightly thickened like a callus.",
+          "The rabbit shifts its weight from foot to foot, or sits leaning forward onto its front feet to take weight off its heels.",
+          "The rabbit moves less around the cage, lies stretched out more than usual, or hesitates to hop.",
+          "Fur on the feet looks stained yellow or brown from urine and is damp or matted.",
+          "The rabbit flinches or pulls the foot away when you gently touch the sole."
+        ],
+        "advanced": [
+          "Open sores or ulcers on the heel, often covered with a dark scab that may crack and bleed a little.",
+          "Swelling of the foot or heel, and thick yellow or white pus under a scab or coming out of the sore.",
+          "A bad smell from the feet, especially when infection is deep.",
+          "Clear lameness, refusing to stand on the foot, or the rabbit sitting hunched in one corner.",
+          "Reduced appetite, weight loss and a rough, poor coat because of pain and infection.",
+          "The toes look twisted or the foot sits at an odd angle, which can mean the tendon has slipped or the bone is infected.",
+          "Breeding bucks refuse to mount does, and does lose condition or neglect their litters.",
+          "In very severe cases the rabbit becomes weak and dull because infection has spread through the body."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Ringworm (fungal skin infection)",
+          "howToTell": "Ringworm gives round, scaly, bald patches mainly on the head, ears, nose and around the paws, not only on the weight-bearing heel. It does not usually form deep pus-filled sores. It can spread to people, so a vet should check any scaly bald patches."
+        },
+        {
+          "name": "Mange mites (Sarcoptes or Notoedres)",
+          "howToTell": "Mange causes thick, grey-white crusts on the nose, lips, ears and toes, and the rabbit scratches and shakes intensely. Sore hocks are on the underside of the heel, are painful rather than itchy, and match where the rabbit sits on the floor."
+        },
+        {
+          "name": "Urine scald",
+          "howToTell": "Urine scald causes red, sore, wet skin around the genitals, belly and inner back legs from sitting in urine. It often happens together with sore hocks in dirty hutches, but the main damage is higher up the legs, not on the heel itself."
+        },
+        {
+          "name": "Leg injury, fracture or splay leg",
+          "howToTell": "A broken leg or dislocation gives sudden severe lameness, often after a fall or rough handling, and the leg may hang or move abnormally. Splay leg is seen in young kits whose legs stick out sideways. The heels look normal unless sore hocks are also present."
+        }
+      ],
+      "diagnosis": "Most cases are diagnosed by a vet or animal health assistant simply by looking at and feeling the feet. They usually grade how bad it is, from mild hair loss and red skin to deep infection with bone involvement, because this guides treatment and the decision to treat or cull. If there is pus, the vet may take a swab for culture and sensitivity, a lab test that finds which bacteria are present and which antibiotics will work. If the foot is swollen or deformed, an X-ray may be suggested to check whether the bone is infected; this is not always available on farm, so the vet may judge from the look and feel of the foot. The vet will also check the rabbit's weight, teeth, nails and general health, because overweight rabbits, overgrown nails and arthritis all make sore hocks worse. To help, the farmer should record when the problem was first noticed, how many rabbits are affected, the type of floor and bedding, how often the hutch is cleaned, the diet, and any treatment already tried. Clear photos of the feet and of the cage floor are very useful.",
+      "firstSteps": [
+        "Move the affected rabbit straight away onto a clean, dry, soft surface, such as a smooth wooden board or solid plastic floor covered with plenty of dry hay, straw or wood shavings.",
+        "Gently look at both back feet and both front feet, then check every other rabbit in the unit, because rabbits housed the same way often have the same problem.",
+        "If the feet are dirty, wipe them gently with clean, lukewarm boiled water and pat them dry with a clean cloth; do not soak the rabbit or leave the fur wet.",
+        "Wear gloves or wash your hands well with soap before and after touching sores, and keep rabbits with pus-filled sores in a separate clean cage.",
+        "Put feed, hay and water where the rabbit can reach them without hopping far, and make sure it keeps eating, because rabbits that stop eating can become seriously ill quickly.",
+        "Do not apply human creams, used engine oil, paraffin, salt or other home remedies, and do not wrap the foot tightly yourself, as tight bandages can cut off blood flow.",
+        "Do not give any antibiotic or medicine without a vet, because several common antibiotics can kill rabbits by upsetting their gut.",
+        "Write down which rabbits are affected and how bad each foot looks, and call your vet or animal health assistant if there is an open sore, pus, swelling, lameness or poor appetite."
+      ],
+      "vetTreatment": "Treatment depends on how severe the sores are, and every treatment must be prescribed by a vet. In mild cases, where there is only hair loss and redness, the main treatment is fixing the housing: soft, dry, clean flooring, weight control and nail trimming. The vet may show you how to clean the feet with a mild antiseptic and apply a soothing dressing. For open or infected sores, the vet will clip the fur, clean the wound, remove dead tissue and pus, and may apply a padded dressing or bandage that must be checked and changed regularly. Pain relief is important because sore hocks hurt; vets commonly use anti-inflammatory painkillers such as meloxicam. If infection is deep, the vet may prescribe antibiotics, ideally chosen after a culture and sensitivity test. Rabbits are very sensitive to some antibiotics: penicillins and amoxicillin given by mouth, and lincomycin or clindamycin, can destroy the good gut bacteria and cause fatal diarrhoea, which is why you must never treat rabbits with antibiotics bought for other animals. Vets often choose rabbit-safe options such as enrofloxacin or trimethoprim-sulfonamide combinations. Use antibiotics only when prescribed, complete the full course, and do not use them to cover up bad housing, because misuse breeds antimicrobial resistance (germs that drugs no longer kill). If you keep rabbits for meat, ask your vet about the withdrawal period, the time you must wait after the last treatment before slaughter, and follow it strictly. Severe cases with bone infection or a slipped tendon may need surgery, long treatment over many weeks, or humane culling if the rabbit cannot be kept free of pain. Healing is slow, often taking weeks, and sores return if the floor is not changed.",
+      "prevention": [
+        "Give every rabbit a solid resting area covering part of the cage floor, such as a smooth untreated wooden board, plastic slatted panel or rubber mat, so it can take its weight off the wire.",
+        "If you use wire floors, choose strong, flat, smooth mesh that does not sag, replace rusted or broken wire, and never keep heavy breeds on thin wire with wide gaps.",
+        "Keep floors dry: clean droppings and wet bedding daily, make sure urine drains away from the rabbit, and replace bedding more often during the long and short rains.",
+        "Provide dry, clean bedding such as hay, straw or wood shavings, and avoid hard, rough or sharp materials on the floor.",
+        "Control body weight by feeding plenty of good hay and fresh greens and limiting pellets, maize bran and other energy-rich feeds, especially for adult breeding stock.",
+        "Give rabbits enough space to move, stretch and hop, and where possible let them exercise on grass or soft ground in a safe run.",
+        "Check the underside of each rabbit's feet at least once a week, and act as soon as you see thinning fur or pink skin.",
+        "Trim overgrown nails regularly, keep the hutch away from dogs, noise and predators that cause stamping, and avoid breeding from rabbits with thin foot fur or repeated sore hocks."
+      ],
+      "impact": "Sore hocks are rarely a sudden killer, but they quietly cost Kenyan rabbit farmers money. Painful rabbits eat less, so growers take longer to reach market weight and meat rabbits lose value. Breeding bucks with sore feet often refuse to mate, and does in pain may lose condition, produce fewer or weaker litters, or neglect their kits, which reduces the number of rabbits you can sell. Severe cases need vet visits, dressings and medicines, and some valuable breeding animals end up culled early. Damaged fur and scarred feet also lower the value of pelts and of breeding stock sold to other farmers. Because the same housing affects all rabbits, one neglected unit can see many animals affected at once, and poor animal welfare can harm a farm's reputation with buyers.",
+      "humanHealth": "Sore hocks themselves do not spread to people, but infected sores often contain Staphylococcus aureus and other bacteria that can infect cuts on human hands. Wear gloves or wash your hands well with soap and water after handling sores, dressings and bedding, and cover any cuts on your hands. Burn or bury used dressings safely. If a rabbit has been treated with antibiotics, do not slaughter it for food until the withdrawal period your vet gives you has passed, to avoid drug residues in the meat.",
+      "outlook": "The outlook is good when sore hocks are caught early, at the stage of hair loss and red skin, and the housing is fixed straight away. Many of these rabbits recover fully, although the fur may grow back thin. Once there are open sores with infection, healing is slower and takes weeks of careful nursing and vet treatment, but many rabbits still improve. If the infection has reached the tendons or bone, the outlook is guarded to poor, and the foot may stay painful or deformed; culling may then be the kindest choice. Recovery is better in rabbits of healthy weight, with trimmed nails, on soft, dry floors. The biggest reason for failure is returning the rabbit to the same wire floor or wet hutch, because sores very often come back.",
+      "faqs": [
+        {
+          "q": "Do I have to stop using wire floors completely?",
+          "a": "Not always, but bare wire on its own is a major cause of sore hocks. Many farmers keep wire floors so droppings fall through, but add a solid resting board or plastic mat over part of the floor so each rabbit can sit off the wire. Make sure the wire is strong, flat and smooth, and replace sagging or rusted mesh. Heavy breeds and Rex rabbits especially need more solid or bedded floor space."
+        },
+        {
+          "q": "Is sore hocks contagious to my other rabbits?",
+          "a": "The sores themselves are caused by pressure and dampness, not by catching them from another rabbit. However, pus from infected sores contains bacteria that can infect other rabbits with broken skin, so keep rabbits with pus-filled sores separate and clean their cages carefully. If several rabbits have sore hocks at the same time, it is a sign that the housing or management needs changing for the whole unit."
+        },
+        {
+          "q": "Can I treat sore hocks with salt, paraffin or a cream from the shop?",
+          "a": "It is best not to. Salt and paraffin can burn damaged skin, and some creams are toxic if rabbits lick them. Gently wiping the feet with clean, lukewarm boiled water and drying them, then moving the rabbit to a soft dry floor, is safe. For open or infected sores, ask your vet which antiseptic and dressing to use. Never give antibiotics without a vet, because some common ones can kill rabbits."
+        },
+        {
+          "q": "Why are my breeding bucks and big does affected more than the young rabbits?",
+          "a": "Adult breeding rabbits stay in the same cage for months or years, are heavier, and often move less, so the same small part of the foot carries their weight day after day. Young growers are lighter and are usually sold before the damage builds up. Giving breeding stock solid resting areas, more space, exercise and careful weight control greatly reduces the problem."
+        },
+        {
+          "q": "Should I cull a rabbit with sore hocks?",
+          "a": "Most rabbits with early sore hocks do not need culling; they recover when the housing is fixed. Culling may be the kindest and most practical choice if the infection has reached the bone, the foot is deformed, the rabbit remains in pain despite treatment, or it keeps getting sores again. Discuss this with your vet, and avoid breeding from rabbits that repeatedly develop sore hocks or have very thin fur on their feet."
+        },
+        {
+          "q": "Can I eat or sell a rabbit that has sore hocks?",
+          "a": "A rabbit with mild sores that is otherwise healthy and has not been given medicines can usually be slaughtered for food in the normal way. Do not slaughter a rabbit that is sick, weak, thin or has spreading infection, and ask your vet first. If the rabbit has had antibiotics or other drugs, wait until the full withdrawal period your vet gives you has passed before slaughter."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of the underside of a white New Zealand rabbit's hind foot gently held by gloved hands, showing a small bald, reddened, slightly scabbed patch on the heel surrounded by normal white fur, with a wooden hutch and dry hay softly blurred in the background.",
+    "seoDescription": "Sore hocks in rabbits: spot red, bald or ulcerated heels early, fix wire floors and wet bedding, and know when to call the vet. Kenyan farmer guide."
+  },
+  "gut-stasis": {
+    "card": {
+      "headline": "No droppings, hunched rabbit, swollen belly",
+      "look": "The rabbit sits hunched in a corner, refuses food and passes few or no droppings. Its belly may feel tight or swollen, it may grind its teeth, and young rabbits may pass clear, jelly-like mucus.",
+      "action": "Treat this as an emergency: keep the rabbit warm and quiet, offer hay and water, and call a vet the same day, because rabbits with a stopped gut can die within a day or two."
+    },
+    "detail": {
+      "aka": [
+        "GI stasis (gastrointestinal stasis)",
+        "Ileus (the gut has stopped moving)",
+        "Rabbit bloat or tympany",
+        "Mucoid enteropathy or mucoid enteritis",
+        "Epizootic rabbit enteropathy (ERE)",
+        "Sungura (Swahili for rabbit); farmers often describe a bloated belly as 'tumbo kujaa gesi'"
+      ],
+      "summary": "Gut stasis means a rabbit's digestive system slows down or stops moving food along. Gas and fermenting food build up and cause bloat and severe pain. In young rabbits around weaning, a related condition called mucoid enteropathy causes a swollen belly and jelly-like mucus in place of normal droppings. All of these are emergencies. Rabbits cannot vomit, and a rabbit that stops eating and passing droppings can die quickly, so fast action and a vet visit matter more than anything else.",
+      "cause": "A rabbit's gut is built to run on large amounts of fibre, mainly from hay and grass. Long fibre keeps the gut muscles moving, and the caecum (a large pouch at the start of the large intestine) holds friendly bacteria that ferment food. When the diet is low in fibre, for example mostly pellets, bread, maize bran, kitchen scraps or sugary vegetables, or when the rabbit is stressed, in pain, dehydrated or suddenly given a new feed, the gut slows down. Food and hair dry out inside the stomach and intestines. The balance of bacteria in the caecum changes, and harmful bacteria such as some Clostridium species can multiply, make gas and release toxins. Gas stretches the gut, which is very painful, and pain itself slows the gut further, creating a vicious cycle. In severe cases the stretched gut loses blood supply, toxins enter the blood and the rabbit goes into shock. Mucoid enteropathy in weaners is less well understood. It appears to involve disturbed gut bacteria at weaning, a low-fibre or sudden change of diet, and stress. The infectious form, epizootic rabbit enteropathy (ERE), spreads between rabbits in a unit, and its exact cause is still being studied, although bacteria are strongly suspected. In these young rabbits the large intestine fills with thick mucus, the caecum becomes impacted (packed hard with dry content) or bloated, and the rabbit stops eating and drinking. Underlying problems such as overgrown teeth, coccidiosis, a swallowed blockage or any painful illness can also trigger stasis, so it is often a sign of something else as well as a disease in its own right.",
+      "spread": [
+        "Low-fibre feeding is the most common trigger: rations based mainly on pellets, grains, maize bran, bread, chapati or kitchen waste, with little hay or grass.",
+        "A sudden change of feed, such as switching pellet brands overnight or giving a large amount of fresh, wet or young lush greens to rabbits not used to them, upsets the gut bacteria.",
+        "Weaning stress in young rabbits, including separation from the doe, a new cage, mixing litters and a diet change all at once, is a major trigger for mucoid enteropathy.",
+        "The infectious form (ERE) spreads in rabbitries through droppings, contaminated cages, feeders, drinkers and the hands, boots and clothes of people moving between hutches.",
+        "Not drinking enough, because water is dirty, warm, frozen in nipple lines, or the drinker is blocked or empty, lets gut contents dry out.",
+        "Stress from heat, transport, dogs or predators near the hutch, loud noise, overcrowding or handling can make the gut slow down.",
+        "Pain from overgrown or sharp teeth, injuries, urinary problems or other diseases makes a rabbit stop eating, which then leads to stasis.",
+        "Mouldy or spoiled feed, eating hair when grooming during a moult, and swallowing carpet, cloth or sacking can contribute to slow gut and blockages."
+      ],
+      "atRisk": "Weaners and growers, roughly from weaning up to about three months of age, are most at risk of mucoid enteropathy and ERE, especially in larger commercial units where many young rabbits are kept together. Adult rabbits of any breed can develop gut stasis, especially those fed mostly pellets or kitchen scraps, older rabbits with dental problems, does after kindling and rabbits recovering from other illness or surgery. Long-haired breeds such as Angora are more likely to swallow hair. In Kenya, risk often rises during the long and short rains when grass is wet and lush and hay may be scarce or mouldy, and during hot dry spells when water runs low and heat stress is common. Backyard hutches fed on sukuma wiki, cabbage and leftovers with little dry roughage, and commercial units that push pellets for fast growth, are both at risk.",
+      "signs": {
+        "early": [
+          "The rabbit eats less, picks only at favourite treats, or ignores pellets and hay altogether.",
+          "Droppings become smaller, fewer, drier or misshapen, or there are no fresh droppings under the cage in the morning.",
+          "The rabbit sits hunched and still in a corner, with half-closed eyes and less interest in its surroundings.",
+          "Soft, quiet teeth grinding can be heard, which in rabbits is usually a sign of pain.",
+          "The rabbit drinks less and its caecotrophs (the soft, shiny night droppings it normally eats) may be left smeared on the floor or fur.",
+          "Gurgling gut sounds may be louder than normal at first, or the belly may be unusually quiet."
+        ],
+        "advanced": [
+          "No droppings at all for many hours, or only thin strings of jelly-like clear or whitish mucus coming from the vent.",
+          "The belly is swollen, tight or drum-like, and may slosh or feel doughy when gently touched.",
+          "Loud teeth grinding, pressing the belly against the floor, stretching out, or lying flat on one side because of severe pain.",
+          "Cold ears and feet, weakness, and reluctance or inability to stand, which suggest shock and low body temperature.",
+          "Dull, sunken eyes and skin that stays tented when gently pinched, showing dehydration.",
+          "In weaners with mucoid enteropathy, several young rabbits in the same pen become dull, bloated and stop eating within a few days, and some may die suddenly."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Intestinal coccidiosis",
+          "howToTell": "Coccidiosis is caused by tiny parasites and is common in young rabbits on dirty floors. It usually causes watery or pasty diarrhoea, often with soiled back legs, weight loss and a pot belly over several days, rather than a sudden stop in droppings with jelly-like mucus. A vet can confirm it by finding coccidia eggs in a dung sample or gut lesions at post-mortem. The two problems can occur together."
+        },
+        {
+          "name": "Enterotoxaemia (Clostridium spiroforme)",
+          "howToTell": "This is a sudden, severe bacterial toxin disease, often after weaning, a diet change or the wrong antibiotic. Rabbits usually have brown, watery, sometimes bloody or foul-smelling diarrhoea and may die within hours to a day or two. Mucoid enteropathy and simple stasis show few or no droppings and mucus instead of watery diarrhoea. Only a vet and post-mortem can reliably separate them."
+        },
+        {
+          "name": "Dental disease (overgrown teeth)",
+          "howToTell": "Rabbits with tooth problems may drool, have a wet chin, drop food from the mouth, pick at soft food only or lose weight slowly over weeks. They can develop stasis because they stop eating, so a vet should check the teeth in any rabbit with gut slowdown."
+        },
+        {
+          "name": "Intestinal blockage (obstruction)",
+          "howToTell": "A true blockage from a hair mat, swallowed fabric or a dried food plug often causes a very sudden onset, a rapidly swelling and very painful belly, and quick collapse. It can look like severe bloat, but it needs different treatment, so the vet will often use X-rays or careful examination to decide. Never force-feed a rabbit with a hard, swollen belly until a vet has ruled out a blockage."
+        }
+      ],
+      "diagnosis": "A vet starts by asking about the diet, recent feed changes, weaning, water supply and how long the rabbit has gone without eating or passing droppings. They will check body temperature, because a low temperature is a warning sign of shock, listen to the gut for sounds, gently feel the belly for gas, fluid or a hard impacted caecum, and examine the mouth and teeth. In clinics with equipment, X-rays help show whether there is gas spread through the gut or a single blockage, and blood tests can show dehydration and blood sugar levels, which help predict how serious the case is. A dung sample can be checked for coccidia. In a rabbitry where several weaners have died, a post-mortem on a fresh carcass is very valuable, because it shows mucus-filled intestines, an impacted caecum or signs of other diseases, and samples can be sent to a laboratory such as a county or national veterinary laboratory. To help the vet, note when the rabbit last ate and passed droppings, what it has been fed over the past two weeks, its age and whether others are affected, and keep any recent droppings or mucus in a clean bag. If a rabbit dies, keep the body cool, not frozen, in a sealed bag and contact the vet quickly.",
+      "firstSteps": [
+        "Check the rabbit carefully now: look under the cage for fresh droppings, see whether it is eating, and gently feel whether the belly is soft or tight and swollen.",
+        "Call a vet or your County Veterinary Office the same day, and explain that the rabbit has stopped eating or passing droppings, because waiting even a day can be fatal.",
+        "Keep the rabbit warm and quiet in a draught-free, shaded spot, and if its ears feel cold, give it a towel-wrapped bottle of warm (not hot) water to lie near.",
+        "Offer plenty of good-quality, dry hay or fresh grass and clean, fresh water in both a bowl and a bottle, plus a few washed leafy greens to encourage eating and drinking.",
+        "Stop all pellets, bread, grains, sugary treats and kitchen scraps until the vet has seen the rabbit, and do not give home remedies such as cooking oil, salt water or human medicines.",
+        "Do not force-feed, massage hard or press on a tight, swollen belly, because a blocked or overstretched gut can be damaged; only gentle handling until the vet advises.",
+        "If several weaners are affected, move sick rabbits to a separate clean cage, clean feeders and drinkers, and attend to healthy rabbits before sick ones.",
+        "Wash your hands and change or clean footwear after handling sick rabbits, and write down each rabbit's age, feed, signs, when they started and any deaths."
+      ],
+      "vetTreatment": "Treatment depends on whether the gut has simply slowed down, is bloated with gas, or is blocked, so a vet must examine the rabbit and prescribe everything. The main aims are to relieve pain, correct dehydration, get the gut moving again and support the rabbit's energy. Vets commonly give fluids by injection under the skin or into a vein, pain relief such as meloxicam (an anti-inflammatory) or buprenorphine (a stronger painkiller), and sometimes medicines that help the gut move, such as metoclopramide, once a blockage has been ruled out. Simethicone may be used to help break up gas, and the rabbit is kept warm. When it is safe, the vet may advise syringe feeding with a fibre-rich recovery food, and will show you how to do it. Antibiotics are not routine for simple stasis. They are used only when the vet suspects a bacterial problem, such as in ERE outbreaks or enterotoxaemia, and the choice matters greatly: some antibiotics given by mouth, including many penicillins, amoxicillin, lincomycin and clindamycin, can upset rabbit gut bacteria and cause fatal diarrhoea. Only use antibiotics a vet prescribes for rabbits, complete the course as directed and never share or reuse leftover drugs, because misuse drives antimicrobial resistance, which makes future infections harder to treat in animals and people. For outbreaks in commercial units, a vet may recommend medicated feed or water for a group alongside diet changes. Any rabbit treated with drugs and kept for meat must not be slaughtered for food until the withdrawal period on the label or set by the vet has passed. True blockages may need surgery, which carries real risk in rabbits. Expect daily checks on eating and droppings; improvement is usually seen within one to three days if treatment works.",
+      "prevention": [
+        "Make hay or dry grass the main part of the diet, available at all times, with pellets given in limited amounts rather than unlimited, because long fibre keeps the gut moving.",
+        "Change feeds slowly over one to two weeks, mixing old and new pellets, and introduce fresh greens gradually in small amounts, especially lush, wet grass in the rains.",
+        "Wean young rabbits gently: avoid changing the cage, the diet and the group all at once, keep weaners with litter-mates, and give plenty of hay during and after weaning.",
+        "Provide clean, fresh water at all times, check nipple drinkers daily for blockages, and add extra drinkers and shade during hot weather.",
+        "Store hay and pellets dry and off the floor, and throw away any feed that is mouldy, dusty, damp or smells bad.",
+        "Keep cages clean and dry, remove droppings regularly, and clean and disinfect cages, feeders and drinkers between batches of weaners to reduce ERE and coccidiosis.",
+        "Reduce stress by avoiding overcrowding, keeping dogs and predators away, handling rabbits calmly and providing shade and ventilation in hot spells.",
+        "Check teeth, droppings and appetite daily, groom long-haired rabbits during moults, and quarantine new rabbits for at least two to three weeks before mixing them with the herd."
+      ],
+      "impact": "Gut stasis and mucoid enteropathy are among the most important causes of death in growing rabbits, and losses can be heavy in commercial units when ERE moves through a batch of weaners. Rabbits that survive often grow slowly, reach market weight late and use more feed for each kilo gained, which cuts into thin margins. In breeding does, illness can lead to poor milk, weak litters or lost pregnancies. Vet fees, medicines and the time spent nursing sick rabbits add costs, and meat rabbits under treatment cannot be sold until withdrawal periods end. For Kenyan smallholders who sell rabbits to hotels, butcheries or other breeders, repeated losses can damage reputation and contracts. The good news is that most prevention, such as more hay, slow feed changes, clean water and calm weaning, is cheap compared with the cost of lost rabbits.",
+      "humanHealth": "Gut stasis and mucoid enteropathy are not known to spread to people. However, sick rabbits may carry bacteria in their droppings, so wash your hands with soap after handling them or cleaning cages, and keep children from handling sick animals. If a vet treats rabbits kept for meat, follow the meat withdrawal period strictly so that drug residues do not end up in food, and do not eat rabbits that died of illness.",
+      "outlook": "Outlook depends mostly on how quickly treatment starts and how sick the rabbit is when seen. Adult rabbits with mild stasis caught early, while they still have some appetite, normal body temperature and soft belly, often recover well with vet care and a high-fibre diet. Rabbits with a hard, bloated belly, low body temperature, collapse or a true blockage have a much poorer outlook, and some die despite treatment. Mucoid enteropathy and ERE in weaners carry a guarded outlook, and deaths in an affected batch are common, so prevention is far more reliable than cure. Rabbits that have had stasis once can get it again, especially if the diet or underlying cause, such as dental disease, is not corrected.",
+      "faqs": [
+        {
+          "q": "How long can a rabbit go without passing droppings before I should worry?",
+          "a": "A healthy rabbit produces droppings almost constantly through the day and night. If you see no fresh droppings for around 8 to 12 hours, or the rabbit has stopped eating, treat it as urgent and call a vet. Do not wait until the next day to see if it improves on its own, because rabbits can go downhill very fast."
+        },
+        {
+          "q": "Can I give my rabbit cooking oil or liquid paraffin to clear the gut?",
+          "a": "No. Oils do not fix the underlying problem, can be breathed into the lungs and may make things worse, and they can hide a blockage that needs proper vet care. Offer hay, water and fresh greens, keep the rabbit warm, and let the vet decide which treatment is safe."
+        },
+        {
+          "q": "Why are my weaners dying with swollen bellies and jelly in their droppings?",
+          "a": "This pattern is typical of mucoid enteropathy or the infectious form called epizootic rabbit enteropathy, which strikes rabbits around weaning. Low-fibre feeding, sudden diet changes, stress at weaning and spread between rabbits all play a part. Call a vet quickly, separate sick rabbits, clean cages and equipment, increase hay for the whole group and ask the vet about a post-mortem on a fresh carcass so the cause can be confirmed."
+        },
+        {
+          "q": "Are pellets bad for rabbits?",
+          "a": "Pellets are not bad, and good-quality pellets supply useful protein, minerals and vitamins, especially for fast-growing meat rabbits. The problem comes when pellets replace hay and grass. Keep hay or dry grass available all the time, give pellets in measured amounts, and make any change of pellet brand slowly over one to two weeks."
+        },
+        {
+          "q": "Can I give my rabbit an antibiotic from the agrovet to be safe?",
+          "a": "Please do not. Many common antibiotics, especially some given by mouth, can kill the helpful bacteria in a rabbit's gut and cause deadly diarrhoea. Simple gut stasis often does not need antibiotics at all. Only use antibiotics that a vet has prescribed specifically for rabbits, follow the instructions exactly and respect the meat withdrawal period."
+        },
+        {
+          "q": "Is sukuma wiki or cabbage safe for rabbits?",
+          "a": "Small amounts of washed, fresh leafy greens can be part of a rabbit's diet, but they should not be the main feed, and large amounts of cabbage or wet, freshly cut greens given suddenly can upset the gut and cause gas. Build the diet on hay or dry grass, introduce greens gradually, and avoid wilted, mouldy or spoiled vegetables and leftovers."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "A realistic photo of a domestic rabbit sitting hunched and tense in the corner of a clean wooden hutch, eyes half-closed, belly visibly rounded and swollen, with an untouched pile of hay and very few droppings on the floor, soft natural daylight, no text.",
+    "seoDescription": "Rabbit gut stasis and bloat: spot no droppings, hunched posture and teeth grinding early, act fast, and prevent it with high-fibre hay and calm weaning."
+  },
+  "mastitis": {
+    "card": {
+      "headline": "Hot, swollen red or blue teats",
+      "look": "One or more teats and the surrounding breast tissue on a nursing doe are swollen, hard, hot and red, sometimes turning dark blue or purple. The doe sits hunched, refuses feed and will not let her kits nurse, so the kits look thin, wrinkled and cry in the nest.",
+      "action": "Separate the sick doe and her kits into a clean, quiet hutch, wash your hands, and call a vet the same day because rabbit mastitis can kill a doe within one or two days."
+    },
+    "detail": {
+      "aka": [
+        "Blue breast",
+        "Blue bag (severe gangrenous form)",
+        "Septic mastitis",
+        "Ugonjwa wa kiwele (Swahili, udder disease)"
+      ],
+      "summary": "Mastitis is a bacterial infection of the mammary glands (breasts) of a doe, usually in the first few weeks after kindling (giving birth). The breasts become hot, swollen and painful, the doe gets a fever and stops eating, and her milk dries up or becomes infected. It matters because a doe can die quickly from blood poisoning, her kits can starve or catch the infection, and the bacteria can spread through a rabbitry on hands, bedding and fostered kits.",
+      "cause": "Mastitis is caused by bacteria getting into the teat or breast tissue. The most common culprit is Staphylococcus aureus, a bacterium that lives on skin and in the environment; some strains are very aggressive and cause the severe 'blue breast' form. Pasteurella multocida, Streptococcus species, E. coli and Klebsiella are also found. Bacteria usually enter through small wounds on the teats made by the kits' sharp teeth, scratches from wire floors or rough nest boxes, or through dirty, wet bedding. Milk building up in the glands also helps infection take hold, which happens when a doe has more milk than her kits drink, when a litter dies, or when kits are weaned suddenly. Once inside, the bacteria multiply in the warm, milk-filled tissue. The body sends blood and fluid to fight them, causing heat, redness and swelling. In severe cases bacterial toxins kill the tissue and cut off its blood supply, so the skin turns blue or black (gangrene, meaning dead tissue). Toxins and bacteria can then enter the bloodstream (septicaemia, or blood poisoning), which causes high fever, collapse and death.",
+      "spread": [
+        "Kits suckling on an infected doe can carry bacteria in their mouths and on their faces, so fostering those kits onto a healthy doe can spread mastitis to her.",
+        "Farmers' hands carry bacteria from one doe to the next when checking nests or handling litters without washing in between.",
+        "Dirty, damp or soiled nest material and bedding hold large numbers of bacteria that enter small cuts on the teats.",
+        "Sharp wire, broken hutch floors, rough nest-box edges and splinters scratch the teats and let bacteria in.",
+        "Kits with sharp teeth, especially large litters fighting for too few teats, nick and bruise the teats.",
+        "Milk build-up after a litter dies, after sudden weaning, or when a doe has a very small litter makes the glands an easy target for infection.",
+        "Shared equipment such as nest boxes and feeders that are not cleaned between litters keep the bacteria in the rabbitry."
+      ],
+      "atRisk": "Nursing does in the first three weeks after kindling are most at risk, and again around weaning when milk builds up. Heavy-milking meat breeds commonly kept in Kenya, such as New Zealand White, California and Flemish Giant crosses, are often affected. Does with very small litters or whose litters have died, does on wire floors without a resting board, and does kept in crowded, damp or poorly cleaned hutches face higher risk. The long and short rains bring wet bedding and damp hutches, which raises bacterial loads. Rabbitries that foster kits freely between does, or that bring in new stock without quarantine, can see repeated cases. Older does that have had mastitis before, and unspayed older does with breast changes, may also have problems.",
+      "signs": {
+        "early": [
+          "One or more teats look pink to red and feel warmer than the others when you gently touch the belly.",
+          "The breast tissue around a teat feels firm, lumpy or swollen instead of soft.",
+          "The doe flinches, grunts or moves away when touched on the belly, and may stop sitting over the nest to feed her kits.",
+          "She eats less than usual, leaves pellets or greens uneaten and drinks less.",
+          "The kits look less full: bellies are flat rather than round and white with milk, and they may cry or crawl about the nest.",
+          "The doe may sit hunched and quiet in a corner more than normal."
+        ],
+        "advanced": [
+          "Teats and breasts turn dark red, purple, blue or black and may feel cold in the centre where tissue is dying.",
+          "The swelling becomes large, hard and very hot, and may spread across several glands.",
+          "Pus or thick, discoloured, bloody or watery fluid may come from the teat, or an abscess (pus-filled lump) forms and bursts.",
+          "The doe stops eating and drinking completely, her droppings become small or stop, and she breathes fast.",
+          "She becomes very weak, lies flat, feels hot to touch or later cold as she goes into shock.",
+          "Kits become thin, wrinkled, dehydrated and weak, and some die in the nest; surviving kits may develop skin abscesses or infections themselves.",
+          "Sudden death of the doe can happen within one to two days in the severe blue-breast form."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Caked breasts (milk stasis)",
+          "howToTell": "Milk simply builds up when kits die, are weaned suddenly or the litter is small. The glands are full and firm but usually not very hot, red or blue, and the doe keeps eating and has no fever. Caked breasts can turn into mastitis if not managed, so watch closely and ask a vet if in doubt."
+        },
+        {
+          "name": "Abscess on the belly or chest",
+          "howToTell": "An abscess is a single, round, well-defined lump of pus, often caused by Pasteurella, and it can appear at any time, not just after kindling. Mastitis involves the milk glands themselves, starts around the teats and usually makes a nursing doe sick quickly."
+        },
+        {
+          "name": "Mammary tumours or cystic breasts",
+          "howToTell": "These are seen mostly in older does that are not used for breeding or have had many litters. Lumps grow slowly over weeks or months, are usually not hot or painful, and the doe stays bright and eating."
+        },
+        {
+          "name": "Moist dermatitis (sore, wet skin)",
+          "howToTell": "Skin on the belly, dewlap or between the legs is wet, red and smelly from urine, drooling or damp bedding, but the breast tissue under it is soft and not swollen. The doe is usually not feverish."
+        }
+      ],
+      "diagnosis": "A vet diagnoses mastitis mainly by examining the doe: looking at and feeling each mammary gland, checking colour, heat, swelling and any discharge, and taking her temperature, because a fever supports infection. The vet will also check her hydration, gut sounds and droppings, since a doe that stops eating can develop gut stasis (the gut slowing or stopping), and will examine the kits. Where there are repeated cases on a farm, the vet may take a sample of milk or pus to a laboratory for culture, which identifies the bacteria, and a sensitivity test, which shows which antibiotics will work. This is very useful in Kenya where some bacteria are resistant to common drugs. If a doe dies, a post-mortem by a vet or county veterinary laboratory can confirm the cause and protect the rest of the herd. Before the vet arrives, write down when the doe kindled, litter size, when you first saw signs, what she has eaten, any kits that died, and whether any kits were fostered. Keep the doe in a clean box so the vet can see the glands clearly, and do not apply creams or home remedies that hide the signs.",
+      "firstSteps": [
+        "Move the sick doe and her kits into a clean, dry, quiet hutch away from other nursing does, ideally with a solid resting board over any wire floor.",
+        "Do not foster her kits onto another doe without a vet's advice, because the kits can carry the bacteria and give mastitis to a healthy doe.",
+        "Wash your hands with soap and water before and after touching her, wear disposable gloves if you have them, and handle her last after all healthy rabbits.",
+        "Offer fresh clean water in a bowl as well as the drinker, plus her favourite fresh greens such as clean sukuma wiki leaves, grasses or hay, to tempt her to keep eating.",
+        "Check the kits several times a day: note whether their bellies are full, whether they are warm, and how many are alive, and keep the nest clean, dry and warm.",
+        "Replace soiled nest material with clean, dry hay or wood shavings and remove anything sharp or rough in the hutch that could scratch her teats.",
+        "Do not try to squeeze out a hard, blue or black gland or cut into a lump, as this can push infection into the blood and is very painful.",
+        "Record her temperature if you have a thermometer and are confident using it, along with appetite and droppings, then call your vet or the County Veterinary Office the same day."
+      ],
+      "vetTreatment": "Treatment must be prescribed by a vet, and rabbits need special care because many common antibiotics are dangerous to them. Some drugs, especially penicillins and related drugs given by mouth, lincomycin and clindamycin, can upset the rabbit's gut bacteria and cause fatal diarrhoea. A vet will choose an antibiotic that is safer for rabbits and suits the likely bacteria; drug groups often used include fluoroquinolones such as enrofloxacin, potentiated sulphonamides such as trimethoprim-sulfa, and in some cases carefully chosen injectable antibiotics. Where possible a culture and sensitivity test guides the choice. The vet will usually give a pain-relieving anti-inflammatory drug, because pain stops the doe eating, and may give fluids if she is dehydrated. Warm compresses may be advised for early, hard glands. Abscesses may need to be lanced and flushed, and in the severe gangrenous form dead tissue may have to be surgically removed, which is not always possible. The vet will also advise on the kits: whether they can keep nursing, need hand-feeding, or can be fostered safely, and young kits that lose their mother's milk are hard to raise. Complete the full course of any antibiotic exactly as prescribed, never share leftover drugs with other rabbits, and respect the meat withdrawal period the vet gives before any treated rabbit is slaughtered. Using the wrong antibiotic, stopping early or treating without a vet helps create antimicrobial resistance, meaning bacteria that drugs can no longer kill, which harms animals and people. Expect improvement in early cases within a few days; severe cases may not survive even with good treatment.",
+      "prevention": [
+        "Keep hutches and nest boxes clean and dry, change nest bedding when it is soiled or damp, and clean and disinfect nest boxes between litters.",
+        "Remove sharp wire ends, splinters and rough edges, and give does a solid resting board or mat so their teats do not rub on wire floors.",
+        "Wash hands between handling different does and litters, and check healthy does before any sick one.",
+        "Check the doe's belly gently every day or two in the first three weeks after kindling so you catch redness or firmness early.",
+        "Balance litter size: avoid leaving a high-milking doe with only one or two kits, and when fostering is needed, only foster healthy kits between healthy does of similar kindling dates.",
+        "Wean gradually over several days rather than removing all kits at once, and reduce concentrate feeding slightly around weaning to help milk production slow down.",
+        "Never foster kits from a doe with mastitis onto another doe, and cull or stop breeding does that suffer repeated or severe mastitis, as they often relapse and spread bacteria.",
+        "Quarantine new rabbits for about three to four weeks before mixing them in, and feed a balanced ration with good hay, clean greens and fresh water to keep does strong through lactation."
+      ],
+      "impact": "On a Kenyan smallholder or commercial rabbit farm, mastitis can wipe out a whole litter of six to ten kits through starvation, and a valuable breeding doe may die or have to be culled. Each lost litter means lost meat sales and lost replacement stock, and a doe that recovers may produce less milk in the affected glands next time. Vet visits, drugs and the time spent hand-feeding kits add cost. When the aggressive staphylococcal form gets into a rabbitry, it can cause repeated cases across many does, forcing farmers to cull breeding stock and clean out the whole unit, which sets production back by months. Rabbits treated with antibiotics cannot be sold for meat until the withdrawal period is over.",
+      "humanHealth": "Staphylococcus aureus and Pasteurella, the bacteria that most often cause rabbit mastitis, can also infect people, usually through cuts, scratches or bites, causing skin infections or painful, swollen wounds. Some Staphylococcus strains are resistant to antibiotics. Wear gloves or wash hands well with soap and water after handling a sick doe, her kits or her bedding, cover any cuts on your hands, and clean scratches promptly. Do not eat rabbits that died of mastitis or slaughter a sick doe for food. Respect the meat withdrawal period given by the vet after any antibiotic treatment so that drug residues do not reach your family or customers. People with weak immune systems, young children and the elderly should avoid handling infected rabbits, and anyone with a red, hot or spreading wound should see a health worker.",
+      "outlook": "The outlook depends mostly on how early treatment starts and which bacteria are involved. Does with early, red, firm glands that are treated promptly by a vet often recover, though the affected gland may produce less milk afterwards. Does with blue or black, cold glands, high fever or collapse have a poor outlook and many die despite treatment. A doe that stops eating can also develop gut stasis, which worsens her chances. Kits under about two to three weeks old are at serious risk because they depend fully on milk; older kits that are already eating solid food survive better. Does that recover may get mastitis again in later litters, and repeated cases are a sign to retire her from breeding and review hygiene in the whole rabbitry.",
+      "faqs": [
+        {
+          "q": "Can the kits keep suckling from a doe with mastitis?",
+          "a": "It depends on how bad it is, so ask your vet. In mild cases the vet may allow kits to keep nursing from the healthy glands. In severe cases the milk may be infected, the doe may refuse to nurse, and kits can catch skin or other infections, so they may need to be removed. Do not foster them onto another doe without advice, because they can carry the bacteria and start mastitis in her."
+        },
+        {
+          "q": "Why can't I just give my rabbit the same antibiotic I use for my cows or goats?",
+          "a": "Rabbits have a delicate gut full of helpful bacteria. Several antibiotics that are safe in cattle or goats, especially some penicillins and related drugs given by mouth, can kill those helpful bacteria and cause severe, often fatal diarrhoea in rabbits. Doses also differ greatly. Only a vet should choose the drug, and using the wrong one also helps create antibiotic resistance."
+        },
+        {
+          "q": "My doe's breasts are hard but she is still eating. Is that mastitis?",
+          "a": "It may be caked breasts, meaning milk build-up, especially if her litter is small, some kits died or you just weaned them. If the glands are not very hot, red or blue and she is eating and active, it may settle. But caked breasts can quickly become infected, so check her twice a day and call the vet if she goes off feed, the skin changes colour, or the glands get hotter."
+        },
+        {
+          "q": "Should I keep breeding a doe that has had mastitis?",
+          "a": "A doe that had one mild case and recovered fully may breed again, but watch her closely after each kindling. Does that had the severe blue form, lost glands, or get mastitis again are often best retired from breeding, because they are likely to relapse and can carry bacteria that spread to other does."
+        },
+        {
+          "q": "Can I eat or sell a doe that had mastitis?",
+          "a": "Never eat a rabbit that died of mastitis or slaughter one that is visibly sick. If a doe recovers after treatment, she can only be used for meat after the full withdrawal period the vet gives for the drugs used has passed, so that no drug residues are left in the meat."
+        },
+        {
+          "q": "How do I stop mastitis coming back in my rabbitry?",
+          "a": "Focus on cleanliness and comfort: dry, clean nest boxes, resting boards over wire floors, no sharp edges, handwashing between hutches, and daily belly checks after kindling. Wean gradually, avoid tiny litters on heavy-milking does, never foster kits from a sick doe, and retire does with repeated cases. If many does are affected, ask your vet to culture samples so the right drugs and cleaning plan can be used."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of the underside of a white New Zealand White doe rabbit lying in a straw-lined wooden hutch, showing one swollen, reddish-purple teat and surrounding breast tissue among normal pink teats, soft natural light, realistic and not graphic.",
+    "seoDescription": "Mastitis in rabbit does: spot hot, red or blue swollen teats after kindling, protect starving kits, act before the vet arrives and prevent repeat cases."
+  },
+  "heat-stress": {
+    "card": {
+      "headline": "Rabbit lying stretched out, panting fast",
+      "look": "The rabbit lies flat on its side or belly with legs stretched out, breathing very fast. Its ears are red and hot, and its chin and nose may be wet with drool.",
+      "action": "Move the rabbit at once to the coolest shaded place you have, wet its ears with cool (not ice-cold) water, offer drinking water and call the vet."
+    },
+    "detail": {
+      "aka": [
+        "Heat stroke",
+        "Hyperthermia (body overheating)",
+        "Joto kali kwa sungura"
+      ],
+      "summary": "Heat stress happens when a rabbit's body gets hotter than it can cool down. Rabbits cannot sweat and pant poorly, so they handle hot weather badly, especially above about 30 °C or in humid, poorly ventilated hutches. Mild heat stress cuts feeding, growth and fertility. Severe heat stress, called heat stroke, can kill a rabbit within hours, so treat it as an emergency.",
+      "cause": "Rabbits are built for cool conditions. They have no useful sweat glands and a thick coat. Their main way to lose heat is through the large blood vessels in their ears, plus faster breathing. Rabbits feel most comfortable at roughly 15–21 °C. As the air around them warms towards 28–30 °C, especially when the air is humid or still, these cooling methods stop being enough. Body heat then builds up. The rabbit breathes faster and faster, loses water, and its blood thickens. If its body temperature keeps rising, the heat starts to damage the brain, heart, liver, kidneys and gut. This causes weakness, fits (convulsions), collapse and death. Even rabbits that survive can suffer gut slowdown (gut stasis, when the gut stops moving food along), and bucks may become temporarily infertile because heat damages sperm production.",
+      "spread": [
+        "Heat stress is not infectious and does not spread from rabbit to rabbit. It is triggered by hot conditions and poor management.",
+        "Hot weather is the main trigger, especially in the hot dry months before the long and short rains and in hot lowland areas.",
+        "Hutches under bare iron sheet (mabati) roofs with no insulation or ceiling get very hot by midday.",
+        "Poor airflow, such as closed boxes, solid walls, or hutches crowded against a wall, traps heat and moisture.",
+        "Overcrowding raises the temperature inside each cage because every rabbit gives off body heat.",
+        "Running out of water, or water that is warm, dirty or hard to reach, quickly makes heat stress worse.",
+        "Carrying rabbits to market or between farms in sacks, closed boxes or car boots in the sun is a common cause of sudden deaths.",
+        "Handling, chasing, mating or weighing rabbits during the hottest hours of the day adds extra heat and stress."
+      ],
+      "atRisk": "Any rabbit can suffer heat stress, but some are at much higher risk. These include does in late pregnancy and nursing does, very fat rabbits, and young kits in nest boxes full of fur and bedding. Heavy and thick-coated breeds such as Flemish Giant, New Zealand White, Californian, Chinchilla and long-haired Angora suffer more than small, lean local rabbits. Breeding bucks are at risk of heat-related infertility. Old or sick rabbits, especially those with breathing problems, cope poorly. In Kenya, risk is highest in hot lowland areas such as the Coast, the Lake Basin, lower Eastern (Machakos, Makueni, Kitui) and North Eastern, and during heat waves anywhere, including the highlands. Rabbits kept in metal cages, under iron sheets, in small backyard hutches with no shade, or transported during the day are the most vulnerable.",
+      "signs": {
+        "early": [
+          "Faster breathing than normal, with the nose and sides moving quickly.",
+          "Lying stretched out flat, often on the side or belly, trying to press against a cool floor.",
+          "Ears feel hot to the touch and look red or pink because blood is rushing to them to lose heat.",
+          "Less feeding, especially during the day, and drinking much more water than usual.",
+          "Dull, quiet behaviour and not wanting to move or be handled.",
+          "Damp fur around the mouth and chin from drooling or licking."
+        ],
+        "advanced": [
+          "Breathing with the mouth open. Rabbits normally breathe only through the nose, so this is a very serious warning sign.",
+          "Wet chin, nose and front paws from heavy drooling.",
+          "Weakness, wobbling, falling over or being unable to stand.",
+          "Bluish tinge to the lips or inside of the ears in some cases.",
+          "Shaking, fits (convulsions) or twitching of the head and legs.",
+          "Not responding when touched, collapse and, without quick help, death.",
+          "In nursing does and kits, sudden deaths in the nest box on hot afternoons."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Snuffles (Pasteurella respiratory infection)",
+          "howToTell": "Snuffles causes sneezing, thick white or yellow nose discharge and matted front paws. It lasts days or weeks and does not depend on the weather. Heat stress comes on during hot hours and usually improves quickly when the rabbit is cooled."
+        },
+        {
+          "name": "Dental disease (overgrown teeth, 'slobbers')",
+          "howToTell": "Overgrown teeth also cause a wet chin, but the rabbit drops food, loses weight over weeks and may have lumps on the jaw. Breathing and ear temperature are normal. Heat stress gives a wet chin together with fast breathing and hot red ears on a hot day."
+        },
+        {
+          "name": "Gut stasis or bloat (enteritis)",
+          "howToTell": "A rabbit with gut problems sits hunched, grinds its teeth, produces few or no droppings, or has diarrhoea, and the belly may be swollen or tight. Heat-stressed rabbits lie stretched out and breathe fast. Gut stasis can also follow heat stress, so both may occur together."
+        },
+        {
+          "name": "Poisoning or nervous disease (such as Encephalitozoon, which causes head tilt)",
+          "howToTell": "Poisoning or nervous disease can cause fits, but they occur regardless of temperature. There may be a history of new plants, sprayed feed or rat poison, or a slow-developing head tilt. Heat-related fits happen during hot weather together with very fast breathing and hot ears."
+        }
+      ],
+      "diagnosis": "A vet diagnoses heat stress mainly from the history and examination. They will want to know the weather, the housing, water supply, recent transport or handling, and how quickly signs started. They check the body temperature with a thermometer. A healthy rabbit is roughly 38.5–40 °C, and readings clearly above this, along with fast breathing and hot ears, point to overheating. The vet listens to the heart and lungs, checks the gums for dehydration and shock, and looks for other diseases that could make the rabbit less able to cope. There is no single lab test. Blood tests may be used in a clinic to check for organ damage. If rabbits die, a post-mortem can show congested (blood-filled) lungs and organs and help rule out infections such as pasteurellosis or viral haemorrhagic disease. To help the vet, write down when signs began, the temperature in the hutch if you have a thermometer, how many rabbits are affected and their ages, and whether they had water. Keep any dead rabbits cool and covered for examination.",
+      "firstSteps": [
+        "Move the rabbit immediately, gently and calmly, into the coolest shaded place you have, such as a cool room, under a tree or on a shaded cement floor with moving air.",
+        "Wet the ears with cool water using a damp cloth or sponge, because the ears are the rabbit's radiator. You can also dampen the fur lightly. Do not plunge the rabbit into cold or ice water, as this can send it into shock.",
+        "Offer clean, cool drinking water in a shallow dish. If the rabbit cannot drink by itself, do not force water into its mouth, because it may choke or breathe it into the lungs.",
+        "Improve airflow with a fan, or by fanning gently by hand. A plastic bottle of frozen water wrapped in a cloth placed beside the rabbit can help, as long as the rabbit can move away from it.",
+        "Stop cooling once the rabbit is breathing more slowly, the ears feel only slightly warm and it starts to respond, so you do not chill it too much.",
+        "Call your vet or animal health officer straight away, especially if the rabbit is breathing with its mouth open, cannot stand or is having fits. Rabbits can seem to recover and then get worse hours later.",
+        "Check all the other rabbits at once. Give extra water, shade the hutches and reduce crowding, because if one rabbit is overheating others are likely close behind.",
+        "Write down what happened: time, weather, number affected and any deaths. Do not give any medicines or home remedies unless your vet tells you to."
+      ],
+      "vetTreatment": "Treatment aims to cool the rabbit safely, replace lost fluids, support the organs and prevent complications. The vet will continue controlled cooling while checking the temperature so the rabbit is not overcooled. They often give fluids by injection under the skin or into a vein to treat dehydration and shock. Some clinics may give oxygen to rabbits struggling to breathe. Depending on the case, the vet may use anti-inflammatory pain relief, which they will choose carefully because of the risk to dehydrated kidneys. They may also use medicines that help the gut start moving again and supportive feeding, because gut stasis is a common problem after heat stroke. Antibiotics do not treat heat stress. A vet will only use them if there is a real secondary infection, and using them without need adds to antimicrobial resistance (germs becoming resistant to medicines). All treatment must be prescribed by a vet. If any drugs are used in meat rabbits, follow the withdrawal period (the waiting time before the meat is safe to eat) the vet gives you. Mildly affected rabbits often improve within hours. Severely affected rabbits may need close care for a day or more and can still die from organ damage despite good treatment.",
+      "prevention": [
+        "Give every hutch good shade all day. Plant trees or creepers, put up shade net, or build under a grass-thatch or makuti roof. Avoid placing hutches where the afternoon sun hits them directly.",
+        "Insulate iron sheet roofs with a ceiling, a layer of grass thatch, or sacks on top, and leave a gap for hot air to escape. In very hot spells, wetting sacks on the roof or walls cools the house as the water evaporates.",
+        "Make sure there is plenty of airflow. Use wire-mesh sides, raise hutches off the ground, keep openings facing the breeze, and avoid closed wooden boxes or hutches pushed against hot walls.",
+        "Provide clean, cool water at all times and check it several times a day in hot weather. Rabbits drink much more in heat. Use more than one drinker or heavy clay pots that stay cool and do not tip over, and keep nipple drinkers in the shade so the water does not heat up.",
+        "Avoid overcrowding. Give each rabbit enough space, reduce numbers per cage in the hot season and separate growers early.",
+        "Feed concentrates in the cool early morning and evening when rabbits eat best, and offer fresh, clean, juicy greens that add water. Do not feed wilted or mouldy forage.",
+        "Do all handling, mating, weighing and transport in the early morning or late evening. Transport rabbits in ventilated, shaded crates, never in sacks or closed car boots, and never leave them parked in the sun.",
+        "Plan breeding so that late pregnancy and kindling (giving birth) avoid the hottest months where possible. Keep breeding bucks in the coolest part of the rabbitry, and keep nest boxes clean with only as much bedding as needed.",
+        "Keep rabbits at a healthy body condition, because fat rabbits overheat faster. Groom or clip long-haired breeds like Angora before the hot season.",
+        "Hang a simple thermometer in the rabbit house. When it rises towards 28–30 °C, start extra cooling such as wet sacks, more water and frozen water bottles in the cages."
+      ],
+      "impact": "Heat stress can wipe out profit on a rabbit farm quickly. A single hot afternoon can kill several rabbits, often the most valuable pregnant does, nursing does and heavy growers. Kits in nest boxes are especially likely to die. Rabbits that survive eat less, so growers take longer to reach market weight and feed is wasted. Does conceive less often, may lose pregnancies, produce less milk and give smaller litters. Bucks can become temporarily sterile, and fertility may take several weeks to return after the weather cools, which leaves gaps in the breeding calendar. Deaths during transport to market or to buyers are a common and costly loss in Kenya. For smallholders who rely on regular sales of meat rabbits or breeding stock, these losses can mean missed income for months.",
+      "humanHealth": "",
+      "outlook": "The outlook depends on how hot the rabbit got, for how long, and how quickly it was cooled. Rabbits caught early, with fast breathing and red ears but still alert, usually recover well once moved to shade and given water. Rabbits breathing with an open mouth, unable to stand or having fits are in serious danger, and many die even with treatment. Survivors may have kidney, liver or gut problems in the following days, so watch their eating and droppings closely. Bucks may take several weeks to regain full fertility. Pregnant does that survive may still lose their litter. Good housing and water management prevent most cases, which makes heat stress one of the most preventable causes of rabbit death.",
+      "faqs": [
+        {
+          "q": "Can I dip my rabbit in a bucket of cold water to cool it quickly?",
+          "a": "No. Putting a rabbit into cold or ice water can cause shock and can make it too cold, and wet fur dries slowly. Instead, wet the ears and lightly dampen the fur with cool water, put the rabbit in shade with moving air, and offer drinking water. Stop cooling once it is breathing more slowly and responding."
+        },
+        {
+          "q": "Why are my does not getting pregnant during the hot months?",
+          "a": "Heat affects both sexes. Bucks exposed to high temperatures can become temporarily infertile, and this may last several weeks after the heat passes. Does under heat stress may not conceive, may lose pregnancies or may produce small litters. Keep bucks in the coolest part of the rabbitry, mate in the early morning or evening, and plan breeding around the hottest months where possible. If problems continue in cool weather, ask your vet to check for other causes."
+        },
+        {
+          "q": "Is it okay to keep rabbits under an iron sheet roof?",
+          "a": "It can work, but bare iron sheets get very hot by midday and can push the temperature inside past what rabbits can tolerate. Add insulation such as a ceiling, a layer of grass thatch or sacks, leave space above the cages for hot air to escape, and keep the sides open with wire mesh. In very hot weather, wet sacks on the roof help cool the house."
+        },
+        {
+          "q": "Should I give antibiotics to a rabbit that collapsed in the heat?",
+          "a": "No, not on your own. Heat stress is caused by high temperature, not germs, so antibiotics do not treat it. Using them without need wastes money and helps create resistant germs. The rabbit needs cooling, water and vet care. A vet may decide on other medicines such as fluids or pain relief, and will only use antibiotics if there is a real infection."
+        },
+        {
+          "q": "How can I keep rabbits cool if I have no electricity for fans?",
+          "a": "Use shade from trees, shade net or thatch, and keep hutches raised with open mesh sides facing the breeze. Hang wet sacks on the roof or sides so evaporation cools the air. Freeze plastic bottles of water overnight if you or a neighbour has a fridge, or use clay pots of water, and place them in the cages for rabbits to lie against. Always give plenty of clean, cool water, and avoid handling rabbits in the afternoon."
+        },
+        {
+          "q": "My rabbits die when I take them to market. What am I doing wrong?",
+          "a": "Transport is one of the most common causes of heat deaths. Rabbits packed in sacks, closed boxes or car boots, or left in the sun at a market or stage, overheat very quickly. Travel in the early morning, use ventilated crates with space for each rabbit, keep them shaded and out of direct sun, avoid long waits, and do not overcrowd."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "A white New Zealand rabbit lying stretched out flat on its side on the wire floor of a backyard hutch on a hot sunny day, with bright red ears, a damp chin and fast-moving flanks, under a bare iron sheet roof.",
+    "seoDescription": "Heat stress in rabbits: spot fast breathing, red ears and wet chin early, give safe first aid, and keep your Kenyan rabbitry cool in the hot dry season."
+  },
+  "overgrown-teeth": {
+    "card": {
+      "headline": "Long front teeth and wet chin",
+      "look": "The front teeth stick out, curl or point sideways instead of meeting neatly. The rabbit drools, has a wet, matted chin and chest fur, picks at food then drops it, and slowly gets thinner.",
+      "action": "Open the lips gently, look at the front teeth, weigh the rabbit, and book a vet visit now. Get help the same day if it has stopped eating."
+    },
+    "detail": {
+      "aka": [
+        "Dental malocclusion",
+        "Dental disease",
+        "Slobbers (wet chin from drooling)",
+        "Buck teeth or tusks",
+        "Molar spurs (sharp points on cheek teeth)"
+      ],
+      "summary": "Malocclusion means the teeth do not meet and wear against each other properly. A rabbit's teeth grow all its life, so a tooth that is not worn down keeps getting longer. The long teeth cut the mouth, block eating and can push into the jaw and eye area. The rabbit can starve slowly, and a rabbit that stops eating can quickly develop deadly gut problems. Most cases come from too little hay or grass, or from inherited jaw shape, so most are preventable.",
+      "cause": "All of a rabbit's teeth are open-rooted. This means they keep growing for its whole life, the front teeth by a few millimetres every week. In a healthy rabbit, chewing on rough, fibrous food like grass and hay grinds the teeth down as fast as they grow. Malocclusion happens when this balance breaks. Some rabbits are born with a short upper jaw or a mis-shaped skull, so the front teeth never meet. This is common in dwarf and lop-eared breeds and is passed from parents to young. Other rabbits develop it later. The main cause is a soft diet of pellets, kitchen scraps or soft greens with too little hay. Pellets need only short, crushing bites, not the long side-to-side grinding that wears the cheek teeth. Damage can also start from injury, such as pulling on wire cage bars or a fall that breaks a tooth. Infection, or poor calcium and vitamin D supply affecting bone strength, may play a part, though experts still debate how much. Once the teeth are uneven, the problem builds on itself. The back cheek teeth (molars and premolars) grow sharp points called spurs. These cut the tongue and cheeks, so chewing hurts and the rabbit eats less hay, which makes wear even worse. The roots can also grow longer and push into the jawbone and toward the eye. There they can block the tear duct, which causes eye discharge, and they can lead to tooth-root abscesses, pockets of pus in the jaw.",
+      "spread": [
+        "It is not contagious. It cannot pass from one rabbit to another by contact, so cage-mates will not catch it.",
+        "Inherited jaw shape passes from parents to kits, so breeding from an affected buck or doe spreads the problem through your herd.",
+        "A diet low in long fibre is the biggest trigger. Examples are mainly pellets, bread, kitchen leftovers, or soft greens like cabbage and sukuma wiki without enough hay or dry grass.",
+        "Chewing or pulling on wire mesh and cage bars can bend, crack or misalign the front teeth, especially in bored or crowded rabbits.",
+        "Injury from falls, rough handling or fights can break a tooth, so its partner tooth is no longer worn and overgrows.",
+        "Dry seasons, when good grass is scarce and farmers rely more on pellets or scraps, can raise the number of cases a few months later.",
+        "Rabbits kept indoors in dark sheds with no sunlight and a poor mineral balance may have weaker bone around the teeth, though this link is still uncertain."
+      ],
+      "atRisk": "Any rabbit can be affected. Some face more risk than others. Dwarf breeds, lop-eared breeds and other rabbits with short, flat faces are most likely to have the inherited form, which often shows in young rabbits from a few weeks to months old. Commercial breeds kept for meat in Kenya, such as New Zealand White, Californian, Chinchilla and Flemish Giant, more often get the acquired form. This happens when they are fed mostly pellets or kitchen waste in cages with little hay. Older rabbits and breeding does kept for several years are at higher risk, because uneven wear builds up over time. Rabbits in wire-mesh hutches with nothing safe to chew are more likely to damage their front teeth. Farms that keep breeding from the same few animals without checking their teeth can see the problem become common in a line.",
+      "signs": {
+        "early": [
+          "Wet chin, neck or front legs, with damp or matted fur from drooling (often called 'slobbers').",
+          "Picking up food then dropping it, or chewing slowly or on one side only.",
+          "Choosing soft foods like pellets or soft leaves and leaving hay, grass stems and harder vegetables.",
+          "Front teeth that look too long, curve outward or sideways, or do not meet in a neat line when you lift the lips.",
+          "Small, fewer or misshapen droppings, because the rabbit is eating less fibre.",
+          "Less grooming, so the coat looks rough, and soiled fur around the tail.",
+          "Watery or slightly cloudy discharge from one or both eyes."
+        ],
+        "advanced": [
+          "Clear weight loss: the spine and hip bones feel sharp under your hand.",
+          "Front teeth that curl into the lips, gums or up toward the nose and cause sores.",
+          "A firm or soft lump along the jaw or under the eye, which may be a tooth-root abscess.",
+          "Thick white or yellow eye discharge and a wet, crusted face, with one eye sometimes looking pushed forward.",
+          "Grinding teeth loudly, hunching in a corner, and not wanting to move, all signs of pain.",
+          "Bad smell from the mouth, or blood-tinged saliva.",
+          "Complete refusal of food with few or no droppings. This is an emergency, because the gut can stop working within about a day."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Snuffles (Pasteurella and other respiratory infections)",
+          "howToTell": "Snuffles causes sneezing, a runny nose and matted fur on the inside of the front legs from wiping the nose. Eye discharge can occur in both. In snuffles the rabbit usually still chews normally and the teeth look fine. With dental disease the drooling and food dropping are the main signs. The two can also happen together."
+        },
+        {
+          "name": "Gut stasis (gastrointestinal stasis)",
+          "howToTell": "Gut stasis is when the gut slows or stops. The rabbit stops eating, makes few or no droppings and may have a tight, painful belly, but there is usually no drooling or wet chin. It is often caused by dental pain, so a rabbit with stasis should always have its teeth checked."
+        },
+        {
+          "name": "Coccidiosis",
+          "howToTell": "Coccidiosis is caused by a tiny gut or liver parasite. It mainly affects young weaners and causes weight loss, a pot belly and diarrhoea, often in several rabbits at once. Teeth and chin are normal. Dental disease usually affects single rabbits and causes drooling, not diarrhoea."
+        },
+        {
+          "name": "Heat stress",
+          "howToTell": "A heat-stressed rabbit may drool slightly. But it also breathes fast, has hot, red ears, lies stretched out and appears on hot afternoons in tin-roofed hutches. It improves quickly when cooled. Dental drooling continues day after day whatever the weather."
+        }
+      ],
+      "diagnosis": "A vet starts by looking at the front teeth and feeling the jaw, face and under the eyes for lumps, heat or pain. The back teeth sit deep in a narrow mouth. The vet checks them with an otoscope (a small lighted viewer) or a mouth speculum, and a full check often needs sedation. X-rays of the skull, where available, show tooth roots, bone damage and abscesses, and help decide whether repeated trimming or removal is better. If there is pus, the vet may take a sample to find the right antibiotic. Before the visit, write down what the rabbit eats each day, when the drooling or food dropping started, and any change in droppings. If you can, weigh it on a kitchen or hanging scale and note the weight. Tell the vet whether its parents or littermates had similar teeth. Bring the rabbit in a secure, well-ventilated box with some hay so the vet can watch it try to eat.",
+      "firstSteps": [
+        "Handle the rabbit calmly, wrapped in a towel. Gently lift the lips to look at the front teeth and check for sores, then feel along the jaw for lumps.",
+        "Weigh the rabbit and write down the weight, date, what it is eating and the number of droppings. This helps the vet see whether it is getting worse.",
+        "Offer plenty of fresh soft grass, soft leafy greens and hay, all chopped short, so it can keep eating while you wait. Never leave a rabbit without food.",
+        "Give clean water in a shallow bowl as well as any nipple bottle, because a sore mouth makes bottle drinking hard.",
+        "Keep the rabbit in a quiet, shaded, cool spot away from stress. Separate it only if cage-mates are stealing its food or bullying it.",
+        "Gently wipe and dry the wet chin and eye area with a clean damp cloth to prevent skin sores and flies.",
+        "Do not cut the teeth yourself with nail clippers, pliers or wire cutters. This often splits the tooth, exposes the painful centre and lets infection into the root.",
+        "If the rabbit has eaten nothing and made few or no droppings for about 12 hours or more, treat it as an emergency and get to a vet the same day."
+      ],
+      "vetTreatment": "Treatment depends on which teeth are affected and how badly. For overgrown front teeth, the vet usually shortens and reshapes them with a dental burr, a small high-speed grinding tool, which is safer than clippers. For spurs on the back teeth, the rabbit normally needs sedation or anaesthesia so the vet can file the sharp points smooth. Because the teeth keep growing, most rabbits need repeat trimming every few weeks to few months for life. If the front teeth will never meet properly, the vet may advise removing them under anaesthesia. Rabbits manage well without front teeth if food is cut into small pieces. Pain relief, commonly a non-steroidal anti-inflammatory drug such as meloxicam, helps the rabbit start eating again. A rabbit that has stopped eating may need syringe feeding with a soft fibre mash and medicines to restart the gut. Tooth-root abscesses are hard to treat. They may need surgery to clean or remove the bad tooth plus a longer antibiotic course. Antibiotics should only be used when there is infection, and only as prescribed, because misuse breeds resistant bacteria (antimicrobial resistance). Some antibiotics are dangerous to rabbits and can kill them by upsetting their gut, so never use leftover livestock drugs. If treated rabbits are meat animals, follow the vet's withdrawal period before slaughter. For commercial meat units where lifelong trimming is not practical, the vet may advise humane culling of badly affected animals. All medicines and doses must be prescribed by a vet.",
+      "prevention": [
+        "Feed hay or dry grass as the main food, available all day, making up most of what the rabbit eats. Rhodes grass, Boma Rhodes or good mixed grass hay all work.",
+        "Use pellets as a measured supplement only, not the main diet. Too many pellets fill the rabbit without wearing its teeth.",
+        "Add fresh grass, weeds such as sow thistle (mchunga) and safe leafy browse, plus some vegetables, but do not rely on soft kitchen scraps, bread or ugali.",
+        "Store hay for the dry season after the long and short rains, so rabbits do not switch to a soft diet when grazing is poor.",
+        "Give safe things to chew, such as untreated branches from fruit trees or other non-toxic trees and hard grass stems. These reduce boredom and stop rabbits chewing cage wire.",
+        "Check the teeth of every rabbit every few weeks and at weaning, sale and before breeding. Gently lift the lips and look for neat, even front teeth.",
+        "Do not breed from rabbits with crooked teeth or a short jaw, or from parents that produced affected kits. Cull or keep them only as non-breeders.",
+        "Give a balanced mineral supply through a good-quality ration, and let rabbits have some daylight or sunlight where safe. Avoid extra vitamin D or calcium without vet advice, because too much can harm rabbits.",
+        "Handle rabbits carefully and keep hutches safe from falls to prevent broken teeth and jaw injuries."
+      ],
+      "impact": "On a Kenyan rabbit farm, dental disease costs money quietly. Affected rabbits eat less, grow slowly and reach market weight late or not at all. Does with sore mouths lose condition, produce less milk and raise smaller, weaker litters. Repeated vet trimming adds cost that a meat rabbit may not pay back. Abscesses and long-term eye infections can make a rabbit unsellable. Where poor genetics is the cause, the problem can spread through a breeding line and lower the value of breeding stock sold to other farmers. Deaths often come from gut stasis or starvation after a rabbit stops eating. The good news is that the main prevention, plenty of hay or grass, is cheap and also improves gut health and growth across the whole herd.",
+      "humanHealth": "",
+      "outlook": "The outlook depends on the cause and on how early it is caught. Rabbits whose problem comes from diet often do well if the teeth are corrected early and they are moved onto a high-hay diet. Some then need little further trimming. Rabbits born with a mis-shaped jaw usually need lifelong regular trimming or tooth removal. Many still live comfortably if the owner keeps up with care. The outlook is poorer once roots have grown into the jaw or eye area, or when tooth-root abscesses form. These often return and can shorten life. A rabbit that stops eating needs fast help, because gut stasis can kill even when the teeth themselves could have been fixed.",
+      "faqs": [
+        {
+          "q": "Can I just cut my rabbit's long front teeth with nail clippers?",
+          "a": "It is not recommended. Clippers crush and split the tooth, which can leave sharp edges, expose the painful pulp inside and let infection reach the root. The tooth also grows back quickly, often even more crooked. A vet uses a dental burr to shorten and shape the tooth safely. If no burr is available, ask the vet what they advise for your area."
+        },
+        {
+          "q": "My rabbits eat plenty of pellets. Why are their teeth still overgrown?",
+          "a": "Pellets are soft and broken up quickly, so rabbits eat them fast with little grinding. Rabbit teeth are designed to wear down on tough grass and hay, chewed with long side-to-side movements for many hours a day. Make hay or dry grass the main food and reduce pellets to a measured amount."
+        },
+        {
+          "q": "Why does my rabbit have eye discharge if the problem is in its teeth?",
+          "a": "The roots of the upper cheek teeth and front teeth sit very close to the tear duct, the small tube that drains tears from the eye to the nose. When roots grow too long, they press on or block this duct. Tears then spill over the face and can become infected. Eye discharge together with drooling or food dropping strongly suggests dental disease."
+        },
+        {
+          "q": "Should I keep breeding from a doe with crooked teeth if she is a good mother?",
+          "a": "It is better not to. If the crooked teeth are inherited, she can pass the problem to her kits and they to theirs. You may end up with many affected rabbits. Keep her as a non-breeder or cull her, and choose breeding stock with clean, even teeth."
+        },
+        {
+          "q": "Is it better to cull an affected meat rabbit or treat it?",
+          "a": "This depends on the rabbit's value, how bad the problem is and what treatment costs in your area. A young meat rabbit with an inherited short jaw will need trimming for life, which is rarely worth it commercially. A valuable breeding animal with a diet-related problem may recover well. Discuss it with your vet. If you cull, do it humanely, and respect any medicine withdrawal period before eating the meat."
+        },
+        {
+          "q": "How often should I check my rabbits' teeth?",
+          "a": "A quick look every few weeks during routine handling is a good habit. Also check at weaning, before sale and before mating. Weighing rabbits regularly also helps, because slow weight loss is often the first clue that a rabbit is struggling to eat."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a white New Zealand rabbit in a wooden hutch with its lips gently parted to show long, curved, misaligned front teeth and a wet, matted chin, with hay in the background.",
+    "seoDescription": "Overgrown teeth in rabbits: spot drooling, wet chin, dropping food and weight loss early, what to do before the vet, and how good hay prevents it."
+  },
+  "ringworm": {
+    "card": {
+      "headline": "Round crusty bald patches on face",
+      "look": "Coin-shaped patches of hair loss with grey-white scales or yellowish crusts, usually around the eyes, nose, ears and front paws. The rabbit is often bright and eating, and may scratch only a little.",
+      "action": "Put on gloves, move the affected rabbit to a separate cage, and ask a vet to confirm it before it spreads to other rabbits or your family."
+    },
+    "detail": {
+      "aka": [
+        "Dermatophytosis",
+        "Tinea",
+        "Choa (Swahili, for ringworm in people and animals)",
+        "Fungal skin infection"
+      ],
+      "summary": "Ringworm is a skin infection caused by a fungus, not a worm. In rabbits it causes round, scaly, hairless patches, mostly on the head, ears and feet. It is rarely fatal, but it spreads easily between rabbits and to people, especially children. The fungus survives for a long time in hutches and equipment, so one case can become a long-running problem on a rabbitry if it is not handled properly.",
+      "cause": "In rabbits, ringworm is mostly caused by a fungus called Trichophyton mentagrophytes. Less often, Microsporum canis, the type often carried by cats and dogs, is involved. These fungi are called dermatophytes, which means 'skin plants'. They feed on keratin, the tough protein that makes up hair, the outer layer of skin and claws. The fungus produces tiny seeds called spores. When spores land on skin that is slightly damaged, damp or belongs to a rabbit with weak defences, they grow into the hair shafts and the top layer of skin. The infected hairs become weak and break off close to the skin, leaving a bald patch. The skin reacts by producing scales and crusts. The infection spreads outwards in a ring, which is why the patches are often round and may look healthier in the middle. Some rabbits carry spores in their fur without showing any signs at all. These 'silent carriers' are a common reason why ringworm keeps coming back on a farm. If the rabbit scratches or the skin cracks, bacteria can enter and cause a secondary infection with pus, redness and pain.",
+      "spread": [
+        "Direct contact between rabbits, for example when young rabbits share a cage, when does nurse kits, or during mating.",
+        "Spores left on hutches, cages, nest boxes, feeders, bedding, hay and wooden surfaces, where they can survive for many months, often longer than a year.",
+        "Shared equipment such as brushes, nail clippers, carrying baskets, gloves and sacks used to move rabbits to market.",
+        "People's hands and clothes, when a farmer handles an infected rabbit and then touches healthy ones without washing.",
+        "Newly bought rabbits, especially from markets or other farms, that may be silent carriers with no visible patches.",
+        "Cats, dogs and rodents around the rabbitry, which can carry ringworm fungi and bring them into the hutches.",
+        "Damp, overcrowded, poorly ventilated housing, which allows spores to build up and makes the skin easier to infect.",
+        "Stress from weaning, transport, poor feeding or another illness, which weakens the rabbit's natural defences and lets a carrier infection flare up."
+      ],
+      "atRisk": "Young rabbits, especially weanlings between about one and four months old, are most often affected because their immune systems are still developing and they are usually kept in groups. Does that are nursing, old rabbits and rabbits with other illnesses, poor nutrition or heavy mite burdens are also at higher risk. Any breed can get ringworm, including New Zealand White, California, Chinchilla and local crosses. Problems are more common in crowded rabbitries, in wooden hutches that are hard to disinfect, and in houses that are damp and poorly ventilated. In Kenya, cases often increase during the long and short rains when humidity is high and hutches stay damp. Farms that buy breeding stock frequently, use shared transport baskets, or let cats and dogs into the rabbit house face a higher risk of introducing the fungus.",
+      "signs": {
+        "early": [
+          "One or a few small, round patches of thinning or missing fur, often around the eyes, the base or tips of the ears, the nose or the muzzle.",
+          "Fine grey or white flakes like dandruff on and around the patch, sometimes with broken, stubby hairs at the edges.",
+          "Slightly reddened or pinkish skin where the fur has fallen out.",
+          "Mild scratching or rubbing of the face with the front paws, though many rabbits are hardly itchy at all.",
+          "Fur that comes away easily when you gently touch the edge of the patch.",
+          "The rabbit usually stays bright, active and eating normally, which makes the problem easy to overlook."
+        ],
+        "advanced": [
+          "Patches that grow larger and join together, covering much of the face, ears, neck or body.",
+          "Thick yellowish or grey crusts, sometimes raised and lumpy, over the bald areas.",
+          "Infection of the front paws and around the nails, with scaly, crusty skin and occasionally misshapen claws.",
+          "Moist, sore or pus-filled areas where bacteria have entered scratched skin, often with a bad smell.",
+          "More intense scratching and restlessness if the skin becomes infected or very inflamed.",
+          "Several rabbits in the same cage or row showing similar patches, and sometimes red, itchy ring-shaped rashes on the farmer or family members.",
+          "Poor growth and weight loss in young rabbits with widespread disease, usually when another illness or poor feeding is also present."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Ear mites (ear canker, Psoroptes cuniculi)",
+          "howToTell": "Ear mites cause thick, brown-grey, flaky crusts packed inside the ear canal and ear flap, with strong head shaking, ear scratching and sometimes drooping ears. Ringworm patches are usually on the outside of the ear, the face and paws, and the rabbit shakes its head much less."
+        },
+        {
+          "name": "Fur mites (Cheyletiella, 'walking dandruff')",
+          "howToTell": "Fur mites cause lots of dandruff and thin fur mainly along the back, between the shoulders and at the base of the tail. If you look closely in good light, some of the 'dandruff' may move. Ringworm patches are more clearly round and are usually on the head, ears and feet."
+        },
+        {
+          "name": "Mange (Sarcoptes or Notoedres mites)",
+          "howToTell": "Mange is usually very itchy. The rabbit scratches constantly and develops thick crusts on the nose, lips, eyelids, ears and toes, often spreading quickly with thickened, cracked skin. Ringworm is usually only mildly itchy. Because both can affect the face and paws, a vet's skin scraping is the safest way to tell them apart."
+        },
+        {
+          "name": "Fur chewing (barbering) or rabbit syphilis (treponematosis)",
+          "howToTell": "With barbering, rabbits chew each other's fur, leaving short, cut hair over normal-looking skin with no scales or crusts, often on the back or flanks. Rabbit syphilis causes crusty sores mainly on the nose, lips, eyelids and genital area, and is passed on during mating. Ringworm causes scaly, round, bald patches with broken hairs, and the genitals are usually not the main site."
+        }
+      ],
+      "diagnosis": "A vet will first examine the rabbit closely, looking at the shape and position of the patches and checking the ears, back and feet to rule out mites. They may use a special ultraviolet torch called a Wood's lamp. Some Microsporum infections glow green under this light, but the more common Trichophyton type usually does not glow, so a negative result does not rule ringworm out. The vet may pluck a few hairs and scrape a little scale from the edge of the patch to look at under a microscope for fungal spores. The most reliable test is a fungal culture, where hairs and scales are placed on a special growth medium in a laboratory. This can take one to three weeks to give a result. Some laboratories can also run faster DNA-based tests. A skin scraping for mites is often done at the same time because mites and ringworm can occur together. Before the vet arrives, write down when you first saw the patches, how many rabbits are affected, their ages, any new rabbits bought recently, whether cats or dogs visit the rabbit house, and whether anyone in the family has an itchy skin rash. Do not wash, clip or apply anything to the patches before the visit, because this can make the tests less accurate.",
+      "firstSteps": [
+        "Wear gloves, or at least wash your hands well with soap and water, every time you handle an affected rabbit, and handle healthy rabbits first and sick ones last.",
+        "Move the affected rabbit, and any rabbits sharing its cage, to a separate cage away from the main rabbitry, ideally one that is easy to clean such as a wire cage.",
+        "Check every rabbit on the farm carefully in good light, looking at the face, ears, paws and back, and note which ones have patches.",
+        "Remove and burn or bury soiled bedding, loose fur and hay from the affected cage, and keep the cage as dry and well ventilated as possible.",
+        "Stop selling, buying or lending rabbits, especially breeding stock, until a vet has checked the herd, so you do not spread the fungus to other farms.",
+        "Keep a separate brush, gloves and feeding container for the isolated rabbits, and do not share clippers or transport baskets.",
+        "Keep children away from the affected rabbits, and if anyone in the family develops a red, itchy, ring-shaped rash, take them to a health facility.",
+        "Avoid home remedies such as used engine oil, paraffin, strong disinfectants or crushed tablets on the skin, as these can burn the skin, poison the rabbit and delay proper treatment, then call your vet or County veterinary office for advice."
+      ],
+      "vetTreatment": "Treatment depends on how many rabbits are affected and how severe the patches are, and it must be prescribed by a vet. For a few small patches, the vet may recommend topical treatment, meaning medicine applied to the skin, such as antifungal creams, shampoos or rinses containing drugs like miconazole or enilconazole. Fur around the patches may be gently clipped to help the medicine reach the skin, with the clippings safely destroyed. For widespread disease or a whole group of rabbits, the vet may prescribe an antifungal medicine given by mouth, such as griseofulvin or itraconazole. Griseofulvin can harm unborn kits, so it must never be used in pregnant does or breeding bucks unless the vet decides otherwise. Treatment usually lasts several weeks and should continue until the vet confirms the rabbit is clear, often with a repeat culture, because patches can look healed while spores are still present. Antibiotics do not kill ringworm fungus. They are only useful if a bacterial infection has developed in scratched or broken skin, and should be used only when a vet prescribes them, at the full course given, to reduce the risk of antimicrobial resistance. Many antifungal medicines are not approved for meat animals, so if you keep rabbits for meat, ask your vet about the withdrawal period, which is the time you must wait after treatment before slaughtering for food, and do not sell or eat treated rabbits before it has passed. The vet will also advise on cleaning the environment, because treating the rabbit without cleaning the hutch often leads to reinfection. Expect new hair to start growing back within a few weeks of effective treatment, although full recovery of a heavily affected herd can take one to three months.",
+      "prevention": [
+        "Quarantine every new rabbit for at least three to four weeks in a separate cage, checking the face, ears and paws regularly, before mixing it with your herd.",
+        "Buy breeding stock from known, reputable breeders and inspect rabbits closely in good light before paying, rejecting any with scaly or bald patches.",
+        "Avoid overcrowding, especially of weaners, and give each rabbit enough space so that skin-to-skin contact and stress are reduced.",
+        "Keep the rabbit house dry and well ventilated, with a sound roof, raised hutches and good drainage, paying extra attention during the long and short rains.",
+        "Clean cages regularly, removing droppings, fur and old bedding, and disinfect them between batches with a product your vet or agrovet confirms is effective against fungal spores, such as a diluted household bleach solution on surfaces that can tolerate it.",
+        "Use wire or smooth, easy-to-clean materials where possible, since old, cracked wooden hutches hold spores and are very hard to disinfect.",
+        "Do not share brushes, clippers, gloves, sacks or carrying baskets between rabbits or farms without cleaning them first.",
+        "Feed a balanced diet of good-quality pellets or a well-planned mix of fresh forage, hay and clean water, and control mites and other illnesses, so rabbits have strong natural defences.",
+        "Keep cats, dogs and rodents out of the rabbit house as much as possible, since they can carry ringworm fungi."
+      ],
+      "impact": "Ringworm rarely kills rabbits, but it costs Kenyan rabbit farmers money in several ways. Rabbits with visible patches are hard to sell, especially as breeding stock, and buyers at markets or other farms may refuse them or pay much less. A farm that becomes known for skin problems can lose its reputation as a source of breeding animals. Young rabbits with heavy infections may grow more slowly, delaying the time they reach sale weight. Pelts from affected rabbits are damaged and of little value. Treatment takes time and money, because medicines, vet visits, laboratory tests and thorough cleaning of hutches all add up, and treated meat rabbits may need to be held back during the withdrawal period. Because the spores survive for a long time, a poorly controlled outbreak can keep returning batch after batch. There is also the cost and discomfort of family members or workers catching ringworm.",
+      "humanHealth": "Ringworm is a zoonosis, which means it can pass from animals to people. Children, the elderly and people with weak immune systems are most likely to be infected. In people it usually shows as a red, itchy, slightly raised ring-shaped rash, often on the hands, arms, neck or face, and sometimes as scaly bald patches on a child's scalp. To protect yourself, wear gloves when handling affected rabbits or cleaning their cages, wash your hands well with soap and water afterwards, and change and wash clothes after working in the rabbitry. Do not let children cuddle or play with rabbits that have patches. Keep affected rabbits out of the house. If anyone develops a suspicious rash, visit a health facility and mention that your rabbits have ringworm, as human ringworm is treated with medicines prescribed by a health worker. If meat rabbits are treated, observe the withdrawal period your vet gives so that drug residues do not reach people who eat the meat.",
+      "outlook": "The outlook is good for most rabbits. Ringworm is uncomfortable but rarely life-threatening, and some mild cases in healthy adult rabbits clear up on their own over weeks to a few months. With vet-guided treatment, most rabbits regrow their fur within a few weeks to a couple of months. Recovery is slower and less certain in very young rabbits, in rabbits with other illnesses or poor nutrition, and when bacterial infection has set in. The biggest reason for failure is reinfection from a contaminated hutch or from silent carriers in the herd. Farms that combine treatment with thorough cleaning, less crowding, dry housing and quarantine of new stock usually bring the problem under control.",
+      "faqs": [
+        {
+          "q": "Is ringworm really caused by a worm?",
+          "a": "No. Despite the name, ringworm is caused by a fungus, a tiny mould-like organism that lives on skin and hair. The name comes from the round, ring-like shape of the patches. Dewormers will not help, so do not waste money on them for this problem."
+        },
+        {
+          "q": "Can I catch ringworm from my rabbits?",
+          "a": "Yes. Ringworm spreads easily from rabbits to people, especially children. It usually causes a red, itchy ring-shaped rash on the skin. Wear gloves when handling affected rabbits, wash your hands with soap afterwards, and keep children away from them. If someone in the family develops a rash, take them to a health facility for treatment."
+        },
+        {
+          "q": "Will the patches go away without treatment?",
+          "a": "Some mild cases in strong, healthy adult rabbits do heal on their own over several weeks or months. However, during that time the rabbit keeps shedding spores that infect other rabbits, the hutch and people. Young rabbits and heavily affected ones may get worse. It is better to have a vet confirm the problem and advise on treatment and cleaning so the whole herd is protected."
+        },
+        {
+          "q": "Can I eat or sell a rabbit that has ringworm?",
+          "a": "Ringworm affects the skin, not the meat, but affected rabbits should not be sold live because they will spread the infection to other farms. If your rabbit has been treated with antifungal medicine, you must wait until the withdrawal period given by your vet has passed before slaughtering it for food. Handle the carcass with gloves and dispose of the skin and fur safely, as they carry spores."
+        },
+        {
+          "q": "How do I clean a hutch after ringworm?",
+          "a": "First remove all bedding, droppings, fur and leftover feed and burn or bury them. Scrub the hutch with soap and water to remove dirt, because disinfectants do not work well on dirty surfaces. Then apply a disinfectant that works against fungal spores, such as a diluted bleach solution or a product your vet or agrovet recommends, and leave it to dry fully in the sun if possible. Repeat cleaning regularly during treatment. Old, cracked wooden hutches are very hard to clean and may need repair or replacement."
+        },
+        {
+          "q": "Why does ringworm keep coming back on my farm?",
+          "a": "The usual reasons are spores left in hutches and on equipment, rabbits that carry the fungus without showing signs, and conditions that weaken the rabbits, such as damp housing, overcrowding and poor feeding. New rabbits bought without quarantine, and cats or dogs visiting the rabbit house, can also bring it back. Treating all in-contact rabbits as your vet advises, cleaning thoroughly and improving housing usually breaks the cycle."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up photo of a white New Zealand rabbit's head in a simple wooden hutch, showing a round, grey, scaly, hairless patch around one eye and another at the base of the ear, in soft natural daylight.",
+    "seoDescription": "Ringworm in rabbits: spot round crusty hairless patches on head, ears and paws, protect your family, and learn treatment and prevention for Kenyan farms."
+  }
+}

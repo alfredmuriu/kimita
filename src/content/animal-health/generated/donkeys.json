@@ -1,0 +1,997 @@
+{
+  "healthy": {
+    "card": {
+      "headline": "Alert ears, bright eyes, steady eating",
+      "look": "A healthy donkey stands alert with ears moving towards sounds, eyes bright and clear, and spends much of the day slowly picking at fibrous feed. It passes firm, round droppings and walks evenly on upright, well-shaped hooves.",
+      "action": "Learn your donkey's normal temperature, appetite, droppings and behaviour now, so you notice the small changes early, because donkeys hide pain."
+    },
+    "detail": {
+      "aka": [
+        "Punda (Swahili)",
+        "Healthy donkey baseline",
+        "Normal donkey health check"
+      ],
+      "summary": "This page describes what a normal, healthy donkey looks, sounds and behaves like, so you can spot trouble early. Donkeys are stoic, meaning they hide pain and illness far better than horses or cattle. By the time a donkey looks obviously sick, the problem is often serious. Knowing your own donkey's normal habits is the most useful tool you have.",
+      "cause": "Good health in a donkey comes from a few simple things working together. Donkeys evolved in dry, harsh lands eating tough, low-energy plants, so their gut works best on plenty of fibre, such as straw, dry grass and browse, eaten slowly through the day. Too much rich feed, lush wet-season grass, maize bran or sugary food makes them fat, and fat donkeys are at risk of laminitis (painful inflammation inside the hoof) and hyperlipaemia (a dangerous build-up of fat in the blood that can follow even a short period of not eating). Clean water at all times keeps the gut moving and prevents impaction colic, a blockage of the bowel. A donkey's coat is not waterproof like a horse's, so shelter from rain and cold wind, especially in the long rains, keeps it warm and stops skin and foot problems. Healthy feet need regular trimming and dry standing ground. Healthy teeth let the donkey chew fibre properly. Control of worms, ticks and flies, protection against tetanus, fair workloads, a well-fitted harness and a companion donkey all keep the body and mind strong. When any of these slips, the donkey usually copes quietly for a while, which is why small changes in its behaviour matter.",
+      "spread": [
+        "Most donkey health problems are triggered by management rather than spread, so watch for changes in feed, water, work and weather.",
+        "A sudden change of diet, such as moving onto lush grass after the rains or adding concentrates, can upset the gut and trigger colic or laminitis.",
+        "Not eating for even a day or two, from stress, pain, bad teeth, transport or losing a companion, can trigger hyperlipaemia, especially in fat donkeys, pregnant jennies and older animals.",
+        "Standing in mud and wet bedding during the long and short rains softens hooves and allows thrush and other foot infections.",
+        "Contact with new or untreated donkeys at markets, water points and shared grazing can bring in worms, lice, mange mites, ringworm and infectious diseases.",
+        "Heavy loads, long hours in the heat and poor harness fit cause dehydration, exhaustion and wounds that can become infected, including with tetanus.",
+        "In tsetse areas, fly bites can pass on trypanosomosis, and ticks and biting flies can carry other blood infections."
+      ],
+      "atRisk": "Every donkey benefits from regular checks, but some need closer watching. Working donkeys pulling water carts, carrying goods or ploughing face heat stress, dehydration, harness sores and overwork, especially in the hot dry months. Fat donkeys, older donkeys, pregnant and nursing jennies (female donkeys) and miniature breeds have the highest risk of hyperlipaemia when they stop eating. Old donkeys often have worn or loose teeth and lose condition. Foals need colostrum (first milk) in their first hours and careful worm control. Donkeys kept alone, recently moved or recently bereaved of a companion are stressed and may eat less. In pastoral and free-range systems, donkeys may go without close daily checks for days, so problems can be missed. During the long rains, wet ground and cold nights raise the risk of foot and chest problems, while green flushes of grass raise the risk of laminitis.",
+      "signs": {
+        "early": [
+          "Temperature between 36.5 and 37.8 °C taken in the rectum, slightly higher after work or on a very hot afternoon.",
+          "Heart rate (pulse) of roughly 36 to 68 beats per minute and breathing of roughly 12 to 28 breaths per minute at rest, with quiet, even breaths.",
+          "Bright, clear eyes with no discharge, and ears that move and turn towards sounds, people and other animals.",
+          "Steady interest in food, picking at forage for many hours of the day, and drinking clean water, though donkeys often drink less than horses and may prefer it not too cold.",
+          "Plenty of firm, round, fairly dry dung balls passed through the day, and pale yellow urine passed without straining.",
+          "Gurgling gut sounds on both sides of the belly when you put your ear against the flank.",
+          "Pink, moist gums, and a clean nose with no thick discharge or bad smell.",
+          "Even, sound walking on all four legs, with upright, U-shaped hooves that are trimmed, free of cracks and not overgrown.",
+          "A body condition score of about 3 on a 1 to 5 scale: you can feel the ribs and backbone with light pressure but not see them sharply, and the neck and rump are not bulging with hard fat.",
+          "Normal social behaviour: grooming its companion, braying, rolling in dust, dozing standing up and lying down for short rests."
+        ],
+        "advanced": [
+          "Eating less, eating slowly, sorting feed or ignoring treats it usually loves. In a donkey this is an emergency, not something to watch for days.",
+          "Standing quietly at the back of the shelter, head low, ears drooping or held back, not interested in people or its companion. Dullness is often the only sign of serious pain.",
+          "Fewer or smaller dung balls, very dry dung, diarrhoea, or no dung at all for several hours.",
+          "Temperature above 37.8 °C or below 36.5 °C at rest, or a pulse above about 68 beats per minute at rest.",
+          "Pawing, looking at the belly, repeated lying down and getting up, or lying flat for long periods, which can mean colic.",
+          "Shifting weight, leaning back onto the heels, reluctance to walk, or heat in the hooves, which can mean laminitis.",
+          "Dropping balls of half-chewed food from the mouth (called quidding), drooling, a bad smell from the mouth or swelling of the face, which point to tooth problems.",
+          "Coughing, nasal discharge, fast breathing, swellings under the jaw, skin sores, hair loss, or harness wounds that are not healing."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Dust rolling versus colic rolling",
+          "howToTell": "Healthy donkeys roll in dust to scratch and protect their skin, then get up, shake and go back to eating. A donkey with colic rolls repeatedly, lies down and gets up, looks at its belly, stops eating and passes less dung. If in doubt, take the temperature and pulse and call the vet."
+        },
+        {
+          "name": "Resting a hind leg versus lameness",
+          "howToTell": "Dozing donkeys often rest one hind leg with the hoof tipped, and swap legs from time to time. A lame donkey limps when walking, shifts weight constantly, rests a front leg, or refuses to put a foot down. Walk the donkey on hard, flat ground and watch the head and hips."
+        },
+        {
+          "name": "Calm, quiet nature versus dullness",
+          "howToTell": "Donkeys are naturally calmer and slower than horses, but a healthy donkey still watches you, moves its ears and shows interest in food. A sick donkey stands apart, head low, ears floppy, and does not respond as usual. Compare with how your donkey normally behaves."
+        },
+        {
+          "name": "Fat neck crest or big belly versus good condition or pregnancy",
+          "howToTell": "Many farmers think a round donkey is a healthy one, but hard fat on the neck, rump and shoulders means the donkey is overweight and at risk of laminitis and hyperlipaemia. A big belly can be fat, worms, gut fill or pregnancy. Feel the ribs and backbone, and ask the vet if you suspect a jenny is in foal."
+        }
+      ],
+      "diagnosis": "A home health check takes about ten minutes and is best done weekly when the donkey is calm and rested, plus any time it seems off. Write the results in a notebook so you know your donkey's own normal. First, stand back and watch: is it eating, alert, standing evenly, breathing quietly? Check the droppings and bedding. To take the temperature, use a digital thermometer lubricated with a little petroleum jelly. Tie the donkey or have a helper hold it, stand beside the hindquarters, not directly behind, lift the tail and gently insert the thermometer into the rectum, tilted slightly so the tip touches the wall. Hold it until it beeps, read it, then clean and disinfect it. For the pulse, place two fingers under the jaw bone where an artery crosses, or put your hand on the left chest just behind the elbow, count the beats for 30 seconds and double it. Count breathing by watching the flank rise and fall for one minute. Put your ear on each side of the belly to listen for gut gurgles. Lift the lip: gums should be pink and moist, and if you press with a thumb the colour should return within about two seconds. Run your hands over the whole body to feel for heat, swellings, sores, ticks or pain, especially under the harness. Pick up each foot to check for stones, cracks, bad smells and overgrowth. Score body condition by feeling the neck, ribs, back and rump. A weigh tape made for donkeys, or a height-and-girth chart, helps track weight over time. If anything is outside normal, give the vet your notes, what the donkey has eaten, when it last passed dung and any recent changes.",
+      "firstSteps": [
+        "If your donkey is off its food or dull, treat it as urgent and call the vet or County Veterinary Officer the same day rather than waiting to see.",
+        "Take and write down the temperature, pulse, breathing and when the donkey last ate, drank and passed dung, so the vet has clear information.",
+        "Stop all work, remove the harness or load, and move the donkey to a quiet, shaded, dry place with its companion nearby.",
+        "Offer clean fresh water and its usual fibrous feed, such as hay or straw, but do not force-feed or give large amounts of concentrates.",
+        "Keep the donkey out of rain and cold wind, and if it is cold or wet, dry it gently and cover it with a dry sack or blanket.",
+        "Separate a donkey with coughing, nasal discharge, skin disease or diarrhoea from others, and wash your hands and tools after handling it.",
+        "Do not give any medicines, including pain killers or dewormers, without a vet's advice, as some drugs can hide signs or be unsafe for donkeys.",
+        "Handle the donkey calmly and safely, standing to the side and avoiding the back legs, especially if it is in pain."
+      ],
+      "vetTreatment": "Routine vet care keeps a healthy donkey healthy and is much cheaper than treating illness. A vet or trained animal health worker can carry out a yearly health check covering teeth, heart, lungs, feet, skin, weight and body condition. Tetanus vaccination is strongly recommended for all donkeys, as wounds from harness, thorns and hooves are common; the vet will advise on the starting course and boosters. In some areas the vet may advise rabies vaccination or other vaccines depending on local disease risks. Teeth should be checked at least once a year, with sharp edges filed (called rasping or floating) so the donkey can chew fibre. Worm control works best when guided by the vet, ideally using dung tests called faecal egg counts to decide which donkeys need treatment and with which drug class, rather than deworming everyone blindly, as overuse leads to worms that resist the medicine. Tick, lice and mange control products should also be chosen with the vet, as not all livestock products are safe or licensed for donkeys. Hoof trimming by a trained person every six to ten weeks or as needed keeps feet healthy. In tsetse areas the vet may discuss trypanosomosis prevention. Any medicine must be prescribed by a vet, and donkeys may need different drugs or doses from horses because their bodies process some medicines differently. If donkey milk or meat is used, ask about withdrawal periods, the time after treatment before milk or meat is safe.",
+      "prevention": [
+        "Feed a high-fibre diet based on straw, dry grass or hay and browse, with limited lush grass, and avoid sugary feeds, bread and large amounts of maize bran or dairy meal.",
+        "Provide clean water at all times, and check water points daily, especially on hot days and after work, since dehydration can lead to impaction colic.",
+        "Give dry, draught-free shelter with a solid roof, because a donkey's coat soaks through in rain; this is vital in the long and short rains and on cold highland nights.",
+        "Keep standing areas and bedding dry and clean, and pick out feet regularly to prevent thrush and other hoof problems.",
+        "Arrange hoof trimming every six to ten weeks and dental checks at least yearly, and never leave overgrown or cracked hooves.",
+        "Vaccinate against tetanus, and follow a vet-guided plan for worms, ticks, lice and flies.",
+        "Check body condition every two weeks and adjust feed and exercise to keep the score near 3, avoiding both thinness and obesity.",
+        "Keep donkeys in pairs or groups where possible, limit loads to a fair weight for the donkey's size, rest working donkeys in shade with water, and use well-fitted, padded harnesses."
+      ],
+      "impact": "For many Kenyan households, a donkey is a working partner that carries water, firewood, produce and building materials, ploughs land and earns cash through cart transport. When a donkey falls sick, the family may lose hours each day fetching water by hand and lose income from hired transport. Serious illnesses such as colic, hyperlipaemia, laminitis and tetanus can be expensive to treat and are often fatal if caught late. Because donkeys hide illness, the cost of missing early signs is high. A few minutes each week checking temperature, appetite, droppings, feet and condition, plus basic routine care, protects a valuable asset and allows the donkey to work well for many years. Donkeys are also at risk of theft in some areas, so keeping them close, well-handled and recorded helps protect them.",
+      "humanHealth": "A healthy, well-cared-for donkey poses little disease risk to people, but some donkey infections can pass to humans. Ringworm, a fungal skin infection showing as round hairless patches, spreads by touch, so wear gloves and wash hands after handling affected skin. Rabies is a fatal risk anywhere in Kenya: never put your hand in the mouth of a donkey that is drooling, behaving strangely or cannot swallow, and report any animal bite to a health facility at once. Wounds from donkey kicks, bites or dirty hooves can lead to tetanus in people, so keep your own tetanus vaccination up to date. Always wash hands after handling donkeys, dung and thermometers, especially before eating.",
+      "outlook": "A donkey that is fed mainly fibre, watered well, sheltered from rain, kept at a healthy weight and checked regularly can live and work for 25 to 30 years or more. Most serious donkey illnesses have a much better chance of recovery when they are noticed early, often from nothing more than a small drop in appetite, quieter behaviour or fewer droppings. The outlook gets worse the longer a problem goes unnoticed, especially in fat, old, pregnant or stressed donkeys. Farmers who know their donkey's normal temperature, habits and body condition, and who call the vet quickly when something changes, give their animals the best chance.",
+      "faqs": [
+        {
+          "q": "My donkey looks fine but has eaten less today. Should I wait?",
+          "a": "No. In donkeys, eating less is one of the most important warning signs. Donkeys hide pain, and a donkey that stops eating, especially if it is fat, old, pregnant or stressed, can quickly develop hyperlipaemia, a dangerous fat build-up in the blood. Take the temperature, check the droppings and call the vet the same day. Keep offering water and its usual forage while you wait."
+        },
+        {
+          "q": "Is a fat, round donkey a healthy donkey?",
+          "a": "Not usually. Many donkeys in Kenya are either too thin from hard work or too fat from rich grass and bran. Hard fat on the neck crest, shoulders and rump raises the risk of laminitis and hyperlipaemia. Aim for a score of about 3 on a 1 to 5 scale, where you can feel the ribs easily under a thin layer of fat but cannot see them sharply. Note that neck fat can stay hard even after weight loss, so feel the whole body."
+        },
+        {
+          "q": "Can I use my horse or cattle temperature and pulse figures for my donkey?",
+          "a": "Use donkey figures instead. A healthy donkey's rectal temperature is about 36.5 to 37.8 °C, pulse about 36 to 68 beats per minute and breathing about 12 to 28 breaths per minute at rest. Each donkey has its own normal within these ranges, so take readings when it is healthy and calm and write them down to compare later."
+        },
+        {
+          "q": "Why does my donkey need a shelter when it lives in dry country?",
+          "a": "Donkeys handle heat and dryness well, but their coat is not waterproof like a horse's. In the long and short rains a donkey can get soaked to the skin, become chilled and develop chest, skin and hoof problems. Shade is also important in hot, dry months. A simple roofed shelter with a dry floor where the donkey can choose to go makes a big difference."
+        },
+        {
+          "q": "How often should I deworm and trim my donkey?",
+          "a": "There is no single rule for every farm. Many donkeys need hooves trimmed every six to ten weeks, but this depends on ground and wear. For worms, the best approach is a vet-guided plan using dung tests, because deworming too often or with the wrong product encourages worms that resist the medicine. Ask your vet or County Veterinary Officer to help set a plan for your area and season."
+        },
+        {
+          "q": "Is it normal for my donkey to lie down or roll?",
+          "a": "Yes, healthy donkeys lie down for short rests, often in the sun, and roll in dust to scratch and care for their coat. It becomes a concern if the donkey lies down and gets up repeatedly, rolls again and again, looks at its belly, refuses food, sweats or lies flat for long periods. Those are signs of colic or other pain and need a vet quickly."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "An oral rehydration and heat-stress relief solution that can be offered alongside plenty of clean water to working donkeys after long, hot days or journeys, helping replace water and salts lost through effort. It supports a healthy donkey's comfort and recovery from work; it does not replace shade, rest, fair workloads or a vet visit if the donkey is dull or off its food."
+      }
+    ],
+    "imagePrompt": "A healthy grey East African donkey standing alert in a dry, sunny Kenyan smallholding yard, ears upright and turned forward, bright eyes, good body condition, neatly trimmed upright hooves, calmly eating straw beside a simple roofed shelter and a water trough.",
+    "seoDescription": "Know what a healthy donkey looks like: normal temperature, pulse, droppings, hooves, ears and body condition, plus early warning signs for Kenyan farmers."
+  },
+  "colic": {
+    "card": {
+      "headline": "Dull donkey, not eating, no droppings",
+      "look": "The donkey stands quietly with its head low, ignores food, lies down more than usual and passes few or no droppings; some will look round at their belly, paw the ground or roll. Donkeys hide pain, so a quiet, 'off' donkey may be in serious trouble.",
+      "action": "Remove all feed, keep the donkey calm in a safe shaded place with water available, and call a vet straight away, because colic in donkeys is an emergency."
+    },
+    "detail": {
+      "aka": [
+        "Belly ache",
+        "Tumbo kuuma (Swahili: stomach pain)",
+        "Maumivu ya tumbo ya punda",
+        "Impaction colic",
+        "Gas colic",
+        "Sand colic"
+      ],
+      "summary": "Colic means pain in the abdomen (belly). In donkeys it is most often caused by a blockage of dry food in the gut (impaction), gas, sand, sudden feed changes, worn or broken teeth, or worms. Donkeys are very stoic: they show pain quietly, often just by being dull and not eating, so colic is easy to miss until it is advanced. Colic can kill, and a donkey that stops eating for even a short time can also develop hyperlipaemia, a dangerous fat-in-the-blood condition, so every case needs a vet quickly.",
+      "cause": "Colic is a sign, not a single disease. The donkey's gut is long and folded, with narrow bends where dry, coarse food can pack together and block the passage. The most common cause in East African donkeys is impaction: a hard plug of poorly chewed fibre such as dry grass, maize stover, straw or wheat husks, made worse when the donkey is not drinking enough. Bad teeth (sharp edges, missing, loose or overgrown teeth, common in older working donkeys) mean food is swallowed in long pieces that are hard to digest. Sand and soil eaten while grazing on bare ground or from feed thrown on the floor can settle in the gut and irritate or block it. Gas colic happens when food ferments too fast, for example after a sudden switch to lush wet-season grass, too much grain, maize bran or kitchen waste. Worms, especially large and small strongyles (redworms) and in young donkeys roundworms, damage the gut wall and blood supply, and tapeworms can trigger blockages where the small and large intestine meet. In Kenyan towns, donkeys often eat plastic bags, ropes and rubbish, which can form a mass that blocks the gut. Less often, a section of gut twists or becomes trapped, cutting off its blood supply; this is very painful and usually fatal without surgery. Whatever the cause, a blocked or stretched gut causes pain, stops normal movement of food, pulls fluid out of the body and can let toxins into the blood. A donkey in pain stops eating, and in donkeys this quickly mobilises body fat into the blood (hyperlipaemia), which can damage the liver and kidneys.",
+      "spread": [
+        "Colic is not infectious and does not spread from donkey to donkey, but several donkeys on the same farm can develop it if they share the same poor feed, water or worm burden.",
+        "Not drinking enough water is a major trigger, for example when water is far away, dirty, too cold in the early morning in highland areas, or when working donkeys are not given time to drink during long carting days.",
+        "Sudden changes in diet, such as moving from dry-season stover to lush green grass after the rains, or suddenly being given grain, maize bran, bread or kitchen leftovers, can upset the gut.",
+        "Feeding only very coarse, dry roughage such as straw or stover, especially to donkeys with poor teeth, increases the risk of impaction.",
+        "Grazing on bare, sandy or overgrazed land, or eating feed thrown on the ground, leads to sand and soil building up in the gut.",
+        "Heavy worm burdens from irregular or no deworming, and grazing on the same small paddock year after year, damage the gut.",
+        "Eating plastic bags, sacks, ropes and rubbish, common for donkeys roaming in towns and markets, can cause blockages.",
+        "Stress from overwork, long transport, sudden confinement, pain elsewhere, or a change of owner or companion can reduce eating and drinking and set off colic."
+      ],
+      "atRisk": "Any donkey can get colic, but some are at higher risk. Older donkeys with worn, loose or missing teeth are very prone to impaction. Working donkeys used for carting water, sand, building materials or farm produce are at risk when they are overworked, dehydrated and fed irregularly on poor roughage. Donkeys that are suddenly confined, for example moved from free-ranging to a small boma, or that have reduced exercise because of lameness, are more likely to impact. Young foals with heavy roundworm burdens and donkeys that have not been dewormed are at risk of worm-related colic. Urban and peri-urban donkeys that scavenge rubbish are at risk of plastic blockages. Risk rises in the dry season when grazing is coarse and water is scarce, in cold highland mornings when donkeys drink less, and at the start of the long and short rains when lush grass appears suddenly. Fat donkeys, pregnant or nursing jennies (females), miniature donkeys and stressed donkeys are at especially high risk of hyperlipaemia if colic stops them eating.",
+      "signs": {
+        "early": [
+          "Dullness and depression: the donkey stands quietly in a corner with its head low, ears back or drooping, and seems less interested in its surroundings or companions.",
+          "Reduced appetite or complete refusal of feed, including favourite feeds; a donkey that does not finish its food should always be checked.",
+          "Fewer droppings than normal, or droppings that are small, dry, hard or coated in mucus (slime).",
+          "Lying down more than usual, or lying down at an unusual time of day, and being reluctant to get up.",
+          "Looking round at the flank or belly, lifting the upper lip, grinding the teeth or stretching out as if to urinate without passing much urine.",
+          "Shifting weight, resting legs repeatedly or standing in an odd, tense posture.",
+          "Quieter or fewer gut sounds when you put your ear against the flank; a healthy gut gurgles regularly."
+        ],
+        "advanced": [
+          "Pawing the ground, kicking at the belly, getting up and lying down repeatedly, or rolling, though many donkeys never show these dramatic signs even when very sick.",
+          "No droppings at all for many hours and a completely silent belly when you listen at both flanks.",
+          "Fast breathing and sweating, sometimes patchy, even at rest in the shade.",
+          "Gums that are dark red, purple or muddy grey instead of moist pink, and that are dry or tacky to touch.",
+          "A swollen, tight belly, especially with gas colic.",
+          "Weakness, wobbliness, cold ears and legs, or collapse.",
+          "Signs that hyperlipaemia is developing: deep depression, total refusal to eat, bad breath, a yellowish tinge to the gums or eyes, and swelling under the belly or head."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Hyperlipaemia (fat mobilisation)",
+          "howToTell": "Hyperlipaemia also makes a donkey dull and stop eating, and it often follows colic or any stress. Colic usually comes with reduced droppings and belly-focused signs such as looking at the flank or lying down; hyperlipaemia tends to show deep, steady depression, yellowish gums and sometimes swelling, often in fat or pregnant donkeys. They often occur together, and only a vet's blood test can confirm hyperlipaemia."
+        },
+        {
+          "name": "Laminitis (founder)",
+          "howToTell": "Laminitis is painful inflammation inside the hooves, often after grain overload or lush grass. The donkey may lie down a lot and seem in pain like colic, but it stands leaning back to take weight off the front feet, is reluctant to walk, and the hooves feel hot with a strong pulse above the hoof. Droppings are usually normal."
+        },
+        {
+          "name": "Choke (blocked food pipe)",
+          "howToTell": "In choke, food is stuck in the oesophagus (food pipe) in the neck. The donkey is distressed, stretches its neck, coughs or gags, and food, saliva or green fluid comes out of the nose and mouth. Colic does not usually cause food coming from the nose."
+        },
+        {
+          "name": "Urinary blockage, foaling or uterine problems",
+          "howToTell": "A donkey that strains repeatedly and passes little or no urine may have bladder stones or a urinary problem. A heavily pregnant jenny that is restless, lying down and looking at her flank may be starting to foal or have a twisted uterus. A vet examination is needed to tell these apart from gut colic."
+        }
+      ],
+      "diagnosis": "A vet diagnoses colic by examining the whole donkey. They will check the heart rate, breathing rate, temperature, gum colour, how quickly colour returns to the gum after pressing it, and listen to the gut sounds on both sides. They look at the teeth and droppings. Where the donkey is large enough, the vet may do a rectal examination, gently feeling inside through the back passage to find an impaction, gas or a twisted gut, although this is more limited in small donkeys. They may pass a stomach tube through the nose to release gas or fluid and check for reflux (fluid backing up from the gut), which can indicate a serious blockage. A blood test, especially for triglycerides (blood fats), is very important in donkeys to check for hyperlipaemia, and may also check dehydration, liver and kidney function. Some referral clinics can use ultrasound. If a donkey dies, a post-mortem can show the cause and protect the rest of the herd. To help the vet, note when you last saw the donkey eat, drink and pass droppings, what it has been fed and any recent changes, when it was last dewormed and with what, how much work it has done, whether it is pregnant, and any changes in signs over time. Keep a sample of recent droppings and the feed if you can.",
+      "firstSteps": [
+        "Call a vet immediately; colic in donkeys is an emergency and early treatment greatly improves the chance of survival. If you cannot reach a private vet, contact your County Veterinary Office, an animal welfare organisation or a local agrovet who can link you to a vet.",
+        "Remove all feed, including hay and bedding the donkey might eat, until the vet has examined it, but leave clean, fresh water available and note whether it drinks.",
+        "Put the donkey in a safe, shaded, well-bedded area with soft ground and no sharp objects or ditches, so that if it lies down or rolls it will not injure itself.",
+        "Let a quiet donkey lie down and rest; you do not need to force it to walk for hours. If it is rolling violently, gently lead it on a short walk only if you can do so safely, and keep yourself out of reach of its legs.",
+        "Keep its usual companion donkey close by, within sight, because donkeys bond strongly and separation stress can make things worse.",
+        "Stop all work immediately and remove any harness, saddle or cart.",
+        "Check and write down simple information while you wait: whether droppings are passed, gut sounds at both flanks, gum colour, behaviour every 15 to 30 minutes, and anything unusual it may have eaten such as plastic.",
+        "Do not give any medicine, painkiller, oil, traditional remedy or drench by mouth before the vet arrives; drenching can go into the lungs, and painkillers can hide signs the vet needs to see."
+      ],
+      "vetTreatment": "Treatment depends on the cause and how severe it is, and must be prescribed and given by a vet. Most donkey colic cases, especially mild impactions and gas, respond to medical treatment on the farm. The vet will usually give pain relief and anti-inflammatory medicines, commonly non-steroidal anti-inflammatory drugs such as flunixin meglumine or meloxicam, and sometimes antispasmodics such as butylscopolamine to relax the gut, or sedatives such as xylazine or detomidine. Donkeys process several of these drugs differently from horses, so the vet must use donkey-specific knowledge rather than horse doses. For impaction, the vet often passes a stomach tube through the nose to give water, electrolytes (body salts) and a lubricant such as liquid paraffin to soften and move the blockage, sometimes repeated over a day or two. Badly dehydrated donkeys may need fluids into the vein. If hyperlipaemia is found or suspected, the vet will focus on getting energy and nutrition into the donkey quickly, through tempting feeds, tube feeding or glucose-containing fluids, and treat the underlying cause. Worms, dental problems and sand are dealt with once the donkey is stable, for example by the vet planning a suitable dewormer and dental rasping. Antibiotics are not routine for colic and should only be used when the vet finds a specific reason, because unnecessary use encourages antimicrobial resistance. A twisted or strangulated gut needs surgery, which is rarely available or affordable in most parts of Kenya, so in such cases the vet may advise humane euthanasia to end suffering. After treatment, feed is reintroduced slowly in small amounts of soft, moist forage under the vet's guidance. If the donkey's milk is used or the animal may enter the food chain, ask the vet about withdrawal periods for every drug given and follow them.",
+      "prevention": [
+        "Make sure clean water is always available, and give working donkeys time to drink before, during and after work; in cold highland mornings, offering slightly warmed or sun-warmed water can encourage drinking.",
+        "Feed plenty of good-quality roughage such as grass or hay little and often through the day, and avoid feeding only straw, stover or very coarse husks, especially to older donkeys.",
+        "Make any change in diet gradually over one to two weeks, including when lush grass appears at the start of the long and short rains, and avoid sudden feeding of grain, maize bran, bread or kitchen waste.",
+        "Have the teeth checked by a vet or trained equine dental worker at least once a year, and more often for older donkeys; watch for signs such as dropping food, slow chewing, long fibres in droppings or weight loss.",
+        "Deworm regularly according to a plan agreed with your vet or County Veterinary Officer, ideally guided by dung egg counts, and pick up droppings from small paddocks and bomas to reduce re-infection.",
+        "Feed off the ground using a feeder, sack or clean surface, and avoid grazing on bare, sandy land to reduce sand intake.",
+        "Keep donkeys away from rubbish heaps, markets and plastic waste, and remove plastic bags, ropes and twine from feeding areas.",
+        "Avoid overworking and overloading donkeys, give rest days, keep donkeys at a healthy body condition rather than fat, and keep them with a companion to reduce stress."
+      ],
+      "impact": "For many Kenyan families, a donkey is a working partner that carries water, firewood, farm produce and goods to market and earns daily income through carting. A donkey with colic cannot work, so the household may lose income, have to buy water or pay for transport while it recovers. Vet fees, medicines and repeat visits add costs, and severe cases can end in the loss of the donkey, which is expensive to replace. Repeated colic often points to underlying problems such as poor teeth, worms or poor water access, which also reduce the donkey's working life and strength. Prevention through water, sensible feeding, deworming and dental care is far cheaper than treatment and keeps the donkey working for many more years.",
+      "humanHealth": "Colic itself does not infect people. However, a donkey in pain can kick, bite, fall or roll suddenly, so stay out of reach of its legs, never stand directly behind or under it, and keep children away. If the donkey's milk is used or the animal may enter the food chain, any drugs given by the vet will have withdrawal periods; follow the vet's advice so that medicine residues do not reach people. Wash your hands after handling droppings, as donkey dung can carry some germs.",
+      "outlook": "Many donkeys with mild impaction or gas colic recover well if a vet treats them early and feeding is restarted carefully. The outlook becomes worse the longer colic goes unnoticed, which is a real risk because donkeys hide pain so well. Signs of a poorer outlook include a very fast heart rate, dark or purple gums, no gut sounds, a swollen belly, severe or uncontrolled pain, and fluid coming back up the stomach tube, which may mean a twisted or strangulated gut. Hyperlipaemia greatly reduces the chance of survival, so getting the donkey eating again quickly is vital. Donkeys that recover may get colic again unless the cause, such as bad teeth, worms, poor water access or coarse feed, is corrected.",
+      "faqs": [
+        {
+          "q": "My donkey is just standing quietly and not eating. Could that really be colic?",
+          "a": "Yes. Unlike horses, many donkeys do not roll or kick when they have belly pain. Often the only signs are dullness, standing with the head low, not eating and passing fewer droppings. Any donkey that suddenly stops eating should be treated as an emergency, both because of possible colic and because not eating can trigger hyperlipaemia. Call a vet rather than waiting to see if it gets better."
+        },
+        {
+          "q": "Can I give my donkey cooking oil, paraffin or a painkiller before the vet comes?",
+          "a": "No. Drenching oil or any liquid by mouth can go down the windpipe into the lungs and cause pneumonia or death, and paraffin and many home remedies are harmful. Painkillers, including human tablets like paracetamol, can mask the signs the vet needs to judge how serious the colic is, and some are dangerous at the wrong dose. Remove feed, keep water available, keep the donkey safe and calm, and let the vet decide on treatment."
+        },
+        {
+          "q": "Should I keep walking my donkey all night so it does not roll?",
+          "a": "Usually not. Gentle walking for short periods can help if the donkey is rolling violently and you can do it safely, but long, forced walking exhausts the donkey and you. A quiet donkey that lies down calmly can be allowed to rest in a safe, soft, shaded place. Rolling does not by itself twist the gut; a twist is usually the cause of severe pain, not the result. Your safety matters too, so stay clear of thrashing legs."
+        },
+        {
+          "q": "How soon can my donkey go back to work after colic?",
+          "a": "This depends on the cause and how quickly it recovers, so follow your vet's advice. Most donkeys need at least a few days of rest, with small, frequent meals of soft, moist forage and plenty of water, before slowly returning to light work. Watch closely for normal appetite, regular soft droppings and good energy. Returning to heavy carting too soon, especially in hot weather, can bring the colic back."
+        },
+        {
+          "q": "Why does my old donkey keep getting colic?",
+          "a": "Repeated colic in older donkeys is very often linked to dental problems. Worn, loose, missing or sharp teeth mean food is not chewed properly and forms impactions. Other common reasons are not drinking enough, very coarse feed, worms and eating sand or plastic. Ask a vet to check the teeth and deworming history, and change to softer, chopped or soaked feeds if the teeth are poor."
+        },
+        {
+          "q": "Can a rehydration or digestive supplement replace the vet?",
+          "a": "No. Supplements cannot clear a blockage or fix a twisted gut, and colic always needs a vet. Once the vet has treated the donkey and confirmed it can safely drink and eat, an oral rehydration product added to drinking water may help encourage drinking and replace body salts, and a digestive support product may be used while feed is reintroduced. Always ask your vet first and use them only as support alongside proper treatment and management."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "After the vet has examined and treated the donkey and agrees it can drink normally, RE-COVER mixed in fresh drinking water can help replace water and body salts and encourage drinking during recovery and in hot weather, since dehydration is a major cause of impaction colic. Offer it as a choice alongside plain water, never drench it, and never use it instead of calling the vet."
+      },
+      {
+        "slug": "k-digest",
+        "role": "During recovery, when the vet advises slowly reintroducing feed, K-DIGEST can be used as digestive stress support while the donkey returns to normal eating. It is an aid alongside vet treatment, gradual diet changes, dental care and deworming, not a treatment for colic itself."
+      }
+    ],
+    "imagePrompt": "A grey East African donkey lying down on dusty ground in a rural Kenyan homestead yard, head low and turned to look back at its flank, with a dull, withdrawn expression and no droppings nearby, under soft afternoon light.",
+    "seoDescription": "Donkey colic: spot quiet signs of belly pain like dullness, no droppings and lying down, act fast before the vet arrives, and prevent it next time."
+  },
+  "hoof-problems": {
+    "card": {
+      "headline": "Long, curled 'slipper' hooves and lameness",
+      "look": "The front of the hooves grows long and may curl up like a slipper, and the donkey walks stiffly or not at all. With laminitis it may rock its weight back onto its heels, shift from foot to foot, lie down more than usual, and the hooves feel hot.",
+      "action": "Stop all work, move the donkey onto soft ground or deep bedding, remove grain and lush grass, keep it eating hay or dry grass, and call your vet today."
+    },
+    "detail": {
+      "aka": [
+        "Slipper feet",
+        "Elf feet",
+        "Founder (severe or long-standing laminitis)",
+        "Kwato ndefu (Swahili: long hooves)"
+      ],
+      "summary": "Donkey hooves grow all the time. On soft, wet or sandy ground they do not wear down, so they grow long, crack and curl, straining the legs and joints. Laminitis is a painful inflammation of the tissues that hold the hoof wall to the bone inside the foot. It is often linked to rich feed, obesity and hormone problems, and long, neglected hooves make it worse. Both conditions cause serious, often hidden pain, stop a donkey working, and can become permanent or even fatal if ignored.",
+      "cause": "Inside each hoof, the coffin bone (also called the pedal bone, the last bone of the leg) hangs from the inner hoof wall by thousands of thin, folded layers of tissue called laminae. Think of them like the interlocking fingers of two hands. In laminitis these laminae become inflamed and weak. Blood flow in the foot is disturbed, the tissue swells inside the rigid hoof capsule, and this causes intense pain. If the damage is severe, the bone can tilt downwards (rotation) or drop (sinking) inside the hoof, and in the worst cases press through the sole; this is often called founder. Common triggers in donkeys are too much rich feed (grain, maize bran, dairy meal, kitchen leftovers, lush rain-season grass), obesity, and hormone disorders: insulin problems linked to being fat (sometimes called equine metabolic syndrome) and, in older donkeys, a pituitary gland disorder called PPID or Cushing's disease. Laminitis can also follow a severe infection or toxaemia, such as a retained afterbirth after foaling, colic, or heavy overloading on one leg when the other leg is injured. Overgrown hooves cause problems in a different way. Donkeys evolved on dry, hard, stony ground that wears the hoof naturally. Where the ground is soft, wet or the donkey is kept in a muddy pen, the toe grows long, the heels collapse or grow too high, and the hoof starts to curl. This changes the angle of the leg, strains tendons and joints, lets dirt and germs get into cracks and the white line (the join between wall and sole), and puts extra pulling force on the laminae, so a donkey with neglected feet is more likely to develop or suffer badly from laminitis.",
+      "spread": [
+        "Neither condition is contagious; they do not pass from one donkey to another, but donkeys kept under the same poor management often suffer together.",
+        "Lack of regular trimming lets hooves grow long and out of shape, especially when donkeys stand on soft soil, mud, sand or manure where there is little natural wear.",
+        "Sudden access to rich feed is a classic trigger, such as a donkey breaking into a grain store, eating maize bran, dairy meal or chicken feed, or being fed leftovers and sweet foods.",
+        "Lush, fast-growing grass in the long and short rains, or after a dry spell, is high in sugars and can trigger laminitis in fat or sensitive donkeys.",
+        "Obesity and hormone problems (insulin dysregulation and, in older donkeys, PPID) make the feet much more sensitive to laminitis.",
+        "Serious illness such as a retained afterbirth, womb infection, severe diarrhoea or colic can release toxins that damage the laminae.",
+        "Standing on one leg for a long time because the other leg is injured can cause laminitis in the healthy, overloaded foot.",
+        "Constantly wet, dirty standing areas soften the horn, encourage thrush and cracks, and make overgrown feet worse."
+      ],
+      "atRisk": "Any donkey can be affected, but some are at higher risk. Fat donkeys, especially those with a thick, hard crest on the neck and fat pads on the body, are the most likely to get laminitis. Older donkeys (roughly mid-teens and above) are at risk of PPID, which often shows as a long, curly coat that does not shed, and these animals are prone to repeated laminitis. Pet, companion and lightly worked donkeys kept on good grass or fed generously are at higher risk than lean, hard-working ones. Overgrown hooves are most common in donkeys kept in wetter highland areas of Kenya and East Africa, in muddy or manure-filled pens, in zero-grazing or tethered systems with little movement, and wherever no trained hoof trimmer is available. Jennies (female donkeys) that have recently foaled and retained the afterbirth are at risk of laminitis from toxaemia. Risk rises during the long and short rains when grass grows fast and the ground stays soft and wet.",
+      "signs": {
+        "early": [
+          "The toe of the hoof looks longer than normal, with flaring, chipped or cracked edges, or the hoof shape is uneven between feet.",
+          "The donkey is slower than usual, reluctant to walk on hard or stony ground, or takes short, careful steps.",
+          "It shifts its weight from one foot to another when standing, or rests a front foot more often than normal.",
+          "The hoof wall feels warmer than usual when you hold your hand on it, especially compared with a healthy donkey's feet.",
+          "You can feel a stronger, bounding pulse at the back of the fetlock (just above the hoof), called the digital pulse, which is normally hard to feel.",
+          "The donkey lies down more than usual, is quiet, or is slower to come for food; donkeys are very stoic and these small changes may be the only sign of pain.",
+          "Bad-smelling black material in the grooves beside the frog (the soft V-shaped part of the sole) may show thrush in neglected feet."
+        ],
+        "advanced": [
+          "The hooves are very long and curled up at the toe like a slipper or ski, sometimes twisted to one side, so the donkey walks on its heels or the side of the hoof.",
+          "The donkey stands rocked back with its front feet pushed forward and its weight on its heels and hind legs, to take weight off the painful toes.",
+          "It refuses to move, or moves only with great difficulty, and may lie flat for long periods and be unwilling to get up.",
+          "Hooves are clearly hot, with a strong, pounding digital pulse in two or more feet.",
+          "Rings or ridges on the hoof wall that are wider at the heel than the toe, a dished front wall, or a dropped, flat or bulging sole show long-standing or past laminitis.",
+          "A separated, crumbly white line, a bruised or red-tinged sole, or pus coming from the coronet (the hairline at the top of the hoof) or sole.",
+          "Loss of appetite and dullness; in a donkey this is an emergency because not eating can quickly lead to hyperlipaemia, a dangerous build-up of fat in the blood."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Hoof abscess",
+          "howToTell": "An abscess is a pocket of pus inside the hoof. It usually causes sudden, severe lameness in just one leg, sometimes so bad the donkey will not put the foot down. Laminitis more often affects both front feet. An abscess may burst out at the coronet or sole, and the vet can find a very sensitive spot with hoof testers. The two can occur together, so the vet should still check."
+        },
+        {
+          "name": "Thrush and white line disease (seedy toe)",
+          "howToTell": "These are infections of the horn in dirty, wet or overgrown feet. Thrush shows as black, foul-smelling material in the frog grooves; white line disease shows as crumbly, hollow horn where the wall meets the sole. They cause soreness but usually not the strong heat, bounding pulse and rocked-back stance of laminitis."
+        },
+        {
+          "name": "Arthritis or old joint injury",
+          "howToTell": "Older and hard-worked donkeys often have stiff joints. The lameness tends to improve as the donkey warms up, the joints may be swollen or thickened, and the hooves are not usually hot with a strong digital pulse. A vet may need to examine and X-ray to tell the difference."
+        },
+        {
+          "name": "Tetanus",
+          "howToTell": "Tetanus can cause a stiff, 'sawhorse' stance that looks like a laminitic donkey reluctant to move. However, tetanus also causes a stiff neck and tail, ears held rigidly, flared nostrils, jaw stiffness and the third eyelid flicking across the eye when startled. The hooves are not hot. Tetanus is an emergency and needs a vet immediately."
+        }
+      ],
+      "diagnosis": "The vet will watch the donkey stand and walk, look closely at the shape and length of every hoof, feel each foot for heat and the digital pulse, and use hoof testers (a large pincer tool) to find painful areas. Cleaning and paring the sole helps show bruising, white line separation or abscesses. Where available, X-rays of the feet show the length of the hoof and whether the coffin bone has rotated or sunk, which guides trimming and tells how serious the case is. The vet may take blood to check for insulin problems or PPID, especially in fat or older donkeys, and to check blood fat levels if the donkey has stopped eating. They will also ask about recent feed and management to find the trigger. To help, tell the vet when you first noticed the problem, what the donkey has been eating (including any grain, bran or access to lush pasture), whether it has been eating and drinking normally, its approximate age, recent foaling or illness, any medicines given, and when the feet were last trimmed. Keep the donkey standing on soft ground nearby so it does not have to walk far for the examination.",
+      "firstSteps": [
+        "Stop all work and riding immediately; a lame or laminitic donkey should not carry loads or pull carts until the vet says it is safe.",
+        "Move the donkey a short, slow distance to a small, dry pen or stable with soft footing such as deep sand, wood shavings or clean dry bedding, so the soles are supported and it can lie down comfortably.",
+        "Remove all grain, maize bran, dairy meal, kitchen scraps and sweet foods, and keep it off lush grass, but do not starve it; give clean, dry hay or mature dry grass, or barley straw if available.",
+        "Make sure it keeps eating and drinking, with clean fresh water always within easy reach; if a donkey stops eating for even a day, tell the vet urgently because of the risk of hyperlipaemia.",
+        "Keep a calm companion donkey nearby, as donkeys bond strongly and stress from separation can make them stop eating.",
+        "Provide shade and shelter from rain, and keep the standing area clean and dry.",
+        "Do not force the donkey to walk, do not attempt heavy trimming of a laminitic foot yourself, and do not give painkillers or other medicines from the agrovet without a vet's advice, as some horse medicines and doses are not right for donkeys.",
+        "Write down when signs started, which feet are hot, what it has eaten and any recent illness, and call your vet or County Veterinary Officer the same day."
+      ],
+      "vetTreatment": "Treatment aims to control pain, protect the inside of the foot, correct the hoof shape and remove the trigger. Vets commonly use anti-inflammatory painkillers from the NSAID group, such as phenylbutazone, flunixin or meloxicam. Donkeys process several of these drugs differently from horses, so the choice, dose and timing must be decided by a vet who knows donkeys; never use horse instructions or leftover medicine. Strict rest on deep, soft bedding is usually advised, sometimes with frog or sole supports, padding or special boots fitted by the vet or a trained farrier. Overgrown hooves are trimmed back gradually and carefully, often over several sessions, guided by X-rays if available, to bring the toe back and realign the foot without causing more pain or damage. Abscesses are opened and drained, and the foot kept clean and covered. Antibiotics are only needed if there is a deep infection; they do not treat laminitis itself, and using them without need adds to antimicrobial resistance, where germs stop responding to medicines. The vet will plan a diet change, usually a weight-loss plan for fat donkeys based on hay, straw and limited grazing, and may treat PPID with prescribed medication where diagnosed. A donkey that has stopped eating may need urgent fluids and nutrition. Expect recovery from laminitis to take weeks to months, with repeat visits and trims. If a donkey's milk is used or the animal may enter the food chain, follow the withdrawal period the vet gives for each drug before milk or meat is used.",
+      "prevention": [
+        "Have hooves checked and trimmed by a trained farrier or hoof trimmer about every 6 to 10 weeks, more often on soft or wet ground; welfare organisations working with donkeys in Kenya can help locate trained trimmers in some counties.",
+        "Pick out and look at your donkey's feet regularly, ideally daily or several times a week, checking for cracks, smell, stones, heat and changes in length.",
+        "Keep donkeys lean: feed mainly fibre such as hay, mature dry grass or straw, and avoid or strictly limit grain, maize bran, dairy meal, bread and kitchen scraps.",
+        "Control grazing during the long and short rains when grass is lush; use a smaller paddock, a dry yard with hay, or limit grazing time for fat or previously laminitic donkeys.",
+        "Learn to body condition score your donkey; feel the neck crest, ribs, back and rump, and ask your vet to show you what a healthy donkey feels like, as donkeys store fat in patches.",
+        "Provide a dry, hard standing area such as gravel, murram or concrete, away from mud and manure, so hooves stay strong and some natural wear occurs.",
+        "Store grain and concentrates securely so donkeys cannot break in and gorge.",
+        "Call the vet early for older donkeys with a long coat that does not shed, drinking or urinating more, or repeated laminitis, as this may be PPID that can be managed.",
+        "Make sure retained afterbirths, colic and severe infections get prompt veterinary care, and keep donkeys vaccinated against tetanus as advised by your vet, since foot wounds and abscesses can let tetanus in."
+      ],
+      "impact": "In Kenya and East Africa, many donkeys carry water, firewood, produce and goods to market, and pull carts that earn the household's daily income. A lame donkey cannot work, so the family loses income and must carry loads by hand or hire transport. Long, untreated hooves shorten a donkey's working life by damaging joints and tendons, and laminitis can leave it permanently lame or lead to it being put down on welfare grounds, which is a large loss given the cost of a replacement donkey. Vet visits, X-rays, repeated trimming and months of rest add cost, while prevention through regular trimming and sensible feeding costs far less. Severe lameness and neglected feet are also a welfare concern and can bring problems with welfare inspections where donkeys work at markets and in towns.",
+      "humanHealth": "Laminitis and overgrown hooves do not infect people. If a donkey is treated with painkillers or antibiotics and its milk is consumed or sold, or it may enter the food chain, drug residues can remain; follow the vet's withdrawal period before using milk or meat. Take care when handling painful feet, as a sore donkey may kick, and keep your own tetanus vaccination up to date if you handle hooves and wounds.",
+      "outlook": "Overgrown hooves that are caught early usually respond well to a series of careful trims, and most donkeys return to comfortable work. Very long, twisted hooves that have been neglected for years may have caused lasting changes to joints and bones, and some lameness may remain. With laminitis, the outlook depends on how severe it is, how quickly treatment starts and whether the coffin bone has rotated or sunk. Mild cases treated early can recover well over weeks to a few months. Severe cases with major bone movement, sole penetration or repeated attacks have a guarded to poor outlook, and some donkeys must be put to sleep to end their suffering. Donkeys that have had laminitis once are more likely to get it again, so lifelong weight control, careful feeding and regular trimming are essential. A donkey that stops eating because of pain faces the added danger of hyperlipaemia, which can be fatal, so fast action matters.",
+      "faqs": [
+        {
+          "q": "How often should my donkey's hooves be trimmed?",
+          "a": "Most donkeys need a trim about every 6 to 10 weeks, but it depends on the ground and the individual. Donkeys on soft, wet soil or in muddy pens often need trimming more often, while working donkeys on hard, stony ground may wear their feet more. Check the feet often; if the toe is getting long, the hoof is flaring or cracking, or the donkey walks differently, it is time for a trim."
+        },
+        {
+          "q": "Can I trim my donkey's hooves myself?",
+          "a": "Light maintenance is possible after proper training, but trimming the wrong way can lame a donkey. Donkey hooves are shaped differently from horse hooves, with more upright walls and a different angle, so horse-style trimming can damage them. Very overgrown or laminitic feet should always be trimmed by a trained farrier or under a vet's guidance, often over several sessions. Ask your vet or a donkey welfare organisation about training."
+        },
+        {
+          "q": "Why does my donkey get laminitis when it is fed well?",
+          "a": "Donkeys are built to survive on dry, poor-quality grazing. Rich feeds such as grain, maize bran, dairy meal and lush rain-season grass contain more sugar and starch than their bodies can handle. This makes them fat and can upset insulin levels, which damages the laminae in the feet. A healthy donkey diet is mostly fibre such as hay, straw and mature grass, with concentrates only if the vet or nutrition adviser recommends them."
+        },
+        {
+          "q": "Can I give my donkey painkillers from the agrovet?",
+          "a": "Please do not, unless a vet has examined the donkey and prescribed them. Donkeys break down some common painkillers differently from horses, so horse doses and timings can be wrong. Some medicines are dangerous in a dehydrated or sick donkey, and painkillers can hide how bad the problem is, so the donkey may walk and damage its feet further. Your vet will choose a safe drug and dose."
+        },
+        {
+          "q": "Should I starve my fat donkey to help its laminitis?",
+          "a": "No. Donkeys must never be starved or made to lose weight quickly. When a donkey stops eating or is suddenly underfed, its body releases fat into the blood, which can cause hyperlipaemia, a life-threatening condition. Weight loss must be slow, using hay, straw or dry grass and limited grazing, following your vet's plan."
+        },
+        {
+          "q": "Will a donkey with laminitis ever work again?",
+          "a": "Many donkeys with mild laminitis that is treated early return to light or normal work after a period of rest and careful trimming. Donkeys with severe laminitis, where the bone inside the foot has moved a lot, may only manage light duties or a quiet life as a companion. Your vet can judge this from the examination and, if possible, X-rays, and will advise when and how to bring the donkey back into work slowly."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "Close-up side view of a grey Kenyan donkey's front legs standing on dry red murram soil, showing long, upward-curling overgrown slipper-shaped front hooves, natural daylight, realistic farm photo.",
+    "seoDescription": "Overgrown hooves and laminitis in donkeys: spot slipper feet, heat and lameness early, what to do before the vet arrives, and how to prevent it in Kenya."
+  },
+  "harness-wounds": {
+    "card": {
+      "headline": "Raw sores where the harness rubs",
+      "look": "Patches of hair loss, swelling or raw, weeping skin on the withers, back, girth, chest or under the tail. Flies gather on them, and the donkey flinches or moves away when the harness comes near.",
+      "action": "Stop working the donkey, remove the harness and pad, and keep all pressure off the sore until it has healed and the cause is fixed."
+    },
+    "detail": {
+      "aka": [
+        "Saddle sores",
+        "Harness galls",
+        "Pack sores",
+        "Girth galls",
+        "Breeching or crupper sores",
+        "Vidonda (Swahili for wounds or sores)"
+      ],
+      "summary": "Harness and saddle wounds are pressure and rubbing injuries caused by equipment that does not fit, loads that are too heavy or unbalanced, and long working hours. They start as small bald or swollen patches and can quickly become open, infected sores full of flies and maggots. They are among the most common health problems of working donkeys in Kenya and East Africa. They cause real pain, cost working days, and open the door to tetanus, a deadly disease to which donkeys are very sensitive.",
+      "cause": "These wounds are caused by pressure and friction on the skin. When a pack saddle, cart pad, breastband, girth, crupper (the strap under the tail) or breeching (the strap around the hindquarters) presses hard on one spot, it squeezes the small blood vessels in the skin shut. Without blood, the skin and tissue underneath starve of oxygen and begin to die. If the equipment also slides back and forth, it rubs the hair off and wears through the skin like sandpaper. Hard or rough materials make this much worse. Examples are nylon rope, wire, plastic sacks, sharp metal parts, knots and unpadded wooden saddles. So do sweat, wet rain-soaked pads, and dried mud or dirt stuck in the harness. Thin donkeys are at special risk because their spine, withers and hip bones stick out with little muscle or fat to cushion them. Once the skin is broken, bacteria from soil, dung and dirty harness enter the wound and cause infection, pus and swelling. Flies are drawn to the smell. Some lay eggs that hatch into maggots (fly larvae that eat flesh), a condition called myiasis. Others carry Habronema worm larvae, which cause 'summer sores': wounds that refuse to heal. Deep or dirty wounds can also let in the tetanus germ (Clostridium tetani), which lives in soil and dung. Tetanus is often fatal in donkeys.",
+      "spread": [
+        "These wounds are not contagious. One donkey cannot catch them from another. But the same poor harness and work habits usually affect every donkey on the farm or in the group.",
+        "Badly fitting equipment is the main trigger. Common faults are saddles and pads that are too small, too thin, lumpy or worn. Others are breastbands that sit too high on the windpipe or too low on the shoulder points, and cruppers made of thin rope.",
+        "Carts that are unbalanced cause many wounds. If the load sits too far forward, the shafts push down on the back and withers. If it sits too far back, the belly band lifts and rubs. Shafts set at the wrong height for the donkey do the same.",
+        "Overloading and long working hours without rest add heavy, constant pressure on the same spots. This is common when carrying water, firewood, building sand or farm produce to market.",
+        "Wet, dirty or sweaty harness that is never cleaned or dried rubs harder and carries germs straight into small cuts.",
+        "Working a donkey that already has a small sore makes it bigger and deeper every day.",
+        "Flies, especially in warm, wet weather during the long and short rains, turn small wounds into infected, maggot-filled sores. They also spread Habronema larvae from wound to wound and from donkey to donkey."
+      ],
+      "atRisk": "Any working donkey can get harness wounds. The highest risk is in donkeys pulling carts or carrying packs every day, such as water vendors, traders, building-sand haulers and farmers taking produce to market. Thin or old donkeys and those with poor body condition are especially at risk, because their bones stand out. So are young donkeys put to work before they are fully grown, and donkeys working on hilly or rough roads. Donkeys on hire or shared between several handlers often suffer most, because nobody owns the duty of checking the harness. Wounds increase in the rainy seasons, when pads stay wet and flies are many. They also increase in the dry, hot months, when donkeys sweat and work longer distances to fetch water. Both peri-urban cart work and pastoral pack work see many cases.",
+      "signs": {
+        "early": [
+          "A warm, slightly swollen or tender patch where the harness sits, often on the withers, along the spine, behind the elbows (girth area), on the chest or at the base of the tail.",
+          "Hair that is rubbed short, broken or missing in the shape of the pad, strap or shaft.",
+          "Dry, rough or scaly skin, or a small graze, under the harness.",
+          "The donkey flinches, dips its back, lays its ears back or moves away when you touch the area or bring the saddle or harness close.",
+          "Patches of white hair growing on the withers or back. This is a sign of old pressure damage and shows the harness has been hurting the donkey for some time.",
+          "Uneven sweat marks under the saddle after work, with dry spots where pressure was highest."
+        ],
+        "advanced": [
+          "Open, raw, red or pink sores that weep clear fluid, blood or pus.",
+          "Thick scabs, crusts or a hard, leathery dead patch of skin (called a 'sitfast') that does not lift off.",
+          "Swelling that is hot and painful, sometimes a soft lump full of pus (an abscess).",
+          "A bad smell from the wound, and flies clustering on it. Maggots may be seen moving inside.",
+          "Wounds that keep growing extra red, lumpy flesh and refuse to heal for weeks, sometimes with small yellow gritty spots. These may be summer sores caused by Habronema.",
+          "The donkey is dull, eats less, loses weight or refuses to move forward when harnessed.",
+          "Stiffness, difficulty opening the mouth, a stiff tail, a raised third eyelid, or jumpiness at noise. These are signs of tetanus and are an emergency."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Sarcoid (a common skin tumour in donkeys)",
+          "howToTell": "Sarcoids are lumps or flat, wart-like, hairless patches that slowly grow. They often appear around the eyes, ears, groin, chest or legs, not only where the harness rubs. They do not heal with rest and may bleed when rubbed. A harness wound improves once pressure is removed. If a 'wound' keeps growing, ask the vet to check for sarcoid. Never cut or burn it yourself, because handling can make sarcoids worse."
+        },
+        {
+          "name": "Rain scald (dermatophilosis)",
+          "howToTell": "Rain scald happens in wet weather. It shows as many small crusty scabs along the back and rump that lift off with tufts of hair, like the tip of a paintbrush. The skin underneath is pink and moist. It is spread over a wide area rather than in the exact shape of a pad or strap, and it can appear in donkeys that are not working."
+        },
+        {
+          "name": "Mange, lice or ringworm",
+          "howToTell": "These cause patchy hair loss and crusting that can appear anywhere on the body, including the head, neck and legs. Mange and lice usually cause strong itching, so the donkey rubs on posts and walls. Ringworm forms round, grey, scaly bald patches. Several donkeys are often affected, and the patches do not match where the harness sits."
+        },
+        {
+          "name": "Summer sores (habronemiasis)",
+          "howToTell": "This is often a complication of a harness wound rather than a separate problem. Suspect it if a wound that should be healing instead grows lumpy, red, bleeding flesh with yellow gritty grains. It is worse in fly seasons and keeps coming back. A vet can confirm it and treat the worm larvae."
+        }
+      ],
+      "diagnosis": "A vet or animal health officer usually recognises harness wounds by looking at where they are and matching them to the equipment. They will examine the donkey's whole body and score its body condition. They will gently feel and probe the wound to judge how deep it goes, and check whether it involves muscle, the spine or the withers bones. They will look for pus pockets, dead tissue and maggots, and check for signs of tetanus. A good vet will also ask to see the donkey harnessed or loaded, to find exactly which part is causing the damage. Fixing that is half the treatment. If a wound does not heal as expected, the vet may take a swab to grow and identify the bacteria and choose the right antibiotic. A small tissue sample (biopsy) can rule out sarcoid or summer sores, and an X-ray may be needed if bone infection is suspected. To help the vet, keep the harness, saddle, pads and straps that the donkey was using, and do not wash or change them first. Note when you first saw the sore and how many hours and what loads the donkey has been working. Write down anything you have already put on the wound and whether the donkey has ever had a tetanus vaccine.",
+      "firstSteps": [
+        "Stop work immediately and take off the saddle, pads and harness. Any further use will make the wound deeper and more painful.",
+        "Move the donkey to shade with clean drinking water and good forage. A tired, hot working donkey also needs rest and water to recover.",
+        "Gently clean the sore with plenty of clean water that has been boiled and cooled. You may add a little salt (about one teaspoon per litre). Pour it over the wound to wash away dirt and loose hair without scrubbing.",
+        "Do not put on used engine oil, battery acid, paraffin, cow dung, ash, chilli, strong detergent or hot irons. These common home remedies burn the tissue, delay healing and can poison the donkey.",
+        "Protect the wound from flies by keeping the donkey in a shaded, clean area away from dung heaps. Check the wound twice a day for maggots, and tell the vet straight away if you see any.",
+        "Wear gloves or wash your hands well with soap after touching the wound, and keep any cuts on your own hands covered.",
+        "Write down where the wounds are, how big they are, which harness part touches that spot, and what loads and hours the donkey has worked. Then take a photo if you can.",
+        "Call your vet or animal health officer, especially if the wound is deep, smells bad, has maggots, is near the spine or withers, or the donkey has not had a tetanus vaccine. Also call if the donkey becomes stiff or stops eating."
+      ],
+      "vetTreatment": "Treatment depends on how deep and dirty the wound is, but rest from the harness is always the most important part. The vet will first clean the wound thoroughly. They may sedate the donkey and numb the area to cut away dead skin, pus and any sitfast, and to remove all maggots. Deep pus pockets may need to be opened and drained. The vet will then advise on daily cleaning and may provide an antiseptic wound dressing or wound spray, often combined with a fly repellent. Because many wounds are contaminated with soil and dung, the vet will think about tetanus protection. This usually means tetanus antitoxin for immediate protection and tetanus toxoid vaccine for longer-term protection, depending on the donkey's vaccination history. For deep, infected or swollen wounds, the vet may prescribe antibiotics such as a penicillin-type drug or another suitable class. Antibiotics are not needed for every shallow rub. Using them only when needed, and finishing the full course as prescribed, helps prevent antimicrobial resistance (germs no longer responding to medicines). The vet may also give pain relief, usually an anti-inflammatory drug. Donkeys break down several common horse drugs at a different speed from horses, so treatment must be prescribed and dosed by a vet who knows donkeys. Never borrow horse or cattle doses. Wounds that may be summer sores are often treated with a dewormer from the avermectin group, such as ivermectin, together with wound care. Some badly damaged withers or chronic wounds may need surgery. Where donkey milk or meat is used, ask the vet about withdrawal periods for every drug given. Expect shallow wounds to need days to a few weeks of rest. Deep or infected wounds can take many weeks. The vet will also advise on fixing or replacing the harness, and organisations working on donkey welfare in Kenya can often help with harness improvement.",
+      "prevention": [
+        "Fit the equipment to the donkey, not the donkey to the equipment. Pack saddles and cart pads should be wide, evenly padded and clear of the spine. There should be a gap you can fit your hand through above the withers and backbone.",
+        "Use soft, broad padding such as folded clean cloth, sacking stuffed with dry grass or sisal, foam or old blankets. Replace hard nylon rope, wire and thin straps with wide, soft straps, or cover them with cloth or rubber tubing.",
+        "Check the breastband sits across the chest below the windpipe and above the shoulder points. The crupper under the tail should be thick, soft and kept clean, and the girth should be firm but not cutting.",
+        "Balance the cart so the load sits over the axle. The shafts should ride level with the donkey's sides, without pressing down on the back or lifting the belly band. Keep tyres pumped and wheels greased so the cart rolls easily.",
+        "Do not overload. Match the load to the donkey's size, age, condition and the road, and reduce it on hills, rough tracks and hot days. Ask your vet or animal health officer for a sensible load guide.",
+        "Give regular rest breaks with water and shade. Take off the harness whenever the donkey is resting for long periods and at the end of every day.",
+        "Clean and dry the harness and pads every day, and never put a wet, muddy or sweat-crusted pad back on. Check the donkey's skin under the harness every day for heat, swelling, hair loss or tenderness, and rest it at the very first sign.",
+        "Keep donkeys in good body condition with enough forage, clean water and salt, and deworm them as your vet advises. Thin donkeys get wounds much more easily.",
+        "Vaccinate working donkeys against tetanus as your vet recommends, and keep a simple record of the dates.",
+        "Reduce flies by removing dung daily, keeping shelters clean and dry, and treating every wound early. Do not work very young, very old, sick or heavily pregnant donkeys."
+      ],
+      "impact": "For many Kenyan households a donkey is a business. It carries water for sale, transports building sand, firewood and produce, and takes children's school fees to market in the form of goods. A donkey with a harness wound must rest, and every day of rest is lost income. Chronic or repeated wounds mean many lost weeks a year. Families then have to pay for vet visits, dressings and medicines, or hire another donkey. Painful donkeys work slowly, become difficult to handle and may kick or refuse to move, which can injure handlers. Infected wounds lead to weight loss and a weaker animal. Tetanus following a wound can kill a donkey within days, wiping out the household's main transport and earning asset. Scarred, wounded donkeys also sell for less. Prevention through good harness and sensible loads costs far less than treating wounds.",
+      "humanHealth": "Harness wounds themselves do not pass to people, but infected wounds carry bacteria from soil and dung, and some wound germs can infect cuts on human skin. Wear gloves or wash your hands well with soap after cleaning wounds, and cover any cuts on your own hands. The tetanus germ that threatens wounded donkeys also lives in soil and dung and can infect people through deep cuts, so people who work with donkeys and in the soil should keep their own tetanus vaccination up to date. If donkey milk or meat is used, respect the drug withdrawal periods your vet gives so that medicine residues do not reach people.",
+      "outlook": "The outlook is good for fresh, shallow rubs and sores that are caught early, as long as the donkey is rested and the faulty harness is fixed. These usually heal within days to a few weeks, sometimes leaving white hair or a scar. Deep wounds, infected wounds with pus or maggots, wounds over the withers or spine, and old sitfasts take much longer and may need surgery. Some never return to full strength. Recovery is slower in thin, old or poorly fed donkeys and in the rainy fly season. The biggest risk is tetanus, which is often fatal in donkeys even with treatment, so prevention by vaccination matters. If the donkey goes back to work in the same harness and load, the wound will almost always return, usually worse than before.",
+      "faqs": [
+        {
+          "q": "Can I keep working my donkey if the sore is small?",
+          "a": "No. Even a small sore gets deeper every time the harness presses on it, and a few more days of work can turn a small rub into a wound that takes months to heal. Rest the donkey from that harness until the skin is fully healed and the hair is starting to grow back. Then fix the cause before work starts again. If you truly cannot stop all work, ask your vet whether a lighter task with no pressure on the wound is possible. Never work a donkey with an open wound under the harness."
+        },
+        {
+          "q": "Is it true that used engine oil or cow dung helps the wound heal?",
+          "a": "No. These are common practices, but they harm the donkey. Used engine oil contains chemicals that irritate and poison tissue. Cow dung and ash are full of germs, including the tetanus germ. Battery acid, paraffin and chilli burn the skin. All of them delay healing and can cause serious infection. Clean the wound with boiled and cooled water, keep flies off, and use only dressings or sprays recommended by your vet or agrovet professional."
+        },
+        {
+          "q": "Why does my donkey get the sore in the same place again and again?",
+          "a": "A sore that keeps coming back in the same spot means the cause has not changed. Usually one part of the harness, such as a hard knot, a thin strap, a pad that is too small or a shaft set at the wrong height, presses there every day. Look carefully at where the sore is and which part of the equipment touches it. Then change or pad that part, balance the load and reduce the weight. A vet, animal health officer or donkey welfare organisation can help you check the fit."
+        },
+        {
+          "q": "Does my donkey need a tetanus injection for a harness wound?",
+          "a": "Donkeys are very sensitive to tetanus, and harness wounds are often dirty with soil and dung, where the tetanus germ lives. If your donkey has never been vaccinated, or you do not know, tell your vet about the wound quickly. They may give protection straight away and start a vaccination programme. The best plan is to vaccinate all working donkeys against tetanus on a schedule your vet recommends, before wounds happen."
+        },
+        {
+          "q": "There are maggots in the wound. What should I do?",
+          "a": "Call your vet as soon as possible. Maggots eat living flesh and can make a wound much deeper very quickly, and they cause great pain. Until help arrives, keep the donkey in shade away from flies and wash out the wound with clean boiled and cooled water. Do not pour in paraffin, engine oil, diesel or pesticides meant for crops, because these poison the donkey and damage the tissue. The vet will remove the maggots, clean the wound and advise on fly protection."
+        },
+        {
+          "q": "How do I know when the donkey is ready to work again?",
+          "a": "The wound should be completely closed, dry and covered with healthy skin, with no scab, swelling, heat or pain when you press gently. Hair is usually starting to grow back. Before work starts again, the harness must be fixed or replaced. Start with short, light work and check the skin every day. If you see any heat, swelling or tenderness, stop again straight away. Your vet can tell you when deep wounds are strong enough for pressure."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "A realistic photo of a grey working donkey standing in a dusty Kenyan homestead with its pack saddle removed, showing a small raw pink hairless rubbed patch on the withers surrounded by short broken hair and a few white hairs, in soft daylight.",
+    "seoDescription": "Harness and saddle wounds in donkeys: spot sores on withers, back and chest early, give safe first aid, know vet care, and fit harness to stop them returning."
+  },
+  "tetanus": {
+    "card": {
+      "headline": "Stiff legs, raised tail, sawhorse stance",
+      "look": "The donkey stands rigid with its legs stretched out like a wooden sawhorse, tail held stiffly out, ears pricked and nostrils flared. When startled, a pale membrane may flick across the eye, and it may struggle to open its mouth or chew.",
+      "action": "Move the donkey gently to a quiet, dark, shaded place with water, keep noise and handling to a minimum, and call a vet immediately, because early treatment gives the best chance."
+    },
+    "detail": {
+      "aka": [
+        "Pepopunda (Swahili)",
+        "Lockjaw",
+        "Clostridial tetanus"
+      ],
+      "summary": "Tetanus is a severe, often fatal disease caused by a poison (toxin) made by bacteria that live in soil and dung and enter the body through wounds. The toxin acts on the nerves and makes the muscles lock in painful, constant stiffness and spasms. Donkeys and horses are among the animals most sensitive to tetanus, and in donkeys it can kill a valuable working animal within days. It is very hard to treat, but easy and cheap to prevent with vaccination.",
+      "cause": "Tetanus is caused by Clostridium tetani, a bacterium that survives for years in soil, dust and the dung of animals, especially where horses, donkeys and cattle are kept. It forms tough spores (a resting, seed-like form) that cannot grow in open air. When spores get into a deep or dirty wound where there is little oxygen, such as a nail in the hoof, a castration wound, a harness sore or a foal's navel, they wake up and multiply. As they grow they release a powerful toxin called tetanospasmin. This toxin travels along the nerves to the spinal cord and brain. There it blocks the 'brake' signals that normally tell muscles to relax. Without these brakes, muscles stay contracted all the time and over-react to any sound, light or touch. This is why the donkey becomes stiff, cannot open its jaw, holds its tail out and has spasms. The wound itself may be tiny, hidden or already healed by the time signs appear. Signs usually show between about one and three weeks after the injury, but this can be shorter or much longer. Death usually happens because the breathing muscles go into spasm, the animal cannot eat or drink, or food and saliva go into the lungs and cause pneumonia.",
+      "spread": [
+        "Deep puncture wounds are the classic entry point, especially nails, thorns, wire or sharp sticks that go into the sole of the hoof and are often never noticed.",
+        "Castration wounds, particularly when done without clean instruments or without tetanus cover, are a common cause in young male donkeys.",
+        "Harness, saddle and cart sores, rope burns and wounds from beatings or sticks can let spores in, especially when dung and dust get into the wound.",
+        "Newborn foals can be infected through the wet navel stump if they are born on dirty ground or in a dung-filled shed.",
+        "Jennies (female donkeys) can be infected after a difficult foaling, through tears in the birth canal or a retained afterbirth.",
+        "Other routes include dental problems, ear or skin injuries, dirty injection sites and bite wounds from dogs or other donkeys.",
+        "Tetanus does not spread directly from one donkey to another; each case comes from spores in the environment entering a wound."
+      ],
+      "atRisk": "Any unvaccinated donkey of any age can get tetanus, and most donkeys in Kenya and East Africa have never been vaccinated. Working donkeys that pull carts, carry water, firewood or produce on rough roads are at high risk because they often get hoof punctures, harness sores and other injuries. Young males being castrated, newborn foals and jennies that have just foaled are especially vulnerable. Donkeys kept in yards or sheds with heavy dung build-up, near cattle bomas, or on land with scrap metal, nails and broken wire face more spore contact. Risk rises in the rains when ground is muddy and hooves soften, making punctures easier, and in dry seasons when thorny bush causes many small wounds. Pastoral and peri-urban donkeys that are rarely checked or handled may have wounds that nobody notices.",
+      "signs": {
+        "early": [
+          "Stiffness when walking, short steps, or reluctance to move or turn, which farmers often mistake for tiredness or sore feet.",
+          "The tail head is raised and the tail held slightly out from the body instead of hanging loosely.",
+          "Ears held stiffly upright and pointing back, nostrils flared and a worried, fixed facial expression.",
+          "The third eyelid (a pale membrane in the inner corner of the eye) flicks across the eye when the head is lifted or the donkey is startled by a noise or a clap.",
+          "Difficulty chewing, dropping feed, food balls in the cheeks, or eating very slowly; donkeys are stoic, so a quiet donkey off its feed should always be checked.",
+          "Over-reaction to noise, light or touch, with sudden jerky movements or twitching when approached."
+        ],
+        "advanced": [
+          "The classic 'sawhorse' stance, with all four legs stiff and stretched out and the neck held straight out.",
+          "Locked jaw (lockjaw), where the mouth can hardly be opened, with drooling and inability to eat or drink.",
+          "Strong muscle spasms that look like fits, often set off by noise, light or touch, sometimes with sweating.",
+          "Hard, board-like muscles over the neck, back, belly and legs.",
+          "Falling over and being unable to get up, with the legs held rigid; a donkey that goes down usually has a very poor outlook.",
+          "Difficulty breathing, high body temperature from the constant muscle work, constipation and inability to pass urine, followed by death if untreated."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Laminitis (founder)",
+          "howToTell": "A donkey with laminitis also stands strangely, but it rocks its weight back onto the heels to take pressure off painful front feet, and the hooves feel hot with a strong pulse above them. It can open its mouth and eat normally, the third eyelid does not flash, and the tail is not held stiffly out."
+        },
+        {
+          "name": "Rabies",
+          "howToTell": "Rabies usually causes changes in behaviour, such as aggression, unusual biting, depression, paralysis or a strange bray, rather than the rigid, locked muscles of tetanus. Rabies is a deadly notifiable disease that infects people, so if there is any chance of rabies, do not put your hand in the mouth, keep people away and report it to the County Veterinary Officer at once."
+        },
+        {
+          "name": "Lactation tetany (low blood calcium)",
+          "howToTell": "This mainly affects jennies nursing a foal or heavily worked animals, and causes trembling, stiffness and sometimes a fast 'thumping' heartbeat. There is usually no wound history, the third eyelid flashing is less typical, and a vet will see quick improvement after calcium treatment."
+        },
+        {
+          "name": "Colic or hyperlipaemia",
+          "howToTell": "Donkeys with colic or hyperlipaemia (a dangerous fat build-up in the blood seen in stressed, off-feed donkeys) are dull, stop eating and may lie down or roll, but their muscles are not locked rigid and they do not over-react to sound. All of these are emergencies, so call the vet either way."
+        }
+      ],
+      "diagnosis": "There is no quick farm or lab test for tetanus, so a vet diagnoses it mainly from the signs and the history. The vet will watch the donkey's stance and movement, check for third eyelid flashing by gently lifting the chin or making a sudden noise, test whether the jaw can be opened, and feel the muscles. They will look carefully for a wound, especially on the soles of the hooves, the castration site, the navel of foals, harness areas and the mouth. Blood tests may be used to rule out other problems such as low calcium or hyperlipaemia. If an animal dies, a post-mortem may be done mainly to rule out other causes, as tetanus leaves few clear changes. To help the vet, note when you first saw stiffness, any recent wounds, castration, foaling or injections, whether the donkey was ever vaccinated against tetanus, and whether it is still drinking and passing dung and urine.",
+      "firstSteps": [
+        "Call a vet straight away and describe the stiffness, raised tail, eye signs and jaw problems, because tetanus gets worse quickly and antitoxin works best early.",
+        "Move the donkey calmly to a quiet, dark, shaded and well-bedded shed or corner, away from children, dogs, radios, traffic and other noise that can trigger spasms.",
+        "Stop all work immediately; do not try to walk, ride or pull the donkey further than needed, and never beat or force it to move.",
+        "Place water and soft, wet feed (such as soaked hay or mash) at a height the donkey can reach without bending its stiff neck, but do not force food or liquid into its mouth, as it may choke or inhale it into the lungs.",
+        "Check the hooves and body for wounds, nails or thorns, but leave deep wound cleaning and opening to the vet, and note any wounds you find.",
+        "Protect yourself and others: a donkey in spasm can fall or kick suddenly, so approach slowly, keep children away and stand to the side, not behind or in front.",
+        "If the donkey goes down, give thick soft bedding and pad the head to prevent injury, and wait for the vet rather than trying to lift it alone.",
+        "Do not give any medicines, injections or home remedies without the vet's advice, and write down when signs started and what you have seen."
+      ],
+      "vetTreatment": "Treatment of tetanus in donkeys is difficult, slow and costly, and even with good care many animals die, so the vet will give an honest view of the chances before starting. Treatment usually aims at four things. First, the vet gives tetanus antitoxin, which neutralises toxin that is still circulating, though it cannot undo toxin already bound to the nerves. Second, antibiotics such as penicillin or metronidazole are used to kill the bacteria still producing toxin, and the vet will open, clean and flush the wound to let air in. Third, sedatives and muscle relaxants are used to calm the donkey and reduce painful spasms, together with a dark, quiet stable. Fourth, supportive care keeps the animal alive while the nerves recover: fluids and liquid feed may be given by stomach tube or drip if it cannot drink, the donkey may be supported in a sling, and the vet may need to help it pass urine and dung. Vaccination with tetanus toxoid is often started at the same time, because surviving tetanus does not give lasting immunity. Recovery, if it happens, takes weeks, and stiffness may slowly ease over a month or more. All medicines must be prescribed and given by a vet; do not buy antibiotics from an agrovet and treat on your own, because wrong use breeds antibiotic resistance and does not neutralise the toxin. If donkey milk or meat is ever used for food, the drug withdrawal periods the vet gives must be followed. Antitoxin is made from horse serum and can rarely cause reactions, which the vet will watch for.",
+      "prevention": [
+        "Vaccinate every donkey against tetanus with tetanus toxoid: a primary course followed by regular boosters on the schedule your vet advises; equine tetanus vaccines are commonly used in donkeys.",
+        "Vaccinate pregnant jennies in late pregnancy as your vet advises, so that their first milk (colostrum) gives the newborn foal protection, and plan foal vaccination with the vet.",
+        "When an unvaccinated donkey gets a deep wound, ask the vet promptly about tetanus antitoxin and starting vaccination, rather than waiting to see if signs appear.",
+        "Have castration done only by a vet or trained animal health worker using clean instruments, with tetanus protection given beforehand.",
+        "Keep foaling areas clean and dry, and dip the newborn foal's navel in a suitable disinfectant soon after birth.",
+        "Check hooves daily, especially in the rains, remove stones and thorns, and have the hooves trimmed regularly so cracks and punctures are found early.",
+        "Fit harnesses, saddles and cart shafts well, pad them, and check for sores every day; rest donkeys with sores until they heal.",
+        "Clear yards, sheds and paths of nails, wire, broken glass and scrap metal, and remove dung build-up regularly to reduce spore numbers."
+      ],
+      "impact": "In Kenya, donkeys are working animals that carry water, firewood, farm produce and goods to market, and many families, especially women, depend on them for daily income and to reduce heavy workloads. Losing a donkey to tetanus means lost transport income, more hours spent fetching water by hand, and the cost of buying a replacement. Treatment, when attempted, needs repeated vet visits, medicines and weeks of nursing, and the donkey cannot work during that time. Because the disease is often fatal even with treatment, the money spent may not save the animal. A cheap vaccine given in advance is far less costly than one case of tetanus, which makes vaccination one of the best investments a donkey owner can make.",
+      "humanHealth": "People cannot catch tetanus from a sick donkey, but they can get tetanus in the same way donkeys do, from soil, dust and dung entering cuts, thorn pricks and nail wounds. Farmers, carters and children who work around donkeys and manure are at risk. Make sure everyone in the household is up to date with tetanus vaccination at the local health facility, wear shoes and gloves when cleaning sheds and handling wounds, and clean any cut promptly and seek medical advice for deep or dirty wounds. A donkey in tetanus spasm can also kick or fall suddenly, so handle it carefully to avoid injury.",
+      "outlook": "The outlook for a donkey with tetanus is guarded to poor. Donkeys that are treated early, while they can still stand, drink and swallow, and whose signs develop slowly, have the best chance. Animals that go down, cannot drink, have severe spasms or develop signs very quickly after an injury usually die despite treatment. Survivors often begin to improve after the first week or two, and may need several weeks or more to recover fully, but many go back to normal work. Recovery does not protect the donkey in future, so it must be vaccinated afterwards.",
+      "faqs": [
+        {
+          "q": "Can my other donkeys catch tetanus from the sick one?",
+          "a": "No. Tetanus does not pass from animal to animal. Each case comes from spores in soil or dung entering a wound. However, if one donkey got tetanus, the others share the same environment and risks, so this is a good time to vaccinate all of them and check them for wounds."
+        },
+        {
+          "q": "The wound healed long ago. Can it still be tetanus?",
+          "a": "Yes. Signs usually appear one to three weeks after the injury, and sometimes later, so the wound may have healed or been too small to notice, such as a nail prick in the hoof. Tell the vet about any wounds, castration or foaling in the past weeks, even if they look healed."
+        },
+        {
+          "q": "Will antibiotics from the agrovet cure tetanus?",
+          "a": "No, not on their own. Antibiotics can kill the bacteria, but the damage comes from the toxin already attached to the nerves. A vet needs to give antitoxin, clean the wound, control spasms and give supportive care. Using antibiotics without a vet wastes money, delays proper treatment and adds to antibiotic resistance."
+        },
+        {
+          "q": "Is there a vaccine for donkeys, and is it expensive?",
+          "a": "Yes. Tetanus toxoid vaccines, often the ones made for horses, are used in donkeys and are usually affordable compared to the cost of losing an animal. A donkey needs a first course and then regular boosters. Ask your vet, County Veterinary Officer or a donkey welfare organisation about vaccination; some run vaccination days in donkey-working areas."
+        },
+        {
+          "q": "If my donkey survives tetanus, is it protected for life?",
+          "a": "No. The amount of toxin that causes disease is too small to build lasting immunity, so a donkey that recovers can get tetanus again. It needs to be vaccinated once it is well enough, as your vet advises."
+        },
+        {
+          "q": "My donkey is stiff but still eating. Should I wait and see?",
+          "a": "No. If you see stiffness together with a raised tail, pricked ears, flashing third eyelid or slow chewing, call the vet now. Tetanus usually gets worse over a few days, and treatment works best before the donkey stops drinking or goes down. Laminitis and other problems can also look like stiffness, and they also need a vet."
+        }
+      ]
+    },
+    "products": [],
+    "imagePrompt": "A grey working donkey standing rigidly in a sawhorse stance with all four legs stiffly stretched out, neck held straight, ears pricked and tail held stiffly away from the body, in a dusty rural Kenyan homestead compound with an acacia tree in the background.",
+    "seoDescription": "Tetanus in donkeys: spot stiff sawhorse stance, raised tail and locked jaw early, what to do before the vet comes, and how vaccination prevents it."
+  },
+  "internal-worms": {
+    "card": {
+      "headline": "Pot belly, rough coat, ribs showing",
+      "look": "The donkey is thin along the back and ribs but has a rounded, dropped belly. Its coat is dull, rough and slow to shed, and it may be weak, cough or show mild colic.",
+      "action": "Weigh or tape the donkey, collect a fresh dung sample, and ask your vet or County Veterinary Officer for a worm egg count and the right dewormer before you treat."
+    },
+    "detail": {
+      "aka": [
+        "Worm burden",
+        "Strongyles (red worms)",
+        "Bots (bot fly larvae)",
+        "Donkey lungworm",
+        "Minyoo (Swahili for worms)"
+      ],
+      "summary": "Internal worms are parasites that live inside the donkey's gut, lungs or stomach and feed off the animal. In Kenya almost every donkey that grazes carries some worms. Heavy burdens cause weight loss, weakness, a rough coat, colic and coughing. Because donkeys are tough and hide illness, worms often go unnoticed until the animal is thin and can no longer work well.",
+      "cause": "Several kinds of parasites are involved. The most important are strongyles, often called red worms. Small strongyles are the most common. Their young stages (larvae) burrow into the wall of the large intestine and can stay hidden there, or 'encysted', for months. When many come out at once, often in late winter-like cool spells or after deworming, they can cause sudden diarrhoea and fast weight loss. Large strongyles are fewer today but their larvae travel through the blood vessels of the gut, damaging them and causing colic (belly pain). Lungworm (Dictyocaulus arnfieldi) lives in the airways. Donkeys are its natural host and often carry it with few signs, but it can cause a long-lasting cough, and it can pass to horses, which suffer more. Bots are not true worms but the larvae (maggots) of the bot fly. The fly lays small yellow eggs on the hair of the legs, chest and shoulders. The donkey licks them, the larvae hatch in the mouth and then attach to the stomach lining for many months. Other parasites include roundworms (Parascaris) in young foals, which can block the gut, tapeworms linked to some types of colic, pinworms that cause tail rubbing, and liver fluke in wet, swampy grazing. Together these parasites steal nutrients, damage the gut lining, cause blood and protein loss, and reduce how well the donkey uses its feed.",
+      "spread": [
+        "Worm eggs pass out in the dung of infected donkeys, horses and mules and hatch into larvae on the grass.",
+        "In warm, wet weather, especially during the long and short rains, larvae survive well and climb up wet grass where donkeys eat them.",
+        "Communal grazing, shared watering points and overstocked paddocks keep re-infecting donkeys because dung builds up on the ground.",
+        "Bot flies lay sticky yellow eggs on the donkey's hair in the warm months, and the donkey swallows the larvae when it licks or scratches itself.",
+        "Lungworm larvae are swallowed from contaminated pasture, then travel to the lungs; donkeys grazing with horses can pass lungworm on to them.",
+        "Tapeworms are picked up when donkeys eat tiny pasture mites carrying the tapeworm's young stage.",
+        "Liver fluke spreads through water snails, so donkeys grazing near swamps, dams and irrigation channels are more exposed."
+      ],
+      "atRisk": "Young donkeys from foals to about two years old carry the heaviest burdens because they have not yet built up resistance. Very old donkeys, pregnant and nursing jennies, and working donkeys that are overworked and underfed also suffer more. Donkeys on communal grazing, roadside verges and small, overused paddocks are at higher risk than those on rotated or rested land. Worm pressure is usually highest during and after the long and short rains, when grass is wet and larvae survive well. Fluke is a problem in wetter highland and lakeside areas. In hot, dry pastoral and ASAL areas fewer larvae survive on pasture, but donkeys there are often already thin from poor feed, so even a moderate worm burden hurts them. Donkeys that have not been dewormed for a long time, or that are dewormed with the wrong product or too little drug, are also at risk.",
+      "signs": {
+        "early": [
+          "Slow, steady weight loss, with the spine, hip bones and ribs becoming easier to see and feel.",
+          "A dull, rough, dry coat that does not shed properly, even when the donkey is eating.",
+          "Less energy for work; the donkey tires quickly when pulling a cart or carrying water.",
+          "Small yellow bot eggs stuck to the hair of the front legs, chest, shoulders or mane.",
+          "Rubbing the tail against walls or posts, leaving a broken, bare-looking tail head (often pinworms).",
+          "An occasional dry cough, especially when moving or working."
+        ],
+        "advanced": [
+          "A pot belly that hangs down while the back and hindquarters are thin.",
+          "Pale gums and inner eyelids, showing anaemia (thin blood from blood loss).",
+          "Soft dung or diarrhoea, sometimes sudden and severe, with rapid weight loss.",
+          "Swelling under the belly, chest or lower legs from protein loss.",
+          "Colic signs: dullness, not eating, lying down more than usual, rolling, looking at or kicking at the belly; in donkeys these signs are often quiet and easy to miss.",
+          "A persistent cough, faster breathing or poor recovery after work.",
+          "In young foals, poor growth, a big belly and sometimes sudden colic from a blockage of roundworms."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Dental problems",
+          "howToTell": "A donkey with bad teeth also loses weight, but it drops chewed feed balls from its mouth (quidding), chews slowly or on one side, has a bad smell from the mouth, or has whole grain or long fibre in its dung. A vet can check the teeth; many thin donkeys have both teeth and worm problems."
+        },
+        {
+          "name": "Poor feeding and overwork",
+          "howToTell": "Underfed or overworked donkeys are thin and weak, but they usually improve quickly with more feed and rest. If the donkey stays thin on good feed, has a pot belly, pale gums or a high worm egg count, worms are more likely."
+        },
+        {
+          "name": "Trypanosomiasis (tsetse disease, nagana)",
+          "howToTell": "In tsetse areas, trypanosomiasis causes weight loss and anaemia like worms, but it often comes with fever, swollen glands, watery eyes and swelling under the belly or legs, and may affect several animals after grazing near bush. A blood test by the vet tells them apart."
+        },
+        {
+          "name": "Respiratory infections such as strangles or dust cough",
+          "howToTell": "Strangles brings fever, thick yellow discharge from the nose and swollen glands under the jaw. Dust-related cough improves when the donkey is moved to cleaner bedding or feed. Lungworm cough is usually long-lasting, without fever or heavy nasal discharge, and the donkey may otherwise look well."
+        }
+      ],
+      "diagnosis": "The vet will look at the donkey's body condition, gums, coat, belly shape, breathing and teeth, and ask about deworming history and grazing. The main test is a faecal egg count, where a fresh dung sample is checked under a microscope to count worm eggs and see which types are present. A special test (Baermann test) looks for lungworm larvae in the dung. Egg counts do not show encysted small strongyle larvae or bots, so the vet also uses the signs and history. A blood test may be done to check for anaemia and low protein, or to rule out trypanosomiasis. If a donkey dies, a post-mortem can show the worms, bots and gut damage directly. Before the vet comes, collect a few balls of fresh dung straight after the donkey passes it, put it in a clean, sealed plastic bag with the air pressed out, label it with the donkey's name and date, and keep it cool and out of the sun. Write down when the donkey was last dewormed, which product was used, and how much it weighs by donkey weigh tape if you have one.",
+      "firstSteps": [
+        "Check the donkey's condition by feeling its ribs, spine and hips, and look at its gums for paleness; write down what you find.",
+        "Collect a fresh dung sample in a clean sealed bag, keep it cool, and take it to your vet or ask the County Veterinary Officer where it can be tested.",
+        "Reduce the donkey's workload and let it rest until it has been checked, because a weak, wormy donkey can collapse under heavy loads.",
+        "Give clean water at all times and good quality hay or grass, and offer feed in small, regular amounts rather than large meals.",
+        "If you see colic signs, such as rolling, lying down a lot, not eating or not passing dung, call the vet urgently, because colic can kill donkeys quickly.",
+        "Scrape or pick off yellow bot eggs from the legs and shoulders using a bot knife or blunt blade, and burn or bury them.",
+        "Pick up dung from the paddock or boma regularly so fewer eggs reach the grass.",
+        "Do not give any dewormer until the vet has advised which product suits the worms present and the donkey's weight, age and condition."
+      ],
+      "vetTreatment": "Treatment uses dewormers (anthelmintics) chosen by the vet for the worms found. Common groups include macrocyclic lactones such as ivermectin and moxidectin, which act on strongyles, lungworm and bots; benzimidazoles such as fenbendazole, sometimes given as a longer course for encysted small strongyle larvae; pyrantel; and praziquantel for tapeworms. Not every product is safe for every donkey; some are not suitable for very young foals or very thin animals, and the vet will choose accordingly. The most common mistake is underdosing. Donkeys are usually heavier than they look and many farmers guess, so the vet will estimate weight with a donkey weigh tape or chart, not a cattle or horse tape. Underdosing fails to kill worms and helps them become resistant. Resistance to dewormers, especially in small strongyles, is a growing problem worldwide, so the vet may suggest a follow-up egg count about two weeks after treatment to check the drug worked. In a very heavily infected donkey, killing many worms at once can sometimes trigger colic or diarrhoea, so the vet may treat in stages and ask you to watch closely for a few days. Severe cases with diarrhoea, swelling or colic may need fluids, pain relief and supportive care. If donkey milk or meat enters the food chain, the vet will tell you the withdrawal period for the product, the time you must wait after treatment before milk or meat can be used.",
+      "prevention": [
+        "Work with your vet on a deworming plan based on regular faecal egg counts rather than deworming every donkey on a fixed calendar; this saves money and slows drug resistance.",
+        "Weigh donkeys with a donkey weigh tape or chart before every treatment so the full dose prescribed by the vet is given.",
+        "Use the product the vet recommends for the season and worm type, for example covering bots after the fly season and tapeworms where they are a problem.",
+        "Pick up dung from small paddocks and bomas at least a few times a week, and do not spread fresh donkey or horse dung on grazing land.",
+        "Rotate grazing where possible, rest paddocks, or graze cattle, sheep or goats behind donkeys, since most donkey worms do not survive in ruminants.",
+        "Avoid overstocking, and keep donkeys away from swampy areas and stagnant water where liver fluke snails live.",
+        "Remove bot eggs from the coat regularly during the fly season.",
+        "Keep new donkeys separate for a period and have them checked and treated by the vet before they join the herd.",
+        "Keep donkeys and horses on separate grazing, or treat donkeys for lungworm, to protect horses from lungworm.",
+        "Feed well, provide clean water, check teeth yearly and avoid overwork so donkeys can cope with the worms they carry."
+      ],
+      "impact": "For many Kenyan households the donkey is a working partner, carrying water, firewood and produce to market or pulling a cart that earns daily income. A wormy donkey tires quickly, carries less, and needs more rest, which directly cuts what the family can earn or move. Feed is wasted because worms take a share of it, and thin donkeys need longer to recover after the dry season. Young donkeys grow slowly and may never reach full working size. Colic from worms can mean expensive vet visits or the sudden loss of an animal that costs a lot to replace. Repeated use of the wrong dewormer wastes money and helps resistant worms build up on the farm and in communal grazing.",
+      "humanHealth": "Most donkey worms do not infect people. Very rarely, bot fly larvae can enter human skin or eyes, so wash your hands after picking off bot eggs or handling the coat, and keep hands away from your eyes. Donkeys can carry hydatid cysts, which dogs pick up by eating raw offal, so do not feed raw donkey organs to dogs. If donkey milk or meat is used for food, always respect the withdrawal period given by the vet for any dewormer.",
+      "outlook": "Most donkeys recover well once the right dewormer is given at the correct weight and their feeding, rest and teeth are put right. Coat and energy often improve within weeks, but regaining lost weight can take months, especially in old or very thin animals. The outlook is poorer when there is severe diarrhoea from encysted small strongyles, heavy swelling from protein loss, or colic from gut damage, and some of these donkeys may not survive even with treatment. Long-term success depends on preventing re-infection through good pasture hygiene, sensible deworming based on egg counts, and using drugs that still work on your farm.",
+      "faqs": [
+        {
+          "q": "How often should I deworm my donkey?",
+          "a": "There is no single right answer for every farm. Many vets now advise testing dung with a faecal egg count and treating the donkeys that carry the most eggs, rather than dosing all animals on a fixed schedule. Young donkeys usually need more attention than adults. Ask your vet to set a plan around your local seasons, such as checking before and after the rains, and to include bot and tapeworm treatment where needed."
+        },
+        {
+          "q": "Can I use my cattle or goat dewormer on my donkey?",
+          "a": "Do not do this without vet advice. Some cattle and goat products are not made or tested for donkeys, can be the wrong strength, or can cause reactions, especially injectable forms. Some worms in donkeys, like bots and tapeworms, are not covered by many ruminant products. Ask your vet or agrovet for a product labelled for horses and donkeys, and dose by weight as the vet directs."
+        },
+        {
+          "q": "I dewormed my donkey but it is still thin. Why?",
+          "a": "There are several possible reasons. The dose may have been too small because the weight was guessed. The worms on your farm may be resistant to that drug. Encysted small strongyle larvae may not have been reached. The donkey may have bad teeth, too little feed, too much work, or another disease such as trypanosomiasis. A vet can do a follow-up egg count, check the teeth and look for other causes."
+        },
+        {
+          "q": "Can my donkeys give worms to my horses or cattle?",
+          "a": "Donkeys share most of their worms with horses and mules, and donkey lungworm is a particular risk to horses because it can give them a bad cough. Most donkey worms do not survive in cattle, sheep or goats, which is why mixed or rotated grazing with ruminants can help clean pastures. Liver fluke is an exception, as it can affect all these animals."
+        },
+        {
+          "q": "Is it safe to deworm a pregnant jenny or a young foal?",
+          "a": "Often yes, but only with products the vet confirms are safe for pregnancy or for that age. Some dewormers are not recommended for very young foals or very thin animals. Controlling worms in the jenny before and after foaling helps protect the foal, which picks up worms from the ground and from its mother's dung. Always tell the vet if the jenny is pregnant or nursing."
+        },
+        {
+          "q": "What are the yellow dots stuck on my donkey's legs?",
+          "a": "These are almost certainly bot fly eggs. The fly glues them to the hair, and when the donkey licks the area the larvae hatch and move to its stomach. Scrape them off with a bot knife or blunt blade and destroy them, and ask your vet about a dewormer that kills bots at the right time of year."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "ade-3",
+        "role": "Vitamin A, D3 and E support for thin, run-down donkeys recovering from a heavy worm burden, especially in the dry season when green feed is scarce, used alongside vet-prescribed deworming, better feeding and rest."
+      },
+      {
+        "slug": "k-digest",
+        "role": "Digestive and liver support during recovery after deworming, helping a donkey whose gut has been stressed by parasites, as an aid to vet treatment and good feeding, not a dewormer or replacement for one."
+      }
+    ],
+    "imagePrompt": "A thin grey donkey standing in a dry Kenyan smallholder yard in daylight, side view, showing visible ribs and hip bones, a rounded hanging pot belly and a dull, rough, patchy coat.",
+    "seoDescription": "Internal worms in donkeys: spot weight loss, rough coat, pot belly, colic and cough early. Kenyan farmer guide to causes, vet treatment and prevention."
+  },
+  "trypanosomiasis": {
+    "card": {
+      "headline": "Thin, weak donkey with swollen legs",
+      "look": "The donkey loses weight even when feeding, tires quickly, and has pale gums and puffy swelling on the lower legs, belly or sheath. It may have a fever that comes and goes, and watery eyes.",
+      "action": "Keep the donkey resting in shade with water and call your vet or animal health officer for a blood test before giving any trypanocide drug."
+    },
+    "detail": {
+      "aka": [
+        "Nagana",
+        "Ndorobo (local name in parts of Kenya)",
+        "Ugonjwa wa mbung'o (tsetse disease)",
+        "Surra (when caused by Trypanosoma evansi)",
+        "Animal African trypanosomosis (AAT)"
+      ],
+      "summary": "Trypanosomiasis is a blood disease caused by tiny parasites called trypanosomes. They are spread mainly by tsetse flies (mbung'o) and also by other biting flies such as horse flies and stable flies. In donkeys it is usually a slow, wasting disease: the animal becomes thin, weak and anaemic and can no longer work. Without proper treatment many donkeys slowly decline and can die, and the disease is a major cause of lost working power in tsetse areas of Kenya and East Africa.",
+      "cause": "The disease is caused by single-celled parasites of the genus Trypanosoma that live and multiply in the blood and body fluids. In donkeys in East Africa the main species are Trypanosoma congolense, Trypanosoma vivax and Trypanosoma brucei brucei, which come mostly from tsetse flies, and Trypanosoma evansi, which causes surra and is carried mechanically by biting flies, especially in camel-keeping areas. When an infected fly bites, trypanosomes enter the blood and multiply in waves. Each wave brings a spell of fever; the body's defences kill many parasites, but the parasites change their outer coat and a new wave appears. Over weeks and months the parasites and the body's reaction destroy red blood cells, causing anaemia (too few red blood cells, which shows as pale gums and weakness). Damage to small blood vessels lets fluid leak into the tissues, which is why the legs, belly, chest and sheath or udder swell. The animal burns energy fighting the infection, so it loses muscle and condition. Some species, especially T. brucei and T. evansi, can also enter the brain and nervous system in later stages, causing wobbliness and abnormal behaviour. The weakened immune system also makes the donkey more likely to pick up other infections.",
+      "spread": [
+        "Tsetse flies (mbung'o) are the main carriers of T. congolense, T. vivax and T. brucei; the parasite develops inside the fly and is passed on when the fly bites a donkey.",
+        "Biting flies such as horse flies (tabanids) and stable flies can carry blood with trypanosomes on their mouthparts from a sick animal to a healthy one within minutes, which spreads T. evansi and T. vivax even outside tsetse areas.",
+        "Grazing, watering or working donkeys near bush, riverine forest, lake shores and thickets where tsetse rest raises the risk, especially in the morning and late afternoon when flies are active.",
+        "Sharing the same needle or syringe between animals during injections or vaccination can pass infected blood directly from one animal to another.",
+        "Herding donkeys together with infected cattle, camels, goats or wildlife provides a constant source of parasites for flies to pick up.",
+        "Moving donkeys into or through tsetse belts, for example during dry-season migration, trading or transport work, can bring them into contact with infected flies.",
+        "Stress from heavy work, long journeys, poor feeding and worms does not cause the disease, but it can make a carrier donkey become clearly sick."
+      ],
+      "atRisk": "Any donkey living in or passing through tsetse areas is at risk, including parts of the Coast, the Lake Victoria basin, the Maasai Mara and other bushy lowland and riverine areas. Donkeys kept with camels in northern and eastern pastoral areas such as Turkana, Marsabit, Isiolo and Wajir are at risk of surra (T. evansi). Working donkeys that are overworked, underfed, heavily wormed or old are more likely to become severely ill. Pregnant jennies may abort, and foals and young donkeys can decline quickly. Risk often rises during and after the rains, when flies are more numerous, and during dry-season movements when herds go to bushy grazing and water points near tsetse habitat. Donkeys are sometimes thought to be more tolerant than horses, but they still suffer, and because donkeys hide illness well, the disease is often noticed late.",
+      "signs": {
+        "early": [
+          "Fever that comes and goes; the donkey may feel hot, breathe faster or seem dull for a day or two, then appear normal again.",
+          "Tiring easily during work, lagging behind, or refusing to pull or carry loads it managed before.",
+          "Slight weight loss, with ribs and hip bones becoming easier to see, even though the donkey is still eating.",
+          "Watery eyes and a clear discharge from the eyes in some animals.",
+          "Paler than normal gums and inner eyelids, which should normally be pink.",
+          "A dull coat and slightly reduced interest in food."
+        ],
+        "advanced": [
+          "Marked wasting, with a sharp backbone, sunken flanks and thin neck and hindquarters, despite eating.",
+          "Very pale or white gums and eyelids from severe anaemia, sometimes with a fast heartbeat you can feel on the left side of the chest.",
+          "Soft, puffy swelling (oedema) of the lower legs, under the belly, under the chest, and of the sheath or udder; pressing with a finger may leave a dent.",
+          "Severe weakness, stumbling, unwillingness to stand for long, or lying down much more than normal.",
+          "Swollen lymph nodes (glands) that can be felt under the skin, for example in front of the shoulder.",
+          "Abortion in pregnant jennies and weak or stunted foals.",
+          "In some cases wobbly walking, circling, dullness or other nervous signs when the parasites reach the brain.",
+          "Collapse and death after weeks to months if not treated."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Heavy worm burden (strongyles and other worms)",
+          "howToTell": "Worms also cause weight loss, pale gums and sometimes belly swelling, but there is usually no fever. A dung sample showing many worm eggs and improvement after vet-advised deworming point to worms. The two problems often occur together, so a blood test is still useful in tsetse areas."
+        },
+        {
+          "name": "Malnutrition and dental problems",
+          "howToTell": "Donkeys with sharp or missing teeth drop food, chew slowly and have whole grains or long fibres in dung. Starvation loses weight without fever or leg swelling. The donkey usually improves with better feed and dental care, while a donkey with trypanosomiasis keeps wasting despite good feed."
+        },
+        {
+          "name": "Equine piroplasmosis (babesiosis, tick fever)",
+          "howToTell": "This tick-borne blood parasite disease also causes fever and anaemia, but often shows yellow gums (jaundice) and sometimes dark red or brown urine. Ticks are usually found on the animal. A vet can tell the two apart on a stained blood smear."
+        },
+        {
+          "name": "Dourine",
+          "howToTell": "Dourine is a related trypanosome disease spread by mating, not flies. It causes swelling of the genitals, raised round skin plaques and later nerve weakness, mostly in breeding animals. Mating history and laboratory tests are needed to separate it, and any suspicion should be discussed with the County Veterinary Officer."
+        }
+      ],
+      "diagnosis": "A vet suspects trypanosomiasis from the signs, the area, and the history of tsetse or biting flies. Confirmation needs a blood test. The vet or laboratory examines a drop of fresh blood under the microscope to see moving parasites, and prepares thin and thick stained blood smears to identify the species. Spinning blood in a fine tube (the haematocrit or buffy coat method) measures the packed cell volume, which shows how anaemic the donkey is, and concentrates parasites so they are easier to find. Parasites appear in the blood in waves, so a single negative test does not rule the disease out; samples taken during a fever are more likely to be positive, and repeat tests may be needed. Some laboratories, such as county and KALRO laboratories, can run PCR (a DNA test) or antibody tests, which are more sensitive, especially for T. evansi. At post-mortem a vet may find a thin carcass, watery fluid in tissues and body cavities, pale organs, an enlarged spleen and swollen lymph nodes. To help the vet, record the donkey's temperature morning and evening if you have a thermometer, note when weight loss and swelling started, where the donkey has grazed, worked or travelled, whether tsetse or many biting flies were seen, any drugs already given, and whether other donkeys, cattle or camels in the herd are also sick.",
+      "firstSteps": [
+        "Stop all work immediately and let the donkey rest; working a weak, anaemic donkey can make it collapse.",
+        "Move the donkey to a shaded, airy place protected from flies, and keep it away from bushy grazing and water points where tsetse are found.",
+        "Provide clean drinking water at all times and good-quality soft hay or grass so the donkey keeps eating; do not force feed.",
+        "Check the gums, eyelids and legs, take the temperature if you can, and write down what you see with dates so the vet can follow the pattern.",
+        "Look at the rest of the herd, including cattle and camels, for similar thinness, swelling or fever, and keep sick animals apart where possible.",
+        "Use a new or properly sterilised needle for every animal if any injections are being given on the farm, to avoid spreading infected blood.",
+        "Do not buy and inject a trypanocide from the agrovet without a vet's advice; some of these drugs are dangerous for donkeys at the wrong dose, and wrong use builds drug resistance.",
+        "Call your vet, animal health officer or County Veterinary Officer early, because treatment works best before the donkey becomes severely wasted."
+      ],
+      "vetTreatment": "Treatment must be prescribed and given by a vet or under a vet's direct guidance. Vets use drugs called trypanocides, which kill trypanosomes in the blood. Commonly used active ingredients include diminazene aceturate and isometamidium chloride for tsetse-borne trypanosomes, and quinapyramine or melarsomine for T. evansi (surra). The choice depends on which parasite is found, the area and known drug resistance. Donkeys and horses are more sensitive than cattle to some of these drugs, which can cause serious side effects, painful swelling at the injection site or poisoning if given wrongly, so correct product, dose and injection method matter greatly. Drug resistance to trypanocides is a growing problem in East Africa, often linked to underdosing and repeated self-treatment, so the vet may advise a different drug if the donkey does not improve. The vet may also treat worms, advise on feeding to rebuild condition, and recommend rest for several weeks. In some cases a preventive (prophylactic) drug is advised for donkeys that must keep working in tsetse areas. Antibiotics do not kill trypanosomes; they are only used if the vet finds a separate bacterial infection, and they should be used responsibly to avoid antimicrobial resistance. Expect the fever to settle within days after the right treatment, but weight and strength return slowly over weeks. Relapses can occur, so follow-up blood tests may be needed. If donkey milk or meat is used, observe the withdrawal period stated by the vet and on the drug label before any milk or meat is consumed or sold.",
+      "prevention": [
+        "Reduce contact with tsetse by avoiding grazing, watering and resting donkeys in bush, thickets, riverine forest and lake shores where tsetse live, especially in the early morning and late afternoon.",
+        "Support community tsetse control, such as blue and black cloth traps and insecticide-treated targets, often run with county veterinary teams and KENTTEC (the Kenya Tsetse and Trypanosomosis Eradication Council).",
+        "Protect donkeys with fly repellents or insecticide sprays and pour-ons that are approved for equines, following label and vet advice, and consider insecticide-treated nets around stables in high-risk areas.",
+        "Control biting flies around the homestead by removing manure and wet bedding regularly and draining stagnant water, which reduces stable flies and horse flies.",
+        "Always use a clean needle for each animal during injections and vaccination, by vets, agrovet staff and farmers alike.",
+        "Ask your vet about preventive trypanocide treatment for donkeys that must work or travel in tsetse areas, and never give these drugs without veterinary guidance.",
+        "Keep donkeys strong with good feed, clean water, salt, regular deworming, hoof and dental care and fair workloads, so they cope better if infected.",
+        "Quarantine new donkeys for a few weeks and ask for a blood test if they come from a tsetse or surra area, and test donkeys after long journeys through such areas."
+      ],
+      "impact": "For many Kenyan families a donkey carries water, firewood, farm produce and goods to market, and earns cash through transport work. A donkey with trypanosomiasis works less, then not at all, so households lose income and family members, often women and children, must carry loads themselves. Treatment, repeated blood tests and lost working days add cost, and wrong or repeated self-treatment wastes money and builds drug resistance. Jennies may abort or raise weak foals, slowing herd growth. Deaths of working donkeys are a heavy loss, as replacing a donkey is expensive. Because the same flies and parasites affect cattle, goats and camels, a sick donkey is also a warning that the whole herd may be at risk.",
+      "humanHealth": "The trypanosome species that usually cause disease in donkeys (T. congolense, T. vivax and T. brucei brucei) do not infect people. However, in some tsetse areas near the Lake Victoria basin, the related parasite Trypanosoma brucei rhodesiense causes human sleeping sickness, and livestock can carry it, so people in these areas should protect themselves from tsetse bites with long sleeves and repellents and see a health worker if they get fever, headache and swollen glands after being bitten. Very rare human infections with T. evansi have been reported elsewhere in the world. Trypanocide drugs can leave residues in milk and meat, so the withdrawal period given by the vet must be respected before any donkey milk or meat is consumed.",
+      "outlook": "Donkeys treated early, with the right drug for the parasite and a correct dose, often recover well, although regaining weight and full working strength can take weeks to months. The outlook is poorer when the donkey is already severely wasted or very anaemic, is old, pregnant or carrying heavy worms, when nervous signs have appeared, or when the parasites are resistant to the drug used. Relapses and reinfection are common if the donkey goes back to the same fly-infested grazing without protection. Good rest, feeding and fly control after treatment improve the chances of a lasting recovery.",
+      "faqs": [
+        {
+          "q": "Can I just buy a trypanocide from the agrovet and inject my donkey myself?",
+          "a": "It is not advised. Some trypanocides that are commonly used in cattle can be toxic to donkeys if the dose or injection method is wrong, and they can cause severe painful swellings. Self-treatment without a blood test also means you may be treating the wrong disease, such as worms or tick fever. Repeated wrong doses are a major reason trypanocides are failing in Kenya. Ask a vet to confirm the disease and choose and give the right drug."
+        },
+        {
+          "q": "My donkey tested negative but is still getting thinner. Could it still be trypanosomiasis?",
+          "a": "Yes, it is possible. Trypanosomes appear in the blood in waves, and between waves there may be too few to see under a microscope. Ask the vet whether a repeat test during a fever, a buffy coat test, or a PCR or antibody test is available. At the same time the vet should check for other causes such as worms, teeth problems and poor feeding."
+        },
+        {
+          "q": "We have no tsetse flies in our area. Can donkeys still get this disease?",
+          "a": "They can. Trypanosoma evansi, which causes surra, and Trypanosoma vivax can be spread by ordinary biting flies such as horse flies and stable flies, and by shared needles. This is why donkeys kept with camels in northern Kenya can get surra far from tsetse areas. Donkeys can also pick up infection while travelling through tsetse areas and become sick after returning home."
+        },
+        {
+          "q": "Will my donkey be immune after it recovers?",
+          "a": "No. Donkeys do not develop lasting protection, because trypanosomes keep changing their outer coat and there are several species. A recovered donkey can be infected again if it goes back to fly-infested areas. There is currently no vaccine, so fly control, careful grazing and vet-advised preventive treatment are the main protection."
+        },
+        {
+          "q": "Can a donkey with trypanosomiasis infect my cattle?",
+          "a": "The donkey does not pass it directly by touching other animals, but flies that bite a sick donkey can carry parasites to cattle, goats and camels nearby, and cattle can infect donkeys the same way. If one animal is diagnosed, ask your vet to check the rest of the herd and step up fly control for all animals."
+        },
+        {
+          "q": "Should I keep my donkey working lightly while it is being treated?",
+          "a": "No. A donkey with trypanosomiasis is anaemic, so its blood carries less oxygen, and work can make it collapse or slow recovery. Rest it fully until the vet says it can start light work again, and build up workload gradually as weight and strength return."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "An oral rehydration and heat-stress relief solution that can be offered in drinking water to help a feverish, weak donkey stay hydrated and keep drinking during illness and recovery. It supports the animal alongside vet-prescribed trypanocide treatment, rest and fly control; it does not kill trypanosomes or treat the disease."
+      }
+    ],
+    "imagePrompt": "A thin grey donkey standing in the shade of an acacia tree on a Kenyan smallholding, with visible ribs and hip bones, a dull coat, and soft puffy swelling of the lower legs and under the belly, natural daylight, realistic photo.",
+    "seoDescription": "Trypanosomiasis in donkeys: spot weight loss, anaemia, swollen legs and fever from tsetse and biting flies. First steps, vet treatment and prevention in Kenya."
+  },
+  "strangles": {
+    "card": {
+      "headline": "Swollen lumps under the jaw",
+      "look": "The donkey is dull, off its feed and has thick yellow pus running from the nose. Hot, painful swellings appear under the jaw or behind the cheek, and some burst and drain pus.",
+      "action": "Separate the sick donkey from all other donkeys, horses and mules at once, give it its own water bucket, and call your vet."
+    },
+    "detail": {
+      "aka": [
+        "Equine distemper",
+        "Streptococcus equi infection",
+        "Bastard strangles (when abscesses spread inside the body)",
+        "Equine respiratory infection"
+      ],
+      "summary": "Strangles is a highly contagious bacterial infection of the nose, throat and lymph nodes of donkeys, horses and mules. Lymph nodes are small glands that filter germs; in strangles they swell and fill with pus. The disease gets its name because badly swollen glands can squeeze the throat and make breathing hard. Most donkeys recover with good nursing and vet care, but it spreads fast through yards, markets and watering points, keeps working donkeys off work for weeks, and can cause serious complications.",
+      "cause": "Strangles is caused by the bacterium Streptococcus equi subspecies equi. It enters through the nose or mouth and settles in the lining of the nose and throat. Within days it moves into the lymph nodes under the jaw and around the throat, where the body fights it and pus builds up. The glands become hot, swollen and painful, and they often burst on the outside or drain into the throat. Some pus drains into the guttural pouches, two air-filled sacs at the back of the head found only in equines. Pus left there can harden into small balls called chondroids, and the bacteria can hide in them for months or even years. A donkey like this may look healthy but still spread the disease; it is called a carrier. Occasionally the bacteria travel through the blood to other organs such as the lungs, liver or gut, forming hidden abscesses. In a few animals the immune system over-reacts and damages small blood vessels, a condition called purpura haemorrhagica. Other respiratory infections in donkeys, such as equine influenza, equine herpesvirus and bacterial pneumonia, can look similar and often hit when animals are stressed, overworked, cold or crowded.",
+      "spread": [
+        "Direct nose-to-nose contact between donkeys, horses and mules, especially when animals meet at markets, shared grazing or watering points.",
+        "Shared water troughs, buckets and feed troughs contaminated with nasal discharge or pus; the bacteria can survive for some time in water and on damp surfaces.",
+        "Shared equipment such as halters, bits, harnesses, cart shafts, grooming brushes and nose bags.",
+        "People's hands, clothes and shoes after handling a sick donkey, then moving on to healthy animals.",
+        "Carrier donkeys that have recovered or never looked very sick but still shed bacteria from the guttural pouches, often bringing the disease into a new herd after purchase.",
+        "Bursting abscesses, which release large amounts of infectious pus onto the ground, walls and bedding.",
+        "Stress from heavy work, long journeys, poor feeding and cold wet weather, which lowers resistance and makes outbreaks worse."
+      ],
+      "atRisk": "Young donkeys, especially foals after weaning and animals under about five years, are most at risk because they have not yet built immunity. Very old, thin, overworked or poorly fed donkeys also suffer more. Any donkey that mixes with others is at risk, so the danger is highest in working donkeys that pull carts in towns, carry water to shared boreholes and dams, or are taken to livestock markets. Newly bought animals and herds that receive new arrivals without a quarantine period are common sources of outbreaks. In pastoral areas, donkeys that gather at shared water points during the dry season mix closely, while the cold, wet long and short rains add stress and crowding in shelters. Donkeys kept near horses, for example on farms, schools or tourist sites, can pass infection both ways. Donkeys are stoic animals that hide pain and illness, so they are often sicker than they look by the time the farmer notices.",
+      "signs": {
+        "early": [
+          "Fever: the donkey feels hot, and a thermometer in the rectum reads above the normal range, often noticeably high; fever may appear a day or two before any discharge.",
+          "Dullness, standing quietly with head low, ears back and less interest in surroundings; in donkeys this quiet behaviour is easy to miss.",
+          "Eating less or eating slowly, dropping food or reluctance to swallow because the throat is sore.",
+          "A clear, watery nasal discharge that quickly turns thick, creamy and yellow.",
+          "A soft cough, often worse when the donkey eats or moves.",
+          "Warm, tender swelling starting under the jaw between the two jawbones or just behind the cheek."
+        ],
+        "advanced": [
+          "Large, hard and very painful swellings under the jaw or behind the ear that later soften and burst, releasing thick yellow pus.",
+          "Holding the head and neck stretched out stiffly to ease pain, and avoiding lowering the head to eat or drink.",
+          "Noisy, rough or difficult breathing, sometimes with a snoring or whistling sound, because swollen glands press on the airway; this is an emergency.",
+          "Food and water coming back out through the nose because swallowing is painful or blocked.",
+          "Weight loss and weakness after days of poor eating, with sunken eyes and dry gums from dehydration.",
+          "Swelling of the legs, belly or head and tiny red or purple spots on the gums or inside the eyelids, which can signal purpura haemorrhagica.",
+          "Ongoing fever, colic (belly pain), weight loss or lumps in new places weeks after apparent recovery, which may mean abscesses have spread inside the body."
+        ]
+      },
+      "lookalikes": [
+        {
+          "name": "Equine influenza or equine herpesvirus (viral respiratory infection)",
+          "howToTell": "Viral infections usually cause a sudden high fever, a frequent dry cough and watery discharge that may turn cloudy, often spreading very fast through the whole group. Big pus-filled abscesses under the jaw are not typical. A vet needs swabs to be sure, and antibiotics do not cure these viruses."
+        },
+        {
+          "name": "Lungworm (Dictyocaulus arnfieldi)",
+          "howToTell": "Donkeys often carry lungworm with few signs, but some develop a long-lasting cough without high fever or jaw swellings. The cough persists for weeks and improves after vet-advised deworming. Donkeys carrying lungworm can infect horses grazing with them."
+        },
+        {
+          "name": "Tooth root abscess or sinus infection",
+          "howToTell": "Discharge usually comes from one nostril only, is often foul-smelling, and the donkey may have a swelling on the face or jaw bone, bad breath or chewing problems. It does not spread to other donkeys, and there is often no fever."
+        },
+        {
+          "name": "African horse sickness or glanders (notifiable diseases)",
+          "howToTell": "African horse sickness causes high fever, swelling around the eyes and head, frothy nasal discharge and severe breathing difficulty, often during or after the rains when biting midges are active. Glanders causes nodules and ulcers inside the nose and along the legs. Both are legally notifiable in Kenya and glanders can infect people, so if you see these signs report to the County Veterinary Officer immediately."
+        }
+      ],
+      "diagnosis": "A vet usually suspects strangles from the signs: fever, thick yellow nasal discharge and swollen glands under the jaw, especially when several equines are affected. To confirm it, the vet takes a swab from the nose or throat, or draws pus from an abscess with a needle, and sends it to a laboratory for culture (growing the bacteria) or PCR (a test that detects the bacteria's genetic material). Some referral centres can look inside the guttural pouches with an endoscope, a thin camera tube, and wash them out to find carriers; this is not widely available in Kenya, so your vet will advise what is realistic. Blood tests can show whether a donkey has been exposed recently and help decide on vaccination or screening. The vet will also listen to the chest to check for pneumonia and look for signs of complications. Before the vet arrives, write down when each animal first got sick, their temperatures if you have a thermometer, how much each is eating and drinking, any recent purchases, journeys, markets or contact with other equines, and any medicines already given. Keep the sick donkey in a place where the vet can examine it safely.",
+      "firstSteps": [
+        "Isolate the sick donkey straight away in a separate shelter or paddock away from other donkeys, horses and mules, ideally where they cannot touch noses or share a fence line.",
+        "Give the sick donkey its own water bucket, feed trough, halter and grooming tools, and do not share them with any other animal until the vet says it is safe.",
+        "Stop all work and travel for the sick donkey and for any in-contact equines, and do not take any of them to market, shared water points or grazing with neighbours' animals.",
+        "Offer clean, fresh water at all times and soft, moist food that is easy to swallow, such as soaked hay, soaked bran or fresh tender grass, placed at a height the donkey can reach comfortably.",
+        "Keep the donkey dry, sheltered from cold rain and wind, and shaded from hot sun, with clean, dry bedding.",
+        "Do not squeeze, cut or burst the swellings yourself; the vet may advise warm compresses to help them mature and will decide when to open them.",
+        "Watch the breathing closely, and call the vet as an emergency if the donkey breathes noisily, struggles for air, or stops eating and drinking completely.",
+        "Look after the healthy animals first and the sick one last, wash your hands with soap afterwards, and change or wash clothes and footwear; check the temperature of in-contact donkeys daily if you can and isolate any that develop fever."
+      ],
+      "vetTreatment": "Most donkeys with strangles are treated mainly with good nursing and supportive care, while the immune system clears the infection. The vet may lance (cut open) a mature, soft abscess under hygienic conditions so pus can drain, and then flush it with a dilute antiseptic; the pus must be collected and disposed of carefully because it is highly infectious. Anti-inflammatory painkillers from the NSAID group, such as flunixin or phenylbutazone, may be prescribed to reduce fever and throat pain so the donkey eats and drinks again. Donkeys process many drugs differently from horses, so medicines and plans designed for horses must be adjusted by a vet. Antibiotics are a careful decision: penicillin is the usual choice for Streptococcus equi, and it may be used in very early cases, in animals with breathing problems, or when abscesses spread inside the body. In a donkey that already has abscesses forming, antibiotics can delay them maturing, prolong the illness and interfere with natural immunity, so the vet may advise against them. Never buy antibiotics from an agrovet and use them without a vet's prescription; wrong or incomplete courses help bacteria become resistant (antimicrobial resistance), making future infections harder to treat. Severe cases with airway blockage may need emergency procedures, and purpura haemorrhagica needs urgent and specialised treatment. If any medicine is given, follow the vet's withdrawal period before milk from the jenny is used or the animal is slaughtered. Expect the course of illness to last from a couple of weeks to over a month, with follow-up visits and possibly testing before the donkey rejoins the herd.",
+      "prevention": [
+        "Quarantine every newly bought or returning donkey, horse or mule for at least two to three weeks, away from your other animals, and check its temperature daily; ask your vet about testing new animals before they join the herd.",
+        "Buy donkeys from known, healthy sources, and avoid animals with nasal discharge, cough or lumps under the jaw, or from yards with a recent outbreak.",
+        "Use separate water buckets and feed troughs for each animal where possible, and avoid letting your donkeys drink from shared troughs at markets or public water points during an outbreak.",
+        "Do not share halters, bits, harnesses, nose bags or brushes between donkeys, and clean and disinfect equipment regularly, especially after any illness.",
+        "After an outbreak, remove bedding and manure, scrub shelters, buckets and troughs with detergent then disinfectant, and let them dry in the sun before reuse.",
+        "Keep recovered donkeys isolated until your vet advises they are no longer shedding the bacteria, since some become long-term carriers.",
+        "Feed donkeys well with good roughage, clean water, salt or mineral licks, and allow proper rest between work, because a well-nourished, unstressed donkey resists infection better.",
+        "Provide a dry, well-ventilated shelter with protection from cold rain and wind, deworm on a vet-advised plan that covers lungworm, and ask your vet whether a strangles vaccine is available and suitable, as access in Kenya is limited."
+      ],
+      "impact": "For many Kenyan families a donkey is a source of daily income, carrying water, firewood, farm produce and building materials, or pulling carts for hire. A donkey with strangles must rest for several weeks, and so should in-contact animals, so that income stops and families may have to pay for water or transport. Vet visits, drugs and extra feed add costs. Because the disease spreads so easily, a single sick donkey bought at market can infect every equine on a farm or in a village. Thin, overworked donkeys lose further condition and may take a long time to return to full work. Deaths are not common, but complications such as airway blockage, spread of abscesses inside the body or purpura haemorrhagica can be fatal or cause long-term ill health. Carrier animals can keep outbreaks going year after year, and jennies used for milking lose production while sick.",
+      "humanHealth": "Strangles bacteria very rarely infect people, but a few cases have been reported, mostly in people with weak immune systems. A related bacterium that can cause respiratory infections in donkeys, Streptococcus zooepidemicus, has occasionally caused serious illness in people, including through drinking unpasteurised milk. Glanders, which can look similar, is dangerous to humans. Wear gloves when handling pus or cleaning discharge, wash your hands well with soap and water, keep children away from sick animals, and do not drink raw milk from a sick jenny. Boil any donkey milk before use, and respect the vet's withdrawal period for milk and meat after any treatment.",
+      "outlook": "Most donkeys recover from strangles with good nursing, isolation and vet care, usually over two to six weeks once the abscesses have drained. Recovery is faster in young adults that are well fed and rested, and slower in foals, old, thin or overworked animals. Many recovered donkeys have good protection for some time, but immunity is not guaranteed for life and some animals can be infected again. The outlook is worse if the donkey develops breathing difficulty, pneumonia, abscesses inside the body or purpura haemorrhagica, so early vet involvement matters. Some recovered donkeys remain carriers without looking sick, which is why follow-up and continued hygiene are important even after the herd looks healthy.",
+      "faqs": [
+        {
+          "q": "Can my donkey give strangles to my horse or mule?",
+          "a": "Yes. Strangles spreads easily between donkeys, horses and mules in both directions. Keep a sick donkey well away from all other equines, do not share water or equipment, and handle the sick animal last. Tell neighbours who keep equines so they can protect their animals too."
+        },
+        {
+          "q": "Can I keep working my donkey if it only has a small runny nose?",
+          "a": "No. A donkey with fever, nasal discharge or a swollen throat should rest completely. Work makes the illness worse, slows recovery and spreads the bacteria to other donkeys at water points, markets and on the road. Check its temperature, isolate it and ask your vet when it is safe to return to work."
+        },
+        {
+          "q": "Should I buy antibiotics from the agrovet and inject my donkey myself?",
+          "a": "Please do not. In strangles, antibiotics given at the wrong time can delay abscesses maturing, make the illness last longer and stop the donkey building its own immunity. Using them without a vet's prescription also drives antibiotic resistance. Donkeys also handle many drugs differently from horses, so only a vet should decide on any medicine, the right product and how it is given."
+        },
+        {
+          "q": "Should I burst the swelling under the jaw?",
+          "a": "No. Squeezing or cutting the swelling yourself is painful for the donkey, can cause infection to spread and releases highly infectious pus where other animals and people can pick it up. Your vet may advise warm compresses to help it soften, and will open it hygienically when it is ready."
+        },
+        {
+          "q": "How long must the sick donkey stay away from the others?",
+          "a": "Usually for several weeks after the last signs have gone, not just until it looks well. Some donkeys keep shedding the bacteria long after recovery. Your vet will advise how long to isolate and whether testing is possible to check the donkey is no longer infectious before it rejoins the group."
+        },
+        {
+          "q": "My donkey had strangles last year and is fine now, so why did the disease come back to my herd?",
+          "a": "Some recovered donkeys become carriers, with bacteria hiding in the guttural pouches at the back of the head. They look healthy but can shed the bacteria from time to time, especially when stressed. New animals bought without quarantine are another common source. Talk to your vet about screening, keep up good hygiene and always quarantine new arrivals."
+        }
+      ]
+    },
+    "products": [
+      {
+        "slug": "re-cover",
+        "role": "An oral rehydration solution that can be offered in drinking water to a sick donkey that is still drinking, to help replace fluids and salts lost through fever and poor intake and to encourage it to keep drinking while it recovers. It supports hydration only, does not treat the infection, and should be used alongside vet care and good nursing; never force or drench fluids into a donkey that is struggling to swallow, as it may choke."
+      }
+    ],
+    "imagePrompt": "A realistic close-up photo of a grey East African donkey standing in a simple rural shelter, showing a clearly swollen lump under the jaw and thick yellow discharge from one nostril, with dull eyes and head held low.",
+    "seoDescription": "Strangles in donkeys: spot fever, thick yellow nasal discharge and jaw abscesses early, isolate sick animals, and learn vet treatment and prevention in Kenya."
+  }
+}

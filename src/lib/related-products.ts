@@ -6,7 +6,7 @@ export interface RelatedProduct {
 }
 
 // Master product list
-const ALL_PRODUCTS: RelatedProduct[] = [
+export const ALL_PRODUCTS: RelatedProduct[] = [
   { slug: 'advice',         name: 'ADVICE',           image: '/images/folio/advice.png',   category: 'viral' },
   { slug: 'mix-5',          name: 'MIX-5',            image: '/products/mix.png',           category: 'viral' },
   { slug: 'biogard-99',     name: 'BIOGARD-99',       image: '/products/biogar99.png',      category: 'viral' },
