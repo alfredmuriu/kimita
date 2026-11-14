@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { getConditions, getPublishedSpecies } from '@/lib/animal-health'
-import LibrarySearch, { type SearchItem } from './LibrarySearch'
 import { PageHero, Row, SectionHeader } from './shared'
 import styles from './signs.module.css'
 
@@ -30,17 +29,6 @@ export default function AnimalHealthHub() {
     const list = all.filter((c) => c.species === id)
     return list.find((c) => c.id === s?.coverImage) ?? list[0]
   }
-  const searchItems: SearchItem[] = all
-    .filter((c) => c.urgency !== 'normal')
-    .map((c) => {
-      const label = species.find((s) => s.id === c.species)?.label ?? c.species
-      return {
-        name: c.name,
-        species: label,
-        href: c.href,
-        terms: [c.name, label, c.headline, c.look, ...c.aka].join(' ').toLowerCase(),
-      }
-    })
 
   return (
     <Layout>
@@ -61,7 +49,6 @@ export default function AnimalHealthHub() {
           signs to watch for, and what to do next — {conditionCount} conditions across{' '}
           {species.length} animals, each with causes, treatment and prevention.
         </p>
-        <LibrarySearch items={searchItems} />
         <p className={styles.heroNote}>
           <strong>A guide, not a diagnosis.</strong> Always confirm with a vet before treating.
         </p>
