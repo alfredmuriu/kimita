@@ -1,0 +1,421 @@
+{
+  "camels/camel-pox": {
+    "author": "Oran Erster et al.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Viruses-10-00078-g001.webp"
+  },
+  "camels/healthy": {
+    "author": "Manojkiri photography",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arabian_Camel_in_Kuwait.jpg"
+  },
+  "camels/tick-infestation": {
+    "author": "Hectonichus",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ixodidae_-_Hyalomma_dromedarii.JPG"
+  },
+  "cattle/brucellosis": {
+    "author": "RianHS",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Brucellosis_cattle_swollen_joint.jpg"
+  },
+  "cattle/calf-scours": {
+    "author": "Roee Shpernik",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%D7%A2%D7%92%D7%9C_%D7%9E%D7%9C%D7%90_%D7%91%D7%A9%D7%9C%D7%A9%D7%95%D7%9C_%D7%9C%D7%90%D7%95%D7%A8%D7%9A_%D7%97%D7%95%D7%93%D7%A9%D7%99%D7%9D_%D7%91%D7%AA%D7%90_%D7%A6%D7%A8.jpg"
+  },
+  "cattle/east-coast-fever": {
+    "author": "EL MONTACER Kaoutar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hypertrophied_prescapular_lymph_node.jpg"
+  },
+  "cattle/foot-and-mouth-disease": {
+    "author": "Izvora",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FMD_Ki_4.JPG"
+  },
+  "cattle/foot-rot": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:P%C3%AE-diermite_distrujhante_pate_divant_vea_15dj_efouwaedje_talon_fritches.jpg"
+  },
+  "cattle/healthy": {
+    "author": "Carolyn Parsons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Holstein_Cow_Grazing_04.jpg"
+  },
+  "cattle/heartwater": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Amblyomma-variegatum-heifer-Ghana.jpg"
+  },
+  "cattle/heat-stress": {
+    "author": "A1162285",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cows_in_shade.jpg"
+  },
+  "cattle/liver-fluke": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fasciola-hepatica-adults.jpg"
+  },
+  "cattle/lumpy-skin-disease": {
+    "author": "Monicacomma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zebu_bull_with_Lumpy_Skin_Disease(LSD)_-_Un_taureau_z%C3%A9bu_avec_le_dermatose_nodulaire_contagieuse_-_Y%C3%ABkk_bu_niouy_wax_zebu_bu_am_dermatoos_bu_am_solo.jpg"
+  },
+  "cattle/mastitis": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mamite_%C3%A5s_colis_matons_vinant_fo%C3%BB_del_tete_fritche.jpg"
+  },
+  "cattle/milk-fever": {
+    "author": "L. Mahin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Touma_veleye_tiesse_coistrece.jpg"
+  },
+  "cattle/rabies": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:M%C3%A5_d%27_araedje_vatche_volant_boerler.jpg"
+  },
+  "cattle/ringworm": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Toplin_des_dieles_tiesse_vea.jpg"
+  },
+  "cattle/tick-infestation": {
+    "author": "CSIRO",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_2842_Cow_infested_with_cattle_tick_Boophilus_microplusI.jpg"
+  },
+  "cattle/trypanosomiasis": {
+    "author": "Wellcome Collection",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Steer_with_bovine_trypanosomiasis_Wellcome_L0011039.jpg"
+  },
+  "donkeys/healthy": {
+    "author": "A. Davey from Where I Live Now: Pacific Northwest",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:On_The_Road_to_Gondar,_Ethiopia_(2401865686).jpg"
+  },
+  "donkeys/strangles": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:N%C3%A5ze_tchiv%C3%A5_k%27_a_les_go%C3%BBmes.jpg"
+  },
+  "donkeys/trypanosomiasis": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Glossina-morsitans.jpg"
+  },
+  "fish/aeromonas": {
+    "author": "Dunhua Zhang and Craig Shoemaker",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bagre.png"
+  },
+  "fish/ammonia-poisoning": {
+    "author": "French, WL, U.S. Fish and Wildlife Service",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Water_pollution_fish_kill.jpg"
+  },
+  "fish/columnaris": {
+    "author": "Unknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Columnaris_disease.jpg"
+  },
+  "fish/external-parasites": {
+    "author": "Robert Taylor",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Genus_Argulus_Fish_Louse_Rob_Taylor.jpg"
+  },
+  "fish/healthy": {
+    "author": "Bjørn Christian Tørrissen",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oreochromis-niloticus-Nairobi.JPG"
+  },
+  "fish/low-oxygen": {
+    "author": "United States Fish and Wildlife Service",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish_kill_pollution.jpg"
+  },
+  "fish/saprolegnia": {
+    "author": "Velela",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seatrout_UDN_saprolegnia.jpg"
+  },
+  "fish/streptococcosis": {
+    "author": "Hilal Anshary et al.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Figure-4-Nile-tilapia--Oreochromis-niloticus--from-Lake-Sentani-showing-gross-clinical-signs-of-streptococcosis.jpg"
+  },
+  "fish/white-spot": {
+    "author": "Thomas Kaczmarczyk",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wei%C3%9Fp%C3%BCnktchenkrankheit.jpg"
+  },
+  "goats/caseous-lymphadenitis": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Berbis_froeds_cl%C3%A5s_mwin.jpg"
+  },
+  "goats/foot-rot": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:P%C3%AEtin_berbis_adjnol%C3%AAye.jpg"
+  },
+  "goats/goat-pox": {
+    "author": "CSIRO",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1377_Capripox_virus_disease.jpg"
+  },
+  "goats/healthy": {
+    "author": "P1898",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Healthy_grazing_black_Billy_Philippine_goat_2026-06-27_Pau_River_04.jpg"
+  },
+  "goats/heartwater": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Amblyomma-variegatum-male.jpg"
+  },
+  "goats/mange": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarcoptic-mange-goat.jpg"
+  },
+  "goats/mastitis": {
+    "author": "EL MONTACER Kaoutar",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mammite_chez_une_ch%C3%A8vre.jpg"
+  },
+  "goats/orf": {
+    "author": "Rvcald",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Orf_virus_1_en_animales_Servacal.jpg"
+  },
+  "goats/ppr": {
+    "author": "Dr Berrichi",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Pesse_bedots_Berrichi_schoume.jpg"
+  },
+  "goats/white-muscle-disease": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Agnea_blank%C3%A8s_tch%C3%A5s_%C3%A5rtchou_dos.jpg"
+  },
+  "pigs/erysipelas": {
+    "author": "GP MARTINEAU",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rouget_vivant_1.JPG"
+  },
+  "pigs/healthy": {
+    "author": "Frosinatim",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Smiling_Pig.jpg"
+  },
+  "pigs/heat-stress": {
+    "author": "Mark Peters from Baltimore, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yorkshire_pigs_at_animal_sanctuary.jpg"
+  },
+  "pigs/tail-biting": {
+    "author": "Dingar",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tail_bited_of_pig.JPG"
+  },
+  "poultry/avian-influenza": {
+    "author": "USDA",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Swollen_chicken.jpg"
+  },
+  "poultry/bumblefoot": {
+    "author": "Sylvain Larrat",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pododermatitis_(Bumblefoot)_in_a_rooster.jpg"
+  },
+  "poultry/coccidiosis": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cocsidi%C3%B4ze_boigne_boyea2.jpg"
+  },
+  "poultry/feather-pecking": {
+    "author": "Otwarte Klatki",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ferma_drobiu_Borkowski_w_Wiosce_-_kury_z_utrat%C4%85_upierzenia_(13664727165).jpg"
+  },
+  "poultry/fowl-cholera": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colera_poyes_parintreces_cresse_gorlete_cok.jpg"
+  },
+  "poultry/fowl-pox": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ploketes_volantes_d%C3%AEne_tiesse.jpg"
+  },
+  "poultry/gumboro": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Polet_35dj_houz%C3%AAye_djaen%C3%A5sse_bo%C3%BBsse_Fabricius.JPG"
+  },
+  "poultry/healthy": {
+    "author": "safaritravelplus",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Free_Range_Chicken.jpg"
+  },
+  "poultry/infectious-bronchitis": {
+    "author": "L. Mahin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Brontchite_o%C3%BBs1.jpg"
+  },
+  "poultry/internal-worms": {
+    "author": "Chhandama",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ascaridia_galli.jpg"
+  },
+  "poultry/leg-weakness": {
+    "author": "L. Mahin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Mancance_vitameneB2_sch%C3%A5yaedje_pates.jpg"
+  },
+  "poultry/mites-and-lice": {
+    "author": "Gilles San Martin from Namur, Belgium",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dermanyssus_cfr_gallinae_(5021757436).jpg"
+  },
+  "poultry/newcastle-disease": {
+    "author": "L. Mahin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:F%C3%A5sse_pesse_toirtchaedje_c%C3%B41.jpg"
+  },
+  "poultry/poor-eggshell-quality": {
+    "author": "L. Mahin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Brontchite_o%C3%BBs3.jpg"
+  },
+  "poultry/vitamin-deficiency": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Poyon_17dj_mancance_riboflavene.JPG"
+  },
+  "rabbits/healthy": {
+    "author": "Kathy Shea",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Californian_Rabbit.JPG"
+  },
+  "rabbits/overgrown-teeth": {
+    "author": "Uwe Gille",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bradygnathia-superior-rabbit.jpg"
+  },
+  "sheep/bluetongue": {
+    "author": "Fourrure",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FCO-brebis.jpg"
+  },
+  "sheep/fly-strike": {
+    "author": "CSIRO",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_63_An_Australian_sheep_blowfly.jpg"
+  },
+  "sheep/foot-rot": {
+    "author": "Lucyin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:P%C3%AEtin_berbis_droete_onglete_ritaeyeye_g%C3%A5tche_kiminceye.jpg"
+  },
+  "sheep/healthy": {
+    "author": "CSIRO",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_10748_xxx.jpg"
+  },
+  "sheep/liver-fluke": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fasciola-hepatica-bileduct.jpg"
+  },
+  "sheep/nairobi-sheep-disease": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rhipicephalus-appendiculatus-calf-ear.jpg"
+  },
+  "sheep/pneumonia": {
+    "author": "Aslaoui Ikrame",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Spume_ovin_pneumonie.jpg"
+  },
+  "sheep/sheep-pox": {
+    "author": "L. Mahin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Volant%C3%A8s_pokes_apr%C3%A8s_eploctaedje_tiesse_fritches.jpg"
+  },
+  "sheep/sheep-scab": {
+    "author": "Alan R Walker",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Psoroptic-sheep-scab.jpg"
+  }
+}

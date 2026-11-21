@@ -31,6 +31,86 @@ export interface ConditionSpec {
 
 type Row = [id: string, name: string, urgency: Urgency, brief: string, opts?: { report?: boolean; photo?: Photo }]
 
+/**
+ * Conditions illustrated with a real, openly licensed photo. Credits live in
+ * photo-credits.json and must have an entry for every key here.
+ */
+// REAL_PHOTOS:START
+const REAL_PHOTOS = new Set<string>([
+  'camels/camel-pox',
+  'camels/healthy',
+  'camels/tick-infestation',
+  'cattle/brucellosis',
+  'cattle/calf-scours',
+  'cattle/east-coast-fever',
+  'cattle/foot-and-mouth-disease',
+  'cattle/foot-rot',
+  'cattle/healthy',
+  'cattle/heartwater',
+  'cattle/heat-stress',
+  'cattle/liver-fluke',
+  'cattle/lumpy-skin-disease',
+  'cattle/mastitis',
+  'cattle/milk-fever',
+  'cattle/rabies',
+  'cattle/ringworm',
+  'cattle/tick-infestation',
+  'cattle/trypanosomiasis',
+  'donkeys/healthy',
+  'donkeys/strangles',
+  'donkeys/trypanosomiasis',
+  'fish/aeromonas',
+  'fish/ammonia-poisoning',
+  'fish/columnaris',
+  'fish/external-parasites',
+  'fish/healthy',
+  'fish/low-oxygen',
+  'fish/saprolegnia',
+  'fish/streptococcosis',
+  'fish/white-spot',
+  'goats/caseous-lymphadenitis',
+  'goats/foot-rot',
+  'goats/goat-pox',
+  'goats/healthy',
+  'goats/heartwater',
+  'goats/mange',
+  'goats/mastitis',
+  'goats/orf',
+  'goats/ppr',
+  'goats/white-muscle-disease',
+  'pigs/erysipelas',
+  'pigs/healthy',
+  'pigs/heat-stress',
+  'pigs/tail-biting',
+  'poultry/avian-influenza',
+  'poultry/bumblefoot',
+  'poultry/coccidiosis',
+  'poultry/feather-pecking',
+  'poultry/fowl-cholera',
+  'poultry/fowl-pox',
+  'poultry/gumboro',
+  'poultry/healthy',
+  'poultry/infectious-bronchitis',
+  'poultry/internal-worms',
+  'poultry/leg-weakness',
+  'poultry/mites-and-lice',
+  'poultry/newcastle-disease',
+  'poultry/poor-eggshell-quality',
+  'poultry/vitamin-deficiency',
+  'rabbits/healthy',
+  'rabbits/overgrown-teeth',
+  'sheep/bluetongue',
+  'sheep/fly-strike',
+  'sheep/foot-rot',
+  'sheep/healthy',
+  'sheep/liver-fluke',
+  'sheep/nairobi-sheep-disease',
+  'sheep/pneumonia',
+  'sheep/sheep-pox',
+  'sheep/sheep-scab',
+])
+// REAL_PHOTOS:END
+
 function group(species: string, rows: Row[]): ConditionSpec[] {
   return rows.map(([id, name, urgency, brief, opts]) => ({
     species,
@@ -39,7 +119,7 @@ function group(species: string, rows: Row[]): ConditionSpec[] {
     urgency,
     brief,
     report: opts?.report ?? false,
-    photo: opts?.photo ?? 'ai',
+    photo: REAL_PHOTOS.has(`${species}/${id}`) ? 'real' : opts?.photo ?? 'ai',
   }))
 }
 

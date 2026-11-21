@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { getConditions, getPublishedSpecies } from '@/lib/animal-health'
-import { PageHero, Row, SectionHeader } from './shared'
+import { ConditionImage, LightTheme, PageHero, Row, SectionHeader } from './shared'
 import styles from './signs.module.css'
 
 const URL = 'https://www.agrikima.co.ke/animal-health-signs'
@@ -32,7 +32,9 @@ export default function AnimalHealthHub() {
 
   return (
     <Layout>
+      <LightTheme />
       <PageHero
+        light
         aside={
           <div className={styles.mosaic} aria-hidden="true">
             {MOSAIC.map((id) => {
@@ -70,9 +72,7 @@ export default function AnimalHealthHub() {
               return (
                 <Link key={s.id} href={`/animal-health-signs/${s.id}`} className={styles.card}>
                   <div className={styles.cardMedia}>
-                    {img && img.photo !== 'pending' && (
-                      <img src={img.image} alt={`A healthy ${s.singular}`} loading="lazy" width={960} height={720} />
-                    )}
+                    {img && img.photo !== 'pending' && <ConditionImage c={img} />}
                   </div>
                   <div className={styles.cardBody}>
                     <div className={styles.labels}>
@@ -88,6 +88,9 @@ export default function AnimalHealthHub() {
               )
             })}
           </div>
+          <p className={styles.creditLine}>
+            <Link href="/animal-health-signs/photo-credits">Photo credits</Link>
+          </p>
         </Row>
       </section>
     </Layout>

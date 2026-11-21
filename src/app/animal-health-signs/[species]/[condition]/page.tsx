@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Layout from '@/components/Layout'
 import { getCondition, getConditions, getRelated, getSpecies, toCard } from '@/lib/animal-health'
-import { ConditionCardView, ConditionImage, LightTheme, PageHero, Row, SectionHeader, UrgencyLabels } from '../../shared'
+import { ConditionCardView, ConditionImage, LightTheme, PageHero, PhotoCreditLine, Row, SectionHeader, UrgencyLabels } from '../../shared'
 import styles from '../../signs.module.css'
 
 export const dynamicParams = false
@@ -96,8 +96,11 @@ export default function ConditionPage({ params }: Params) {
       <PageHero
         light
         aside={
-          <div className={styles.heroMedia}>
-            <ConditionImage c={c} eager />
+          <div>
+            <div className={styles.heroMedia}>
+              <ConditionImage c={c} eager />
+            </div>
+            <PhotoCreditLine c={c} />
           </div>
         }
       >

@@ -7,8 +7,18 @@ import type { SpeciesId } from '@/content/animal-health/species'
 
 export type { Urgency, SpeciesId }
 
+/** Who took a real photo and the licence it is used under (photo-credits.json). */
+export interface PhotoCredit {
+  author: string
+  license: string
+  licenseUrl?: string
+  /** Page the photo came from, e.g. its Wikimedia Commons file page. */
+  source: string
+}
+
 /** Everything a card needs — small enough to pass to client components. */
 export interface ConditionCard {
+  credit?: PhotoCredit
   species: SpeciesId
   id: string
   name: string

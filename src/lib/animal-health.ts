@@ -15,11 +15,14 @@ import rabbits from '@/content/animal-health/generated/rabbits.json'
 import fish from '@/content/animal-health/generated/fish.json'
 import camels from '@/content/animal-health/generated/camels.json'
 import donkeys from '@/content/animal-health/generated/donkeys.json'
+import photoCredits from '@/content/animal-health/photo-credits.json'
 
-import { URGENCY, URGENCY_ORDER, type ConditionCard, type Urgency } from '@/lib/animal-health-client'
+import { URGENCY, URGENCY_ORDER, type ConditionCard, type PhotoCredit, type Urgency } from '@/lib/animal-health-client'
 
 export { SPECIES, getSpecies, URGENCY, URGENCY_ORDER }
-export type { Species, SpeciesId, Urgency, ConditionCard }
+export type { Species, SpeciesId, Urgency, ConditionCard, PhotoCredit }
+
+const CREDITS = photoCredits as Record<string, PhotoCredit>
 
 export interface ConditionDetail {
   aka: string[]
@@ -85,6 +88,7 @@ function build(spec: ConditionSpec): Condition | null {
     urgency: spec.urgency,
     report: spec.report,
     photo: spec.photo,
+    credit: spec.photo === 'real' ? CREDITS[`${spec.species}/${spec.id}`] : undefined,
     image: `/images/animal-health/${spec.species}/${spec.id}.webp`,
     href: `/animal-health-signs/${spec.species}/${spec.id}`,
     headline: gen.card.headline,

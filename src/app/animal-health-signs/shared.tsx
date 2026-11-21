@@ -78,7 +78,7 @@ export function Row({ children }: { children: ReactNode }) {
   )
 }
 
-export function ConditionImage({ c, eager = false }: { c: Pick<ConditionCard, 'photo' | 'image' | 'name' | 'look'>; eager?: boolean }) {
+export function ConditionImage({ c, eager = false }: { c: Pick<ConditionCard, 'photo' | 'image' | 'name' | 'look' | 'credit'>; eager?: boolean }) {
   if (c.photo === 'pending') {
     return (
       <div className={styles.pending}>
@@ -91,6 +91,23 @@ export function ConditionImage({ c, eager = false }: { c: Pick<ConditionCard, 'p
     <>
       <img src={c.image} alt={`${c.name}: ${c.look}`} loading={eager ? 'eager' : 'lazy'} width={960} height={720} />
     </>
+  )
+}
+
+/** Full credit with links, shown under the photo on a condition page. */
+export function PhotoCreditLine({ c }: { c: Pick<ConditionCard, 'credit'> }) {
+  const cr = c.credit
+  if (!cr) return null
+  return (
+    <p className={styles.creditLine}>
+      Photo: <a href={cr.source} target="_blank" rel="noopener noreferrer">{cr.author}</a>, via Wikimedia Commons,{' '}
+      {cr.licenseUrl ? (
+        <a href={cr.licenseUrl} target="_blank" rel="noopener noreferrer license">{cr.license}</a>
+      ) : (
+        cr.license
+      )}
+      . Resized and cropped. <Link href="/animal-health-signs/photo-credits">All photo credits</Link>
+    </p>
   )
 }
 

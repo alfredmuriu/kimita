@@ -111,6 +111,9 @@ export default function SpeciesPage({ params }: { params: { species: string } })
 
           <div className={styles.libraryMain}>
             <ConditionGrid cards={cards} />
+            <p className={styles.creditLine}>
+              <Link href="/animal-health-signs/photo-credits">Photo credits</Link>
+            </p>
           </div>
         </div>
       </div>

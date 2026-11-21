@@ -928,3 +928,35 @@ ul.sidebarMenu li {
     width: 100%;
   }
 }
+
+/* Photo credits (real photos under CC / public-domain licences) */
+.creditLine {
+  margin: 8px 2px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.creditLine a {
+  color: #014d4b;
+  text-decoration: underline;
+}
+
+.creditTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.creditTable th,
+.creditTable td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.creditTable a {
+  color: #014d4b;
+  text-decoration: underline;
+}
