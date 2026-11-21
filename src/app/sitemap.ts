@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getSupabase } from '@/lib/supabase';
+import { getConditions, getPublishedSpecies } from '@/lib/animal-health';
 
 const baseUrl = 'https://www.agrikima.co.ke';
 
@@ -63,6 +64,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/animal-health-signs`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
@@ -77,6 +84,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
+
+  // --- Animal health library: one page per animal and per condition ---
+  const animalHealthPages: MetadataRoute.Sitemap = [
+    ...getPublishedSpecies().map((s) => ({
+      url: `${baseUrl}/animal-health-signs/${s.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+    ...getConditions().map((c) => ({
+      url: `${baseUrl}${c.href}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
 
   // --- Dynamic blog posts from Supabase ---
   let blogPages: MetadataRoute.Sitemap = [];
@@ -103,5 +126,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error('Error fetching blog posts for sitemap:', error);
   }
 
-  return [...staticPages, ...productPages, ...blogPages];
+  return [...staticPages, ...productPages, ...animalHealthPages, ...blogPages];
 }
