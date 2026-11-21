@@ -3,7 +3,7 @@
 
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { URGENCY, type ConditionCard } from '@/lib/animal-health-client'
+import type { ConditionCard } from '@/lib/animal-health-client'
 import styles from './signs.module.css'
 
 
@@ -111,21 +111,6 @@ export function PhotoCreditLine({ c }: { c: Pick<ConditionCard, 'credit'> }) {
   )
 }
 
-export function UrgencyLabels({ c, dark = false }: { c: Pick<ConditionCard, 'urgency' | 'report'>; dark?: boolean }) {
-  return (
-    <div className={`${styles.labels} ${dark ? styles.onDark : ''}`}>
-      <span className={`${styles.urgency} ${styles[`u_${c.urgency}`]}`} title={URGENCY[c.urgency].hint}>
-        {URGENCY[c.urgency].label}
-      </span>
-      {c.report && (
-        <span className={styles.report} title="Notifiable disease — report to the County Veterinary Officer">
-          Must report
-        </span>
-      )}
-    </div>
-  )
-}
-
 export function ConditionCardView({ c }: { c: ConditionCard }) {
   return (
     <Link href={c.href} className={styles.card}>
@@ -133,7 +118,6 @@ export function ConditionCardView({ c }: { c: ConditionCard }) {
         <ConditionImage c={c} />
       </div>
       <div className={styles.cardBody}>
-        <UrgencyLabels c={c} />
         <h3 className={styles.cardTitle}>{c.name}</h3>
         <p className={styles.cardText}>{c.urgency === 'normal' ? c.look : c.headline}</p>
         <span className={styles.cardMore}>{c.urgency === 'normal' ? 'Health check guide' : 'Read the full guide'}</span>

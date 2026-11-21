@@ -67,7 +67,6 @@ export default function AnimalHealthHub() {
             {species.map((s) => {
               const list = all.filter((c) => c.species === s.id)
               const conditions = list.filter((c) => c.urgency !== 'normal').length
-              const emergencies = list.filter((c) => c.urgency === 'emergency').length
               const img = cover(s.id)
               return (
                 <Link key={s.id} href={`/animal-health-signs/${s.id}`} className={styles.card}>
@@ -77,7 +76,7 @@ export default function AnimalHealthHub() {
                   <div className={styles.cardBody}>
                     <div className={styles.labels}>
                       <span className={`${styles.urgency} ${styles.u_normal}`}>
-                        {conditions} conditions{emergencies ? ` · ${emergencies} emergencies` : ''}
+                        {conditions} conditions
                       </span>
                     </div>
                     <h3 className={styles.cardTitle}>{s.label}</h3>

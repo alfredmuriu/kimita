@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import Layout from '@/components/Layout'
 import { getConditions, getPublishedSpecies, getSpecies, toCard, URGENCY_ORDER } from '@/lib/animal-health'
 import ConditionGrid from '../ConditionGrid'
-import { ConditionImage, LightTheme, PageHero, UrgencyLabels } from '../shared'
+import { ConditionImage, LightTheme, PageHero } from '../shared'
 import styles from '../signs.module.css'
 
 export const dynamicParams = false
@@ -63,7 +63,6 @@ export default function SpeciesPage({ params }: { params: { species: string } })
             <div className="column lg-12">
               <div className={styles.heroGrid}>
                 <div>
-                  <UrgencyLabels c={healthy} />
                   <h2 className={styles.healthyTitle}>{healthy.name}</h2>
                   {healthy.detail.aka.length > 0 && (
                     <p className={styles.heroAka}>Also called: {healthy.detail.aka.join(', ')}</p>
