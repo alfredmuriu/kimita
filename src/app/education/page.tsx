@@ -71,7 +71,7 @@ export default function EducationPage() {
           padding: 60px 20px 80px;
         }
         .edu-cards-inner {
-          max-width: 860px;
+          max-width: 1120px;
           margin: 0 auto;
         }
         .edu-cards-heading {
@@ -90,7 +90,7 @@ export default function EducationPage() {
         }
         .edu-cards-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(3, 1fr);
           gap: 24px;
         }
         .edu-card {
@@ -318,6 +318,25 @@ export default function EducationPage() {
                     health, livestock management and feed milling — updated regularly.
                   </p>
                   <span className="edu-card-cta">Open Farm Guides</span>
+                </div>
+              </Link>
+
+              <Link href="/animal-health-signs" className="edu-card">
+                <div className="edu-card-image-wrap">
+                  <img
+                    src="/images/animal-health/goats/haemonchosis.webp"
+                    alt="Checking a goat's inner eyelid colour for signs of anaemia"
+                    className="edu-card-image"
+                  />
+                </div>
+                <div className="edu-card-body">
+                  <span className="edu-card-tag">Visual Guide</span>
+                  <h3 className="edu-card-title">Spot the Signs</h3>
+                  <p className="edu-card-desc">
+                    An illustrated library of animal diseases for cattle, goats, sheep, poultry,
+                    pigs, rabbits, fish, camels and donkeys — signs, causes, treatment and prevention.
+                  </p>
+                  <span className="edu-card-cta">Open the Visual Guide</span>
                 </div>
               </Link>
             </div>

@@ -5,7 +5,9 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import ScrollDownButton from '@/components/ScrollDownButton';
-import { ACADEMY_DATA, CategorySection } from '@/lib/academy-data';
+import { ACADEMY_DATA, CategorySection, videoEmbed, videoThumb } from '@/lib/academy-data';
+
+const absUrl = (u: string) => (u.startsWith('/') ? `https://www.agrikima.co.ke${u}` : u);
 
 
 function AcademyInner() {
@@ -51,8 +53,8 @@ function AcademyInner() {
         '@type': 'VideoObject',
         name: video.title,
         description: `Learn about ${video.title} in this Agrikima Academy farming video guide.`,
-        thumbnailUrl: `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`,
-        embedUrl: `https://www.youtube.com/embed/${video.id}`,
+        thumbnailUrl: absUrl(videoThumb(video)),
+        ...(video.src ? { contentUrl: absUrl(video.src) } : { embedUrl: videoEmbed(video) }),
         publisher: {
           '@type': 'Organization',
           name: 'Agrikima',
@@ -287,7 +289,7 @@ function AcademyInner() {
                           </div>
                           <div className="academy-row__thumb">
                             <img
-                              src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
+                              src={videoThumb(video)}
                               alt={video.title}
                               loading="lazy"
                             />

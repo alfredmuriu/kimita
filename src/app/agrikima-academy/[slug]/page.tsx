@@ -2,7 +2,10 @@ import Layout from '@/components/Layout';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { findVideoBySlug, getAllVideoSlugs, getFlatVideoList } from '@/lib/academy-data';
+import { findVideoBySlug, getAllVideoSlugs, getFlatVideoList, videoEmbed, videoThumb } from '@/lib/academy-data';
+
+const SITE = 'https://www.agrikima.co.ke';
+const absUrl = (u: string) => (u.startsWith('/') ? `${SITE}${u}` : u);
 
 interface PageProps {
   params: { slug: string };
@@ -17,7 +20,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!found) return { title: 'Video Not Found' };
   const { video, groupName, section } = found;
   const description = `Watch "${video.title}" — a free farming video guide from Agrikima Academy (${groupName} › ${section.name}).`;
-  const thumbnail = `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`;
+  const thumbnail = absUrl(videoThumb(video, 'maxres'));
   return {
     title: `${video.title} | Agrikima Academy`,
     description,
@@ -26,7 +29,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
       description,
       type: 'video.other',
       images: [thumbnail],
-      videos: [`https://www.youtube.com/embed/${video.id}`],
+      videos: [absUrl(videoEmbed(video))],
     },
     twitter: {
       card: 'summary_large_image',
@@ -53,8 +56,8 @@ export default function VideoPage({ params }: PageProps) {
     '@type': 'VideoObject',
     name: video.title,
     description: `Learn about ${video.title} in this Agrikima Academy farming video guide.`,
-    thumbnailUrl: `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
-    embedUrl: `https://www.youtube.com/embed/${video.id}`,
+    thumbnailUrl: absUrl(videoThumb(video, 'maxres')),
+    ...(video.src ? { contentUrl: absUrl(video.src) } : { embedUrl: videoEmbed(video) }),
     publisher: {
       '@type': 'Organization',
       name: 'Agrikima',
@@ -91,6 +94,9 @@ export default function VideoPage({ params }: PageProps) {
         .video-page-arrow.disabled { opacity: 0.3; pointer-events: none; }
         .video-page-player { position: relative; padding-top: 56.25%; background: #000; border-radius: 8px; overflow: hidden; flex: 1; }
         .video-page-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+        .video-page-player--vertical { padding-top: 0; flex: 0 1 auto; width: min(100%, calc(78vh * 9 / 16)); aspect-ratio: 9 / 16; margin: 0 auto; }
+        .video-page-player--vertical video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: contain; background: #000; }
+        .video-page-stage--vertical { justify-content: center; }
         .video-related { margin-top: 50px; }
         .video-related h2 { font-size: 18px; margin: 0 0 16px; color: #111111; font-weight: 700; }
         .video-related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
@@ -111,20 +117,26 @@ export default function VideoPage({ params }: PageProps) {
             <Link href={`/agrikima-academy?filter=${section.anchor}`}>{section.name}</Link>
           </div>
           <h1 className="video-page-title">{video.title}</h1>
-          <div className="video-page-stage">
+          <div className={`video-page-stage ${video.vertical ? 'video-page-stage--vertical' : ''}`}>
             {prev ? (
               <Link href={`/agrikima-academy/${prev.slug}`} className="video-page-arrow" aria-label={`Previous: ${prev.title}`}>‹</Link>
             ) : (
               <span className="video-page-arrow disabled" aria-hidden="true">‹</span>
             )}
-            <div className="video-page-player">
-              <iframe
-                src={`https://www.youtube.com/embed/${video.id}?rel=0`}
-                title={video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+            {video.src ? (
+              <div className={`video-page-player ${video.vertical ? 'video-page-player--vertical' : ''}`}>
+                <video src={video.src} poster={video.poster} controls playsInline preload="metadata" title={video.title} />
+              </div>
+            ) : (
+              <div className="video-page-player">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            )}
             {next ? (
               <Link href={`/agrikima-academy/${next.slug}`} className="video-page-arrow" aria-label={`Next: ${next.title}`}>›</Link>
             ) : (
@@ -138,7 +150,7 @@ export default function VideoPage({ params }: PageProps) {
               <div className="video-related-grid">
                 {related.map((v) => (
                   <Link key={v.slug} href={`/agrikima-academy/${v.slug}`} className="video-related-card">
-                    <img src={`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`} alt={v.title} loading="lazy" />
+                    <img src={videoThumb(v)} alt={v.title} loading="lazy" />
                     <div className="t">{v.title}</div>
                   </Link>
                 ))}

@@ -1,7 +1,25 @@
 export interface Video {
+  /** YouTube video ID, or a unique key for a self-hosted video. */
   id: string;
   title: string;
   slug: string;
+  /** Self-hosted MP4 under /public. When set, the site plays this instead of YouTube. */
+  src?: string;
+  /** Cover image for a self-hosted video. */
+  poster?: string;
+  /** Portrait (9:16) video, e.g. phone-format adverts. */
+  vertical?: boolean;
+}
+
+/** Thumbnail for lists and social cards. */
+export function videoThumb(v: Video, size: 'mq' | 'maxres' = 'mq'): string {
+  if (v.src) return v.poster ?? '';
+  return `https://img.youtube.com/vi/${v.id}/${size === 'mq' ? 'mqdefault' : 'maxresdefault'}.jpg`;
+}
+
+/** Playable URL for schema.org / Open Graph. */
+export function videoEmbed(v: Video): string {
+  return v.src ?? `https://www.youtube.com/embed/${v.id}`;
 }
 
 export interface CategorySection {
@@ -18,7 +36,7 @@ function slugify(title: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-function buildSection(name: string, anchor: string, items: { id: string; title: string }[]): CategorySection {
+function buildSection(name: string, anchor: string, items: Omit<Video, 'slug'>[]): CategorySection {
   return {
     name,
     anchor,
@@ -128,10 +146,25 @@ const AMR_SECTIONS: CategorySection[] = [
   ]),
 ];
 
-const PRODUCT_VIDEOS_SECTIONS: CategorySection[] = [
-  buildSection('Product Videos', 'product-videos', [
-    { id: 'idMg2DsgSlI', title: 'Advice' },
-    { id: '8IBXFWw11g0', title: 'Mix-5' },
+// Product adverts, self-hosted (public/videos/products, 720p H.264 portrait).
+// Anchor kept as 'product-videos' and the Advice / Mix-5 titles kept so their
+// existing /agrikima-academy/advice and /mix-5 URLs still work. Those two were
+// YouTube videos idMg2DsgSlI and 8IBXFWw11g0 before the Version 2 adverts.
+const advert = (slug: string, title: string): Omit<Video, 'slug'> => ({
+  id: `advert-${slug}`,
+  title,
+  src: `/videos/products/${slug}.mp4`,
+  poster: `/videos/products/${slug}.jpg`,
+  vertical: true,
+});
+
+const PRODUCTS_SECTIONS: CategorySection[] = [
+  buildSection('Product Adverts', 'product-videos', [
+    advert('advice', 'Advice'),
+    advert('agritonic', 'Agritonic'),
+    advert('agrivitam', 'Agrivitam'),
+    advert('biogar', 'Biogar'),
+    advert('mix-5', 'Mix-5'),
   ]),
 ];
 
@@ -140,7 +173,7 @@ export const ACADEMY_DATA: Record<string, CategorySection[]> = {
   'Large Animals': LARGER_ANIMAL_SECTIONS,
   'Biogar Series': BIOGAR_SERIES_SECTIONS,
   'Responsible Medicine Use & AMR': AMR_SECTIONS,
-  'Product Videos': PRODUCT_VIDEOS_SECTIONS,
+  'Products': PRODUCTS_SECTIONS,
 };
 
 export interface VideoLookup {
