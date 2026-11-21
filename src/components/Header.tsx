@@ -46,6 +46,11 @@ const VIDEO_CATEGORIES = [
       { name: 'Mastitis Support', anchor: 'biogar-series' },
     ],
   },
+  {
+    name: 'Products',
+    filter: 'Products',
+    subcategories: [],
+  },
 ];
 
 const ARTICLE_CATEGORIES = [
@@ -466,6 +471,11 @@ export default function Header() {
                         </li>
                       ))}
                     </ul>
+                  </li>
+                  <li className="academy-group">
+                    <Link href="/animal-health-signs" className="academy-group-header academy-group-header-link">
+                      <span>Spot the Signs</span>
+                    </Link>
                   </li>
                 </ul>
               </li>
