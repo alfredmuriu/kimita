@@ -34,7 +34,7 @@ type Group = {
 const GROUPS: Group[] = [
   {
     name: 'Brochures',
-    description: 'Full product catalogues — browse the Agrikima range.',
+    description: 'Product brochures — browse the Agrikima range.',
     items: [
       {
         title: 'Large Animals Brochure 2025 (A5)',
@@ -53,9 +53,36 @@ const GROUPS: Group[] = [
     ],
   },
   {
+    name: 'Catalogues',
+    description: 'The full Agrikima product catalogues, with composition, dosage and pack sizes.',
+    items: [
+      {
+        title: 'Animal Health Product Catalogue',
+        description: 'Agro-vet supplements and nutrition products for poultry and livestock.',
+        file: '/downloads/agrikima-animal-health-product-catalogue.pdf',
+        size: '9 MB',
+        type: 'PDF',
+      },
+      {
+        title: 'Crop Protection & Agronomy Catalogue',
+        description: 'Insecticides, herbicides, fungicides, acaricides, fertilisers and agro-vet products.',
+        file: '/downloads/agrikima-crop-protection-catalogue.pdf',
+        size: '7 MB',
+        type: 'PDF',
+      },
+    ],
+  },
+  {
     name: 'Programs & Schedules',
     description: 'Practical, follow-along guides for the farm.',
     items: [
+      {
+        title: 'Broiler Supplementation Program',
+        description: 'Week-by-week supplement plan for broilers, weeks 1 to 5.',
+        file: '/downloads/broiler-supplementation-program.pdf',
+        size: '300 KB',
+        type: 'PDF',
+      },
       {
         title: 'Layers Supplementation Program (A4)',
         description: 'Supplementation program for layer hens.',
@@ -68,6 +95,47 @@ const GROUPS: Group[] = [
         description: 'Printable vaccination schedule cards.',
         file: '/downloads/Vaccination Cards.pdf',
         size: '2.6 MB',
+        type: 'PDF',
+      },
+    ],
+  },
+  {
+    name: 'Training Materials',
+    description: 'Farmer training slides from Agrikima field sessions.',
+    items: [
+      {
+        title: 'Broiler Products — Training Slides',
+        description: 'Farmer training on each product in the broiler programme and what it does.',
+        file: '/downloads/broiler-supplementation-programme-training.pdf',
+        size: '7.4 MB',
+        type: 'PDF',
+      },
+      {
+        title: 'Broiler Feeding for Profitability',
+        description: 'Feeding management for maximum growth and profit: feed, water and FCR.',
+        file: '/downloads/broiler-feeding-for-profitability.pdf',
+        size: '5.8 MB',
+        type: 'PDF',
+      },
+      {
+        title: 'Poultry Vitamin & Mineral Deficiencies',
+        description: 'How to recognise common vitamin and mineral deficiencies in birds.',
+        file: '/downloads/poultry-vitamin-and-mineral-deficiencies.pdf',
+        size: '4.7 MB',
+        type: 'PDF',
+      },
+      {
+        title: 'Poultry Biosecurity',
+        description: 'Keeping disease off the farm: practical biosecurity for poultry farmers.',
+        file: '/downloads/poultry-biosecurity.pdf',
+        size: '1.9 MB',
+        type: 'PDF',
+      },
+      {
+        title: 'Biogar Value Proposition',
+        description: 'Why Biogar: antibiotics as growth promoters, AMR and the natural alternative.',
+        file: '/downloads/biogar-value-proposition.pdf',
+        size: '500 KB',
         type: 'PDF',
       },
     ],
@@ -164,19 +232,19 @@ export default function DownloadsPage() {
         .dl-actions {
           flex-shrink: 0;
           display: inline-flex;
-          gap: 6px;
+          gap: 8px;
         }
         .dl-btn {
           display: inline-flex;
           align-items: center;
-          gap: 3px;
-          font-size: 11px;
+          gap: 4px;
+          font-size: 13px;
           font-weight: 600;
           color: #014d4b !important;
           text-decoration: none;
-          padding: 3px 8px;
+          padding: 5px 12px;
           border: 1px solid #014d4b;
-          border-radius: 2px;
+          border-radius: 3px;
           transition: background 0.15s, color 0.15s;
           white-space: nowrap;
           line-height: 1.4;
