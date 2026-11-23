@@ -1,5 +1,7 @@
 # Agrikima WhatsApp Bot (open-wa bridge)
 
+> **Going live on +254 762 122 122?** Follow [RESUME-TOMORROW.md](RESUME-TOMORROW.md). It replaces the spare-number and open-wa steps below, which are out of date.
+
 A small standalone service that connects a **spare** WhatsApp number to the
 Agrikima **customer** bot brain. Incoming WhatsApp messages are forwarded to the
 deployed `/api/whatsapp/bridge` endpoint; the AI reply is sent back to the sender.

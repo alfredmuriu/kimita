@@ -1,6 +1,6 @@
 // Agrikima WhatsApp bot host.
 //
-// A thin bridge: Baileys logs into WhatsApp (via a one-time QR scan) on a SPARE
+// A thin bridge: Baileys logs into WhatsApp (via a one-time QR scan) on the bot
 // number, and every incoming message is forwarded to our existing CUSTOMER bot
 // brain — the deployed /api/whatsapp/bridge endpoint — then the reply is sent
 // back. That endpoint runs the same bot-core brain, conversation history, and
@@ -16,9 +16,9 @@
 // timing out at the QR step on the VPS).
 //
 // Baileys is an unofficial WhatsApp client and breaks WhatsApp's terms of
-// service: run it ONLY on a disposable spare number, never the main business
-// line. Treat it as a temporary bridge until the official Meta WhatsApp Business
-// API restriction is cleared.
+// service, so the number can be banned: run it ONLY on the dedicated bot number
+// (+254 762 122 122), never the main contact line. Treat it as a temporary bridge
+// until the official Meta WhatsApp Business API restriction is cleared.
 
 import 'dotenv/config'
 import {
@@ -39,6 +39,7 @@ const AGENT_CRON_SECRET = process.env.AGENT_CRON_SECRET
 const HEARTBEAT_URL =
   process.env.HEARTBEAT_URL || CHAT_API_URL?.replace(/\/bridge\/?$/, '/heartbeat')
 const HEARTBEAT_INTERVAL_MS = 5 * 60 * 1000
+const MAX_RECONNECT_DELAY_MS = 60 * 1000
 // Comma-separated list of allowed WhatsApp numbers (digits only, e.g.
 // "254712345678,254700111222"). Empty = reply to everyone (not recommended).
 const ALLOWED_NUMBERS = (process.env.ALLOWED_NUMBERS || '')
@@ -134,6 +135,30 @@ function stopHeartbeat() {
   heartbeatTimer = null
 }
 
+// Consecutive reconnects since the last good connection, for backoff.
+let reconnectAttempts = 0
+
+// Hammering WhatsApp during an outage is a quick way to get the number flagged,
+// so retries back off. The first stays fast because a fresh QR link always closes
+// once with restartRequired.
+function scheduleReconnect() {
+  const delay = Math.min(1000 * 2 ** reconnectAttempts, MAX_RECONNECT_DELAY_MS)
+  reconnectAttempts += 1
+  setTimeout(() => {
+    connect().catch((err) => {
+      console.error('[bot] Reconnect failed:', err)
+      scheduleReconnect()
+    })
+  }, delay)
+}
+
+// Stay up but idle until a human steps in. With nothing left on the event loop
+// the process would exit, and pm2 would restart it straight back into the same
+// rejected session, forever. No heartbeats go out, so the watchdog still alerts.
+function park() {
+  setInterval(() => {}, 60 * 60 * 1000)
+}
+
 async function connect() {
   // Persist the session under ./auth_info so we only scan the QR once.
   const { state, saveCreds } = await useMultiFileAuthState('auth_info')
@@ -156,13 +181,14 @@ async function connect() {
     const { connection, lastDisconnect, qr } = update
 
     if (qr) {
-      console.log('\n[bot] Scan this QR with the SPARE number:')
+      console.log('\n[bot] Scan this QR with the bot number:')
       console.log('      WhatsApp → Settings → Linked Devices → Link a Device\n')
       qrcode.generate(qr, { small: true })
     }
 
     if (connection === 'open') {
       console.log('[bot] Connected. Listening for messages…')
+      reconnectAttempts = 0
       startHeartbeat()
     }
 
@@ -172,13 +198,21 @@ async function connect() {
       stopHeartbeat()
       const statusCode = lastDisconnect?.error?.output?.statusCode
       const loggedOut = statusCode === DisconnectReason.loggedOut
-      console.log(
-        `[bot] Connection closed (code ${statusCode ?? 'unknown'}).` +
-          (loggedOut ? ' Logged out — delete auth_info and rescan.' : ' Reconnecting…')
-      )
-      if (!loggedOut) {
-        connect().catch((err) => console.error('[bot] Reconnect failed:', err))
+      // The same session is running on another host. Reconnecting would have the
+      // two kick each other off in a loop.
+      const replaced = statusCode === DisconnectReason.connectionReplaced
+      if (loggedOut || replaced) {
+        console.log(
+          `[bot] Connection closed (code ${statusCode}).` +
+            (loggedOut
+              ? ' Logged out — delete auth_info, rescan, then restart.'
+              : ' Session taken over by another host — stop that one, then restart.')
+        )
+        park()
+        return
       }
+      console.log(`[bot] Connection closed (code ${statusCode ?? 'unknown'}). Reconnecting…`)
+      scheduleReconnect()
     }
   })
 
