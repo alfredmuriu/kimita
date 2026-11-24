@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Layout from '@/components/Layout'
 import { getCondition, getConditions, getRelated, getSpecies, toCard } from '@/lib/animal-health'
-import { ConditionCardView, ConditionImage, LightTheme, PageHero, PhotoCreditLine, Row, SectionHeader } from '../../shared'
+import ArticleToc from '../../ArticleToc'
+import { ConditionCardView, ConditionImage, LightTheme, PhotoCreditLine, Row, SectionHeader } from '../../shared'
 import styles from '../../signs.module.css'
 
 export const dynamicParams = false
@@ -93,56 +94,42 @@ export default function ConditionPage({ params }: Params) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <LightTheme />
-      <PageHero
-        light
-        aside={
-          <div>
-            <div className={styles.heroMedia}>
-              <ConditionImage c={c} eager />
-            </div>
-            <PhotoCreditLine c={c} />
-          </div>
-        }
-      >
-        <nav className={styles.crumbs} aria-label="Breadcrumb">
-          <Link href="/animal-health-signs">Spot the Signs</Link>
-          <span>/</span>
-          <Link href={`/animal-health-signs/${species.id}`}>{species.label}</Link>
-        </nav>
-        <h1 className={styles.heroTitle}>{c.name}</h1>
-        {d.aka.length > 0 && <p className={styles.heroAka}>Also called: {d.aka.join(', ')}</p>}
-        <p className={styles.heroDesc}>{d.summary}</p>
-        {!healthy && (
-          <div className={styles.heroFacts}>
-            <div>
-              <span className={styles.pretitle}>Key sign</span>
-              <ul className={styles.factList}>
-                {[c.headline, ...c.look.split(/(?<=[.!?])\s+/)].filter(Boolean).map((t, i) => (
-                  <li key={i}>{t}</li>
-                ))}
-              </ul>
-            </div>
-            <div className={c.report ? styles.factReport : undefined}>
-              <span className={styles.pretitle}>{c.report ? 'Report it' : 'First step'}</span>
-              <p>{c.action}</p>
-            </div>
-          </div>
-        )}
-      </PageHero>
-
-      <section className="s-about">
+      {/* The "On this page" list stays fixed on the left from the top of the page;
+          the introduction is its first entry. */}
+      <section className={`${styles.hero} ${styles.heroLight} ${styles.articlePage}`}>
         <Row>
           <div className={styles.detail}>
-            <aside className={styles.toc}>
-              <span className={styles.pretitle}>On this page</span>
-              <ol>
-                {sections.map((s) => (
-                  <li key={s.id}>
-                    <a href={`#${s.id}`}>{s.title}</a>
-                  </li>
-                ))}
-              </ol>
-            </aside>
+            <header id="introduction" className={styles.articleIntro}>
+              <nav className={styles.crumbs} aria-label="Breadcrumb">
+                <Link href="/animal-health-signs">Spot the Signs</Link>
+                <span>/</span>
+                <Link href={`/animal-health-signs/${species.id}`}>{species.label}</Link>
+              </nav>
+              <h1 className={styles.heroTitle}>{c.name}</h1>
+              {d.aka.length > 0 && <p className={styles.heroAka}>Also called: {d.aka.join(', ')}</p>}
+              <p className={styles.heroDesc}>{d.summary}</p>
+              <div className={styles.heroMedia}>
+                <ConditionImage c={c} eager />
+              </div>
+              {!healthy && (
+                <div className={styles.heroFacts}>
+                  <div>
+                    <span className={styles.pretitle}>Key sign</span>
+                    <ul className={styles.factList}>
+                      {[c.headline, ...c.look.split(/(?<=[.!?])\s+/)].filter(Boolean).map((t, i) => (
+                        <li key={i}>{t}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={c.report ? styles.factReport : undefined}>
+                    <span className={styles.pretitle}>{c.report ? 'Report it' : 'First step'}</span>
+                    <p>{c.action}</p>
+                  </div>
+                </div>
+              )}
+            </header>
+
+            <ArticleToc sections={sections.map(({ id, title }) => ({ id, title }))} />
 
             <article className={styles.article}>
               {sections.map((s, i) => (
@@ -244,6 +231,7 @@ export default function ConditionPage({ params }: Params) {
                 help you recognise problems early. Always confirm with a vet or animal health
                 worker before treating.
               </p>
+              <PhotoCreditLine c={c} />
             </article>
           </div>
         </Row>

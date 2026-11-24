@@ -21,6 +21,11 @@ export function LightTheme() {
             background-color: #ffffff !important;
             color: #111111 !important;
         }
+        /* the theme clips .s-pagewrap, which breaks the sticky sidebars */
+        body, #page, .s-pagewrap, .s-content, main {
+            overflow: visible !important;
+            overflow-x: clip !important;
+        }
         .s-header__menu-links a, .s-header__social .email { color: #111111 !important; }
         .s-header__menu-links li.current > a { color: #014d4b !important; }
         .s-header__social svg path { fill: #111111 !important; }
@@ -35,9 +40,9 @@ export function LightTheme() {
 }
 
 /** Page hero in the homepage's intro style — dark by default, white with `light`. */
-export function PageHero({ children, aside, light = false }: { children: ReactNode; aside?: ReactNode; light?: boolean }) {
+export function PageHero({ children, aside, light = false, className = '' }: { children: ReactNode; aside?: ReactNode; light?: boolean; className?: string }) {
   return (
-    <section className={`${styles.hero} ${light ? styles.heroLight : ''}`}>
+    <section className={`${styles.hero} ${light ? styles.heroLight : ''} ${className}`}>
       <div className="row">
         <div className="column lg-12">
           <div className={`${styles.heroGrid} ${aside ? '' : styles.heroSingle}`}>
@@ -94,20 +99,64 @@ export function ConditionImage({ c, eager = false }: { c: Pick<ConditionCard, 'p
   )
 }
 
-/** Full credit with links, shown under the photo on a condition page. */
+/** Photo source link at the foot of a condition page. Author and licence are on /animal-health-signs/photo-credits. */
 export function PhotoCreditLine({ c }: { c: Pick<ConditionCard, 'credit'> }) {
   const cr = c.credit
   if (!cr) return null
   return (
     <p className={styles.creditLine}>
-      Photo: <a href={cr.source} target="_blank" rel="noopener noreferrer">{cr.author}</a>, via Wikimedia Commons,{' '}
-      {cr.licenseUrl ? (
-        <a href={cr.licenseUrl} target="_blank" rel="noopener noreferrer license">{cr.license}</a>
-      ) : (
-        cr.license
-      )}
-      . Resized and cropped. <Link href="/animal-health-signs/photo-credits">All photo credits</Link>
+      <a href={cr.source} target="_blank" rel="noopener noreferrer">Reference</a>
     </p>
+  )
+}
+
+/** The What's New search bar: rounded box, search icon, clear button. Render from a client component. */
+export function SearchBar({ value, onChange, placeholder, label }: { value: string; onChange: (v: string) => void; placeholder: string; label: string }) {
+  return (
+    <div className={styles.search}>
+      <svg className={styles.searchIcon} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input
+        type="text"
+        className={styles.searchInput}
+        placeholder={placeholder}
+        aria-label={label}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
+      {value && (
+        <button type="button" className={styles.searchClear} onClick={() => onChange('')} aria-label="Clear search">
+          ×
+        </button>
+      )}
+    </div>
+  )
+}
+
+/** Condition card in the What's New article style: image, title, excerpt, Read more. */
+export function PostCard({ c }: { c: ConditionCard }) {
+  const healthy = c.urgency === 'normal'
+  return (
+    <Link href={c.href} className={styles.post}>
+      <div className={styles.postMedia}>
+        <ConditionImage c={c} />
+      </div>
+      <div className={styles.postBody}>
+        <h3 className={styles.postTitle}>{c.name}</h3>
+        <p className={styles.postText}>
+          {healthy ? (
+            c.look
+          ) : (
+            <>
+              <strong>{c.headline.replace(/[.!]?$/, '.')}</strong> {c.look}
+            </>
+          )}
+        </p>
+        <span className={`btn btn--stroke ${styles.postBtn}`}>{healthy ? 'Health check' : 'Read more'}</span>
+      </div>
+    </Link>
   )
 }
 

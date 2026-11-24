@@ -1,8 +1,10 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import { getConditions, getPublishedSpecies } from '@/lib/animal-health'
-import { ConditionImage, LightTheme, PageHero, Row, SectionHeader } from './shared'
+import ScrollDownButton from '@/components/ScrollDownButton'
+import { getConditions, getPublishedSpecies, toCard, URGENCY_ORDER } from '@/lib/animal-health'
+import HubLibrary, { type HubGroup } from './HubLibrary'
+import { LightTheme, PageHero } from './shared'
 import styles from './signs.module.css'
 
 const URL = 'https://www.agrikima.co.ke/animal-health-signs'
@@ -29,12 +31,24 @@ export default function AnimalHealthHub() {
     const list = all.filter((c) => c.species === id)
     return list.find((c) => c.id === s?.coverImage) ?? list[0]
   }
+  // Each animal's healthy guide first, then its conditions from emergencies down.
+  const rank = (u: (typeof all)[number]['urgency']) => (u === 'normal' ? -1 : URGENCY_ORDER.indexOf(u))
+  const groups: HubGroup[] = species.map((s) => ({
+    id: s.id,
+    label: s.label,
+    intro: s.intro,
+    cards: all
+      .filter((c) => c.species === s.id)
+      .sort((a, b) => rank(a.urgency) - rank(b.urgency))
+      .map(toCard),
+  }))
 
   return (
     <Layout>
       <LightTheme />
       <PageHero
         light
+        className={styles.hubHero}
         aside={
           <div className={styles.mosaic} aria-hidden="true">
             {MOSAIC.map((id) => {
@@ -47,51 +61,27 @@ export default function AnimalHealthHub() {
         <span className={styles.pretitle}>Agrikima Academy · Visual Guide</span>
         <h1 className={styles.heroTitle}>Spot the signs before they become a crisis.</h1>
         <p className={styles.heroDesc}>
-          Most animal diseases show on the outside first. Learn what healthy looks like, the
-          signs to watch for, and what to do next — {conditionCount} conditions across{' '}
-          {species.length} animals, each with causes, treatment and prevention.
+          What healthy looks like, the signs to watch for and what to do next — {conditionCount}{' '}
+          conditions across {species.length} animals.
         </p>
         <p className={styles.heroNote}>
           <strong>A guide, not a diagnosis.</strong> Always confirm with a vet before treating.
         </p>
       </PageHero>
 
-      <section className="s-about">
-        <SectionHeader
-          pretitle="Choose your animal"
-          title="Nine animals. Every common disease, explained the way a vet would explain it."
-          desc="Start with the healthy-animal guide for each species, then work through the conditions — sorted from emergencies that need a vet today to problems you can watch and manage on the farm."
-        />
-        <Row>
-          <div className={styles.cards}>
-            {species.map((s) => {
-              const list = all.filter((c) => c.species === s.id)
-              const conditions = list.filter((c) => c.urgency !== 'normal').length
-              const img = cover(s.id)
-              return (
-                <Link key={s.id} href={`/animal-health-signs/${s.id}`} className={styles.card}>
-                  <div className={styles.cardMedia}>
-                    {img && img.photo !== 'pending' && <ConditionImage c={img} />}
-                  </div>
-                  <div className={styles.cardBody}>
-                    <div className={styles.labels}>
-                      <span className={`${styles.urgency} ${styles.u_normal}`}>
-                        {conditions} conditions
-                      </span>
-                    </div>
-                    <h3 className={styles.cardTitle}>{s.label}</h3>
-                    <p className={styles.cardText}>{s.intro}</p>
-                    <span className={styles.cardMore}>Explore {s.label.toLowerCase()}</span>
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
+      {/* Sits on the line between hero and library so the library shows above the fold. */}
+      <div className={styles.hubScroll}>
+        <ScrollDownButton targetId="library" />
+      </div>
+
+      <div id="library" className={`${styles.libraryBody} ${styles.hubBody}`}>
+        <HubLibrary groups={groups} />
+        <div className={styles.libraryWrap}>
           <p className={styles.creditLine}>
             <Link href="/animal-health-signs/photo-credits">Photo credits</Link>
           </p>
-        </Row>
-      </section>
+        </div>
+      </div>
     </Layout>
   )
 }

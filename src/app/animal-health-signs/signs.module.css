@@ -382,6 +382,372 @@ ul.sidebarMenu li {
   }
 }
 
+/* ---------- search bar (copies .articles-search on What's New) ---------- */
+.search {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.search input.searchInput {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin: 0;
+  padding: 0 48px 0 50px;
+  font-size: 16px;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color .2s;
+}
+
+.search input.searchInput::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.search input.searchInput:focus {
+  border-color: #166534;
+  box-shadow: none;
+  outline: none;
+}
+
+.searchClear {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1;
+  color: #9ca3af;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transition: color .2s, background-color .2s;
+}
+
+.searchClear:hover {
+  color: #111111;
+  background: #f3f4f6;
+}
+
+/* ---------- hub library: all conditions grouped by animal ---------- */
+.hubBody {
+  padding-top: 56px;
+}
+
+/* hub hero: smaller mosaic and less padding so the library peeks above the fold */
+.heroLight.hubHero {
+  padding-top: 110px;
+  padding-bottom: 12px;
+}
+
+.hubHero .heroGrid {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 48px;
+}
+
+.hubHero .heroDesc {
+  margin-bottom: 0;
+}
+
+.hubHero .mosaic {
+  width: 100%;
+  max-width: 400px;
+  justify-self: end;
+}
+
+/* centres the scroll button on the hero/library boundary
+   (ScrollDownButton has 30px bottom margin; half the 56px button is 28px) */
+.hubScroll {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -58px;
+}
+
+@media screen and (max-width: 1000px) {
+  .hubHero .heroGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hubHero .mosaic {
+    justify-self: start;
+  }
+}
+
+.hubGroup {
+  scroll-margin-top: 100px;
+  padding-bottom: 56px;
+}
+
+
+.hubGroupTitle {
+  position: relative;
+  font-family: var(--font-2);
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #111111;
+  padding-top: 18px;
+  margin: 0 0 10px;
+}
+
+.hubGroupTitle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 56px;
+  height: 1px;
+  background: var(--color-1);
+}
+
+
+/* opening text for each animal: numbered title, intro, healthy baseline */
+.groupIntro {
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
+.groupNum {
+  display: block;
+  font-family: var(--font-2);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-1);
+  margin-bottom: 10px;
+}
+
+.groupIntroTitle {
+  font-family: var(--font-2);
+  font-size: clamp(28px, 2.8vw, 38px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+  color: #111111;
+  margin: 0 0 12px;
+}
+
+.groupIntroLead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444444;
+  margin: 0 0 20px;
+}
+
+.groupBaseline {
+  border-top: 1px solid #eeeded;
+  padding-top: 16px;
+  margin-bottom: 18px;
+}
+
+.groupBaselineLabel {
+  display: block;
+  font-family: var(--font-2);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--color-1);
+  margin-bottom: 8px;
+}
+
+.groupBaseline p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #585857;
+  margin: 0;
+}
+
+.groupLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+}
+
+.groupLinks .cardMore {
+  margin-top: 0;
+}
+
+/* article-style cards (mirror .blog-card on What's New) */
+.postGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.post,
+.post:visited {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .12);
+  color: inherit;
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.post:hover,
+.post:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, .18);
+  color: inherit;
+}
+
+.postMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #e7e6e5;
+  flex-shrink: 0;
+}
+
+.postMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.postBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px 18px 20px;
+}
+
+.postTitle {
+  font-family: var(--font-2);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1f2937;
+  margin: 0 0 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.postText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.postText strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.postBtn {
+  align-self: flex-start;
+  margin: auto 0 0;
+  height: 44px;
+  line-height: 42px;
+  padding: 0 20px;
+  font-size: 11px;
+}
+
+@media screen and (max-width: 1200px) {
+  .postGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .postGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* On small screens the animal list becomes a sticky row of chips */
+@media screen and (max-width: 800px) {
+  .libraryWrap .hubSidebar {
+    position: sticky;
+    top: 76px; /* below the theme's fixed header */
+    z-index: 5;
+    background: #f9fafb;
+    padding: 10px 0;
+    margin: 0 -20px;
+    width: auto;
+  }
+
+  .hubSidebar .sidebarTitle {
+    display: none;
+  }
+
+  .hubSidebar ul.sidebarMenu {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 20px;
+    scrollbar-width: none;
+  }
+
+  .hubSidebar ul.sidebarMenu li {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .hubSidebar .sidebarLink {
+    gap: 8px;
+    font-size: 13px;
+    padding: 6px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    background: #ffffff;
+  }
+
+  .hubSidebar .sidebarLink.sidebarActive {
+    border-color: #166534;
+  }
+
+  .hubSidebar .sidebarActive > span:first-child {
+    text-decoration: none;
+  }
+
+  .hubGroup {
+    scroll-margin-top: 140px;
+  }
+}
+
 /* ---------- image cards (mirrors the homepage Academy cards) ---------- */
 .cards {
   display: grid;
@@ -564,13 +930,63 @@ ul.sidebarMenu li {
 .detail {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
-  gap: 72px;
+  grid-template-areas:
+    'toc intro'
+    'toc body';
+  column-gap: 72px;
   align-items: start;
 }
 
+/* condition page: one white section holding intro, TOC and article */
+.heroLight.articlePage {
+  padding-bottom: 80px;
+}
+
+.articleIntro {
+  grid-area: intro;
+  max-width: 780px;
+  min-width: 0;
+  scroll-margin-top: 110px;
+}
+
+.articleIntro .heroDesc {
+  max-width: none;
+}
+
+.articleIntro .heroMedia {
+  aspect-ratio: 16 / 10;
+}
+
+.articleIntro .heroFacts {
+  margin-top: 28px;
+}
+
+.detail > .article {
+  grid-area: body;
+  padding-top: 64px;
+}
+
 .toc {
+  grid-area: toc;
   position: sticky;
   top: 110px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+}
+
+/* "Introduction" sits above the numbered sections, with a dash instead of a number */
+.toc ol li.tocIntro {
+  counter-increment: none;
+}
+
+.toc li.tocIntro a::before {
+  content: '—';
+}
+
+.toc a.tocActive,
+.toc a.tocActive:visited {
+  color: var(--color-1);
+  font-weight: 600;
 }
 
 .toc ol {
@@ -892,11 +1308,20 @@ ul.sidebarMenu li {
 
   .detail {
     grid-template-columns: minmax(0, 1fr);
-    gap: 40px;
+    grid-template-areas:
+      'intro'
+      'toc'
+      'body';
+    row-gap: 40px;
   }
 
   .toc {
     position: static;
+    max-height: none;
+  }
+
+  .detail > .article {
+    padding-top: 0;
   }
 }
 
