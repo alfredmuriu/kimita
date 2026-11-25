@@ -972,7 +972,50 @@ ul.sidebarMenu li {
   top: 110px;
   max-height: calc(100vh - 130px);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d6dad9 transparent;
 }
+
+.toc::-webkit-scrollbar { width: 4px; }
+.toc::-webkit-scrollbar-thumb { background: #d6dad9; border-radius: 4px; }
+
+/* back to the previous page: beside the TOC on desktop, above the breadcrumb on small screens */
+.backLink,
+.backLink:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  padding: 6px 14px 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  transition: border-color .2s, color .2s;
+}
+
+.backLink:hover,
+.backLink:focus {
+  color: var(--color-1);
+  border-color: var(--color-1);
+}
+
+.tocBack { margin-bottom: 24px; }
+
+/* undo the TOC's own link styles on the back link */
+.toc a.tocBack,
+.toc a.tocBack:visited {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px 14px 6px 10px;
+  color: #111111;
+}
+.toc a.tocBack::before { content: none; }
+.toc a.tocBack:hover,
+.toc a.tocBack:focus { color: var(--color-1); }
+.introBack { display: none; margin-bottom: 20px; }
 
 /* "Introduction" sits above the numbered sections, with a dash instead of a number */
 .toc ol li.tocIntro {
@@ -1007,9 +1050,9 @@ ul.sidebarMenu li {
 .toc a:visited {
   display: flex;
   gap: 12px;
-  padding: 10px 0;
+  padding: 7px 0;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #424241;
   text-decoration: none;
 }
@@ -1319,6 +1362,9 @@ ul.sidebarMenu li {
     position: static;
     max-height: none;
   }
+
+  .tocBack { display: none; }
+  .introBack { display: inline-flex; }
 
   .detail > .article {
     padding-top: 0;

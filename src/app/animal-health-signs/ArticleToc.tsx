@@ -1,13 +1,16 @@
 'use client'
 
-// "On this page" for a condition page: the introduction plus numbered
-// sections, highlighting whichever one is under the header.
+// "On this page" for a condition page: a back link, the introduction plus
+// numbered sections, highlighting whichever one is under the header. When the
+// list is taller than the screen it scrolls itself to keep that one in view.
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import BackLink from './BackLink'
 import styles from './signs.module.css'
 
-export default function ArticleToc({ sections }: { sections: { id: string; title: string }[] }) {
+export default function ArticleToc({ sections, backHref }: { sections: { id: string; title: string }[]; backHref: string }) {
   const [active, setActive] = useState('introduction')
+  const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const ids = ['introduction', ...sections.map((s) => s.id)]
@@ -23,10 +26,20 @@ export default function ArticleToc({ sections }: { sections: { id: string; title
     return () => observer.disconnect()
   }, [sections])
 
+  // Keep the highlighted entry visible inside the sticky list (without moving the page).
+  useEffect(() => {
+    const nav = navRef.current
+    if (!nav || nav.scrollHeight <= nav.clientHeight) return
+    const link = nav.querySelector<HTMLElement>(`a[href="#${active}"]`)
+    if (!link) return
+    nav.scrollTo({ top: link.offsetTop - nav.clientHeight / 2 + link.offsetHeight / 2, behavior: 'smooth' })
+  }, [active])
+
   const link = (id: string) => (id === active ? styles.tocActive : undefined)
 
   return (
-    <nav className={styles.toc} aria-label="On this page">
+    <nav ref={navRef} className={styles.toc} aria-label="On this page">
+      <BackLink fallback={backHref} className={styles.tocBack} />
       <span className={styles.pretitle}>On this page</span>
       <ol>
         <li className={styles.tocIntro}>

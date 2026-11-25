@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import Layout from '@/components/Layout'
 import { getCondition, getConditions, getRelated, getSpecies, toCard } from '@/lib/animal-health'
 import ArticleToc from '../../ArticleToc'
+import BackLink from '../../BackLink'
 import { ConditionCardView, ConditionImage, LightTheme, PhotoCreditLine, Row, SectionHeader } from '../../shared'
 import styles from '../../signs.module.css'
 
@@ -100,6 +101,7 @@ export default function ConditionPage({ params }: Params) {
         <Row>
           <div className={styles.detail}>
             <header id="introduction" className={styles.articleIntro}>
+              <BackLink fallback={`/animal-health-signs/${species.id}`} className={styles.introBack} />
               <nav className={styles.crumbs} aria-label="Breadcrumb">
                 <Link href="/animal-health-signs">Spot the Signs</Link>
                 <span>/</span>
@@ -129,7 +131,7 @@ export default function ConditionPage({ params }: Params) {
               )}
             </header>
 
-            <ArticleToc sections={sections.map(({ id, title }) => ({ id, title }))} />
+            <ArticleToc sections={sections.map(({ id, title }) => ({ id, title }))} backHref={`/animal-health-signs/${species.id}`} />
 
             <article className={styles.article}>
               {sections.map((s, i) => (
